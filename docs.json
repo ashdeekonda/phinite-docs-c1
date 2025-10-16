@@ -1,0 +1,199 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Phinite Docs",
+  "colors": {
+    "primary": "#7A44FF",
+    "light": "#C9B6FF",
+    "dark": "#5D34C6"
+  },
+  "favicon": "/favicon.ico",
+  "logo": {
+    "light": "/logo.svg",
+    "dark": "/logo.svg"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "1. Welcome to Phinite",
+            "pages": [
+              "welcome/about-phinite",
+              "welcome/who-this-manual-is-for",
+              "welcome/how-to-use-this-manual"
+            ]
+          },
+          {
+            "group": "2. Getting Started",
+            "pages": [
+              "getting-started/enterprise-setup",
+              "getting-started/signing-up",
+              "getting-started/license-distribution",
+              "getting-started/workspace-overview",
+              "getting-started/user-management",
+              "getting-started/user-roles",
+              "getting-started/roles/developer",
+              "getting-started/roles/admin",
+              "getting-started/roles/tester",
+              "getting-started/roles/viewer",
+              "getting-started/inviting-users",
+              "getting-started/access-controls",
+              "getting-started/creating-workspace"
+            ]
+          },
+          {
+            "group": "3. Building Assistants",
+            "pages": [
+              "assistants/overview",
+              "assistants/types",
+              "assistants/conversational",
+              "assistants/email",
+              "assistants/autonomous",
+              "assistants/components",
+              "assistants/components/flows",
+              "assistants/components/intents",
+              "assistants/components/tools",
+              "assistants/components/builds",
+              "assistants/components/triggers",
+              "assistants/components/environments",
+              "assistants/components/channels"
+            ]
+          },
+          {
+            "group": "4. Flowgen Studio (Workflow Builder)",
+            "pages": [
+              "flowgen/overview",
+              "flowgen/methods",
+              "flowgen/copilot-method",
+              "flowgen/manual-method",
+              "flowgen/interface",
+              "flowgen/interface/canvas",
+              "flowgen/interface/block-library",
+              "flowgen/interface/inspector-panel",
+              "flowgen/interface/variables-panel",
+              "flowgen/blocks",
+              "flowgen/blocks/start",
+              "flowgen/blocks/master-agent",
+              "flowgen/blocks/child-agent",
+              "flowgen/blocks/tool-block",
+              "flowgen/blocks/end-block",
+              "flowgen/connections",
+              "flowgen/connections/handles",
+              "flowgen/connections/edges",
+              "flowgen/connections/conditional-edges",
+              "flowgen/agent-block",
+              "flowgen/agent-block/prompt",
+              "flowgen/agent-block/rag",
+              "flowgen/agent-block/tools",
+              "flowgen/agent-block/variables",
+              "flowgen/rag-management",
+              "flowgen/rag-management/data-sources",
+              "flowgen/rag-management/collections",
+              "flowgen/rag-management/referencing",
+              "flowgen/publishing"
+            ]
+          },
+          {
+            "group": "5. DevStudio (Tool Builder)",
+            "pages": [
+              "devstudio/overview",
+              "devstudio/methods",
+              "devstudio/copilot-tools",
+              "devstudio/manual-coding",
+              "devstudio/types",
+              "devstudio/custom-tools",
+              "devstudio/prebuilt-tools",
+              "devstudio/prebuilt/gmail",
+              "devstudio/prebuilt/sheets",
+              "devstudio/prebuilt/jira-zendesk",
+              "devstudio/structure",
+              "devstudio/versioning",
+              "devstudio/linking-tools",
+              "devstudio/testing-tools"
+            ]
+          },
+          {
+            "group": "6. Triggers & Intents",
+            "pages": [
+              "triggers-intents/overview",
+              "triggers-intents/intents",
+              "triggers-intents/creating-intents",
+              "triggers-intents/prompt-training",
+              "triggers-intents/testing-intents",
+              "triggers-intents/triggers",
+              "triggers-intents/webhooks",
+              "triggers-intents/event-triggers",
+              "triggers-intents/mapping"
+            ]
+          },
+          {
+            "group": "7. Builds & Environments",
+            "pages": [
+              "builds/overview",
+              "builds/lifecycle",
+              "builds/publishing",
+              "builds/configuration",
+              "builds/environments",
+              "builds/environments/dev",
+              "builds/environments/uat",
+              "builds/environments/prod"
+            ]
+          },
+          {
+            "group": "8. Channels & Integrations",
+            "pages": [
+              "channels/overview",
+              "channels/supported",
+              "channels/webchat",
+              "channels/whatsapp",
+              "channels/slack-teams",
+              "channels/twilio",
+              "channels/email",
+              "channels/configuration/authentication",
+              "channels/mapping",
+              "channels/environment-settings",
+              "channels/testing"
+            ]
+          },
+          {
+            "group": "9. Observability & Billing",
+            "pages": [
+              "observability/overview",
+              "observability/usage-metrics",
+              "observability/metrics/session-count",
+              "observability/metrics/token-usage",
+              "observability/metrics/telephony",
+              "observability/logs",
+              "observability/logs/timeline",
+              "observability/logs/decision-joints",
+              "observability/logs/variables",
+              "observability/filtering",
+              "observability/billing"
+            ]
+          },
+          {
+            "group": "10. Reference & Appendix",
+            "pages": [
+              "reference/glossary",
+              "reference/faqs",
+              "reference/api",
+              "reference/shortcuts",
+              "reference/release-notes"
+            ]
+          },
+          {
+            "group": "11. Troubleshooting & Support",
+            "pages": [
+              "support/error-codes",
+              "support/build-failures",
+              "support/env-issues",
+              "support/contact"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
