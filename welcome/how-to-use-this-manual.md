@@ -1,6 +1,7 @@
 ---
 title: "How to Use This Manual"
 description: "Suggested reading paths and conventions used in the docs."
+icon: 'code'
 ---
 
 ## Reading paths

@@ -18,7 +18,7 @@
         "tab": "Docs",
         "groups": [
           {
-            "group": "1. Welcome to Phinite",
+            "group": "Welcome to Phinite",
             "pages": [
               "welcome/about-phinite",
               "welcome/who-this-manual-is-for",
@@ -26,7 +26,7 @@
             ]
           },
           {
-            "group": "2. Getting Started",
+            "group": "Getting Started",
             "pages": [
               "getting-started/enterprise-setup",
               "getting-started/signing-up",
