@@ -1,6 +1,7 @@
 ---
 title: "How to Use This Manual"
 description: "Suggested reading paths and conventions used in the docs."
+icon: 'code'
 ---
 
 ## Reading paths
@@ -18,9 +19,11 @@ description: "Suggested reading paths and conventions used in the docs."
 ## Verify success
 
 <Check>
-At the end of each procedure, ensure you meet the expected outcome before proceeding.
+  At the end of each procedure, ensure you meet the expected outcome before proceeding.
 </Check>
 
 ## Help
 
 - See [Troubleshooting](/support/error-codes) and [Contact Support](/support/contact) if blocked.
+
+/

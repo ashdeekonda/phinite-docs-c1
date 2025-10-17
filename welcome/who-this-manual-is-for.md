@@ -17,6 +17,8 @@ description: "Audience and roles for the Phinite documentation."
 - Testers: [Testing Tools](/devstudio/testing-tools), [Testing Intents](/triggers-intents/testing-intents)
 - Stakeholders: [Observability](/observability/overview), [Billing](/observability/billing)
 
+/
+
 <Note>
-Access to features depends on your [user role](/getting-started/user-roles).
+  Access to features depends on your [user role](/getting-started/user-roles).
 </Note>
