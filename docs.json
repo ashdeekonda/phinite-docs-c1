@@ -170,12 +170,7 @@
           },
           {
             "group": "10. Reference & Appendix",
-            "pages": [
-              "reference/glossary",
-              "reference/faqs",
-              "reference/shortcuts",
-              "reference/release-notes"
-            ]
+            "pages": []
           },
           {
             "group": "11. Troubleshooting & Support",
@@ -189,12 +184,26 @@
         ]
       },
       {
-        "tab": "Developer API",
+        "tab": "References",
         "groups": [
           {
             "group": "API Reference",
             "pages": [
               "reference/api"
+            ]
+          },
+          {
+            "group": "General",
+            "pages": [
+              "reference/glossary",
+              "reference/faqs",
+              "reference/shortcuts"
+            ]
+          },
+          {
+            "group": "Changelog",
+            "pages": [
+              "reference/release-notes"
             ]
           }
         ]
