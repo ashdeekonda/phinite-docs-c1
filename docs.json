@@ -15,15 +15,13 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Docs",
+        "tab": "Quick Start",
         "groups": [
           {
             "group": "Welcome to Phinite",
             "pages": [
               "index",
-              "/welcome/about-phinite",
-              "/welcome/who-this-manual-is-for",
-              "/welcome/how-to-use-this-manual"
+              "/welcome/about-phinite"
             ]
           },
           {
@@ -338,6 +336,17 @@
           }
         ]
       }
+    ],
+    "anchors": [
+      {
+        "anchor": "Documentation",
+        "icon": "book-open",
+        "pages": [
+          "index"
+  
+        ]
+      }
+  
     ]
   },
   "errors": {
