@@ -55,7 +55,7 @@
             ]
           },
           {
-            "group": "3. Building Assistants",
+            "group": "Building Assistants",
             "pages": [
               "assistants/overview",
               "assistants/types",
@@ -73,7 +73,7 @@
             ]
           },
           {
-            "group": "4. Flowgen Studio (Workflow Builder)",
+            "group": "Flowgen Studio (Workflow Builder)",
             "pages": [
               "flowgen/overview",
               "flowgen/methods",
@@ -194,6 +194,71 @@
               "support/build-failures",
               "support/env-issues",
               "support/contact"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developer API",
+        "groups": [
+          {
+            "group": "API Reference",
+            "pages": [
+              "reference/api"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Templates",
+        "groups": [
+          {
+            "group": "Assistant templates",
+            "pages": [
+              "assistants/conversational",
+              "assistants/email",
+              "assistants/autonomous"
+            ]
+          },
+          {
+            "group": "Flowgen templates",
+            "pages": [
+              "flowgen/blocks/start",
+              "flowgen/blocks/master-agent",
+              "flowgen/blocks/child-agent",
+              "flowgen/blocks/tool-block",
+              "flowgen/blocks/end-block"
+            ]
+          },
+          {
+            "group": "Prebuilt tools templates",
+            "pages": [
+              "devstudio/prebuilt/gmail",
+              "devstudio/prebuilt/sheets",
+              "devstudio/prebuilt/jira-zendesk"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "groups": [
+          {
+            "group": "Messaging",
+            "pages": [
+              "channels/twilio",
+              "channels/whatsapp",
+              "channels/webchat",
+              "channels/slack-teams",
+              "channels/email"
+            ]
+          },
+          {
+            "group": "Business apps",
+            "pages": [
+              "devstudio/prebuilt/jira-zendesk",
+              "devstudio/prebuilt/sheets",
+              "devstudio/prebuilt/gmail"
             ]
           }
         ]
