@@ -78,33 +78,63 @@
             "group": "Flowgen Studio (Workflow Builder)",
             "pages": [
               "flowgen/overview",
-              "flowgen/methods",
-              "flowgen/copilot-method",
-              "flowgen/manual-method",
-              "flowgen/interface",
-              "flowgen/interface/canvas",
-              "flowgen/interface/block-library",
-              "flowgen/interface/inspector-panel",
-              "flowgen/interface/variables-panel",
-              "flowgen/blocks",
-              "flowgen/blocks/start",
-              "flowgen/blocks/master-agent",
-              "flowgen/blocks/child-agent",
-              "flowgen/blocks/tool-block",
-              "flowgen/blocks/end-block",
-              "flowgen/connections",
-              "flowgen/connections/handles",
-              "flowgen/connections/edges",
-              "flowgen/connections/conditional-edges",
-              "flowgen/agent-block",
-              "flowgen/agent-block/prompt",
-              "flowgen/agent-block/rag",
-              "flowgen/agent-block/tools",
-              "flowgen/agent-block/variables",
-              "flowgen/rag-management",
-              "flowgen/rag-management/data-sources",
-              "flowgen/rag-management/collections",
-              "flowgen/rag-management/referencing",
+              {
+                "group": "Methods",
+                "pages": [
+                  "flowgen/methods",
+                  "flowgen/copilot-method",
+                  "flowgen/manual-method"
+                ]
+              },
+              {
+                "group": "Interface",
+                "pages": [
+                  "flowgen/interface",
+                  "flowgen/interface/canvas",
+                  "flowgen/interface/block-library",
+                  "flowgen/interface/inspector-panel",
+                  "flowgen/interface/variables-panel"
+                ]
+              },
+              {
+                "group": "Blocks",
+                "pages": [
+                  "flowgen/blocks",
+                  "flowgen/blocks/start",
+                  "flowgen/blocks/master-agent",
+                  "flowgen/blocks/child-agent",
+                  "flowgen/blocks/tool-block",
+                  "flowgen/blocks/end-block"
+                ]
+              },
+              {
+                "group": "Connections",
+                "pages": [
+                  "flowgen/connections",
+                  "flowgen/connections/handles",
+                  "flowgen/connections/edges",
+                  "flowgen/connections/conditional-edges"
+                ]
+              },
+              {
+                "group": "Agent Block",
+                "pages": [
+                  "flowgen/agent-block",
+                  "flowgen/agent-block/prompt",
+                  "flowgen/agent-block/rag",
+                  "flowgen/agent-block/tools",
+                  "flowgen/agent-block/variables"
+                ]
+              },
+              {
+                "group": "RAG Management",
+                "pages": [
+                  "flowgen/rag-management",
+                  "flowgen/rag-management/data-sources",
+                  "flowgen/rag-management/collections",
+                  "flowgen/rag-management/referencing"
+                ]
+              },
               "flowgen/publishing"
             ]
           },
@@ -112,9 +142,15 @@
             "group": "5. DevStudio (Tool Builder)",
             "pages": [
               "devstudio/overview",
-              "devstudio/methods",
+              {
+                "group": "Methods",
+                "pages": [
+                  "devstudio/methods",
+                  "devstudio/copilot-tools",
+                  "devstudio/manual-coding"
+                ]
+              },
               "devstudio/copilot-tools",
-              "devstudio/manual-coding",
               "devstudio/types",
               "devstudio/custom-tools",
               "devstudio/prebuilt-tools",
@@ -131,14 +167,24 @@
             "group": "6. Triggers & Intents",
             "pages": [
               "triggers-intents/overview",
-              "triggers-intents/intents",
-              "triggers-intents/creating-intents",
-              "triggers-intents/prompt-training",
-              "triggers-intents/testing-intents",
-              "triggers-intents/triggers",
-              "triggers-intents/webhooks",
-              "triggers-intents/event-triggers",
-              "triggers-intents/mapping"
+              {
+                "group": "Intents",
+                "pages": [
+                  "triggers-intents/intents",
+                  "triggers-intents/creating-intents",
+                  "triggers-intents/prompt-training",
+                  "triggers-intents/testing-intents"
+                ]
+              },
+              {
+                "group": "Triggers",
+                "pages": [
+                  "triggers-intents/triggers",
+                  "triggers-intents/webhooks",
+                  "triggers-intents/event-triggers",
+                  "triggers-intents/mapping"
+                ]
+              }
             ]
           },
           {
@@ -160,13 +206,23 @@
             "pages": [
               "observability/overview",
               "observability/usage-metrics",
-              "observability/metrics/session-count",
-              "observability/metrics/token-usage",
-              "observability/metrics/telephony",
-              "observability/logs",
-              "observability/logs/timeline",
-              "observability/logs/decision-joints",
-              "observability/logs/variables",
+              {
+                "group": "Metrics",
+                "pages": [
+                  "observability/metrics/session-count",
+                  "observability/metrics/token-usage",
+                  "observability/metrics/telephony"
+                ]
+              },
+              {
+                "group": "Logs",
+                "pages": [
+                  "observability/logs",
+                  "observability/logs/timeline",
+                  "observability/logs/decision-joints",
+                  "observability/logs/variables"
+                ]
+              },
               "observability/filtering",
               "observability/billing"
             ]
