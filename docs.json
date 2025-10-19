@@ -59,16 +59,19 @@
             "pages": [
               "assistants/overview",
               "assistants/types",
-              
-              
-              "assistants/components",
-              "assistants/components/flows",
-              "assistants/components/intents",
-              "assistants/components/tools",
-              "assistants/components/builds",
-              "assistants/components/triggers",
-              "assistants/components/environments",
-              "assistants/components/channels"
+              {
+                "group": "Assistant Components",
+                "pages": [
+                  "assistants/components",
+                  "assistants/components/flows",
+                  "assistants/components/intents",
+                  "assistants/components/tools",
+                  "assistants/components/builds",
+                  "assistants/components/triggers",
+                  "assistants/components/environments",
+                  "assistants/components/channels"
+                ]
+              }
             ]
           },
           {
