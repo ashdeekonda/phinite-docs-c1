@@ -1,6 +1,7 @@
 ---
 title: "Email"
 description: "Configure email channel for inbound/outbound message handling."
+icon: envelope
 ---
 
 ## Setup

@@ -1,6 +1,7 @@
 ---
 title: "Assistant Overview"
 description: "Understand assistant types, how they are powered by flows, and where to start."
+icon: robot
 ---
 
 ## What is an assistant?

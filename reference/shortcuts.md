@@ -1,6 +1,7 @@
 ---
 title: "Keyboard Shortcuts"
 description: "Productivity shortcuts for Flowgen Studio and DevStudio."
+icon: keyboard
 ---
 
 ## Flowgen Studio

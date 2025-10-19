@@ -1,6 +1,7 @@
 ---
 title: "Slack / Teams"
 description: "Connect Slack and Microsoft Teams as conversational channels."
+icon: slack
 ---
 
 ## Setup

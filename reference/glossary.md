@@ -1,6 +1,7 @@
 ---
 title: "Glossary of Terms"
 description: "Common terminology used throughout Phinite."
+icon: book
 ---
 
 ## Terms

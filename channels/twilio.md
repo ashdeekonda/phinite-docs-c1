@@ -1,6 +1,7 @@
 ---
 title: "Twilio Voice"
 description: "Connect Twilio for voice assistants."
+icon: phone
 ---
 
 ## Setup

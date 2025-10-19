@@ -1,6 +1,7 @@
 ---
 title: "Web Chat"
 description: "Embed web chat and configure appearance and behavior."
+icon: comments
 ---
 
 ## Setup

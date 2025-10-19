@@ -1,6 +1,7 @@
 ---
 title: "FAQs"
 description: "Frequently asked questions about Phinite."
+icon: circle-question
 ---
 
 ## General

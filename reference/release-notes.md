@@ -1,6 +1,7 @@
 ---
 title: "Release Notes"
 description: "Changes, improvements, and fixes across versions."
+icon: clock-rotate-left
 ---
 
 <Update label="v2.1.0" description="2025-03-15">

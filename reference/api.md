@@ -1,6 +1,7 @@
 ---
 title: "API Reference"
 description: "Authenticate and call Phinite APIs."
+icon: terminal
 ---
 
 ## Authentication

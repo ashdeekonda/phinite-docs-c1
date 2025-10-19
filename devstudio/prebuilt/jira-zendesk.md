@@ -1,6 +1,7 @@
 ---
 title: "Jira & Zendesk Integrations"
 description: "Create and update tickets in Jira and Zendesk."
+icon: ticket
 ---
 
 ## Parameters

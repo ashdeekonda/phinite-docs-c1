@@ -1,6 +1,7 @@
 ---
 title: "Gmail Integration"
 description: "Send and read emails via Gmail."
+icon: envelope
 ---
 
 ## Parameters

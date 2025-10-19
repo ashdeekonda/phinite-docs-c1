@@ -1,6 +1,7 @@
 ---
 title: "Google Sheets Integration"
 description: "Read and write rows in Google Sheets."
+icon: table
 ---
 
 ## Parameters

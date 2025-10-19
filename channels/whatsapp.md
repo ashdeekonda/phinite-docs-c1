@@ -1,6 +1,7 @@
 ---
 title: "WhatsApp"
 description: "Connect WhatsApp for conversational assistants."
+icon: whatsapp
 ---
 
 ## Setup
