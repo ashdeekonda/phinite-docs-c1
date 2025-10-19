@@ -25,5 +25,7 @@ description: "Invite collaborators, assign roles, and manage access lifecycle."
 
 ## Related
 
-- [User Roles & Permissions](/getting-started/user-roles)
-- [Access Controls & Security](/getting-started/access-controls)
+- [User Roles & Permissions](/getting-started/users-access/user-roles)
+- [Access Controls & Security](/getting-started/users-access/access-controls)
+
+

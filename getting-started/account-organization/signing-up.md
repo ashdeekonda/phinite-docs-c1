@@ -19,5 +19,7 @@ description: "Create your account and secure access to your workspace."
 
 ## Access
 
-- Admins can invite users post-signup: [Inviting Users](/getting-started/inviting-users)
-- Access is guarded by token validation; see [Access Controls](/getting-started/access-controls)
+- Admins can invite users post-signup: [Inviting Users](/getting-started/users-access/inviting-users)
+- Access is guarded by token validation; see [Access Controls](/getting-started/users-access/access-controls)
+
+

@@ -23,7 +23,7 @@ Admins manage user access at the workspace level. Assign roles that determine pe
 
 ## Roles & permissions
 
-See [User Roles & Permissions](/getting-started/user-roles).
+See [User Roles & Permissions](/getting-started/users-access/user-roles).
 
 <Note>
 Role changes take effect immediately for workspace resources.
@@ -34,3 +34,5 @@ Role changes take effect immediately for workspace resources.
 - Review user list and roles periodically
 - Remove access for former collaborators
 - Use [Billing Dashboard](/observability/billing) to monitor usage by role
+
+

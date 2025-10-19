@@ -15,3 +15,5 @@ description: "Capabilities and responsibilities for Viewers."
 ## When to use
 
 - Stakeholders who need visibility without modification rights
+
+

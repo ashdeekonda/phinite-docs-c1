@@ -29,27 +29,43 @@
           {
             "group": "Getting Started",
             "pages": [
-              "getting-started/enterprise-setup",
-              "getting-started/signing-up",
-              "getting-started/license-distribution",
-              "getting-started/workspace-overview",
-              "getting-started/creating-workspace",
-              "getting-started/inviting-users",
-              "getting-started/access-controls"
-            ]
-          },
-          {
-            "group": "User Management",
-            "pages": [
-              "getting-started/user-management",
+              "getting-started/get-started",
               {
-                "group": "User Roles",
+                "group": "Account & Organization",
                 "pages": [
-                  "getting-started/user-roles",
-                  "getting-started/roles/developer",
-                  "getting-started/roles/admin",
-                  "getting-started/roles/tester",
-                  "getting-started/roles/viewer"
+                  "getting-started/account-organization/signing-up",
+                  "getting-started/account-organization/enterprise-setup"
+                ]
+              },
+              {
+                "group": "Workspaces",
+                "pages": [
+                  "getting-started/workspaces/workspace-overview",
+                  "getting-started/workspaces/creating-workspace"
+                ]
+              },
+              {
+                "group": "Users & Access",
+                "pages": [
+                  "getting-started/users-access/inviting-users",
+                  "getting-started/users-access/user-management",
+                  "getting-started/users-access/access-controls",
+                  {
+                    "group": "User Roles",
+                    "pages": [
+                      "getting-started/users-access/user-roles",
+                      "getting-started/users-access/roles/developer",
+                      "getting-started/users-access/roles/admin",
+                      "getting-started/users-access/roles/tester",
+                      "getting-started/users-access/roles/viewer"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Licensing & Plans",
+                "pages": [
+                  "getting-started/licensing/license-distribution"
                 ]
               }
             ]
@@ -197,10 +213,7 @@
               "builds/environments"
             ]
           },
-          {
-            "group": "8. Channels & Integrations",
-            "pages": []
-          },
+          
           {
             "group": "9. Observability & Billing",
             "pages": [
@@ -227,10 +240,7 @@
               "observability/billing"
             ]
           },
-          {
-            "group": "10. Reference & Appendix",
-            "pages": []
-          },
+          
           {
             "group": "11. Troubleshooting & Support",
             "pages": [

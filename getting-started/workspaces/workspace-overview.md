@@ -10,9 +10,11 @@ description: "Understand workspaces, projects, and permissions."
 ## Access controls
 
 - Workspace membership controls visibility
-- Roles determine actions: see [User Roles & Permissions](/getting-started/user-roles)
+- Roles determine actions: see [User Roles & Permissions](/getting-started/users-access/user-roles)
 
 ## Related
 
-- [Creating Your First Workspace](/getting-started/creating-workspace)
-- [User Management](/getting-started/user-management)
+- [Creating Your First Workspace](/getting-started/workspaces/creating-workspace)
+- [User Management](/getting-started/users-access/user-management)
+
+
