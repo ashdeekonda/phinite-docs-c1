@@ -1,32 +1,76 @@
 ---
-title: "About Phinite"
-description: "What Phinite is, what it solves, and how teams use it."
+title: About Phinite
+description: Learn what Phinite is, how it's structured, and how different users can build and manage intelligent agent workflows across environments.
+sidebar_position: 0
+roles: ["All"]
+environments: ["All"]
 ---
 
-## What is Phinite?
+# About Phinite
 
-Phinite is an AI automation platform for building and running intelligent assistants and multi-agent workflows across channels. Teams use Phinite to:
+Phinite is an AI automation platform to build, orchestrate, and deploy lifelike assistants and intelligent multi-agent workflows — across channels, tools, and business processes.
 
-- Design flows visually in [Flowgen Studio](/flowgen/overview)
-- Build tools and integrations in [DevStudio](/devstudio/overview)
-- Deploy across environments with observability and access controls
+Whether you're replacing a call center agent, automating report generation, or deploying assistants that act autonomously, Phinite gives your team the tools to build and run AI systems at scale — safely and visually.
 
-## Core concepts
+---
 
-- **Assistants**: Conversational, Email, or Autonomous agents powered by your workflows
-- **Flows**: Visual workflows that orchestrate agents, tools, logic, and data
-- **Tools**: Custom or prebuilt capabilities your agents can call
-- **Triggers & Intents**: How interactions start and how conversations are understood
+## What You Can Do with Phinite
 
-## Who uses Phinite?
+Teams use Phinite to:
 
-- **Developers**: Build tools, design flows, and wire integrations
-- **Admins**: Manage access, environments, and publishing
-- **Testers**: Validate flows and tools before release
-- **Analysts**: Monitor performance and usage
+- Design agent workflows visually in the Flowgen Studio
+- Build tools and connectors using DevStudio
+- Deploy across environments with version control and observability
+- Power assistants with knowledge bases, prompt engineering, and tools
+- Track sessions, model usage, and decisions using detailed logs
 
-## Next steps
+---
 
-- Read [Who This Manual Is For](/welcome/who-this-manual-is-for)
-- Start with [Getting Started](/getting-started/enterprise-setup)
-- Explore [Assistant Overview](/assistants/overview)
+## Core Concepts
+
+| Concept           | Description |
+|------------------|-------------|
+| **Assistant**     | A conversational, email-based, or autonomous agent powered by one or more flows |
+| **Flow**          | A visual decision graph with nodes that orchestrate logic, tools, and conversations |
+| **Node**          | The building block of a flow — can prompt a model, call a tool, capture input, or make decisions |
+| **Tool**          | A callable API, function, or system integration used by your assistant |
+| **Trigger**       | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event) |
+| **Environment**   | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps |
+| **Session**       | A full execution of a flow, recorded in logs with inputs, decisions, outputs, and metrics |
+
+---
+
+## Who Uses Phinite
+
+Phinite supports a multi-role collaboration model so your entire team can work together:
+
+| Role       | Responsibilities |
+|------------|------------------|
+| **Developers**   | Build tools, wire integrations, and design flows |
+| **Architects**   | Plan agent logic, manage flows, and configure environments |
+| **Admins**       | Control access, invite users, and manage billing and environments |
+| **Testers**      | Validate assistant behavior and run debug sessions |
+| **Analysts**     | Observe sessions, track model usage, and monitor outcomes |
+
+---
+
+## What Makes Phinite Different
+
+- Visual-first AI workflow builder, with support for both no-code and code-based design
+- Multi-agent orchestration through linked flows and manager agents
+- Deep observability with session-level timelines, decision logs, and token tracking
+- Role-based access and environment isolation for enterprise-grade deployments
+- Reusable tools, prompts, and assistant templates to reduce repetitive work
+
+---
+
+## Next Steps
+
+- [Who This Manual Is For](./who-this-manual-is-for)  
+- [Getting Started](./get-started)  
+- [Create an Assistant](./building-assistants/create-assistant)  
+- [Explore the Flow Builder](./building-assistants/flow-builder)  
+
+---
+
+Phinite is built for teams that want to go beyond chatbots—enabling AI systems that reason, decide, and act intelligently.

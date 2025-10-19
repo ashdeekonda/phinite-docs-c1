@@ -214,6 +214,7 @@ const testTool = async (toolId, parameters) => {
   <Check>
   You should see a success message and the new version in the version history.
   </Check>
+  </Step>
 </Steps>
 
 ## Version management

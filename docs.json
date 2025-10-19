@@ -9,8 +9,8 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "logo/light.svg",
-    "dark": "logo/dark.svg"
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
   "navigation": {
     "tabs": [
@@ -20,9 +20,10 @@
           {
             "group": "Welcome to Phinite",
             "pages": [
-              "welcome/about-phinite",
-              "welcome/who-this-manual-is-for",
-              "welcome/how-to-use-this-manual"
+              "index",
+              "/welcome/about-phinite",
+              "/welcome/who-this-manual-is-for",
+              "/welcome/how-to-use-this-manual"
             ]
           },
           {
@@ -32,15 +33,25 @@
               "getting-started/signing-up",
               "getting-started/license-distribution",
               "getting-started/workspace-overview",
-              "getting-started/user-management",
-              "getting-started/user-roles",
-              "getting-started/roles/developer",
-              "getting-started/roles/admin",
-              "getting-started/roles/tester",
-              "getting-started/roles/viewer",
+              "getting-started/creating-workspace",
               "getting-started/inviting-users",
-              "getting-started/access-controls",
-              "getting-started/creating-workspace"
+              "getting-started/access-controls"
+            ]
+          },
+          {
+            "group": "User Management",
+            "pages": [
+              "getting-started/user-management",
+              {
+                "group": "User Roles",
+                "pages": [
+                  "getting-started/user-roles",
+                  "getting-started/roles/developer",
+                  "getting-started/roles/admin",
+                  "getting-started/roles/tester",
+                  "getting-started/roles/viewer"
+                ]
+              }
             ]
           },
           {
@@ -135,10 +146,7 @@
               "builds/lifecycle",
               "builds/publishing",
               "builds/configuration",
-              "builds/environments",
-              "builds/environments/dev",
-              "builds/environments/uat",
-              "builds/environments/prod"
+              "builds/environments"
             ]
           },
           {
@@ -150,11 +158,7 @@
               "channels/whatsapp",
               "channels/slack-teams",
               "channels/twilio",
-              "channels/email",
-              "channels/configuration/authentication",
-              "channels/mapping",
-              "channels/environment-settings",
-              "channels/testing"
+              "channels/email"
             ]
           },
           {
@@ -195,5 +199,12 @@
         ]
       }
     ]
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "Page not found",
+      "description": "The page you requested was not found. Redirecting to the homepage."
+    }
   }
 }
