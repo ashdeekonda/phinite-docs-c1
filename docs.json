@@ -59,9 +59,8 @@
             "pages": [
               "assistants/overview",
               "assistants/types",
-              "assistants/conversational",
-              "assistants/email",
-              "assistants/autonomous",
+              
+              
               "assistants/components",
               "assistants/components/flows",
               "assistants/components/intents",
@@ -116,9 +115,9 @@
               "devstudio/types",
               "devstudio/custom-tools",
               "devstudio/prebuilt-tools",
-              "devstudio/prebuilt/gmail",
-              "devstudio/prebuilt/sheets",
-              "devstudio/prebuilt/jira-zendesk",
+              
+              
+              
               "devstudio/structure",
               "devstudio/versioning",
               "devstudio/linking-tools",
@@ -151,15 +150,7 @@
           },
           {
             "group": "8. Channels & Integrations",
-            "pages": [
-              "channels/overview",
-              "channels/supported",
-              "channels/webchat",
-              "channels/whatsapp",
-              "channels/slack-teams",
-              "channels/twilio",
-              "channels/email"
-            ]
+            "pages": []
           },
           {
             "group": "9. Observability & Billing",
@@ -182,7 +173,6 @@
             "pages": [
               "reference/glossary",
               "reference/faqs",
-              "reference/api",
               "reference/shortcuts",
               "reference/release-notes"
             ]
@@ -243,6 +233,13 @@
       {
         "tab": "Integrations",
         "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "channels/overview",
+              "channels/supported"
+            ]
+          },
           {
             "group": "Messaging",
             "pages": [
