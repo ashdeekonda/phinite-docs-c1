@@ -1,10 +1,9 @@
 ---
 title: "Welcome"
-description: Learn what Phinite is, how it's structured, and how different users can build and manage intelligent agent workflows across environments
-icon:starfighter
+description: "Learn what Phinite is, how it's structured, and how different users can build and manage intelligent agent workflows across environments"
 ---
 
-# About Phinite
+## About Phinite
 
 Phinite is an AI automation platform to build, orchestrate, and deploy lifelike assistants and intelligent multi-agent workflows — across channels, tools, and business processes.
 
