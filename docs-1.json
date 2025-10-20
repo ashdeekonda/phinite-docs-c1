@@ -1,0 +1,359 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Phinite Docs",
+  "colors": {
+    "primary": "#7A44FF",
+    "light": "#C9B6FF",
+    "dark": "#5D34C6"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Quick Start",
+        "groups": [
+          {
+            "group": "Welcome to Phinite",
+            "pages": [
+              "index",
+              "/welcome/about-phinite"
+            ]
+          },
+          {
+            "group": "Getting Started",
+            "pages": [
+              "getting-started/get-started",
+              {
+                "group": "Account & Organization",
+                "pages": [
+                  "getting-started/account-organization/signing-up",
+                  "getting-started/account-organization/enterprise-setup"
+                ]
+              },
+              {
+                "group": "Workspaces",
+                "pages": [
+                  "getting-started/workspaces/workspace-overview",
+                  "getting-started/workspaces/creating-workspace"
+                ]
+              },
+              {
+                "group": "Users & Access",
+                "pages": [
+                  "getting-started/users-access/inviting-users",
+                  "getting-started/users-access/user-management",
+                  "getting-started/users-access/access-controls",
+                  {
+                    "group": "User Roles",
+                    "pages": [
+                      "getting-started/users-access/user-roles",
+                      "getting-started/users-access/roles/developer",
+                      "getting-started/users-access/roles/admin",
+                      "getting-started/users-access/roles/tester",
+                      "getting-started/users-access/roles/viewer"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Licensing & Plans",
+                "pages": [
+                  "getting-started/licensing/license-distribution"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Building Assistants",
+            "pages": [
+              "assistants/overview",
+              "assistants/types",
+              {
+                "group": "Assistant Components",
+                "pages": [
+                  "assistants/components",
+                  "assistants/components/flows",
+                  "assistants/components/intents",
+                  "assistants/components/tools",
+                  "assistants/components/builds",
+                  "assistants/components/triggers",
+                  "assistants/components/environments",
+                  "assistants/components/channels"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Flowgen Studio (Workflow Builder)",
+            "pages": [
+              "flowgen/overview",
+              {
+                "group": "Methods",
+                "pages": [
+                  "flowgen/methods",
+                  "flowgen/copilot-method",
+                  "flowgen/manual-method"
+                ]
+              },
+              {
+                "group": "Interface",
+                "pages": [
+                  "flowgen/interface",
+                  "flowgen/interface/canvas",
+                  "flowgen/interface/block-library",
+                  "flowgen/interface/inspector-panel",
+                  "flowgen/interface/variables-panel"
+                ]
+              },
+              {
+                "group": "Blocks",
+                "pages": [
+                  "flowgen/blocks",
+                  "flowgen/blocks/start",
+                  "flowgen/blocks/master-agent",
+                  "flowgen/blocks/child-agent",
+                  "flowgen/blocks/tool-block",
+                  "flowgen/blocks/end-block"
+                ]
+              },
+              {
+                "group": "Connections",
+                "pages": [
+                  "flowgen/connections",
+                  "flowgen/connections/handles",
+                  "flowgen/connections/edges",
+                  "flowgen/connections/conditional-edges"
+                ]
+              },
+              {
+                "group": "Agent Block",
+                "pages": [
+                  "flowgen/agent-block",
+                  "flowgen/agent-block/prompt",
+                  "flowgen/agent-block/rag",
+                  "flowgen/agent-block/tools",
+                  "flowgen/agent-block/variables"
+                ]
+              },
+              {
+                "group": "RAG Management",
+                "pages": [
+                  "flowgen/rag-management",
+                  "flowgen/rag-management/data-sources",
+                  "flowgen/rag-management/collections",
+                  "flowgen/rag-management/referencing"
+                ]
+              },
+              "flowgen/publishing"
+            ]
+          },
+          {
+            "group": "5. DevStudio (Tool Builder)",
+            "pages": [
+              "devstudio/overview",
+              {
+                "group": "Methods",
+                "pages": [
+                  "devstudio/methods",
+                  "devstudio/copilot-tools",
+                  "devstudio/manual-coding"
+                ]
+              },
+              "devstudio/copilot-tools",
+              "devstudio/types",
+              "devstudio/custom-tools",
+              "devstudio/prebuilt-tools",
+              
+              
+              
+              "devstudio/structure",
+              "devstudio/versioning",
+              "devstudio/linking-tools",
+              "devstudio/testing-tools"
+            ]
+          },
+          {
+            "group": "6. Triggers & Intents",
+            "pages": [
+              "triggers-intents/overview",
+              {
+                "group": "Intents",
+                "pages": [
+                  "triggers-intents/intents",
+                  "triggers-intents/creating-intents",
+                  "triggers-intents/prompt-training",
+                  "triggers-intents/testing-intents"
+                ]
+              },
+              {
+                "group": "Triggers",
+                "pages": [
+                  "triggers-intents/triggers",
+                  "triggers-intents/webhooks",
+                  "triggers-intents/event-triggers",
+                  "triggers-intents/mapping"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "7. Builds & Environments",
+            "pages": [
+              "builds/overview",
+              "builds/lifecycle",
+              "builds/publishing",
+              "builds/configuration",
+              "builds/environments"
+            ]
+          },
+          
+          {
+            "group": "9. Observability & Billing",
+            "pages": [
+              "observability/overview",
+              "observability/usage-metrics",
+              {
+                "group": "Metrics",
+                "pages": [
+                  "observability/metrics/session-count",
+                  "observability/metrics/token-usage",
+                  "observability/metrics/telephony"
+                ]
+              },
+              {
+                "group": "Logs",
+                "pages": [
+                  "observability/logs",
+                  "observability/logs/timeline",
+                  "observability/logs/decision-joints",
+                  "observability/logs/variables"
+                ]
+              },
+              "observability/filtering",
+              "observability/billing"
+            ]
+          },
+          
+          {
+            "group": "11. Troubleshooting & Support",
+            "pages": [
+              "support/error-codes",
+              "support/build-failures",
+              "support/env-issues",
+              "support/contact"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "References",
+        "groups": [
+          {
+            "group": "API Reference",
+            "pages": [
+              "reference/api"
+            ]
+          },
+          {
+            "group": "General",
+            "pages": [
+              "reference/glossary",
+              "reference/faqs",
+              "reference/shortcuts"
+            ]
+          },
+          {
+            "group": "Changelog",
+            "pages": [
+              "reference/release-notes"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Templates",
+        "groups": [
+          {
+            "group": "Assistant templates",
+            "pages": [
+              "assistants/conversational",
+              "assistants/email",
+              "assistants/autonomous"
+            ]
+          },
+          {
+            "group": "Flowgen templates",
+            "pages": [
+              "flowgen/blocks/start",
+              "flowgen/blocks/master-agent",
+              "flowgen/blocks/child-agent",
+              "flowgen/blocks/tool-block",
+              "flowgen/blocks/end-block"
+            ]
+          },
+          {
+            "group": "Prebuilt tools templates",
+            "pages": [
+              "devstudio/prebuilt/gmail",
+              "devstudio/prebuilt/sheets",
+              "devstudio/prebuilt/jira-zendesk"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "channels/overview",
+              "channels/supported"
+            ]
+          },
+          {
+            "group": "Messaging",
+            "pages": [
+              "channels/twilio",
+              "channels/whatsapp",
+              "channels/webchat",
+              "channels/slack-teams",
+              "channels/email"
+            ]
+          },
+          {
+            "group": "Business apps",
+            "pages": [
+              "devstudio/prebuilt/jira-zendesk",
+              "devstudio/prebuilt/sheets",
+              "devstudio/prebuilt/gmail"
+            ]
+          }
+        ]
+      }
+    ],
+    "anchors": [
+      {
+        "anchor": "Documentation",
+        "icon": "book-open",
+        "pages": [
+          "index"
+  
+        ]
+      }
+  
+    ]
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "Page not found",
+      "description": "The page you requested was not found. Redirecting to the homepage."
+    }
+  }
+}
