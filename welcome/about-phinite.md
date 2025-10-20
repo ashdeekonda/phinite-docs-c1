@@ -1,6 +1,7 @@
 ---
 title: "Welcome"
 description: "Learn what Phinite is, how it's structured, and how different users can build and manage intelligent agent workflows across environments"
+icon: book-open
 ---
 
 ## About Phinite
