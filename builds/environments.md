@@ -5,6 +5,8 @@ description: "Understand Dev, UAT, and Production environments and their purpose
 
 ## Environments
 
+![Enviroment Pn](/enviroment.png)
+
 - **Development**: rapid iteration
 - **UAT**: stakeholder testing
 - **Production**: live users
