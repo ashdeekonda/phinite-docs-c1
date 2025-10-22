@@ -47,7 +47,11 @@ description: "Design workflows by placing blocks on a visual canvas and connecti
     Select a block to edit its properties in the Inspector: prompts, RAG, tools, and variables.
   </Step>
   <Step title="Test and iterate">
-    ![Test Agent Pn](/images/test-agent.png)
+    <img
+      src="/images/test-agent.png"
+      alt="Test Agent Pn"
+      style={{ width:"74%" }}
+    />
 
     Run sample inputs, observe outputs, and refine prompts, variables, and edge conditions.
   </Step>
