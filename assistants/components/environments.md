@@ -5,6 +5,8 @@ description: "Dev, UAT, and Production environments for deployments."
 
 ## Overview
 
+![Enviroment Pn](/images/enviroment.png)
+
 Separate environments ensure safe deployments.
 
 - **Dev**: rapid iteration and testing
