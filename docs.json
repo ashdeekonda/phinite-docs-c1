@@ -29,13 +29,7 @@
               "group": "Getting Started",
               "pages": [
                 "getting-started/get-started",
-                {
-                  "group": "Account & Organization",
-                  "pages": [
-                    "getting-started/account-organization/signing-up",
-                    "getting-started/account-organization/enterprise-setup"
-                  ]
-                },
+                 "getting-started/account-organization/signing-up",
                 {
                   "group": "Workspaces",
                   "pages": [
