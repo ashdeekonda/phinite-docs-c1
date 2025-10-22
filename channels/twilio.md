@@ -6,6 +6,8 @@ icon: "phone"
 
 ## Setup
 
+![Configuration Twilio(1) Gi](/images/Configuration_Twilio\(1\).gif)
+
 <Steps>
   <Step title="Provision number">
     Obtain a Twilio phone number.
