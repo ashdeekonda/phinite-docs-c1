@@ -5,6 +5,8 @@ description: "External actions your assistants can call to get work done."
 
 ## Overview
 
+![Tools Pn](/images/Tools.png)
+
 Tools are built and versioned in [DevStudio](/devstudio/overview). Agents invoke tools to perform actions.
 
 ## Structure
