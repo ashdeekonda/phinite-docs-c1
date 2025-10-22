@@ -7,12 +7,12 @@ description: "Enable tools for agents and wire variables to parameters."
 
 <Steps>
   <Step title="Select agent">
-    ![New Tool Pn](/images/new-tool.png)
+    ![New Tool Pn](/new-tool-1.png)
 
     Open the Agent block in Flowgen.
   </Step>
   <Step title="Enable tools">
-    ![Select Tool Pn](/images/select-tool.png)
+    ![Select Tool Pn](/selected-tool.png)
 
     Add tools in the Details/Tools tab.
   </Step>
