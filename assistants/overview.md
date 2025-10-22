@@ -1,10 +1,12 @@
 ---
 title: "Assistant Overview"
 description: "Understand assistant types, how they are powered by flows, and where to start."
-icon: robot
+icon: "robot"
 ---
 
 ## What is an assistant?
+
+![Sales Assistant Overview Pn](/images/Sales_Assistant_Overview.png)
 
 An assistant is an AI-powered capability that handles user interactions or background tasks using your workflows and tools.
 
@@ -22,9 +24,15 @@ An assistant is an AI-powered capability that handles user interactions or backg
 ## Choose an assistant type
 
 <CardGroup cols={3}>
-<Card title="Conversational" href="/assistants/conversational" icon="message-circle">Chat, voice, and web experiences</Card>
-<Card title="Email" href="/assistants/email" icon="mail">Automate inbox workflows</Card>
-<Card title="Autonomous" href="/assistants/autonomous" icon="cpu">Background and scheduled automations</Card>
+  <Card title="Conversational" href="/assistants/conversational" icon="message-circle">
+    Chat, voice, and web experiences
+  </Card>
+   <Card title="Email" href="/assistants/email" icon="mail">
+    Automate inbox workflows
+  </Card>
+   <Card title="Autonomous" href="/assistants/autonomous" icon="cpu">
+    Background and scheduled automations
+  </Card>
 </CardGroup>
 
 ## Next steps
