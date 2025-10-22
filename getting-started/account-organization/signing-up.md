@@ -5,7 +5,7 @@ description: "Create your account and secure access to your workspace."
 
 ## Steps
 
-![Sign Up Phinite Pn](/sign-up.png)
+![Sign Up Phinite Pn](/Signup-new.png)
 
 <Steps>
   <Step title="Create account">
