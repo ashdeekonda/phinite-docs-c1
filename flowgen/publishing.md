@@ -167,7 +167,7 @@ graph TD
 
 ## Publishing process
 
-![Publish Pn](/images/Publish.png)
+![Publish Pn](/Publish.png)
 
 ### Step-by-step publishing
 
