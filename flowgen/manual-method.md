@@ -18,7 +18,7 @@ description: "Design workflows by placing blocks on a visual canvas and connecti
   </Step>
   <Step title="Add blocks">
     <img
-      src="/images/Manual-Agent-1.png"
+      src="/Manual-Agent-1.png"
       alt="Manual Agent 1 Pn"
       title="Manual Agent 1 Pn"
       style={{ width:"72%" }}
@@ -28,7 +28,7 @@ description: "Design workflows by placing blocks on a visual canvas and connecti
   </Step>
   <Step title="Connect with edges">
     <img
-      src="/images/Manual-Agent-2.png"
+      src="/Manual-Agent-2.png"
       alt="Manual Agent 2 Pn"
       title="Manual Agent 2 Pn"
       style={{ width:"73%" }}
@@ -38,7 +38,7 @@ description: "Design workflows by placing blocks on a visual canvas and connecti
   </Step>
   <Step title="Configure blocks">
     <img
-      src="/images/Manual-Agent-3.png"
+      src="/Manual-Agent-3.png"
       alt="Manual Agent 3 Pn"
       title="Manual Agent 3 Pn"
       style={{ width:"73%" }}
@@ -48,9 +48,10 @@ description: "Design workflows by placing blocks on a visual canvas and connecti
   </Step>
   <Step title="Test and iterate">
     <img
-      src="/images/test-agent.png"
+      src="/test-agent1.png"
       alt="Test Agent Pn"
       style={{ width:"74%" }}
+      title=""
     />
 
     Run sample inputs, observe outputs, and refine prompts, variables, and edge conditions.
