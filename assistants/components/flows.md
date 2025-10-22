@@ -5,7 +5,7 @@ description: "The orchestration layer powering assistants with logic, agents, an
 
 ## Overview
 
-![Flows Pn](/new-flow.png)
+![Flows Pn](/Ne-flow.png)
 
 Flows are designed and maintained in [Flowgen Studio](/flowgen/overview). Assistants execute flows to deliver outcomes.
 
