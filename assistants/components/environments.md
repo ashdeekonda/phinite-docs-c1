@@ -5,7 +5,7 @@ description: "Dev, UAT, and Production environments for deployments."
 
 ## Overview
 
-![Enviroment Pn](/images/enviroment.png)
+![Enviroment Pn](/enviroment.png)
 
 Separate environments ensure safe deployments.
 
