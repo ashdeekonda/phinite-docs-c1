@@ -7,7 +7,11 @@ description: "Understand workspaces, projects, and permissions."
 
 A Workspace is a contained environment where your team designs, builds, and deploys agents.
 
-![Assistant Overview Pn](/images/Assistant_Overview.png)
+<img
+  src="/images/Assistant_Overview.png"
+  alt="Assistant Overview Pn"
+  className="ml-auto"
+/>
 
 ## Structure
 
