@@ -6,29 +6,31 @@ description: "Design workflows by placing blocks on a visual canvas and connecti
 ## Workflow creation on the canvas
 
 <Steps>
-<Step title="Create a new flow">
-  Open Flowgen Studio and choose "Create manually".
-</Step>
+  <Step title="Create a new flow">
+    ![New Flow Pn](/MANUALAGENT.png)
 
-<Step title="Add blocks">
-  Drag blocks from the Block Library: Start, Master Agent, Child Agent, Tool, End.
-</Step>
+    Open Flowgen Studio and choose "Create manually".
+  </Step>
+  <Step title="Add blocks">
+    ![Manual Agent 1 Pn](/images/Manual-Agent-1.png)
 
-<Step title="Connect with edges">
-  Connect source and target handles between blocks to define execution order.
-</Step>
+    Drag blocks from the Block Library: Start, Master Agent, Child Agent, Tool, End.
+  </Step>
+  <Step title="Connect with edges">
+    ![Manual Agent 2 Pn](/images/Manual-Agent-2.png)
 
-<Step title="Configure blocks">
-  Select a block to edit its properties in the Inspector: prompts, RAG, tools, and variables.
-</Step>
+    Connect source and target handles between blocks to define execution order.
+  </Step>
+  <Step title="Configure blocks">
+    ![Manual Agent 3 Pn](/images/Manual-Agent-3.png)
 
-<Step title="Test and iterate">
-  Run sample inputs, observe outputs, and refine prompts, variables, and edge conditions.
-</Step>
+    Select a block to edit its properties in the Inspector: prompts, RAG, tools, and variables.
+  </Step>
+  <Step title="Test and iterate">
+    Run sample inputs, observe outputs, and refine prompts, variables, and edge conditions.
+  </Step>
 </Steps>
 
 <Tip>
-Use variables to avoid re-computing values and to pass context across agents and tools.
+  Use variables to avoid re-computing values and to pass context across agents and tools.
 </Tip>
-
-
