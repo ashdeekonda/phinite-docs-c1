@@ -6,9 +6,10 @@ description: "Natural language understanding for conversational assistants."
 ## Overview
 
 <img
-  src="/images/CreateIntent.png"
+  src="/CreateIntent.png"
   alt="Create Intent Pn"
   style={{ width:"87%" }}
+  title=""
 />
 
 Intents map user utterances to flows. Train prompts and examples to improve accuracy.
