@@ -5,6 +5,8 @@ description: "Where assistants interact: web, messaging, voice, and email."
 
 ## Supported channels
 
+![Channels Pn](/Channels.png)
+
 - [Web Chat](/channels/webchat)
 - [WhatsApp](/channels/whatsapp)
 - [Slack / Teams](/channels/slack-teams)
