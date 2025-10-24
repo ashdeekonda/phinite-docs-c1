@@ -5,7 +5,7 @@ description: "Set up a workspace and initial project."
 
 ## Steps
 
-![Create Workspace Pn](/create_workspace_1\(1\)\(1\).gif)
+![Create Workspace Gi](/images/create_workspace.gif)
 
 <Steps>
   <Step title="Create workspace">

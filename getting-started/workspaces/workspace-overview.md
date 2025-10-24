@@ -1,7 +1,7 @@
 ---
 title: "Workspace Overview"
 description: "Understand workspaces, projects, and permissions."
----
+icon:briefcase
 
 ## Workspaces
 
