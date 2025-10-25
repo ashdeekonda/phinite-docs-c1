@@ -5,6 +5,10 @@ description: "Manage build lifecycle and deploy flows and tools across environme
 
 ## What is a build?
 
+<Frame>
+  ![Build](/images/Build.png)
+</Frame>
+
 A build is a versioned package of your flows and tools prepared for deployment to environments (Dev, UAT, Prod).
 
 ## Lifecycle
