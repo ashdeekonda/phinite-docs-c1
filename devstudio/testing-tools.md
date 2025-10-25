@@ -5,16 +5,20 @@ description: "Run tools with sample inputs across environments and debug failure
 
 ## Steps
 
+<Frame>
+  <img src="/images/test.png" alt="testing-tools" />
+</Frame>
+
 <Steps>
-<Step title="Open Test panel">
-  Open the tool and select the Test tab.
-</Step>
-<Step title="Provide input">
-  Enter realistic sample input JSON.
-</Step>
-<Step title="Run in environment">
-  Choose Dev/UAT/Prod and run. Review logs for errors.
-</Step>
+  <Step title="Open Test panel">
+    Open the tool and select the Test tab.
+  </Step>
+  <Step title="Provide input">
+    Enter realistic sample input JSON.
+  </Step>
+  <Step title="Run in environment">
+    Choose Dev/UAT/Prod and run. Review logs for errors.
+  </Step>
 </Steps>
 
 ## Debugging
@@ -28,5 +32,5 @@ description: "Run tools with sample inputs across environments and debug failure
 ```
 
 <Warning>
-Never include real secrets in sample inputs.
+  Never include real secrets in sample inputs.
 </Warning>
