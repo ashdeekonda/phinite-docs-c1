@@ -7,7 +7,7 @@ icon: "robot"
 ## What is an assistant?
 
 <Frame>
-  ![Assistant-Overview](/images/Sales_Assistant_Overview.png)
+  ![Assistant-Overview](/Types-assistant.png)
 </Frame>
 
 An assistant is an AI-powered capability that handles user interactions or background tasks using your workflows and tools.
