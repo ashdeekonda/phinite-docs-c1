@@ -4,8 +4,9 @@ description: "Dev, UAT, and Production environments for deployments."
 ---
 
 ## Overview
-
-![Enviroment Pn](/enviroment.png)
+<Frame>
+  <img src="/enviroment.png" alt="Environments" />
+</Frame>
 
 Separate environments ensure safe deployments.
 
