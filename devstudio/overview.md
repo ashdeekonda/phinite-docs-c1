@@ -5,6 +5,10 @@ description: "Build, version, test, and publish tools that your agents can call.
 
 ## What is DevStudio?
 
+<Frame>
+  <img src="/images/Tools-overview.png" alt="Descriptive alt text" />
+</Frame>
+
 DevStudio is where you build tools—reusable, versioned functions your flows and agents can call to take action (e.g., send emails, query CRMs, post to Slack).
 
 ## Key capabilities
@@ -15,8 +19,12 @@ DevStudio is where you build tools—reusable, versioned functions your flows an
 - **Testing**: Run tools with sample inputs in multiple environments
 
 <CardGroup cols={2}>
-<Card title="Ways to Build Tools" href="/devstudio/methods" icon="sparkles">Copilot-generated or manual coding</Card>
-<Card title="Tool Types" href="/devstudio/types" icon="wrench">Custom and pre-built integrations</Card>
+  <Card title="Ways to Build Tools" href="/devstudio/methods" icon="sparkles">
+    Copilot-generated or manual coding
+  </Card>
+   <Card title="Tool Types" href="/devstudio/types" icon="wrench">
+    Custom and pre-built integrations
+  </Card>
 </CardGroup>
 
 ## Best practices
