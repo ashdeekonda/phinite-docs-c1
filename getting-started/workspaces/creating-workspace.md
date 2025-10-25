@@ -5,8 +5,6 @@ description: "Set up a workspace and initial project."
 
 ## Steps
 
-![Create Workspace Gi](/images/create_workspace.gif)
-
 <Steps>
   <Step title="Create workspace">
     From the dashboard, click "New Workspace", name it, and confirm.
