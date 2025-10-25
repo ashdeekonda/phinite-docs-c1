@@ -1,15 +1,14 @@
 ---
-title: "Workspace Overview"
-description: "Understand workspaces, projects, and permissions."
-icon: briefcase
+
+title: "Workspace Overview" description: "Understand workspaces, projects, and permissions." icon: briefcase
 
 ## Workspaces
 
-A Workspace is a contained environment where your team designs, builds, and deploys agents.
-
 <Frame>
-  <img src="/A" alt="Assistant Overview" />
+  <img src="/images/new-workspace.png" alt="Descriptive alt text" />
 </Frame>
+
+A Workspace is a contained environment where your team designs, builds, and deploys agents.
 
 ## Structure
 
@@ -25,10 +24,8 @@ Workspaces can be renamed, cloned, or archived by Admins or Super Admins.
 
 ## Access controls
 
-- Workspace membership controls visibility
-- Roles determine actions: see [User Roles & Permissions](/getting-started/users-access/user-roles)
+- Workspace membership controls visibility - Roles determine actions: see [User Roles & Permissions](/getting-started/users-access/user-roles)
 
 ## Related
 
-- [Creating Your First Workspace](/getting-started/workspaces/creating-workspace)
-- [User Management](/getting-started/users-access/user-management)
+- [Creating Your First Workspace](/getting-started/workspaces/creating-workspace) - [User Management](/getting-started/users-access/user-management)
