@@ -5,12 +5,9 @@ description: "Invite collaborators, assign roles, and manage access lifecycle."
 
 ## Invite users
 
-<img
-  src="/invite-user.png"
-  alt="Invite User Pn"
-  title=""
-  style={{ width:"52%" }}
-/>
+<Frame>
+  <img src="/invite-user.png" alt="Invite User" />
+</Frame>
 
 <Steps>
   <Step title="Open Users">
