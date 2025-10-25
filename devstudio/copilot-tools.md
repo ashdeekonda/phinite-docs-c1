@@ -5,6 +5,8 @@ description: "Use prompt-based generation to scaffold tools quickly."
 
 ## Steps
 
+![image.png](/images/image.png)
+
 <Steps>
   <Step title="Describe the tool">
     Provide the purpose, inputs, outputs, and target system.
