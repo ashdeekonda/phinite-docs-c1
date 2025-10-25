@@ -4,8 +4,9 @@ description: "Create your account and secure access to your workspace."
 ---
 
 ## Steps
-
-![Sign Up Phinite Pn](/Signup-new.png)
+<Frame>
+  <img src="/Signup-new.png" alt="sign up" />
+</Frame>
 
 <Steps>
   <Step title="Create account">
