@@ -9,18 +9,24 @@ Use the RAG tab to select data sources and specific items (documents, tables, et
 
 <Steps>
   <Step title="Open RAG tab">
-    ![Rag Pn](/Rag.png)
+       <Frame>
+  <img src="/Rag.png" alt="Descriptive alt text" />
+</Frame>
 
     Select the agent block and open RAG.
   </Step>
   <Step title="Choose a data source">
-    ![Selected Pn](/images/Selected.png)
-
+    <Frame>
+  <img src="/step-2.png" alt="Descriptive alt text" />
+</Frame>
+    
     Pick a source, then fetch and select items relevant to the agent’s task.
   </Step>
   <Step title="Save">
-    ![Selected Rag Pn](/images/Selected-Rag.png)
-
+    <Frame>
+  <img src="/step-3.png" alt="step-3" />
+</Frame>
+  
     Confirm to persist selections.
   </Step>
 </Steps>
