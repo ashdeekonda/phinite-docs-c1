@@ -15,8 +15,9 @@ Conversational assistants handle real-time chat and voice across channels. They 
 - [Twilio Voice](/channels/twilio)
 
 ## Design steps
-
-![Create Intent Pn](/CreateIntent.png)
+<Frame>
+  <img src="/CreateIntent.png" alt="Descriptive alt text" />
+</Frame>
 
 <Steps>
   <Step title="Define intents">
