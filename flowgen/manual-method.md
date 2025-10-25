@@ -7,52 +7,37 @@ description: "Design workflows by placing blocks on a visual canvas and connecti
 
 <Steps>
   <Step title="Create a new flow">
-    <img
-      src="/Create-a-new-flow.png"
-      alt="New Flow Pn"
-      title="New Flow Pn"
-      style={{ width:"73%" }}
-    />
+    <Frame>
+      <img src="/flow-new.png" alt="flow-new" />
+    </Frame>
 
     Open Flowgen Studio and choose "Create manually".
   </Step>
   <Step title="Add blocks">
-    <img
-      src="/Manual-Agent-1.png"
-      alt="Manual Agent 1 Pn"
-      title="Manual Agent 1 Pn"
-      style={{ width:"72%" }}
-    />
+    <Frame>
+      <img src="/flow-new.png" alt="flow-new" />
+    </Frame>
 
     Drag blocks from the Block Library: Start, Master Agent, Child Agent, Tool, End.
   </Step>
   <Step title="Connect with edges">
-    <img
-      src="/Manual-Agent-2.png"
-      alt="Manual Agent 2 Pn"
-      title="Manual Agent 2 Pn"
-      style={{ width:"73%" }}
-    />
+    <Frame>
+      <img src="/Manual-Agent-2.png" alt="Manual-Agent-2" />
+    </Frame>
 
     Connect source and target handles between blocks to define execution order.
   </Step>
   <Step title="Configure blocks">
-    <img
-      src="/Manual-Agent-3.png"
-      alt="Manual Agent 3 Pn"
-      title="Manual Agent 3 Pn"
-      style={{ width:"73%" }}
-    />
+    <Frame>
+      <img src="/Manual-Agent-3.png" alt="Manual-Agent" />
+    </Frame>
 
     Select a block to edit its properties in the Inspector: prompts, RAG, tools, and variables.
   </Step>
   <Step title="Test and iterate">
-    <img
-      src="/test-agent1.png"
-      alt="Test Agent Pn"
-      style={{ width:"74%" }}
-      title=""
-    />
+    <Frame>
+      <img src="/test-agent1.png" alt="flow-new" />
+    </Frame>
 
     Run sample inputs, observe outputs, and refine prompts, variables, and edge conditions.
   </Step>
