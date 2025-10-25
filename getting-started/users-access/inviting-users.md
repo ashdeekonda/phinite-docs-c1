@@ -6,7 +6,7 @@ description: "Invite collaborators, assign roles, and manage access lifecycle."
 ## Invite users
 
 <Frame>
-  <img src="/invite-user.png" alt="Invite User" />
+  ![Invite User](/invite-user-new.png)
 </Frame>
 
 <Steps>
