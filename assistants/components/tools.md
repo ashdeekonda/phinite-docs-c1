@@ -5,7 +5,9 @@ description: "External actions your assistants can call to get work done."
 
 ## Overview
 
-![Tools Pn](/images/Tools.png)
+<Frame>
+  <img src="/Tools-flowgen.png" alt="Tools" />
+</Frame>
 
 Tools are built and versioned in [DevStudio](/devstudio/overview). Agents invoke tools to perform actions.
 
