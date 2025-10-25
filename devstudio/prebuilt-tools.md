@@ -5,6 +5,10 @@ description: "Use ready-made integrations like Gmail, Google Sheets, Jira, and Z
 
 ## Available integrations
 
+<Frame>
+  <img src="/workspace-tools.png" alt="Descriptive alt text" />
+</Frame>
+
 - [Gmail](/devstudio/prebuilt/gmail)
 - [Google Sheets](/devstudio/prebuilt/sheets)
 - [Jira & Zendesk](/devstudio/prebuilt/jira-zendesk)
