@@ -5,7 +5,9 @@ description: "Understand each block type used to compose flows."
 
 ## Blocks overview
 
-![Blocks Pn](/images/blocks.png)
+<Frame>
+  <img src="/images/blocks.png" alt="Descriptive alt text" />
+</Frame>
 
 - **Start**: flow entry; one source handle to begin execution
 - **Master Agent**: core reasoning unit with prompt, tools, RAG, and variables
