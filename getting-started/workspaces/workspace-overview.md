@@ -7,12 +7,9 @@ icon: briefcase
 
 A Workspace is a contained environment where your team designs, builds, and deploys agents.
 
-<img
-  src="/Assistant_Overview.png"
-  alt="Assistant Overview Pn"
-  className="ml-auto"
-  title=""
-/>
+<Frame>
+  <img src="/A" alt="Assistant Overview" />
+</Frame>
 
 ## Structure
 
