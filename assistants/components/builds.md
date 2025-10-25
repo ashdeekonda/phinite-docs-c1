@@ -5,6 +5,10 @@ description: "Versioned artifacts for assistants and flows across environments."
 
 ## Overview
 
+<Frame>
+  <img src="/images/Build.png" alt="Descriptive alt text" />
+</Frame>
+
 Builds package flows and tools for deployment to environments. See [Builds & Environments](/builds/overview).
 
 ## Lifecycle
