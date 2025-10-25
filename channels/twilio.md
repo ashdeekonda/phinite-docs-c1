@@ -6,7 +6,14 @@ icon: "phone"
 
 ## Setup
 
-![Configuration Twilio(1) Gi](/images/Configuration_Twilio\(1\).gif)
+<Frame>
+  <img
+    src="/Twilio.png"
+    alt="Twilio"
+    title=""
+    style={{ width:"100%" }}
+  />
+</Frame>
 
 <Steps>
   <Step title="Provision number">
