@@ -5,7 +5,9 @@ description: "Configure channels for chat, voice, and email; integrate with exte
 
 ## Channels
 
-![Channels Pn](/Channels.png)
+<Frame>
+  <img src="/Channels.png" alt="channels" />
+</Frame>
 
 - Web Chat, WhatsApp, Slack/Teams, Twilio Voice, Email
 
