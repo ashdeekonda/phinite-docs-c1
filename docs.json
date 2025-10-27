@@ -22,7 +22,9 @@
               "pages": [
                 "index",
                 "/welcome/about-phinite",
-                "getting-started/get-started"
+                "/welcome/quick-start",
+                "/welcome/creating-workspace",
+                "/welcome/workspace-overview"
               ]
             },
             {
