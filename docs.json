@@ -22,47 +22,26 @@
               "pages": [
                 "index",
                 "/welcome/about-phinite",
-                "/welcome/quick-start",
-                "/welcome/creating-workspace",
-                "/welcome/workspace-overview"
+                "/welcome/quick-start"
+               
               ]
             },
             {
-              "group": "Getting Started",
+              "group": "Set up your account",
               "pages": [
-                "getting-started/get-started",
-                 "getting-started/account-organization/signing-up",
-                {
-                  "group": "Workspaces",
-                  "pages": [
-                    "getting-started/workspaces/workspace-overview",
-                    "getting-started/workspaces/creating-workspace"
-                  ]
-                },
-                {
-                  "group": "Users & Access",
-                  "pages": [
-                    "getting-started/users-access/inviting-users",
-                    "getting-started/users-access/user-management",
-                    "getting-started/users-access/access-controls",
-                    {
-                      "group": "User Roles",
-                      "pages": [
-                        "getting-started/users-access/user-roles",
-                        "getting-started/users-access/roles/developer",
-                        "getting-started/users-access/roles/admin",
-                        "getting-started/users-access/roles/tester",
-                        "getting-started/users-access/roles/viewer"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "group": "Licensing & Plans",
-                  "pages": [
-                    "getting-started/licensing/license-distribution"
-                  ]
-                }
+                "setup-account/signing-up",
+                "setup-account/workspace-overview",
+                "setup-account/creating-workspace",
+                "users-access/inviting-users"
+              ]
+            },
+            {
+              "group": "User Management",
+              "pages": [
+                "users-access/inviting-users",
+                "users-access/user-management",
+                "users-access/access-controls",
+                "users-access/user-roles"
               ]
             },
             {
