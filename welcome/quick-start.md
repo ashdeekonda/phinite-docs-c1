@@ -1,5 +1,5 @@
 ---
-title: "Getting Started"
+title: "Quick Start"
 description: "Learn how to create your organization, choose a plan, invite users, and begin building agents in Phinite."
 ---
 
