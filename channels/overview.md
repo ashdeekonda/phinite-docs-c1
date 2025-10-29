@@ -6,7 +6,7 @@ icon: "lightning"
 
 import { Lightning } from "phosphor-react";
 
-## <Lightning weight="regular" size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Features
+
 
 ## Channels
 
