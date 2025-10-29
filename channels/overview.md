@@ -1,6 +1,6 @@
 ---
 title: "Channels & Integrations Overview"
-description: "Configure channels for chat, voice, and email; integrate with external systems."
+description: "Configure channels for chat, voice, and email; integrate with external systems1."
 icon: "lightning"
 ---
 
