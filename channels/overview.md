@@ -1,12 +1,12 @@
 ---
 title: "Channels & Integrations Overview"
 description: "Configure channels for chat, voice, and email; integrate with external systems."
-import { Lightning, ChatTeardropDots } from "phosphor-react";
-Icon:<Lightning size={28} color="#6366f1" weight="fill" />
-## Features
-
-
+icon: "lightning"
 ---
+
+import { Lightning } from "phosphor-react";
+
+## <Lightning weight="regular" size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Features
 
 ## Channels
 

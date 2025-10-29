@@ -12,6 +12,22 @@ Best used for section headers.
 ## Titles
 ```
 
+You can add Phosphor icons to your headers by importing them and using them inline:
+
+```md
+import { Robot, Lightning } from "phosphor-react";
+
+## <Robot weight="regular" size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> What is an assistant?
+
+## <Lightning weight="regular" size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Features
+```
+
+<Tip>
+
+Make sure `phosphor-react` is installed. Icons are available from the [Phosphor Icons library](https://phosphoricons.com/). Import the icon component using PascalCase (e.g., `Robot`, `Lightning`, `ChatCircle`).
+
+</Tip>
+
 ### Subtitles
 
 Best used for subsection headers.
