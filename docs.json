@@ -18,21 +18,13 @@
           "tab": "Documentation",
           "groups": [
             {
-              "group": "Welcome to Phinite",
-            "pages": [
-              "index",
-              "getting-started/about-phinite",
-              "getting-started/quickstart"
-            ]
-            },
-            {
-              "group": "Set up your account",
-            "pages": [
-              "setup-account/signing-up",
-              "setup-account/workspace-overview",
-              "setup-account/creating-workspace",
-              "user-management/inviting-users"
-            ]
+              "group": "Getting Started",
+              "pages": [
+                "getting-started/about-phinite",
+                "getting-started/quickstart",
+                "workspaces/workspace-overview",
+                "user-management/inviting-users"
+              ]
             },
             {
               "group": "User Management",
@@ -312,17 +304,7 @@
           ]
         }
       ],
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "icon": "book-open",
-          "pages": [
-            "index"
-    
-          ]
-        }
-    
-      ]
+      "anchors": []
     },
     "errors": {
       "404": {
