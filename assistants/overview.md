@@ -1,12 +1,10 @@
 ---
 title: "Assistant Overview"
 description: "Understand assistant types, how they are powered by flows, and where to start."
-icon: "robot"
+
 ---
 
-import { Robot } from "phosphor-react";
 
-## <Robot weight="regular" size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> What is an assistant?
 
 <Frame>
   ![Assistant-Overview](/Types-assistant.png)
