@@ -22,8 +22,7 @@
               "pages": [
                 "getting-started/about-phinite",
                 "getting-started/quickstart",
-                "workspaces/workspace-overview",
-                "user-management/inviting-users"
+                "workspaces/workspace-overview"
               ]
             },
             {
