@@ -21,6 +21,7 @@
               "group": "Getting Started",
               "pages": [
                 "getting-started/about-phinite",
+                "getting-started/what-you-can-build",
                 "getting-started/quickstart",
                 "workspaces/workspace-overview"
               ]

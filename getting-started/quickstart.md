@@ -12,8 +12,16 @@ In a few minutes, you’ll have a working assistant that can understand intents,
 **Quickstart Video Tutorial Link**
 
 <Frame>
-  ![Phinite Copilot Quickstart overview](images/hero-dark.png)
-</Frame>
+<img
+    src="images/Flows.png"
+    alt="Phinite Copilot Quickstart overview"
+    title=""
+    className="mr-auto"
+    style={{ width:"100%" }}
+  />
+  </Frame>
+  
+
 
 ---
 
