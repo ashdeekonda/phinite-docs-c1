@@ -7,16 +7,16 @@ sidebarTitle: "Home"
 ## Start here
 
 <CardGroup cols={3}>
-  <Card title="Welcome" icon="sparkles" href="/welcome/about-phinite">About Phinite and this manual</Card>
-  <Card title="Getting Started" icon="rocket" href="/getting-started/enterprise-setup">Set up your org and first workspace</Card>
-  <Card title="User Management" icon="users" href="/getting-started/user-management">Invite users and manage roles</Card>
-  <Card title="User Roles" icon="id-badge" href="/getting-started/user-roles">Capabilities by role (Admin, Developer, Tester, Viewer)</Card>
-  <Card title="Workspace Overview" icon="grid" href="/getting-started/workspace-overview">Understand org → workspace → project</Card>
-  <Card title="Create Workspace" icon="plus-square" href="/getting-started/creating-workspace">Create your first workspace and project</Card>
-  <Card title="Sign Up" icon="user-plus" href="/getting-started/signing-up">Create and verify your account</Card>
-  <Card title="Invite Users" icon="envelope" href="/getting-started/inviting-users">Add teammates and assign roles</Card>
-  <Card title="Access Controls" icon="shield" href="/getting-started/access-controls">Security and permissions overview</Card>
-  <Card title="Licensing" icon="key" href="/getting-started/license-distribution">Apply enterprise license</Card>
+  <Card title="Welcome" icon="sparkles" href="/getting-started/about-phinite">About Phinite and this manual</Card>
+  <Card title="Getting Started" icon="rocket" href="/getting-started/quickstart">Set up your org and first workspace</Card>
+  <Card title="User Management" icon="users" href="/user-management/user-management">Invite users and manage roles</Card>
+  <Card title="User Roles" icon="id-badge" href="/user-management/user-roles">Capabilities by role (Admin, Developer, Tester, Viewer)</Card>
+  <Card title="Workspace Overview" icon="grid" href="/setup-account/workspace-overview">Understand org → workspace → project</Card>
+  <Card title="Create Workspace" icon="plus-square" href="/setup-account/creating-workspace">Create your first workspace and project</Card>
+  <Card title="Sign Up" icon="user-plus" href="/setup-account/signing-up">Create and verify your account</Card>
+  <Card title="Invite Users" icon="envelope" href="/user-management/inviting-users">Add teammates and assign roles</Card>
+  <Card title="Access Controls" icon="shield" href="/user-management/access-controls">Security and permissions overview</Card>
+  
   <Card title="Shortcuts" icon="bolt" href="/reference/shortcuts">Productivity shortcuts</Card>
   <Card title="FAQs" icon="circle-question" href="/reference/faqs">Common questions</Card>
   

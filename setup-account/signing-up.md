@@ -5,7 +5,7 @@ description: "Create your account and secure access to your workspace."
 
 ## Steps
 <Frame>
-  <img src="/Signup-new.png" alt="sign up" />
+  <img src="/images/Signup-new.png" alt="sign up" />
 </Frame>
 
 <Steps>
@@ -22,5 +22,5 @@ description: "Create your account and secure access to your workspace."
 
 ## Access
 
-- Admins can invite users post-signup: [Inviting Users](/getting-started/users-access/inviting-users)
-- Access is guarded by token validation; see [Access Controls](/getting-started/users-access/access-controls)
+- Admins can invite users post-signup: [Inviting Users](/user-management/inviting-users)
+- Access is guarded by token validation; see [Access Controls](/user-management/access-controls)

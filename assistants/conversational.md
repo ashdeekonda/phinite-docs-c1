@@ -16,7 +16,7 @@ Conversational assistants handle real-time chat and voice across channels. They 
 
 ## Design steps
 <Frame>
-  <img src="/CreateIntent.png" alt="Descriptive alt text" />
+  <img src="/images/CreateIntent.png" alt="Descriptive alt text" />
 </Frame>
 
 <Steps>
@@ -27,7 +27,7 @@ Conversational assistants handle real-time chat and voice across channels. They 
     Map intents to flows in [Mapping](/triggers-intents/mapping).
   </Step>
   <Step title="Connect channels">
-    Configure channel authentication. See [Channel Configuration](/channels/configuration).
+    Configure channel authentication. See [Channels Overview](/channels/overview).
   </Step>
 </Steps>
 

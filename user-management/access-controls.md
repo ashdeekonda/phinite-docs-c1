@@ -5,7 +5,7 @@ description: "Role-based permissions, token validation, and workspace access pol
 
 ## Role-based access
 
-Permissions are enforced per workspace and project. See [User Roles](/getting-started/users-access/user-roles) for the capability matrix.
+Permissions are enforced per workspace and project. See [User Roles](/user-management/user-roles) for the capability matrix.
 
 ## Authentication guards
 
@@ -26,7 +26,7 @@ if (!token) router.replace("/login");
 
 ## Related
 
-- [User Management](/getting-started/users-access/user-management)
-- [Workspace Overview](/getting-started/workspaces/workspace-overview)
+- [User Management](/user-management/user-management)
+- [Workspace Overview](/setup-account/workspace-overview)
 
 

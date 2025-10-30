@@ -6,7 +6,7 @@ description: "Invite collaborators, assign roles, and manage access lifecycle."
 ## Invite users
 
 <Frame>
-  ![Invite User](/invite-user-new.png)
+  ![Invite User](/images/invite-user-new.png)
 </Frame>
 
 <Steps>
@@ -29,5 +29,5 @@ description: "Invite collaborators, assign roles, and manage access lifecycle."
 
 ## Related
 
-- [User Roles & Permissions](/getting-started/users-access/user-roles)
-- [Access Controls & Security](/getting-started/users-access/access-controls)
+- [User Roles & Permissions](/user-management/user-roles)
+- [Access Controls & Security](/user-management/access-controls)

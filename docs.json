@@ -19,30 +19,29 @@
           "groups": [
             {
               "group": "Welcome to Phinite",
-              "pages": [
-                "index",
-                "/welcome/about-phinite",
-                "/welcome/quick-start"
-               
-              ]
+            "pages": [
+              "index",
+              "getting-started/about-phinite",
+              "getting-started/quickstart"
+            ]
             },
             {
               "group": "Set up your account",
-              "pages": [
-                "setup-account/signing-up",
-                "setup-account/workspace-overview",
-                "setup-account/creating-workspace",
-                "users-access/inviting-users"
-              ]
+            "pages": [
+              "setup-account/signing-up",
+              "setup-account/workspace-overview",
+              "setup-account/creating-workspace",
+              "user-management/inviting-users"
+            ]
             },
             {
               "group": "User Management",
-              "pages": [
-                "users-access/inviting-users",
-                "users-access/user-management",
-                "users-access/access-controls",
-                "users-access/user-roles"
-              ]
+            "pages": [
+              "user-management/inviting-users",
+              "user-management/user-management",
+              "user-management/access-controls",
+              "user-management/user-roles"
+            ]
             },
             {
               "group": "Building Assistants",

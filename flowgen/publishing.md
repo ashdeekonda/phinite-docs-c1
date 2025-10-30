@@ -167,7 +167,7 @@ graph TD
 
 ## Publishing process
 
-![Publish Pn](/Publish.png)
+![Publish Pn](/images/Publish.png)
 
 ### Step-by-step publishing
 
@@ -450,5 +450,4 @@ Phinite automatically manages version numbers:
 ### Environment management
 
 - [**Build Configuration**](/builds/configuration): Configure deployment settings
-- [**Environment Variables**](/builds/env-variables): Manage environment-specific configuration
-- [**Testing & Deployment**](/builds/testing-deployment): Implement proper testing workflows
+- [**Lifecycle**](/builds/lifecycle): Recommended testing and deployment flow

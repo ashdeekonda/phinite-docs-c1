@@ -15,10 +15,10 @@ description: "Understand capabilities by role across Phinite."
 
 ## Role details
 
-- [Developer](/getting-started/users-access/roles/developer)
-- [Admin](/getting-started/users-access/roles/admin)
-- [Tester](/getting-started/users-access/roles/tester)
-- [Viewer](/getting-started/users-access/roles/viewer)
+- [Developer](/user-management/roles/developer)
+- [Admin](/user-management/roles/admin)
+- [Tester](/user-management/roles/tester)
+- [Viewer](/user-management/roles/viewer)
 
 <Info>
 Assign roles per workspace. A user can have different roles in different workspaces.
