@@ -1,4 +1,26 @@
 ---
+title: "GmailTool"
+description: "Read/search/draft/send/reply Gmail-like accounts."
+icon: "envelope"
+---
+
+## GmailTool
+
+Required configuration:
+- `email` (string)
+- `app_password` (string)
+
+Typical validations:
+- List labels; fetch one message metadata
+
+### Subtools
+- `get_latest_emails`, `get_emails_from_user`, `get_unread_emails`, `get_starred_emails`,
+  `get_emails_by_context`, `get_emails_by_date`, `get_emails_by_thread`,
+  `search_emails`, `create_draft_email`, `send_email`, `send_email_reply`
+
+### Troubleshooting
+- Auth errors, quota limits, large attachments
+---
 title: "Gmail Integration"
 description: "Send and read emails via Gmail."
 icon: envelope

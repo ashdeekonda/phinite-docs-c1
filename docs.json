@@ -135,9 +135,17 @@
                 "devstudio/types",
                 "devstudio/custom-tools",
                 "devstudio/prebuilt-tools",
-                
-                
-                
+                {
+                  "group": "Predefined Tools",
+                  "pages": [
+                    "devstudio/prebuilt/gmail",
+                    "devstudio/prebuilt/slacktool",
+                    "devstudio/prebuilt/teamstool",
+                    "devstudio/prebuilt/jiratools",
+                    "devstudio/prebuilt/customapi",
+                    "devstudio/prebuilt/mongodbtool"
+                  ]
+                },
                 "devstudio/structure",
                 "devstudio/versioning",
                 "devstudio/linking-tools",
@@ -289,7 +297,8 @@
                 "channels/twilio",
                 "channels/whatsapp",
                 "channels/webchat",
-                "channels/slack-teams",
+                "channels/slack",
+                "channels/teams",
                 "channels/email"
               ]
             },

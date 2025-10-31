@@ -1,26 +1,21 @@
 ---
-title: "Pre-built Integrations"
-description: "Use ready-made integrations like Gmail, Google Sheets, Jira, and Zendesk."
+title: "Predefined Tools"
+description: "Add and configure pre-packaged tools; reference for each tool and its subtools."
 ---
 
 ## Available integrations
 
 <Frame>
-  ![Descriptive alt text](/workspace-tools.png)
+  ![Descriptive alt text](/images/workspace-tools.png)
 </Frame>
 
 - [Gmail](/devstudio/prebuilt/gmail)
 - [Google Sheets](/devstudio/prebuilt/sheets)
 - [Jira & Zendesk](/devstudio/prebuilt/jira-zendesk)
 
-## Setup
+## Overview
 
-- Configure provider credentials per environment
-- Test with sample inputs before publishing
-
-# Predefined Tools — User Setup & Reference
-
-**Purpose:** This document explains how to add and configure the pre-packaged tools ("Predefined Tools") for your agentic system, and describes each tool and its available subtools. Read this start-to-finish to configure tools reliably, or jump to the per-tool section for details.
+This page explains how to add and configure the pre-packaged tools ("Predefined Tools") for your agentic system, and describes each tool and its available subtools. Read this start-to-finish to configure tools reliably, or jump to the per-tool section for details.
 
 ---
 
@@ -39,7 +34,7 @@ description: "Use ready-made integrations like Gmail, Google Sheets, Jira, and Z
 
 ---
 
-## Generic configuration concepts (applies to most tools)
+## Generic concepts (applies to most tools)
 
 - **Connection**: A saved set of configuration values (credentials, tokens, base URLs). Connections are reusable across agents.
 - **Required field**: You must supply this to create or validate the connection.
@@ -50,7 +45,7 @@ description: "Use ready-made integrations like Gmail, Google Sheets, Jira, and Z
 
 ---
 
-# Tools: Overview & Detailed Reference
+## Tools: Overview & Detailed Reference
 
 Below each tool is listed with: ID, purpose, configuration fields, required permissions/notes, and full list of subtools with short descriptions and suggested parameters. Use these as a single-source reference when creating connections and choosing subtools to enable.
 
