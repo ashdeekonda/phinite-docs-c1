@@ -239,6 +239,23 @@
               "pages": [
                 "integrations-hub/google-calendar",
                 "integrations-hub/firecrawl",
+                "integrations-hub/brave-search",
+                "integrations-hub/salesforce",
+                "integrations-hub/telegram",
+                "integrations-hub/notion",
+                "integrations-hub/github",
+                "integrations-hub/gmail",
+                "integrations-hub/google-bigquery",
+                "integrations-hub/google-sheets",
+                "integrations-hub/google-drive",
+                "integrations-hub/mongodb",
+                "integrations-hub/chat-ai",
+                "integrations-hub/voice",
+                "integrations-hub/api",
+                "integrations-hub/jira",
+                "integrations-hub/microsoft-teams",
+                "integrations-hub/slack",
+                "integrations-hub/whatsapp",
                 "integrations-hub/email",
                 "integrations-hub/twilio"
               ]
