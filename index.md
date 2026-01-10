@@ -81,6 +81,7 @@ sidebarTitle: "Home"
 <CardGroup cols={3}>
   <Card title="Overview" icon="comments" href="/channels/overview">Supported channels and setup</Card>
   <Card title="Supported Channels" icon="list" href="/channels/supported">Webchat, WhatsApp, Slack/Teams, Twilio, Email</Card>
+  <Card title="Integrations Hub" icon="plug" href="/integrations-hub/overview">Prebuilt integrations and setup guides</Card>
   <Card title="Webchat" icon="message" href="/channels/webchat">Embed chat on your site</Card>
   <Card title="WhatsApp" icon="whatsapp" href="/channels/whatsapp">Configure WhatsApp channel</Card>
   <Card title="Slack/Teams" icon="hashtag" href="/channels/slack-teams">Connect Slack or Teams</Card>

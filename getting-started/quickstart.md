@@ -11,19 +11,7 @@ In a few minutes, you’ll have a working assistant that can understand intents,
 
 **Quickstart Video Tutorial Link**
 
-<Frame>
-<img
-    src="images/Flows.png"
-    alt="Phinite Copilot Quickstart overview"
-    title=""
-    className="mr-auto"
-    style={{ width:"100%" }}
-  />
-  </Frame>
-  
-
-
----
+<iframe src="https://www.youtube.com/embed/Pe8zjW3Qfg0" title="YouTube video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
 
 ## Before You Begin
 

@@ -1,18 +1,28 @@
 ---
 title: "Google Sheets Integration"
 description: "Read and write rows in Google Sheets."
-icon: table
+icon: "table"
 ---
 
 ## Parameters
 
-<ParamField body="spreadsheetId" type="string" required>Spreadsheet ID</ParamField>
-<ParamField body="range" type="string" required>A1 notation range</ParamField>
-<ParamField body="values" type="array">Values to write</ParamField>
+<ParamField body="spreadsheetId" type="string" required>
+  Spreadsheet ID
+</ParamField>
+
+ <ParamField body="range" type="string" required>
+  A1 notation range
+</ParamField>
+
+ <ParamField body="values" type="array">
+  Values to write
+</ParamField>
+
 
 ## Example
 
 <RequestExample>
+
 ```json Tool Input
 {
   "spreadsheetId": "sheet_123",
@@ -20,10 +30,13 @@ icon: table
   "values": [["A","B","C"]]
 }
 ```
+
 </RequestExample>
 
 <ResponseExample>
+
 ```json Success
 { "updated": 1 }
 ```
+
 </ResponseExample>
