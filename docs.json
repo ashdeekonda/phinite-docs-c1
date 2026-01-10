@@ -225,6 +225,15 @@
               "pages": [
                 "integrations-hub/overview"
               ]
+            },
+            {
+              "group": "Integrations",
+              "pages": [
+                "integrations-hub/google-calendar",
+                "integrations-hub/firecrawl",
+                "integrations-hub/email",
+                "integrations-hub/twilio"
+              ]
             }
           ]
         }
