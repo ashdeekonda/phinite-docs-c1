@@ -4,8 +4,9 @@ description: "Create, train, and map intents to flows."
 ---
 
 ## Steps
+
 <Frame>
-  <img src="/CreateIntent.png" alt="Intents" />
+  ![Intents](/CreateIntent.png)
 </Frame>
 
 <Steps>
@@ -13,10 +14,13 @@ description: "Create, train, and map intents to flows."
     Define intent name and description.
   </Step>
   <Step title="Add examples">
-    Provide diverse, realistic utterances.
+    Provide diverse, realistic utterances only. 
   </Step>
   <Step title="Train and review">
     Train the model and inspect confidence.
+  </Step>
+  <Step title="Map to flow">
+    Connect to a flow for handling.
   </Step>
   <Step title="Map to flow">
     Connect to a flow for handling.
