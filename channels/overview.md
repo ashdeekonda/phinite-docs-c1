@@ -6,12 +6,13 @@ icon: "bolt"
 
 import { Lightning } from "phosphor-react";
 
-## <Lightning weight="regular" size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Features
+## <Lightning weight="regular" size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />
+ Features
 
 ## Channels
 
 <Frame>
-  <img src="/images/Channels.png" alt="channels" />
+  ![channels](/images/Channels.png)
 </Frame>
 
 - Web Chat, WhatsApp, Slack/Teams, Twilio Voice, Email
