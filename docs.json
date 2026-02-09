@@ -28,12 +28,12 @@
             },
             {
               "group": "User Management",
-            "pages": [
-              "user-management/inviting-users",
-              "user-management/user-management",
-              "user-management/access-controls",
-              "user-management/user-roles"
-            ]
+              "pages": [
+                "user-management/inviting-users",
+                "user-management/user-management",
+                "user-management/access-controls",
+                "user-management/user-roles"
+              ]
             },
             {
               "group": "Building Assistants",
@@ -159,6 +159,7 @@
                 {
                   "group": "Intents",
                   "pages": [
+                    "triggers-intents/intent-as-api",
                     "triggers-intents/intents",
                     "triggers-intents/creating-intents",
                     "triggers-intents/prompt-training",
@@ -186,7 +187,6 @@
                 "builds/environments"
               ]
             },
-            
             {
               "group": "9. Observability & Billing",
               "pages": [
@@ -213,7 +213,6 @@
                 "observability/billing"
               ]
             },
-            
             {
               "group": "11. Troubleshooting & Support",
               "pages": [
@@ -292,8 +291,7 @@
             }
           ]
         }
-      ],
-      "anchors": []
+      ]
     },
     "errors": {
       "404": {
