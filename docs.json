@@ -177,11 +177,11 @@
                       "group": "Trigger APIs",
                       "pages": [
                         "overview",
-                        "untitled-page",
-                        "e",
-                        "c",
-                        "api-guide",
-                        "j"
+                        "triggers-intents/triggers/api",
+                        "triggers-intents/triggers/bg_task",
+                        "triggers-intents/triggers/cron",
+                        "triggers-intents/triggers/api-guide",
+                        "triggers-intents/triggers/integration-funnel"
                       ]
                     },
                     "triggers-intents/triggers",
