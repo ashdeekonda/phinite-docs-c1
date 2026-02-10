@@ -58,6 +58,10 @@
             {
               "group": "Flowgen Studio (Workflow Builder)",
               "pages": [
+                {
+                  "group": "Variables",
+                  "pages": []
+                },
                 "flowgen/overview",
                 {
                   "group": "Methods",
@@ -159,16 +163,27 @@
                 {
                   "group": "Intents",
                   "pages": [
-                    "triggers-intents/intent-as-api",
                     "triggers-intents/intents",
                     "triggers-intents/creating-intents",
                     "triggers-intents/prompt-training",
-                    "triggers-intents/testing-intents"
+                    "triggers-intents/testing-intents",
+                    "triggers-intents/intent-as-api"
                   ]
                 },
                 {
                   "group": "Triggers",
                   "pages": [
+                    {
+                      "group": "Trigger APIs",
+                      "pages": [
+                        "overview",
+                        "c",
+                        "e",
+                        "untitled-page",
+                        "j",
+                        "api-guide"
+                      ]
+                    },
                     "triggers-intents/triggers",
                     "triggers-intents/webhooks",
                     "triggers-intents/event-triggers",

@@ -1,0 +1,138 @@
+---
+title: "Execution Mode 2: Background Task (Recommended)"
+---
+
+### Overview
+
+Background task mode provides **asynchronous execution** with two separate endpoints: one to start the flow and another to check its status. This is the **recommended approach** for most autonomous flows.
+
+**Benefits:**
+
+- Maximum execution time: **2700 seconds (45 minutes)**
+- Suitable for complex, multi-step workflows
+- Real-time progress tracking through logs
+- Non-blocking API calls
+
+### Step 1: Start the Flow
+
+#### Endpoint
+
+```
+POST https://ai-core.phinite.ai/trigger/start/{workspace_id}/{trigger_id}/{environment}
+```
+
+#### Request Payload
+
+```json
+{
+  "message": "start the task",
+  "user_variables": {
+    "key1": "value1",
+    "key2": "value2"
+  }
+}
+```
+
+#### Initial Response
+
+```json
+{
+  "workflow_id": "workflowid-uuid",
+  "response": {},
+  "status": "pending",
+  "logs": [],
+  "requires_input": false,
+  "error": null
+}
+```
+
+The `workflow_id` returned in this response is used to track the status of the flow execution.
+
+### Step 2: Check Status
+
+#### Endpoint
+
+```
+GET https://ai-core.phinite.ai/trigger/status/{workspace_id}/{workflow_id}
+```
+
+The status endpoint can return one of three statuses with HTTP 200:
+
+- `pending` - Flow is still executing
+- `completed` - Flow finished successfully
+- `failed` - Flow encountered an error
+
+#### Status Response: Pending
+
+While the flow is executing, the status endpoint returns real-time logs:
+
+```json
+{
+  "workflow_id": "workflowid-uuid",
+  "response": {},
+  "status": "pending",
+  "logs": [
+    {
+      "time": "2026-02-09 23:24:39",
+      "level": "tool_call",
+      "node_id": "Agent 1",
+      "message": "Tool Invoked with parameters",
+      "status": "running",
+      "user_logs_type": ""
+    }
+  ],
+  "requires_input": false,
+  "error": null
+}
+```
+
+<Note>
+  The `logs`array provides real-time insights into the flow execution progress. The array size is not fixed and it does not return all execution logs, only the most recent entries, typically the last 4–5 logs.
+</Note>
+
+#### Status Response: Completed
+
+When the flow finishes successfully:
+
+```json
+{
+  "workflow_id": "workflowid-uuid",
+  "response": {
+    "workflow_id": "workflowid-uuid",
+    "key1": "value1",
+    "key2": "value2"
+    // ... all session variables
+  },
+  "status": "completed",
+  "logs": [
+    ...,
+    {
+      "time": "2026-02-09 23:25:01",
+      "level": "info",
+      "node_id": "flow",
+      "message": "Graph execution completed successfully",
+      "status": "success",
+      "user_logs_type": ""
+    }
+  ],
+  "requires_input": false,
+  "error": null
+}
+```
+
+The `response` object contains the workflow_id and all session variables that were set during flow execution.
+
+#### Status Response: Failed
+
+If the flow encounters an error:
+
+```json
+{
+  "workflow_id": "workflowid-uuid",
+  "response": {},
+  "status": "failed",
+  "logs": [...],
+  "requires_input": false,
+  "error": "Detailed error message"
+}
+```
