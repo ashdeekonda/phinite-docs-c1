@@ -177,11 +177,11 @@
                       "group": "Trigger APIs",
                       "pages": [
                         "overview",
-                        "c",
-                        "e",
                         "untitled-page",
-                        "j",
-                        "api-guide"
+                        "e",
+                        "c",
+                        "api-guide",
+                        "j"
                       ]
                     },
                     "triggers-intents/triggers",
