@@ -130,7 +130,6 @@
             {
               "group": "5. DevStudio (Tool Builder)",
               "pages": [
-                "devstudio/system-tool",
                 "devstudio/overview",
                 {
                   "group": "Methods",
@@ -142,6 +141,7 @@
                 },
                 "devstudio/copilot-tools",
                 "devstudio/types",
+                "devstudio/system-tool",
                 "devstudio/custom-tools",
                 "devstudio/prebuilt-tools",
                 {
