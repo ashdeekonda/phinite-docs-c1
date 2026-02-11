@@ -58,15 +58,8 @@
             {
               "group": "Flowgen Studio (Workflow Builder)",
               "pages": [
-                {
-                  "group": "Variables",
-                  "pages": [
-                    "types-of-session-variables",
-                    "input-variables-in-agent-block",
-                    "capture-variables-in-agent-block"
-                  ]
-                },
                 "flowgen/overview",
+                "flowgen/publishing",
                 {
                   "group": "Methods",
                   "pages": [
@@ -97,6 +90,14 @@
                   ]
                 },
                 {
+                  "group": "Variables",
+                  "pages": [
+                    "flowgen/types-of-session-variables",
+                    "flowgen/input-variables-in-agent-block",
+                    "flowgen/capture-variables-in-agent-block"
+                  ]
+                },
+                {
                   "group": "Connections",
                   "pages": [
                     "flowgen/connections",
@@ -123,8 +124,7 @@
                     "flowgen/rag-management/collections",
                     "flowgen/rag-management/referencing"
                   ]
-                },
-                "flowgen/publishing"
+                }
               ]
             },
             {
