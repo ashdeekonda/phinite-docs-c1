@@ -1,0 +1,217 @@
+---
+title: "System Tools"
+description: "Built-in tools available to all agents for flow orchestration and enhanced user experience."
+---
+
+## Overview
+
+System tools are automatically available to every agent and don't require custom configuration. These tools help agents orchestrate workflows, retrieve information, and provide better user experiences.
+
+## Available System Tools
+
+<CardGroup cols={2}>
+  <Card title="RAG Tool" icon="database">
+    Retrieve information from datasources
+  </Card>
+  <Card title="Finish Tool" icon="flag-checkered">
+    Complete current agent task
+  </Card>
+  <Card title="End Flow Tool" icon="circle-stop">
+    Terminate the entire workflow
+  </Card>
+  <Card title="Flow Insight Tool" icon="comment-dots">
+    Provide status updates to users
+  </Card>
+</CardGroup>
+
+## RAG Tool
+
+### Purpose
+
+Retrieves relevant information from datasources attached to the agent block.
+
+### Usage
+
+Simply mention in your agent prompt when the tool should be called:
+
+```text Agent Prompt Example
+When the user asks about product specifications or documentation, 
+use the RAGTool to search the knowledge base for relevant information.
+```
+
+The agent will automatically access the datasources you've attached to the agent block and retrieve the most relevant information.
+
+<Note>
+  Make sure to attach your datasources to the agent block before referencing the RAG Tool.
+</Note>
+
+## Finish Tool
+
+### Purpose
+
+Signals that the current agent has completed its task and no further action is needed from this agent block.
+
+### Usage
+
+Instruct the agent to call this tool when its specific objective is complete:
+
+```text Agent Prompt Example
+Once you have successfully collected the user's name, email, and phone number, 
+call the FinishTool to complete this step.
+```
+
+### When to Use
+
+- Agent has gathered all required information
+- Task objective has been accomplished
+- Ready to pass control to the next agent or step
+
+<Tip>
+  If your agent is finishing prematurely, explicitly define the conditions for calling FinishTool in your prompt.
+</Tip>
+
+## End Flow Tool
+
+### Purpose
+
+Terminates the entire workflow immediately, regardless of remaining steps.
+
+### Usage
+
+Use this tool when the entire flow should stop:
+
+```text Agent Prompt Example
+If the user explicitly says "bye" or "stop", call the EndFlowTool 
+to immediately terminate the entire workflow.
+```
+
+### When to Use
+
+- User requests to cancel the process
+- Critical error that prevents continuation
+- Flow objective has been fully completed
+- User wants to exit the conversation
+
+<Warning>
+  This tool stops the **entire workflow**, not just the current agent. Use FinishTool if you only want to complete the current agent's task.
+</Warning>
+
+## Flow Insight Tool
+
+### Purpose
+
+Provides real-time status updates to users during tool execution, making conversations feel more natural and interactive.
+
+### Usage
+
+The agent automatically uses this tool to inform users when processing is happening:
+
+```text Agent Prompt Example
+When calling any external tool or API, use the FlowInsightTool to let 
+the user know you're working on their request.
+```
+
+### Example Responses
+
+<CodeGroup>
+
+```text Checking Account
+"One moment, I'm looking into your account details..."
+```
+
+
+```text Processing Payment
+"Please wait while I process your payment..."
+```
+
+
+```text Searching Database
+"Let me search our database for that information..."
+```
+
+
+```text Calling API
+"I'm checking with our system now..."
+```
+
+</CodeGroup>
+
+### Benefits
+
+- Reduces user anxiety during processing time
+- Makes the conversation feel more human
+- Provides transparency about what's happening
+- Improves overall user experience
+
+---
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Explicit Tool Calling Instructions">
+    If your agent is calling system tools at the wrong time:
+
+    ✅ **Do:** Be explicit about when to call each tool
+
+    ```text
+    Call FinishTool ONLY after you have:
+    1. Verified the user's identity
+    2. Processed their request
+    3. Confirmed the outcome with the user
+    ```
+
+    ❌ **Don't:** Leave tool calling conditions ambiguous
+
+    ```text
+    Use FinishTool when done.
+    ```
+  </Accordion>
+  <Accordion title="Preventing Premature Exits">
+    If agents are ending flows too early:
+
+    - Explicitly list all required steps before calling FinishTool/EndFlowTool
+    - Add validation checkpoints in your prompt
+    - Use conditional statements for tool calling
+
+    ```text Example
+    Before calling FinishTool, ensure:
+    - User has provided all required information
+    - Information has been validated
+    - Confirmation message has been sent to user
+    ```
+  </Accordion>
+  <Accordion title="RAG Tool Optimization">
+    - Attach only relevant datasources to each agent
+    - Provide clear instructions on when to search
+    - Test retrieval quality with sample queries
+    - Update datasources regularly for accuracy
+  </Accordion>
+  <Accordion title="Flow Insight Messages">
+    Keep insight messages:
+
+    - Brief and conversational
+    - Relevant to the action being performed
+    - Professional but friendly
+    - Transparent about what's happening
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Troubleshooting
+
+<ResponseField name="Agent ends flow prematurely">
+  Add explicit conditions in your prompt for when to call FinishTool or EndFlowTool. List all required steps that must be completed first.
+</ResponseField>
+
+<ResponseField name="RAG Tool not finding information">
+  - Verify datasources are properly attached to the agent block
+  - Check that datasources contain the relevant information
+  - Review the quality and format of your datasource content
+</ResponseField>
+
+<ResponseField name="Flow Insight messages not appearing">
+  - Ensure the agent prompt mentions using FlowInsightTool
+  - Verify the conversational flow is configured correctly
+  - Check that the tool is being called before long-running operations
+</ResponseField>

@@ -130,6 +130,7 @@
             {
               "group": "5. DevStudio (Tool Builder)",
               "pages": [
+                "devstudio/system-tool",
                 "devstudio/overview",
                 {
                   "group": "Methods",
