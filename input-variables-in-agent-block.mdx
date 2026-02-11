@@ -1,0 +1,40 @@
+---
+title: "Input Variables in Agent Block"
+---
+
+<img
+  src="/images/Screenshot2026-02-11at6.44.29PM.png"
+  alt="Agent Block Input Variables Configuration"
+  title="Agent Block Input Variables"
+  style={{ width: "51%" }}
+/>
+
+## Overview
+
+Input variables control which session variables are accessible to a specific agent block. By defining input variables, you restrict the agent's scope to only the variables it needs to complete its task.
+
+## Supported Variable Sources
+
+Input variables can be sourced from multiple locations:
+
+<AccordionGroup>
+  <Accordion title="Tool Capture Variables">
+    Variables captured by tools during execution. Simply enter the exact variable name to include it.
+  </Accordion>
+  
+  <Accordion title="Other Agent Capture Variables">
+    Variables captured by other agent blocks in the same workflow.
+  </Accordion>
+  
+  <Accordion title="Self Capture Variables">
+    Variables previously captured by the same agent block in earlier executions.
+  </Accordion>
+  
+  <Accordion title="User Variables (Flow API)">
+    When using the Flow API, you can reference variables from the `user_variable` keys in the API payload.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+Only add the variables your agent actually needs. This improves performance and prevents the agent from being overwhelmed with unnecessary context.
+</Tip>

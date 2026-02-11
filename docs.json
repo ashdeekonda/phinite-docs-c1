@@ -60,7 +60,11 @@
               "pages": [
                 {
                   "group": "Variables",
-                  "pages": []
+                  "pages": [
+                    "types-of-session-variables",
+                    "input-variables-in-agent-block",
+                    "capture-variables-in-agent-block"
+                  ]
                 },
                 "flowgen/overview",
                 {

@@ -1,0 +1,100 @@
+---
+title: "Capture Variables in Agent Block"
+---
+
+Capture variables can be defined in three different ways, each serving a specific use case.
+
+## Variable Definition Methods
+
+<CardGroup cols={3}>
+  <Card title="Fixed Value" icon="lock">
+    Hardcode a static value
+  </Card>
+  <Card title="Referred" icon="arrow-pointer">
+    Reference an existing variable
+  </Card>
+  <Card title="AI Derived" icon="sparkles">
+    Capture dynamically through conversation
+  </Card>
+</CardGroup>
+
+## AI Derived Variables
+
+<img
+  src="/images/Screenshot2026-02-11at7.21.22PM.png"
+  alt="AI Derived Variables Configuration"
+  title="AI Derived Variables"
+  style={{ width:"37%" }}
+/>
+
+AI Derived variables are automatically captured through the conversation between the agent and the user based on the description you provide.
+
+### How It Works
+
+**For Master Agents:**
+
+- No need to explicitly mention variable capture in the agent prompt
+- Simply add the variable name and provide a clear description
+- The agent will automatically extract and store the value during conversation
+
+**For Child Agents:**
+
+- You must specify in the prompt which session variable to store the captured value
+
+### Best Practices
+
+Provide detailed descriptions including data type and format requirements:
+
+<CodeGroup>
+
+```text Example: Phone Number
+Variable Name: phone_number
+Description: A valid 10 digit phone number with country code and a '+'
+```
+
+
+```text Example: SQL Queries
+Variable Name: sql_queries
+Description: Proper SQL queries as a Python list
+```
+
+</CodeGroup>
+
+<Tip>
+  Include the expected data type in your variable description for better accuracy.
+</Tip>
+
+## Referred Variables
+
+<img
+  src="/images/Screenshot2026-02-11at7.24.09PM.png"
+  alt="Referred Variables Configuration"
+  title="Referred Variables"
+  style={{ width:"27%" }}
+/>
+
+Referred variables allow you to copy the value from an existing session variable. This is useful when you need to pass data between agent blocks or reuse existing values.
+
+Simply select the source variable from the available session variables.
+
+---
+
+## Fixed Value Variables
+
+<img
+  src="/images/Screenshot2026-02-11at7.25.30PM.png"
+  alt="Fixed Value Variables Configuration"
+  title="Fixed Value Variables"
+  style={{ width:"28%" }}
+/>
+
+Fixed Value variables contain static, hardcoded values that remain constant throughout the workflow.
+
+### Configuration
+
+1. **Value**: Enter the static value for the variable
+2. **Description** (optional): Add a description for your reference
+
+<Warning>
+  Ensure data type consistency when setting fixed values. The value should match the expected data type for downstream operations.
+</Warning>
