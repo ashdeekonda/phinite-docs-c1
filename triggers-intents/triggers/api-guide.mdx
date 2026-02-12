@@ -466,7 +466,7 @@ puts response.read_body
 ## Notes & Best Practices
 
 <Warning>
-  **Choose the right execution mode:** Use single endpoint API only for simple flows under 30 seconds. Use background task for most autonomous workflows. Use cron job for scheduled, recurring tasks.
+  **Choose the right execution mode:** Use single endpoint API only for simple flows under 120-150 seconds. Use background task for most autonomous workflows. Use cron job for scheduled, recurring tasks.
 </Warning>
 
 - **Validate bearer tokens:** Always verify authentication in DEV environment before deploying to PROD.
