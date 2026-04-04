@@ -22,13 +22,27 @@ Once configured, Phinite assistants can:
 
 This integration is bidirectional and uses Salesforce's official REST API.
 
+## Authentication methods
+
+Phinite supports two authentication methods for Salesforce:
+
+### JWT Bearer Token (Recommended for automated workflows)
+Uses Consumer Key, Consumer Secret, and Username for server-to-server authentication.
+
+### OAuth2 (Recommended for interactive applications)
+Uses OAuth2 flow for user-based authentication with refresh tokens.
+
 ## Required credentials
 
-Phinite uses 3 credentials provided by Salesforce:
-
+### For JWT Authentication:
 - Consumer Key (required)
 - Consumer Secret (required)
 - Username (required)
+
+### For OAuth2 Authentication:
+- Client ID (Consumer Key from Connected App)
+- Client Secret (Consumer Secret from Connected App)
+- Environment Type (Production/Sandbox)
 
 These credentials are generated through Salesforce Connected Apps. Phinite does not modify or replace Salesforce's authentication model.
 
