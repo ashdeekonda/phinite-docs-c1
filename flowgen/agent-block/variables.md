@@ -11,26 +11,23 @@ description: "Define agent inputs and capture outputs for downstream logic."
 <Steps>
   <Step title="Select inputs">
     <Frame>
-  <img src="/images/input-var.png" alt="step-1
-  " />
-</Frame>
+      ![Select Inputs](/images/select-inputs.png)
+    </Frame>
 
     In Variables, pick inputs from available flow variables.
   </Step>
   <Step title="Add captures">
-   <Frame>
-  <img src="/images/final.png" alt="step-1
-  " />
-</Frame>
-  
+    <Frame>
+      ![Add Captures](/images/add-captures.png)
+    </Frame>
+
     Add capture variables to persist outputs (e.g., `summary`, `status`, `email`).
   </Step>
   <Step title="Use in decisions">
     <Frame>
-  <img src="/images/variables.png" alt="step-1
-  " />
-</Frame>
-    
+      ![Use Decisions](/images/use-decisions.png)
+    </Frame>
+
     Reference captured variables in the Decision tab to drive conditional edges.
   </Step>
 </Steps>
