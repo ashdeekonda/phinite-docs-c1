@@ -6,7 +6,20 @@ description: "Add and configure pre-packaged tools; reference for each tool and 
 ## Available integrations
 
 <Frame>
-  ![Descriptive alt text](/images/workspace-tools.png)
+  <img
+    src="/images/available-integrations.png"
+    alt="Descriptive alt text"
+    lightAlt="available integrations"
+    darkAlt="Descriptive alt text"
+    className="dark:hidden"
+  />
+  <img
+    src="/images/workspace-tools.png"
+    alt="Descriptive alt text"
+    lightAlt="available integrations"
+    darkAlt="Descriptive alt text"
+    className="hidden dark:block"
+  />
 </Frame>
 
 - [Gmail](/devstudio/prebuilt/gmail)
@@ -69,7 +82,7 @@ Below each tool is listed with: ID, purpose, configuration fields, required perm
 - Attempt to list the inbox labels/folders.
 - Attempt to fetch a single message metadata (no bodies) first to validate read scope.
 
-### Subtools (what they do + suggested parameters)
+### Subtools (what they do \+ suggested parameters)
 
 Each subtool’s parameters below are _recommended_ input fields your UI should expose when the user enables that subtool. The agent runtime may accept additional advanced options.
 
@@ -222,7 +235,7 @@ Each subtool’s parameters below are _recommended_ input fields your UI should 
 ### Subtools
 
 - `make_request` — _Make an HTTP request to any endpoint._
-  - Suggested parameters: `method` (string: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`), `path` (string, appended to base_url), `query` (object), `body` (object/string), `headers` (object, optional), `auth` (object, optional), `timeout` (integer, optional).
+  - Suggested parameters: `method` (string: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`), `path` (string, appended to base\_url), `query` (object), `body` (object/string), `headers` (object, optional), `auth` (object, optional), `timeout` (integer, optional).
 
 ### Best practices
 
@@ -284,7 +297,7 @@ Each subtool’s parameters below are _recommended_ input fields your UI should 
 
 **2. Add MongoDbTool**
 
-- Tools tab → Add a new tool → select `MongoDbTool` → `+ Add a new connection` → `connection_string=mongodb+srv://readonly:pw@cluster.mongodb.net`, `database_name=myapp_db` → Test (list_collections).
+- Tools tab → Add a new tool → select `MongoDbTool` → `+ Add a new connection` → `connection_string=mongodb+srv://readonly:pw@cluster.mongodb.net`, `database_name=myapp_db` → Test (list\_collections).
 - Enable `find_many_documents` and `insert_document` with appropriate parameter templates.
 
 ---
