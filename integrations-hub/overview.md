@@ -9,9 +9,7 @@ icon: "plug"
 Phinite provides 21 production-ready integrations. Select an integration to view setup, required credentials, predefined tools, and best practices.
 
 <Frame>
-  {/* Replace with an actual Integrations overview image when available */}
-
-  {/* Using dummy asset per guidance */}
+  ![Integrations Overview](/images/Integrations-Overview.png)
 </Frame>
 
 ## All integrations
