@@ -8,35 +8,35 @@ description: "Design workflows by placing blocks on a visual canvas and connecti
 <Steps>
   <Step title="Create a new flow">
     <Frame>
-      <img src="/flow-new.png" alt="flow-new" />
+      ![New Flow](/images/new-flow.png)
     </Frame>
 
     Open Flowgen Studio and choose "Create manually".
   </Step>
   <Step title="Add blocks">
     <Frame>
-      <img src="/flow-new.png" alt="flow-new" />
+      ![Add Blocks](/images/add-blocks.png)
     </Frame>
 
     Drag blocks from the Block Library: Start, Master Agent, Child Agent, Tool, End.
   </Step>
   <Step title="Connect with edges">
     <Frame>
-      <img src="/Manual-Agent-2.png" alt="Manual-Agent-2" />
+      ![Connect With Edges](/images/connect-with-edges.png)
     </Frame>
 
     Connect source and target handles between blocks to define execution order.
   </Step>
   <Step title="Configure blocks">
     <Frame>
-      <img src="/Manual-Agent-3.png" alt="Manual-Agent" />
+      ![Configure Blocks](/images/configure-blocks.png)
     </Frame>
 
     Select a block to edit its properties in the Inspector: prompts, RAG, tools, and variables.
   </Step>
   <Step title="Test and iterate">
     <Frame>
-      <img src="/test-agent1.png" alt="flow-new" />
+      ![Test And Iterate](/images/test-and-iterate.png)
     </Frame>
 
     Run sample inputs, observe outputs, and refine prompts, variables, and edge conditions.
