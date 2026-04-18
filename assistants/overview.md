@@ -19,7 +19,7 @@ An assistant is an AI-powered capability that handles user interactions or backg
 - **Email Assistants**: Inbox automation for triage and replies
 - **Autonomous Assistants**: Scheduled or event-driven background jobs
 
-![Assistant-Overview](/Types-assistant.png)
+![Assistant-Overview](/AssistantTypes.png)
 
 ### Comparision
 
