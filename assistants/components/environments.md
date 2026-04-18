@@ -4,12 +4,12 @@ description: "Dev, UAT, and Production environments for deployments."
 ---
 
 ## Overview
+
 Phinite offers isolated environments to safely develop and deploy.
 
 <Frame>
-  <img src="/enviroment.png" alt="Environments" />
+  ![Environments](/images/Environments.png)
 </Frame>
-
 
 ### Default Environments
 
@@ -23,10 +23,10 @@ Phinite offers isolated environments to safely develop and deploy.
 - Build version mapping
 - Logging and observability per environment
 
-<Note type="tip">
+<tip>
   Keep tool credentials and environment variables separate across environments.\
   Avoid reusing Production keys in Dev or UAT.
-</Note>
+</tip>
 
 Separate environments ensure safe deployments.
 

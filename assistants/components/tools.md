@@ -6,12 +6,10 @@ description: "External actions your assistants can call to get work done."
 ## Overview
 
 <Frame>
-  <img src="/Tools-flowgen.png" alt="Tools" />
+  ![Tools 1](/images/Tools-1.png)
 </Frame>
 
-Tools are modular logic units that developers maintain and reuse across Assistants.
-Tools are built and versioned in [DevStudio](/devstudio/overview). Agents invoke tools to perform actions.
-
+Tools are modular logic units that developers maintain and reuse across Assistants. Tools are built and versioned in [DevStudio](/devstudio/overview). Agents invoke tools to perform actions.
 
 ### Tool Types
 
@@ -27,10 +25,10 @@ Developers can:
 - Save tools to the **Workspace Library** for reuse.
 - Version and publish them for other assistants.
 
-<Note type="info">
+<info>
   Tools used in multiple assistants should always be version-controlled.\
   Breaking changes must be tested in Dev before UAT or Prod.
-</Note>
+</info>
 
 ## Structure
 

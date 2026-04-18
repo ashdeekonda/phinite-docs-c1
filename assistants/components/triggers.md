@@ -9,7 +9,7 @@ Triggers define how and when a flow begins.\
 You can configure them to start automatically, on a schedule, or through external API calls.
 
 <Frame>
-  ![Trigger](/trigger.png)
+  ![Triggers](/images/Triggers.png)
 </Frame>
 
 <Info>
@@ -64,31 +64,25 @@ Phinite supports three trigger types.
 
 ### **Choose the Right Trigger**
 
-| Scenario                                                | Recommended Trigger | Reason                                    |
-| ------------------------------------------------------- | ------------------- | ----------------------------------------- |
-| External app sends an event that needs immediate action | **API-Based**       | Instant activation with minimal latency   |
-| Recurring process such as reports or sync tasks         | **Scheduler-Based** | Prevents timeout and automates repetition |
+| Scenario | Recommended Trigger | Reason |
+| --- | --- | --- |
+| External app sends an event that needs immediate action | **API-Based** | Instant activation with minimal latency |
+| Recurring process such as reports or sync tasks | **Scheduler-Based** | Prevents timeout and automates repetition |
 
 ### Configure a Trigger
 
 <Steps>
   <Step title="Go to Assistants → Components → Triggers.">
-    
   </Step>
   <Step title="Click Create Trigger.">
-    
   </Step>
   <Step title="Select the Trigger Type (API, Scheduler, or Manual).">
-    
   </Step>
   <Step title="Choose the Target Flow.">
-    
   </Step>
   <Step title="Set API Key or scheduling options.">
-    
   </Step>
   <Step title="Save and test the trigger.">
-    
   </Step>
 </Steps>
 
@@ -98,12 +92,12 @@ Phinite supports three trigger types.
 
 ### Manage Triggers
 
-| **Action**  | **Description**                        |
-| :---------- | :------------------------------------- |
-| **Edit**    | Update type, frequency, or target flow |
-| **Pause**   | Temporarily disable the trigger        |
-| **Run Now** | Execute immediately for testing        |
-| **Delete**  | Remove from the workspace permanently  |
+| **Action** | **Description** |
+| :-- | :-- |
+| **Edit** | Update type, frequency, or target flow |
+| **Pause** | Temporarily disable the trigger |
+| **Run Now** | Execute immediately for testing |
+| **Delete** | Remove from the workspace permanently |
 
 ## Workspace API Keys
 
@@ -112,8 +106,6 @@ API-based triggers depend on workspace-level API keys for authentication.
 <Info>
   Store and rotate keys securely. Never expose API keys in client-side or public repositories.
 </Info>
-
-### 
 
 ## **Best Practices**
 
