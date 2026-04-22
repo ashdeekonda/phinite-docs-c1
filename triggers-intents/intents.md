@@ -6,7 +6,7 @@ description: "Define and train intents to route conversations to flows."
 ## Steps
 
 <Frame>
-  <img src="/CreateIntent.png" alt="Intents" />
+  ![Intents](/images/intents.png)
 </Frame>
 
 <Steps>
