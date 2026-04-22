@@ -23,18 +23,10 @@ description: "Enable tools for agents and wire variables to parameters."
   <Step title="Map variables">
     <Frame>
       <img
+        alt="map variables"
+        lightAlt="map variables"
+        darkAlt="step-2"
         src="/images/map-variables.png"
-        alt="step-2"
-        lightAlt="map variables"
-        darkAlt="step-2"
-        className="dark:hidden"
-      />
-      <img
-        src="/images/input-variable.png"
-        alt="step-2"
-        lightAlt="map variables"
-        darkAlt="step-2"
-        className="hidden dark:block"
       />
     </Frame>
 
