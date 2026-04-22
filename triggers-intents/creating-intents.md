@@ -6,7 +6,7 @@ description: "Create, train, and map intents to flows."
 ## Steps
 
 <Frame>
-  ![Intents](/CreateIntent.png)
+  ![Intents](/images/intents.png)
 </Frame>
 
 <Steps>
