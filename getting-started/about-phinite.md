@@ -26,15 +26,15 @@ Teams use Phinite to:
 
 ## Core Concepts
 
-| Concept         | Description                                                                                      |
-| --------------- | ------------------------------------------------------------------------------------------------ |
-| **Assistant**   | A conversational, email-based, or autonomous agent powered by one or more flows                  |
-| **Flow**        | A visual decision graph with nodes that orchestrate logic, tools, and conversations              |
-| **Node**        | The building block of a flow — can prompt a model, call a tool, capture input, or make decisions |
-| **Tool**        | A callable API, function, or system integration used by your assistant                           |
-| **Trigger**     | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event)                  |
-| **Environment** | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps    |
-| **Session**     | A full execution of a flow, recorded in logs with inputs, decisions, outputs, and metrics        |
+| Concept | Description |
+| --- | --- |
+| **Assistant** | A conversational, email-based, or autonomous agent powered by one or more flows |
+| **Agent Graph** | A visual decision graph with nodes that orchestrate logic, tools, and conversations |
+| **Node** | The building block of a flow — can prompt a model, call a tool, capture input, or make decisions |
+| **Tool** | A callable API, function, or system integration used by your assistant |
+| **Trigger** | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event) |
+| **Environment** | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps |
+| **Session** | A full execution of a flow, recorded in logs with inputs, decisions, outputs, and metrics |
 
 ---
 
@@ -42,13 +42,13 @@ Teams use Phinite to:
 
 Phinite supports a multi-role collaboration model so your entire team can work together:
 
-| Role           | Responsibilities                                                  |
-| -------------- | ----------------------------------------------------------------- |
-| **Developers** | Build tools, wire integrations, and design flows                  |
-| **Architects** | Plan agent logic, manage flows, and configure environments        |
-| **Admins**     | Control access, invite users, and manage billing and environments |
-| **Testers**    | Validate assistant behavior and run debug sessions                |
-| **Analysts**   | Observe sessions, track model usage, and monitor outcomes         |
+| Role | Responsibilities |
+| --- | --- |
+| **Developers** | Build tools, wire integrations, and design flows |
+| **Architects** | Plan agent logic, manage flows, and configure environments |
+| **Admins** | Control access, invite users, and manage billing and environments |
+| **Testers** | Validate assistant behavior and run debug sessions |
+| **Analysts** | Observe sessions, track model usage, and monitor outcomes |
 
 ---
 
