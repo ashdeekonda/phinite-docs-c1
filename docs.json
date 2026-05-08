@@ -9,9 +9,139 @@
     },
     "favicon": "/favicon.svg",
     "logo": {
-      "light": "/logo/light.svg",
-      "dark": "/logo/dark.svg"
+        "light": "/logo/light.svg",
+        "dark": "/logo/dark.svg"
     },
+    "redirects": [
+        {
+            "source": "/flowgen/copilot-method",
+            "destination": "/graph-studio/copilot-method"
+        },
+        {
+            "source": "/flowgen/manual-method",
+            "destination": "/graph-studio/manual-method"
+        },
+        {
+            "source": "/flowgen/methods",
+            "destination": "/graph-studio/methods"
+        },
+        {
+            "source": "/flowgen/overview",
+            "destination": "/graph-studio/overview"
+        },
+        {
+            "source": "/flowgen/publishing",
+            "destination": "/graph-studio/publishing"
+        },
+        {
+            "source": "/flowgen/interface",
+            "destination": "/graph-studio/interface"
+        },
+        {
+            "source": "/flowgen/interface/canvas",
+            "destination": "/graph-studio/interface/canvas"
+        },
+        {
+            "source": "/flowgen/interface/inspector-panel",
+            "destination": "/graph-studio/interface/inspector-panel"
+        },
+        {
+            "source": "/flowgen/interface/variables-panel",
+            "destination": "/graph-studio/interface/variables-panel"
+        },
+        {
+            "source": "/flowgen/interface/block-library",
+            "destination": "/graph-studio/interface/node-library"
+        },
+        {
+            "source": "/flowgen/connections",
+            "destination": "/graph-studio/connections"
+        },
+        {
+            "source": "/flowgen/connections/handles",
+            "destination": "/graph-studio/connections/handles"
+        },
+        {
+            "source": "/flowgen/connections/edges",
+            "destination": "/graph-studio/connections/edges"
+        },
+        {
+            "source": "/flowgen/connections/conditional-edges",
+            "destination": "/graph-studio/connections/conditional-edges"
+        },
+        {
+            "source": "/flowgen/rag-management",
+            "destination": "/graph-studio/rag-management"
+        },
+        {
+            "source": "/flowgen/rag-management/data-sources",
+            "destination": "/graph-studio/rag-management/data-sources"
+        },
+        {
+            "source": "/flowgen/rag-management/collections",
+            "destination": "/graph-studio/rag-management/collections"
+        },
+        {
+            "source": "/flowgen/rag-management/referencing",
+            "destination": "/graph-studio/rag-management/referencing"
+        },
+        {
+            "source": "/flowgen/types-of-session-variables",
+            "destination": "/graph-studio/types-of-session-variables"
+        },
+        {
+            "source": "/flowgen/input-variables-in-agent-block",
+            "destination": "/graph-studio/input-variables-in-agent-node"
+        },
+        {
+            "source": "/flowgen/capture-variables-in-agent-block",
+            "destination": "/graph-studio/capture-variables-in-agent-node"
+        },
+        {
+            "source": "/flowgen/blocks",
+            "destination": "/graph-studio/nodes"
+        },
+        {
+            "source": "/flowgen/blocks/start",
+            "destination": "/graph-studio/nodes/start"
+        },
+        {
+            "source": "/flowgen/blocks/master-agent",
+            "destination": "/graph-studio/nodes/master-node"
+        },
+        {
+            "source": "/flowgen/blocks/child-agent",
+            "destination": "/graph-studio/nodes/child-node"
+        },
+        {
+            "source": "/flowgen/blocks/tool-block",
+            "destination": "/graph-studio/nodes/tool-node"
+        },
+        {
+            "source": "/flowgen/blocks/end-block",
+            "destination": "/graph-studio/nodes/end-node"
+        },
+        {
+            "source": "/flowgen/agent-block",
+            "destination": "/graph-studio/agent-node"
+        },
+        {
+            "source": "/flowgen/agent-block/prompt",
+            "destination": "/graph-studio/agent-node/prompt"
+        },
+        {
+            "source": "/flowgen/agent-block/rag",
+            "destination": "/graph-studio/agent-node/rag"
+        },
+        {
+            "source": "/flowgen/agent-block/tools",
+            "destination": "/graph-studio/agent-node/tools"
+        },
+        {
+            "source": "/flowgen/agent-block/variables",
+            "destination": "/graph-studio/agent-node/variables"
+        }
+    ],
     "navigation": {
       "tabs": [
         {
