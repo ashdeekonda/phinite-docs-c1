@@ -1,8 +1,7 @@
 ---
-
-## title: "User Roles & Permissions"
+title: "User Roles & Permissions"
 description: "Understand capabilities by role across Phinite."
-
+---
 Workspace roles control what someone can do **in that workspace**. The **Summary** is the fast view; the sections below spell out the same rules in more detail. Defaults can differ if your organization changes access.
 
 **Roles:** **Super Admin**, **Admin**, **Developer**, and **QA** are assigned per workspace. **Viewer** is described at the end—it is often used for read-only stakeholders.
