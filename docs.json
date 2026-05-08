@@ -187,15 +187,6 @@
               ]
             },
             {
-              "group": "Agent Registry (A2A)",
-              "pages": [
-                "agent-registry/overview",
-                "agent-registry/expose-your-flow",
-                "agent-registry/catalog",
-                "agent-registry/endpoints-and-lifecycle"
-              ]
-            },
-            {
               "group": "Graph Studio (Workflow Builder)",
               "pages": [
                 "graph-studio/overview",
