@@ -10,7 +10,7 @@ sidebarTitle: "Home"
   <Card title="Welcome" icon="sparkles" href="/getting-started/about-phinite">About Phinite and this manual</Card>
   <Card title="Getting Started" icon="rocket" href="/getting-started/quickstart">Set up your org and first workspace</Card>
   <Card title="User Management" icon="users" href="/user-management/user-management">Invite users and manage roles</Card>
-  <Card title="User Roles" icon="id-badge" href="/user-management/user-roles">Capabilities by role (Admin, Developer, Tester, Viewer)</Card>
+  <Card title="User Roles" icon="id-badge" href="/user-management/user-roles">Capabilities by role (Admin, Developer, QA, Viewer)</Card>
   <Card title="Workspace Overview" icon="grid" href="/setup-account/workspace-overview">Understand org → workspace → project</Card>
   <Card title="Create Workspace" icon="plus-square" href="/setup-account/creating-workspace">Create your first workspace and project</Card>
   <Card title="Sign Up" icon="user-plus" href="/setup-account/signing-up">Create and verify your account</Card>

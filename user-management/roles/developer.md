@@ -6,14 +6,14 @@ description: "Capabilities and responsibilities for Developers."
 ## Capabilities
 
 - Create and edit flows in [Graph Studio](/graph-studio/overview)
-- Build and test tools in [DevStudio](/devstudio/overview)
+- Build, test, and publish tools in [DevStudio](/devstudio/overview) when your team’s process allows
 - Configure variables, RAG, and tools
-- Run tests and view logs
+- Run tests and review execution output
 
 ## Restrictions
 
-- Cannot publish to UAT/Prod
-- Cannot manage users
+- Cannot manage workspace members on the **Users** page in a typical setup
+- Follow your organization’s rules for **when** to publish (for example production approvals)
 
 ## Best practices
 

@@ -63,7 +63,7 @@ A **workspace** is the collaboration boundary for assistants, tools, integration
 - **Integrations** — Predefined (e.g. Jira, Gmail) and channel integrations (WhatsApp, Teams, Slack); authenticate and test before production.
 - **Data sources / RAG** — Knowledge base: PDF, CSV, text, structured data, API-backed sources; organized in collections/folders.
 - **API keys** — Workspace-level keys for programmatic access and “Agent graph as a service”; revoke disables callers immediately.
-- **Users** — Invites and roles (Super Admin, Admin, Developer, Tester, etc.).
+- **Users** — Invites and roles (Super Admin, Admin, Developer, QA, etc.); sidebar and user management usually Super Admin + Admin only in default permission packs.
 - **Billing** — Plan, usage (tokens, compute, voice, API calls), invoices (Owners/Admins).
 - **Reports** — Sessions, token/compute, assistant summaries; filter by environment.
 
@@ -467,13 +467,17 @@ Understanding where configuration lives reduces support time.
 
 ## 30. User management and security
 
-**Invites:** Workspace → Users → Invite → email + role → pending state supports resend/revoke.
+**Users page:** Workspace → **Users**. **+ New User** opens **Add User to Workspace** (roles Admin / QA / Developer in the product). Some administrator-type rows may show no row actions.
 
-**Lifecycle:** Change roles when duties shift; remove users who offboard; audit access periodically.
+**Invites:** New email → invite flow; already in the org but not the workspace → **Update User**; pending activation → **Resend Email**.
 
-**Access control:** Permissions are **per workspace and project**; least privilege; separate operator access across Dev/UAT/Prod where possible.
+**Lifecycle:** **Edit Access** for role changes; **Remove User** removes workspace access (account may still exist elsewhere). Audit periodically.
 
-**Authentication:** Session tokens expire; invalid token leads to login — users should retry login after password resets or token revocation.
+**Access control:** Permissions are **per workspace** (and project-level policies elsewhere); least privilege; separate operator access across Dev/UAT/Prod where possible.
+
+**Authentication:** Sessions expire; sign in again after password resets or when logged out unexpectedly.
+
+**Canonical docs:** `user-management/user-management`, `user-management/workspace-ui`, `user-management/inviting-users`, `user-management/access-controls`, `user-management/user-roles`.
 
 ---
 
@@ -809,7 +813,7 @@ Ask for: **workspace id or name**, **environment**, **assistant name**, **approx
 Use these slugs when pointing users to the canonical Mintlify pages:
 
 - Getting started: `getting-started/about-phinite`, `getting-started/what-you-can-build`, `getting-started/quickstart`, `workspaces/workspace-overview`
-- Users: `user-management/inviting-users`, `user-management/user-management`, `user-management/access-controls`, `user-management/user-roles`
+- Users: `user-management/user-management`, `user-management/workspace-ui`, `user-management/inviting-users`, `user-management/access-controls`, `user-management/user-roles`
 - Assistants: `assistants/overview`, `assistants/types`, `assistants/conversational`, `assistants/email`, `assistants/autonomous`, `assistants/components/*` (Agent graphs, intents, tools, builds, triggers, environments, channels)
 - Graph: `graph-studio/overview`, `graph-studio/publishing`, `graph-studio/methods`, `graph-studio/copilot-method`, `graph-studio/manual-method`, `graph-studio/interface/*`, `graph-studio/nodes/*`, `graph-studio/connections/*`, `graph-studio/agent-node/*`, `graph-studio/rag-management/*`, variable topics under `graph-studio/`
 - DevStudio: `devstudio/overview` and linked tool pages

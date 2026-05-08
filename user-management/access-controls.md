@@ -1,32 +1,25 @@
 ---
 title: "Access Controls & Security"
-description: "Role-based permissions, token validation, and workspace access policies."
+description: "How workspace permissions and sign-in protect your organization’s work."
 ---
 
 ## Role-based access
 
-Permissions are enforced per workspace and project. See [User Roles](/user-management/user-roles) for the capability matrix.
+Permissions apply **per workspace** (and can combine with rules elsewhere in Phinite). For what each **role** can do, see [User Roles](/user-management/user-roles).
 
-## Authentication guards
+## Sign-in and sessions
 
-- Sessions validated via token checks; expired tokens trigger logout
-- Unauthorized users are redirected to login
-
-```typescript useAuthGuard.ts
-// Token validation guard
-const token = localStorage.getItem("authToken");
-if (!token) router.replace("/login");
-```
+- You stay signed in while your session is valid; when it expires, sign in again.
+- If you can’t reach a page you expect, your administrator may need to adjust your access.
 
 ## Best practices
 
-- Principle of least privilege
-- Separate dev/uat/prod access
-- Regular audits of user access
+- Grant people the **least access** they need for their job.
+- Separate **development**, **test**, and **production** access when your organization uses multiple environments.
+- Review **who has access** after role changes or when someone leaves the team.
 
 ## Related
 
 - [User Management](/user-management/user-management)
-- [Workspace Overview](/setup-account/workspace-overview)
-
-
+- [Workspace Users page](/user-management/workspace-ui)
+- [Workspace Overview](/workspaces/workspace-overview)

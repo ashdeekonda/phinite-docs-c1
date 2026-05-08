@@ -29,8 +29,9 @@
             {
               "group": "User Management",
               "pages": [
-                "user-management/inviting-users",
                 "user-management/user-management",
+                "user-management/workspace-ui",
+                "user-management/inviting-users",
                 "user-management/access-controls",
                 "user-management/user-roles"
               ]
