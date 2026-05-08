@@ -1,5 +1,5 @@
 ---
-title: "Publishing Flows & Tools"
+title: "Publishing Agent Graphs & Tools"
 description: "Publish versioned artifacts and deploy safely."
 ---
 

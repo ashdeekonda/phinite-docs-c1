@@ -1,12 +1,12 @@
 ---
 title: "Referencing Collections in Agents"
-description: "Attach collections to agent blocks via the RAG tab."
+description: "Attach collections to agent nodes via the RAG tab."
 ---
 
 ## Steps
 
 <Steps>
-  <Step title="Open the agent block">
+  <Step title="Open the agent node">
     <Frame>
       <img
         src="/images/open-the-agent-block-1.png"

@@ -1,41 +1,41 @@
 ---
-title: "Flows"
+title: "Agent Graphs"
 description: "The orchestration layer powering assistants with logic, agents, and tools."
 ---
 
 ## Overview
 
 <Frame>
-  ![Flow](/images/Flow.png)
+  ![Agent Graph](/images/Flow.png)
 </Frame>
 
-Flows are the heart of every Assistant. They define logic, decisions, and outcomes through blocks on a visual canvas.Flows are designed and maintained in [Flowgen Studio](/flowgen/overview). Assistants execute flows to deliver outcomes.
+Agent Graphs are the heart of every Assistant. They define logic, decisions, and outcomes through nodes on a visual canvas. Agent Graphs are designed and maintained in [Graph Studio](/graph-studio/overview). Assistants execute Agent Graphs to deliver outcomes.
 
 ## Key concepts
 
-- Blocks: Start, Agent, Tool, End
-- RAG and Tools within Agent blocks
+- Nodes: Start, Agent, Tool, End
+- RAG and Tools within Agent nodes
 - Variables and Conditional Edges
 
-### Anatomy of a Flow
+### Anatomy of a Agent Graph
 
 - **Start Node** — entry point connected to a Trigger or Intent.
-- **Agent Blocks** — actions or messages the AI agent performs.
-- **Tool Blocks** — invoke custom tools or APIs.
-- **Decision Blocks** — define conditional logic paths.
-- **Connector Blocks** — move data between subflows or external systems.
+- **Agent Nodes** — actions or messages the AI agent performs.
+- **Tool nodes** — invoke custom tools or APIs.
+- **Decision nodes** — define conditional logic paths.
+- **Connector nodes** — move data between subgraphs or external systems.
 
 <Note>
-  Flows are saved automatically in real time. You can preview, test, and version them without deploying.
+  Agent Graphs are saved automatically in real time. You can preview, test, and version them without deploying.
 </Note>
 
-### Using Copilot in Flowgen Studio
+### Using Copilot in Graph Studio
 
 - Describe the goal in natural language.
-- Copilot generates a full flow layout with connections and block suggestions.
+- Copilot generates a full graph layout with connections and node suggestions.
 - You can review and modify before saving.
 
-### Debugging Flows
+### Debugging Agent Graphs
 
 - Always validate input/output connections before saving.
 - Use the **Preview Run** to simulate execution.

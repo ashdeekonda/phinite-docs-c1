@@ -342,16 +342,16 @@ Your personality traits:
 ## Integration with other components
 
 ### RAG integration
-- **[Knowledge Base](/flowgen/agent-block/rag)**: Ground prompts with enterprise data
-- **[Data Sources](/flowgen/rag-management)**: Connect prompts to relevant information sources
+- **[Knowledge Base](/graph-studio/agent-node/rag)**: Ground prompts with enterprise data
+- **[Data Sources](/graph-studio/rag-management)**: Connect prompts to relevant information sources
 
 ### Tool integration
-- **[Tools](/flowgen/agent-block/tools)**: Enable prompts to trigger external actions
+- **[Tools](/graph-studio/agent-node/tools)**: Enable prompts to trigger external actions
 - **[DevStudio](/devstudio/overview)**: Create custom tools for specific prompt needs
 
 ### Variable management
-- **[Variables](/flowgen/agent-block/variables)**: Use captured data to personalize prompts
-- **[Decision Logic](/flowgen/connections/conditional-edges)**: Create dynamic prompts based on workflow state
+- **[Variables](/graph-studio/agent-node/variables)**: Use captured data to personalize prompts
+- **[Decision Logic](/graph-studio/connections/conditional-edges)**: Create dynamic prompts based on workflow state
 
 ## Best practices summary
 

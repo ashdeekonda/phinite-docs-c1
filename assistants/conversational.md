@@ -5,7 +5,7 @@ description: "Design chat and voice assistants using flows and intents across ch
 
 ## Overview
 
-Conversational assistants handle real-time chat and voice across channels. They use [Intents](/triggers-intents/intents) and [Flows](/assistants/components/flows).
+Conversational assistants handle real-time chat and voice across channels. They use [Intents](/triggers-intents/intents) and [Agent Graphs](/assistants/components/flows).
 
 ## Channels
 

@@ -5,7 +5,7 @@ description: "Understand capabilities by role across Phinite."
 
 ## Role matrix
 
-| Role | Create Flows | Edit Flows | Publish | Manage Users | Run Tests | View Logs |
+| Role | Create Agent Graphs | Edit Agent Graphs | Publish | Manage Users | Run Tests | View Logs |
 |------|---------------|------------|---------|--------------|-----------|-----------|
 | SuperAdmin | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Admin | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |

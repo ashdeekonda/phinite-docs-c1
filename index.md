@@ -27,21 +27,21 @@ sidebarTitle: "Home"
 <CardGroup cols={3}>
   <Card title="Assistant Overview" icon="bot" href="/assistants/overview">Types, components, and workflows</Card>
   <Card title="Assistant Types" icon="layers" href="/assistants/types">Conversational, Email, Autonomous</Card>
-  <Card title="Components" icon="puzzle-piece" href="/assistants/components">Flows, Tools, Triggers, Channels, Environments</Card>
-  <Card title="Flows" icon="diagram-project" href="/assistants/components/flows">How flows power assistants</Card>
+  <Card title="Components" icon="puzzle-piece" href="/assistants/components">Agent Graphs, Tools, Triggers, Channels, Environments</Card>
+  <Card title="Agent Graphs" icon="diagram-project" href="/assistants/components/flows">How flows power assistants</Card>
   <Card title="Tools" icon="wrench" href="/assistants/components/tools">Extend assistants with actions</Card>
   <Card title="Channels" icon="comments" href="/assistants/components/channels">Where assistants run</Card>
 </CardGroup>
 
-## Flowgen Studio (Workflow Builder)
+## Graph Studio (Workflow Builder)
 
 <CardGroup cols={3}>
-  <Card title="Overview" icon="diagram-project" href="/flowgen/overview">Visual workflow builder</Card>
-  <Card title="Methods" icon="magic" href="/flowgen/methods">Copilot vs Manual methods</Card>
-  <Card title="Blocks" icon="cubes" href="/flowgen/blocks">Start, Agents, Tool, End</Card>
-  <Card title="Connections" icon="share-nodes" href="/flowgen/connections">Edges, handles, conditionals</Card>
-  <Card title="RAG Management" icon="book" href="/flowgen/rag-management">Data sources and collections</Card>
-  <Card title="Publishing" icon="upload" href="/flowgen/publishing">From draft to deployment</Card>
+  <Card title="Overview" icon="diagram-project" href="/graph-studio/overview">Visual workflow builder</Card>
+  <Card title="Methods" icon="magic" href="/graph-studio/methods">Copilot vs Manual methods</Card>
+  <Card title="Nodes" icon="cubes" href="/graph-studio/nodes">Start, Agents, Tool, End</Card>
+  <Card title="Connections" icon="share-nodes" href="/graph-studio/connections">Edges, handles, conditionals</Card>
+  <Card title="RAG Management" icon="book" href="/graph-studio/rag-management">Data sources and collections</Card>
+  <Card title="Publishing" icon="upload" href="/graph-studio/publishing">From draft to deployment</Card>
 </CardGroup>
 
 ## DevStudio (Tool Builder)

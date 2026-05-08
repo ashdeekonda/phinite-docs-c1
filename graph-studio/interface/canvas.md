@@ -10,12 +10,12 @@ The canvas is powered by React Flow (`src/components/flow/FlowCanvas.tsx`). It r
 ### Common actions
 
 - **Pan/zoom**: mouse wheel or trackpad; controls are available in the bottom-right
-- **Add blocks**: drag from the Block Library onto the canvas
+- **Add nodes**: drag from the Node Library onto the canvas
 - **Connect edges**: drag from a node’s source handle to a target handle
 - **Select/multi-select**: click nodes/edges; hold ⌘/Ctrl for multi-select
 - **Delete**: select and press Backspace/Delete
-- **Minimap**: toggle via settings to navigate large flows
+- **Minimap**: toggle via settings to navigate large graphs
 
 <Note>
-Start/End blocks are non-deletable by default as defined in `src/utils/nodeUtils.ts`.
+Start/End nodes are non-deletable by default as defined in `src/utils/nodeUtils.ts`.
 </Note>

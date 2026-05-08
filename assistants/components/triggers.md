@@ -78,7 +78,7 @@ Phinite supports three trigger types.
   </Step>
   <Step title="Select the Trigger Type (API, Scheduler, or Manual).">
   </Step>
-  <Step title="Choose the Target Flow.">
+  <Step title="Choose the Target Agent Graph.">
   </Step>
   <Step title="Set API Key or scheduling options.">
   </Step>
@@ -117,4 +117,4 @@ API-based triggers depend on workspace-level API keys for authentication.
 ## **Related Topics**
 
 - [Intents](/assistants/components/intents)
-- [Flows](/assistants/components/flows)
+- [Agent Graphs](/assistants/components/flows)

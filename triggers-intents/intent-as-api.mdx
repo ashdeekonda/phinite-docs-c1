@@ -22,7 +22,7 @@ To enable an intent as an API:
 1. Open the **Edit Intent** modal.
 2. Toggle **Enable Trigger** to ON.
 3. Select an **Integration** from the **Integration Funnel**.
-4. Choose a **Flow to Trigger** for that integration.
+4. Choose a **Agent Graph to Trigger** for that integration.
 5. Save the intent.
 6. Update the build with new intent version.
 
@@ -514,7 +514,7 @@ puts response.read_body
 {
     "workflow_id": "uuid-12345",
     "response": {
-        "flow_transfer": "Flow shift from Trigger to {channel} Conversational"
+        "flow_transfer": "Agent Graph shift from Trigger to {channel} Conversational"
     },
     "status": "waiting_for_input",
     "requires_input": true,

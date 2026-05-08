@@ -56,73 +56,82 @@
               ]
             },
             {
-              "group": "Flowgen Studio (Workflow Builder)",
+              "group": "Agent Registry (A2A)",
               "pages": [
-                "flowgen/overview",
-                "flowgen/publishing",
+                "agent-registry/overview",
+                "agent-registry/expose-your-flow",
+                "agent-registry/catalog",
+                "agent-registry/endpoints-and-lifecycle"
+              ]
+            },
+            {
+              "group": "Graph Studio (Workflow Builder)",
+              "pages": [
+                "graph-studio/overview",
+                "graph-studio/publishing",
                 {
                   "group": "Methods",
                   "pages": [
-                    "flowgen/methods",
-                    "flowgen/copilot-method",
-                    "flowgen/manual-method"
+                    "graph-studio/methods",
+                    "graph-studio/copilot-method",
+                    "graph-studio/manual-method"
                   ]
                 },
                 {
                   "group": "Interface",
                   "pages": [
-                    "flowgen/interface",
-                    "flowgen/interface/canvas",
-                    "flowgen/interface/block-library",
-                    "flowgen/interface/inspector-panel",
-                    "flowgen/interface/variables-panel"
+                    "graph-studio/interface",
+                    "graph-studio/interface/canvas",
+                    "graph-studio/interface/node-library",
+                    "graph-studio/interface/inspector-panel",
+                    "graph-studio/interface/variables-panel"
                   ]
                 },
                 {
-                  "group": "Blocks",
+                  "group": "Nodes",
                   "pages": [
-                    "flowgen/blocks",
-                    "flowgen/blocks/start",
-                    "flowgen/blocks/master-agent",
-                    "flowgen/blocks/child-agent",
-                    "flowgen/blocks/tool-block",
-                    "flowgen/blocks/end-block"
+                    "graph-studio/nodes",
+                    "graph-studio/nodes/start",
+                    "graph-studio/nodes/master-node",
+                    "graph-studio/nodes/child-node",
+                    "graph-studio/nodes/tool-node",
+                    "graph-studio/nodes/end-node"
                   ]
                 },
                 {
                   "group": "Variables",
                   "pages": [
-                    "flowgen/types-of-session-variables",
-                    "flowgen/input-variables-in-agent-block",
-                    "flowgen/capture-variables-in-agent-block"
+                    "graph-studio/types-of-session-variables",
+                    "graph-studio/input-variables-in-agent-node",
+                    "graph-studio/capture-variables-in-agent-node"
                   ]
                 },
                 {
                   "group": "Connections",
                   "pages": [
-                    "flowgen/connections",
-                    "flowgen/connections/handles",
-                    "flowgen/connections/edges",
-                    "flowgen/connections/conditional-edges"
+                    "graph-studio/connections",
+                    "graph-studio/connections/handles",
+                    "graph-studio/connections/edges",
+                    "graph-studio/connections/conditional-edges"
                   ]
                 },
                 {
-                  "group": "Agent Block",
+                  "group": "Agent Node",
                   "pages": [
-                    "flowgen/agent-block",
-                    "flowgen/agent-block/prompt",
-                    "flowgen/agent-block/rag",
-                    "flowgen/agent-block/tools",
-                    "flowgen/agent-block/variables"
+                    "graph-studio/agent-node",
+                    "graph-studio/agent-node/prompt",
+                    "graph-studio/agent-node/rag",
+                    "graph-studio/agent-node/tools",
+                    "graph-studio/agent-node/variables"
                   ]
                 },
                 {
                   "group": "RAG Management",
                   "pages": [
-                    "flowgen/rag-management",
-                    "flowgen/rag-management/data-sources",
-                    "flowgen/rag-management/collections",
-                    "flowgen/rag-management/referencing"
+                    "graph-studio/rag-management",
+                    "graph-studio/rag-management/data-sources",
+                    "graph-studio/rag-management/collections",
+                    "graph-studio/rag-management/referencing"
                   ]
                 }
               ]

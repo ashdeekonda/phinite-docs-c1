@@ -16,7 +16,7 @@ Whether you're replacing a call center agent, automating report generation, or d
 
 Teams use Phinite to:
 
-- Design agent workflows visually in the Flowgen Studio
+- Design agent workflows visually in the Graph Studio
 - Build tools and connectors using DevStudio
 - Deploy across environments with version control and observability
 - Power assistants with knowledge bases, prompt engineering, and tools
@@ -29,7 +29,7 @@ Teams use Phinite to:
 | Concept         | Description                                                                                      |
 | --------------- | ------------------------------------------------------------------------------------------------ |
 | **Assistant**   | A conversational, email-based, or autonomous agent powered by one or more flows                  |
-| **Flow**        | A visual decision graph with nodes that orchestrate logic, tools, and conversations              |
+| **Agent Graph**        | A visual decision graph with nodes that orchestrate logic, tools, and conversations              |
 | **Node**        | The building block of a flow — can prompt a model, call a tool, capture input, or make decisions |
 | **Tool**        | A callable API, function, or system integration used by your assistant                           |
 | **Trigger**     | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event)                  |
@@ -65,8 +65,8 @@ Phinite supports a multi-role collaboration model so your entire team can work t
 ## Next Steps
 
 - [Quick Start](./quickstart)
-- [Workspace Overview](./workspaces/workspace-overview)
-- [Inviting Users](./user-management/inviting-users)
+- [Workspace Overview](../workspaces/workspace-overview)
+- [Inviting Users](../user-management/inviting-users)
 
 ---
 

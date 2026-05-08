@@ -23,5 +23,5 @@ description: "Set up a workspace and initial project."
 ## Next steps
 
 - Build tools in [DevStudio](/devstudio/overview)
-- Design flows in [Flowgen](/flowgen/overview)
+- Design flows in [Graph Studio](/graph-studio/overview)
 - Configure environments in [Builds & Environments](/builds/overview)

@@ -1,11 +1,11 @@
 ---
 title: "Quick Start"
-description: "Build and deploy your first AI assistant in minutes using Phinite Copilot and Flowgen Studio."
+description: "Build and deploy your first AI assistant in minutes using Phinite Copilot and Graph Studio."
 ---
 
 # Quick Start
 
-This guide walks you through creating your first AI Assistant using **Copilot** and **Flowgen Studio**.
+This guide walks you through creating your first AI Assistant using **Copilot** and **Graph Studio**.
 
 In a few minutes, you’ll have a working assistant that can understand intents, trigger tools, and reply naturally.
 
@@ -36,13 +36,13 @@ Type what you want to build.
 Build an assistant that answers FAQs and creates tickets in Zendesk.
 ```
 
-Copilot interprets your prompt, asks clarifying questions, and starts creating your flow.
+Copilot interprets your prompt, asks clarifying questions, and starts creating your Agent Graph.
 
 ---
 
-## Step 2 — Flowgen Creates Your Assistant
+## Step 2 — Graph Studio creates Your Assistant
 
-Copilot triggers **Flowgen Studio**, where your logic appears in real time.\
+Copilot triggers **Graph Studio**, where your logic appears in real time.\
 Each node represents a reasoning or action step.
 
 <Steps>
@@ -50,7 +50,7 @@ Each node represents a reasoning or action step.
     Copilot defines a new Assistant with a unique ID inside your workspace.
   </Step>
   <Step title="Nodes appear on canvas">
-    The flow structure is generated instantly based on your intent.
+    The graph structure is generated instantly based on your intent.
   </Step>
   <Step title="Tools are connected">
     Any mentioned systems (like Zendesk) are auto-linked via DevStudio integrations.
@@ -61,7 +61,7 @@ Each node represents a reasoning or action step.
 
 ## Step 3 — Test in Copilot Mode
 
-When the flow is ready, click **Run in Copilot** to start testing.
+When the Agent Graph is ready, click **Run in Copilot** to start testing.
 
 <Steps>
   <Step title="Open the chat panel">
@@ -100,7 +100,7 @@ Once your assistant passes testing, promote it to the **Production Environment**
 | Issue                      | Resolution                                        |
 | -------------------------- | ------------------------------------------------- |
 | Copilot doesn't respond    | Refresh the workspace or check connectivity.      |
-| Flowgen shows blank canvas | Ensure you have permissions to create assistants. |
+| Graph Studio shows blank canvas | Ensure you have permissions to create assistants. |
 | Test messages fail         | Verify DevStudio tools are configured properly.   |
 
 <Warning>
@@ -112,8 +112,8 @@ Once your assistant passes testing, promote it to the **Production Environment**
 ## Next Steps
 
 <Steps>
-  <Step title="Explore Flowgen Studio">
-    Learn how to customize flows visually → Flowgen Overview
+  <Step title="Explore Graph Studio">
+    Learn how to customize Agent Graphs visually → [Graph Studio overview](/graph-studio/overview)
   </Step>
   <Step title="Build Custom Tools">
     Extend your assistant with APIs and data sources → DevStudio Overview

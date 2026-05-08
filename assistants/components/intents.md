@@ -33,7 +33,7 @@ You can create intents manually or generate them automatically with AI prompts.
   <Step title="Enter the Intent Name and Description." />
   <Step title="Select AI Prompt Generation to auto-generate examples." />
   <Step title="Review and edit the generated samples." />
-  <Step title="Connect this intent to a specific Flow or Action." />
+  <Step title="Connect this intent to a specific Agent Graph or Action." />
 </Steps>
 
 ---
@@ -86,7 +86,7 @@ Testing helps ensure your assistant correctly interprets real-world messages bef
 
 ---
 
-## Link Intents to Flows
+## Link Intents to Agent Graphs
 
 Once an intent is created, connect it to:
 - A **flow** to drive conversation logic  
@@ -101,5 +101,5 @@ Linking ensures that every recognized intent leads to an actionable result.
 
 ## Related Topics
 
-- [Flows](/assistants/components/flows)
+- [Agent Graphs](/assistants/components/flows)
 - [Triggers](/assistants/components/triggers)

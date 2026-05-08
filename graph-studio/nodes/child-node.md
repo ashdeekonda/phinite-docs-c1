@@ -1,6 +1,6 @@
 ---
 title: "Child Agent"
-description: "A reusable embedded agent block with its own prompt and variables."
+description: "A reusable embedded agent node with its own prompt and variables."
 ---
 
 ## Configuration

@@ -1,11 +1,11 @@
 ---
 title: "Assistant Components"
-description: "Flows, Intents, Tools, Builds, Triggers, Environments, and Channels."
+description: "Agent Graphs, Intents, Tools, Builds, Triggers, Environments, and Channels."
 ---
 
 ## Components
 
-- **Flows**: Logic and orchestration layer
+- **Agent Graphs**: Logic and orchestration layer
 - **Intents**: Natural language understanding for conversational assistants
 - **Tools**: Action layer for external operations
 - **Builds**: Versioned artifacts for deployment
@@ -15,7 +15,7 @@ description: "Flows, Intents, Tools, Builds, Triggers, Environments, and Channel
 
 ## Learn more
 
-- [Flows](/assistants/components/flows)
+- [Agent Graphs](/assistants/components/flows)
 - [Intents](/assistants/components/intents)
 - [Tools](/assistants/components/tools)
 - [Builds](/assistants/components/builds)

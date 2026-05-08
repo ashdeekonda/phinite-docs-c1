@@ -7,7 +7,7 @@ icon: book
 ## Terms
 
 - **Assistant**: An AI capability (Conversational, Email, Autonomous) powered by flows
-- **Flow**: Visual workflow of blocks, edges, variables, and logic
+- **Agent Graph**: Visual workflow of blocks, edges, variables, and logic
 - **Agent**: An LLM-driven block with prompt, tools, variables, and RAG
 - **Tool**: Reusable capability that performs external actions
 - **RAG**: Retrieval-Augmented Generation; attaches knowledge collections

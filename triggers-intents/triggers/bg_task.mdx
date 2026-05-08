@@ -13,7 +13,7 @@ Background task mode provides **asynchronous execution** with two separate endpo
 - Real-time progress tracking through logs
 - Non-blocking API calls
 
-### Step 1: Start the Flow
+### Step 1: Start the Agent Graph
 
 #### Endpoint
 
@@ -58,9 +58,9 @@ GET https://ai-core.phinite.ai/trigger/status/{workspace_id}/{workflow_id}
 
 The status endpoint can return one of three statuses with HTTP 200:
 
-- `pending` - Flow is still executing
-- `completed` - Flow finished successfully
-- `failed` - Flow encountered an error
+- `pending` - Agent Graph is still executing
+- `completed` - Agent Graph finished successfully
+- `failed` - Agent Graph encountered an error
 
 #### Status Response: Pending
 

@@ -16,10 +16,10 @@ System tools are automatically available to every agent and don't require custom
   <Card title="Finish Tool" icon="flag-checkered">
     Complete current agent task
   </Card>
-  <Card title="End Flow Tool" icon="circle-stop">
+  <Card title="End Agent Graph Tool" icon="circle-stop">
     Terminate the entire workflow
   </Card>
-  <Card title="Flow Insight Tool" icon="comment-dots">
+  <Card title="Agent Graph Insight Tool" icon="comment-dots">
     Provide status updates to users
   </Card>
 </CardGroup>
@@ -70,7 +70,7 @@ call the FinishTool to complete this step.
   If your agent is finishing prematurely, explicitly define the conditions for calling FinishTool in your prompt.
 </Tip>
 
-## End Flow Tool
+## End Agent Graph Tool
 
 ### Purpose
 
@@ -89,14 +89,14 @@ to immediately terminate the entire workflow.
 
 - User requests to cancel the process
 - Critical error that prevents continuation
-- Flow objective has been fully completed
+- Agent Graph objective has been fully completed
 - User wants to exit the conversation
 
 <Warning>
   This tool stops the **entire workflow**, not just the current agent. Use FinishTool if you only want to complete the current agent's task.
 </Warning>
 
-## Flow Insight Tool
+## Agent Graph Insight Tool
 
 ### Purpose
 
@@ -186,7 +186,7 @@ the user know you're working on their request.
     - Test retrieval quality with sample queries
     - Update datasources regularly for accuracy
   </Accordion>
-  <Accordion title="Flow Insight Messages">
+  <Accordion title="Agent Graph Insight Messages">
     Keep insight messages:
 
     - Brief and conversational
@@ -210,7 +210,7 @@ the user know you're working on their request.
   - Review the quality and format of your datasource content
 </ResponseField>
 
-<ResponseField name="Flow Insight messages not appearing">
+<ResponseField name="Agent Graph Insight messages not appearing">
   - Ensure the agent prompt mentions using FlowInsightTool
   - Verify the conversational flow is configured correctly
   - Check that the tool is being called before long-running operations

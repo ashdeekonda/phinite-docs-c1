@@ -14,7 +14,7 @@ Email assistants process inbound emails, classify them, and take actions using f
   Configure your email channel. See [Channels: Email](/channels/email).
 </Step>
 <Step title="Design flows">
-  Build flows to parse, classify, and respond. See [Flowgen](/flowgen/overview).
+  Build flows to parse, classify, and respond. See [Graph Studio](/graph-studio/overview).
 </Step>
 <Step title="Attach tools">
   Use tools to look up data, create tickets, or send replies. See [DevStudio](/devstudio/overview).

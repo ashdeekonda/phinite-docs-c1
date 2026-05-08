@@ -57,7 +57,7 @@ Assistants are the core elements of a workspace. You can create and manage assis
 
 Each assistant can be opened in one of three environments:
 
-- **Flowgen Studio** – for visual workflow design
+- **Graph Studio** – for visual workflow design
 - **DevStudio** – for logic, APIs, and custom tool development
 - **Copilot** – for building or editing flows through natural language instructions
 
@@ -123,7 +123,7 @@ API Keys enable secure programmatic access to your workspace’s flows and assis
 You can:
 
 - Generate workspace-level API keys
-- Trigger **Flow as a Service** from external applications
+- Trigger **Agent Graph as a Service** from external applications
 - Regenerate or revoke keys as needed
 
 <Warning>

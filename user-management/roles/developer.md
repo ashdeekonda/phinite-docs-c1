@@ -5,7 +5,7 @@ description: "Capabilities and responsibilities for Developers."
 
 ## Capabilities
 
-- Create and edit flows in [Flowgen](/flowgen/overview)
+- Create and edit flows in [Graph Studio](/graph-studio/overview)
 - Build and test tools in [DevStudio](/devstudio/overview)
 - Configure variables, RAG, and tools
 - Run tests and view logs

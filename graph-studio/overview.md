@@ -1,19 +1,19 @@
 ---
-title: "Flowgen Studio Overview"
+title: "Graph Studio Overview"
 description: "Build intelligent workflows with visual automation, multi-agent orchestration, and enterprise-grade debugging capabilities."
 ---
 
-## What is Flowgen Studio?
+## What is Graph Studio?
 
-Flowgen Studio is Phinite's visual workflow builder that enables you to create sophisticated AI-powered automations without coding. Design complex multi-agent systems using an intuitive canvas interface, connect them with conditional logic, and deploy with full observability and access controls.
+Graph Studio is Phinite's visual workflow builder that enables you to create sophisticated AI-powered automations without coding. Design complex multi-agent systems using an intuitive canvas interface, connect them with conditional logic, and deploy with full observability and access controls.
 
 <CardGroup cols={2}>
-<Card title="Prompt-based creation (Copilot)" icon="sparkles" href="/flowgen/copilot-method">
+<Card title="Prompt-based creation (Copilot)" icon="sparkles" href="/graph-studio/copilot-method">
 Describe your automation goal in natural language and let AI generate the initial workflow structure.
 </Card>
 
-<Card title="Manual canvas editing" icon="pencil" href="/flowgen/manual-method">
-Design precise workflows by dragging and connecting building blocks with full control over logic flow.
+<Card title="Manual canvas editing" icon="pencil" href="/graph-studio/manual-method">
+Design precise workflows by dragging and connecting nodes with full control over execution order.
 </Card>
 </CardGroup>
 
@@ -30,7 +30,7 @@ Design precise workflows by dragging and connecting building blocks with full co
 - **Agent communication**: Seamless data passing and coordination between agents
 
 ### Enterprise features
-- **Role-based access**: Control who can view, edit, or publish flows based on [user roles](/getting-started/user-roles)
+- **Role-based access**: Control who can view, edit, or publish flows based on [user roles](/user-management/user-roles)
 - **Environment management**: Deploy flows across Development, UAT, and Production environments
 - **Audit trails**: Complete logging of all changes, executions, and user actions
 
@@ -47,22 +47,22 @@ Design precise workflows by dragging and connecting building blocks with full co
 ## Prerequisites
 
 ### Access requirements
-- **Workspace membership**: You must be added to a workspace with appropriate [permissions](/getting-started/access-controls)
+- **Workspace membership**: You must be added to a workspace with appropriate [permissions](/user-management/access-controls)
 - **Role assignment**: Minimum "Developer" role required for creating flows, "Admin" for publishing
-- **Project access**: Flows are created within projects - ensure you have project-level access
+- **Project access**: Agent Graphs are created within projects - ensure you have project-level access
 
 ### Technical setup
-- **Data sources**: Configure [RAG collections](/flowgen/rag-management) if agents need enterprise knowledge
+- **Data sources**: Configure [RAG collections](/graph-studio/rag-management) if agents need enterprise knowledge
 - **Tool integrations**: Set up [external APIs](/devstudio/overview) and authentication credentials
 - **Environment variables**: Configure any required secrets or configuration values
 
 ## User roles and permissions
 
 <Warning>
-Flowgen Studio access is controlled by workspace-level permissions. Users without appropriate roles will see limited functionality or be blocked from accessing certain features.
+Graph Studio access is controlled by workspace-level permissions. Users without appropriate roles will see limited functionality or be blocked from accessing certain features.
 </Warning>
 
-| Role | Can Create Flows | Can Edit Flows | Can Publish Flows | Can View Logs |
+| Role | Can Create Agent Graphs | Can Edit Agent Graphs | Can Publish Agent Graphs | Can View Logs |
 |------|------------------|----------------|-------------------|---------------|
 | **SuperAdmin** | ✅ | ✅ | ✅ | ✅ |
 | **Admin** | ✅ | ✅ | ✅ | ✅ |
@@ -73,11 +73,11 @@ Flowgen Studio access is controlled by workspace-level permissions. Users withou
 ## Getting started workflow
 
 <Steps>
-<Step title="Access Flowgen Studio">
+<Step title="Access Graph Studio">
   Navigate to your workspace → Projects → [Select Project] → Studio tab
   
   <Check>
-  You should see the Flowgen Studio interface with canvas, block library, and inspector panels.
+  You should see the Graph Studio interface with canvas, node library, and inspector panels.
   </Check>
 </Step>
 
@@ -90,7 +90,7 @@ Flowgen Studio access is controlled by workspace-level permissions. Users withou
 </Step>
 
 <Step title="Design your workflow">
-  Add blocks, configure agents, connect logic, and test your flow with sample inputs.
+  Add nodes, configure agents, connect logic, and test your Agent Graph with sample inputs.
   
   <Note>
   Use the debugging tools in the bottom panel to monitor execution and troubleshoot issues.
@@ -111,6 +111,6 @@ Flowgen Studio access is controlled by workspace-level permissions. Users withou
 - **[Building Assistants](/assistants/overview)**: Learn how flows integrate with conversational and autonomous assistants
 - **[DevStudio](/devstudio/overview)**: Create custom tools that flows can utilize
 - **[Observability](/observability/overview)**: Monitor flow performance and debug issues
-- **[User Management](/getting-started/user-management)**: Understand workspace permissions and access controls
+- **[User Management](/user-management/user-management)**: Understand workspace permissions and access controls
 
 

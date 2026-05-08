@@ -1,5 +1,5 @@
 ---
-title: "Start Block"
+title: "Start node"
 description: "The entry point for a workflow with a single source handle."
 ---
 

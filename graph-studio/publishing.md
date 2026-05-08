@@ -1,17 +1,17 @@
 ---
-title: "Flow Publishing & Versioning"
+title: "Agent Graph Publishing & Versioning"
 description: "Deploy flows safely with comprehensive version control, access management, and debugging capabilities."
 ---
 
 ## Publishing overview
 
-Flow publishing in Phinite provides enterprise-grade deployment capabilities with full version control, access management, and observability. Understanding the publishing process is crucial for maintaining stable, secure, and auditable workflows.
+Agent Graph publishing in Phinite provides enterprise-grade deployment capabilities with full version control, access management, and observability. Understanding the publishing process is crucial for maintaining stable, secure, and auditable workflows.
 
 ### Publishing workflow
 
 ```mermaid
 graph TD
-    A[Draft Flow] --> B[Save Flow]
+    A[Draft Agent Graph] --> B[Save Agent Graph]
     B --> C[Validation Check]
     C --> D{Validation Pass?}
     D -->|No| E[Fix Issues]
@@ -30,7 +30,7 @@ graph TD
 
 ### Role-based publishing permissions
 
-| Role           | Can Save Flows | Can Publish to Dev | Can Publish to UAT | Can Publish to Prod |
+| Role           | Can Save Agent Graphs | Can Publish to Dev | Can Publish to UAT | Can Publish to Prod |
 | -------------- | -------------- | ------------------ | ------------------ | ------------------- |
 | **SuperAdmin** | ✅              | ✅                  | ✅                  | ✅                   |
 | **Admin**      | ✅              | ✅                  | ✅                  | ✅                   |
@@ -46,37 +46,37 @@ graph TD
 
 ## Pre-publishing checklist
 
-### Flow validation requirements
+### Agent Graph validation requirements
 
 <Check>
-  - Flow is saved successfully
-  - All required block fields are filled
+  - Agent Graph is saved successfully
+  - All required node fields are filled
   - Agent prompts are complete and tested
   - RAG sources are properly connected
   - Tool integrations are configured
   - Variables are properly mapped
   - Conditional edges have valid logic
-  - Flow has clear Start and End blocks
-  - No orphaned blocks or disconnected components
+  - Agent Graph has clear Start and End nodes
+  - No orphaned nodes or disconnected components
 </Check>
 
 ### Common validation failures
 
 <AccordionGroup>
   <Accordion title="Missing required fields">
-    **Error**: "Please fill all required details for the following blocks: agent, tool"
+    **Error**: "Please fill all required details for the following nodes: agent, tool"
 
     **Debugging steps**:
 
-    1. Check each block in the Inspector panel
+    1. Check each node in the Inspector panel
     2. Verify all required fields are populated
     3. Look for red validation indicators
-    4. Test blocks individually before publishing
+    4. Test nodes individually before publishing
 
     **Sample validation code**:
 
     ```javascript
-    // Check block validation
+    // Check node validation
     const validateBlock = (block) => {
       const requiredFields = {
         'task': ['name', 'task_prompt'],
@@ -96,14 +96,14 @@ graph TD
     **Resolution**: Fill all required fields and re-validate
   </Accordion>
   <Accordion title="Invalid connections">
-    **Error**: "Flow contains invalid connections or orphaned blocks"
+    **Error**: "Agent Graph contains invalid connections or orphaned nodes"
 
     **Debugging steps**:
 
-    1. Check for blocks without proper connections
-    2. Verify Start block has outgoing connections
-    3. Ensure End blocks have incoming connections
-    4. Look for disconnected blocks in the canvas
+    1. Check for nodes without proper connections
+    2. Verify Start node has outgoing connections
+    3. Ensure End nodes have incoming connections
+    4. Look for disconnected nodes in the canvas
 
     **Sample debugging code**:
 
@@ -125,7 +125,7 @@ graph TD
     };
     ```
 
-    **Resolution**: Connect all blocks properly and ensure flow integrity
+    **Resolution**: Connect all nodes properly and ensure graph integrity
   </Accordion>
   <Accordion title="Tool integration errors">
     **Error**: "Tool integration failed validation"
@@ -192,7 +192,7 @@ graph TD
     **Good version notes**:
 
     ```markdown
-    Version 2.1.0 - Customer Service Flow
+    Version 2.1.0 - Customer Service Agent Graph
     - Added RAG integration for policy knowledge
     - Improved error handling for payment failures
     - Updated email templates for better customer experience
@@ -264,39 +264,39 @@ Phinite automatically manages version numbers:
 
 <AccordionGroup>
   <Accordion title="Publishing fails with validation errors">
-    **Symptoms**: Flow fails to publish with validation error messages
+    **Symptoms**: Agent Graph fails to publish with validation error messages
 
     **Debugging steps**:
 
     1. Review the specific validation error messages
-    2. Check each block for missing required fields
+    2. Check each node for missing required fields
     3. Verify all connections are valid
     4. Test individual components before publishing
 
     **Sample debugging code**:
 
     ```javascript
-    // Comprehensive flow validation
+    // Comprehensive graph validation
     const validateFlowForPublishing = (flow) => {
       const errors = [];
       
-      // Check for required blocks
+      // Check for required nodes
       if (!flow.nodes.some(n => n.type === 'start')) {
-        errors.push('Flow must have a Start block');
+        errors.push('Agent Graph must have a Start node');
       }
       
       if (!flow.nodes.some(n => n.type === 'end')) {
-        errors.push('Flow must have an End block');
+        errors.push('Agent Graph must have an End node');
       }
       
-      // Check block configurations
+      // Check node configurations
       flow.nodes.forEach(node => {
         if (node.type === 'task' && !node.data?.details?.task_prompt) {
-          errors.push(`Agent block ${node.id} missing prompt`);
+          errors.push(`Agent node ${node.id} missing prompt`);
         }
         
         if (node.type === 'api' && !node.data?.details?.toolid) {
-          errors.push(`Tool block ${node.id} missing tool configuration`);
+          errors.push(`Tool node ${node.id} missing tool configuration`);
         }
       });
       
@@ -307,7 +307,7 @@ Phinite automatically manages version numbers:
     **Resolution**: Address all validation errors before attempting to publish
   </Accordion>
   <Accordion title="Version creation fails">
-    **Symptoms**: Flow saves but version creation fails
+    **Symptoms**: Agent Graph saves but version creation fails
 
     **Debugging steps**:
 

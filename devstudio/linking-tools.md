@@ -11,7 +11,7 @@ description: "Enable tools for agents and wire variables to parameters."
       ![Select Agent](/images/select-agent.png)
     </Frame>
 
-    Open the Agent block in Flowgen.
+    Open the Agent node in Graph Studio.
   </Step>
   <Step title="Enable tools">
     <Frame>

@@ -5,7 +5,7 @@ description: "Capabilities and responsibilities for Testers."
 
 ## Capabilities
 
-- Run tests in Flowgen and DevStudio
+- Run tests in Graph Studio and DevStudio
 - View execution logs and metrics
 
 ## Restrictions

@@ -1,5 +1,5 @@
 ---
-title: "Tool Block"
+title: "Tool node"
 description: "Calls external APIs or tools during the flow."
 ---
 

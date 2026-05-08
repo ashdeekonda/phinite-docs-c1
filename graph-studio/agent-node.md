@@ -1,23 +1,23 @@
 ---
-title: "Agent Block Anatomy"
+title: "Agent Node Anatomy"
 description: "Master the four core components of AI agents: prompts, RAG knowledge, tool integrations, and variable management."
 ---
 
 ## Agent components overview
 
-Every agent block in Flowgen Studio consists of four essential components that work together to create intelligent, context-aware automation. Understanding how these components interact is crucial for building effective workflows.
+Every agent node in Graph Studio consists of four essential components that work together to create intelligent, context-aware automation. Understanding how these components interact is crucial for building effective workflows.
 
 <CardGroup cols={2}>
-<Card title="Agent Prompt" href="/flowgen/agent-block/prompt" icon="file-text">
+<Card title="Agent Prompt" href="/graph-studio/agent-node/prompt" icon="file-text">
 Define the agent's personality, behavior, and decision-making logic with structured prompts.
 </Card>
-<Card title="RAG (Knowledge Base)" href="/flowgen/agent-block/rag" icon="book">
+<Card title="RAG (Knowledge Base)" href="/graph-studio/agent-node/rag" icon="book">
 Ground responses with enterprise data from connected sources and collections.
 </Card>
-<Card title="Tools Integration" href="/flowgen/agent-block/tools" icon="wrench">
+<Card title="Tools Integration" href="/graph-studio/agent-node/tools" icon="wrench">
 Enable external actions through API calls, database queries, and third-party integrations.
 </Card>
-<Card title="Variables (Input & Capture)" href="/flowgen/agent-block/variables" icon="database">
+<Card title="Variables (Input & Capture)" href="/graph-studio/agent-node/variables" icon="database">
 Manage data flow with input variables and capture outputs for downstream processing.
 </Card>
 </CardGroup>
@@ -57,7 +57,7 @@ Agent configuration requires "Developer" role or higher. Users with "Tester" or 
 **Symptoms**: Agent gives irrelevant or incorrect responses
 
 **Debugging steps**:
-1. Check prompt clarity and specificity in the [Agent Prompt](/flowgen/agent-block/prompt) tab
+1. Check prompt clarity and specificity in the [Agent Prompt](/graph-studio/agent-node/prompt) tab
 2. Verify RAG sources are properly attached and contain relevant information
 3. Review execution logs in the [Observability](/observability/logs) section
 4. Test with sample inputs to isolate the issue
@@ -76,7 +76,7 @@ const expectedResponse = "The agent should identify this as a customer service r
 **Symptoms**: Agent ignores attached knowledge sources
 
 **Debugging steps**:
-1. Verify data sources are properly connected in [RAG Management](/flowgen/rag-management)
+1. Verify data sources are properly connected in [RAG Management](/graph-studio/rag-management)
 2. Check if collections contain relevant information for the query
 3. Review agent's RAG configuration in the Inspector panel
 4. Test with queries that should trigger knowledge retrieval
@@ -184,8 +184,8 @@ const inputData = {
 
 ## Next steps
 
-1. **[Configure your first agent](/flowgen/agent-block/prompt)**: Start with prompt design
-2. **[Add knowledge sources](/flowgen/agent-block/rag)**: Connect relevant data
-3. **[Integrate tools](/flowgen/agent-block/tools)**: Enable external capabilities
-4. **[Set up variables](/flowgen/agent-block/variables)**: Manage data flow
+1. **[Configure your first agent](/graph-studio/agent-node/prompt)**: Start with prompt design
+2. **[Add knowledge sources](/graph-studio/agent-node/rag)**: Connect relevant data
+3. **[Integrate tools](/graph-studio/agent-node/tools)**: Enable external capabilities
+4. **[Set up variables](/graph-studio/agent-node/variables)**: Manage data flow
 5. **[Test and debug](/observability/logs)**: Monitor performance and resolve issues

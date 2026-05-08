@@ -1,38 +1,38 @@
 ---
 title: "Manual Canvas Method"
-description: "Design workflows by placing blocks on a visual canvas and connecting them with edges."
+description: "Design workflows by placing nodes on a visual canvas and connecting them with edges."
 ---
 
 ## Workflow creation on the canvas
 
 <Steps>
-  <Step title="Create a new flow">
+  <Step title="Create a new Agent Graph">
     <Frame>
-      ![New Flow](/images/new-flow.png)
+      ![New Agent Graph](/images/new-flow.png)
     </Frame>
 
-    Open Flowgen Studio and choose "Create manually".
+    Open Graph Studio and choose "Create manually".
   </Step>
-  <Step title="Add blocks">
+  <Step title="Add nodes">
     <Frame>
       ![Add Blocks](/images/add-blocks.png)
     </Frame>
 
-    Drag blocks from the Block Library: Start, Master Agent, Child Agent, Tool, End.
+    Drag nodes from the Node Library: Start, Master Agent, Child Agent, Tool, End.
   </Step>
   <Step title="Connect with edges">
     <Frame>
       ![Connect With Edges](/images/connect-with-edges.png)
     </Frame>
 
-    Connect source and target handles between blocks to define execution order.
+    Connect source and target handles between nodes to define execution order.
   </Step>
-  <Step title="Configure blocks">
+  <Step title="Configure nodes">
     <Frame>
       ![Configure Blocks](/images/configure-blocks.png)
     </Frame>
 
-    Select a block to edit its properties in the Inspector: prompts, RAG, tools, and variables.
+    Select a node to edit its properties in the Inspector: prompts, RAG, tools, and variables.
   </Step>
   <Step title="Test and iterate">
     <Frame>

@@ -1,10 +1,10 @@
 ---
 title: "Keyboard Shortcuts"
-description: "Productivity shortcuts for Flowgen Studio and DevStudio."
+description: "Productivity shortcuts for Graph Studio and DevStudio."
 icon: keyboard
 ---
 
-## Flowgen Studio
+## Graph Studio
 
 - ⌘/Ctrl + Click: Multi-select
 - Delete/Backspace: Delete selected edge/node

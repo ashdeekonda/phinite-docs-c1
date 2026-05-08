@@ -1,5 +1,5 @@
 ---
-title: "End Block"
+title: "End node"
 description: "Terminates a workflow execution path."
 ---
 
@@ -7,4 +7,4 @@ description: "Terminates a workflow execution path."
 
 - Non-deletable by default
 - Only accepts incoming edges
-- Use multiple End blocks to represent distinct terminal outcomes
+- Use multiple End nodes to represent distinct terminal outcomes
