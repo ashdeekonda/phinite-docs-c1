@@ -26,15 +26,15 @@ Teams use Phinite to:
 
 ## Core Concepts
 
-| Concept         | Description                                                                                      |
-| --------------- | ------------------------------------------------------------------------------------------------ |
-| **Assistant**   | A conversational, email-based, or autonomous agent powered by one or more flows                  |
-| **Agent Graph**        | A visual decision graph with nodes that orchestrate logic, tools, and conversations              |
-| **Node**        | The building block of a flow — can prompt a model, call a tool, capture input, or make decisions |
-| **Tool**        | A callable API, function, or system integration used by your assistant                           |
-| **Trigger**     | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event)                  |
-| **Environment** | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps    |
-| **Session**     | A full execution of a flow, recorded in logs with inputs, decisions, outputs, and metrics        |
+| Concept | Description |
+| --- | --- |
+| **Assistant** | A conversational, email-based, or autonomous agent powered by one or more agent graphs |
+| **Agent Graph** | A visual decision graph with nodes that orchestrate logic, tools, and conversations |
+| **Node** | The building block of a agent graph — can prompt a model, call a tool, capture input, or make decisions |
+| **Tool** | A callable API, function, or system integration used by your assistant |
+| **Trigger** | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event) |
+| **Environment** | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps |
+| **Session** | A full execution of an agent graph, recorded in logs with inputs, decisions, outputs, and metrics |
 
 ---
 
@@ -42,20 +42,20 @@ Teams use Phinite to:
 
 Phinite supports a multi-role collaboration model so your entire team can work together:
 
-| Role           | Responsibilities                                                  |
-| -------------- | ----------------------------------------------------------------- |
-| **Developers** | Build tools, wire integrations, and design flows                  |
-| **Architects** | Plan agent logic, manage flows, and configure environments        |
-| **Admins**     | Control access, invite users, and manage billing and environments |
-| **Testers**    | Validate assistant behavior and run debug sessions                |
-| **Analysts**   | Observe sessions, track model usage, and monitor outcomes         |
+| Role | Responsibilities |
+| --- | --- |
+| **Developers** | Build tools, wire integrations, and design agent graphs |
+| **Architects** | Plan agent logic, manage agent graphs, and configure environments |
+| **Admins** | Control access, invite users, and manage billing and environments |
+| **Testers** | Validate assistant behavior and run debug sessions |
+| **Analysts** | Observe sessions, track model usage, and monitor outcomes |
 
 ---
 
 ## What Makes Phinite Different
 
 - Visual-first AI workflow builder, with support for both no-code and code-based design
-- Multi-agent orchestration through linked flows and manager agents
+- Multi-agent orchestration through linked agent graphs and manager agents
 - Deep observability with session-level timelines, decision logs, and token tracking
 - Role-based access and environment isolation for enterprise-grade deployments
 - Reusable tools, prompts, and assistant templates to reduce repetitive work
@@ -65,8 +65,8 @@ Phinite supports a multi-role collaboration model so your entire team can work t
 ## Next Steps
 
 - [Quick Start](./quickstart)
-- [Workspace Overview](../workspaces/workspace-overview)
-- [Inviting Users](../user-management/inviting-users)
+- [Workspace Overview](./workspaces/workspace-overview)
+- [Inviting Users](./user-management/inviting-users)
 
 ---
 

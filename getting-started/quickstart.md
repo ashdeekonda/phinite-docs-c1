@@ -1,11 +1,11 @@
 ---
 title: "Quick Start"
-description: "Build and deploy your first AI assistant in minutes using Phinite Copilot and Graph Studio."
+description: "Build and deploy your first AI assistant in minutes using Phinite Aura and Graph Studio."
 ---
 
 # Quick Start
 
-This guide walks you through creating your first AI Assistant using **Copilot** and **Graph Studio**.
+This guide walks you through creating your first AI Assistant using **Aura** and **Graph Studio**.
 
 In a few minutes, you’ll have a working assistant that can understand intents, trigger tools, and reply naturally.
 
@@ -27,22 +27,22 @@ You should already have:
 
 ---
 
-## Step 1 — Open Copilot
+## Step 1 — Open Phinite Aura
 
-When you log into your workspace, you’ll see the **Copilot input bar** at the top.\
+When you log into your workspace, you’ll see the **Aura's input bar** at the top.\
 Type what you want to build.
 
 ```text
-Build an assistant that answers FAQs and creates tickets in Zendesk.
+Build an agent graph that answers FAQs and creates tickets in Zendesk.
 ```
 
-Copilot interprets your prompt, asks clarifying questions, and starts creating your Agent Graph.
+Aura interprets your prompt, asks clarifying questions, and starts creating your agent graph.
 
 ---
 
-## Step 2 — Graph Studio creates Your Assistant
+## Step 2 — Graph Studio Creates Your Agent Graph
 
-Copilot triggers **Graph Studio**, where your logic appears in real time.\
+Aura triggers **Graph Studio**, where your logic appears in real time.\
 Each node represents a reasoning or action step.
 
 <Steps>
@@ -50,7 +50,7 @@ Each node represents a reasoning or action step.
     Copilot defines a new Assistant with a unique ID inside your workspace.
   </Step>
   <Step title="Nodes appear on canvas">
-    The graph structure is generated instantly based on your intent.
+    The agent graph structure is generated instantly based on your intent.
   </Step>
   <Step title="Tools are connected">
     Any mentioned systems (like Zendesk) are auto-linked via DevStudio integrations.
@@ -59,13 +59,13 @@ Each node represents a reasoning or action step.
 
 ---
 
-## Step 3 — Test in Copilot Mode
+## Step 3 — Test your Agent Graph
 
-When the Agent Graph is ready, click **Run in Copilot** to start testing.
+When the graph is ready, click **Test Agent Graph(top right corner)** to start testing.
 
 <Steps>
   <Step title="Open the chat panel">
-    Your workspace shows a live chat window.
+    Your graph studio shows a live chat window.
   </Step>
   <Step title="Send test messages">
     Try a query like Where is my latest order?.
@@ -73,23 +73,29 @@ When the Agent Graph is ready, click **Run in Copilot** to start testing.
   <Step title="Watch execution logs">
     Node-by-node execution appears in the timeline.
   </Step>
+  <Step title="Publish your Agent">
+    Once testing is complete, publish your tools and the agent graph.
+  </Step>
 </Steps>
 
 ---
 
 ## Step 4 — Deploy to Production
 
-Once your assistant passes testing, promote it to the **Production Environment**.
+Once your agent passes testing, promote it to the **Production Environment**.
 
 <Steps>
-  <Step title="Open Environment Panel">
-    Switch from Dev to Production in the top navigation bar.
+  <Step title="Create an intent or trigger based on your assistant type.">
+    Attach the particular intent to your agent graph.
   </Step>
-  <Step title="Click Deploy">
-    Confirm build promotion and environment sync.
+  <Step title="Open Build Page">
+    Create a build by selecting the intent, Agent Graphs (selected by default), and tools along with their versions.
   </Step>
-  <Step title="Add a Channel">
-    Select a deployment channel — web, chat, voice, or API endpoint.
+  <Step title="Click Create Build">
+    Attach build to desired environment.
+  </Step>
+  <Step title="Add the assistant to channel">
+    Select a deployment channel — web, chat, or voice — and choose the assistant. The build you created for that assistant will be used in the selected channel. (This step is not required for autonomous assistants.)
   </Step>
 </Steps>
 
@@ -97,11 +103,11 @@ Once your assistant passes testing, promote it to the **Production Environment**
 
 ## Troubleshooting
 
-| Issue                      | Resolution                                        |
-| -------------------------- | ------------------------------------------------- |
-| Copilot doesn't respond    | Refresh the workspace or check connectivity.      |
-| Graph Studio shows blank canvas | Ensure you have permissions to create assistants. |
-| Test messages fail         | Verify DevStudio tools are configured properly.   |
+| Issue | Resolution |
+| --- | --- |
+| Aura doesn't respond | Refresh the workspace or check connectivity. |
+| GraphStudio shows blank canvas | Ensure you have permissions to create assistants. |
+| Test messages fail | Verify DevStudio tools are configured properly. |
 
 <Warning>
   If you see an “Integration Limit” message, upgrade your workspace to **Pro** for multi-tool support.
@@ -112,8 +118,8 @@ Once your assistant passes testing, promote it to the **Production Environment**
 ## Next Steps
 
 <Steps>
-  <Step title="Explore Graph Studio">
-    Learn how to customize Agent Graphs visually → [Graph Studio overview](/graph-studio/overview)
+  <Step title="Explore GraphStudio Studio">
+    Learn how to customize agent graph visually → Graph Studio Overview
   </Step>
   <Step title="Build Custom Tools">
     Extend your assistant with APIs and data sources → DevStudio Overview
