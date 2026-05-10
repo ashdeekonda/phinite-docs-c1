@@ -30,13 +30,13 @@ graph TD
 
 ### Role-based publishing permissions
 
-| Role           | Can Save Agent Graphs | Can Publish to Dev | Can Publish to UAT | Can Publish to Prod |
-| -------------- | -------------- | ------------------ | ------------------ | ------------------- |
-| **SuperAdmin** | ✅              | ✅                  | ✅                  | ✅                   |
-| **Admin**      | ✅              | ✅                  | ✅                  | ✅                   |
-| **Developer**  | ✅              | ✅                  | ❌                  | ❌                   |
-| **Tester**     | ❌              | ❌                  | ❌                  | ❌                   |
-| **Viewer**     | ❌              | ❌                  | ❌                  | ❌                   |
+| Role | Can Save Agent Graphs | Can Publish to Dev | Can Publish to UAT | Can Publish to Prod |
+| --- | --- | --- | --- | --- |
+| **SuperAdmin** | ✅ | ✅ | ✅ | ✅ |
+| **Admin** | ✅ | ✅ | ✅ | ✅ |
+| **Developer** | ✅ | ✅ | ❌ | ❌ |
+| **Tester** | ❌ | ❌ | ❌ | ❌ |
+| **Viewer** | ❌ | ❌ | ❌ | ❌ |
 
 ### Environment-specific access
 
@@ -71,95 +71,30 @@ graph TD
     1. Check each node in the Inspector panel
     2. Verify all required fields are populated
     3. Look for red validation indicators
-    4. Test nodes individually before publishing
-
-    **Sample validation code**:
-
-    ```javascript
-    // Check node validation
-    const validateBlock = (block) => {
-      const requiredFields = {
-        'task': ['name', 'task_prompt'],
-        'api': ['toolid', 'name'],
-        'flow': ['flowid', 'name']
-      };
-      
-      const blockType = block.type;
-      const missingFields = requiredFields[blockType]?.filter(
-        field => !block.data?.details?.[field]
-      );
-      
-      return missingFields || [];
-    };
-    ```
 
     **Resolution**: Fill all required fields and re-validate
   </Accordion>
+
   <Accordion title="Invalid connections">
     **Error**: "Agent Graph contains invalid connections or orphaned nodes"
 
     **Debugging steps**:
 
     1. Check for nodes without proper connections
-    2. Verify Start node has outgoing connections
+    2. Verify Start node has outgoing connections (Max one)
     3. Ensure End nodes have incoming connections
-    4. Look for disconnected nodes in the canvas
-
-    **Sample debugging code**:
-
-    ```javascript
-    // Check flow connectivity
-    const validateConnections = (nodes, edges) => {
-      const startNodes = nodes.filter(n => n.type === 'start');
-      const endNodes = nodes.filter(n => n.type === 'end');
-      const orphanedNodes = nodes.filter(n => 
-        n.type !== 'start' && n.type !== 'end' && 
-        !edges.some(e => e.target === n.id || e.source === n.id)
-      );
-      
-      return {
-        hasStart: startNodes.length > 0,
-        hasEnd: endNodes.length > 0,
-        orphanedCount: orphanedNodes.length
-      };
-    };
-    ```
+    4. Look for disconnected nodes in the canvas (Except the child nodes)
 
     **Resolution**: Connect all nodes properly and ensure graph integrity
   </Accordion>
+
   <Accordion title="Tool integration errors">
     **Error**: "Tool integration failed validation"
 
     **Debugging steps**:
 
-    1. Check tool authentication in [DevStudio](/devstudio/overview)
-    2. Verify API keys and credentials
-    3. Test tools independently
-    4. Review tool parameter mapping
-
-    **Sample debugging code**:
-
-    ```javascript
-    // Test tool integration
-    const testTool = async (toolId, parameters) => {
-      try {
-        const response = await fetch(`/api/tools/${toolId}/test`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(parameters)
-        });
-        
-        if (!response.ok) {
-          throw new Error(`Tool test failed: ${response.statusText}`);
-        }
-        
-        return await response.json();
-      } catch (error) {
-        console.error('Tool validation error:', error);
-        throw error;
-      }
-    };
-    ```
+    1. Verify API keys and credentials
+    2. Review tool parameter mapping
 
     **Resolution**: Fix tool configuration and authentication
   </Accordion>
@@ -225,7 +160,7 @@ graph TD
 
 ### Version history interface
 
-The version history panel (`Sidebar/canvas/VersionHistory.tsx`) provides comprehensive version management:
+The version history panel provides comprehensive version management:
 
 - **Version list**: View all published versions with timestamps and notes
 - **Version details**: Inspect specific version configurations
@@ -236,9 +171,9 @@ The version history panel (`Sidebar/canvas/VersionHistory.tsx`) provides compreh
 
 Phinite automatically manages version numbers:
 
-- **First version**: Starts at version 1
+- **First published version**: Starts at version 1
 - **Subsequent versions**: Incrementally numbered (2, 3, 4, etc.)
-- **Draft versions**: Not numbered until published
+- **Draft versions**: Not numbered until published (default 0)
 - **Version notes**: Required for all published versions
 
 ### Copying versions to draft
@@ -258,139 +193,13 @@ Phinite automatically manages version numbers:
   </Step>
 </Steps>
 
-## Debugging publishing issues
-
-### Common publishing problems
-
-<AccordionGroup>
-  <Accordion title="Publishing fails with validation errors">
-    **Symptoms**: Agent Graph fails to publish with validation error messages
-
-    **Debugging steps**:
-
-    1. Review the specific validation error messages
-    2. Check each node for missing required fields
-    3. Verify all connections are valid
-    4. Test individual components before publishing
-
-    **Sample debugging code**:
-
-    ```javascript
-    // Comprehensive graph validation
-    const validateFlowForPublishing = (flow) => {
-      const errors = [];
-      
-      // Check for required nodes
-      if (!flow.nodes.some(n => n.type === 'start')) {
-        errors.push('Agent Graph must have a Start node');
-      }
-      
-      if (!flow.nodes.some(n => n.type === 'end')) {
-        errors.push('Agent Graph must have an End node');
-      }
-      
-      // Check node configurations
-      flow.nodes.forEach(node => {
-        if (node.type === 'task' && !node.data?.details?.task_prompt) {
-          errors.push(`Agent node ${node.id} missing prompt`);
-        }
-        
-        if (node.type === 'api' && !node.data?.details?.toolid) {
-          errors.push(`Tool node ${node.id} missing tool configuration`);
-        }
-      });
-      
-      return errors;
-    };
-    ```
-
-    **Resolution**: Address all validation errors before attempting to publish
-  </Accordion>
-  <Accordion title="Version creation fails">
-    **Symptoms**: Agent Graph saves but version creation fails
-
-    **Debugging steps**:
-
-    1. Check network connectivity
-    2. Verify user permissions
-    3. Review server logs for errors
-    4. Try publishing to a different environment
-
-    **Sample debugging code**:
-
-    ```javascript
-    // Test publishing API
-    const testPublishing = async (flowId, versionDetails) => {
-      try {
-        const response = await fetch(`/api/flows/${flowId}/publish`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`
-          },
-          body: JSON.stringify({
-            versionDetails,
-            environment: 'dev'
-          })
-        });
-        
-        if (!response.ok) {
-          const error = await response.json();
-          throw new Error(`Publishing failed: ${error.message}`);
-        }
-        
-        return await response.json();
-      } catch (error) {
-        console.error('Publishing error:', error);
-        throw error;
-      }
-    };
-    ```
-
-    **Resolution**: Check permissions, network, and server status
-  </Accordion>
-  <Accordion title="Environment deployment issues">
-    **Symptoms**: Version created but deployment to target environment fails
-
-    **Debugging steps**:
-
-    1. Check environment configuration
-    2. Verify environment-specific settings
-    3. Review deployment logs
-    4. Test with a simpler flow first
-
-    **Sample debugging code**:
-
-    ```javascript
-    // Check environment status
-    const checkEnvironmentStatus = async (environment) => {
-      try {
-        const response = await fetch(`/api/environments/${environment}/status`);
-        const status = await response.json();
-        
-        return {
-          isHealthy: status.health === 'healthy',
-          lastDeployment: status.lastDeployment,
-          activeVersions: status.activeVersions
-        };
-      } catch (error) {
-        console.error('Environment check failed:', error);
-        return { isHealthy: false, error: error.message };
-      }
-    };
-    ```
-
-    **Resolution**: Fix environment configuration or contact system administrator
-  </Accordion>
-</AccordionGroup>
-
 ## Post-publishing monitoring
 
-### Deployment verification
+### Build verification
 
 <Steps>
-  <Step title="Check deployment status">
-    Verify the flow is successfully deployed to the target environment.
+  <Step title="Check Build with particular agent graph version">
+    Verify the agent graph is connected to target build and build is connected to the desired environment.
   </Step>
   <Step title="Test flow execution">
     Run test scenarios to ensure the flow works as expected.
@@ -407,7 +216,7 @@ Phinite automatically manages version numbers:
 
 - **Execution success rate**: Track how often flows complete successfully
 - **Response times**: Monitor flow execution duration
-- **Error rates**: Identify common failure points
+- **Error rates**: Identify common failure points. Work on prompt or changing models.
 - **Resource usage**: Track token consumption and API calls
 
 ## Best practices
