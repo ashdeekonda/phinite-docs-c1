@@ -11,12 +11,6 @@ description: "External actions your assistants can call to get work done."
 
 Tools are modular logic units that developers maintain and reuse across Assistants. Tools are built and versioned in [DevStudio](/devstudio/overview). Agents invoke tools to perform actions.
 
-### Tool Types
-
-- **API Tools** — connect to external services.
-- **Logic Tools** — handle data transformations or business rules.
-- **Utility Tools** — manage internal operations (e.g., token validation).
-
 ### Managed in DevStudio
 
 Developers can:
@@ -24,11 +18,8 @@ Developers can:
 - Edit and test tools in isolation.
 - Save tools to the **Workspace Library** for reuse.
 - Version and publish them for other assistants.
-
-<info>
-  Tools used in multiple assistants should always be version-controlled.\
-  Breaking changes must be tested in Dev before UAT or Prod.
-</info>
+  > Tools used in multiple assistants should always be version-controlled.\
+  > Breaking changes must be tested in Dev before UAT or Prod.
 
 ## Structure
 
@@ -40,4 +31,5 @@ Developers can:
 
 - Defensive error handling
 - Secure authentication
+- Return only the required data in the output to minimize token consumption, as the response is passed directly to the agent.
 - Clear parameter docs and examples

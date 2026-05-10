@@ -5,7 +5,7 @@ description: "Dev, UAT, and Production environments for deployments."
 
 ## Overview
 
-Phinite offers isolated environments to safely develop and deploy.
+Phinite provides isolated environment variables for secure development and deployment. These variables can be used within your custom tools and are accessible through the `env_variables` dictionary in your Python code.
 
 <Frame>
   ![Environments](/images/Environments.png)
@@ -22,11 +22,6 @@ Phinite offers isolated environments to safely develop and deploy.
 - Role-based access
 - Build version mapping
 - Logging and observability per environment
-
-<tip>
-  Keep tool credentials and environment variables separate across environments.\
-  Avoid reusing Production keys in Dev or UAT.
-</tip>
 
 Separate environments ensure safe deployments.
 
