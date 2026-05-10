@@ -177,10 +177,11 @@
                     "assistants/components",
                     "assistants/components/flows",
                     "assistants/components/intents",
-                    "assistants/components/tools",
-                    "assistants/components/builds",
+                    "assistants/components/intents-email",
                     "assistants/components/triggers",
+                    "assistants/components/tools",
                     "assistants/components/environments",
+                    "assistants/components/builds",
                     "assistants/components/channels"
                   ]
                 }

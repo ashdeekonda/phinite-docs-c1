@@ -1,5 +1,5 @@
 ---
-title: "Triggers"
+title: "Triggers (Autonomous Assistants)"
 description: "Configure triggers to start flows automatically or from external systems."
 ---
 
@@ -22,7 +22,7 @@ You can configure them to start automatically, on a schedule, or through externa
 
 Phinite supports three trigger types.
 
-<Accordion title="1. API-Based Trigger">
+<Accordion title="1. API-Based Trigger (2 types)">
   API-based triggers allow external applications to start a specific flow.
 
   **Use Case**
@@ -33,14 +33,6 @@ Phinite supports three trigger types.
 
   - Requires an API key defined at the workspace level.
   - Called via an HTTP POST request.
-
-  **Example**
-
-  ```bash
-  POST https://api.phinite.ai/trigger/<flow_id>
-  Headers:
-    Authorization: Bearer <workspace_api_key>
-  ```
 
   **Best For** Fast, real-time executions where the response completes within seconds.
 </Accordion>
@@ -74,15 +66,15 @@ Phinite supports three trigger types.
 <Steps>
   <Step title="Go to Assistants → Components → Triggers.">
   </Step>
-  <Step title="Click Create Trigger.">
+  <Step title="Click New Trigger.">
   </Step>
-  <Step title="Select the Trigger Type (API, Scheduler, or Manual).">
+  <Step title="Select the Trigger Type (API, Scheduler, or Background Task).">
+  </Step>
+  <Step title="Choose the integration, if applicable. The API URL will adjust accordingly (for example, /jira will be appended to the URL for Jira Webhook).">
   </Step>
   <Step title="Choose the Target Agent Graph.">
   </Step>
-  <Step title="Set API Key or scheduling options.">
-  </Step>
-  <Step title="Save and test the trigger.">
+  <Step title="Save, attach to build and test the trigger.">
   </Step>
 </Steps>
 
@@ -95,9 +87,6 @@ Phinite supports three trigger types.
 | **Action** | **Description** |
 | :-- | :-- |
 | **Edit** | Update type, frequency, or target flow |
-| **Pause** | Temporarily disable the trigger |
-| **Run Now** | Execute immediately for testing |
-| **Delete** | Remove from the workspace permanently |
 
 ## Workspace API Keys
 
@@ -110,7 +99,8 @@ API-based triggers depend on workspace-level API keys for authentication.
 ## **Best Practices**
 
 - Use **API triggers** for short, transactional events.
-- Use **Scheduler triggers** for background or recurring jobs.
+- Use **Background task** for long events (track via status api).
+- Use **Scheduler triggers** for recurring jobs.
 - Avoid attaching multiple triggers to the same flow unless needed.
 - Test each trigger thoroughly in the development environment before deploying to production.
 
