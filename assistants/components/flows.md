@@ -13,7 +13,7 @@ Agent Graphs are the heart of every Assistant. They define logic, decisions, and
 
 ## Key concepts
 
-- Nodes: Start, Agent, Tool, End
+- Nodes: Start, Master Agent, Child Agent, A2A Agent, Tool, End
 - RAG and Tools within Agent nodes
 - Variables and Conditional Edges
 
@@ -22,17 +22,11 @@ Agent Graphs are the heart of every Assistant. They define logic, decisions, and
 - **Start Node** — entry point connected to a Trigger or Intent.
 - **Agent Nodes** — actions or messages the AI agent performs.
 - **Tool nodes** — invoke custom tools or APIs.
-- **Decision nodes** — define conditional logic paths.
-- **Connector nodes** — move data between subgraphs or external systems.
 
-<Note>
-  Agent Graphs are saved automatically in real time. You can preview, test, and version them without deploying.
-</Note>
-
-### Using Copilot in Graph Studio
+### Using Aura in Graph Studio
 
 - Describe the goal in natural language.
-- Copilot generates a full graph layout with connections and node suggestions.
+- Aura generates a full graph layout with connections and node suggestions.
 - You can review and modify before saving.
 
 ### Debugging Agent Graphs
@@ -46,5 +40,6 @@ Agent Graphs are the heart of every Assistant. They define logic, decisions, and
 ## Best practices
 
 - Keep flows modular
+- Write the quality prompts
 - Reuse Child Agents for common patterns
 - Use variables consistently for data passing
