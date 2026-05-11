@@ -14,7 +14,6 @@ These variables are returned by tools during execution, including both custom an
 
 For custom tools, simply return the variables in the `capture_variables` dictionary, and they will be automatically stored as session variables(each key stored as seperate session variable).
 
-
 ## User Variables
 
 User Variables are defined in the API payload before executing an autonomous or conversational flow. These allow you to pass initial data into your workflow.
@@ -25,12 +24,14 @@ The following system variables are automatically set in every session:
 
 - **`workflow_id`** - A unique identifier assigned to each workflow execution
 - **`caller_number`** - Available during voice calls, containing the caller's phone number
+- `conversation_history` - Available throughout the particular workflow execution
 
 ## Predefined Tool Variables
 
 When using predefined tools, the entire output object returned by the tool is saved as a session variable.
 
 ### Example: Telegram Tool
+
 <img
   src="/images/Screenshot2026-02-11at6.40.01PM.png"
   alt="Screenshot 2026 02 11 At 6 40 01 PM"
