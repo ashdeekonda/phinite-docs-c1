@@ -193,9 +193,8 @@
                 "graph-studio/overview",
                 "graph-studio/publishing",
                 {
-                  "group": "Methods",
+                  "group": "Methods of Workflow Creation",
                   "pages": [
-                    "graph-studio/methods",
                     "graph-studio/copilot-method",
                     "graph-studio/manual-method"
                   ]
