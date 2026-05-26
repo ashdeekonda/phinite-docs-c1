@@ -1,0 +1,67 @@
+---
+title: "Agent Registry glossary"
+description: "Industry and A2A terminology mapped to Phinite UI labels, API fields, and MIME modes."
+---
+
+This glossary aligns **Agent-to-Agent (A2A)** vocabulary with what you see in Graph Studio, Agent Registry, and the gateway. For protocol details beyond Phinite, see the official **[A2A protocol specification](https://a2a-protocol.org/latest/specification/)**.
+
+## Industry terminology map
+
+| Industry / A2A term | Phinite UI / API | Meaning |
+| ------------------- | ---------------- | ------- |
+| **Agent Card** | Agent Card (wizard step 3) | Public identity: name, description, skills, tags, visibility |
+| **Agent Registry** | Agent Registry sidebar | Workspace catalog of registered A2A agents |
+| **A2A endpoint / Hosted agent URL** | `/api/v1/ai/a2a/{flowId}` or `.../{registryId}` | Callable agent over the Agent-to-Agent protocol |
+| **Skills** | Skills in wizard | Callable capabilities with input/output MIME modes |
+| **Discoverability tags** | Discoverability Tags | Metadata for search and Discovery filters |
+| **Deployment status** | Test / Live badges | `test` = validation build; `live` = production (one live per flow per workspace) |
+| **Visibility** | Public / Organisation | `public` = any A2A client with a valid API key; `organization` = same organisation only |
+| **Promote to Live** | Agent Cards / promote action | `PUT .../promote-live` — demotes other live builds for the same flow |
+| **Browse mode** | Browse tab on agent node | Master agent calls a **specific** registry agent |
+| **Discovery mode** | Discovery tab on agent node | Master agent **auto-selects** agents matching saved filters at runtime |
+| **Agent Graph** | Flow | The workflow backing the registered agent |
+
+## UI labels vs documentation terms
+
+| Product UI label | Preferred docs term | Where it appears |
+| ---------------- | ------------------- | ---------------- |
+| **Agent Block** | **Agent Node** | Browse / Discovery panel when attaching registry agents on the canvas |
+| **Flow** | **Agent Graph** | Project and Studio navigation (same underlying workflow) |
+| **Organisation** | Organisation | Registry filters and Agent Card visibility (British spelling in UI) |
+
+When writing integrations or internal runbooks, prefer **Agent Node** and **Agent Graph** for consistency with **[Graph Studio agent nodes](/graph-studio/agent-node)** documentation.
+
+## MIME input and output modes
+
+Skills and registry filters declare which content types an agent accepts and returns. Phinite supports the following MIME types in Agent Registry filters and skill configuration:
+
+| MIME type | Typical use |
+| --------- | ----------- |
+| `text/plain` | Plain text messages |
+| `text/markdown` | Markdown-formatted text |
+| `text/html` | HTML content |
+| `application/json` | Structured JSON payloads |
+| `application/pdf` | PDF documents |
+| `application/octet-stream` | Binary or opaque payloads |
+| `image/png`, `image/jpeg`, `image/webp` | Image inputs or outputs |
+| `video/mp4` | Video content |
+| `audio/mpeg`, `audio/wav`, `audio/ogg`, `audio/aac`, `audio/mp4` | Audio content |
+
+**Input modes** describe what callers may send to a skill; **output modes** describe what the agent may return. Discovery mode on an agent node can filter registry agents by matching input and output MIME modes at runtime.
+
+## Related pages
+
+<CardGroup cols={2}>
+<Card title="Overview" href="/agent-registry/overview" icon="circle-info">
+End-to-end Agent Registry concepts and workflow.
+</Card>
+<Card title="Endpoints & lifecycle" href="/agent-registry/endpoints-and-lifecycle" icon="plug">
+Hosted URL patterns, test vs live, and promotion.
+</Card>
+<Card title="Registry agent nodes" href="/agent-registry/registry-agent-nodes" icon="share-nodes">
+Browse vs Discovery on the canvas.
+</Card>
+<Card title="Platform glossary" href="/reference/glossary" icon="book">
+Broader Phinite terminology (assistants, builds, tools).
+</Card>
+</CardGroup>
