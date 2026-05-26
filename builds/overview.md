@@ -18,5 +18,5 @@ A build is a versioned package of your flows and tools prepared for deployment t
 ## Related
 
 - [Build Lifecycle](/builds/lifecycle)
-- [Publishing Flows & Tools](/builds/publishing)
+- [Publishing Agent Graphs & Tools](/builds/publishing)
 - [Environment Types](/builds/environments)

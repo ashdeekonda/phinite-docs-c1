@@ -1,8 +1,3 @@
----
-title: "Assistant Overview"
-description: "Understand assistant types, how they are powered by flows, and where to start."
----
-
 # Assistants
 
 Assistants are the core of Phinite. Everything revolves around them.\
@@ -21,19 +16,19 @@ An assistant is an AI-powered capability that handles user interactions, api, ba
 
 <Frame>
   <img
-    src="/images/Assistant-overview.png"
     alt="Assistant Overview"
     title="Assistant Overview"
     lightAlt="Assistant Overview"
     darkAlt="Assistant Overview"
+    src="/images/Assistant-Overview.png"
     className="dark:hidden"
   />
   <img
-    src="images/Assistant-overview.png"
     alt="Assistant Overview"
     title="Assistant Overview"
     lightAlt="Assistant Overview"
     darkAlt="Assistant Overview"
+    src="images/Assistant-Overview.png"
     className="hidden dark:block"
   />
 </Frame>
@@ -113,7 +108,7 @@ Each Assistant operates as a closed loop of logic and action.
     Navigate to your workspace and select **Create Assistant**.
   </Step>
   <Step title="Define Type">
-    Choose between **Conversational**, **Autonomous**, or **Email **assistants.
+    Choose between **Conversational**, **Autonomous**, or \*\*Email \*\*assistants.
   </Step>
   <Step title="Design Agent Graph">
     Open **Graph Studio** to visually create the graph using Agents Node.

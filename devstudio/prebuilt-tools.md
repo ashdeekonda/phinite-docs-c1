@@ -1,26 +1,34 @@
 ---
-title: "Pre-built Integrations"
-description: "Use ready-made integrations like Gmail, Google Sheets, Jira, and Zendesk."
+title: "Predefined Tools"
+description: "Add and configure pre-packaged tools; reference for each tool and its subtools."
 ---
 
 ## Available integrations
 
 <Frame>
-  ![Descriptive alt text](/workspace-tools.png)
+  <img
+    src="/images/available-integrations.png"
+    alt="Descriptive alt text"
+    lightAlt="available integrations"
+    darkAlt="Descriptive alt text"
+    className="dark:hidden"
+  />
+  <img
+    src="/images/workspace-tools.png"
+    alt="Descriptive alt text"
+    lightAlt="available integrations"
+    darkAlt="Descriptive alt text"
+    className="hidden dark:block"
+  />
 </Frame>
 
 - [Gmail](/devstudio/prebuilt/gmail)
 - [Google Sheets](/devstudio/prebuilt/sheets)
 - [Jira & Zendesk](/devstudio/prebuilt/jira-zendesk)
 
-## Setup
+## Overview
 
-- Configure provider credentials per environment
-- Test with sample inputs before publishing
-
-# Predefined Tools — User Setup & Reference
-
-**Purpose:** This document explains how to add and configure the pre-packaged tools ("Predefined Tools") for your agentic system, and describes each tool and its available subtools. Read this start-to-finish to configure tools reliably, or jump to the per-tool section for details.
+This page explains how to add and configure the pre-packaged tools ("Predefined Tools") for your agentic system, and describes each tool and its available subtools. Read this start-to-finish to configure tools reliably, or jump to the per-tool section for details.
 
 ---
 
@@ -39,7 +47,7 @@ description: "Use ready-made integrations like Gmail, Google Sheets, Jira, and Z
 
 ---
 
-## Generic configuration concepts (applies to most tools)
+## Generic concepts (applies to most tools)
 
 - **Connection**: A saved set of configuration values (credentials, tokens, base URLs). Connections are reusable across agents.
 - **Required field**: You must supply this to create or validate the connection.
@@ -50,7 +58,7 @@ description: "Use ready-made integrations like Gmail, Google Sheets, Jira, and Z
 
 ---
 
-# Tools: Overview & Detailed Reference
+## Tools: Overview & Detailed Reference
 
 Below each tool is listed with: ID, purpose, configuration fields, required permissions/notes, and full list of subtools with short descriptions and suggested parameters. Use these as a single-source reference when creating connections and choosing subtools to enable.
 
@@ -74,7 +82,7 @@ Below each tool is listed with: ID, purpose, configuration fields, required perm
 - Attempt to list the inbox labels/folders.
 - Attempt to fetch a single message metadata (no bodies) first to validate read scope.
 
-### Subtools (what they do + suggested parameters)
+### Subtools (what they do \+ suggested parameters)
 
 Each subtool’s parameters below are _recommended_ input fields your UI should expose when the user enables that subtool. The agent runtime may accept additional advanced options.
 
@@ -227,7 +235,7 @@ Each subtool’s parameters below are _recommended_ input fields your UI should 
 ### Subtools
 
 - `make_request` — _Make an HTTP request to any endpoint._
-  - Suggested parameters: `method` (string: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`), `path` (string, appended to base_url), `query` (object), `body` (object/string), `headers` (object, optional), `auth` (object, optional), `timeout` (integer, optional).
+  - Suggested parameters: `method` (string: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`), `path` (string, appended to base\_url), `query` (object), `body` (object/string), `headers` (object, optional), `auth` (object, optional), `timeout` (integer, optional).
 
 ### Best practices
 
@@ -289,7 +297,7 @@ Each subtool’s parameters below are _recommended_ input fields your UI should 
 
 **2. Add MongoDbTool**
 
-- Tools tab → Add a new tool → select `MongoDbTool` → `+ Add a new connection` → `connection_string=mongodb+srv://readonly:pw@cluster.mongodb.net`, `database_name=myapp_db` → Test (list_collections).
+- Tools tab → Add a new tool → select `MongoDbTool` → `+ Add a new connection` → `connection_string=mongodb+srv://readonly:pw@cluster.mongodb.net`, `database_name=myapp_db` → Test (list\_collections).
 - Enable `find_many_documents` and `insert_document` with appropriate parameter templates.
 
 ---

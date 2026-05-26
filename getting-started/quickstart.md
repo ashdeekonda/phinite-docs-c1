@@ -1,11 +1,11 @@
 ---
 title: "Quick Start"
-description: "Build and deploy your first AI assistant in minutes using Phinite Copilot and Flowgen Studio."
+description: "Build and deploy your first AI assistant in minutes using Phinite Aura and Graph Studio."
 ---
 
 # Quick Start
 
-This guide walks you through creating your first AI Assistant using **Copilot** and **Flowgen Studio**.
+This guide walks you through creating your first AI Assistant using **Aura** and **Graph Studio**.
 
 In a few minutes, you’ll have a working assistant that can understand intents, trigger tools, and reply naturally.
 
@@ -50,7 +50,7 @@ Each node represents a reasoning or action step.
     Copilot defines a new Assistant with a unique ID inside your workspace.
   </Step>
   <Step title="Nodes appear on canvas">
-    The flow structure is generated instantly based on your intent.
+    The agent graph structure is generated instantly based on your intent.
   </Step>
   <Step title="Tools are connected">
     Any mentioned systems (like Zendesk) are auto-linked via DevStudio integrations.
@@ -89,7 +89,7 @@ Once your agent passes testing, promote it to the **Production Environment**.
     Attach the particular intent to your agent graph.
   </Step>
   <Step title="Open Build Page">
-    Create a build by selecting the intent, flows (selected by default), and tools along with their versions.
+    Create a build by selecting the intent, Agent Graphs (selected by default), and tools along with their versions.
   </Step>
   <Step title="Click Create Build">
     Attach build to desired environment.

@@ -16,7 +16,7 @@ Whether you're replacing a call center agent, automating report generation, or d
 
 Teams use Phinite to:
 
-- Design agent workflows visually in the Flowgen Studio
+- Design agent workflows visually in the Graph Studio
 - Build tools and connectors using DevStudio
 - Deploy across environments with version control and observability
 - Power assistants with knowledge bases, prompt engineering, and tools
@@ -28,13 +28,13 @@ Teams use Phinite to:
 
 | Concept | Description |
 | --- | --- |
-| **Assistant** | A conversational, email-based, or autonomous agent powered by one or more flows |
+| **Assistant** | A conversational, email-based, or autonomous agent powered by one or more agent graphs |
 | **Agent Graph** | A visual decision graph with nodes that orchestrate logic, tools, and conversations |
-| **Node** | The building block of a flow — can prompt a model, call a tool, capture input, or make decisions |
+| **Node** | The building block of a agent graph — can prompt a model, call a tool, capture input, or make decisions |
 | **Tool** | A callable API, function, or system integration used by your assistant |
 | **Trigger** | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event) |
 | **Environment** | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps |
-| **Session** | A full execution of a flow, recorded in logs with inputs, decisions, outputs, and metrics |
+| **Session** | A full execution of an agent graph, recorded in logs with inputs, decisions, outputs, and metrics |
 
 ---
 
@@ -44,8 +44,8 @@ Phinite supports a multi-role collaboration model so your entire team can work t
 
 | Role | Responsibilities |
 | --- | --- |
-| **Developers** | Build tools, wire integrations, and design flows |
-| **Architects** | Plan agent logic, manage flows, and configure environments |
+| **Developers** | Build tools, wire integrations, and design agent graphs |
+| **Architects** | Plan agent logic, manage agent graphs, and configure environments |
 | **Admins** | Control access, invite users, and manage billing and environments |
 | **Testers** | Validate assistant behavior and run debug sessions |
 | **Analysts** | Observe sessions, track model usage, and monitor outcomes |
@@ -55,7 +55,7 @@ Phinite supports a multi-role collaboration model so your entire team can work t
 ## What Makes Phinite Different
 
 - Visual-first AI workflow builder, with support for both no-code and code-based design
-- Multi-agent orchestration through linked flows and manager agents
+- Multi-agent orchestration through linked agent graphs and manager agents
 - Deep observability with session-level timelines, decision logs, and token tracking
 - Role-based access and environment isolation for enterprise-grade deployments
 - Reusable tools, prompts, and assistant templates to reduce repetitive work

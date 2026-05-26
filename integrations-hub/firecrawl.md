@@ -9,7 +9,7 @@ icon: "fire"
 Phinite’s Firecrawl integration lets assistants scrape web pages into clean markdown, extract data, and run batch crawls for analysis.
 
 <Frame>
-  ![Firecrawl](/images/sampleimage.png)
+  ![Firecrawl Integration](/images/firecrawl-integration.png)
 </Frame>
 
 ## What this integration enables
@@ -34,7 +34,7 @@ Phinite’s Firecrawl integration lets assistants scrape web pages into clean ma
     Dashboard → API Keys → Create key with appropriate permissions. Copy it.
   </Step>
   <Step title="Configure in Phinite">
-    Workspace → Integrations → Firecrawl → + Add Configuration. Paste API key, name the connection, select assistants, and save.
+    Workspace → Integrations → Firecrawl → \+ Add Configuration. Paste API key, name the connection, select assistants, and save.
   </Step>
 </Steps>
 
@@ -64,5 +64,3 @@ Phinite’s Firecrawl integration lets assistants scrape web pages into clean ma
 
 - Docs: `https://docs.firecrawl.dev/`
 - API Reference: `https://docs.firecrawl.dev/api-reference`
-
-

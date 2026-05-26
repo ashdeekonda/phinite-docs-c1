@@ -9,9 +9,139 @@
     },
     "favicon": "/favicon.svg",
     "logo": {
-      "light": "/logo/light.svg",
-      "dark": "/logo/dark.svg"
+        "light": "/logo/light.svg",
+        "dark": "/logo/dark.svg"
     },
+    "redirects": [
+        {
+            "source": "/flowgen/copilot-method",
+            "destination": "/graph-studio/copilot-method"
+        },
+        {
+            "source": "/flowgen/manual-method",
+            "destination": "/graph-studio/manual-method"
+        },
+        {
+            "source": "/flowgen/methods",
+            "destination": "/graph-studio/methods"
+        },
+        {
+            "source": "/flowgen/overview",
+            "destination": "/graph-studio/overview"
+        },
+        {
+            "source": "/flowgen/publishing",
+            "destination": "/graph-studio/publishing"
+        },
+        {
+            "source": "/flowgen/interface",
+            "destination": "/graph-studio/interface"
+        },
+        {
+            "source": "/flowgen/interface/canvas",
+            "destination": "/graph-studio/interface/canvas"
+        },
+        {
+            "source": "/flowgen/interface/inspector-panel",
+            "destination": "/graph-studio/interface/inspector-panel"
+        },
+        {
+            "source": "/flowgen/interface/variables-panel",
+            "destination": "/graph-studio/interface/variables-panel"
+        },
+        {
+            "source": "/flowgen/interface/block-library",
+            "destination": "/graph-studio/interface/node-library"
+        },
+        {
+            "source": "/flowgen/connections",
+            "destination": "/graph-studio/connections"
+        },
+        {
+            "source": "/flowgen/connections/handles",
+            "destination": "/graph-studio/connections/handles"
+        },
+        {
+            "source": "/flowgen/connections/edges",
+            "destination": "/graph-studio/connections/edges"
+        },
+        {
+            "source": "/flowgen/connections/conditional-edges",
+            "destination": "/graph-studio/connections/conditional-edges"
+        },
+        {
+            "source": "/flowgen/rag-management",
+            "destination": "/graph-studio/rag-management"
+        },
+        {
+            "source": "/flowgen/rag-management/data-sources",
+            "destination": "/graph-studio/rag-management/data-sources"
+        },
+        {
+            "source": "/flowgen/rag-management/collections",
+            "destination": "/graph-studio/rag-management/collections"
+        },
+        {
+            "source": "/flowgen/rag-management/referencing",
+            "destination": "/graph-studio/rag-management/referencing"
+        },
+        {
+            "source": "/flowgen/types-of-session-variables",
+            "destination": "/graph-studio/types-of-session-variables"
+        },
+        {
+            "source": "/flowgen/input-variables-in-agent-block",
+            "destination": "/graph-studio/input-variables-in-agent-node"
+        },
+        {
+            "source": "/flowgen/capture-variables-in-agent-block",
+            "destination": "/graph-studio/capture-variables-in-agent-node"
+        },
+        {
+            "source": "/flowgen/blocks",
+            "destination": "/graph-studio/nodes"
+        },
+        {
+            "source": "/flowgen/blocks/start",
+            "destination": "/graph-studio/nodes/start"
+        },
+        {
+            "source": "/flowgen/blocks/master-agent",
+            "destination": "/graph-studio/nodes/master-node"
+        },
+        {
+            "source": "/flowgen/blocks/child-agent",
+            "destination": "/graph-studio/nodes/child-node"
+        },
+        {
+            "source": "/flowgen/blocks/tool-block",
+            "destination": "/graph-studio/nodes/tool-node"
+        },
+        {
+            "source": "/flowgen/blocks/end-block",
+            "destination": "/graph-studio/nodes/end-node"
+        },
+        {
+            "source": "/flowgen/agent-block",
+            "destination": "/graph-studio/agent-node"
+        },
+        {
+            "source": "/flowgen/agent-block/prompt",
+            "destination": "/graph-studio/agent-node/prompt"
+        },
+        {
+            "source": "/flowgen/agent-block/rag",
+            "destination": "/graph-studio/agent-node/rag"
+        },
+        {
+            "source": "/flowgen/agent-block/tools",
+            "destination": "/graph-studio/agent-node/tools"
+        },
+        {
+            "source": "/flowgen/agent-block/variables",
+            "destination": "/graph-studio/agent-node/variables"
+        }
+    ],
     "navigation": {
       "tabs": [
         {
@@ -28,12 +158,13 @@
             },
             {
               "group": "User Management",
-            "pages": [
-              "user-management/inviting-users",
-              "user-management/user-management",
-              "user-management/access-controls",
-              "user-management/user-roles"
-            ]
+              "pages": [
+                "user-management/user-management",
+                "user-management/workspace-ui",
+                "user-management/inviting-users",
+                "user-management/access-controls",
+                "user-management/user-roles"
+              ]
             },
             {
               "group": "Building Assistants",
@@ -46,77 +177,85 @@
                     "assistants/components",
                     "assistants/components/flows",
                     "assistants/components/intents",
-                    "assistants/components/tools",
-                    "assistants/components/builds",
+                    "assistants/components/intents-email",
                     "assistants/components/triggers",
+                    "assistants/components/tools",
                     "assistants/components/environments",
+                    "assistants/components/builds",
                     "assistants/components/channels"
                   ]
                 }
               ]
             },
             {
-              "group": "Flowgen Studio (Workflow Builder)",
+              "group": "Graph Studio (Workflow Builder)",
               "pages": [
-                "flowgen/overview",
+                "graph-studio/overview",
+                "graph-studio/publishing",
                 {
-                  "group": "Methods",
+                  "group": "Methods of Workflow Creation",
                   "pages": [
-                    "flowgen/methods",
-                    "flowgen/copilot-method",
-                    "flowgen/manual-method"
+                    "graph-studio/copilot-method",
+                    "graph-studio/manual-method"
                   ]
                 },
                 {
                   "group": "Interface",
                   "pages": [
-                    "flowgen/interface",
-                    "flowgen/interface/canvas",
-                    "flowgen/interface/block-library",
-                    "flowgen/interface/inspector-panel",
-                    "flowgen/interface/variables-panel"
+                    "graph-studio/interface",
+                    "graph-studio/interface/canvas",
+                    "graph-studio/interface/node-library",
+                    "graph-studio/interface/inspector-panel",
+                    "graph-studio/interface/variables-panel"
                   ]
                 },
                 {
-                  "group": "Blocks",
+                  "group": "Nodes",
                   "pages": [
-                    "flowgen/blocks",
-                    "flowgen/blocks/start",
-                    "flowgen/blocks/master-agent",
-                    "flowgen/blocks/child-agent",
-                    "flowgen/blocks/tool-block",
-                    "flowgen/blocks/end-block"
+                    "graph-studio/nodes",
+                    "graph-studio/nodes/start",
+                    "graph-studio/nodes/master-node",
+                    "graph-studio/nodes/child-node",
+                    "graph-studio/nodes/tool-node",
+                    "graph-studio/nodes/end-node"
+                  ]
+                },
+                {
+                  "group": "Variables",
+                  "pages": [
+                    "graph-studio/types-of-session-variables",
+                    "graph-studio/input-variables-in-agent-node",
+                    "graph-studio/capture-variables-in-agent-node"
                   ]
                 },
                 {
                   "group": "Connections",
                   "pages": [
-                    "flowgen/connections",
-                    "flowgen/connections/handles",
-                    "flowgen/connections/edges",
-                    "flowgen/connections/conditional-edges"
+                    "graph-studio/connections",
+                    "graph-studio/connections/handles",
+                    "graph-studio/connections/edges",
+                    "graph-studio/connections/conditional-edges"
                   ]
                 },
                 {
-                  "group": "Agent Block",
+                  "group": "Agent Node",
                   "pages": [
-                    "flowgen/agent-block",
-                    "flowgen/agent-block/prompt",
-                    "flowgen/agent-block/rag",
-                    "flowgen/agent-block/tools",
-                    "flowgen/agent-block/variables"
+                    "graph-studio/agent-node",
+                    "graph-studio/agent-node/prompt",
+                    "graph-studio/agent-node/rag",
+                    "graph-studio/agent-node/tools",
+                    "graph-studio/agent-node/variables"
                   ]
                 },
                 {
                   "group": "RAG Management",
                   "pages": [
-                    "flowgen/rag-management",
-                    "flowgen/rag-management/data-sources",
-                    "flowgen/rag-management/collections",
-                    "flowgen/rag-management/referencing"
+                    "graph-studio/rag-management",
+                    "graph-studio/rag-management/data-sources",
+                    "graph-studio/rag-management/collections",
+                    "graph-studio/rag-management/referencing"
                   ]
-                },
-                "flowgen/publishing"
+                }
               ]
             },
             {
@@ -133,11 +272,20 @@
                 },
                 "devstudio/copilot-tools",
                 "devstudio/types",
+                "devstudio/system-tool",
                 "devstudio/custom-tools",
                 "devstudio/prebuilt-tools",
-                
-                
-                
+                {
+                  "group": "Predefined Tools",
+                  "pages": [
+                    "devstudio/prebuilt/gmail",
+                    "devstudio/prebuilt/slacktool",
+                    "devstudio/prebuilt/teamstool",
+                    "devstudio/prebuilt/jiratools",
+                    "devstudio/prebuilt/customapi",
+                    "devstudio/prebuilt/mongodbtool"
+                  ]
+                },
                 "devstudio/structure",
                 "devstudio/versioning",
                 "devstudio/linking-tools",
@@ -154,12 +302,24 @@
                     "triggers-intents/intents",
                     "triggers-intents/creating-intents",
                     "triggers-intents/prompt-training",
-                    "triggers-intents/testing-intents"
+                    "triggers-intents/testing-intents",
+                    "triggers-intents/intent-as-api"
                   ]
                 },
                 {
                   "group": "Triggers",
                   "pages": [
+                    {
+                      "group": "Trigger APIs",
+                      "pages": [
+                        "triggers-intents/triggers/overview",
+                        "triggers-intents/triggers/api",
+                        "triggers-intents/triggers/bg_task",
+                        "triggers-intents/triggers/cron",
+                        "triggers-intents/triggers/api-guide",
+                        "triggers-intents/triggers/integration-funnel"
+                      ]
+                    },
                     "triggers-intents/triggers",
                     "triggers-intents/webhooks",
                     "triggers-intents/event-triggers",
@@ -178,7 +338,6 @@
                 "builds/environments"
               ]
             },
-            
             {
               "group": "9. Observability & Billing",
               "pages": [
@@ -205,7 +364,6 @@
                 "observability/billing"
               ]
             },
-            
             {
               "group": "11. Troubleshooting & Support",
               "pages": [
@@ -227,18 +385,64 @@
               ]
             },
             {
-              "group": "Integrations",
+              "group": "Communication",
               "pages": [
-                "integrations-hub/google-calendar",
-                "integrations-hub/firecrawl",
+                "integrations-hub/gmail",
+                "integrations-hub/slack",
+                "integrations-hub/microsoft-teams",
+                "integrations-hub/whatsapp",
+                "integrations-hub/telegram",
                 "integrations-hub/email",
                 "integrations-hub/twilio"
+              ]
+            },
+            {
+              "group": "Data and Storage",
+              "pages": [
+                "integrations-hub/google-bigquery",
+                "integrations-hub/google-sheets",
+                "integrations-hub/google-drive",
+                "integrations-hub/mongodb"
+              ]
+            },
+            {
+              "group": "Developer Tools",
+              "pages": [
+                "integrations-hub/github",
+                "integrations-hub/jira"
+              ]
+            },
+            {
+              "group": "Productivity",
+              "pages": [
+                "integrations-hub/google-calendar",
+                "integrations-hub/notion"
+              ]
+            },
+            {
+              "group": "Sales",
+              "pages": [
+                "integrations-hub/salesforce"
+              ]
+            },
+            {
+              "group": "AI",
+              "pages": [
+                "integrations-hub/brave-search",
+                "integrations-hub/firecrawl"
+              ]
+            },
+            {
+              "group": "Phinite-native",
+              "pages": [
+                "integrations-hub/api",
+                "integrations-hub/voice",
+                "integrations-hub/chat-ai"
               ]
             }
           ]
         }
-      ],
-      "anchors": []
+      ]
     },
     "errors": {
       "404": {

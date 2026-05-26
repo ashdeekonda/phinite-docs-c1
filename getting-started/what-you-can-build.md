@@ -26,7 +26,7 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
     - Contextual conversations with shared memory
     - Integration with chat, voice, and retrieval tools
     - RBAC-controlled environments for compliance
-    - Flow testing and audit logging
+    - Agent Graph testing and audit logging
 
     ### Best Use Cases
 
@@ -56,7 +56,7 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
     ### Key Capabilities
 
     - Triggered by inbound or outbound email events
-    - Classify, respond, route, and escalate using FlowGen logic
+    - Classify, respond, route, and escalate using Agent Graph logic
     - Secure environment variables and masked SMTP/API credentials
     - Integration-ready for Gmail, Outlook, SendGrid, etc.
 
@@ -87,7 +87,7 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
     </Card>
     ### Key Capabilities
 
-    - Visual multi-agent orchestration in FlowGen Studio
+    - Visual multi-agent orchestration in Graph Studio
     - Manager–Worker and Workflow modes
     - Environment-specific variable and credential control
     - End-to-end RBAC, audit logs, and observability
@@ -119,7 +119,7 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
 1. **Create a Workspace** – Name it after your department or project.
 2. **Add Users** – Assign roles and permissions.
 3. **Build Assistants** – Start from templates or from scratch.
-4. **Design Flows** – Orchestrate logic using FlowGen Studio.
+4. **Design Agent Graphs** – Orchestrate logic using Graph Studio.
 5. **Deploy Securely** – Use DEV/UAT/PROD environments with audit trails.
 
 ---
@@ -127,6 +127,6 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
 ## Related Topics
 
 - [Workspaces Overview](/setup-account/workspace-overview)
-- [FlowGen Studio](/flowgen/overview)
+- [Graph Studio](/graph-studio/overview)
 - [RBAC and Roles](/user-management/user-roles)
 - [Integrations and Environments](/channels/overview)

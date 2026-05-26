@@ -1,0 +1,40 @@
+---
+title: "Overview"
+---
+
+The **Trigger** feature allows you to expose autonomous flows as **API endpoints**. When enabled, triggers can be invoked externally via HTTP API calls to execute configured flows. This is useful when you want external systems (monitoring tools, backend services, webhooks, etc.) to programmatically initiate autonomous workflows.
+
+Unlike conversational intents, autonomous flow triggers support three distinct execution modes:
+
+1. **API (Single Endpoint)** - Synchronous execution for simple flows that complete within 30 seconds. Not recommended for complex or long-running flows.
+2. **Background Task** - Asynchronous execution with two endpoints (/start and /status) for long-running tasks. Maximum execution time: 2700 seconds (45 minutes). **Recommended for most use cases.**
+3. **Cron Job** - Schedule flows to execute automatically at specified intervals directly on the platform.
+
+## Enabling a Trigger as API
+
+To enable a trigger as an API:
+
+1. Open the **Edit Trigger** modal.
+3. Select an **workflow type** (API, Background Task, or Cron Job).
+4. Select an **Integration** from the **Integration Funnel** (if applicable).
+5. Select the flow to trigger.
+5. Save the trigger configuration.
+6. Update the build with the new trigger version.
+
+Once enabled, the platform generates **API URLs** for different environments:
+
+- DEV
+- UAT
+- PROD
+
+## Authentication
+
+All API requests must include a valid **Bearer Token** in the `Authorization` header. The API key is configured at the workspace level.
+
+```bash
+Authorization: Bearer <YOUR_WORKSPACE_API_KEY>
+```
+
+Requests without a valid token will be rejected.
+
+---

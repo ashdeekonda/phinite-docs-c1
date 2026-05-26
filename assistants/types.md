@@ -18,5 +18,5 @@ description: "Conversational, Email, and Autonomous assistants and when to use e
 - [Autonomous Assistants](/assistants/autonomous)
 
 <Note>
-All assistant types are orchestrated by [Flows](/assistants/components/flows) and can call [Tools](/assistants/components/tools).
+All assistant types are orchestrated by [Agent Graphs](/assistants/components/flows) and can call [Tools](/assistants/components/tools).
 </Note>

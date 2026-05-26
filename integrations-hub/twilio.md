@@ -9,7 +9,7 @@ icon: "phone"
 Phinite’s Twilio integration enables assistants to send SMS/MMS, make voice calls, and manage phone communications using Twilio’s REST API.
 
 <Frame>
-  ![Twilio](/images/sampleimage.png)
+  ![Twilio Integration](/images/twilio-integration.png)
 </Frame>
 
 ## What this integration enables
@@ -41,7 +41,7 @@ Phinite’s Twilio integration enables assistants to send SMS/MMS, make voice ca
     Console → Phone Numbers → Buy a number with desired capabilities (Voice/SMS/MMS).
   </Step>
   <Step title="Configure in Phinite">
-    Workspace → Integrations → Twilio → + Add Configuration. Enter name, Account SID, Auth Token, Phone Number. Select assistants. Save.
+    Workspace → Integrations → Twilio → \+ Add Configuration. Enter name, Account SID, Auth Token, Phone Number. Select assistants. Save.
   </Step>
 </Steps>
 
@@ -67,5 +67,3 @@ Phinite’s Twilio integration enables assistants to send SMS/MMS, make voice ca
 - Docs: `https://www.twilio.com/docs`
 - REST API Reference: `https://www.twilio.com/docs/usage/api`
 - Console: `https://www.twilio.com/console`
-
-

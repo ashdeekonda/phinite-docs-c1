@@ -1,0 +1,37 @@
+---
+title: "Integration Funnel"
+---
+
+For autonomous flows, there is currently one integration funnel available: **Jira**.
+
+### Jira Webhook Integration
+
+Jira integration uses a unique authentication mechanism. You must configure a webhook in Jira with the generated secret from the platform's Jira integration page.
+
+#### Endpoint
+
+```
+POST https://ai-core.phinite.ai/trigger/jira/start/{workspace_id}/{trigger_id}/{environment}
+```
+
+<Warning>
+  **Recommendation:** Use the background task start endpoint for Jira webhooks to handle complex issue processing workflows that may take longer than 30 seconds.
+</Warning>
+
+The Jira webhook payload is automatically stored in `user_variables`, allowing your flow to access and utilize any data from the Jira event (issue details, issue_key , etc.).
+
+#### Setup Steps
+
+1. Generate a secret from the platform's Jira integration page
+2. Configure a webhook in your Jira project settings
+3. Add the generated secret to the Jira webhook configuration
+4. Set the webhook URL to the Jira trigger endpoint
+
+#### How It Works
+
+When a Jira event triggers the webhook:
+
+1. The request is authenticated using the configured secret
+2. The Jira payload is stored in `user_variables`
+3. The trigger is matched and executed
+4. The configured flow processes the Jira data
