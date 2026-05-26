@@ -2,6 +2,8 @@
 
 This note is **not** part of the published Mintlify sidebar. Use it when maintaining user docs alongside **`flow-gen-frontend`**, **`api-server-2`**, and **`api-gateway`**.
 
+**Shared authoring rules:** [`public-documentation-rules.md`](public-documentation-rules.md) (tone, `docs.json`, nomenclature, quality gate).
+
 ## Goal
 
 Keep the **Agent Registry (A2A)** module aligned with the product: expose wizard, workspace catalog, Browse/Discovery agent nodes, Agent Cards builds, hosted URLs, and promote-live lifecycle.

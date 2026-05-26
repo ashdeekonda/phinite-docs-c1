@@ -23,7 +23,7 @@
         },
         {
             "source": "/flowgen/methods",
-            "destination": "/graph-studio/methods"
+            "destination": "/graph-studio/copilot-method"
         },
         {
             "source": "/flowgen/overview",
@@ -164,6 +164,16 @@
                 "user-management/inviting-users",
                 "user-management/access-controls",
                 "user-management/user-roles"
+              ]
+            },
+            {
+              "group": "Bring Your Own Key (BYOK)",
+              "pages": [
+                "byok/overview",
+                "byok/managing-model-keys",
+                "byok/graph-studio-byok",
+                "byok/billing-and-usage",
+                "byok/glossary"
               ]
             },
             {

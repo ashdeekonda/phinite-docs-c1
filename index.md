@@ -16,6 +16,7 @@ sidebarTitle: "Home"
   <Card title="Sign Up" icon="user-plus" href="/setup-account/signing-up">Create and verify your account</Card>
   <Card title="Invite Users" icon="envelope" href="/user-management/inviting-users">Add teammates and assign roles</Card>
   <Card title="Access Controls" icon="shield" href="/user-management/access-controls">Security and permissions overview</Card>
+  <Card title="Model Keys (BYOK)" icon="key" href="/byok/overview">Bring your own LLM provider credentials</Card>
   
   <Card title="Shortcuts" icon="bolt" href="/reference/shortcuts">Productivity shortcuts</Card>
   <Card title="FAQs" icon="circle-question" href="/reference/faqs">Common questions</Card>
@@ -38,11 +39,12 @@ sidebarTitle: "Home"
 
 <CardGroup cols={3}>
   <Card title="Overview" icon="diagram-project" href="/graph-studio/overview">Visual workflow builder</Card>
-  <Card title="Methods" icon="magic" href="/graph-studio/methods">Copilot vs Manual methods</Card>
+  <Card title="Methods" icon="magic" href="/graph-studio/copilot-method">Copilot vs Manual methods</Card>
   <Card title="Nodes" icon="cubes" href="/graph-studio/nodes">Start, Agents, Tool, End</Card>
   <Card title="Connections" icon="share-nodes" href="/graph-studio/connections">Edges, handles, conditionals</Card>
   <Card title="RAG Management" icon="book" href="/graph-studio/rag-management">Data sources and collections</Card>
   <Card title="Publishing" icon="upload" href="/graph-studio/publishing">From draft to deployment</Card>
+  <Card title="BYOK in Graph Studio" icon="key" href="/byok/graph-studio-byok">Per-node model keys and test connection</Card>
 </CardGroup>
 
 ## DevStudio (Tool Builder)

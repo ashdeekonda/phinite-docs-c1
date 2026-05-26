@@ -23,6 +23,9 @@ Manage data flow with input variables and capture outputs for downstream process
 <Card title="Registry agents (A2A)" href="/agent-registry/registry-agent-nodes" icon="share-nodes">
 Attach Agent Registry agents in Browse or Discovery mode on a master agent node.
 </Card>
+<Card title="Model / API (BYOK)" href="/byok/graph-studio-byok" icon="key">
+Use Phinite-managed keys or Bring Your Own Key per agent node.
+</Card>
 </CardGroup>
 
 ## Registry agent nodes (A2A)

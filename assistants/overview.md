@@ -155,4 +155,4 @@ They connect human intent with machine precision — through agent graph, tools,
 
 - Explore [Types of Assistants](/assistants/types)
 - Review [Assistant Components](/assistants/components)
-- Build your first flow in [Flowgen](/flowgen/overview)
+- Build your first flow in [Graph Studio](/graph-studio/overview)

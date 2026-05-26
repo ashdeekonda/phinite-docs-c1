@@ -10,8 +10,6 @@ Phinite's Google Calendar integration allows workspace assistants to manage cale
 
 This document explains what credentials are required, how to obtain them from Google, and how to configure them inside Phinite.
 
-![Google Calendar](/images/sampleimage.png)
-
 ## What this integration enables
 
 Once configured, Phinite assistants can:

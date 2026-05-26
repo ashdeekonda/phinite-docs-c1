@@ -8,10 +8,6 @@ description: "Configure triggers to start flows automatically or from external s
 Triggers define how and when a flow begins.\
 You can configure them to start automatically, on a schedule, or through external API calls.
 
-<Frame>
-  ![Triggers](/images/Triggers.png)
-</Frame>
-
 <Info>
   Triggers connect your assistant to external workflows and automation systems.
 </Info>

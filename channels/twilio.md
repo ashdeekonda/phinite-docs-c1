@@ -6,15 +6,6 @@ icon: "phone"
 
 ## Setup
 
-<Frame>
-  <img
-    src="/Twilio.png"
-    alt="Twilio"
-    title=""
-    style={{ width:"100%" }}
-  />
-</Frame>
-
 <Steps>
   <Step title="Provision number">
     Obtain a Twilio phone number.

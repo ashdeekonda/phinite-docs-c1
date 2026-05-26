@@ -132,6 +132,20 @@ You can:
 
 ---
 
+### Model Keys (BYOK)
+
+**Model Keys** (Bring Your Own Key) store **LLM provider credentials** for your workspace—separate from workspace API keys above.
+
+You can:
+
+- Use the built-in **Phinite Key** for platform-managed inference
+- Add provider keys (Azure, Vertex, and others from the model catalog)
+- Set a **workspace default** and override per agent node in Graph Studio
+
+See **[BYOK overview](/byok/overview)** and **[Managing Model Keys](/byok/managing-model-keys)**.
+
+---
+
 ### Users
 
 Only **Admins** and **Organization Owners** can manage workspace members.\
