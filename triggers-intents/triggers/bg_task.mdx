@@ -17,8 +17,8 @@ Background task mode provides **asynchronous execution** with two separate endpo
 
 #### Endpoint
 
-```
-POST https://ai-core.phinite.ai/trigger/start/{workspace_id}/{trigger_id}/{environment}
+```text
+POST https://app.phinite.ai/api/v1/ai/trigger/start/{workspace_id}/{trigger_id}/{environment}
 ```
 
 #### Request Payload
@@ -52,7 +52,7 @@ The `workflow_id` returned in this response is used to track the status of the f
 
 #### Endpoint
 
-```
+```text
 GET https://ai-core.phinite.ai/trigger/status/{workspace_id}/{workflow_id}
 ```
 
@@ -120,7 +120,7 @@ When the flow finishes successfully:
 }
 ```
 
-The `response` object contains the workflow_id and all session variables that were set during flow execution.
+The `response` object contains the workflow\_id and all session variables that were set during flow execution.
 
 #### Status Response: Failed
 

@@ -3,6 +3,8 @@ title: "Manual Coding (Python)"
 description: "Implement custom tool handlers using Python when you need complete control over business logic, integrations, data processing, or external API interactions."
 ---
 
+`Manual Coding provides maximum flexibility and is ideal when built-in tools are insufficient or custom logic is required.`
+
 ## Tool Structure
 
 Every Python tool in Dev Studio follows a standard execution pattern with a single entrypoint:
@@ -196,11 +198,8 @@ api_key = env_variables.get(
 - Data transformation
 - Custom business rules
 - File processing
-- Workflow orchestration
-- AI model integrations
+- SSH and Running commands
 - Validation and enrichment pipelines
-
-Manual Coding provides maximum flexibility and is ideal when built-in tools are insufficient or custom logic is required.
 
 ## Testing
 

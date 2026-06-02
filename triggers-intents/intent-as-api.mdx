@@ -70,7 +70,7 @@ Requests without a valid token will be rejected.
 
 Use the environment-specific API URL generated in the **Edit Intent** screen:
 
-```
+```text
 POST /trigger/{workspace_id}/{intent_id}/{environment}
 ```
 
@@ -89,9 +89,9 @@ The API accepts the following JSON payload:
 
 #### Field Descriptions
 
-| Field            | Type   | Description                                                                                                   |
-| :--------------- | :----- | :------------------------------------------------------------------------------------------------------------ |
-| `message`        | String | The first message sent to the flow when the session starts. This can be empty if not required.                |
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `message` | String | The first message sent to the flow when the session starts. This can be empty if not required. |
 | `user_variables` | Object | Session variables to initialize the conversation with. These variables will be available throughout the flow. |
 
 ### Special Case: Twilio Integration
@@ -100,8 +100,8 @@ When using **Twilio** as the integration channel, an additional parameter is req
 
 #### Additional Field for Twilio
 
-| Key               | Value                                                               |
-| :---------------- | :------------------------------------------------------------------ |
+| Key | Value |
+| :-- | :-- |
 | `to_phone_number` | The destination phone number in E.164 format (e.g., `+19999999999`) |
 
 ## Session Initialization
@@ -145,7 +145,7 @@ Replace:
 <CodeGroup>
 
 ```bash cURL
-curl -X POST "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}" \
+curl -X POST "https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}" \
   -H "Authorization: Bearer workspace_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -157,12 +157,11 @@ curl -X POST "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{en
   }'
 ```
 
-
 ```python Python
 import requests
 import json
 
-url = "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}"
+url = "https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}"
 
 payload = json.dumps({
   "message": "start the task",
@@ -181,7 +180,6 @@ response = requests.request("POST", url, headers=headers, data=payload)
 print(response.text)
 ```
 
-
 ```javascript JavaScript
 const axios = require('axios');
 let data = JSON.stringify({
@@ -195,7 +193,7 @@ let data = JSON.stringify({
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
-  url: 'https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}',
+  url: 'https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}',
   headers: { 
     'Authorization': 'Bearer workspace_api_key', 
     'Content-Type': 'application/json'
@@ -212,21 +210,19 @@ axios.request(config)
 });
 ```
 
-
 ```java Java
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\n    \"message\": \"start the task\",\n    \"user_variables\": {\n      \"key1\": \"value1\",\n      \"key2\": \"value2\"\n    }\n  }");
 Request request = new Request.Builder()
-  .url("https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}")
+  .url("https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}")
   .method("POST", body)
   .addHeader("Authorization", "Bearer workspace_api_key")
   .addHeader("Content-Type", "application/json")
   .build();
 Response response = client.newCall(request).execute();
 ```
-
 
 ```php PHP
 <?php
@@ -258,7 +254,6 @@ curl_close($curl);
 echo $response;
 ```
 
-
 ```go Go
 package main
 
@@ -271,7 +266,7 @@ import (
 
 func main() {
 
-  url := "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}"
+  url := "https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}"
   method := "POST"
 
   payload := strings.NewReader(`{
@@ -309,13 +304,12 @@ func main() {
 }
 ```
 
-
 ```ruby Ruby
 require "uri"
 require "json"
 require "net/http"
 
-url = URI("https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}")
+url = URI("https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true
@@ -342,18 +336,17 @@ puts response.read_body
 <CodeGroup>
 
 ```bash cURL (Twilio)
-curl --location --globoff 'https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999' \
+curl --location --globoff 'https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer workspace_api_key' \
 --data '{"message":"start the task","user_variables": {"key1":"value1","key2":"value2"}}'
 ```
 
-
 ```python Python (Twilio)
 import requests
 import json
 
-url = "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999"
+url = "https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999"
 
 payload = json.dumps({
   "message": "start the task",
@@ -372,7 +365,6 @@ response = requests.request("POST", url, headers=headers, data=payload)
 print(response.text)
 ```
 
-
 ```javascript JavaScript (Twilio)
 const axios = require('axios');
 let data = JSON.stringify({
@@ -386,7 +378,7 @@ let data = JSON.stringify({
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
-  url: 'https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999',
+  url: 'https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999',
   headers: { 
     'Content-Type': 'application/json', 
     'Authorization': 'Bearer workspace_api_key'
@@ -403,7 +395,6 @@ axios.request(config)
 });
 ```
 
-
 ```go Go (Twilio)
 package main
 
@@ -416,7 +407,7 @@ import (
 
 func main() {
 
-  url := "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999"
+  url := "https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999"
   method := "POST"
 
   payload := strings.NewReader(`{"message":"start the task","user_variables": {"key1":"value1","key2":"value2"}}`)
@@ -448,14 +439,13 @@ func main() {
 }
 ```
 
-
 ```php PHP (Twilio)
 <?php
 
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999',
+  CURLOPT_URL => 'https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -476,13 +466,12 @@ curl_close($curl);
 echo $response;
 ```
 
-
 ```ruby Ruby
 require "uri"
 require "json"
 require "net/http"
 
-url = URI("https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999")
+url = URI("https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}?to_phone_number=+19999999999")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true
@@ -556,7 +545,6 @@ When triggering a Twilio outbound call, the response includes call-specific deta
 }
 ```
 
-
 ```json 422 Unprocessable Entity
 {
     "detail": [
@@ -572,7 +560,6 @@ When triggering a Twilio outbound call, the response includes call-specific deta
     ]
 }
 ```
-
 
 ```json 500 Server Error
 {

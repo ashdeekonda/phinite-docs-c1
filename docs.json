@@ -333,7 +333,6 @@
                       ]
                     },
                     "triggers-intents/triggers",
-                    "triggers-intents/webhooks",
                     "triggers-intents/event-triggers",
                     "triggers-intents/mapping"
                   ]
