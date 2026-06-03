@@ -14,8 +14,8 @@ The single endpoint API mode provides **synchronous execution** of autonomous fl
 
 ### Endpoint
 
-```
-POST https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}
+```text
+POST https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}
 ```
 
 ### Request Payload
@@ -31,9 +31,9 @@ The API accepts the following JSON payload:
 
 #### Field Descriptions
 
-| Field            | Type   | Description                                                                                                   |
-| :--------------- | :----- | :------------------------------------------------------------------------------------------------------------ |
-| `message`        | String | The first message sent to the flow when the session starts. Can be empty if not required.                     |
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `message` | String | The first message sent to the flow when the session starts. Can be empty if not required. |
 | `user_variables` | Object | Session variables to initialize the conversation with. These variables will be available throughout the flow. |
 
 ### Response Format

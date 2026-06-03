@@ -22,7 +22,7 @@ Replace:
 <CodeGroup>
 
 ```bash cURL - Single Endpoint
-curl -X POST "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}" \
+curl -X POST "https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}" \
   -H "Authorization: Bearer workspace_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -33,10 +33,9 @@ curl -X POST "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{en
     }
   }'
 ```
-
 
 ```bash cURL - Background Task Start
-curl -X POST "https://ai-core.phinite.ai/trigger/start/{workspace_id}/{trigger_id}/{environment}" \
+curl -X POST "https://app.phinite.ai/api/v1/ai/trigger/start/{workspace_id}/{trigger_id}/{environment}" \
   -H "Authorization: Bearer workspace_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -48,18 +47,16 @@ curl -X POST "https://ai-core.phinite.ai/trigger/start/{workspace_id}/{trigger_i
   }'
 ```
 
-
 ```bash cURL - Background Task Status
-curl -X GET "https://ai-core.phinite.ai/trigger/status/{workspace_id}/{workflow_id}" \
+curl -X GET "https://app.phinite.ai/api/v1/ai/trigger/status/{workspace_id}/{workflow_id}" \
   -H "Authorization: Bearer workspace_api_key"
 ```
-
 
 ```python Python - Single Endpoint
 import requests
 import json
 
-url = "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}"
+url = "https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}"
 
 payload = json.dumps({
   "message": "start the task",
@@ -79,14 +76,13 @@ response = requests.request("POST", url, headers=headers, data=payload)
 print(response.text)
 ```
 
-
 ```python Python - Background Task
 import requests
 import json
 import time
 
 # Start the flow
-url_start = "https://ai-core.phinite.ai/trigger/start/{workspace_id}/{trigger_id}/{environment}"
+url_start = "https://app.phinite.ai/api/v1/ai/trigger/start/{workspace_id}/{trigger_id}/{environment}"
 
 payload = json.dumps({
   "message": "start the task",
@@ -106,7 +102,7 @@ result = response.json()
 workflow_id = result['workflow_id']
 
 # Poll for status
-url_status = f"https://ai-core.phinite.ai/trigger/status/{{workspace_id}}/{workflow_id}"
+url_status = f"https://app.phinite.ai/api/v1/ai/trigger/status/{{workspace_id}}/{workflow_id}"
 
 while True:
     status_response = requests.get(url_status, headers=headers)
@@ -119,7 +115,6 @@ while True:
     print(f"Status: {status_data['status']}, Logs: {len(status_data['logs'])}")
     time.sleep(5)  # Poll every 5 seconds
 ```
-
 
 ```javascript JavaScript - Single Endpoint
 const axios = require('axios');
@@ -135,7 +130,7 @@ let data = JSON.stringify({
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
-  url: 'https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}',
+  url: 'https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}',
   headers: { 
     'Authorization': 'Bearer workspace_api_key', 
     'Content-Type': 'application/json'
@@ -151,7 +146,6 @@ axios.request(config)
   console.log(error);
 });
 ```
-
 
 ```javascript JavaScript - Background Task
 const axios = require('axios');
@@ -169,7 +163,7 @@ async function runBackgroundTask() {
   const startConfig = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: 'https://ai-core.phinite.ai/trigger/start/{workspace_id}/{trigger_id}/{environment}',
+    url: 'https://app.phinite.ai/api/v1/ai/trigger/start/{workspace_id}/{trigger_id}/{environment}',
     headers: { 
       'Authorization': 'Bearer workspace_api_key', 
       'Content-Type': 'application/json'
@@ -182,7 +176,7 @@ async function runBackgroundTask() {
   console.log('Workflow started:', workflowId);
 
   // Poll for status
-  const statusUrl = `https://ai-core.phinite.ai/trigger/status/{workspace_id}/${workflowId}`;
+  const statusUrl = `https://app.phinite.ai/api/v1/ai/trigger/status/{workspace_id}/${workflowId}`;
   
   while (true) {
     const statusResponse = await axios.get(statusUrl, {
@@ -204,7 +198,6 @@ async function runBackgroundTask() {
 runBackgroundTask();
 ```
 
-
 ```go Go - Single Endpoint
 package main
 
@@ -216,7 +209,7 @@ import (
 )
 
 func main() {
-  url := "https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}"
+  url := "https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}"
   method := "POST"
 
   payload := strings.NewReader(`{
@@ -253,7 +246,6 @@ func main() {
 }
 ```
 
-
 ```go Go - Background Task
 package main
 
@@ -280,7 +272,7 @@ type StatusResponse struct {
 
 func main() {
   // Start the flow
-  startURL := "https://ai-core.phinite.ai/trigger/start/{workspace_id}/{trigger_id}/{environment}"
+  startURL := "https://app.phinite.ai/api/v1/ai/trigger/start/{workspace_id}/{trigger_id}/{environment}"
   
   payload := strings.NewReader(`{
     "message": "start the task",
@@ -306,7 +298,7 @@ func main() {
   fmt.Printf("Workflow started: %s\n", startResp.WorkflowID)
 
   // Poll for status
-  statusURL := fmt.Sprintf("https://ai-core.phinite.ai/trigger/status/{workspace_id}/%s", startResp.WorkflowID)
+  statusURL := fmt.Sprintf("https://app.phinite.ai/api/v1/ai/trigger/status/{workspace_id}/%s", startResp.WorkflowID)
   
   for {
     statusReq, _ := http.NewRequest("GET", statusURL, nil)
@@ -331,7 +323,6 @@ func main() {
 }
 ```
 
-
 ```java Java - Single Endpoint
 OkHttpClient client = new OkHttpClient().newBuilder().build();
 MediaType mediaType = MediaType.parse("application/json");
@@ -339,7 +330,7 @@ RequestBody body = RequestBody.create(mediaType,
   "{\n    \"message\": \"start the task\",\n    \"user_variables\": {\n      \"key1\": \"value1\",\n      \"key2\": \"value2\"\n    }\n  }");
 
 Request request = new Request.Builder()
-  .url("https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}")
+  .url("https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}")
   .method("POST", body)
   .addHeader("Authorization", "Bearer workspace_api_key")
   .addHeader("Content-Type", "application/json")
@@ -349,14 +340,13 @@ Response response = client.newCall(request).execute();
 System.out.println(response.body().string());
 ```
 
-
 ```php PHP - Single Endpoint
 <?php
 
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}',
+  CURLOPT_URL => 'https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -384,13 +374,12 @@ echo $response;
 ?>
 ```
 
-
 ```ruby Ruby - Single Endpoint
 require "uri"
 require "json"
 require "net/http"
 
-url = URI("https://ai-core.phinite.ai/trigger/{workspace_id}/{trigger_id}/{environment}")
+url = URI("https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}")
 
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true
@@ -424,7 +413,6 @@ puts response.read_body
 }
 ```
 
-
 ```json 422 Unprocessable Entity
 {
   "detail": [
@@ -440,7 +428,6 @@ puts response.read_body
   ]
 }
 ```
-
 
 ```json 500 Server Error
 {
@@ -470,7 +457,7 @@ puts response.read_body
 </Warning>
 
 - **Validate bearer tokens:** Always verify authentication in DEV environment before deploying to PROD.
-- **Use user_variables for context:** Pass structured data through `user_variables` instead of embedding everything in the message field.
+- **Use user\_variables for context:** Pass structured data through `user_variables` instead of embedding everything in the message field.
 - **Poll status intelligently:** When using background tasks, implement appropriate polling intervals (e.g., every 5-10 seconds) to check status without overwhelming the API.
 - **Monitor execution time:** Be aware of the 2700-second maximum for background tasks. Design flows to complete within this limit.
 - **Test thoroughly:** Always test in DEV environment before promoting to UAT and PROD.

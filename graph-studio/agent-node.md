@@ -20,7 +20,21 @@ Enable external actions through API calls, database queries, and third-party int
 <Card title="Variables (Input & Capture)" href="/graph-studio/agent-node/variables" icon="database">
 Manage data flow with input variables and capture outputs for downstream processing.
 </Card>
+<Card title="Registry agents (A2A)" href="/agent-registry/registry-agent-nodes" icon="share-nodes">
+Attach Agent Registry agents in Browse or Discovery mode on a master agent node.
+</Card>
 </CardGroup>
+
+## Registry agent nodes (A2A)
+
+In multi-agent graphs, a **registry agent node** connects a master agent to agents published in the **[Agent Registry](/agent-registry/overview)** over the **A2A protocol**:
+
+- **Browse mode** — call one specific registered agent (fixed build, tools, and hosted URL).
+- **Discovery mode** — master agent auto-selects registry agents that match saved filters (visibility, deployment status, MIME modes, tags).
+
+Expose agent graphs first via **[Expose as External Agent](/agent-registry/expose-your-flow)**, then attach them from the canvas browse panel. Only **one Discovery node** is allowed per master agent node.
+
+See **[Registry agent nodes (Browse & Discovery)](/agent-registry/registry-agent-nodes)** for step-by-step configuration.
 
 ## Component interaction flow
 
@@ -188,4 +202,5 @@ const inputData = {
 2. **[Add knowledge sources](/graph-studio/agent-node/rag)**: Connect relevant data
 3. **[Integrate tools](/graph-studio/agent-node/tools)**: Enable external capabilities
 4. **[Set up variables](/graph-studio/agent-node/variables)**: Manage data flow
-5. **[Test and debug](/observability/logs)**: Monitor performance and resolve issues
+5. **[Expose to Agent Registry](/agent-registry/expose-your-flow)**: Publish as an A2A agent when external discovery is required
+6. **[Test and debug](/observability/logs)**: Monitor performance and resolve issues

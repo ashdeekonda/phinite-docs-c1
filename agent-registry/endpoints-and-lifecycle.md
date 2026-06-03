@@ -1,40 +1,110 @@
 ---
 title: "A2A endpoints & lifecycle"
-description: "How hosted A2A URLs are formed, test vs live behaviour, and promoting registry entries."
+description: "Hosted URL patterns, test vs live builds, promotion, authentication, and registry API endpoints."
 ---
 
-## Hosted URLs (AI Core)
+## Hosted A2A URLs
 
-The application builds A2A base URLs from **`NEXT_PUBLIC_AI_CORE_SERVER_URL`** (falling back to **`https://ai-core-dev.phinite.ai`** in development presets). Typical patterns:
+External callers reach registered agents through the **API gateway** AI-core lane. The frontend builds URLs with the same rules as `buildA2aUrl` in the product:
+
+| Deployment status | URL pattern | Example shape |
+| ----------------- | ----------- | ------------- |
+| **Live** | `{gateway}/api/v1/ai/a2a/{flowId}` | Production routing; registry ID omitted |
+| **Test** | `{gateway}/api/v1/ai/a2a/{flowId}/{registryId}` | Validation build tied to a specific registry row |
 
 ```text
-{base}/a2a/{flowId}/{registryId}   ← many non-live registrations
-{base}/a2a/{flowId}               ← live routing omitting registry identifier
+# Live
+https://app-dev.phinite.ai/api/v1/ai/a2a/{flowId}
+
+# Test
+https://app-dev.phinite.ai/api/v1/ai/a2a/{flowId}/{a2aregistryid}
 ```
 
-Treat these as contract surface for **consumers**. Always confirm behaviour for your tenant’s deployed environment—the Studio copies the authoritative string when you expose or inspect an agent.
+Replace the host with your environment’s gateway base (`NEXT_PUBLIC_BACKEND_SERVER_URL` → `/api/v1`, then append `/ai` for the AI-core lane). Graph Studio and Agent Registry copy the authoritative string for your tenant—always use the value shown in the UI rather than constructing URLs manually.
 
-## Registry lifecycle statuses
+For local development with the dev API proxy, the same paths may appear under `http://localhost:3000/api/v1/ai/a2a/...`.
 
-Statuses drive badges and catalogue queries:
+## Registry lifecycle
 
-| Status | User-facing implication (high level) |
-| ------- | ------------------------------------ |
-| **TEST** | Internal validation builds before broad discovery. |
-| **LIVE** | Production-facing; influences public/catalogue listing logic. |
+Each expose action creates an **A2A registry** row with deployment status **`test`** by default.
 
-Promoting to live invokes **`PUT /a2a-registry/{a2aregistryid}/promote-live`** from the SPA (also reachable from Builds experiences that manage registry promotions).
+| Status | Meaning | Hosted URL |
+| ------ | ------- | ---------- |
+| **`test`** | Internal validation before broad discovery | Includes `{registryId}` in path |
+| **`live`** | Production build for the agent graph | Short path with `{flowId}` only |
 
-## What integrators send
+**One live build per agent graph per workspace.** Promoting a build to live demotes any previous live row for the same `flowid` back to **`test`**.
 
-Agents expose **skills** metadata and expected ** MIME input/output modes**. Authentication scheme labels surfaced on the agent card correspond to schemes clients must negotiate per your organisation’s gateway policy.
+### Promote to live
 
-Discovery copy in the Studio notes that endpoints are reachable by **A2A-compatible** agents—link out to whichever canonical protocol primer your docs team publishes.
+From **[Agent Cards](/agent-registry/agent-cards)**, select a test build and use **Push To Prod** (promote flow). The app calls:
 
-### Code anchors
+```
+PUT /api/v1/a2a-registry/{a2aregistryid}/promote-live
+```
 
-| Concern | File |
-| ------- | ----- |
-| URL assembly (live vs with registry ID) | `src/components/headers/canvas/BottomHeader.tsx`, `src/app/.../ModernStudio.tsx` |
-| Listing & filters | `src/app/[orgName]/workspace/[workspaceId]/agent-registry/page.tsx` |
-| Promote mutation | `src/redux/slices/agentRegistrySlice.ts` (`promoteToLive`) |
+No request body is required. The response is the updated registry document with `status: "live"`.
+
+## Visibility and authentication
+
+Each Agent Card declares **visibility**:
+
+| Visibility | UI label | Invoke behaviour (high level) |
+| ---------- | -------- | ------------------------------ |
+| **`public`** | Public | Callable by any client presenting a valid Phinite **API key** |
+| **`organization`** | Organisation | Callable only when the API key belongs to the **same organisation** as the registry row |
+
+At runtime, the gateway **`A2ARegistryAccess`** middleware validates visibility when agents are invoked (for example `POST /api/v1/ai/a2a/agents/{registryId}`). Organisation-scoped agents return an auth error if the caller’s org does not match.
+
+**Auth scheme in the product:** callers use your organisation’s **API key** (JWT) in the `X-API-Key` header unless your deployment configures additional schemes.
+
+## Agent Card contract for integrators
+
+Integrators and A2A-compatible clients should consume:
+
+- **Agent name and description** from the Agent Card
+- **Skills** — each skill lists supported **input modes** and **output modes** (MIME types)
+- **Discoverability tags** — for search and Discovery matching
+- **Hosted URL** — test vs live pattern above
+
+See the **[Agent Registry glossary](/agent-registry/glossary)** for supported MIME types.
+
+Official protocol details: **[A2A protocol specification](https://a2a-protocol.org/latest/specification/)**.
+
+## Registry management API
+
+All routes require gateway authentication (session cookie or Bearer token / API key). Base path: **`/api/v1/a2a-registry`**.
+
+| Method | Path | Purpose |
+| ------ | ---- | ------- |
+| `GET` | `/a2a-registry` | List registry rows (`workspaceid` required; optional `orgid`, `status`, `visibility`, `flowid`, filters) |
+| `GET` | `/a2a-registry/{a2aregistryid}` | Get one row (`?flow=true` includes decrypted flow payload) |
+| `POST` | `/a2a-registry?workspaceid=...` | Create registration (Expose wizard) |
+| `PUT` | `/a2a-registry/{a2aregistryid}` | Update registration |
+| `PUT` | `/a2a-registry/{a2aregistryid}/promote-live` | Promote to live |
+| `DELETE` | `/a2a-registry/{a2aregistryid}` | Delete registration |
+
+**Permissions (api-server):** `assistants.flows:read|create|update|delete` depending on operation.
+
+### Useful list query parameters
+
+| Parameter | Values | Use |
+| --------- | ------ | --- |
+| `workspaceid` | string | **Required** — scopes to workspace |
+| `orgid` | string | Organisation filter (must match caller’s org) |
+| `status` | `test`, `live` | Deployment filter |
+| `visibility` | `public`, `organization` | Top-level visibility filter |
+| `flowid` | string | All builds for one agent graph |
+| `flow_list=true` | boolean | Returns distinct flows only (Agent Cards dropdown) |
+| `pagination` | `true` / `false` | Paginated vs full list |
+
+## Related pages
+
+<CardGroup cols={2}>
+<Card title="Expose an agent" href="/agent-registry/expose-your-flow" icon="rocket">
+Create a test build and Agent Card.
+</Card>
+<Card title="Agent Cards" href="/agent-registry/agent-cards" icon="layers">
+Promote test builds to live.
+</Card>
+</CardGroup>
