@@ -31,7 +31,6 @@ sidebarTitle: "Home"
   <Card title="Agent Graphs" icon="diagram-project" href="/assistants/components/flows">How flows power assistants</Card>
   <Card title="Tools" icon="wrench" href="/assistants/components/tools">Extend assistants with actions</Card>
   <Card title="Channels" icon="comments" href="/assistants/components/channels">Where assistants run</Card>
-  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">Expose, discover, and compose A2A agents</Card>
 </CardGroup>
 
 ## Graph Studio (Workflow Builder)
