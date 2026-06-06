@@ -1,0 +1,11 @@
+# Internal contributor and draft content (not for public docs or MCP search)
+contributing/
+essentials/
+emails/
+drafts/
+*.draft.mdx
+
+# Internal working files
+support-chatbot-knowledge-rack.md
+nomenclature-change-log.md
+link-audit-report.txt

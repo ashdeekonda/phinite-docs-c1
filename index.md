@@ -102,6 +102,7 @@ sidebarTitle: "Home"
 ## Reference & Support
 
 <CardGroup cols={3}>
+  <Card title="AI Assistant (MCP)" icon="robot" href="/reference/ai-assistant">Connect Phinite Docs to Cursor, VS Code, or Claude</Card>
   <Card title="API Reference" icon="terminal" href="/reference/api">Authenticate and call APIs</Card>
   <Card title="Glossary" icon="book-open" href="/reference/glossary">Key terms and concepts</Card>
   <Card title="Release Notes" icon="clipboard-list" href="/reference/release-notes">What’s new</Card>

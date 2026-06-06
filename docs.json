@@ -12,6 +12,17 @@
         "light": "/logo/light.svg",
         "dark": "/logo/dark.svg"
     },
+    "contextual": {
+        "options": [
+            "copy",
+            "chatgpt",
+            "claude",
+            "add-mcp",
+            "cursor",
+            "vscode"
+        ],
+        "display": "header"
+    },
     "redirects": [
         {
             "source": "/flowgen/copilot-method",
@@ -364,6 +375,17 @@
               ]
             },
             {
+              "group": "Reference",
+              "pages": [
+                "reference/ai-assistant",
+                "reference/glossary",
+                "reference/shortcuts",
+                "reference/faqs",
+                "reference/api",
+                "reference/release-notes"
+              ]
+            },
+            {
               "group": "11. Troubleshooting & Support",
               "pages": [
                 "support/error-codes",
@@ -442,6 +464,21 @@
           ]
         }
       ]
+    },
+    "contextual": {
+      "options": [
+        "copy",
+        "view",
+        "chatgpt",
+        "claude",
+        "mcp",
+        "add-mcp",
+        "cursor",
+        "vscode"
+      ]
+    },
+    "seo": {
+      "indexing": "all"
     },
     "errors": {
       "404": {
