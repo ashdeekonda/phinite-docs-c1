@@ -15,8 +15,10 @@
     "contextual": {
         "options": [
             "copy",
+            "view",
             "chatgpt",
             "claude",
+            "mcp",
             "add-mcp",
             "cursor",
             "vscode"
@@ -463,18 +465,6 @@
             }
           ]
         }
-      ]
-    },
-    "contextual": {
-      "options": [
-        "copy",
-        "view",
-        "chatgpt",
-        "claude",
-        "mcp",
-        "add-mcp",
-        "cursor",
-        "vscode"
       ]
     },
     "seo": {
