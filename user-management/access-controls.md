@@ -23,3 +23,4 @@ Permissions apply **per workspace** (and can combine with rules elsewhere in Phi
 - [User Management](/user-management/user-management)
 - [Workspace Users page](/user-management/workspace-ui)
 - [Workspace Overview](/workspaces/workspace-overview)
+- [Agent Registry overview](/agent-registry/overview) — sidebar access uses `workspace.sidebar.agent_registry`

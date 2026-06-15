@@ -88,6 +88,7 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
     ### Key Capabilities
 
     - Visual multi-agent orchestration in Graph Studio
+    - [Agent Registry (A2A)](/agent-registry/overview) for exposing and composing external agents
     - Manager–Worker and Workflow modes
     - Environment-specific variable and credential control
     - End-to-end RBAC, audit logs, and observability
@@ -126,7 +127,8 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
 
 ## Related Topics
 
-- [Workspaces Overview](/setup-account/workspace-overview)
+- [Workspaces Overview](/workspaces/workspace-overview)
 - [Graph Studio](/graph-studio/overview)
+- [Agent Registry (A2A)](/agent-registry/overview)
 - [RBAC and Roles](/user-management/user-roles)
 - [Integrations and Environments](/channels/overview)

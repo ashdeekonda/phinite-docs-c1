@@ -80,6 +80,10 @@ An assistant is an AI-powered capability that handles user interactions, api, ba
     AI-powered assistant that helps you generate agent graphs.\
     It understands context and build and edits agent nodes intelligently.
   </Card>
+
+  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">
+    Expose published agent graphs as discoverable **Agent Cards**, browse the workspace catalog, and compose multi-agent flows with **Browse** or **Discovery** registry nodes.
+  </Card>
 </CardGroup>
 
 ---
@@ -155,4 +159,5 @@ They connect human intent with machine precision — through agent graph, tools,
 
 - Explore [Types of Assistants](/assistants/types)
 - Review [Assistant Components](/assistants/components)
-- Build your first flow in [Flowgen](/flowgen/overview)
+- Build your first flow in [Graph Studio](/graph-studio/overview)
+- Expose agents for external discovery in [Agent Registry](/agent-registry/overview)

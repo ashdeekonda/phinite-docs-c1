@@ -12,6 +12,7 @@ description: "Agent Graphs, Intents, Tools, Builds, Triggers, Environments, and 
 - **Triggers**: Events that start automations
 - **Environments**: Dev, UAT, and Prod deployments
 - **Channels**: Where assistants interact (chat, voice, email)
+- **Agent Registry**: Expose agent graphs as A2A agents and compose them from the canvas
 
 ## Learn more
 
@@ -22,3 +23,4 @@ description: "Agent Graphs, Intents, Tools, Builds, Triggers, Environments, and 
 - [Triggers](/assistants/components/triggers)
 - [Environments](/assistants/components/environments)
 - [Channels](/assistants/components/channels)
+- [Agent Registry (A2A)](/agent-registry/overview)

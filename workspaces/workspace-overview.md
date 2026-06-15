@@ -101,6 +101,20 @@ Once added, integrations can be authenticated and used directly within your assi
 
 ---
 
+### Agent Registry
+
+**Agent Registry** is the workspace catalog of agents exposed over the **Agent-to-Agent (A2A) protocol**. From the sidebar, open **Agent Registry** when your organisation grants `workspace.sidebar.agent_registry`.
+
+Use it to:
+
+- **Expose** published agent graphs as hosted A2A endpoints
+- **Browse** organisation and public Agent Cards
+- **Compose** multi-agent flows with registry agent nodes in Graph Studio
+
+See [Agent Registry overview](/agent-registry/overview) for the full workflow.
+
+---
+
 ### Data Sources (RAG Collections)
 
 Data Sources allow you to manage your workspace’s **knowledge base**.\

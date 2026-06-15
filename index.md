@@ -31,6 +31,7 @@ sidebarTitle: "Home"
   <Card title="Agent Graphs" icon="diagram-project" href="/assistants/components/flows">How flows power assistants</Card>
   <Card title="Tools" icon="wrench" href="/assistants/components/tools">Extend assistants with actions</Card>
   <Card title="Channels" icon="comments" href="/assistants/components/channels">Where assistants run</Card>
+  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">Expose, discover, and compose A2A agents</Card>
 </CardGroup>
 
 ## Graph Studio (Workflow Builder)
@@ -42,6 +43,19 @@ sidebarTitle: "Home"
   <Card title="Connections" icon="share-nodes" href="/graph-studio/connections">Edges, handles, conditionals</Card>
   <Card title="RAG Management" icon="book" href="/graph-studio/rag-management">Data sources and collections</Card>
   <Card title="Publishing" icon="upload" href="/graph-studio/publishing">From draft to deployment</Card>
+  <Card title="Registry agent nodes" icon="share-nodes" href="/agent-registry/registry-agent-nodes">Browse and Discovery A2A agents on the canvas</Card>
+</CardGroup>
+
+## Agent Registry (A2A)
+
+<CardGroup cols={3}>
+  <Card title="Overview" icon="circle-info" href="/agent-registry/overview">Catalog, Agent Cards, and A2A protocol concepts</Card>
+  <Card title="Expose an agent" icon="rocket" href="/agent-registry/expose-your-flow">Register a published graph as an external agent</Card>
+  <Card title="Browse the catalog" icon="layout-grid" href="/agent-registry/catalog">Search and filter workspace agents</Card>
+  <Card title="Registry agent nodes" icon="share-nodes" href="/agent-registry/registry-agent-nodes">Attach agents in Browse or Discovery mode</Card>
+  <Card title="Agent Cards & builds" icon="layers" href="/agent-registry/agent-cards">Test/live builds and Push To Prod</Card>
+  <Card title="Endpoints & lifecycle" icon="plug" href="/agent-registry/endpoints-and-lifecycle">Hosted URLs, auth, and promotion</Card>
+  <Card title="Glossary" icon="book-open" href="/agent-registry/glossary">A2A terms, MIME modes, and UI labels</Card>
 </CardGroup>
 
 ## DevStudio (Tool Builder)
@@ -74,6 +88,7 @@ sidebarTitle: "Home"
   <Card title="Publishing" icon="cloud-arrow-up" href="/builds/publishing">Publish flows and tools</Card>
   <Card title="Configuration" icon="sliders" href="/builds/configuration">Build settings</Card>
   <Card title="Environment Types" icon="diagram-project" href="/builds/environments">Dev, UAT, Prod</Card>
+  <Card title="Agent Cards & builds" icon="layers" href="/agent-registry/agent-cards">Promote registry builds to live</Card>
 </CardGroup>
 
 ## Channels & Integrations

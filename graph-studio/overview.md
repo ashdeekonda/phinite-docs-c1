@@ -15,6 +15,10 @@ Graph Studio is Phinite's visual workflow builder that enables you to create sop
   <Card title="Prompt-based creation (Aura)" icon="sparkles" href="/graph-studio/copilot-method">
     Describe your workflow goal in natural language and let AI generate the initial workflow structure, prompt, tools and variables.
   </Card>
+
+  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">
+    Expose published graphs as external agents, browse the catalog, and attach registry agents on the canvas.
+  </Card>
 </CardGroup>
 
 ## Key capabilities
@@ -29,6 +33,7 @@ Graph Studio is Phinite's visual workflow builder that enables you to create sop
 
 - **Master Agents**: Primary reasoning units with full access to tools, RAG, and conditional logic
 - **Child Agents**: A helper agent for the master agent, designed to handle specific LLM-based tasks.
+- **Registry agents (A2A)**: Attach agents from the [Agent Registry](/agent-registry/overview) in Browse or Discovery mode on a master agent node
 - **Agent communication**: Seamless data passing and coordination between agents
 
 ### Enterprise features
@@ -113,6 +118,7 @@ Graph Studio is Phinite's visual workflow builder that enables you to create sop
 ## Related concepts
 
 - [**Building Assistants**](/assistants/overview): Learn how flows integrate with conversational and autonomous assistants
+- [**Agent Registry (A2A)**](/agent-registry/overview): Expose, discover, and compose external agents
 - [**DevStudio**](/devstudio/overview): Create custom tools that flows can utilize
 - [**Observability**](/observability/overview): Monitor flow performance and debug issues
 - [**User Management**](/user-management/user-management): Understand workspace permissions and access controls
