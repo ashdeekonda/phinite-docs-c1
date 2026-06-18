@@ -51,7 +51,7 @@ These credentials are generated through Google Account settings. Phinite does no
 
 ### Step 3: Configure in Phinite
 
-1. Log into your Phinite workspace at www.phinite.ai
+1. Log into your Phinite workspace at app.phinite.ai
 2. Navigate to Integrations
 3. Select Gmail
 4. Click + Add Configuration

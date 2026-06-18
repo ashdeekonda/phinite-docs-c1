@@ -84,7 +84,7 @@ These credentials are obtained from Twilio or Meta for WhatsApp Business API.
 
 ### Step 4: Configure in Phinite
 
-1. Log into your Phinite workspace at www.phinite.ai
+1. Log into your Phinite workspace at app.phinite.ai
 2. Navigate to Integrations
 3. Select WhatsApp
 4. Click + Add Configuration

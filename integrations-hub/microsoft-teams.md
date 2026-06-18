@@ -70,7 +70,7 @@ These credentials are generated through Azure App Registrations. Phinite does no
 
 ### Step 5: Configure in Phinite
 
-1. Log into your Phinite workspace at www.phinite.ai
+1. Log into your Phinite workspace at app.phinite.ai
 2. Navigate to Integrations
 3. Select Microsoft Teams
 4. Click + Add Configuration

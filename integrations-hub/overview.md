@@ -99,3 +99,97 @@ Phinite provides 21 production-ready integrations. Select an integration to view
     Send SMS and WhatsApp messages, make voice calls, track delivery status, and manage phone numbers with Twilio in production today.
   </Card>
 </CardGroup>
+
+## Predefined tools
+
+Configure credentials under **Integrations → Predefined tools**, then add subtools to agents in Graph Studio.
+
+<CardGroup cols={3}>
+  <Card title="Amplitude" icon="chart-line" href="/integrations-hub/amplitude">
+    Event tracking, analytics queries, taxonomy, cohorts, and user lookups via Amplitude REST APIs.
+  </Card>
+
+  <Card title="Apollo.io" icon="rocket" href="/integrations-hub/apollo-io">
+    Enrich people and organizations, search prospects, and manage accounts, contacts, and deals.
+  </Card>
+
+  <Card title="Freshsales CRM" icon="address-book" href="/integrations-hub/freshsales">
+    Manage Freshsales contacts, accounts, deals, and sales workflows via the Freshworks CRM API.
+  </Card>
+
+  <Card title="Google Cloud" icon="cloud" href="/integrations-hub/google-cloud">
+    Manage Compute Engine instances, Cloud Storage, and other GCP resources from agent workflows.
+  </Card>
+
+  <Card title="Google Meet" icon="video" href="/integrations-hub/google-meet">
+    Create and manage Google Meet conferences and meeting spaces via the Google Meet API.
+  </Card>
+
+  <Card title="HubSpot CRM" icon="address-book" href="/integrations-hub/hubspot-crm">
+    Manage HubSpot contacts, companies, deals, and CRM objects via private app access tokens.
+  </Card>
+
+  <Card title="Instagram" icon="instagram" href="/integrations-hub/instagram">
+    Read profiles, publish media, and manage Instagram content via the Instagram Graph API.
+  </Card>
+
+  <Card title="Intercom" icon="comments" href="/integrations-hub/intercom">
+    Manage Intercom contacts, conversations, and customer messaging data via the Intercom API.
+  </Card>
+
+  <Card title="Looker" icon="chart-pie" href="/integrations-hub/looker">
+    Run queries, manage content, and access analytics on your Looker instance via the API.
+  </Card>
+
+  <Card title="Microsoft Dynamics 365" icon="building" href="/integrations-hub/microsoft-dynamics-365">
+    Access Business Central companies, customers, and ERP data via Microsoft Dynamics 365 APIs.
+  </Card>
+
+  <Card title="MySQL" icon="database" href="/integrations-hub/mysql">
+    Query and manage MySQL databases, tables, and server status from agent workflows.
+  </Card>
+
+  <Card title="Pipedrive" icon="filter" href="/integrations-hub/pipedrive">
+    Manage Pipedrive deals, contacts, organizations, activities, and pipelines via the REST API.
+  </Card>
+
+  <Card title="Power BI" icon="chart-bar" href="/integrations-hub/power-bi">
+    Access datasets, reports, dashboards, and workspaces via the Power BI REST API.
+  </Card>
+
+  <Card title="Razorpay" icon="credit-card" href="/integrations-hub/razorpay">
+    Create orders, fetch payments, and manage Razorpay transactions via the Payments API.
+  </Card>
+
+  <Card title="SendGrid" icon="paper-plane" href="/integrations-hub/sendgrid">
+    Send email and manage contacts via the SendGrid API for transactional and marketing mail.
+  </Card>
+
+  <Card title="ServiceNow" icon="ticket" href="/integrations-hub/servicenow">
+    Manage ServiceNow incidents, requests, and ITSM records via the Table API.
+  </Card>
+
+  <Card title="Shopify" icon="bag-shopping" href="/integrations-hub/shopify">
+    Manage Shopify products, orders, and store data via the Admin REST API.
+  </Card>
+
+  <Card title="Tableau" icon="chart-area" href="/integrations-hub/tableau">
+    Access workbooks, views, and server content via the Tableau REST API.
+  </Card>
+
+  <Card title="Workday HCM" icon="users" href="/integrations-hub/workday-hcm">
+    Query workers, organizations, and HR data from Workday HCM via REST APIs.
+  </Card>
+
+  <Card title="Zoho Desk" icon="headset" href="/integrations-hub/zoho-desk">
+    Manage Zoho Desk tickets, contacts, and support workflows via the Desk API.
+  </Card>
+
+  <Card title="Zoho Office Integrator" icon="file-word" href="/integrations-hub/zoho-office-integrator">
+    Create, edit, convert, and compare documents via Zoho Office Integrator APIs.
+  </Card>
+
+  <Card title="Zoom" icon="video" href="/integrations-hub/zoom">
+    Manage Zoom meetings, users, and webinars via the Zoom REST API.
+  </Card>
+</CardGroup>

@@ -56,7 +56,7 @@ These credentials are generated through GitHub's developer settings. Phinite doe
 
 ### Step 3: Configure in Phinite
 
-1. Log into your Phinite workspace at www.phinite.ai
+1. Log into your Phinite workspace at app.phinite.ai
 2. Navigate to Integrations
 3. Select GitHub
 4. Click + Add Configuration

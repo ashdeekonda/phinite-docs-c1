@@ -474,6 +474,33 @@
                 "integrations-hub/voice",
                 "integrations-hub/chat-ai"
               ]
+            },
+            {
+              "group": "Predefined Tools",
+              "pages": [
+                "integrations-hub/amplitude",
+                "integrations-hub/apollo-io",
+                "integrations-hub/freshsales",
+                "integrations-hub/google-cloud",
+                "integrations-hub/google-meet",
+                "integrations-hub/hubspot-crm",
+                "integrations-hub/instagram",
+                "integrations-hub/intercom",
+                "integrations-hub/looker",
+                "integrations-hub/microsoft-dynamics-365",
+                "integrations-hub/mysql",
+                "integrations-hub/pipedrive",
+                "integrations-hub/power-bi",
+                "integrations-hub/razorpay",
+                "integrations-hub/sendgrid",
+                "integrations-hub/servicenow",
+                "integrations-hub/shopify",
+                "integrations-hub/tableau",
+                "integrations-hub/workday-hcm",
+                "integrations-hub/zoho-desk",
+                "integrations-hub/zoho-office-integrator",
+                "integrations-hub/zoom"
+              ]
             }
           ]
         }
