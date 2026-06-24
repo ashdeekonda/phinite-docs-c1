@@ -1,7 +1,7 @@
 ---
 title: "Insightly"
 description: "Manage Insightly CRM records — contacts, organisations, leads, opportunities, projects, tasks, and events — via the Insightly REST API v3.1."
-icon: "address-book"
+icon: "https://storage.googleapis.com/phinite-public/integrations/insightly.svg"
 ---
 
 ## Overview

@@ -1,7 +1,7 @@
 ---
 title: "Copper CRM"
 description: "Manage a Copper CRM account — people, companies, leads, opportunities, tasks, projects, activities, plus account/config lookups — via the Copper REST API."
-icon: "address-book"
+icon: "https://storage.googleapis.com/phinite-public/integrations/copper-crm.svg"
 ---
 
 ## Overview

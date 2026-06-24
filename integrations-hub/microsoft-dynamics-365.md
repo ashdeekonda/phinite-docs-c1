@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Dynamics 365"
 description: "Manage Microsoft Dynamics 365 Business Central companies, customers, vendors, items, sales/purchase invoices, sales orders, employees, and general ledger entries via the Business Central API v2.0."
-icon: "building"
+icon: "https://storage.googleapis.com/phinite-public/integrations/dynamics-365.svg"
 ---
 
 ## Overview

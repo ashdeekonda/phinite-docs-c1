@@ -1,7 +1,7 @@
 ---
 title: "Pipedrive"
 description: "Manage Pipedrive CRM deals, persons, organizations, activities, notes, pipelines, leads, products, and deal-products via the Pipedrive REST API."
-icon: "filter"
+icon: "https://storage.googleapis.com/phinite-public/integrations/pipedrive.svg"
 ---
 
 ## Overview

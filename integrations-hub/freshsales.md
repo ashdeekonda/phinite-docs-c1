@@ -1,7 +1,7 @@
 ---
 title: "Freshsales CRM"
 description: "Manage Freshsales CRM contacts, accounts, deals, notes, tasks, and perform search via the Freshsales REST API."
-icon: "address-book"
+icon: "https://storage.googleapis.com/phinite-public/integrations/freshsales-crm.svg"
 ---
 
 ## Overview

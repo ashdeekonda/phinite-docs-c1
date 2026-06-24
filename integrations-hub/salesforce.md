@@ -1,7 +1,7 @@
 ---
 title: "Salesforce"
 description: "Connect Salesforce to create and update leads, accounts, and opportunities,"
-icon: "cloud"
+icon: "https://storage.googleapis.com/phinite-public/salesforce.svg"
 ---
 
 ## Overview

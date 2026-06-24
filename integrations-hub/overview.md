@@ -51,47 +51,47 @@ Channel docs cover assistant deployment and inbound/outbound messaging on each s
 ### CRM & Sales
 
 <CardGroup cols={3}>
-  <Card title="Apollo.io" icon="rocket" href="/integrations-hub/apollo-io">
+  <Card title="Apollo.io" icon="https://storage.googleapis.com/phinite-public/integrations/apollo-io.svg" href="/integrations-hub/apollo-io">
     Enrich people and organizations, search prospects, and manage accounts, contacts, and deals via the Apollo.io API.
   </Card>
 
-  <Card title="Close CRM" icon="address-book" href="/integrations-hub/close-crm">
+  <Card title="Close CRM" icon="https://storage.googleapis.com/phinite-public/integrations/close-crm.svg" href="/integrations-hub/close-crm">
     Manage a Close CRM account — leads, contacts, opportunities, tasks, and activities (notes, calls, emails, SMS, meetin...
   </Card>
 
-  <Card title="Copper CRM" icon="address-book" href="/integrations-hub/copper-crm">
+  <Card title="Copper CRM" icon="https://storage.googleapis.com/phinite-public/integrations/copper-crm.svg" href="/integrations-hub/copper-crm">
     Manage a Copper CRM account — people, companies, leads, opportunities, tasks, projects, activities, plus account/conf...
   </Card>
 
-  <Card title="Freshsales CRM" icon="address-book" href="/integrations-hub/freshsales">
+  <Card title="Freshsales CRM" icon="https://storage.googleapis.com/phinite-public/integrations/freshsales-crm.svg" href="/integrations-hub/freshsales">
     Manage Freshsales CRM contacts, accounts, deals, notes, tasks, and perform search via the Freshsales REST API.
   </Card>
 
-  <Card title="HubSpot CRM" icon="address-book" href="/integrations-hub/hubspot-crm">
+  <Card title="HubSpot CRM" icon="https://storage.googleapis.com/phinite-public/integrations/hubspot.svg" href="/integrations-hub/hubspot-crm">
     Create, read, update, delete, and search HubSpot CRM records (contacts, companies, deals, tickets) and retrieve objec...
   </Card>
 
-  <Card title="Insightly" icon="address-book" href="/integrations-hub/insightly">
+  <Card title="Insightly" icon="https://storage.googleapis.com/phinite-public/integrations/insightly.svg" href="/integrations-hub/insightly">
     Manage Insightly CRM records — contacts, organisations, leads, opportunities, projects, tasks, and events — via the I...
   </Card>
 
-  <Card title="Microsoft Dynamics 365" icon="building" href="/integrations-hub/microsoft-dynamics-365">
+  <Card title="Microsoft Dynamics 365" icon="https://storage.googleapis.com/phinite-public/integrations/dynamics-365.svg" href="/integrations-hub/microsoft-dynamics-365">
     Manage Microsoft Dynamics 365 Business Central companies, customers, vendors, items, sales/purchase invoices, sales o...
   </Card>
 
-  <Card title="Outreach" icon="paper-plane" href="/integrations-hub/outreach">
+  <Card title="Outreach" icon="https://storage.googleapis.com/phinite-public/integrations/outreach.svg" href="/integrations-hub/outreach">
     Manage Outreach.io sales-engagement resources — prospects, accounts, sequences, sequence enrollments, mailboxes, task...
   </Card>
 
-  <Card title="Pipedrive" icon="filter" href="/integrations-hub/pipedrive">
+  <Card title="Pipedrive" icon="https://storage.googleapis.com/phinite-public/integrations/pipedrive.svg" href="/integrations-hub/pipedrive">
     Manage Pipedrive CRM deals, persons, organizations, activities, notes, pipelines, leads, products, and deal-products ...
   </Card>
 
-  <Card title="Salesforce" icon="cloud" href="/integrations-hub/salesforce">
+  <Card title="Salesforce" icon="https://storage.googleapis.com/phinite-public/salesforce.svg" href="/integrations-hub/salesforce">
     Connect Salesforce to create and update leads, accounts, and opportunities,
   </Card>
 
-  <Card title="Salesloft" icon="chart-line" href="/integrations-hub/salesloft">
+  <Card title="Salesloft" icon="https://storage.googleapis.com/phinite-public/integrations/salesloft.svg" href="/integrations-hub/salesloft">
     Manage Salesloft sales-engagement data — people, accounts, cadences and memberships, users, notes, tasks, calls, emai...
   </Card>
 
@@ -167,7 +167,7 @@ Channel docs cover assistant deployment and inbound/outbound messaging on each s
   </Card>
 
   <Card title="Slack" icon="hashtag" href="/integrations-hub/slack">
-    Post messages, manage channels, read history, handle threads, and run
+    Send and manage Slack messages, reactions, channels, users, scheduled messages, and pins via the Slack Web API.
   </Card>
 
   <Card title="Microsoft Teams (Legacy)" icon="people-group" href="/integrations-hub/teams">

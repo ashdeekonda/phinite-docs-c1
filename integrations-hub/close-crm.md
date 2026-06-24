@@ -1,7 +1,7 @@
 ---
 title: "Close CRM"
 description: "Manage a Close CRM account — leads, contacts, opportunities, tasks, and activities (notes, calls, emails, SMS, meetings), plus statuses, users, custom fields, pipelines, and smart views — via the Close REST API."
-icon: "address-book"
+icon: "https://storage.googleapis.com/phinite-public/integrations/close-crm.svg"
 ---
 
 ## Overview

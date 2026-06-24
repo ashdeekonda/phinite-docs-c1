@@ -1,7 +1,7 @@
 ---
 title: "Apollo.io"
 description: "Enrich people and organizations, search prospects, and manage accounts, contacts, and deals via the Apollo.io API."
-icon: "rocket"
+icon: "https://storage.googleapis.com/phinite-public/integrations/apollo-io.svg"
 ---
 
 ## Overview

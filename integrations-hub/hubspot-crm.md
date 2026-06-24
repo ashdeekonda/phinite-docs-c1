@@ -1,7 +1,7 @@
 ---
 title: "HubSpot CRM"
 description: "Create, read, update, delete, and search HubSpot CRM records (contacts, companies, deals, tickets) and retrieve object properties."
-icon: "address-book"
+icon: "https://storage.googleapis.com/phinite-public/integrations/hubspot.svg"
 ---
 
 ## Overview

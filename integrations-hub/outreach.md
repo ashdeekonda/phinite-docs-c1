@@ -1,7 +1,7 @@
 ---
 title: "Outreach"
 description: "Manage Outreach.io sales-engagement resources — prospects, accounts, sequences, sequence enrollments, mailboxes, tasks, calls, and users — via the Outreach REST API."
-icon: "paper-plane"
+icon: "https://storage.googleapis.com/phinite-public/integrations/outreach.svg"
 ---
 
 ## Overview

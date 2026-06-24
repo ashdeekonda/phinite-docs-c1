@@ -1,7 +1,7 @@
 ---
 title: "Salesloft"
 description: "Manage Salesloft sales-engagement data — people, accounts, cadences and memberships, users, notes, tasks, calls, email templates, email activity, successes, and stages — via the Salesloft v2 API."
-icon: "chart-line"
+icon: "https://storage.googleapis.com/phinite-public/integrations/salesloft.svg"
 ---
 
 ## Overview
