@@ -4,19 +4,17 @@ description: "Manage an ActiveCampaign account — contacts, tags, lists, deals,
 icon: "https://storage.googleapis.com/phinite-public/integrations/activecampaign.svg"
 ---
 
----
-
-## title: "ActiveCampaign"
-description: "Manage an ActiveCampaign account — contacts, tags, lists, deals, accounts, plus contact-tag/list associations and custom fields via the ActiveCampaign v3 API."
-icon: "envelope"
-
 ## Overview
 
 Phinite's **ActiveCampaign** predefined tool lets workspace assistants call ActiveCampaign APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Manage an ActiveCampaign account — contacts, tags, lists, deals, accounts, plus contact-tag/list associations and custom fields via the ActiveCampaign v3 API.
 
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations). ## What this integration enables
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
+
+## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
 - Connect once under Integrations and reuse across assistants

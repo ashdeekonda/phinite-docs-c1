@@ -51,7 +51,7 @@ Predefined tools require a saved connection before they appear in Graph Studio's
 Phinite provides 34 subtools for Recurly:
 
 - Create Account: Create a new account. Requires a unique account code.
-- Get Account: Fetch a single account. account_id may be the Recurly id or code-<your_code>.
+- Get Account: Fetch a single account. account_id may be the Recurly id or `code-<your_code>`.
 - List Accounts: List accounts with optional filters/pagination.
 - Update Account: Update an account. Provide fields to change via update_fields.
 - Deactivate Account: Deactivate (close) an account.
@@ -60,7 +60,7 @@ Phinite provides 34 subtools for Recurly:
 - List Account Invoices: List invoices belonging to an account.
 - List Account Transactions: List transactions belonging to an account.
 - Create Subscription: Create a subscription. Requires plan_code, account_code and currency.
-- Get Subscription: Fetch a single subscription. subscription_id may be the id or uuid-<uuid>.
+- Get Subscription: Fetch a single subscription. subscription_id may be the id or `uuid-<uuid>`.
 - List Subscriptions: List subscriptions with optional filters/pagination.
 - Update Subscription: Update a subscription. Provide fields to change via update_fields.
 - Cancel Subscription: Cancel a subscription (lapses at end of current term).
@@ -68,11 +68,11 @@ Phinite provides 34 subtools for Recurly:
 - Resume Subscription: Resume a paused subscription.
 - Terminate Subscription: Terminate (end immediately) a subscription via DELETE, with an optional refund.
 - Create Plan: Create a plan. Requires code, name, and currencies (via additional_fields).
-- Get Plan: Fetch a single plan. plan_id may be the id or code-<plan_code>.
+- Get Plan: Fetch a single plan. plan_id may be the id or `code-<plan_code>`.
 - List Plans: List plans with optional filters/pagination.
 - Update Plan: Update a plan. Provide fields to change via update_fields.
 - Remove Plan: Remove (deactivate) a plan.
-- Get Invoice: Fetch a single invoice. invoice_id may be the id or number-<invoice_number>.
+- Get Invoice: Fetch a single invoice. invoice_id may be the id or `number-<invoice_number>`.
 - List Invoices: List invoices with optional filters/pagination.
 - Update Invoice: Update an invoice (e.g. PO number, notes). Provide fields via update_fields.
 - Collect Invoice: Attempt to collect payment on an open/past-due invoice.
@@ -80,7 +80,7 @@ Phinite provides 34 subtools for Recurly:
 - Get Transaction: Fetch a single transaction by id.
 - List Transactions: List transactions across the site with optional filters/pagination.
 - Create Coupon: Create a coupon. Requires code, name and a discount definition (via additional_fields).
-- Get Coupon: Fetch a single coupon. coupon_id may be the id or code-<coupon_code>.
+- Get Coupon: Fetch a single coupon. coupon_id may be the id or `code-<coupon_code>`.
 - List Coupons: List coupons with optional filters/pagination.
 - Update Coupon: Update a coupon. Provide fields to change via update_fields.
 - Expire Coupon: Expire (deactivate) a coupon so it can no longer be redeemed.
