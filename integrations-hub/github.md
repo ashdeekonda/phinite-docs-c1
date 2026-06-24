@@ -1,106 +1,70 @@
 ---
 title: "GitHub"
-description: "Repositories and issues management via GitHub API."
+description: "'Manage repositories, issues, and pull requests: create tickets, comment,"
 icon: "github"
 ---
 
 ## Overview
 
-Phinite's GitHub integration allows workspace assistants to interact with GitHub repositories, manage issues, pull requests, and collaborate on code projects.
+Phinite's **GitHub** predefined tool lets workspace assistants call GitHub APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from GitHub, and how to configure them inside Phinite.
+'Manage repositories, issues, and pull requests: create tickets, comment,
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Create and manage issues
-- Handle pull requests
-- Access repository information
-- Manage branches and commits
-- Add comments and reviews
-- Automate repository workflows
-
-This integration is bidirectional and uses GitHub's official REST API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 1 credential provided by GitHub:
-
-- Personal Access Token (required)
-
-These credentials are generated through GitHub's developer settings. Phinite does not modify or replace GitHub's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Create GitHub Personal Access Token
+1. Create a GitHub personal access token or GitHub App with repository permissions.
+2. Log into your Phinite workspace at app.phinite.ai
+3. Navigate to **Integrations** → **Predefined tools**
+4. Select **GitHub**
+5. Click **+ Add Configuration**
+6. Enter the credential fields listed above
+7. Select assistants that should use this connection
+8. Click **Save Configuration**
 
-1. Go to GitHub.com and sign in
-2. Click your profile picture (top right)
-3. Go to Settings → Developer settings → Personal access tokens
-4. Click "Tokens (classic)" or "Fine-grained tokens"
-5. Click "Generate new token"
-6. Give it a descriptive name (e.g., "Phinite Integration")
-7. Select appropriate scopes:
-   - repo (full repository access)
-   - user (user information)
-   - project (project management)
-8. Set expiration if desired
-9. Click "Generate token"
+## Configure in Graph Studio
 
-### Step 2: Copy Token
-
-1. Immediately copy the generated token
-2. Store it securely (you won't see it again)
-3. Token format: ghp_xxxxxxxxxxxxxxxxxxxx
-
-### Step 3: Configure in Phinite
-
-1. Log into your Phinite workspace at app.phinite.ai
-2. Navigate to Integrations
-3. Select GitHub
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: GitHub Integration
-   - Personal Access Token: Paste your token
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **GithubTool** (or search for GitHub)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for GitHub:
+Phinite provides 11 subtools for GitHub:
 
-- Create Issue: Open new repository issues
-- Update Issue: Modify existing issues
-- Close Issue: Mark issues as resolved
-- Get Issue: Retrieve issue details
-- List Issues: Query repository issues
-- Create Pull Request: Submit code changes
-- Update Pull Request: Modify pull requests
-- Merge Pull Request: Merge approved changes
-- Add Comment: Comment on issues/PRs
-- Create Branch: Set up new branches
-- Get Repository: Access repo information
-- List Commits: View commit history
-- Search Code: Find code across repositories
-- Create Release: Tag and release versions
-- Get User: Retrieve user profiles
-- List Repositories: Access user's repos
-- Create Repository: Set up new repositories
-- Fork Repository: Create repo forks
-- Star Repository: Add stars to repos
-- Watch Repository: Follow repositories
+- Search Repositories: Search for repositories on GitHub
+- List Repositories: List all repositories for the authenticated user
+- Get Repository: Get details of a specific repository
+- Create Repository: Create a new repository on GitHub
+- Create Issue: Create an issue in a repository
+- Get Pull Request: Get details of a specific pull request
+- Create Pull Request: Create a new pull request in a repository
+- List Issues: List issues for a repository with pagination
+- Get File Content: Get the content of a file in a repository
+- Create File: Create a new file in a repository
+- Search Code: Search for code in GitHub repositories
 
 ## Documentation & resources
 
-- Official GitHub Documentation: `https://docs.github.com/en/rest`
-- GitHub REST API Reference: `https://docs.github.com/en/rest/reference`
-- GitHub Developer Portal: `https://github.com/settings/developers`
+- Official documentation: `https://docs.github.com/en/rest`
+- Phinite documentation: [GitHub](https://docs.phinite.ai/docs/integrations-hub/github)
 
 ## Notes
 
-- Personal access tokens have repository-specific permissions
-- GitHub has rate limits (5000 requests/hour for authenticated users)
-- Some operations require repository admin access
-- Tokens can be scoped to specific repositories
-- Monitor token usage and rotate regularly for security
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

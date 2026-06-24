@@ -1,8 +1,8 @@
 ---
-
-## title: "Amplitude"
+title: "Amplitude"
 description: "Manage Amplitude event tracking, analytics queries, taxonomy, cohorts, and user lookups via the Amplitude REST APIs."
 icon: "chart-line"
+---
 
 ## Overview
 
@@ -10,7 +10,7 @@ Phinite's **Amplitude** predefined tool lets workspace assistants call Amplitude
 
 Manage Amplitude event tracking, analytics queries, taxonomy, cohorts, and user lookups via the Amplitude REST APIs.
 
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 
 ## What this integration enables
 
@@ -84,9 +84,10 @@ Phinite provides 31 subtools for Amplitude:
 
 - Official documentation: `https://www.docs.developers.amplitude.com/`
 
+- Phinite documentation: [Amplitude](https://docs.phinite.ai/docs/integrations-hub/amplitude)
+
 ## Notes
 
 - Store API keys and tokens securely; many providers show secrets only once
 - Use separate connections for Dev, UAT, and Prod environments where possible
 - Test with a minimal subtool call after saving credentials
-

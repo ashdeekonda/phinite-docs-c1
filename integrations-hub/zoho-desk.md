@@ -11,7 +11,7 @@ Phinite's **Zoho Desk** predefined tool lets workspace assistants call Zoho Desk
 Manage Zoho Desk help-desk tickets, comments, contacts, accounts, agents, departments, and knowledge-base articles via the Zoho Desk REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -79,6 +79,8 @@ Phinite provides 26 subtools for Zoho Desk:
 ## Documentation & resources
 
 - Official documentation: `https://desk.zoho.com/DeskAPIDocument#Introduction`
+
+- Phinite documentation: [Zoho Desk](https://docs.phinite.ai/docs/integrations-hub/zoho-desk)
 
 ## Notes
 

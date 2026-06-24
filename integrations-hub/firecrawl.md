@@ -1,66 +1,67 @@
 ---
 title: "Firecrawl"
-description: "Scrape, crawl, and extract structured content from websites via Firecrawl API."
+description: "Scrape pages into clean markdown, crawl domains, extract structured"
 icon: "fire"
 ---
 
 ## Overview
 
-Phinite’s Firecrawl integration lets assistants scrape web pages into clean markdown, extract data, and run batch crawls for analysis.
+Phinite's **Firecrawl** predefined tool lets workspace assistants call Firecrawl APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-<Frame>
-  ![Firecrawl Integration](/images/firecrawl-integration.png)
-</Frame>
+Scrape pages into clean markdown, crawl domains, extract structured
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-- Scrape webpage content to markdown
-- Extract structured data with selectors
-- Crawl multiple pages and monitor changes
-- Batch processing and content filtering
-- Screenshots and PDF generation
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-- API Key (required)
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-<Steps>
-  <Step title="Create Firecrawl account">
-    Sign up at Firecrawl, verify email, and log in.
-  </Step>
-  <Step title="Generate API key">
-    Dashboard → API Keys → Create key with appropriate permissions. Copy it.
-  </Step>
-  <Step title="Configure in Phinite">
-    Workspace → Integrations → Firecrawl → \+ Add Configuration. Paste API key, name the connection, select assistants, and save.
-  </Step>
-</Steps>
+1. Sign up at firecrawl.dev and copy your API key from the dashboard.
+2. Log into your Phinite workspace at app.phinite.ai
+3. Navigate to **Integrations** → **Predefined tools**
+4. Select **Firecrawl**
+5. Click **+ Add Configuration**
+6. Enter the credential fields listed above
+7. Select assistants that should use this connection
+8. Click **Save Configuration**
 
-<Warning>
-  Respect robots.txt and the target website's terms of service. Large crawl jobs may take time.
-</Warning>
+## Configure in Graph Studio
+
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **FirecrawlTool** (or search for Firecrawl)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-- Scrape URL
-- Crawl Domain
-- Extract Structured Data
-- Monitor Page Changes
-- Convert to Markdown
-- Extract Images
-- Get Page Metadata
-- Custom CSS Selectors
-- Batch Processing
-- Content Filtering
-- Screenshot Capture
-- PDF Generation
-- Text Extraction
-- Link Analysis
-- SEO Data Extraction
+Phinite provides 8 subtools for Firecrawl:
+
+- Scrape: Scrape a single URL and convert it to markdown, HTML, or other formats.
+- Crawl: Crawl a website starting from a URL. Blocks until completion and returns
+- Start Crawl: Start a crawl job without waiting. Returns a job ID that can be used
+- Get Crawl Status: Check the status of a crawl job by its ID.
+- Cancel Crawl: Cancel a running crawl job by its ID.
+- Map Website: Generate a list of URLs from a website. Useful for getting a site structure
+- Batch Scrape: Scrape multiple URLs in batch. Blocks until completion and returns
+- Search: Search the web using Firecrawl's search functionality.
 
 ## Documentation & resources
 
-- Docs: `https://docs.firecrawl.dev/`
-- API Reference: `https://docs.firecrawl.dev/api-reference`
+- Official documentation: `https://docs.firecrawl.dev/`
+- Phinite documentation: [Firecrawl](https://docs.phinite.ai/docs/integrations-hub/firecrawl)
+
+## Notes
+
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

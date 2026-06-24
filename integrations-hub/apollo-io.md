@@ -11,7 +11,7 @@ Phinite's **Apollo.io** predefined tool lets workspace assistants call Apollo.io
 Enrich people and organizations, search prospects, and manage accounts, contacts, and deals via the Apollo.io API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -71,6 +71,8 @@ Phinite provides 20 subtools for Apollo.io:
 ## Documentation & resources
 
 - Official documentation: `https://docs.apollo.io/`
+
+- Phinite documentation: [Apollo.io](https://docs.phinite.ai/docs/integrations-hub/apollo-io)
 
 ## Notes
 

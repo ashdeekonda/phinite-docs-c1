@@ -11,7 +11,7 @@ Phinite's **Power BI** predefined tool lets workspace assistants call Power BI A
 Manage Power BI datasets, reports, dashboards, workspaces (groups), dataflows, and gateways via the Power BI REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -111,6 +111,8 @@ Phinite provides 60 subtools for Power BI:
 ## Documentation & resources
 
 - Official documentation: `https://learn.microsoft.com/en-us/rest/api/power-bi/`
+
+- Phinite documentation: [Power Bi](https://docs.phinite.ai/docs/integrations-hub/power-bi)
 
 ## Notes
 

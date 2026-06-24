@@ -11,7 +11,7 @@ Phinite's **SendGrid** predefined tool lets workspace assistants call SendGrid A
 Send emails, manage contacts and lists, create single sends, retrieve templates, handle suppressions, and view stats via the SendGrid API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -71,6 +71,8 @@ Phinite provides 20 subtools for SendGrid:
 ## Documentation & resources
 
 - Official documentation: `https://docs.sendgrid.com/`
+
+- Phinite documentation: [Sendgrid](https://docs.phinite.ai/docs/integrations-hub/sendgrid)
 
 ## Notes
 

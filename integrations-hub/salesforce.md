@@ -1,115 +1,72 @@
 ---
 title: "Salesforce"
-description: "CRM and sales data via Salesforce APIs."
+description: "Connect Salesforce to create and update leads, accounts, and opportunities,"
 icon: "cloud"
 ---
 
 ## Overview
 
-Phinite's Salesforce integration allows workspace assistants to access and manage Salesforce CRM data, including leads, opportunities, accounts, contacts, and custom objects.
+Phinite's **Salesforce** predefined tool lets workspace assistants call Salesforce APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Salesforce, and how to configure them inside Phinite.
+Connect Salesforce to create and update leads, accounts, and opportunities,
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Read and update Salesforce records
-- Create new leads, accounts, and opportunities
-- Query Salesforce data with SOQL
-- Access custom objects and fields
-- Sync data between systems
-
-This integration is bidirectional and uses Salesforce's official REST API.
-
-## Authentication methods
-
-Phinite supports two authentication methods for Salesforce:
-
-### JWT Bearer Token (Recommended for automated workflows)
-Uses Consumer Key, Consumer Secret, and Username for server-to-server authentication.
-
-### OAuth2 (Recommended for interactive applications)
-Uses OAuth2 flow for user-based authentication with refresh tokens.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-### For JWT Authentication:
-- Consumer Key (required)
-- Consumer Secret (required)
-- Username (required)
-
-### For OAuth2 Authentication:
-- Client ID (Consumer Key from Connected App)
-- Client Secret (Consumer Secret from Connected App)
-- Environment Type (Production/Sandbox)
-
-These credentials are generated through Salesforce Connected Apps. Phinite does not modify or replace Salesforce's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Create Connected App in Salesforce
+1. Create a Salesforce Connected App or use username/password/security token for API access.
+2. Copy instance URL, client credentials, or security token as required.
+3. Log into your Phinite workspace at app.phinite.ai
+4. Navigate to **Integrations** → **Predefined tools**
+5. Select **Salesforce**
+6. Click **+ Add Configuration**
+7. Enter the credential fields listed above
+8. Select assistants that should use this connection
+9. Click **Save Configuration**
 
-1. Log into your Salesforce org
-2. Go to Setup (gear icon)
-3. In Quick Find, search "App Manager"
-4. Click New Connected App
-5. Fill in basic information:
-   Connected App Name: "Phinite Integration"
-   API Name: "Phinite_Integration"
-   Contact Email: your email
-6. Enable OAuth settings and specify callback URL(s)
-7. Add necessary OAuth scopes (api, refresh_token, offline_access)
-8. Save the connected app and wait for it to provision
-9. Copy the Consumer Key and Consumer Secret
+## Configure in Graph Studio
 
-### Step 2: Get Username and Password
-
-1. Use your Salesforce username (email address)
-2. If using password authentication, get your Salesforce password
-3. For enhanced security, consider using OAuth refresh tokens
-
-### Step 3: Configure in Phinite
-
-1. Log into your Phinite workspace at app.phinite.ai
-2. Navigate to Integrations
-3. Select Salesforce
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: Salesforce Production
-   - Consumer Key: Paste the Consumer Key from your Connected App
-   - Consumer Secret: Paste the Consumer Secret from your Connected App
-   - Username: Your Salesforce username (email)
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **SalesforceTool** (or search for Salesforce)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Salesforce:
+Phinite provides 12 subtools for Salesforce:
 
-- Query Records: Execute SOQL queries to retrieve data
-- Create Record: Add new records to Salesforce objects
-- Update Record: Modify existing record data
-- Delete Record: Remove records from Salesforce
-- Describe Object: Get metadata about Salesforce objects
-- Get Record: Retrieve specific record details
-- Search Records: Perform SOSL searches
-- Create Lead: Generate new sales leads
-- Update Opportunity: Modify opportunity details
-- Get Account Info: Access account information
-- List Contacts: Retrieve contact lists
-- Bulk Operations: Handle multiple records at once
+- Query: Execute a SOQL query and return records
+- Query More: Continue a SOQL query using nextRecordsUrl or Id
+- Query All: Execute a SOQL query and fetch all records
+- Search: Execute a SOSL search and return matches
+- Get Record: Fetch a record by object name and ID
+- Get Record By Custom Id: Fetch a record by a custom external ID field
+- Create Record: Create a record for a given object
+- Update Record: Update a record by ID for a given object
+- Upsert Record: Upsert a record using an external ID field
+- Delete Record: Delete a record by object name and ID
+- Describe Object: Describe a Salesforce object (fields, labels, etc.)
+- List Objects: List available Salesforce objects
 
 ## Documentation & resources
 
-- Official Salesforce Documentation: `https://developer.salesforce.com/docs/`
-- Salesforce REST API Reference: `https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/`
-- Salesforce SOQL Reference: `https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/`
+- Official documentation: `https://developer.salesforce.com/docs/apis`
+- Phinite documentation: [Salesforce](https://docs.phinite.ai/docs/integrations-hub/salesforce)
 
 ## Notes
 
-- Salesforce has API limits based on your edition
-- Use OAuth 2.0 for enhanced security
-- Respect Salesforce governor limits on API calls
-- Connected Apps require admin approval in some orgs
-- Monitor API usage to avoid hitting limits
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

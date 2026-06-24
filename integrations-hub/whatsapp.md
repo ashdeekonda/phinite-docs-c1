@@ -1,134 +1,78 @@
 ---
 title: "WhatsApp"
-description: "WhatsApp messaging via Twilio or WhatsApp Business API."
+description: "Send WhatsApp messages (text, media, location, contacts, reactions, interactive messages, templates) and manage media via the WhatsApp Business Cloud API."
 icon: "whatsapp"
 ---
 
 ## Overview
 
-Phinite's WhatsApp integration allows workspace assistants to send and receive WhatsApp messages through Twilio's WhatsApp API or WhatsApp Business API.
+Phinite's **WhatsApp** predefined tool lets workspace assistants call WhatsApp APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from WhatsApp/Twilio, and how to configure them inside Phinite.
+Send WhatsApp messages (text, media, location, contacts, reactions, interactive messages, templates) and manage media via the WhatsApp Business Cloud API.
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Send text messages via WhatsApp
-- Send media files and documents
-- Receive WhatsApp messages
-- Handle message templates
-- Send location and contact information
-- Manage conversation flows
-
-This integration is bidirectional and uses WhatsApp's official APIs through approved providers.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses credentials from WhatsApp providers:
-
-For Twilio WhatsApp:
-- Account SID (required)
-- Auth Token (required)
-- WhatsApp Number (required)
-
-For WhatsApp Business API:
-- Access Token (required)
-- Phone Number ID (required)
-- Business Account ID (required)
-
-These credentials are obtained from Twilio or Meta for WhatsApp Business API.
+- Access Token `access_token` (required)
+- Phone Number ID `phone_number_id` (required)
+- Graph API Version `graph_version` (optional)
 
 ## Setup steps
 
-### Option 1: Using Twilio WhatsApp
+1. Configure WhatsApp Business via Meta or Twilio and obtain phone number ID and access token.
+2. Log into your Phinite workspace at app.phinite.ai
+3. Navigate to **Integrations** → **Predefined tools**
+4. Select **WhatsApp**
+5. Click **+ Add Configuration**
+6. Enter the credential fields listed above
+7. Select assistants that should use this connection
+8. Click **Save Configuration**
 
-#### Step 1: Get Twilio Credentials
+## Configure in Graph Studio
 
-1. Sign up for Twilio account
-2. Get Account SID and Auth Token from dashboard
-3. Purchase a WhatsApp-enabled phone number
-
-#### Step 2: Enable WhatsApp Sandbox
-
-1. In Twilio Console, go to WhatsApp
-2. Enable WhatsApp sandbox
-3. Follow setup instructions
-4. Connect your WhatsApp number
-
-#### Step 3: Configure Webhooks (Optional)
-
-1. Set message webhook URL
-2. Configure status callback URL
-3. Enable incoming message handling
-
-### Option 2: Using WhatsApp Business API
-
-#### Step 1: Create Meta Business Account
-
-1. Go to Meta Business Manager
-2. Create or access business account
-3. Set up WhatsApp Business API access
-
-#### Step 2: Get API Credentials
-
-1. Generate permanent access token
-2. Get Phone Number ID
-3. Note Business Account ID
-
-#### Step 3: Configure Webhooks
-
-1. Set up webhook endpoints
-2. Subscribe to message events
-3. Verify webhook configuration
-
-### Step 4: Configure in Phinite
-
-1. Log into your Phinite workspace at app.phinite.ai
-2. Navigate to Integrations
-3. Select WhatsApp
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: WhatsApp Business
-   - Provider: Select Twilio or WhatsApp Business API
-   - Credentials: Enter appropriate API keys/tokens
-   - Phone Number: Your WhatsApp number
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **WhatsAppTool** (or search for WhatsApp)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for WhatsApp:
+Phinite provides 17 subtools for WhatsApp:
 
-- Send Text Message: Send WhatsApp text messages
-- Send Media Message: Share images/audio/video
-- Send Document: Send files and documents
-- Send Location: Share GPS coordinates
-- Send Contact: Share contact information
-- Send Template Message: Use approved templates
-- Receive Messages: Handle incoming messages
-- Get Message Status: Check delivery status
-- Create Template: Set up message templates
-- Get Profile Info: Access contact information
-- Mark as Read: Mark messages as read
-- Send Interactive Message: Buttons and lists
-- Send Sticker: Share WhatsApp stickers
-- Get Media URL: Access media files
-- Download Media: Retrieve media content
-- Send Reply: Reply to specific messages
-- Get Chat History: Access conversation history
+- Send Text: Sends a plain text message. Body max 4096 characters; preview_url enables link previews.
+- Send Image: Sends an image by public HTTPS link or by an uploaded media id, with an optional caption.
+- Send Video: Sends a video by public HTTPS link or by an uploaded media id, with an optional caption.
+- Send Audio: Sends an audio message by public HTTPS link or by an uploaded media id. Audio does not support captions.
+- Send Document: Sends a document by public HTTPS link or by an uploaded media id, with optional caption and display filename.
+- Send Sticker: Sends a sticker (WebP, 512x512) by public HTTPS link or uploaded media id.
+- Send Location: Sends a location pin with latitude/longitude and an optional name and address.
+- Send Contact: Sends one or more contact cards. Each contact requires at least name.formatted_name.
+- Send Reaction: Reacts to a message with an emoji. Pass an empty emoji string to remove a previous reaction.
+- Send Interactive Buttons: Sends an interactive message with up to 3 reply buttons.
+- Send Interactive List: Sends an interactive list message (up to 10 rows across sections), opened by a button label.
+- Send Cta Url: Sends an interactive call-to-action message with a URL button.
+- Send Interactive Flow: Sends an interactive WhatsApp Flow message that opens a multi-screen flow on tap.
+- Send Template: Sends a pre-approved template message. Required to message a user outside the 24-hour service window.
+- Mark As Read: Marks an incoming message as read (blue ticks), optionally showing a typing indicator.
+- Get Media Url: Retrieves the temporary download URL and metadata for an uploaded media ID.
+- Delete Media: Deletes an uploaded media asset by its media ID.
 
 ## Documentation & resources
 
-- WhatsApp Business API: `https://developers.facebook.com/docs/whatsapp/`
-- Twilio WhatsApp: `https://www.twilio.com/docs/whatsapp`
-- WhatsApp Business Policy: `https://www.whatsapp.com/business/policy`
+- Official documentation: `https://developers.facebook.com/docs/whatsapp`
+- Phinite documentation: [WhatsApp](https://docs.phinite.ai/docs/integrations-hub/whatsapp)
 
 ## Notes
 
-- WhatsApp Business API requires Meta approval
-- Template messages must be pre-approved
-- Rate limits apply to message sending
-- Media files have size restrictions
-- Monitor conversation quality scores
-- Some features require premium access
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

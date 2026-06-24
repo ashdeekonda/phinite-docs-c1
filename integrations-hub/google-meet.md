@@ -11,7 +11,7 @@ Phinite's **Google Meet** predefined tool lets workspace assistants call Google 
 Manage Google Meet spaces, conference records, participants, recordings, and transcripts via the Google Meet REST API v2.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -67,6 +67,8 @@ Phinite provides 16 subtools for Google Meet:
 ## Documentation & resources
 
 - Official documentation: `https://developers.google.com/meet`
+
+- Phinite documentation: [Google Meet](https://docs.phinite.ai/docs/integrations-hub/google-meet)
 
 ## Notes
 

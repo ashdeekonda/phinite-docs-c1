@@ -11,7 +11,7 @@ Phinite's **Looker** predefined tool lets workspace assistants call Looker APIs 
 Query Looker data, manage Looks, dashboards, folders, users, and scheduled plans on a Looker BI instance via the Looker REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -73,6 +73,8 @@ Phinite provides 20 subtools for Looker:
 ## Documentation & resources
 
 - Official documentation: `https://cloud.google.com/looker/docs`
+
+- Phinite documentation: [Looker](https://docs.phinite.ai/docs/integrations-hub/looker)
 
 ## Notes
 

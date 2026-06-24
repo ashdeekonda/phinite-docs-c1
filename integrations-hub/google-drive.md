@@ -1,117 +1,62 @@
 ---
 title: "Google Drive"
-description: "File storage and management via Google Drive API."
+description: "Upload, download, search, and share files, manage folders and permissions,"
 icon: "folder-open"
 ---
 
 ## Overview
 
-Phinite's Google Drive integration allows workspace assistants to upload, download, organize, and manage files in Google Drive.
+Phinite's **Google Drive** predefined tool lets workspace assistants call Google Drive APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Google, and how to configure them inside Phinite.
+Upload, download, search, and share files, manage folders and permissions,
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Upload and download files
-- Create and organize folders
-- Search for files and folders
-- Share files with permissions
-- Access file metadata
-- Manage file versions
-- Export Google Workspace files
-
-This integration is bidirectional and uses Google Drive API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 1 credential provided by Google:
-
-- Service Account JSON (required)
-
-These credentials are generated through Google Cloud Console. Phinite does not modify or replace Google's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Create Google Cloud Project
+1. Create a Google Cloud project, enable the Drive API, and configure OAuth or a service account.
+2. Obtain credentials with the Drive scopes your workflow needs.
+3. Log into your Phinite workspace at app.phinite.ai
+4. Navigate to **Integrations** → **Predefined tools**
+5. Select **Google Drive**
+6. Click **+ Add Configuration**
+7. Enter the credential fields listed above
+8. Select assistants that should use this connection
+9. Click **Save Configuration**
 
-1. Go to Google Cloud Console
-2. Click Create Project or select existing project
-3. Enter project name and click Create
-4. Enable the Google Drive API:
-   - Go to APIs & Services > Library
-   - Search for "Google Drive API"
-   - Click Enable
+## Configure in Graph Studio
 
-### Step 2: Create Service Account
-
-1. In Google Cloud Console, go to IAM & Admin > Service Accounts
-2. Click Create Service Account
-3. Enter service account name and description
-4. Click Create and Continue
-5. Skip role assignment (click Continue)
-6. Click Done
-
-### Step 3: Generate Service Account Key
-
-1. Click on the created service account
-2. Go to Keys tab
-3. Click Add Key > Create new key
-4. Select JSON format
-5. Click Create
-6. Download the JSON file and keep it secure
-
-### Step 4: Configure Domain-wide Delegation (Optional)
-
-1. For organization-wide access, enable domain-wide delegation
-2. Add necessary scopes in Google Workspace admin console
-3. This allows access to all users' drives in the organization
-
-### Step 5: Configure in Phinite
-
-1. Log into your Phinite workspace at app.phinite.ai
-2. Navigate to Integrations
-3. Select Google Drive
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: Google Drive Production
-   - Credentials: Upload the JSON file or paste JSON content
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **GoogleDriveTool** (or search for Google Drive)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Google Drive:
+Phinite provides 2 subtools for Google Drive:
 
-- Upload File: Add files to Drive
-- Download File: Retrieve files from Drive
-- Create Folder: Set up new folders
-- List Files: Browse folder contents
-- Search Files: Find files by name/content
-- Get File Info: Access file metadata
-- Update File: Modify file properties
-- Delete File: Remove files from Drive
-- Copy File: Duplicate files
-- Move File: Relocate files between folders
-- Share File: Grant access permissions
-- Create Permission: Set sharing permissions
-- Export File: Convert Google files to other formats
-- Create Shortcut: Make file shortcuts
-- Get Comments: Access file comments
-- Add Comment: Comment on files
-- Watch Changes: Monitor file modifications
-- Empty Trash: Clean up deleted files
+- List Files: List all files from google drive
+- Upload File: upload file in google drive
 
 ## Documentation & resources
 
-- Official Drive Documentation: `https://developers.google.com/drive/api`
-- Drive API Reference: `https://developers.google.com/drive/api/reference/rest`
+- Official documentation: `https://developers.google.com/drive`
+- Phinite documentation: [Google Drive](https://docs.phinite.ai/docs/integrations-hub/google-drive)
 
 ## Notes
 
-- Service accounts have limited sharing capabilities
-- Domain-wide delegation required for org-wide access
-- API has rate limits and quota restrictions
-- Large files may require resumable uploads
-- Monitor storage quotas and API usage
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

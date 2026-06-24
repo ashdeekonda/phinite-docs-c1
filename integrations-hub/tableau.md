@@ -11,7 +11,7 @@ Phinite's **Tableau** predefined tool lets workspace assistants call Tableau API
 Manage Tableau workbooks, datasources, views, users, groups, and projects via the Tableau REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -85,6 +85,8 @@ Phinite provides 30 subtools for Tableau:
 ## Documentation & resources
 
 - Official documentation: `https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api.htm`
+
+- Phinite documentation: [Tableau](https://docs.phinite.ai/docs/integrations-hub/tableau)
 
 ## Notes
 

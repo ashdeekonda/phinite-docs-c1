@@ -11,7 +11,7 @@ Phinite's **Workday HCM** predefined tool lets workspace assistants call Workday
 Access Workday HCM data — workers, organizations, job profiles, positions, locations, time off, and business titles via the Workday REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -73,6 +73,8 @@ Phinite provides 16 subtools for Workday HCM:
 ## Documentation & resources
 
 - Official documentation: `https://community.workday.com/sites/default/files/file-hosting/productionapi/index.html`
+
+- Phinite documentation: [Workday Hcm](https://docs.phinite.ai/docs/integrations-hub/workday-hcm)
 
 ## Notes
 

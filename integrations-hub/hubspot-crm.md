@@ -11,7 +11,7 @@ Phinite's **HubSpot CRM** predefined tool lets workspace assistants call HubSpot
 Create, read, update, delete, and search HubSpot CRM records (contacts, companies, deals, tickets) and retrieve object properties.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -61,6 +61,8 @@ Phinite provides 10 subtools for HubSpot CRM:
 ## Documentation & resources
 
 - Official documentation: `https://developers.hubspot.com/docs/api/overview`
+
+- Phinite documentation: [Hubspot Crm](https://docs.phinite.ai/docs/integrations-hub/hubspot-crm)
 
 ## Notes
 

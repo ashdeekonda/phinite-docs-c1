@@ -11,7 +11,7 @@ Phinite's **Shopify** predefined tool lets workspace assistants call Shopify API
 Manage a Shopify store — create, update, and retrieve products, orders, and customers via the Shopify Admin REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -72,6 +72,8 @@ Phinite provides 19 subtools for Shopify:
 ## Documentation & resources
 
 - Official documentation: `https://shopify.dev/docs/api/admin-rest`
+
+- Phinite documentation: [Shopify](https://docs.phinite.ai/docs/integrations-hub/shopify)
 
 ## Notes
 

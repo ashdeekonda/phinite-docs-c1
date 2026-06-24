@@ -11,7 +11,7 @@ Phinite's **Zoho Office Integrator** predefined tool lets workspace assistants c
 Create, edit, preview, convert, and compare documents, spreadsheets, and presentations via Zoho Office Integrator.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -63,6 +63,8 @@ Phinite provides 11 subtools for Zoho Office Integrator:
 ## Documentation & resources
 
 - Official documentation: `https://www.zoho.com/officeintegrator/api/`
+
+- Phinite documentation: [Zoho Office Integrator](https://docs.phinite.ai/docs/integrations-hub/zoho-office-integrator)
 
 ## Notes
 

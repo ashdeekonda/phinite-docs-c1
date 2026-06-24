@@ -11,7 +11,7 @@ Phinite's **Freshsales CRM** predefined tool lets workspace assistants call Fres
 Manage Freshsales CRM contacts, accounts, deals, notes, tasks, and perform search via the Freshsales REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in DevStudio](/devstudio/prebuilt-tools).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
 </Note>
 
 ## What this integration enables
@@ -72,6 +72,8 @@ Phinite provides 20 subtools for Freshsales CRM:
 ## Documentation & resources
 
 - Official documentation: `https://developers.freshworks.com/crm/api/`
+
+- Phinite documentation: [Freshsales CRM](https://docs.phinite.ai/docs/integrations-hub/freshsales)
 
 ## Notes
 
