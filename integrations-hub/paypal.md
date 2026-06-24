@@ -1,7 +1,7 @@
 ---
 title: "PayPal"
 description: "Manage PayPal operations — orders, payouts, invoices, products, billing plans, and subscriptions via the PayPal REST API."
-icon: "paypal"
+icon: "https://storage.googleapis.com/phinite-public/integrations/paypal.svg"
 ---
 
 ## Overview

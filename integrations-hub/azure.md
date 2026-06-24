@@ -1,7 +1,7 @@
 ---
 title: "Azure"
 description: "Manage Azure resources via the Azure Resource Manager REST API — subscriptions, resource groups, virtual machines, storage accounts, and App Services."
-icon: "cloud"
+icon: "https://storage.googleapis.com/phinite-public/integrations/azure.svg"
 ---
 
 ## Overview

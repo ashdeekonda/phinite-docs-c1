@@ -1,7 +1,7 @@
 ---
 title: "Instagram"
 description: "Manage an Instagram Business or Creator account — profile, media publishing, comments, insights, hashtags, stories, and business discovery via the Instagram Graph API."
-icon: "instagram"
+icon: "https://storage.googleapis.com/phinite-public/integrations/instagram.svg"
 ---
 
 ## Overview

@@ -1,7 +1,7 @@
 ---
 title: "Telegram"
 description: "Send and receive Telegram bot messages, automate support, deliver notifications,"
-icon: "paper-plane"
+icon: "https://storage.googleapis.com/phinite-public/telegram.svg"
 ---
 
 ## Overview

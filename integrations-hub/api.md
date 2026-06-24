@@ -1,7 +1,7 @@
 ---
 title: "API"
 description: "Connect any REST API with configurable auth, headers, and retries,"
-icon: "code"
+icon: "https://storage.googleapis.com/phinite-public/api.svg"
 ---
 
 ## Overview

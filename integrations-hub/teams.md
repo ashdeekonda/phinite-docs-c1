@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Teams (Legacy)"
 description: "Send messages and approvals in Microsoft Teams, integrate Graph permissions,"
-icon: "people-group"
+icon: "https://storage.googleapis.com/phinite-public/teams.svg"
 ---
 
 ## Overview

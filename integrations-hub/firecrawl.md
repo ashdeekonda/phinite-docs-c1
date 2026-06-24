@@ -1,7 +1,7 @@
 ---
 title: "Firecrawl"
 description: "Scrape pages into clean markdown, crawl domains, extract structured"
-icon: "fire"
+icon: "https://storage.googleapis.com/phinite-public/firecrawl.svg"
 ---
 
 ## Overview

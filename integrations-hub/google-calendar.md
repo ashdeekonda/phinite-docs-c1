@@ -1,7 +1,7 @@
 ---
 title: "Google Calendar"
 description: "Create, update, and query events, check availability, send invites,"
-icon: "calendar-days"
+icon: "https://storage.googleapis.com/phinite-public/google-calendar.svg"
 ---
 
 ## Overview

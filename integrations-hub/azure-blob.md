@@ -1,7 +1,7 @@
 ---
 title: "Azure Blob Storage"
 description: "Manage Azure Blob Storage containers and blobs via the Azure Blob Storage REST API."
-icon: "cloud"
+icon: "https://storage.googleapis.com/phinite-public/integrations/azure.svg"
 ---
 
 ## Overview

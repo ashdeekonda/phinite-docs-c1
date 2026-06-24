@@ -1,7 +1,7 @@
 ---
 title: "Twilio"
 description: "Send SMS/MMS, make voice calls, manage recordings, accounts, phone numbers, conferences, and Conversations via the Twilio REST API."
-icon: "phone"
+icon: "https://storage.googleapis.com/phinite-public/integrations/twilio.svg"
 ---
 
 ## Overview

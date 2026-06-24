@@ -1,7 +1,7 @@
 ---
 title: "Gorgias"
 description: "Manage Gorgias helpdesk resources — tickets, ticket messages, customers, users, tags, and views — via the Gorgias REST API."
-icon: "headset"
+icon: "https://storage.googleapis.com/phinite-public/integrations/gorgias.svg"
 ---
 
 ## Overview

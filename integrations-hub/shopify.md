@@ -1,7 +1,7 @@
 ---
 title: "Shopify"
 description: "Manage a Shopify store — create, update, and retrieve products, orders, and customers via the Shopify Admin REST API."
-icon: "bag-shopping"
+icon: "https://storage.googleapis.com/phinite-public/integrations/shopify.svg"
 ---
 
 ## Overview

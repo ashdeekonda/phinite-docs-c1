@@ -1,7 +1,7 @@
 ---
 title: "Front"
 description: "Manage Front shared-inbox communication — conversations, messages and replies, contacts, inboxes, channels, teammates, tags, comments, and drafts — via the Front Core API."
-icon: "inbox"
+icon: "https://storage.googleapis.com/phinite-public/integrations/front.svg"
 ---
 
 ## Overview

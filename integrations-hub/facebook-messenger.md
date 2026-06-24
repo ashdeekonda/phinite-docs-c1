@@ -1,7 +1,7 @@
 ---
 title: "Facebook Messenger"
 description: "Send messages and manage a Facebook Messenger bot via the Messenger Platform — text, attachments, quick replies, templates, sender actions, user profile, Messenger Profile config, and handover protocol."
-icon: "facebook"
+icon: "https://storage.googleapis.com/phinite-public/integrations/facebook-messenger.svg"
 ---
 
 ## Overview

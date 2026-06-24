@@ -1,7 +1,7 @@
 ---
 title: "Google Sheets"
 description: "Read, write, and append spreadsheet rows, format ranges, and automate"
-icon: "table"
+icon: "https://storage.googleapis.com/phinite-public/google-sheets.svg"
 ---
 
 ## Overview

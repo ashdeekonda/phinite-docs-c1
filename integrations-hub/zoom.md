@@ -1,7 +1,7 @@
 ---
 title: "Zoom"
 description: "Manage Zoom meetings, users, webinars, cloud recordings, chat channels/messages, and past-meeting participants via the Zoom REST API."
-icon: "video"
+icon: "https://storage.googleapis.com/phinite-public/integrations/zoom.svg"
 ---
 
 ## Overview

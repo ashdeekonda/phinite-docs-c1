@@ -1,7 +1,7 @@
 ---
 title: "Gmail"
 description: "Read, search, draft, send, and reply to emails..."
-icon: "envelope"
+icon: "https://storage.googleapis.com/phinite-public/gmail.svg"
 ---
 
 ## Overview

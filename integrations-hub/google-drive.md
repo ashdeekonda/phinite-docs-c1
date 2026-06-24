@@ -1,7 +1,7 @@
 ---
 title: "Google Drive"
 description: "Upload, download, search, and share files, manage folders and permissions,"
-icon: "folder-open"
+icon: "https://storage.googleapis.com/phinite-public/google-drive.svg"
 ---
 
 ## Overview

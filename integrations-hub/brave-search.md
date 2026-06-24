@@ -1,7 +1,7 @@
 ---
 title: "Brave Search"
 description: "Run privacy-first web, news, and image searches with rich snippets,"
-icon: "magnifying-glass"
+icon: "https://storage.googleapis.com/phinite-public/brave.svg"
 ---
 
 ## Overview

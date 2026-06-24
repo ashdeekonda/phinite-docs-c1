@@ -1,7 +1,7 @@
 ---
 title: "Docker"
 description: "Manage Docker containers, images, networks, and volumes on a remote Docker daemon via the Docker Engine REST API."
-icon: "docker"
+icon: "https://storage.googleapis.com/phinite-public/integrations/docker.svg"
 ---
 
 ## Overview

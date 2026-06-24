@@ -1,7 +1,7 @@
 ---
 title: "GitHub"
 description: "'Manage repositories, issues, and pull requests: create tickets, comment,"
-icon: "github"
+icon: "https://storage.googleapis.com/phinite-public/github.svg"
 ---
 
 ## Overview

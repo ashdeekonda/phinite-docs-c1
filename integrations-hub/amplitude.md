@@ -1,7 +1,7 @@
 ---
 title: "Amplitude"
 description: "Manage Amplitude event tracking, analytics queries, taxonomy, cohorts, and user lookups via the Amplitude REST APIs."
-icon: "chart-line"
+icon: "https://storage.googleapis.com/phinite-public/integrations/amplitude.svg"
 ---
 
 ## Overview

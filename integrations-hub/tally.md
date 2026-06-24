@@ -1,7 +1,7 @@
 ---
 title: "Tally"
 description: "Manage Tally forms, submissions, webhooks, workspaces, and organization members via the Tally REST API."
-icon: "clipboard-list"
+icon: "https://storage.googleapis.com/phinite-public/integrations/tally.svg"
 ---
 
 ## Overview

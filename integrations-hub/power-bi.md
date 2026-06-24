@@ -1,7 +1,7 @@
 ---
 title: "Power BI"
 description: "Manage Power BI datasets, reports, dashboards, workspaces (groups), dataflows, and gateways via the Power BI REST API."
-icon: "chart-bar"
+icon: "https://storage.googleapis.com/phinite-public/integrations/power-bi.svg"
 ---
 
 ## Overview

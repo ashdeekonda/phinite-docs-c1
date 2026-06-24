@@ -1,7 +1,7 @@
 ---
 title: "Razorpay"
 description: "Manage Razorpay orders, payments, refunds, customers, items, and settlements via the Razorpay REST API."
-icon: "credit-card"
+icon: "https://storage.googleapis.com/phinite-public/integrations/razorpay.svg"
 ---
 
 ## Overview

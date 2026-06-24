@@ -1,7 +1,7 @@
 ---
 title: "MySQL"
 description: "Execute queries, manage tables and schema, and perform CRUD operations on a MySQL database via async connection."
-icon: "database"
+icon: "https://storage.googleapis.com/phinite-public/integrations/mysql.svg"
 ---
 
 ## Overview

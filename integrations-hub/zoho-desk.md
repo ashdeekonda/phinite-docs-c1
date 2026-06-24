@@ -1,7 +1,7 @@
 ---
 title: "Zoho Desk"
 description: "Manage Zoho Desk help-desk tickets, comments, contacts, accounts, agents, departments, and knowledge-base articles via the Zoho Desk REST API."
-icon: "headset"
+icon: "https://storage.googleapis.com/phinite-public/integrations/zoho-desk.svg"
 ---
 
 ## Overview

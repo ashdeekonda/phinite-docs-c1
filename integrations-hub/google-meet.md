@@ -1,7 +1,7 @@
 ---
 title: "Google Meet"
 description: "Manage Google Meet spaces, conference records, participants, recordings, and transcripts via the Google Meet REST API v2."
-icon: "video"
+icon: "https://storage.googleapis.com/phinite-public/integrations/google-meet.svg"
 ---
 
 ## Overview

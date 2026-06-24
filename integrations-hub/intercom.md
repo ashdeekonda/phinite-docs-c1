@@ -1,7 +1,7 @@
 ---
 title: "Intercom"
 description: "Manage Intercom contacts, companies, conversations, notes, tags, admins, and help-center articles via the Intercom REST API."
-icon: "comments"
+icon: "https://storage.googleapis.com/phinite-public/integrations/intercom.svg"
 ---
 
 ## Overview

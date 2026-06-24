@@ -1,7 +1,7 @@
 ---
 title: "Square"
 description: "Manage Square payments, refunds, orders, catalog, customers, cards, invoices, payment links, subscriptions, inventory, and locations via the Square API."
-icon: "credit-card"
+icon: "https://storage.googleapis.com/phinite-public/integrations/square.svg"
 ---
 
 ## Overview

@@ -1,7 +1,7 @@
 ---
 title: "Notion"
 description: "Read and update Notion pages and databases, search content, append"
-icon: "note-sticky"
+icon: "https://storage.googleapis.com/phinite-public/notion.svg"
 ---
 
 ## Overview

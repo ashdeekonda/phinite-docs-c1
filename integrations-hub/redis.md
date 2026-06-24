@@ -1,7 +1,7 @@
 ---
 title: "Redis"
 description: "Run Redis operations — strings, hashes, lists, sets, sorted sets, pub/sub, TTL management, and server info via the Redis protocol."
-icon: "database"
+icon: "https://storage.googleapis.com/phinite-public/integrations/redis.svg"
 ---
 
 ## Overview

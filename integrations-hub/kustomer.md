@@ -1,7 +1,7 @@
 ---
 title: "Kustomer"
 description: "Manage a Kustomer account — customers, conversations, messages, notes, tasks, companies, tags, teams, users, and shortcuts — via the Kustomer API v1."
-icon: "headset"
+icon: "https://storage.googleapis.com/phinite-public/integrations/kustomer.svg"
 ---
 
 ## Overview

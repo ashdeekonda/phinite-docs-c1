@@ -1,7 +1,7 @@
 ---
 title: "Okta"
 description: "Manage Okta users, groups, applications, user lifecycle, and system log events via the Okta Management API."
-icon: "shield"
+icon: "https://storage.googleapis.com/phinite-public/integrations/okta.svg"
 ---
 
 ## Overview

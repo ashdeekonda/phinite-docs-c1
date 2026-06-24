@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Teams"
 description: "Manage Microsoft Teams teams, channels, messages, chats, members, online meetings, and Planner tasks via the Microsoft Graph API."
-icon: "people-group"
+icon: "https://storage.googleapis.com/phinite-public/integrations/integration-icons.svg"
 ---
 
 ## Overview

@@ -1,7 +1,7 @@
 ---
 title: "Customer.io"
 description: "Manage Customer.io people, events, devices, segments, campaigns, transactional messages, and message history via the Track and App APIs."
-icon: "envelope"
+icon: "https://storage.googleapis.com/phinite-public/integrations/customer-io.svg"
 ---
 
 ## Overview

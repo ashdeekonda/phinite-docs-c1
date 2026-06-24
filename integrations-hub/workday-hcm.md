@@ -1,7 +1,7 @@
 ---
 title: "Workday HCM"
 description: "Access Workday HCM data — workers, organizations, job profiles, positions, locations, time off, and business titles via the Workday REST API."
-icon: "users"
+icon: "https://storage.googleapis.com/phinite-public/integrations/workday.svg"
 ---
 
 ## Overview

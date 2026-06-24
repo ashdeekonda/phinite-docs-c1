@@ -1,7 +1,7 @@
 ---
 title: "MongoDB"
 description: "Perform CRUD and aggregations on MongoDB collections, manage indexes,"
-icon: "leaf"
+icon: "https://storage.googleapis.com/phinite-public/mongodb.svg"
 ---
 
 ## Overview

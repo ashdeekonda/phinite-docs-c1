@@ -1,7 +1,7 @@
 ---
 title: "Azure Cosmos DB"
 description: "Manage Azure Cosmos DB containers and items (documents) via the Cosmos DB REST API."
-icon: "cloud"
+icon: "https://storage.googleapis.com/phinite-public/integrations/azure.svg"
 ---
 
 ## Overview

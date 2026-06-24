@@ -1,7 +1,7 @@
 ---
 title: "MCP Client"
 description: "Dynamically proxy any tool exposed by a remote MCP server over SSE or Streamable HTTP transport with optional authentication."
-icon: "plug"
+icon: "https://storage.googleapis.com/phinite-public/api.svg"
 ---
 
 ## Overview

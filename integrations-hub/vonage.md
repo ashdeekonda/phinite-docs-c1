@@ -1,7 +1,7 @@
 ---
 title: "Vonage"
 description: "Send SMS and multi-channel messages, run phone verification (OTP) and number insight lookups, and manage account balance and virtual numbers via the Vonage (Nexmo) APIs."
-icon: "phone"
+icon: "https://storage.googleapis.com/phinite-public/integrations/vonage.svg"
 ---
 
 ## Overview

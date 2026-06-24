@@ -1,7 +1,7 @@
 ---
 title: "Tableau"
 description: "Manage Tableau workbooks, datasources, views, users, groups, and projects via the Tableau REST API."
-icon: "chart-area"
+icon: "https://storage.googleapis.com/phinite-public/integrations/tableau.svg"
 ---
 
 ## Overview

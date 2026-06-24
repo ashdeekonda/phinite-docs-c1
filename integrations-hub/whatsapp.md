@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp"
 description: "Send WhatsApp messages (text, media, location, contacts, reactions, interactive messages, templates) and manage media via the WhatsApp Business Cloud API."
-icon: "whatsapp"
+icon: "https://storage.googleapis.com/phinite-public/integrations/whatsapp-business.svg"
 ---
 
 ## Overview

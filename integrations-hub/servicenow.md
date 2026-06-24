@@ -1,7 +1,7 @@
 ---
 title: "ServiceNow"
 description: "Manage ServiceNow incidents, change requests, problems, users, knowledge articles, CMDB CIs, and any table record via the Table and Aggregate APIs."
-icon: "ticket"
+icon: "https://storage.googleapis.com/phinite-public/integrations/servicenow.svg"
 ---
 
 ## Overview

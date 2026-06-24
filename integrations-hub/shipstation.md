@@ -1,7 +1,7 @@
 ---
 title: "ShipStation"
 description: "Manage ShipStation shipping and fulfillment — orders, shipments and labels, carriers, products, customers, warehouses, stores, and fulfillments via the ShipStation V1 API."
-icon: "truck"
+icon: "https://storage.googleapis.com/phinite-public/integrations/shipstation.svg"
 ---
 
 ## Overview

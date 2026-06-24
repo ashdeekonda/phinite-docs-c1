@@ -1,7 +1,7 @@
 ---
 title: "Chargebee"
 description: "Manage Chargebee billing — customers, subscriptions, invoices, transactions, credit notes, and the product catalog (items / item prices) — via the Chargebee API v2."
-icon: "receipt"
+icon: "https://storage.googleapis.com/phinite-public/integrations/chargebee.svg"
 ---
 
 ## Overview

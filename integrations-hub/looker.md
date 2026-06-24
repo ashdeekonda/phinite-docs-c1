@@ -1,7 +1,7 @@
 ---
 title: "Looker"
 description: "Query Looker data, manage Looks, dashboards, folders, users, and scheduled plans on a Looker BI instance via the Looker REST API."
-icon: "chart-pie"
+icon: "https://storage.googleapis.com/phinite-public/integrations/looker.svg"
 ---
 
 ## Overview

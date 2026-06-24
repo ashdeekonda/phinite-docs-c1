@@ -1,7 +1,7 @@
 ---
 title: "Braintree"
 description: "Interact with the Braintree (PayPal) GraphQL API — run GraphQL queries/mutations plus convenience operations for transactions and customers."
-icon: "credit-card"
+icon: "https://storage.googleapis.com/phinite-public/integrations/braintree-light.svg"
 ---
 
 ## Overview

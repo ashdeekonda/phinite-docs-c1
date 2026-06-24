@@ -1,7 +1,7 @@
 ---
 title: "SendGrid"
 description: "Send emails, manage contacts and lists, create single sends, retrieve templates, handle suppressions, and view stats via the SendGrid API."
-icon: "paper-plane"
+icon: "https://storage.googleapis.com/phinite-public/integrations/sendgrid.svg"
 ---
 
 ## Overview

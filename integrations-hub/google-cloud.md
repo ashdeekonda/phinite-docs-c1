@@ -1,7 +1,7 @@
 ---
 title: "Google Cloud"
 description: "Manage Google Cloud Platform resources — Compute Engine VMs, Cloud Storage buckets and objects, Cloud SQL instances, Pub/Sub topics, and Firestore documents via GCP REST APIs."
-icon: "cloud"
+icon: "https://storage.googleapis.com/phinite-public/integrations/google-cloud.svg"
 ---
 
 ## Overview

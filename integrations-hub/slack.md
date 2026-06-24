@@ -1,7 +1,7 @@
 ---
 title: "Slack"
-description: "Post messages, manage channels, read history, handle threads, and run"
-icon: "hashtag"
+description: "Send and manage Slack messages, reactions, channels, users, scheduled messages, and pins via the Slack Web API."
+icon: "https://storage.googleapis.com/phinite-public/integrations/slack.svg"
 ---
 
 ## Overview

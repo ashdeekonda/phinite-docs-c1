@@ -1,7 +1,7 @@
 ---
 title: "Mixpanel"
 description: "Manage Mixpanel event tracking, identity, user/group profiles, analytics queries, cohorts, annotations, and lookup tables via the Mixpanel APIs."
-icon: "chart-line"
+icon: "https://storage.googleapis.com/phinite-public/integrations/mixpanel.svg"
 ---
 
 ## Overview

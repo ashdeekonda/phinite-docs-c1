@@ -1,7 +1,7 @@
 ---
 title: "Jira"
 description: "Create, search, update, and transition Jira issues, add comments, and"
-icon: "project-diagram"
+icon: "https://storage.googleapis.com/phinite-public/integrations/jira.svg"
 ---
 
 ## Overview

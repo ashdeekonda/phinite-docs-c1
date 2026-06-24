@@ -1,7 +1,7 @@
 ---
 title: "Google BigQuery"
 description: "Query BigQuery datasets with SQL, inspect tables, export results, and"
-icon: "database"
+icon: "https://storage.googleapis.com/phinite-public/bigquery.svg"
 ---
 
 ## Overview

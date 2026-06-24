@@ -1,7 +1,7 @@
 ---
 title: "Recurly"
 description: "Manage a Recurly subscription-billing site — accounts, subscriptions, plans, invoices, transactions, and coupons — via the Recurly v3 API."
-icon: "receipt"
+icon: "https://storage.googleapis.com/phinite-public/integrations/recurly.svg"
 ---
 
 ## Overview

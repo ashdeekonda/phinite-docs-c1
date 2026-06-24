@@ -1,7 +1,7 @@
 ---
 title: "Zoho Office Integrator"
 description: "Create, edit, preview, convert, and compare documents, spreadsheets, and presentations via Zoho Office Integrator."
-icon: "file-word"
+icon: "https://storage.googleapis.com/phinite-public/integrations/zoho-office.svg"
 ---
 
 ## Overview

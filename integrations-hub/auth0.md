@@ -1,7 +1,7 @@
 ---
 title: "Auth0"
 description: "Manage an Auth0 tenant via the Management API v2 — users, roles, user blocks, applications, connections, organizations, logs, and verification tickets."
-icon: "shield"
+icon: "https://storage.googleapis.com/phinite-public/integrations/auth0.svg"
 ---
 
 ## Overview

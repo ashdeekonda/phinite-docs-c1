@@ -1,4 +1,10 @@
 ---
+title: "ActiveCampaign"
+description: "Manage an ActiveCampaign account — contacts, tags, lists, deals, accounts, plus contact-tag/list associations and custom fields via the ActiveCampaign v3 API."
+icon: "https://storage.googleapis.com/phinite-public/integrations/activecampaign.svg"
+---
+
+---
 
 ## title: "ActiveCampaign"
 description: "Manage an ActiveCampaign account — contacts, tags, lists, deals, accounts, plus contact-tag/list associations and custom fields via the ActiveCampaign v3 API."
@@ -86,4 +92,3 @@ Phinite provides 29 subtools for ActiveCampaign:
 - Store API keys and tokens securely; many providers show secrets only once
 - Use separate connections for Dev, UAT, and Prod environments where possible
 - Test with a minimal subtool call after saving credentials
-

@@ -1,7 +1,7 @@
 ---
 title: "Help Scout"
 description: "Manage Help Scout Mailbox support resources — conversations, threads, customers, mailboxes, users, and tags — via the Help Scout Mailbox API v2. Authenticate with an access token, or client_id + client_secret."
-icon: "life-ring"
+icon: "https://storage.googleapis.com/phinite-public/integrations/helpscout.svg"
 ---
 
 ## Overview
