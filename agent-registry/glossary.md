@@ -21,6 +21,19 @@ This glossary aligns **Agent-to-Agent (A2A)** vocabulary with what you see in Gr
 | **Discovery mode** | Discovery tab on agent node | Master agent **auto-selects** agents matching saved filters at runtime |
 | **Agent Graph** | Flow | The workflow backing the registered agent |
 
+## Phinite Connector (Claude)
+
+Terms used when calling registry agents from Claude via the [Phinite Connector](/agent-registry/invoke-a2a-from-claude):
+
+| Term | Meaning |
+| ---- | ------- |
+| **Phinite Connector** | Claude plugin that authenticates to Phinite and exposes registry tools |
+| **`list_agents`** | Returns up to 50 published agents in your organisation (unfiltered browse) |
+| **`discover_agents`** | Natural-language search over agent name, description, and skills; optional `status` (`live` / `test`) and `limit` |
+| **`call_agent`** | Sends a message to an agent by `registry_id`; optional `task_id` for multi-turn context |
+| **`task_id`** | A2A task identifier returned on first `call_agent` response; pass on follow-ups to continue the same conversation |
+| **Credential setup link** | URL to `/public/agent-config` when an agent needs integration credentials before running |
+
 ## UI labels vs documentation terms
 
 | Product UI label | Preferred docs term | Where it appears |
@@ -52,6 +65,9 @@ Skills and registry filters declare which content types an agent accepts and ret
 ## Related pages
 
 <CardGroup cols={2}>
+<Card title="Invoke from Claude" href="/agent-registry/invoke-a2a-from-claude" icon="plug">
+Install the connector, discover agents, and manage credentials.
+</Card>
 <Card title="Overview" href="/agent-registry/overview" icon="circle-info">
 End-to-end Agent Registry concepts and workflow.
 </Card>

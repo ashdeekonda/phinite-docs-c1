@@ -50,6 +50,7 @@ sidebarTitle: "Home"
 
 <CardGroup cols={3}>
   <Card title="Overview" icon="circle-info" href="/agent-registry/overview">Catalog, Agent Cards, and A2A protocol concepts</Card>
+  <Card title="Invoke from Claude" icon="plug" href="/agent-registry/invoke-a2a-from-claude">Phinite Connector — discover and call agents</Card>
   <Card title="Expose an agent" icon="rocket" href="/agent-registry/expose-your-flow">Register a published graph as an external agent</Card>
   <Card title="Browse the catalog" icon="layout-grid" href="/agent-registry/catalog">Search and filter workspace agents</Card>
   <Card title="Registry agent nodes" icon="share-nodes" href="/agent-registry/registry-agent-nodes">Attach agents in Browse or Discovery mode</Card>

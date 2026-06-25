@@ -204,6 +204,7 @@
             "group": "Agent Registry (A2A)",
             "pages": [
               "agent-registry/overview",
+              "agent-registry/invoke-a2a-from-claude",
               "agent-registry/expose-your-flow",
               "agent-registry/registry-agent-nodes",
               "agent-registry/catalog",

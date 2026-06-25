@@ -58,6 +58,20 @@ At runtime, the gateway **`A2ARegistryAccess`** middleware validates visibility 
 
 **Auth scheme in the product:** callers use your organisation’s **API key** (JWT) in the `X-API-Key` header unless your deployment configures additional schemes.
 
+## External clients (Claude Connector)
+
+End users can call registry agents from **Claude** via the [Phinite Connector](/agent-registry/invoke-a2a-from-claude) without constructing A2A URLs manually.
+
+| Layer | Behaviour |
+| ----- | --------- |
+| **Connector auth** | User signs in to Phinite (Google or email) when connecting the plugin in Claude |
+| **Discovery** | `discover_agents` / `list_agents` query the same registry metadata as the workspace catalog |
+| **Invocation** | `call_agent` maps to A2A `SendMessage` on `POST /api/v1/ai/a2a/agents/{registryId}` |
+| **Multi-turn** | Pass `task_id` from a prior response to continue the same A2A task |
+| **Tool credentials** | If the build requires integrations and no valid config exists, the runtime returns **`TASK_STATE_AUTH_REQUIRED`** with a link to **`/public/agent-config`** |
+
+Full install steps, tool parameters, and credential lifecycle: **[Invoke A2A agents from Claude](/agent-registry/invoke-a2a-from-claude)**.
+
 ## Agent Card contract for integrators
 
 Integrators and A2A-compatible clients should consume:
@@ -101,6 +115,9 @@ All routes require gateway authentication (session cookie or Bearer token / API 
 ## Related pages
 
 <CardGroup cols={2}>
+<Card title="Invoke from Claude" href="/agent-registry/invoke-a2a-from-claude" icon="plug">
+Phinite Connector install, tools, and credential setup.
+</Card>
 <Card title="Expose an agent" href="/agent-registry/expose-your-flow" icon="rocket">
 Create a test build and Agent Card.
 </Card>
