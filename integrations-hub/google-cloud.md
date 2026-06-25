@@ -11,7 +11,7 @@ Phinite's **Google Cloud** predefined tool lets workspace assistants call Google
 Manage Google Cloud Platform resources — Compute Engine VMs, Cloud Storage buckets and objects, Cloud SQL instances, Pub/Sub topics, and Firestore documents via GCP REST APIs.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

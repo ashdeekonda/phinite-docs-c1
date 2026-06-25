@@ -11,7 +11,7 @@ Phinite's **Tally** predefined tool lets workspace assistants call Tally APIs th
 Manage Tally forms, submissions, webhooks, workspaces, and organization members via the Tally REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

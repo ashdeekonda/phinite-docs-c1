@@ -16,11 +16,11 @@ description: "Agent Graphs, Intents, Tools, Builds, Triggers, Environments, and 
 
 ## Learn more
 
-- [Agent Graphs](/assistants/components/flows)
-- [Intents](/assistants/components/intents)
-- [Tools](/assistants/components/tools)
-- [Builds](/assistants/components/builds)
-- [Triggers](/assistants/components/triggers)
-- [Environments](/assistants/components/environments)
-- [Channels](/assistants/components/channels)
+- [Agent Graphs](/concepts/overview#agent-graphs)
+- [Intents](/concepts/overview#intents-and-triggers)
+- [Tools](/concepts/overview#tools)
+- [Builds](/concepts/overview#builds-and-environments)
+- [Triggers](/concepts/overview#intents-and-triggers)
+- [Environments](/concepts/overview#builds-and-environments)
+- [Channels](/concepts/overview#channels)
 - [Agent Registry (A2A)](/agent-registry/overview)

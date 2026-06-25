@@ -13,7 +13,7 @@ Agent Graphs are the heart of every Assistant. They define logic, decisions, and
 
 ## Key concepts
 
-- Nodes: Start, Master Agent, Child Agent, [A2A Agent](/agent-registry/registry-agent-nodes), Tool, End
+- Nodes: Start, Master Agent, Child Agent, [A2A Agent](/agent-registry/compose#registry-agent-nodes), Tool, End
 - RAG and Tools within Agent nodes
 - Variables and Conditional Edges
 

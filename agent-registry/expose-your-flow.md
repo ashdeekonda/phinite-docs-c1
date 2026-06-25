@@ -24,7 +24,7 @@ Associated **tools** referenced by the graph must be **published** before you ca
 
 ![Expose as Agent modal with hosted URL and Create New Build](/images/agent-registry/expose-modal.png)
 
-The modal explains that publishing an Agent Card enables the graph as a **hosted agent** callable via the **A2A protocol**. Use **See Agent builds** to jump to **[Agent Cards](/agent-registry/agent-cards)** for the project.
+The modal explains that publishing an Agent Card enables the graph as a **hosted agent** callable via the **A2A protocol**. Use **See Agent builds** to jump to **[Agent Cards](/agent-registry/publish#agent-cards-and-builds)** for the project.
 
 ## Wizard steps
 
@@ -83,19 +83,19 @@ Click **Attach Agent Card** to submit. The UI calls **`POST /a2a-registry?worksp
 
 On success:
 
-- Note the **Agent Registry ID** and **hosted A2A URL** (test builds use the registry ID in the path—see **[Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle)**).
+- Note the **Agent Registry ID** and **hosted A2A URL** (test builds use the registry ID in the path—see **[Endpoints & lifecycle](/agent-registry/publish#hosted-urls-and-lifecycle)**).
 - The success message indicates the build is available to **Test**.
 - Click **Go to Agent Registry** to open the workspace catalog.
 
-New registrations start with deployment status **`test`**. Promote to **`live`** from **[Agent Cards](/agent-registry/agent-cards)** when you are ready for production routing.
+New registrations start with deployment status **`test`**. Promote to **`live`** from **[Agent Cards](/agent-registry/publish#agent-cards-and-builds)** when you are ready for production routing.
 
 ## Related pages
 
 <CardGroup cols={2}>
-<Card title="Endpoints & lifecycle" href="/agent-registry/endpoints-and-lifecycle" icon="plug">
+<Card title="Endpoints & lifecycle" href="/agent-registry/publish#hosted-urls-and-lifecycle" icon="plug">
 Test vs live URL patterns and promotion.
 </Card>
-<Card title="Browse the catalog" href="/agent-registry/catalog" icon="layout-grid">
+<Card title="Browse the catalog" href="/agent-registry/compose#catalog" icon="layout-grid">
 Find and inspect registered agents.
 </Card>
 </CardGroup>

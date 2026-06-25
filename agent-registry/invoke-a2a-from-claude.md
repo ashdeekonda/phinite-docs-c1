@@ -6,7 +6,7 @@ icon: "plug"
 
 The **Phinite Connector** is a Claude plugin that connects your chat session to your organisation's **Agent Registry** over the **[Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/specification/)**. After you connect, Claude can **discover** published agents in your workspace, **call** them on your behalf, and guide you through **credential setup** when an agent needs Gmail, Slack, GitHub, or other integrations.
 
-This guide is for **end users** calling registry agents from Claude. To **publish** agents into the registry, see [Expose your agent graph](/agent-registry/expose-your-flow) and the [Agent Registry overview](/agent-registry/overview).
+This guide is for **end users** calling registry agents from Claude. To **publish** agents into the registry, see [Expose your agent graph](/agent-registry/publish#expose-wizard) and the [Agent Registry overview](/agent-registry/overview).
 
 This connector is separate from [Use Phinite Docs in AI Tools](/reference/ai-assistant), which searches Phinite documentation — not your workspace agents.
 
@@ -15,7 +15,7 @@ This connector is separate from [Use Phinite Docs in AI Tools](/reference/ai-ass
 
 Once installed and authenticated, Claude acts as a gateway to your org's A2A registry:
 
-- **Discover** agents by name, description, skills, and tags — the same metadata builders define in [Agent Cards](/agent-registry/agent-cards).
+- **Discover** agents by name, description, skills, and tags — the same metadata builders define in [Agent Cards](/agent-registry/publish#agent-cards-and-builds).
 - **Invoke** a chosen agent with natural-language requests.
 - **Continue** multi-turn conversations with the same agent using a **task ID** returned by the A2A runtime.
 - **Authorize** tool credentials through Phinite's public configuration page when an agent requires external services.
@@ -66,11 +66,11 @@ Use this when you want a broad view of what is registered. For targeted tasks, p
 | Parameter | Required | Description                                                                                             |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------- |
 | `query`   | Yes      | Describe what you need in plain language (for example, *send email to my team*)                         |
-| `status`  | No       | Filter by deployment status: `live` or `test` — see [Agent Cards & builds](/agent-registry/agent-cards) |
+| `status`  | No       | Filter by deployment status: `live` or `test` — see [Agent Cards & builds](/agent-registry/publish#agent-cards-and-builds) |
 | `limit`   | No       | Maximum results to return (default **5**)                                                               |
 
 
-Discovery behaviour mirrors the workspace [Agent Registry catalog](/agent-registry/catalog): builders control what you see through visibility, skills, tags, and test/live status.
+Discovery behaviour mirrors the workspace [Agent Registry catalog](/agent-registry/compose#catalog): builders control what you see through visibility, skills, tags, and test/live status.
 
 ### `call_agent`
 
@@ -91,7 +91,7 @@ Discovery behaviour mirrors the workspace [Agent Registry catalog](/agent-regist
 | `task_id`     | No       | Required for **continuing** a multi-turn conversation with the same agent                                                          |
 
 
-The underlying protocol is A2A `SendMessage` against the agent's hosted endpoint. See [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle) for URL patterns and auth.
+The underlying protocol is A2A `SendMessage` against the agent's hosted endpoint. See [Endpoints & lifecycle](/agent-registry/publish#hosted-urls-and-lifecycle) for URL patterns and auth.
 
 ## Workflows
 
@@ -183,7 +183,7 @@ Use only official **Claude** and **Phinite** applications. Grant access only to 
 | **Account confidentiality** | Keep your Phinite and third-party account credentials private                                                     |
 
 
-For builders: visibility (`public` vs `organisation`) and API key rules are documented in [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle).
+For builders: visibility (`public` vs `organisation`) and API key rules are documented in [Endpoints & lifecycle](/agent-registry/publish#hosted-urls-and-lifecycle).
 
 ## Related pages
 

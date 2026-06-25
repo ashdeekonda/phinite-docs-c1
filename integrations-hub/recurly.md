@@ -11,7 +11,7 @@ Phinite's **Recurly** predefined tool lets workspace assistants call Recurly API
 Manage a Recurly subscription-billing site — accounts, subscriptions, plans, invoices, transactions, and coupons — via the Recurly v3 API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

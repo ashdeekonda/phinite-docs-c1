@@ -18,12 +18,8 @@ In a few minutes, you’ll have a working assistant that can understand intents,
 You should already have:
 
 - A verified **Phinite account**
-- Access to a **workspace** (automatically created at signup)
-- The **Copilot** interface visible on your workspace home screen
-
-<Note>
-  If you haven’t signed up yet, start here → [Signing Up](/setup-account/signing-up)
-</Note>
+- Access to a **workspace**
+- The **Aura** or workspace home interface visible after login
 
 ---
 

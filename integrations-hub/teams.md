@@ -11,7 +11,7 @@ Phinite's **Microsoft Teams** predefined tool lets workspace assistants call Mic
 Send messages and approvals in Microsoft Teams, integrate Graph permissions,
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 <Note>
 This legacy Teams tool variant is superseded by the **Microsoft Teams** predefined tool. See [Microsoft Teams](/integrations-hub/microsoft-teams) for the recommended integration.

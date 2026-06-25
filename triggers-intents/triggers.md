@@ -5,8 +5,8 @@ description: "Start flows using webhooks or event-based triggers."
 
 ## Types
 
-- [Webhook Triggers](/triggers-intents/webhooks)
-- [Event-Based Triggers (Cron, Email)](/triggers-intents/event-triggers)
+- [Webhook Triggers](/triggers-intents/triggers-guide#event-based-triggers)
+- [Event-Based Triggers (Cron, Email)](/triggers-intents/triggers-guide#event-based-triggers)
 
 ## Best practices
 

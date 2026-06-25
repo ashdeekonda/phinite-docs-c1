@@ -11,7 +11,7 @@ Phinite's **Copper CRM** predefined tool lets workspace assistants call Copper C
 Manage a Copper CRM account — people, companies, leads, opportunities, tasks, projects, activities, plus account/config lookups — via the Copper REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

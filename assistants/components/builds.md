@@ -11,7 +11,7 @@ A **Build** is a versioned snapshot of an Assistant, including all its dependenc
   ![Descriptive alt text](/images/Build.png)
 </Frame>
 
-Builds package flows and tools for deployment to environments. See [Builds & Environments](/builds/overview).
+Builds package flows and tools for deployment to environments. See [Builds & Environments](/builds/guide#overview-and-lifecycle).
 
 ### Build Lifecycle
 

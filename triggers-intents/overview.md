@@ -10,5 +10,5 @@ description: "How interactions start and how conversations are understood."
 
 ## Learn more
 
-- [Intents](/triggers-intents/intents)
-- [Triggers](/triggers-intents/triggers)
+- [Intents](/triggers-intents/intents-guide)
+- [Triggers](/triggers-intents/triggers-guide)

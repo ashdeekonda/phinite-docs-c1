@@ -106,5 +106,5 @@ API-based triggers depend on workspace-level API keys for authentication.
 
 ## **Related Topics**
 
-- [Intents](/assistants/components/intents)
-- [Agent Graphs](/assistants/components/flows)
+- [Intents](/concepts/overview#intents-and-triggers)
+- [Agent Graphs](/concepts/overview#agent-graphs)

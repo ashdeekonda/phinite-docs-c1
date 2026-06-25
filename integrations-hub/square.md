@@ -11,7 +11,7 @@ Phinite's **Square** predefined tool lets workspace assistants call Square APIs 
 Manage Square payments, refunds, orders, catalog, customers, cards, invoices, payment links, subscriptions, inventory, and locations via the Square API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

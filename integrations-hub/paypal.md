@@ -11,7 +11,7 @@ Phinite's **PayPal** predefined tool lets workspace assistants call PayPal APIs 
 Manage PayPal operations — orders, payouts, invoices, products, billing plans, and subscriptions via the PayPal REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

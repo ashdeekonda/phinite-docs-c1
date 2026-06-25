@@ -158,6 +158,6 @@ They connect human intent with machine precision — through agent graph, tools,
 ## Next steps
 
 - Explore [Types of Assistants](/assistants/types)
-- Review [Assistant Components](/assistants/components)
+- Review [Assistant Components](/concepts/overview)
 - Build your first flow in [Graph Studio](/graph-studio/overview)
 - Expose agents for external discovery in [Agent Registry](/agent-registry/overview)

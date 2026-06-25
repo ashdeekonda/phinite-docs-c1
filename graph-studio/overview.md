@@ -117,7 +117,7 @@ Graph Studio is Phinite's visual workflow builder that enables you to create sop
 
 ## Related concepts
 
-- [**Building Assistants**](/assistants/overview): Learn how flows integrate with conversational and autonomous assistants
+- [**Building Assistants**](/concepts/overview#assistants): Learn how flows integrate with conversational and autonomous assistants
 - [**Agent Registry (A2A)**](/agent-registry/overview): Expose, discover, and compose external agents
 - [**DevStudio**](/devstudio/overview): Create custom tools that flows can utilize
 - [**Observability**](/observability/overview): Monitor flow performance and debug issues

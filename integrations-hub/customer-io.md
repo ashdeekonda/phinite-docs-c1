@@ -11,7 +11,7 @@ Phinite's **Customer.io** predefined tool lets workspace assistants call Custome
 Manage Customer.io people, events, devices, segments, campaigns, transactional messages, and message history via the Track and App APIs.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

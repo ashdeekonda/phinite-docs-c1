@@ -11,7 +11,7 @@ Phinite's **Close CRM** predefined tool lets workspace assistants call Close CRM
 Manage a Close CRM account — leads, contacts, opportunities, tasks, and activities (notes, calls, emails, SMS, meetings), plus statuses, users, custom fields, pipelines, and smart views — via the Close REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

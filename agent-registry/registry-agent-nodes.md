@@ -18,7 +18,7 @@ The browse panel title in the product reads **Agent Block**; documentation uses 
 | **Browse** | You know which registry agent to call | Master agent invokes the selected registration (fixed `a2aregistryid`, tools/env from that build) |
 | **Discovery** | The right specialist agent depends on context | Master agent searches the registry using saved filters and attaches matching agents automatically |
 
-Both modes require agents to be **exposed** in the registry with appropriate **visibility**, **skills**, and **tags**. See **[Expose your agent graph](/agent-registry/expose-your-flow)**.
+Both modes require agents to be **exposed** in the registry with appropriate **visibility**, **skills**, and **tags**. See **[Expose your agent graph](/agent-registry/publish#expose-wizard)**.
 
 ## Open the registry panel
 
@@ -32,7 +32,7 @@ The panel loads registry data via **`GET /a2a-registry?workspaceid=...&orgid=...
 
 In **Browse** mode:
 
-1. Search and filter agents (visibility, deployed status, MIME modes, tags)—same dimensions as **[Agent Registry catalog](/agent-registry/catalog)**.
+1. Search and filter agents (visibility, deployed status, MIME modes, tags)—same dimensions as **[Agent Registry catalog](/agent-registry/compose#catalog)**.
 2. Select an agent card from the list.
 3. Review the **Agent Card preview** (hosted URL, skills, build status).
 4. Click to **add** the agent to the canvas (or replace the current registry agent node).
@@ -109,10 +109,10 @@ When you save or publish the agent graph, registry agent nodes include:
 ## Related pages
 
 <CardGroup cols={2}>
-<Card title="Browse the catalog" href="/agent-registry/catalog" icon="layout-grid">
+<Card title="Browse the catalog" href="/agent-registry/compose#catalog" icon="layout-grid">
 Full workspace search and filters.
 </Card>
-<Card title="Endpoints & lifecycle" href="/agent-registry/endpoints-and-lifecycle" icon="plug">
+<Card title="Endpoints & lifecycle" href="/agent-registry/publish#hosted-urls-and-lifecycle" icon="plug">
 Hosted URLs and visibility at invoke time.
 </Card>
 <Card title="Agent node anatomy" href="/graph-studio/agent-node" icon="cube">

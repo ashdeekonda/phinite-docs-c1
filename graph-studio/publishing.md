@@ -257,11 +257,11 @@ In Graph Studio (local/dev environments), click **Configure Agent** in the canva
 Fill in Agent Build Config, optional export settings, and the **Agent Card** (skills, tags, visibility). Submit with **Attach Agent Card**.
 </Step>
 <Step title="Promote when ready">
-New builds start as **test**. Promote to **live** from **[Agent Cards](/agent-registry/agent-cards)** when production routing is approved.
+New builds start as **test**. Promote to **live** from **[Agent Cards](/agent-registry/publish#agent-cards-and-builds)** when production routing is approved.
 </Step>
 </Steps>
 
-Full wizard details: **[Expose your agent graph](/agent-registry/expose-your-flow)**. Hosted URL patterns: **[Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle)**.
+Full wizard details: **[Publish and endpoints — Expose wizard](/agent-registry/publish#expose-wizard)**. Hosted URL patterns: **[Hosted URLs and lifecycle](/agent-registry/publish#hosted-urls-and-lifecycle)**.
 
 ## Integration with other components
 
@@ -275,9 +275,9 @@ Full wizard details: **[Expose your agent graph](/agent-registry/expose-your-flo
 
 - [**Execution Logs**](/observability/logs): Monitor published flow performance
 - [**Usage Metrics**](/observability/usage-metrics): Track flow usage and performance
-- [**Error Tracking**](/support/error-codes): Identify and resolve issues
+- [**Error Tracking**](/support/troubleshooting#error-codes): Identify and resolve issues
 
 ### Environment management
 
-- [**Build Configuration**](/builds/configuration): Configure deployment settings
-- [**Lifecycle**](/builds/lifecycle): Recommended testing and deployment flow
+- [**Build Configuration**](/builds/guide#configuration): Configure deployment settings
+- [**Lifecycle**](/builds/guide#overview-and-lifecycle): Recommended testing and deployment flow

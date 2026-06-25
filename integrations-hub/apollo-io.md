@@ -11,7 +11,7 @@ Phinite's **Apollo.io** predefined tool lets workspace assistants call Apollo.io
 Enrich people and organizations, search prospects, and manage accounts, contacts, and deals via the Apollo.io API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

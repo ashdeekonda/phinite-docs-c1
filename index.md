@@ -1,6 +1,6 @@
 ---
 title: "Phinite Documentation"
-description: "Build assistants, workflows, tools, and integrations with enterprise controls."
+description: "Build assistants, agent graphs, tools, and integrations with enterprise controls."
 sidebarTitle: "Home"
 ---
 
@@ -8,121 +8,69 @@ sidebarTitle: "Home"
 
 <CardGroup cols={3}>
   <Card title="Welcome" icon="sparkles" href="/getting-started/about-phinite">About Phinite and this manual</Card>
-  <Card title="Getting Started" icon="rocket" href="/getting-started/quickstart">Set up your org and first workspace</Card>
-  <Card title="User Management" icon="users" href="/user-management/user-management">Invite users and manage roles</Card>
-  <Card title="User Roles" icon="id-badge" href="/user-management/user-roles">Capabilities by role (Admin, Developer, QA, Viewer)</Card>
-  <Card title="Workspace Overview" icon="grid" href="/setup-account/workspace-overview">Understand org → workspace → project</Card>
-  <Card title="Create Workspace" icon="plus-square" href="/setup-account/creating-workspace">Create your first workspace and project</Card>
-  <Card title="Sign Up" icon="user-plus" href="/setup-account/signing-up">Create and verify your account</Card>
-  <Card title="Invite Users" icon="envelope" href="/user-management/inviting-users">Add teammates and assign roles</Card>
-  <Card title="Access Controls" icon="shield" href="/user-management/access-controls">Security and permissions overview</Card>
-  
+  <Card title="What you can build" icon="lightbulb" href="/getting-started/what-you-can-build">Use cases and capabilities</Card>
+  <Card title="Workspace overview" icon="grid" href="/workspaces/workspace-overview">Org → workspace → project</Card>
+  <Card title="Quickstart" icon="rocket" href="/getting-started/quickstart">Build your first assistant</Card>
+  <Card title="User roles" icon="id-badge" href="/user-management/user-roles">Capabilities by role</Card>
+  <Card title="Invite users" icon="envelope" href="/user-management/inviting-users">Add teammates and assign roles</Card>
+  <Card title="Access controls" icon="shield" href="/user-management/access-controls">Security and permissions</Card>
   <Card title="Shortcuts" icon="bolt" href="/reference/shortcuts">Productivity shortcuts</Card>
   <Card title="FAQs" icon="circle-question" href="/reference/faqs">Common questions</Card>
-  
 </CardGroup>
 
-## Build assistants
+## Core concepts
 
 <CardGroup cols={3}>
-  <Card title="Assistant Overview" icon="bot" href="/assistants/overview">Types, components, and workflows</Card>
-  <Card title="Assistant Types" icon="layers" href="/assistants/types">Conversational, Email, Autonomous</Card>
-  <Card title="Components" icon="puzzle-piece" href="/assistants/components">Agent Graphs, Tools, Triggers, Channels, Environments</Card>
-  <Card title="Agent Graphs" icon="diagram-project" href="/assistants/components/flows">How flows power assistants</Card>
-  <Card title="Tools" icon="wrench" href="/assistants/components/tools">Extend assistants with actions</Card>
-  <Card title="Channels" icon="comments" href="/assistants/components/channels">Where assistants run</Card>
-  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">Expose, discover, and compose A2A agents</Card>
+  <Card title="Core concepts" icon="circle-info" href="/concepts/overview">Assistants, agent graphs, tools, triggers, channels, builds, registry</Card>
 </CardGroup>
 
-## Graph Studio (Workflow Builder)
+## Build
 
 <CardGroup cols={3}>
-  <Card title="Overview" icon="diagram-project" href="/graph-studio/overview">Visual workflow builder</Card>
-  <Card title="Methods" icon="magic" href="/graph-studio/methods">Copilot vs Manual methods</Card>
-  <Card title="Nodes" icon="cubes" href="/graph-studio/nodes">Start, Agents, Tool, End</Card>
-  <Card title="Connections" icon="share-nodes" href="/graph-studio/connections">Edges, handles, conditionals</Card>
-  <Card title="RAG Management" icon="book" href="/graph-studio/rag-management">Data sources and collections</Card>
-  <Card title="Publishing" icon="upload" href="/graph-studio/publishing">From draft to deployment</Card>
-  <Card title="Registry agent nodes" icon="share-nodes" href="/agent-registry/registry-agent-nodes">Browse and Discovery A2A agents on the canvas</Card>
+  <Card title="Graph Studio" icon="diagram-project" href="/graph-studio/overview">Design and publish agent graphs</Card>
+  <Card title="Publishing" icon="upload" href="/graph-studio/publishing">Deploy agent graphs; expose as A2A</Card>
+  <Card title="Methods" icon="magic" href="/graph-studio/methods">Aura vs manual canvas</Card>
+  <Card title="Agent node" icon="robot" href="/graph-studio/agent-node">Prompt, RAG, tools, variables</Card>
+  <Card title="DevStudio" icon="screwdriver-wrench" href="/devstudio/overview">Build and test tools</Card>
+  <Card title="Triggers & Intents" icon="bullseye" href="/triggers-intents/overview">How interactions start</Card>
 </CardGroup>
 
 ## Agent Registry (A2A)
 
 <CardGroup cols={3}>
-  <Card title="Overview" icon="circle-info" href="/agent-registry/overview">Catalog, Agent Cards, and A2A protocol concepts</Card>
-  <Card title="Invoke from Claude" icon="plug" href="/agent-registry/invoke-a2a-from-claude">Phinite Connector — discover and call agents</Card>
-  <Card title="Expose an agent" icon="rocket" href="/agent-registry/expose-your-flow">Register a published graph as an external agent</Card>
-  <Card title="Browse the catalog" icon="layout-grid" href="/agent-registry/catalog">Search and filter workspace agents</Card>
-  <Card title="Registry agent nodes" icon="share-nodes" href="/agent-registry/registry-agent-nodes">Attach agents in Browse or Discovery mode</Card>
-  <Card title="Agent Cards & builds" icon="layers" href="/agent-registry/agent-cards">Test/live builds and Push To Prod</Card>
-  <Card title="Endpoints & lifecycle" icon="plug" href="/agent-registry/endpoints-and-lifecycle">Hosted URLs, auth, and promotion</Card>
-  <Card title="Glossary" icon="book-open" href="/agent-registry/glossary">A2A terms, MIME modes, and UI labels</Card>
+  <Card title="Overview" icon="circle-info" href="/agent-registry/overview">Catalog, Agent Cards, A2A protocol</Card>
+  <Card title="Publish and endpoints" icon="rocket" href="/agent-registry/publish">Expose wizard, builds, hosted URLs</Card>
+  <Card title="Compose on canvas" icon="share-nodes" href="/agent-registry/compose">Browse, Discovery, catalog</Card>
+  <Card title="Invoke from Claude" icon="plug" href="/agent-registry/invoke-a2a-from-claude">Phinite Connector</Card>
 </CardGroup>
 
-## DevStudio (Tool Builder)
+## Connect
 
 <CardGroup cols={3}>
-  <Card title="Overview" icon="screwdriver-wrench" href="/devstudio/overview">Build and test tools</Card>
-  <Card title="Methods" icon="lightbulb" href="/devstudio/methods">Copilot and manual coding</Card>
-  <Card title="Tool Types" icon="gears" href="/devstudio/types">Custom vs prebuilt integrations</Card>
-  <Card title="Prebuilt Integrations" icon="plug" href="/devstudio/prebuilt-tools">Gmail, Sheets, Jira/Zendesk</Card>
-  <Card title="Versioning" icon="code-branch" href="/devstudio/versioning">Draft, publish, rollback</Card>
-  <Card title="Testing Tools" icon="flask" href="/devstudio/testing-tools">Run and validate tools</Card>
+  <Card title="Connect overview" icon="plug" href="/connect/overview">Channels vs Integrations Hub</Card>
+  <Card title="Channels guide" icon="comments" href="/channels/guide">Webchat, WhatsApp, Slack, Teams, Twilio, email</Card>
+  <Card title="Integrations Hub" icon="puzzle-piece" href="/integrations-hub/overview">Prebuilt integration setup</Card>
 </CardGroup>
 
-## Triggers & Intents
+## Ship
 
 <CardGroup cols={3}>
-  <Card title="Overview" icon="bullseye" href="/triggers-intents/overview">How interactions start</Card>
-  <Card title="Intents" icon="comment-dots" href="/triggers-intents/intents">Detect user intent</Card>
-  <Card title="Triggers" icon="play" href="/triggers-intents/triggers">Webhooks and event triggers</Card>
-  <Card title="Create Intents" icon="wand-magic-sparkles" href="/triggers-intents/creating-intents">Define and test intents</Card>
-  <Card title="Prompt Training" icon="message" href="/triggers-intents/prompt-training">Train prompts for accuracy</Card>
-  <Card title="Testing Intents" icon="vial" href="/triggers-intents/testing-intents">Validate recognition quality</Card>
+  <Card title="Builds and environments" icon="server" href="/builds/guide">Lifecycle, publishing, configuration, Dev/UAT/Prod</Card>
 </CardGroup>
 
-## Builds & Environments
+## Operate
 
 <CardGroup cols={3}>
-  <Card title="Overview" icon="server" href="/builds/overview">Build and deploy lifecycle</Card>
-  <Card title="Lifecycle" icon="recycle" href="/builds/lifecycle">From draft to deployed</Card>
-  <Card title="Publishing" icon="cloud-arrow-up" href="/builds/publishing">Publish flows and tools</Card>
-  <Card title="Configuration" icon="sliders" href="/builds/configuration">Build settings</Card>
-  <Card title="Environment Types" icon="diagram-project" href="/builds/environments">Dev, UAT, Prod</Card>
-  <Card title="Agent Cards & builds" icon="layers" href="/agent-registry/agent-cards">Promote registry builds to live</Card>
+  <Card title="Observability" icon="chart-line" href="/observability/overview">Metrics, logs, filtering</Card>
+  <Card title="Billing" icon="receipt" href="/observability/billing">Costs and allocation</Card>
+  <Card title="Troubleshooting" icon="life-ring" href="/support/troubleshooting">Errors, builds, environments, support</Card>
 </CardGroup>
 
-## Channels & Integrations
+## Reference
 
 <CardGroup cols={3}>
-  <Card title="Overview" icon="comments" href="/channels/overview">Supported channels and setup</Card>
-  <Card title="Supported Channels" icon="list" href="/channels/supported">Webchat, WhatsApp, Slack/Teams, Twilio, Email</Card>
-  <Card title="Integrations Hub" icon="plug" href="/integrations-hub/overview">Prebuilt integrations and setup guides</Card>
-  <Card title="Webchat" icon="message" href="/channels/webchat">Embed chat on your site</Card>
-  <Card title="WhatsApp" icon="whatsapp" href="/channels/whatsapp">Configure WhatsApp channel</Card>
-  <Card title="Slack/Teams" icon="hashtag" href="/channels/slack-teams">Connect Slack or Teams</Card>
-  <Card title="Twilio" icon="phone" href="/channels/twilio">Voice with Twilio</Card>
-  <Card title="Email" icon="envelope" href="/channels/email">Email channel setup</Card>
-</CardGroup>
-
-## Observability & Billing
-
-<CardGroup cols={3}>
-  <Card title="Overview" icon="chart-line" href="/observability/overview">Monitor performance and errors</Card>
-  <Card title="Usage Metrics" icon="chart-bar" href="/observability/usage-metrics">Sessions, tokens, telephony</Card>
-  <Card title="Logs" icon="scroll" href="/observability/logs">Timeline, decisions, variables</Card>
-  <Card title="Filtering" icon="filter" href="/observability/filtering">Slice data and search</Card>
-  <Card title="Billing" icon="receipt" href="/observability/billing">Track costs and allocation</Card>
-</CardGroup>
-
-## Reference & Support
-
-<CardGroup cols={3}>
-  <Card title="AI Assistant (MCP)" icon="robot" href="/reference/ai-assistant">Connect Phinite Docs to Cursor, VS Code, or Claude</Card>
+  <Card title="AI Assistant (MCP)" icon="robot" href="/reference/ai-assistant">Phinite Docs in Cursor, VS Code, or Claude</Card>
   <Card title="API Reference" icon="terminal" href="/reference/api">Authenticate and call APIs</Card>
-  <Card title="Glossary" icon="book-open" href="/reference/glossary">Key terms and concepts</Card>
-  <Card title="Release Notes" icon="clipboard-list" href="/reference/release-notes">What’s new</Card>
-  <Card title="Error Codes" icon="triangle-exclamation" href="/support/error-codes">Common errors and fixes</Card>
-  <Card title="Build Failures" icon="xmark" href="/support/build-failures">Troubleshooting builds</Card>
-  <Card title="Contact Support" icon="life-ring" href="/support/contact">Get help</Card>
+  <Card title="Glossary" icon="book-open" href="/reference/glossary">Key terms</Card>
+  <Card title="Release Notes" icon="clipboard-list" href="/reference/release-notes">What's new</Card>
 </CardGroup>

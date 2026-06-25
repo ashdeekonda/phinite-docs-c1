@@ -131,4 +131,4 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
 - [Graph Studio](/graph-studio/overview)
 - [Agent Registry (A2A)](/agent-registry/overview)
 - [RBAC and Roles](/user-management/user-roles)
-- [Integrations and Environments](/channels/overview)
+- [Integrations and Environments](/channels/guide)

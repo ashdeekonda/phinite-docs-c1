@@ -20,7 +20,7 @@ Phinite integrations fall into two surfaces:
 Channel docs cover assistant deployment and inbound/outbound messaging on each surface. Predefined tools with the same name (e.g. WhatsApp) have separate API documentation under Predefined Tools.
 
 <CardGroup cols={3}>
-  <Card title="Email" icon="envelope" href="/channels/email">
+  <Card title="Email" icon="envelope" href="/channels/guide#email">
     Configure email channel for inbound/outbound message handling.
   </Card>
 
@@ -28,19 +28,19 @@ Channel docs cover assistant deployment and inbound/outbound messaging on each s
     AI chat actions and conversational AI integration.
   </Card>
 
-  <Card title="Slack" icon="slack" href="/channels/slack">
+  <Card title="Slack" icon="slack" href="/channels/guide#slack">
     Connect Slack as a conversational channel.
   </Card>
 
-  <Card title="Microsoft Teams" icon="microsoft" href="/channels/teams">
+  <Card title="Microsoft Teams" icon="microsoft" href="/channels/guide#teams">
     Connect your agentic chatbot to Microsoft Teams.
   </Card>
 
-  <Card title="Twilio Voice" icon="phone" href="/channels/twilio">
+  <Card title="Twilio Voice" icon="phone" href="/channels/guide#twilio">
     Connect Twilio for voice assistants.
   </Card>
 
-  <Card title="WhatsApp" icon="whatsapp" href="/channels/whatsapp">
+  <Card title="WhatsApp" icon="whatsapp" href="/channels/guide#whatsapp">
     Connect WhatsApp for conversational assistants.
   </Card>
 

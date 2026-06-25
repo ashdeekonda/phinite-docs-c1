@@ -11,7 +11,7 @@ Phinite's **Facebook Messenger** predefined tool lets workspace assistants call 
 Send messages and manage a Facebook Messenger bot via the Messenger Platform — text, attachments, quick replies, templates, sender actions, user profile, Messenger Profile config, and handover protocol.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

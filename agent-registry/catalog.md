@@ -60,7 +60,7 @@ Each card typically shows:
 - Deployment badge (**Test** or **Live**)
 - Visibility (**Public** or **Organisation**)
 - Skills summary and discoverability tags
-- Hosted **A2A URL** (live builds omit the registry ID in the path—see **[Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle)**)
+- Hosted **A2A URL** (live builds omit the registry ID in the path—see **[Endpoints & lifecycle](/agent-registry/publish#hosted-urls-and-lifecycle)**)
 
 ![Agent detail with skills, endpoint, and build information](/images/agent-registry/registry-detail.png)
 
@@ -85,10 +85,10 @@ Optional query params supported by the API include `flowid`, `visibility`, `tag`
 ## Related pages
 
 <CardGroup cols={2}>
-<Card title="Expose an agent" href="/agent-registry/expose-your-flow" icon="rocket">
+<Card title="Expose an agent" href="/agent-registry/publish#expose-wizard" icon="rocket">
 Create a new registry entry from Graph Studio.
 </Card>
-<Card title="Registry agent nodes" href="/agent-registry/registry-agent-nodes" icon="share-nodes">
+<Card title="Registry agent nodes" href="/agent-registry/compose#registry-agent-nodes" icon="share-nodes">
 Attach catalog agents on the canvas (Browse mode).
 </Card>
 </CardGroup>

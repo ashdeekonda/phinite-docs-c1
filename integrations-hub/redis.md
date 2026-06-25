@@ -11,7 +11,7 @@ Phinite's **Redis** predefined tool lets workspace assistants call Redis APIs th
 Run Redis operations — strings, hashes, lists, sets, sorted sets, pub/sub, TTL management, and server info via the Redis protocol.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

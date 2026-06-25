@@ -11,7 +11,7 @@ Phinite's **Gmail** predefined tool lets workspace assistants call Gmail APIs th
 Read, search, draft, send, and reply to emails...
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

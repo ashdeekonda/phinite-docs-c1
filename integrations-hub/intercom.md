@@ -11,7 +11,7 @@ Phinite's **Intercom** predefined tool lets workspace assistants call Intercom A
 Manage Intercom contacts, companies, conversations, notes, tags, admins, and help-center articles via the Intercom REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

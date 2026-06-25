@@ -97,5 +97,5 @@ You can test your intent directly within the console before deployment.
 
 ## Related Topics
 
-- [Agent Graphs](/assistants/components/flows)
-- [Triggers](/assistants/components/triggers)
+- [Agent Graphs](/concepts/overview#agent-graphs)
+- [Triggers](/concepts/overview#intents-and-triggers)

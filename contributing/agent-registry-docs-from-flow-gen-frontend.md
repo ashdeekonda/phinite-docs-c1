@@ -8,18 +8,16 @@ Keep the **Agent Registry (A2A)** module aligned with the product: expose wizard
 
 ## Published doc map
 
-Registered in **`docs.json`** under **Agent Registry (A2A)**:
+Registered in **`docs.json`** under **7. Agent Registry (A2A)**:
 
 | Page | Path | Audience |
 | ---- | ---- | -------- |
-| Overview | `agent-registry/overview` | Concepts, workflow, terminology summary |
+| Overview | `agent-registry/overview` | Concepts, workflow, terminology (incl. former glossary) |
+| Publish and endpoints | `agent-registry/publish` | Expose wizard, Agent Cards, hosted URLs |
+| Compose on canvas | `agent-registry/compose` | Registry agent nodes, catalog |
 | Invoke from Claude | `agent-registry/invoke-a2a-from-claude` | Phinite Connector: install, tools, credentials |
-| Expose an agent | `agent-registry/expose-your-flow` | Three-step Expose wizard |
-| Registry agent nodes | `agent-registry/registry-agent-nodes` | Browse vs Discovery on canvas |
-| Browse the catalog | `agent-registry/catalog` | Workspace search and filters |
-| Agent Cards & builds | `agent-registry/agent-cards` | Test/live builds, Push To Prod |
-| Endpoints & lifecycle | `agent-registry/endpoints-and-lifecycle` | URLs, auth, registry API |
-| Glossary | `agent-registry/glossary` | Industry terms, MIME modes, UI labels |
+
+Legacy paths (`expose-your-flow`, `agent-cards`, `catalog`, `glossary`, etc.) redirect to anchors on the consolidated pages above.
 
 Cross-links: **`graph-studio/publishing.md`**, **`graph-studio/agent-node.md`**, **`index.md`**.
 

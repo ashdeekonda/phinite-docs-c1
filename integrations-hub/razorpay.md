@@ -11,7 +11,7 @@ Phinite's **Razorpay** predefined tool lets workspace assistants call Razorpay A
 Manage Razorpay orders, payments, refunds, customers, items, and settlements via the Razorpay REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

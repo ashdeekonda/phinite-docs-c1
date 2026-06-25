@@ -70,5 +70,5 @@ The AI will return:
 
 ## Related Topics
 
-- [Agent Graphs](/assistants/components/flows)
-- [Triggers](/assistants/components/triggers)
+- [Agent Graphs](/concepts/overview#agent-graphs)
+- [Triggers](/concepts/overview#intents-and-triggers)

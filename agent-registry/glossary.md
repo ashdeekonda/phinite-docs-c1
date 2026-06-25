@@ -71,10 +71,10 @@ Install the connector, discover agents, and manage credentials.
 <Card title="Overview" href="/agent-registry/overview" icon="circle-info">
 End-to-end Agent Registry concepts and workflow.
 </Card>
-<Card title="Endpoints & lifecycle" href="/agent-registry/endpoints-and-lifecycle" icon="plug">
+<Card title="Endpoints & lifecycle" href="/agent-registry/publish#hosted-urls-and-lifecycle" icon="plug">
 Hosted URL patterns, test vs live, and promotion.
 </Card>
-<Card title="Registry agent nodes" href="/agent-registry/registry-agent-nodes" icon="share-nodes">
+<Card title="Registry agent nodes" href="/agent-registry/compose#registry-agent-nodes" icon="share-nodes">
 Browse vs Discovery on the canvas.
 </Card>
 <Card title="Platform glossary" href="/reference/glossary" icon="book">

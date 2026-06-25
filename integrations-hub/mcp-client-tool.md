@@ -11,7 +11,7 @@ Phinite's **MCP Client** predefined tool lets workspace assistants call MCP Clie
 Dynamically proxy any tool exposed by a remote MCP server over SSE or Streamable HTTP transport with optional authentication.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 <Note>
 MCP Client connects agents to external MCP servers dynamically. Ensure the endpoint is reachable from Phinite and uses a supported transport.

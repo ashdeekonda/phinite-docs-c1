@@ -11,7 +11,7 @@ Phinite's **Instagram** predefined tool lets workspace assistants call Instagram
 Manage an Instagram Business or Creator account — profile, media publishing, comments, insights, hashtags, stories, and business discovery via the Instagram Graph API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

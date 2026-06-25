@@ -11,7 +11,7 @@ Phinite's **Slack** predefined tool lets workspace assistants call Slack APIs th
 Send and manage Slack messages, reactions, channels, users, scheduled messages, and pins via the Slack Web API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

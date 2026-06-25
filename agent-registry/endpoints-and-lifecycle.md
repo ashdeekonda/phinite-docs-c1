@@ -37,7 +37,7 @@ Each expose action creates an **A2A registry** row with deployment status **`tes
 
 ### Promote to live
 
-From **[Agent Cards](/agent-registry/agent-cards)**, select a test build and use **Push To Prod** (promote flow). The app calls:
+From **[Agent Cards](/agent-registry/publish#agent-cards-and-builds)**, select a test build and use **Push To Prod** (promote flow). The app calls:
 
 ```
 PUT /api/v1/a2a-registry/{a2aregistryid}/promote-live
@@ -81,7 +81,7 @@ Integrators and A2A-compatible clients should consume:
 - **Discoverability tags** — for search and Discovery matching
 - **Hosted URL** — test vs live pattern above
 
-See the **[Agent Registry glossary](/agent-registry/glossary)** for supported MIME types.
+See the **[Agent Registry glossary](/agent-registry/overview#terminology)** for supported MIME types.
 
 Official protocol details: **[A2A protocol specification](https://a2a-protocol.org/latest/specification/)**.
 
@@ -118,10 +118,10 @@ All routes require gateway authentication (session cookie or Bearer token / API 
 <Card title="Invoke from Claude" href="/agent-registry/invoke-a2a-from-claude" icon="plug">
 Phinite Connector install, tools, and credential setup.
 </Card>
-<Card title="Expose an agent" href="/agent-registry/expose-your-flow" icon="rocket">
+<Card title="Expose an agent" href="/agent-registry/publish#expose-wizard" icon="rocket">
 Create a test build and Agent Card.
 </Card>
-<Card title="Agent Cards" href="/agent-registry/agent-cards" icon="layers">
+<Card title="Agent Cards" href="/agent-registry/publish#agent-cards-and-builds" icon="layers">
 Promote test builds to live.
 </Card>
 </CardGroup>

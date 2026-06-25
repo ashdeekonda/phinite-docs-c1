@@ -11,7 +11,7 @@ Phinite's **ActiveCampaign** predefined tool lets workspace assistants call Acti
 Manage an ActiveCampaign account — contacts, tags, lists, deals, accounts, plus contact-tag/list associations and custom fields via the ActiveCampaign v3 API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

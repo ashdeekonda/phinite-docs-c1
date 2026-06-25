@@ -203,4 +203,4 @@ api_key = env_variables.get(
 
 ## Testing
 
-See [Testing Tools](/devstudio/testing-tools).
+See [Testing Tools](/devstudio/testing-and-versioning#testing-tools).

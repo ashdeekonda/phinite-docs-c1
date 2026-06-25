@@ -5,8 +5,8 @@ description: "Available channels for conversational and email assistants."
 
 ## Channels
 
-- [Web Chat](/channels/webchat)
-- [WhatsApp](/channels/whatsapp)
-- [Slack / Teams](/channels/slack-teams)
-- [Twilio Voice](/channels/twilio)
-- [Email](/channels/email)
+- [Web Chat](/channels/guide#webchat)
+- [WhatsApp](/channels/guide#whatsapp)
+- [Slack / Teams](/channels/guide#slack-and-teams)
+- [Twilio Voice](/channels/guide#twilio)
+- [Email](/channels/guide#email)
