@@ -3,8 +3,6 @@ title: "Model Keys (BYOK)"
 description: "Bring your own LLM API keys for Phinite Aura and agent nodes."
 ---
 
-# Model Keys (BYOK)
-
 **Model Keys** (sidebar label) let you add **bring-your-own-key (BYOK)** credentials for LLM providers used by **Phinite Aura**, agent nodes, and orchestration models.
 
 ## What it is for

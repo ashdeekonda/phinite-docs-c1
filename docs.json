@@ -646,14 +646,6 @@
                 ]
               },
               {
-                "group": "Variables",
-                "pages": [
-                  "graph-studio/types-of-session-variables",
-                  "graph-studio/input-variables-in-agent-node",
-                  "graph-studio/capture-variables-in-agent-node"
-                ]
-              },
-              {
                 "group": "Connections",
                 "pages": [
                   "graph-studio/connections",
@@ -670,6 +662,14 @@
                   "graph-studio/agent-node/rag",
                   "graph-studio/agent-node/tools",
                   "graph-studio/agent-node/variables"
+                ]
+              },
+              {
+                "group": "Variables",
+                "pages": [
+                  "graph-studio/types-of-session-variables",
+                  "graph-studio/input-variables-in-agent-node",
+                  "graph-studio/capture-variables-in-agent-node"
                 ]
               },
               {

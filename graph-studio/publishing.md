@@ -43,9 +43,8 @@ From the Graph Studio canvas header:
 | --- | --- | --- | --- | --- |
 | **SuperAdmin** | ✅ | ✅ | ✅ | ✅ |
 | **Admin** | ✅ | ✅ | ✅ | ✅ |
-| **Developer** | ✅ | ✅ | ❌ | ❌ |
-| **Tester** | ❌ | ❌ | ❌ | ❌ |
-| **Viewer** | ❌ | ❌ | ❌ | ❌ |
+| **Developer** | ✅ | ✅ | ✅ | ✅ |
+| **QA** | ❌ | ❌ | ❌ | ❌ |
 
 ### Environment-specific access
 
@@ -253,24 +252,24 @@ Phinite automatically manages version numbers:
 
 ## Expose as an A2A agent (Agent Registry)
 
-After you publish an agent graph, you can register it in the **[Agent Registry](/agent-registry/overview)** so other systems and agents can call it over the **A2A protocol**.
+After you publish an agent graph, you can register it in the [**Agent Registry**](/agent-registry/overview) so other systems and agents can call it over the **A2A protocol**.
 
 <Steps>
-<Step title="Publish the agent graph">
-Complete validation and publish at least one version to your target environment. Unpublished graphs cannot be exposed.
-</Step>
-<Step title="Open Configure Agent">
-In Graph Studio (local/dev environments), click **Configure Agent** in the canvas header, then **Create New Build** in the Expose modal.
-</Step>
-<Step title="Complete the Expose wizard">
-Fill in Agent Build Config, optional export settings, and the **Agent Card** (skills, tags, visibility). Submit with **Attach Agent Card**.
-</Step>
-<Step title="Promote when ready">
-New builds start as **test**. Promote to **live** from **[Agent Cards](/agent-registry/agent-cards)** when production routing is approved.
-</Step>
+  <Step title="Publish the agent graph">
+    Complete validation and publish at least one version to your target environment. Unpublished graphs cannot be exposed.
+  </Step>
+  <Step title="Open Configure Agent">
+    In Graph Studio (local/dev environments), click **Configure Agent** in the canvas header, then **Create New Build** in the Expose modal.
+  </Step>
+  <Step title="Complete the Expose wizard">
+    Fill in Agent Build Config, optional export settings, and the **Agent Card** (skills, tags, visibility). Submit with **Attach Agent Card**.
+  </Step>
+  <Step title="Promote when ready">
+    New builds start as **test**. Promote to **live** from [**Agent Cards**](/agent-registry/agent-cards) when production routing is approved.
+  </Step>
 </Steps>
 
-Full wizard details: **[Expose your agent graph](/agent-registry/expose-your-flow)**. End-to-end checklist: **[Publish journey](/agent-registry/publish-journey)**. Hosted URL patterns: **[Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle)**.
+Full wizard details: [**Expose your agent graph**](/agent-registry/expose-your-flow). Hosted URL patterns: [**Endpoints & lifecycle**](/agent-registry/endpoints-and-lifecycle).
 
 ## Integration with other components
 
