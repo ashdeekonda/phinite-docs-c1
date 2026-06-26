@@ -11,7 +11,7 @@ Phinite's **Google Sheets** predefined tool lets workspace assistants call Googl
 Read, write, and append spreadsheet rows, format ranges, and automate
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

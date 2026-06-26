@@ -3,7 +3,7 @@ title: "Registry agent nodes (Browse & Discovery)"
 description: "Attach Agent Registry agents to a master agent node in Browse mode or let Discovery auto-select agents by filter criteria."
 ---
 
-Registry **agent nodes** connect a **master agent node** (task orchestrator) to agents published in the **[Agent Registry](/agent-registry/overview)**. Unlike a standard agent node configured only with prompts and tools, a registry agent node references an **A2A registration**—either a **specific** agent (**Browse**) or a **dynamic set** matched at runtime (**Discovery**).
+Registry **agent nodes** connect a **master agent node** (task orchestrator) to agents published in the **[Agent Registry](/agent-registry/overview)**. In Graph Studio, open the **Browse / Discovery** panel on a registry agent node to pick a fixed agent (**Browse**) or define runtime filters (**Discovery**).
 
 ![Browse and Discovery toggle on the agent node panel](/images/agent-registry/agent-node-browse-discovery-toggle.png)
 

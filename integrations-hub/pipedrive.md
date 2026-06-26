@@ -11,7 +11,7 @@ Phinite's **Pipedrive** predefined tool lets workspace assistants call Pipedrive
 Manage Pipedrive CRM deals, persons, organizations, activities, notes, pipelines, leads, products, and deal-products via the Pipedrive REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

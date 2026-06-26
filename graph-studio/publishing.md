@@ -22,10 +22,19 @@ graph TD
     H --> I[Deployment Complete]
 ```
 
-## Access control and permissions
+## Studio toolbar
+
+From the Graph Studio canvas header:
+
+- **Save** — Save draft changes
+- **Save as Version** — Publish a named version of the agent graph (required before builds and expose)
+- **Show saved versions** — Open version history
+- **Expose Agent** — Register a published conversational/voice graph in Agent Registry (see [Expose an agent](/agent-registry/expose-your-flow))
+- **Test** / **Test published version** — Run the graph in the test panel
+- **Create a release build** / **Test a release build** — Jump to build workflows from the studio
 
 <Warning>
-  Publishing flows requires "Admin" or "SuperAdmin" role. Users with "Developer" role can save flows but cannot publish them to production environments.
+  **Save as Version** requires Developer role or higher. Assigning builds to UAT or Production may require Admin.
 </Warning>
 
 ### Role-based publishing permissions

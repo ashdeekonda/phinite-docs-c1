@@ -9,7 +9,7 @@ Autonomous assistants run background processes based on schedules or external ev
 
 ## Triggers
 
-- [Webhook Triggers](/triggers-intents/webhooks)
+- [Webhook and API Triggers](/triggers-intents/triggers/api-guide)
 - [Event-Based Triggers](/triggers-intents/event-triggers)
 
 ## Best practices

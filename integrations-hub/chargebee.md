@@ -11,7 +11,7 @@ Phinite's **Chargebee** predefined tool lets workspace assistants call Chargebee
 Manage Chargebee billing — customers, subscriptions, invoices, transactions, credit notes, and the product catalog (items / item prices) — via the Chargebee API v2.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

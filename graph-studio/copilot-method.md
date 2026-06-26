@@ -19,7 +19,7 @@ Aura translates a plain-language prompt into a draft canvas with nodes, edges, t
     </Tip>
   </Step>
   <Step title="Review the draft">
-    Copilot generates Start, Agent, Tool, and End nodes, connects edges, and proposes variables.
+    Phinite Aura generates Start, Agent, Tool, and End nodes, connects edges, and proposes variables.
 
     Validate assumptions and refine prompts, RAG settings, tools, and variables.
   </Step>

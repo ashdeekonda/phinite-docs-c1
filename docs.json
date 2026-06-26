@@ -153,6 +153,14 @@
     {
       "source": "/flowgen/agent-block/variables",
       "destination": "/graph-studio/agent-node/variables"
+    },
+    {
+      "source": "/setup-account/workspace-overview",
+      "destination": "/workspaces/workspace-overview"
+    },
+    {
+      "source": "/triggers-intents/webhooks",
+      "destination": "/triggers-intents/triggers/api-guide"
     }
   ],
   "navigation": {
@@ -166,7 +174,9 @@
               "getting-started/about-phinite",
               "getting-started/what-you-can-build",
               "getting-started/quickstart",
-              "workspaces/workspace-overview"
+              "workspaces/workspace-overview",
+              "workspaces/mcp-server",
+              "workspaces/model-keys"
             ]
           },
           {
@@ -206,13 +216,14 @@
             ]
           },
           {
-            "group": "3. Graph Studio (Workflow Builder)",
+            "group": "3. Graph Studio",
             "pages": [
               "graph-studio/overview",
               "graph-studio/publishing",
               {
                 "group": "Methods of Workflow Creation",
                 "pages": [
+                  "graph-studio/methods",
                   "graph-studio/copilot-method",
                   "graph-studio/manual-method"
                 ]
@@ -288,7 +299,6 @@
                   "devstudio/manual-coding"
                 ]
               },
-              "devstudio/copilot-tools",
               "devstudio/types",
               "devstudio/system-tool",
               "devstudio/custom-tools",
@@ -432,7 +442,7 @@
         ]
       },
       {
-        "tab": "Integrations Hub",
+        "tab": "Integrations",
         "groups": [
           {
             "group": "Overview",

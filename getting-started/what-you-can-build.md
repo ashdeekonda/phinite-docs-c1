@@ -42,7 +42,7 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
     ### Constraints
 
     - Requires pre-configured channels and knowledge stores
-    - Multi-turn reasoning relies on flow logic, not autonomy
+    - Multi-turn reasoning relies on agent graph logic, not full autonomy
 
     ---
   </Tab>
@@ -107,7 +107,7 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
     ### Constraints
 
     - Business logic orchestration only; not infra-level automation
-    - Requires preconfigured API keys and retry-safe flow design
+    - Requires preconfigured API keys and retry-safe agent graph design
 
     ---
   </Tab>
@@ -131,4 +131,4 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
 - [Graph Studio](/graph-studio/overview)
 - [Agent Registry (A2A)](/agent-registry/overview)
 - [RBAC and Roles](/user-management/user-roles)
-- [Integrations and Environments](/channels/overview)
+- [Integrations and channels](/channels/overview)

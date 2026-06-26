@@ -5,26 +5,13 @@ description: "Add and configure pre-packaged tools; reference for each tool and 
 
 ## Available integrations
 
-<Frame>
-  <img
-    src="/images/available-integrations.png"
-    alt="Descriptive alt text"
-    lightAlt="available integrations"
-    darkAlt="Descriptive alt text"
-    className="dark:hidden"
-  />
-  <img
-    src="/images/workspace-tools.png"
-    alt="Descriptive alt text"
-    lightAlt="available integrations"
-    darkAlt="Descriptive alt text"
-    className="hidden dark:block"
-  />
-</Frame>
+Configure predefined tools under **Integrations → Predefined tools** in the workspace sidebar. See the full catalog in [Integrations overview](/integrations-hub/overview).
 
-- [Gmail](/devstudio/prebuilt/gmail)
-- [Google Sheets](/devstudio/prebuilt/sheets)
-- [Jira & Zendesk](/devstudio/prebuilt/jira-zendesk)
+Legacy per-tool pages (Gmail, Slack, etc.) below describe connection fields; prefer the matching page under `integrations-hub/` when available.
+
+- [Gmail](/integrations-hub/gmail)
+- [Google Sheets](/integrations-hub/google-sheets)
+- [Jira](/integrations-hub/jira)
 
 ## Overview
 

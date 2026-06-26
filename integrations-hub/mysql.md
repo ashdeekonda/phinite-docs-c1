@@ -11,7 +11,7 @@ Phinite's **MySQL** predefined tool lets workspace assistants call MySQL APIs th
 Execute queries, manage tables and schema, and perform CRUD operations on a MySQL database via async connection.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

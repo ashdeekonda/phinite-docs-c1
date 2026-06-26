@@ -11,7 +11,7 @@ Phinite's **Brave Search** predefined tool lets workspace assistants call Brave 
 Run privacy-first web, news, and image searches with rich snippets,
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

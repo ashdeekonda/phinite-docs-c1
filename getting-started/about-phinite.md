@@ -68,8 +68,8 @@ Phinite supports a multi-role collaboration model so your entire team can work t
 ## Next Steps
 
 - [Quick Start](./quickstart)
-- [Workspace Overview](./workspaces/workspace-overview)
-- [Inviting Users](./user-management/inviting-users)
+- [Workspace Overview](/workspaces/workspace-overview)
+- [Inviting Users](/user-management/inviting-users)
 
 ---
 

@@ -11,7 +11,7 @@ Phinite's **Okta** predefined tool lets workspace assistants call Okta APIs thro
 Manage Okta users, groups, applications, user lifecycle, and system log events via the Okta Management API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

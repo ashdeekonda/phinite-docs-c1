@@ -3,7 +3,7 @@
 Assistants are the core of Phinite. Everything revolves around them.\
 They are intelligent, multi-skilled entities that automate conversations, workflows, and business operations across channels.
 
-An **Assistant** brings together multiple components — **Agent Graphs, Intents, Triggers, Tools, Environments, Builds, and Aurs** — to function as a cohesive unit.\
+An **Assistant** brings together **Agent Graphs, Intents, Triggers, Tools, Environments, Builds, and Phinite Aura** to function as a cohesive unit.
 Each component plays a distinct role in defining how the Assistant behaves, interacts, and executes tasks.
 
 ### Types of Assistants
@@ -40,6 +40,18 @@ An assistant is an AI-powered capability that handles user interactions, api, ba
 | Conversational | Real-time chat/voice | Intents, chat events | Web Chat, WhatsApp, Slack, Teams, Twilio |
 | Email | Asynchronous communication | Inbound email | Email |
 | Autonomous | Background automation | Schedules, webhooks | Custom APIs(Background Task, Api, Cron Job), Jira |
+
+## Assistant navigation (Build / Deploy / Monitor)
+
+When you open an assistant, the sidebar is organised in three sections:
+
+| Section | Items |
+| --- | --- |
+| **Build** | Overview, **Agent Graphs** (Graph Studio), **Tools** (Dev Studio), **Intents** (conversational/email) or **Triggers** (autonomous) |
+| **Deploy** | **Builds**, **Env. variables**, **Agent Cards** (conversational and voice) |
+| **Monitor** | **Observability** (sessions for this assistant), Evaluations (coming soon) |
+
+---
 
 ## 🧩 Core Architecture
 
@@ -159,5 +171,5 @@ They connect human intent with machine precision — through agent graph, tools,
 
 - Explore [Types of Assistants](/assistants/types)
 - Review [Assistant Components](/assistants/components)
-- Build your first flow in [Graph Studio](/graph-studio/overview)
+- Build your first agent graph in [Graph Studio](/graph-studio/overview)
 - Expose agents for external discovery in [Agent Registry](/agent-registry/overview)

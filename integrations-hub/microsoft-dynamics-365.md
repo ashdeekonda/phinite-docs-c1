@@ -11,7 +11,7 @@ Phinite's **Microsoft Dynamics 365** predefined tool lets workspace assistants c
 Manage Microsoft Dynamics 365 Business Central companies, customers, vendors, items, sales/purchase invoices, sales orders, employees, and general ledger entries via the Business Central API v2.0.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

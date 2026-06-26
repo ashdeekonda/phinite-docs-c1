@@ -6,19 +6,21 @@ icon: "envelope"
 
 ## Setup
 
+Configure email under **Integrations → Channels** in the workspace sidebar.
+
 <Frame>
   ![Email](/images/email.png)
 </Frame>
 
 <Steps>
+  <Step title="Open Integrations">
+    Workspace sidebar → **Integrations** → **Channels** tab.
+  </Step>
   <Step title="Connect provider">
-    Configure SMTP/IMAP or provider API.
+    Configure SMTP/IMAP or provider API for the email channel.
   </Step>
-  <Step title="Inbound routing">
-    Route inbound emails to your channel endpoint.
-  </Step>
-  <Step title="Assistant mapping">
-    Map inbound messages to assistants.
+  <Step title="Map to assistant">
+    Assign the channel to an assistant and build for your target environment.
   </Step>
 </Steps>
 

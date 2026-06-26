@@ -5,7 +5,14 @@ description: "Hosted URL patterns, test vs live builds, promotion, authenticatio
 
 ## Hosted A2A URLs
 
-External callers reach registered agents through the **API gateway** AI-core lane. The frontend builds URLs with the same rules as `buildA2aUrl` in the product:
+External callers reach registered agents through the **API gateway** AI-core lane. The canonical invoke path uses the **registry ID**:
+
+```
+POST /api/v1/ai/a2a/agents/{registryId}
+GET  /api/v1/ai/a2a/agents/{registryId}/.well-known/agent-card.json
+```
+
+The frontend also surfaces legacy URL shapes with `{flowId}` for some live/test builds (`buildA2aUrl` in the product):
 
 | Deployment status | URL pattern | Example shape |
 | ----------------- | ----------- | ------------- |
@@ -13,10 +20,11 @@ External callers reach registered agents through the **API gateway** AI-core lan
 | **Test** | `{gateway}/api/v1/ai/a2a/{flowId}/{registryId}` | Validation build tied to a specific registry row |
 
 ```text
-# Live
-https://app-dev.phinite.ai/api/v1/ai/a2a/{flowId}
+# Preferred (registry ID)
+https://app.phinite.ai/api/v1/ai/a2a/agents/{registryId}
 
-# Test
+# Legacy shapes (still shown in some UI copy)
+https://app-dev.phinite.ai/api/v1/ai/a2a/{flowId}
 https://app-dev.phinite.ai/api/v1/ai/a2a/{flowId}/{a2aregistryid}
 ```
 

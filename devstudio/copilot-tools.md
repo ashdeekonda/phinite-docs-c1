@@ -1,5 +1,5 @@
 ---
-title: "Copilot-Generated Tools"
+title: "Phinite Aura-Generated Tools"
 description: "Use prompt-based generation to scaffold tools quickly."
 ---
 

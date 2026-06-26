@@ -5,206 +5,155 @@ description: "Understand how workspaces organize assistants, tools, integrations
 
 # Workspace Overview
 
-A workspace is the central collaboration environment within Phinite. It brings together your assistants, tools, integrations, and data sources into a single, organized space.\
-When you log in, you land on the **Workspace Home** page, which can serve as your default dashboard or as the home page for a specific workspace
+A workspace is the central collaboration environment within Phinite. It brings together your assistants, tools, integrations, and collections in one place.
+
+When you log in, you land on **Workspace Home** — a dashboard of your assistants with search, templates, and a **How to ship** guide that opens onboarding journeys for conversational, autonomous, and Agent Registry workflows.
 
 > 1. Workspaces are typically created by the **Organization Owner (Super Admin)** and managed by **Admins**.
-> 2. Developers, Architects, and Testers can be added with controlled access through **Role-Based Access Control (RBAC)**.
+> 2. **Developers** and **QA** are added with controlled access through role-based permissions.
 
 <Info>
-  Workspaces help teams isolate projects, manage access levels, and reuse assets across assistants within a common environment.
+  Workspaces help teams isolate projects, manage access levels, and reuse assets across assistants.
 </Info>
 
 ---
 
 ## Workspace Home
 
-The workspace home provides a quick overview of your assistants, active copilots, and workspace-level activity.
+Workspace Home includes:
 
-It includes:
+- **My Assistants** and **Templates** tabs
+- Search across assistants
+- **New Assistant** (when permitted)
+- **How to ship** — opens guided journeys for building and deploying assistants
 
-- A grid or list of existing assistants
-- A co-pilot launcher to create or test a new assistant
-- Optional metrics and usage analytics for your plan
-
-<Note>
-  Depending on your workspace configuration, the home page can be customized to display activity logs, performance charts, or project summaries.
-</Note>
+Use **How to ship** beside the assistant tabs to walk through publish, channels, builds, and registry steps for your assistant type.
 
 ---
 
 ### Multi-Workspace Access
 
-From the global header, you can switch between multiple workspaces or create new ones if you have the required permissions.
+From the global header, switch between workspaces or create new ones if you have permission.
 
-Super Admins can create additional workspaces and assign Admins to manage them independently.
+Super Admins can create additional workspaces and assign Admins to manage them.
 
 ![Create Workspace Gi](/images/create_workspace.gif)
-
-<Check>
-  If you can view multiple workspaces in your dropdown, your organization supports multi-workspace collaboration.
-</Check>
 
 ---
 
 ## Sidebar Navigation
 
-Each workspace includes a left sidebar that acts as your main navigation panel. The following sections are available:
+The workspace left sidebar is your main navigation panel:
+
+| Section | What it does |
+| --- | --- |
+| **Workspace Home** | List and create assistants |
+| **Tools** | Workspace-level tools reusable across assistants |
+| **Agent Registry** | Browse, expose, and manage A2A Agent Cards |
+| **Integrations** | **Channels** and **Predefined tools** tabs |
+| **MCP Server** | Configure MCP servers for tools and expose flows |
+| **Datasources** | Manage **Collections** for RAG (page title: Collections) |
+| **API Keys** | Workspace API keys for triggers and external calls |
+| **Model Keys** | Bring-your-own-key (BYOK) for LLM providers |
+| **Observability** | **Sessions** list and session logs |
+| **Users** | Invite and manage members (Admins) |
+| **Billing & Usage** | Plan, usage, and invoices (Admins) |
+
+Evaluations appears under assistant **Monitor** in the product UI and is marked **Coming soon** at the workspace level.
+
+---
 
 ### Assistants
 
-Assistants are the core elements of a workspace. You can create and manage assistants of various types such as Conversational, Autonomous, or Email-based.
+Assistants are conversational, email, or autonomous agents. Each assistant opens its own sidebar with **Build**, **Deploy**, and **Monitor** sections:
 
-Each assistant can be opened in one of three environments:
+- **Build** — Overview, **Agent Graphs** (Graph Studio), **Tools** (Dev Studio), **Intents** or **Triggers** (by type)
+- **Deploy** — **Builds**, **Env. variables**, **Agent Cards** (conversational/voice)
+- **Monitor** — **Observability** (filtered to that assistant), Evaluations (coming soon)
 
-- **Graph Studio** – for visual workflow design
-- **DevStudio** – for logic, APIs, and custom tool development
-- **Copilot** – for building or editing flows through natural language instructions
-
-Assistants within a workspace share tools, integrations, and data sources.
-
-<Tip>
-  Use naming conventions and folder structures to group related assistants together for easier management.
-</Tip>
+Inside **Graph Studio**, use **Phinite Aura** (natural language) or manual editing to design agent graphs. Aura is not a separate app — it is the AI assistant panel in Graph Studio and Dev Studio.
 
 ---
 
 ### Workspace Tools
 
-Workspace Tools are reusable components that can be accessed by any assistant in the workspace.\
-These can include:
-
-- Code snippets
-- API connectors
-- Utility functions
-- Reusable workflows
-
-<Info>
-  Tools reduce redundancy and promote modular development across assistants.
-</Info>
+**Tools** at workspace scope are shared across assistants. Open an assistant's **Tools** list to attach them, or use **Dev Studio** to author and test tool logic.
 
 ---
 
 ### Integrations
 
-Integrations connect your workspace to external systems and communication channels.\
-There are two primary types:
+Open **Integrations** in the sidebar. Two tabs:
 
-1. **Predefined Integrations** – Services such as Jira, Gmail, or Salesforce
-2. **Channel Integrations** – Messaging and communication platforms such as WhatsApp, Microsoft Teams, or Slack
+1. **Channels** — Webchat, WhatsApp, Slack, Teams, Twilio, email, and related setup
+2. **Predefined tools** — Connectors such as Gmail, Jira, Salesforce, and the full catalog
 
-Once added, integrations can be authenticated and used directly within your assistant flows.
-
-<Note>
-  You can test integrations within the workspace before deploying to production environments.
-</Note>
+After you save a connection, predefined tools appear in Graph Studio's tool picker and in Dev Studio.
 
 ---
 
 ### Agent Registry
 
-**Agent Registry** is the workspace catalog of agents exposed over the **Agent-to-Agent (A2A) protocol**. From the sidebar, open **Agent Registry** when your organisation grants `workspace.sidebar.agent_registry`.
+**Agent Registry** is the workspace catalog of agents exposed over the **Agent-to-Agent (A2A)** protocol.
 
-Use it to:
-
-- **Expose** published agent graphs as hosted A2A endpoints
+- **Expose** published agent graphs as hosted endpoints
 - **Browse** organisation and public Agent Cards
-- **Compose** multi-agent flows with registry agent nodes in Graph Studio
+- **Compose** with registry agent nodes in Graph Studio (Browse or Discovery mode)
 
-See [Agent Registry overview](/agent-registry/overview) for the full workflow.
-
----
-
-### Data Sources (RAG Collections)
-
-Data Sources allow you to manage your workspace’s **knowledge base**.\
-They are used to provide context and domain-specific information to your assistants.
-
-Common formats include:
-
-- PDF, CSV, or text documents
-- Structured datasets or knowledge graphs
-- API-connected data endpoints
-
-You can organize data into folders or “collections” that can be referenced in assistant prompts or retrieval nodes.
+See [Agent Registry overview](/agent-registry/overview).
 
 ---
 
-### API Keys
+### Collections (Datasources)
 
-API Keys enable secure programmatic access to your workspace’s flows and assistants.
-
-You can:
-
-- Generate workspace-level API keys
-- Trigger **Agent Graph as a Service** from external applications
-- Regenerate or revoke keys as needed
-
-<Warning>
-  Treat API keys as confidential credentials. Revoking a key immediately disables all external requests using that key.
-</Warning>
+The sidebar label is **Datasources**; the page title is **Collections**. Upload and organise knowledge for RAG — PDFs, text, and connected sources — then reference collections in agent nodes.
 
 ---
 
-### Users
+### API Keys and Model Keys
 
-Only **Admins** and **Organization Owners** can manage workspace members.\
-Users can be invited, assigned roles, or removed at any time.
-
-Roles include:
-
-- **Super Admin** – Full platform access
-- **Admin** – Workspace management, billing, and user access
-- **Developer** – Build and test assistants and tools
-- **Tester (QA)** – Validate workflows and review logs
-
-<Info>
-  RBAC ensures users can only access the modules and environments relevant to their role.
-</Info>
+- **API Keys** — Trigger agent graphs, call platform APIs, and authenticate webhooks
+- **Model Keys** — BYOK credentials for LLM providers used by Aura and agent nodes
 
 ---
 
-### Billing
+### Users and roles
 
-Billing is available to **Organization Owners** and includes:
-
-- Current plan details
-- Usage metrics (tokens, compute, voice minutes, API calls)
-- Invoices and payment methods
-
-<Note>
-  Usage data from billing integrates with observability and reporting modules for detailed analytics.
-</Note>
+**Users** (Admins) invite members and assign **Admin**, **Developer**, or **QA** roles. See [User roles](/user-management/user-roles).
 
 ---
 
-### Reports
+### Billing & Usage
 
-Reports provide visibility into workspace performance, including:
-
-- Session activity across assistants
-- Token and compute consumption
-- Assistant-level execution summaries
-
-You can filter reports by environment (Dev, UAT, or Production) to analyze trends and optimize resource usage.
+**Billing & Usage** shows plan details, Aura and token consumption, telephony usage, and invoices.
 
 ---
 
-## Bottom Navigation
+### Observability
 
-At the bottom of the sidebar, you can access:
+**Observability** opens the **Sessions** list — every assistant run with filters by channel, environment, and assistant. Drill into session logs for timeline, decision points, and variables.
 
-- **Workspace Settings** – Manage workspace name, environment configuration, and preferences
-- **Documentation** – Direct link to Phinite documentation
-- **User Profile** – Manage personal details, preferences, and sign-out
+---
+
+## Header utilities
+
+The top header includes **Docs**, **Support**, **Feedback**, and theme toggle. Documentation opens [docs.phinite.ai](https://docs.phinite.ai).
+
+---
+
+## Bottom navigation
+
+At the bottom of the sidebar:
+
+- **Workspace Settings** — Workspace name and preferences
+- **Profile** — Personal settings and sign-out
 
 ---
 
 ## Summary
 
-A workspace in Phinite is your team’s shared environment where assistants, integrations, and data sources coexist.\
-It provides governance, modularity, and collaboration, allowing each role to focus on their respective responsibilities while maintaining a unified automation ecosystem.
+A workspace is your team's shared environment for assistants, integrations, collections, and observability — with RBAC so each role sees the right modules.
 
 <Tip>
-  Use one workspace per functional team or business unit to maintain clarity, security, and scalable growth.
+  Use one workspace per functional team or business unit for clarity and security.
 </Tip>

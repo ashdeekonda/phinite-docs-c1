@@ -11,7 +11,7 @@ Phinite's **ServiceNow** predefined tool lets workspace assistants call ServiceN
 Manage ServiceNow incidents, change requests, problems, users, knowledge articles, CMDB CIs, and any table record via the Table and Aggregate APIs.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 
 ## What this integration enables

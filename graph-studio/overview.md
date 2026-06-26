@@ -12,14 +12,26 @@ Graph Studio is Phinite's visual workflow builder that enables you to create sop
     Design precise workflows by dragging and connecting nodes with full control over execution order.
   </Card>
 
-  <Card title="Prompt-based creation (Aura)" icon="sparkles" href="/graph-studio/copilot-method">
-    Describe your workflow goal in natural language and let AI generate the initial workflow structure, prompt, tools and variables.
+  <Card title="Phinite Aura method" icon="sparkles" href="/graph-studio/copilot-method">
+    Describe your goal in natural language and let Phinite Aura generate the initial agent graph, prompts, tools, and variables.
   </Card>
 
   <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">
     Expose published graphs as external agents, browse the catalog, and attach registry agents on the canvas.
   </Card>
 </CardGroup>
+
+### Studio left rail
+
+Inside Graph Studio, the fixed left sidebar includes:
+
+- **Phinite Aura** — Natural-language graph editing
+- **Agent Graphs** — Graph list for this assistant
+- **Saved Versions** — Version history
+- **Variables** — Session and graph variables
+- **Integrations** — Quick access to connected channels and tools
+
+---
 
 ## Key capabilities
 

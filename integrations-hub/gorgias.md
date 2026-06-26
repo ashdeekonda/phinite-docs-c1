@@ -11,7 +11,7 @@ Phinite's **Gorgias** predefined tool lets workspace assistants call Gorgias API
 Manage Gorgias helpdesk resources — tickets, ticket messages, customers, users, tags, and views — via the Gorgias REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

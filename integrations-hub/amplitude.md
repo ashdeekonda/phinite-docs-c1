@@ -10,7 +10,7 @@ Phinite's **Amplitude** predefined tool lets workspace assistants call Amplitude
 
 Manage Amplitude event tracking, analytics queries, taxonomy, cohorts, and user lookups via the Amplitude REST APIs.
 
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 
 ## What this integration enables
 

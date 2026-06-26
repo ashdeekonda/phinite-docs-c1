@@ -7,7 +7,7 @@ description: "Configure build settings, dependencies, and environment-specific o
 
 - Version notes and change summaries
 - Target environments (Dev, UAT, Prod)
-- Tool and flow inclusion
+- Tool and agent graph inclusion (from **Save as Version** snapshots)
 
 ## Environment-specific
 

@@ -11,7 +11,7 @@ Phinite's **Jira** predefined tool lets workspace assistants call Jira APIs thro
 Create, search, update, and transition Jira issues, add comments, and
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

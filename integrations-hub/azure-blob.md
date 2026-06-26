@@ -11,7 +11,7 @@ Phinite's **Azure Blob Storage** predefined tool lets workspace assistants call 
 Manage Azure Blob Storage containers and blobs via the Azure Blob Storage REST API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

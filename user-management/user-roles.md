@@ -17,9 +17,9 @@ Workspace roles control what someone can do **in that workspace**. The **Summary
 | Create, rename, or **delete the workspace**                                              | Yes         | No    | No        | No  |
 | **Change** subscription or payment methods                                               | Yes         | No    | No        | No  |
 | Create assistants and workspace-level tools, integrations, data sources, and API keys    | Yes         | Yes   | Yes       | No  |
-| Edit flows in **Graph Studio**, tools in **Dev Studio**, intents, triggers, environments | Yes         | Yes   | Yes       | No  |
-| **Publish** flows and tools                                                              | Yes         | Yes   | Yes       | No  |
-| **Run tests** (flows, intents, builds, Dev Studio tools)                                 | Yes         | Yes   | Yes       | Yes |
+| Edit agent graphs in **Graph Studio**, tools in **Dev Studio**, intents, triggers, environments | Yes         | Yes   | Yes       | No  |
+| **Save as Version** (agent graphs and tools)                                                    | Yes         | Yes   | Yes       | No  |
+| **Run tests** (agent graphs, intents, builds, Dev Studio tools)                                  | Yes         | Yes   | Yes       | Yes |
 | View **reports**, **usage**, and billing information                                     | Yes         | Yes   | Yes       | Yes |
 
 
@@ -56,9 +56,9 @@ Which items appear in the **workspace** left sidebar.
 | Data sources  | Yes         | Yes   | Yes       | Yes |
 | API keys      | Yes         | Yes   | Yes       | Yes |
 | Users         | Yes         | Yes   | —         | —   |
-| Usage         | Yes         | Yes   | Yes       | Yes |
+| Observability | Yes         | Yes   | Yes       | Yes |
+| Model Keys    | Yes         | Yes   | Yes       | —   |
 | Billing       | Yes         | —     | —         | —   |
-| Reports       | Yes         | Yes   | Yes       | Yes |
 | Support       | Yes         | Yes   | Yes       | Yes |
 | Settings      | Yes         | Yes   | Yes       | Yes |
 | Documentation | Yes         | Yes   | Yes       | Yes |
@@ -216,9 +216,9 @@ Creating and managing assistants from the workspace home (not inside a project).
 
 ---
 
-## Reports & workspace settings
+## Observability & workspace settings
 
-### Reports
+### Observability (Sessions)
 
 
 | Action       | Super Admin | Admin | Developer | QA  |
@@ -370,12 +370,12 @@ Sidebar sections when you open an assistant (project).
 
 ---
 
-## Graph Studio — Auto Copilot
+## Graph Studio — Phinite Aura
 
 
 | Action            | Super Admin | Admin | Developer | QA  |
 | ----------------- | ----------- | ----- | --------- | --- |
-| View Auto Copilot | Yes         | Yes   | Yes       | Yes |
+| View Phinite Aura | Yes         | Yes   | Yes       | Yes |
 | Create            | Yes         | Yes   | Yes       | —   |
 | Update            | Yes         | Yes   | Yes       | —   |
 | Delete            | Yes         | Yes   | Yes       | —   |
@@ -403,7 +403,7 @@ Sidebar sections when you open an assistant (project).
 | Agent blocks — read    | Yes         | Yes   | Yes       | —   |
 | Agent blocks — actions | Yes         | Yes   | Yes       | —   |
 | Copy flow              | Yes         | Yes   | Yes       | —   |
-| Sidebar: Auto Copilot  | Yes         | Yes   | Yes       | —   |
+| Sidebar: Phinite Aura  | Yes         | Yes   | Yes       | —   |
 | Sidebar: Flow view     | Yes         | Yes   | Yes       | Yes |
 | Sidebar: Versions      | Yes         | Yes   | Yes       | Yes |
 | Sidebar: Support       | Yes         | Yes   | Yes       | Yes |
@@ -414,7 +414,7 @@ Sidebar sections when you open an assistant (project).
 
 ---
 
-## Dev Studio — Auto Copilot
+## Dev Studio — Phinite Aura
 
 
 | Action | Super Admin | Admin | Developer | QA  |
@@ -477,7 +477,7 @@ Sidebar sections when you open an assistant (project).
 ## QA vs Developer
 
 - **Developer** can edit and publish in Graph Studio and Dev Studio per the tables above.
-- **QA** can run tests and open many views but not edit or publish flows and tools.
+- **QA** can run tests and open many views but cannot **Save as Version** or edit agent graphs and tools.
 
 ## Viewer role
 

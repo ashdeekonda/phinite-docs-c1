@@ -1,6 +1,6 @@
 ---
 title: "Channels & Integrations Overview"
-description: "Configure channels for chat, voice, and email; integrate with external systems1."
+description: "Configure channels for chat, voice, and email; integrate with external systems."
 icon: "bolt"
 ---
 
@@ -10,6 +10,8 @@ import { Lightning } from "phosphor-react";
  Features
 
 ## Channels
+
+Configure deployment channels from **Integrations → Channels** in the workspace (or the assistant **Deploy** nav). Channel setup is separate from predefined tool connections under **Integrations → Predefined tools**.
 
 <Frame>
   ![channels](/images/Channels.png)

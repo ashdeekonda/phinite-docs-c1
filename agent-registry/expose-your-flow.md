@@ -7,14 +7,14 @@ description: "Register a published agent graph in the Agent Registry using the E
 
 Before you expose an agent graph:
 
-- **Publish** at least one version of the agent graph. See **[Agent Graph publishing](/graph-studio/publishing)**.
-- Hold **Developer** role or higher for Graph Studio save/publish actions.
+- **Save as Version** at least one agent graph version. See **[Agent Graph publishing](/graph-studio/publishing)**.
+- Hold **Developer** role or higher for Graph Studio save and version actions.
 - Have permission to call registry APIs (`assistants.flows:create` via the gateway **`POST /a2a-registry`**).
 - Run in a **local or dev** environment where **Configure Agent** is visible in Graph Studio (see **[Overview — Access and environment](/agent-registry/overview#access-and-environment)**).
 
-Associated **tools** referenced by the graph must be **published** before you can select them in step 1 of the wizard.
+Associated **tools** referenced by the graph must be **saved as a version** before you can select them in step 1 of the wizard.
 
-## Open the expose flow
+## Open the expose wizard
 
 1. Open **Graph Studio** for your project.
 2. Select the agent graph you want to expose.
@@ -32,22 +32,22 @@ The wizard has three steps. Step labels in the UI:
 
 | Step | Label | Purpose |
 | ---- | ----- | ------- |
-| 1 | **Agent Build Config** | Pick agent graph version and published tools |
+| 1 | **Agent version config** | Pick agent graph version and published tools |
 | 2 | **Additional Config** | Optional export of tools/variables to the build |
 | 3 | **Configure the Agent card** | Agent Card identity, skills, tags, visibility |
 
 Primary actions: **Next** (steps 1–2), **Attach Agent Card** (step 3).
 
-### Step 1 — Agent Build Config
+### Step 1 — Agent version config
 
-![Wizard step 1: Agent Build Config with graph version and tools](/images/agent-registry/wizard-step1-build-config.png)
+![Wizard step 1: Agent version config with graph version and tools](/images/agent-registry/wizard-step1-build-config.png)
 
 **Confirm the Agent Config:**
 
-- **Agent Graph** accordion — select the flow version to register (name, version number, version notes, timestamp).
-- **Tools Associated** accordion — select published tool versions linked to the graph. Unpublished tools show a **Publish** action inline.
+- **Agent Graph** accordion — select the agent graph version to register (name, version number, version notes, timestamp).
+- **Tools Associated** accordion — select saved tool versions linked to the graph. Unsaved tools show a **Save as Version** action inline.
 
-Validation requires a selected graph version. If tools exist on the graph, at least one **published** tool must be selected.
+Validation requires a selected graph version. If tools exist on the graph, at least one **versioned** tool must be selected.
 
 ### Step 2 — Additional Config
 

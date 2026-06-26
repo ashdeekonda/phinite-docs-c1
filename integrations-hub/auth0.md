@@ -11,7 +11,7 @@ Phinite's **Auth0** predefined tool lets workspace assistants call Auth0 APIs th
 Manage an Auth0 tenant via the Management API v2 — users, roles, user blocks, applications, connections, organizations, logs, and verification tickets.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

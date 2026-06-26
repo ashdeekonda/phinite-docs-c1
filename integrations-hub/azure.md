@@ -11,7 +11,7 @@ Phinite's **Azure** predefined tool lets workspace assistants call Azure APIs th
 Manage Azure resources via the Azure Resource Manager REST API — subscriptions, resource groups, virtual machines, storage accounts, and App Services.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

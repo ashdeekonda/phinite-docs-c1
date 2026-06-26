@@ -11,7 +11,7 @@ Phinite's **Help Scout** predefined tool lets workspace assistants call Help Sco
 Manage Help Scout Mailbox support resources — conversations, threads, customers, mailboxes, users, and tags — via the Help Scout Mailbox API v2. Authenticate with an access token, or client_id + client_secret.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined tools in Integrations](/devstudio/prebuilt-tools).
 </Note>
 ## What this integration enables
 

@@ -6,27 +6,20 @@ icon: "phone"
 
 ## Setup
 
-<Frame>
-  <img
-    src="/Twilio.png"
-    alt="Twilio"
-    title=""
-    style={{ width:"100%" }}
-  />
-</Frame>
+Configure Twilio under **Integrations → Channels** in the workspace sidebar.
 
 <Steps>
-  <Step title="Provision number">
-    Obtain a Twilio phone number.
+  <Step title="Open Integrations">
+    Workspace sidebar → **Integrations** → **Channels** tab → Twilio / voice.
   </Step>
-  <Step title="Configure webhook">
-    Set voice webhook to your channel endpoint.
+  <Step title="Provision number">
+    Obtain a Twilio phone number and add credentials in Phinite.
   </Step>
   <Step title="Connect assistant">
-    Map to assistant and environment.
+    Map the channel to an assistant and assign a build for your environment.
   </Step>
 </Steps>
 
 <Note>
-  Handle DTMF and transcription as needed in your flows.
+  Handle DTMF and transcription as needed in your agent graphs.
 </Note>

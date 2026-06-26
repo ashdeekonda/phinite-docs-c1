@@ -1,11 +1,11 @@
 ---
 title: "Triggers (Autonomous Assistants)"
-description: "Start flows using webhooks or event-based triggers."
+description: "Start agent graphs using webhooks or event-based triggers."
 ---
 
 ## Types
 
-- [Webhook Triggers](/triggers-intents/webhooks)
+- [Trigger APIs](/triggers-intents/triggers/api-guide)
 - [Event-Based Triggers (Cron, Email)](/triggers-intents/event-triggers)
 
 ## Best practices

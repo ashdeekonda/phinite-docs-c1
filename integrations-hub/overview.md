@@ -1,15 +1,17 @@
 ---
-title: "Integrations Hub"
+title: "Integrations"
 description: "Set up channels for conversational assistants and connect predefined tools in Graph Studio."
 icon: "plug"
 ---
 
 ## Overview
 
-Phinite integrations fall into two surfaces:
+Phinite **Integrations** (workspace tab) fall into two surfaces:
 
 - **Channels** — deploy assistants on WhatsApp, Slack, Teams, Email, Twilio Voice, and AI Chat.
 - **Predefined Tools** — connect third-party APIs once under Integrations, then enable subtools per agent in Graph Studio.
+
+Channel deployment docs live under **Channels** cards above. The **Communication & Messaging** section below links additional predefined-tool pages (Gmail, Telegram, Vonage, Zoom, and others) that are not duplicated as channel deployment guides.
 
 <Frame>
   ![Integrations Overview-img](/images/Integrations-Overview.png)
