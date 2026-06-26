@@ -174,3 +174,84 @@ They connect human intent with machine precision — through agent graph, tools,
 - Review [Assistant Components](/assistants/components)
 - Build your first agent graph in [Graph Studio](/graph-studio/overview)
 - Expose agents for external discovery in [Agent Registry](/agent-registry/overview)
+
+An assistant is an AI-powered capability that handles user interactions, api, background tasks and cron job using your workflows and tools.
+
+- **Conversational Assistants**: Chat and voice experiences
+- **Email Assistants**: Inbox automation for triage and replies
+- **Autonomous Assistants**: Scheduled or event-driven background jobs or apis
+
+<Frame>
+  <img
+    alt="Assistant Overview"
+    title="Assistant Overview"
+    lightAlt="Assistant Overview"
+    darkAlt="Assistant Overview"
+    src="/images/Assistant-Overview.png"
+    className="dark:hidden"
+  />
+  <img
+    alt="Assistant Overview"
+    title="Assistant Overview"
+    lightAlt="Assistant Overview"
+    darkAlt="Assistant Overview"
+    src="images/Assistant-Overview.png"
+    className="hidden dark:block"
+  />
+</Frame>
+
+### Comparision
+
+| Type | Best for | Triggers | Channels |
+| :-- | :-- | :-- | :-- |
+| Conversational | Real-time chat/voice | Intents, chat events | Web Chat, WhatsApp, Slack, Teams, Twilio |
+| Email | Asynchronous communication | Inbound email | Email |
+| Autonomous | Background automation | Schedules, webhooks | Custom APIs(Background Task, Api, Cron Job), Jira |
+
+<CardGroup cols={2}>
+  <Card title="Agent Graphs" icon="FlowArrow">
+    The heart of the Assistant — a visual workflow created in **Graph Studio**.\
+    AgentGraphs connect intents, triggers, and tools to define your automation logic.
+  </Card>
+
+  <Card title="Intents(In Conversational & Email)" icon="ChatText">
+    Natural language or programmatic cues that tell the Assistant _what the user wants_.\
+    Each intent can be AI-generated and linked to a specific flow.
+  </Card>
+
+  <Card title="Triggers(In Autonomous)" icon="hand-pointing">
+    Event-driven or scheduled conditions that automatically initiate a workflow. These triggers can originate from APIs, system events, or predefined schedules. Supports channel selection (for example, Jira), allowing direct webhook integration to trigger the process automatically.
+  </Card>
+
+  <Card title="Intents as an API" icon="PlugZap">
+    Hybrid initiators combine intent detection with trigger-based logic, making them ideal for scenarios where both a user action and a system event determine how a flow is initiated. They trigger the Intent API to start the conversation flow in the selected channel.
+  </Card>
+
+  <Card title="Custom Tools" icon="Wrench">
+    Reusable building blocks maintained by developers in **DevStudio**.\
+    They perform complex logic implementation, data processing, heavy code operation or data transformations.
+  </Card>
+
+  <Card title="Environments" icon="Server">
+    Isolated spaces for development, staging, and production deployment.\
+    Each environment controls visibility, access, and execution logs. Utilized by custom tools.
+  </Card>
+
+  <Card title="Builds" icon="Hammer">
+    Snapshot versions of an Assistant. Builds preserve dependencies, flows, and configurations across environments for controlled release and rollback. 
+  </Card>
+
+  <Card title="Phinite Aura" icon="Sparkles">
+    AI-powered assistant that helps you generate agent graphs.\
+    It understands context and build and edits agent nodes intelligently.
+  </Card>
+
+  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">
+    Expose published agent graphs as discoverable **Agent Cards**, browse the workspace catalog, and compose multi-agent flows with **Browse** or **Discovery** registry nodes.
+  </Card>
+</CardGroup>
+
+- Explore [Types of Assistants](/assistants/types)
+- Review [Assistant Components](/assistants/components)
+- Build your first agent graph in [Graph Studio](/graph-studio/overview)
+- Expose agents for external discovery in [Agent Registry](/agent-registry/overview)

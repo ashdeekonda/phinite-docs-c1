@@ -1,13 +1,13 @@
 ---
 title: "Channels"
 description: "Deploy assistants on web chat, messaging, voice, and email channels."
-icon: "bolt"
 ---
 
 import { Lightning } from "phosphor-react";
 
 ## <Lightning weight="regular" size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />
- Features
+
+Features
 
 ## Channels
 
@@ -21,10 +21,10 @@ Configure deployment channels from **Integrations → Channels** in the workspac
 
 ## Integrations
 
-- **Predefined tools**: [Integrations catalog](/integrations-hub/overview) — Gmail, Google Sheets, Jira, Slack, and 80+ more
+- Pre-built: Gmail, Google Sheets, Jira/Zendesk
 - Custom integrations via tools in [DevStudio](/devstudio/overview)
 
 ## Next
 
-- [Supported Channels](/integrations-hub/channels/supported)
+- [Supported Channels](/channels/supported)
 - [Testing Conversations](/triggers-intents/testing-intents)

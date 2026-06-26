@@ -269,7 +269,7 @@ After you publish an agent graph, you can register it in the [**Agent Registry**
   </Step>
 </Steps>
 
-Full wizard details: [**Expose your agent graph**](/agent-registry/expose-your-flow). Hosted URL patterns: [**Endpoints & lifecycle**](/agent-registry/endpoints-and-lifecycle).
+Full wizard details: [**Expose your agent graph**](/agent-registry/expose-your-flow). End-to-end checklist: [**Publish journey**](/agent-registry/publish-journey). Hosted URL patterns: [**Endpoints & lifecycle**](/agent-registry/endpoints-and-lifecycle).
 
 ## Integration with other components
 
