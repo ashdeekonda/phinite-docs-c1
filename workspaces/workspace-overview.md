@@ -3,8 +3,6 @@ title: "Workspace Overview"
 description: "Understand how workspaces organize assistants, tools, integrations, and team collaboration in Phinite."
 ---
 
-# Workspace Overview
-
 A workspace is the central collaboration environment within Phinite. It brings together your assistants, tools, integrations, and data sources into a single, organized space.\
 When you log in, you land on the **Workspace Home** page, which can serve as your default dashboard or as the home page for a specific workspace
 
