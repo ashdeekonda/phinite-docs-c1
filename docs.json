@@ -590,16 +590,13 @@
                   "assistants/components/flows",
                   "assistants/components/tools",
                   "assistants/components/environments",
-                  "assistants/components/builds",
-                  "assistants/components/channels"
+                  "assistants/components/builds"
                 ]
               },
               {
                 "group": "Channels (Communication)",
                 "pages": [
                   "integrations-hub/channels/overview",
-                  "integrations-hub/channels/supported",
-                  "integrations-hub/channels/webchat",
                   "integrations-hub/channels/whatsapp",
                   "integrations-hub/channels/slack",
                   "integrations-hub/channels/teams",
@@ -855,8 +852,6 @@
             "group": "Channels",
             "pages": [
               "integrations-hub/channels/overview",
-              "integrations-hub/channels/supported",
-              "integrations-hub/channels/webchat",
               "integrations-hub/channels/email",
               "integrations-hub/channels/chat-ai",
               "integrations-hub/channels/slack",
