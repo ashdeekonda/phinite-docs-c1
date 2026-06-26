@@ -1,98 +1,76 @@
 ---
 title: "Telegram"
-description: "Messaging via Telegram Bot API."
-icon: "paper-plane"
+description: "Send and receive Telegram bot messages, automate support, deliver notifications,"
+icon: "https://storage.googleapis.com/phinite-public/telegram.svg"
 ---
 
 ## Overview
 
-Phinite's Telegram integration allows workspace assistants to send and receive messages through Telegram bots, enabling automated communication and notifications.
+Phinite's **Telegram** predefined tool lets workspace assistants call Telegram APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Telegram, and how to configure them inside Phinite.
+Send and receive Telegram bot messages, automate support, deliver notifications,
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Send messages to Telegram chats
-- Receive messages from users
-- Send photos, documents, and media
-- Create inline keyboards and buttons
-- Handle group chats and channels
-- Set up automated responses
-
-This integration is bidirectional and uses Telegram's official Bot API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 1 credential provided by Telegram:
-
-- Bot Token (required)
-
-These credentials are generated through Telegram's BotFather. Phinite does not modify or replace Telegram's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Create Telegram Bot
+1. Create a bot via @BotFather on Telegram and copy the bot token.
+2. Log into your Phinite workspace at app.phinite.ai
+3. Navigate to **Integrations** → **Predefined tools**
+4. Select **Telegram**
+5. Click **+ Add Configuration**
+6. Enter the credential fields listed above
+7. Select assistants that should use this connection
+8. Click **Save Configuration**
 
-1. Open Telegram app and search for @BotFather
-2. Start a chat with BotFather
-3. Send command: /newbot
-4. Follow prompts to:
-   - Choose a name for your bot
-   - Choose a username (must end with 'bot')
-5. BotFather will provide your bot token
+## Configure in Graph Studio
 
-### Step 2: Get Bot Token
-
-1. Copy the token provided by BotFather
-2. Keep this token secure and never share it
-3. The token format is: `123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11`
-
-### Step 3: Configure in Phinite
-
-1. Log into your Phinite workspace at www.phinite.ai
-2. Navigate to Integrations
-3. Select Telegram
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: Telegram Bot
-   - Bot Token: Paste your bot token
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **TelegramTool** (or search for Telegram)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Telegram:
+Phinite provides 17 subtools for Telegram:
 
-- Send Message: Send text messages to chats
-- Send Photo: Share images with captions
-- Send Document: Send files and documents
-- Send Location: Share GPS coordinates
-- Send Contact: Share contact information
-- Create Poll: Send interactive polls
-- Send Sticker: Send Telegram stickers
-- Forward Message: Forward messages between chats
-- Get Chat Info: Retrieve chat details
-- Get Updates: Poll for new messages
-- Send Inline Keyboard: Create interactive buttons
-- Edit Message: Modify sent messages
-- Delete Message: Remove messages
-- Pin Message: Pin important messages
-- Get File: Download files from Telegram
-- Send Voice: Send voice messages
-- Send Video: Share video content
+- Send Message: Send a text message to a Telegram chat
+- Send Photo: Send a photo to a Telegram chat
+- Send Document: Send a document to a Telegram chat
+- Send Poll: Send a poll to a Telegram chat
+- Get Updates: Get incoming updates from Telegram
+- Get Chat Info: Get information about a chat
+- Edit Message: Edit a text message
+- Delete Message: Delete a message
+- Forward Message: Forward a message
+- Get Chat Member: Get information about a chat member
+- Get Chat Administrators: Get a list of administrators in a chat
+- Set Chat Title: Set the title of a chat
+- Set Chat Description: Set the description of a chat
+- Pin Message: Pin a message in a chat
+- Unpin Message: Unpin a message in a chat
+- Get Chat Member Count: Get the number of members in a chat
+- Leave Chat: Leave a chat
 
 ## Documentation & resources
 
-- Official Telegram Documentation: `https://core.telegram.org/bots`
-- Telegram Bot API Reference: `https://core.telegram.org/bots/api`
-- BotFather: `https://t.me/botfather`
+- Official documentation: `https://core.telegram.org/bots/api`
+- Phinite documentation: [Telegram](https://docs.phinite.ai/docs/integrations-hub/telegram)
 
 ## Notes
 
-- Telegram bots cannot initiate conversations with users
-- Users must start the conversation first
-- Bot tokens should be kept secure
-- Telegram has rate limits on API calls
-- Bots can be added to groups and channels
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

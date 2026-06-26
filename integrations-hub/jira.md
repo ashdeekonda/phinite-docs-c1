@@ -1,110 +1,67 @@
 ---
 title: "Jira"
-description: "Issue tracking and project management via Jira API."
-icon: "project-diagram"
+description: "Create, search, update, and transition Jira issues, add comments, and"
+icon: "https://storage.googleapis.com/phinite-public/integrations/jira.svg"
 ---
 
 ## Overview
 
-Phinite's Jira integration allows workspace assistants to create, search, update, and manage Jira issues, projects, and workflows programmatically.
+Phinite's **Jira** predefined tool lets workspace assistants call Jira APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Jira, and how to configure them inside Phinite.
+Create, search, update, and transition Jira issues, add comments, and
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Create and update issues
-- Search and filter issues
-- Manage project workflows
-- Add comments and attachments
-- Transition issue statuses
-- Access project information
-- Generate reports
-
-This integration is bidirectional and uses Jira's REST API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 3 credentials provided by Jira:
-
-- Server URL (required)
-- Username (required)
-- API Token (required)
-
-These credentials are generated through Jira account settings. Phinite does not modify or replace Jira's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Get Jira Server Details
+1. Create an Atlassian API token at id.atlassian.com/manage-profile/security/api-tokens.
+2. Use your Atlassian email, API token, and Jira site URL (e.g. `https://your-domain.atlassian.net`).
+3. Log into your Phinite workspace at app.phinite.ai
+4. Navigate to **Integrations** → **Predefined tools**
+5. Select **Jira**
+6. Click **+ Add Configuration**
+7. Enter the credential fields listed above
+8. Select assistants that should use this connection
+9. Click **Save Configuration**
 
-For Jira Cloud:
-1. Your Jira URL: https://yourcompany.atlassian.net
-2. Note the server URL
+## Configure in Graph Studio
 
-For Jira Server/Data Center:
-1. Your Jira server URL
-2. Ensure API access is enabled
-
-### Step 2: Create API Token
-
-1. Go to Atlassian Account settings
-2. Navigate to Security → Create and manage API tokens
-3. Click "Create API token"
-4. Give it a label (e.g., "Phinite Integration")
-5. Copy the generated token
-
-### Step 3: Get Username
-
-1. Use your Atlassian account email address
-2. This is the username for API authentication
-
-### Step 4: Configure in Phinite
-
-1. Log into your Phinite workspace at www.phinite.ai
-2. Navigate to Integrations
-3. Select Jira
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: Jira Production
-   - Server URL: Your Jira server URL
-   - Username: Your Atlassian email
-   - API Token: Paste the API token
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **JiraTools** (or search for Jira)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Jira:
+Phinite provides 7 subtools for Jira:
 
-- Get Issue: Retrieve specific issue details
-- Create Issue: Add new issues to projects
-- Search Issues: Query issues with JQL
-- Update Issue: Modify existing issues
-- Add Comment: Comment on issues
-- Transition Issue: Change issue status
-- Get Projects: List available projects
-- Create Project: Set up new projects
-- Get Users: Access user information
-- Assign Issue: Assign issues to users
-- Add Attachment: Attach files to issues
-- Get Issue Types: List issue types
-- Get Workflows: Access project workflows
-- Bulk Update: Modify multiple issues
-- Get Dashboards: Access project dashboards
-- Create Filter: Set up custom filters
-- Get Sprints: Access agile sprints
+- Get Issue: Retrieves issue details from Jira
+- Create Issue: Creates a new issue in Jira
+- Search Issues: Searches for issues using a JQL query
+- Add Comment: Adds a comment to an issue
+- Update Issue: Updates an existing issue
+- Transition Issue: Transitions an issue to a different status
+- Get Projects: Gets all accessible projects
 
 ## Documentation & resources
 
-- Official Jira Documentation: `https://developer.atlassian.com/cloud/jira/platform/rest/v3/`
-- Jira REST API Reference: `https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/`
-- Atlassian Developer Portal: `https://developer.atlassian.com/`
+- Official documentation: `https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/`
+- Phinite documentation: [Jira](https://docs.phinite.ai/docs/integrations-hub/jira)
 
 ## Notes
 
-- API tokens are user-specific and secure
-- Jira has rate limits based on your plan
-- Some operations require project permissions
-- Monitor API usage to avoid limits
-- Test with sandbox environments first
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

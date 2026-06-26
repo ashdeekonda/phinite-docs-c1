@@ -1,117 +1,63 @@
 ---
 title: "Google Sheets"
-description: "Spreadsheet data access and manipulation."
-icon: "table"
+description: "Read, write, and append spreadsheet rows, format ranges, and automate"
+icon: "https://storage.googleapis.com/phinite-public/google-sheets.svg"
 ---
 
 ## Overview
 
-Phinite's Google Sheets integration allows workspace assistants to read, write, and manipulate data in Google Sheets spreadsheets programmatically.
+Phinite's **Google Sheets** predefined tool lets workspace assistants call Google Sheets APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Google, and how to configure them inside Phinite.
+Read, write, and append spreadsheet rows, format ranges, and automate
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Read data from spreadsheet cells
-- Write data to spreadsheets
-- Create and manage sheets
-- Format cells and ranges
-- Create charts and formulas
-- Share spreadsheets
-- Access spreadsheet metadata
-
-This integration is bidirectional and uses Google Sheets API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 1 credential provided by Google:
-
-- Service Account JSON (required)
-
-These credentials are generated through Google Cloud Console. Phinite does not modify or replace Google's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Create Google Cloud Project
+1. Create a Google Cloud project, enable the Sheets API, and configure OAuth or a service account.
+2. Log into your Phinite workspace at app.phinite.ai
+3. Navigate to **Integrations** → **Predefined tools**
+4. Select **Google Sheets**
+5. Click **+ Add Configuration**
+6. Enter the credential fields listed above
+7. Select assistants that should use this connection
+8. Click **Save Configuration**
 
-1. Go to Google Cloud Console
-2. Click Create Project or select existing project
-3. Enter project name and click Create
-4. Enable the Google Sheets API:
-   - Go to APIs & Services > Library
-   - Search for "Google Sheets API"
-   - Click Enable
+## Configure in Graph Studio
 
-### Step 2: Create Service Account
-
-1. In Google Cloud Console, go to IAM & Admin > Service Accounts
-2. Click Create Service Account
-3. Enter service account name and description
-4. Click Create and Continue
-5. Skip role assignment (click Continue)
-6. Click Done
-
-### Step 3: Generate Service Account Key
-
-1. Click on the created service account
-2. Go to Keys tab
-3. Click Add Key > Create new key
-4. Select JSON format
-5. Click Create
-6. Download the JSON file and keep it secure
-
-### Step 4: Share Spreadsheet Access
-
-1. Open the Google Sheet you want to access
-2. Click Share button
-3. Enter the service account email (from JSON file)
-4. Grant Editor or Viewer permissions
-5. Click Send
-
-### Step 5: Configure in Phinite
-
-1. Log into your Phinite workspace at www.phinite.ai
-2. Navigate to Integrations
-3. Select Google Sheets
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: Google Sheets Production
-   - Credentials: Upload the JSON file or paste JSON content
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **GoogleSheetsTool** (or search for Google Sheets)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Google Sheets:
+Phinite provides 4 subtools for Google Sheets:
 
-- Read Range: Get data from cell ranges
-- Write Range: Update spreadsheet cells
-- Append Row: Add data to the end of sheets
-- Create Sheet: Add new sheets to spreadsheets
-- Delete Sheet: Remove sheets from spreadsheets
-- Clear Range: Remove data from cell ranges
-- Create Spreadsheet: Set up new spreadsheets
-- Get Spreadsheet Info: Access spreadsheet metadata
-- Update Sheet Properties: Modify sheet settings
-- Add Chart: Create charts and graphs
-- Format Range: Apply formatting to cells
-- Create Filter: Add data filters
-- Sort Range: Sort data in ranges
-- Find and Replace: Search and modify content
-- Get Sheet Values: Retrieve all sheet data
-- Batch Update: Perform multiple operations
+- Read Sheet: Read values from a Google Sheet range
+- Update Sheet: Overwrite values in a Google Sheet range
+- Create Sheet: Create a new Google Spreadsheet
+- Duplicate Sheet: Duplicate an existing Google Spreadsheet
 
 ## Documentation & resources
 
-- Official Sheets Documentation: `https://developers.google.com/sheets/api`
-- Sheets API Reference: `https://developers.google.com/sheets/api/reference/rest`
+- Official documentation: `https://developers.google.com/sheets/api`
+- Phinite documentation: [Google Sheets](https://docs.phinite.ai/docs/integrations-hub/google-sheets)
 
 ## Notes
 
-- Spreadsheets must be shared with service account
-- API has rate limits (100 requests/second per user)
-- Large spreadsheets may require pagination
-- Some operations need specific permissions
-- Monitor API usage to avoid limits
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

@@ -20,3 +20,4 @@ A build is a versioned package of your flows and tools prepared for deployment t
 - [Build Lifecycle](/builds/lifecycle)
 - [Publishing Agent Graphs & Tools](/builds/publishing)
 - [Environment Types](/builds/environments)
+- [Agent Cards & builds](/agent-registry/agent-cards) — promote exposed A2A agents from test to live

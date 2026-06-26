@@ -1,93 +1,72 @@
 ---
 title: "Gmail"
-description: "Read/search/draft/send/reply Gmail-like accounts."
-icon: "envelope"
+description: "Read, search, draft, send, and reply to emails..."
+icon: "https://storage.googleapis.com/phinite-public/gmail.svg"
 ---
 
 ## Overview
 
-Phinite's Gmail integration allows workspace assistants to read, search, draft, send, and reply to emails in Gmail accounts programmatically.
+Phinite's **Gmail** predefined tool lets workspace assistants call Gmail APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Google, and how to configure them inside Phinite.
+Read, search, draft, send, and reply to emails...
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Read emails from inbox and folders
-- Search emails by various criteria
-- Send new emails and replies
-- Create and manage drafts
-- Access email attachments
-- Organize emails with labels
-
-This integration is bidirectional and uses Gmail's official API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 2 credentials provided by Google:
-
-- Email Address (required)
-- App Password (required)
-
-These credentials are generated through Google Account settings. Phinite does not modify or replace Google's authentication model.
+- Email `email` (required)
+- App Password `app_password` (required)
 
 ## Setup steps
 
-### Step 1: Enable 2-Factor Authentication
+1. Enable 2-Step Verification on the Google account and create an **App Password** under Google Account security settings.
+2. Use the Gmail address and app password in Phinite.
+3. Log into your Phinite workspace at app.phinite.ai
+4. Navigate to **Integrations** → **Predefined tools**
+5. Select **Gmail**
+6. Click **+ Add Configuration**
+7. Enter the credential fields listed above
+8. Select assistants that should use this connection
+9. Click **Save Configuration**
 
-1. Go to Google Account settings
-2. Navigate to Security
-3. Enable 2-Step Verification
-4. Complete the setup process
+## Configure in Graph Studio
 
-### Step 2: Generate App Password
-
-1. In Google Account Security settings
-2. Go to "App passwords"
-3. Select "Mail" and your device type
-4. Click "Generate"
-5. Copy the 16-character password
-
-### Step 3: Configure in Phinite
-
-1. Log into your Phinite workspace at www.phinite.ai
-2. Navigate to Integrations
-3. Select Gmail
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: Gmail Account
-   - Email Address: Your Gmail address
-   - App Password: Paste the app password
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **GmailTool** (or search for Gmail)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Gmail:
+Phinite provides 11 subtools for Gmail:
 
-- Get Latest Emails: Retrieve recent messages
-- Get Emails from User: Find emails from specific senders
-- Get Unread Emails: Access unread messages
-- Get Starred Emails: Retrieve starred messages
-- Get Emails by Context: Search by keywords/subject
-- Get Emails by Date: Filter by date ranges
-- Get Emails by Thread: Access conversation threads
-- Search Emails: Advanced search functionality
-- Create Draft Email: Save email drafts
-- Send Email: Send new emails
-- Send Email Reply: Reply to existing emails
+- Get Latest Emails: Get the latest X emails from the user's inbox
+- Get Emails From User: Get X number of emails from a specific user (name or email)
+- Get Unread Emails: Get the X number of latest unread emails from the user's inbox
+- Get Starred Emails: Get X number of starred emails from the user's inbox
+- Get Emails By Context: Get X number of emails matching a specific context or search term
+- Get Emails By Date: Get emails based on date range. start_date is an integer representing
+- Get Emails By Thread: Retrieve all emails from a specific thread
+- Search Emails: Get X number of emails based on a given natural text query. Searches
+- Create Draft Email: Create and save a draft email. to and cc are comma separated string
+- Send Email: Send an email immediately. to and cc are comma separated string of
+- Send Email Reply: Respond to an existing email thread
 
 ## Documentation & resources
 
-- Official Gmail Documentation: `https://developers.google.com/gmail/api`
-- Gmail API Reference: `https://developers.google.com/gmail/api/reference/rest`
-- Google App Passwords: `https://support.google.com/accounts/answer/185833`
+- Official documentation: `https://developers.google.com/gmail/api`
+- Phinite documentation: [Gmail](https://docs.phinite.ai/docs/integrations-hub/gmail)
 
 ## Notes
 
-- App passwords are required for 2FA-enabled accounts
-- Gmail API has daily sending limits (500 emails/day for free accounts)
-- Some operations may require additional Gmail API scopes
-- Monitor API usage to avoid hitting limits
-- Attachments have size restrictions
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

@@ -1,112 +1,62 @@
 ---
 title: "Google BigQuery"
-description: "Analytics warehouse for large-scale data analysis."
-icon: "database"
+description: "Query BigQuery datasets with SQL, inspect tables, export results, and"
+icon: "https://storage.googleapis.com/phinite-public/bigquery.svg"
 ---
 
 ## Overview
 
-Phinite's Google BigQuery integration allows workspace assistants to query, analyze, and manage large datasets in Google BigQuery data warehouse.
+Phinite's **Google BigQuery** predefined tool lets workspace assistants call Google BigQuery APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Google Cloud, and how to configure them inside Phinite.
+Query BigQuery datasets with SQL, inspect tables, export results, and
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Execute SQL queries on BigQuery datasets
-- Create and manage tables and views
-- Load data into BigQuery
-- Export query results
-- Monitor query performance
-- Access public datasets
-
-This integration is bidirectional and uses BigQuery's official API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 1 credential provided by Google Cloud:
-
-- Service Account JSON (required)
-
-These credentials are generated through Google Cloud Console. Phinite does not modify or replace Google's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Create Google Cloud Project
+1. Create a GCP project, enable BigQuery API, and obtain OAuth or service-account credentials.
+2. Log into your Phinite workspace at app.phinite.ai
+3. Navigate to **Integrations** → **Predefined tools**
+4. Select **Google BigQuery**
+5. Click **+ Add Configuration**
+6. Enter the credential fields listed above
+7. Select assistants that should use this connection
+8. Click **Save Configuration**
 
-1. Go to Google Cloud Console
-2. Click Create Project or select existing project
-3. Enter project name and click Create
-4. Enable the BigQuery API:
-   - Go to APIs & Services > Library
-   - Search for "BigQuery API"
-   - Click Enable
+## Configure in Graph Studio
 
-### Step 2: Create Service Account
-
-1. In Google Cloud Console, go to IAM & Admin > Service Accounts
-2. Click Create Service Account
-3. Enter service account name and description
-4. Click Create and Continue
-5. Grant BigQuery roles:
-   - BigQuery User
-   - BigQuery Data Viewer/Editor (as needed)
-6. Click Continue, then Done
-
-### Step 3: Generate Service Account Key
-
-1. Click on the created service account
-2. Go to Keys tab
-3. Click Add Key > Create new key
-4. Select JSON format
-5. Click Create
-6. Download the JSON file and keep it secure
-
-### Step 4: Configure in Phinite
-
-1. Log into your Phinite workspace at www.phinite.ai
-2. Navigate to Integrations
-3. Select Google BigQuery
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: BigQuery Production
-   - Project ID: Your Google Cloud project ID
-   - Credentials: Upload the JSON file or paste JSON content
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **GoogleBigQueryTool** (or search for Google BigQuery)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Google BigQuery:
+Phinite provides 3 subtools for Google BigQuery:
 
-- Execute Query: Run SQL queries and get results
-- Create Table: Set up new tables in datasets
-- Insert Data: Load data into existing tables
-- Update Data: Modify table records
-- Delete Data: Remove data from tables
-- Create Dataset: Set up new datasets
-- List Datasets: View available datasets
-- List Tables: Access tables in datasets
-- Get Table Schema: Retrieve table structure
-- Export Data: Export query results
-- Create View: Set up database views
-- Run Job: Execute long-running queries
-- Check Job Status: Monitor query progress
-- Get Query Results: Retrieve completed query results
-- Cancel Job: Stop running queries
-- Get Dataset Info: Access dataset metadata
+- List Tables: List tables in the configured dataset
+- Describe Table: Describe schema for a BigQuery table
+- Run Sql Query: Run a SQL query against the dataset
 
 ## Documentation & resources
 
-- Official BigQuery Documentation: `https://cloud.google.com/bigquery/docs`
-- BigQuery API Reference: `https://cloud.google.com/bigquery/docs/reference/rest`
-- BigQuery SQL Reference: `https://cloud.google.com/bigquery/docs/reference/standard-sql`
+- Official documentation: `https://cloud.google.com/bigquery/docs`
+- Phinite documentation: [Google BigQuery](https://docs.phinite.ai/docs/integrations-hub/google-bigquery)
 
 ## Notes
 
-- BigQuery charges for storage and query processing
-- Service accounts need appropriate BigQuery permissions
-- Large queries may take time to execute
-- Monitor costs for data storage and processing
-- Public datasets are accessible without credentials
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

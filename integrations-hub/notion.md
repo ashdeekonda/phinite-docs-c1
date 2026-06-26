@@ -1,107 +1,80 @@
 ---
 title: "Notion"
-description: "Docs and databases integration with Notion API."
-icon: "note-sticky"
+description: "Read and update Notion pages and databases, search content, append"
+icon: "https://storage.googleapis.com/phinite-public/notion.svg"
 ---
 
 ## Overview
 
-Phinite's Notion integration allows workspace assistants to read, create, and update documents, databases, and pages in Notion workspaces.
+Phinite's **Notion** predefined tool lets workspace assistants call Notion APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Notion, and how to configure them inside Phinite.
+Read and update Notion pages and databases, search content, append
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Read and write Notion pages
-- Create and update databases
-- Search for content across workspaces
-- Add comments to pages
-- Manage page properties
-- Create templates and automations
-
-This integration is bidirectional and uses Notion's official API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 1 credential provided by Notion:
-
-- Internal Integration Token (required)
-
-These credentials are generated through Notion's developer portal. Phinite does not modify or replace Notion's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Create Notion Integration
+1. Create an integration at notion.so/my-integrations and copy the internal integration token.
+2. Share target pages/databases with the integration.
+3. Log into your Phinite workspace at app.phinite.ai
+4. Navigate to **Integrations** → **Predefined tools**
+5. Select **Notion**
+6. Click **+ Add Configuration**
+7. Enter the credential fields listed above
+8. Select assistants that should use this connection
+9. Click **Save Configuration**
 
-1. Go to Notion Developers website
-2. Sign in with your Notion account
-3. Click "New integration"
-4. Fill in integration details:
-   - Name: "Phinite Integration"
-   - Associated workspace: Select your workspace
-   - Type: Internal
-5. Click "Submit"
+## Configure in Graph Studio
 
-### Step 2: Get Integration Token
-
-1. After creation, you'll see the "Internal Integration Token"
-2. Click "Show" to reveal the token
-3. Copy the token (format: secret_...)
-4. Keep this token secure
-
-### Step 3: Share Pages with Integration
-
-1. Open the pages/databases you want to access
-2. Click "Share" in the top right
-3. Search for your integration name
-4. Select it and grant appropriate permissions
-5. Repeat for all pages you want to access
-
-### Step 4: Configure in Phinite
-
-1. Log into your Phinite workspace at www.phinite.ai
-2. Navigate to Integrations
-3. Select Notion
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: Notion Workspace
-   - Integration Token: Paste your internal integration token
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **NotionTool** (or search for Notion)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Notion:
+Phinite provides 20 subtools for Notion:
 
-- Create Page: Add new pages to workspaces
-- Update Page: Modify existing page content
-- Delete Page: Remove pages from workspaces
-- Get Page: Retrieve page content and metadata
-- Search Pages: Find pages by title or content
-- Create Database: Set up new databases
-- Query Database: Retrieve database entries
-- Update Database Item: Modify database records
-- Add Comment: Comment on pages
-- Get Block Children: Access page block content
-- Append Block Children: Add content to pages
-- Update Block: Modify individual blocks
-- Delete Block: Remove blocks from pages
-- Get User: Retrieve user information
-- List Users: Get workspace users
-- Create Template: Set up reusable templates
+- Create Database: Create a Notion database under a page
+- Retrieve Database: Retrieve a Notion database by id
+- Update Database: Update database title/metadata
+- Create Page: Create a page in a data source
+- Update Page: Update properties/icon/cover of a page
+- Retrieve Page: Retrieve a page with selected properties
+- Append Block Children: Append blocks to a page or block
+- List Block Children: List child blocks for a page/block
+- Delete Block: Delete a block by id
+- Create Data Source: Create a data source in a database
+- Update Data Source: Update data source schema/title/icon
+- Retrieve Data Source: Retrieve a data source by id
+- Query Data Source: Query a data source with filters/sorts
+- List Data Source Templates: List templates for a data source
+- Create File Upload: Initiate a Notion file upload
+- Send File Upload: Send a public file URL to a file upload
+- List File Uploads: List file uploads for the integration
+- Search: Search pages/data sources shared with the integration
+- List Users: List workspace users
+- Retrieve User: Retrieve a user by id
 
 ## Documentation & resources
 
-- Official Notion Documentation: `https://developers.notion.com/`
-- Notion API Reference: `https://developers.notion.com/reference`
-- Notion Developer Portal: `https://developers.notion.com/`
+- Official documentation: `https://developers.notion.com/`
+- Phinite documentation: [Notion](https://docs.phinite.ai/docs/integrations-hub/notion)
 
 ## Notes
 
-- Integration tokens are workspace-specific
-- Pages must be shared with the integration
-- Notion has rate limits on API calls
-- Some content types may require specific permissions
-- Integration capabilities depend on workspace plan
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

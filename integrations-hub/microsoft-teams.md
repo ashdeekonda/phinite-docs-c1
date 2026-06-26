@@ -1,119 +1,87 @@
 ---
 title: "Microsoft Teams"
-description: "Team collaboration and messaging via Microsoft Teams."
-icon: "people-group"
+description: "Manage Microsoft Teams teams, channels, messages, chats, members, online meetings, and Planner tasks via the Microsoft Graph API."
+icon: "https://storage.googleapis.com/phinite-public/integrations/integration-icons.svg"
 ---
 
 ## Overview
 
-Phinite's Microsoft Teams integration allows workspace assistants to interact with Microsoft Teams for messaging, collaboration, and workflow automation.
+Phinite's **Microsoft Teams** predefined tool lets workspace assistants call Microsoft Teams APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to obtain them from Microsoft Azure, and how to configure them inside Phinite.
+Manage Microsoft Teams teams, channels, messages, chats, members, online meetings, and Planner tasks via the Microsoft Graph API.
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Send messages to Teams channels
-- Create and manage teams
-- Handle approvals and workflows
-- Access team files and content
-- Send proactive notifications
-- Integrate with Microsoft Graph
-
-This integration is bidirectional and uses Microsoft Graph API.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 3 credentials provided by Microsoft Azure:
-
-- App ID (required)
-- App Secret (required)
-- Tenant ID (required)
-
-These credentials are generated through Azure App Registrations. Phinite does not modify or replace Microsoft's authentication model.
+- Access Token `access_token` (required)
 
 ## Setup steps
 
-### Step 1: Create Azure App Registration
+1. Register an app in Microsoft Entra ID with Microsoft Graph permissions for Teams.
+2. Obtain an access token with `ChannelMessage.Send` or related scopes.
+3. Log into your Phinite workspace at app.phinite.ai
+4. Navigate to **Integrations** → **Predefined tools**
+5. Select **Microsoft Teams**
+6. Click **+ Add Configuration**
+7. Enter the credential fields listed above
+8. Select assistants that should use this connection
+9. Click **Save Configuration**
 
-1. Go to Azure Portal
-2. Navigate to Azure Active Directory > App registrations
-3. Click "New registration"
-4. Enter app name (e.g., "Phinite Teams Bot")
-5. Choose account type (single tenant/org)
-6. Click Register
+## Configure in Graph Studio
 
-### Step 2: Configure API Permissions
-
-1. Go to API permissions in your app
-2. Add Microsoft Graph permissions:
-   - ChannelMessage.Send
-   - Chat.ReadWrite
-   - Team.ReadBasic.All
-   - Files.ReadWrite.All
-   - User.Read.All
-3. Grant admin consent for permissions
-
-### Step 3: Create Client Secret
-
-1. Go to Certificates & secrets
-2. Click "New client secret"
-3. Add description and expiration
-4. Copy the secret value immediately
-
-### Step 4: Get App Details
-
-1. Copy Application (client) ID
-2. Copy Directory (tenant) ID from overview
-3. Keep the client secret secure
-
-### Step 5: Configure in Phinite
-
-1. Log into your Phinite workspace at www.phinite.ai
-2. Navigate to Integrations
-3. Select Microsoft Teams
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: Teams Production
-   - App ID: Paste the Application ID
-   - App Secret: Paste the client secret
-   - Tenant ID: Paste the Directory ID
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **MicrosoftTeamsTool** (or search for Microsoft Teams)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for Microsoft Teams:
+Phinite provides 27 subtools for Microsoft Teams:
 
-- Send Channel Message: Post to team channels
-- Send Chat Message: Direct messages to users
-- Create Team: Set up new teams
-- Add Team Member: Invite users to teams
-- Create Channel: Add channels to teams
-- Send Approval Request: Create approval workflows
-- Get Team Info: Access team details
-- List Channels: View team channels
-- Upload File: Share files in teams
-- Get Messages: Retrieve channel messages
-- Reply to Message: Respond in threads
-- Create Meeting: Schedule Teams meetings
-- Get User Presence: Check user status
-- Send Adaptive Card: Rich message formatting
-- Handle Approvals: Process approval responses
-- Get Files: Access team file libraries
-- Create Tab: Add custom tabs to channels
+- List Joined Teams: List all Microsoft Teams teams the authenticated user has joined
+- Get Team: Get details of a specific Microsoft Teams team by its ID
+- Create Team: Create a new Microsoft Teams team. Returns 202 Accepted with an async operation location.
+- Update Team: Update a Microsoft Teams team's settings (display name, description, member/guest/messaging settings)
+- List Channels: List all channels in a Microsoft Teams team
+- Get Channel: Get details of a specific channel in a team
+- Create Channel: Create a new channel in a Microsoft Teams team. Max 50 chars for displayName.
+- Delete Channel: Delete a channel from a Microsoft Teams team. Cannot delete the General channel.
+- Update Channel: Update a channel's display name and/or description in a Microsoft Teams team
+- Send Channel Message: Send a message to a channel in a Microsoft Teams team
+- List Channel Messages: List messages in a channel. Returns top N messages.
+- Reply To Message: Reply to a specific message in a channel thread
+- Send Chat Message: Send a message to a 1:1 or group chat
+- List Chats: List all chats the authenticated user is part of
+- Get Chat: Get details of a specific chat by its ID
+- List Chat Messages: List messages in a specific chat
+- Get Chat Message: Get a specific message from a chat by message ID
+- List Members: List all members of a Microsoft Teams team
+- Add Member: Add a member to a Microsoft Teams team
+- Remove Member: Remove a member from a Microsoft Teams team
+- Create Online Meeting: Create a Microsoft Teams online meeting
+- Get Online Meeting: Get details of a specific online meeting by its ID
+- Create Task: Create a new Microsoft Planner task in a plan bucket
+- Get Task: Get details of a specific Microsoft Planner task by its ID
+- List Tasks: List Planner tasks — all tasks in a specific plan (if plan_id provided), or all tasks assigned to the current user
+- Update Task: Update a Planner task's title, due date, percent complete, or bucket
+- Delete Task: Delete a Microsoft Planner task by its ID
 
 ## Documentation & resources
 
-- Official Teams Documentation: `https://docs.microsoft.com/en-us/microsoftteams/`
-- Microsoft Graph API: `https://docs.microsoft.com/en-us/graph/api/overview`
-- Azure App Registration: `https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app`
+- Official documentation: `https://learn.microsoft.com/en-us/graph/api/resources-teams-overview`
+- Phinite documentation: [Microsoft Teams](https://docs.phinite.ai/docs/integrations-hub/microsoft-teams)
 
 ## Notes
 
-- Graph API permissions require admin consent
-- Teams bots have specific rate limits
-- Some features need premium licenses
-- Monitor API usage and permissions
-- Test integrations in development tenants first
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

@@ -4,7 +4,7 @@ This note is **not** part of the published Mintlify sidebar. Use it when maintai
 
 ## Goal
 
-Keep the **Agent Registry (A2A)** module aligned with the product: expose wizard, workspace catalog, Browse/Discovery agent nodes, Agent Cards builds, hosted URLs, and promote-live lifecycle.
+Keep the **Agent Registry (A2A)** module aligned with the product: expose wizard, workspace catalog, Browse/Discovery agent nodes, Agent Cards builds, hosted URLs, promote-live lifecycle, and Claude connector consumption.
 
 ## Published doc map
 
@@ -13,6 +13,7 @@ Registered in **`docs.json`** under **Agent Registry (A2A)**:
 | Page | Path | Audience |
 | ---- | ---- | -------- |
 | Overview | `agent-registry/overview` | Concepts, workflow, terminology summary |
+| Invoke from Claude | `agent-registry/invoke-a2a-from-claude` | Phinite Connector: install, tools, credentials |
 | Expose an agent | `agent-registry/expose-your-flow` | Three-step Expose wizard |
 | Registry agent nodes | `agent-registry/registry-agent-nodes` | Browse vs Discovery on canvas |
 | Browse the catalog | `agent-registry/catalog` | Workspace search and filters |
@@ -49,6 +50,17 @@ Cross-links: **`graph-studio/publishing.md`**, **`graph-studio/agent-node.md`**,
 | Promote live | `PUT /a2a-registry/:id/promote-live` |
 | Gateway routes | `api-gateway/internal/routes/api_server_routes.go` |
 | Runtime visibility | `api-gateway/internal/middleware/a2a_registry.go` |
+| Public agent config | `flow-gen-frontend/src/app/public/agent-config/page.tsx`, `publicAgentConfigService.ts` |
+| A2A auth-required state | `api-gateway/internal/middleware/a2a/registry.go` (`TASK_STATE_AUTH_REQUIRED`) |
+
+### Claude Connector (external)
+
+| Topic | Primary source |
+| ----- | -------------- |
+| Plugin marketplace & tools | [phinite-plugins](https://github.com/Auto-AI-Labs/phinite-plugins) |
+| Consumer user doc | `docs/agent-registry/invoke-a2a-from-claude.md` |
+| A2A + MCP packaging plan | `flow-gen-frontend/docs/publish-a2a-as-mcp-server.md` |
+| Public config auth design | `flow-gen-frontend/docs/public-agent-config-authorization.md` |
 
 ## Gateway API surface (SPA)
 

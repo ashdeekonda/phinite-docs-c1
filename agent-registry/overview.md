@@ -14,6 +14,7 @@ Use Agent Registry when you want to:
 - **Publish** an agent graph as a callable A2A service (not only run it inside a single assistant).
 - **Discover** agents across your organisation—or, when visibility is public, from compatible clients with a valid API key.
 - **Compose** multi-agent workflows by attaching registry agents to a **master agent node** in **Browse** or **Discovery** mode.
+- **Call** registry agents from **Claude** using the [Phinite Connector](/agent-registry/invoke-a2a-from-claude) (`discover_agents`, `call_agent`, and credential setup).
 
 ## End-to-end workflow
 
@@ -75,6 +76,9 @@ Some canvas labels still say **Agent Block** (for example in the browse panel); 
 ## Next steps
 
 <CardGroup cols={2}>
+<Card title="Invoke from Claude" href="/agent-registry/invoke-a2a-from-claude" icon="plug">
+Install the Phinite Connector, discover agents, and run tasks from Claude.
+</Card>
 <Card title="Expose an agent" href="/agent-registry/expose-your-flow" icon="rocket">
 Register an agent graph with the three-step Expose wizard.
 </Card>

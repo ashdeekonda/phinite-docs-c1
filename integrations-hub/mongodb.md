@@ -1,113 +1,81 @@
 ---
 title: "MongoDB"
-description: "Document database CRUD operations and aggregations."
-icon: "leaf"
+description: "Perform CRUD and aggregations on MongoDB collections, manage indexes,"
+icon: "https://storage.googleapis.com/phinite-public/mongodb.svg"
 ---
 
 ## Overview
 
-Phinite's MongoDB integration allows workspace assistants to perform CRUD operations, aggregations, indexing, and database management on MongoDB databases.
+Phinite's **MongoDB** predefined tool lets workspace assistants call MongoDB APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
-This document explains what credentials are required, how to configure MongoDB connection, and how to set up the integration inside Phinite.
+Perform CRUD and aggregations on MongoDB collections, manage indexes,
 
+<Note>
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+</Note>
 ## What this integration enables
 
-Once configured, Phinite assistants can:
-
-- Insert, update, and delete documents
-- Query collections with filters
-- Perform aggregation pipelines
-- Create and manage indexes
-- Handle database operations
-- Monitor collection statistics
-
-This integration is bidirectional and uses MongoDB's official drivers.
+- Automate workflows using this predefined tool from agent graphs
+- Connect once under Integrations and reuse across assistants
+- Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
 
-Phinite uses 2 credentials for MongoDB:
-
-- Connection String (required)
-- Database Name (required)
-
-These credentials are obtained from your MongoDB deployment. Phinite does not modify or replace MongoDB's authentication model.
+- See integration configuration fields in Phinite
 
 ## Setup steps
 
-### Step 1: Get MongoDB Connection Details
+1. Obtain a MongoDB connection string from Atlas or your self-hosted deployment.
+2. Identify the target database name for agent operations.
+3. Log into your Phinite workspace at app.phinite.ai
+4. Navigate to **Integrations** → **Predefined tools**
+5. Select **MongoDB**
+6. Click **+ Add Configuration**
+7. Enter the credential fields listed above
+8. Select assistants that should use this connection
+9. Click **Save Configuration**
 
-For MongoDB Atlas:
-1. Log into MongoDB Atlas
-2. Go to your cluster
-3. Click "Connect"
-4. Choose "Connect your application"
-5. Copy the connection string
+## Configure in Graph Studio
 
-For self-hosted MongoDB:
-1. Use your MongoDB server connection string
-2. Format: mongodb://username:password@host:port/database
-
-### Step 2: Create Database User (Recommended)
-
-1. In MongoDB Atlas or your MongoDB instance
-2. Create a dedicated user for Phinite
-3. Grant appropriate permissions:
-   - readWrite for basic operations
-   - dbAdmin for administrative tasks
-4. Note the username and password
-
-### Step 3: Whitelist IP Addresses (Atlas)
-
-1. In MongoDB Atlas Network Access
-2. Add your Phinite server IP addresses
-3. Or allow access from anywhere (less secure)
-
-### Step 4: Configure in Phinite
-
-1. Log into your Phinite workspace at www.phinite.ai
-2. Navigate to Integrations
-3. Select MongoDB
-4. Click + Add Configuration
-5. Enter the following:
-   - Name of the connection: MongoDB Production
-   - Connection String: Your MongoDB connection string
-   - Database Name: Target database name
-6. Select the workspace assistants that should use this connection
-7. Click Save Configuration
+1. Open an agent in Graph Studio
+2. Select the agent node → **Tools** tab → **Add a new tool**
+3. Choose **MongoDbTool** (or search for MongoDB)
+4. Select your saved connection or add a new one
+5. Enable the subtools your workflow needs and save
 
 ## Predefined tools
 
-Phinite provides these predefined actions for MongoDB:
+Phinite provides 21 subtools for MongoDB:
 
-- Insert Document: Add single documents
-- Insert Many Documents: Bulk document insertion
-- Find Document: Query single documents
-- Find Many Documents: Query multiple documents
-- Update Document: Modify existing documents
-- Delete Document: Remove documents
-- Count Documents: Get document counts
-- Aggregate Documents: Run aggregation pipelines
-- Create Collection: Set up new collections
-- List Collections: View database collections
-- Drop Collection: Remove collections
-- Create Index: Add database indexes
-- List Indexes: View collection indexes
-- Drop Index: Remove indexes
-- Create Database: Set up new databases
-- List Databases: View available databases
-- Run Command: Execute database commands
-- Get Collection Stats: Access collection statistics
+- Insert Document: Insert a single document into a MongoDB collection
+- Insert Many Documents: Insert multiple documents into a MongoDB collection
+- Find Document: Find a single document in a MongoDB collection
+- Find Many Documents: Find multiple documents in a MongoDB collection
+- Update Document: Update a single document in a MongoDB collection
+- Update Many Documents: Update multiple documents in a MongoDB collection
+- Delete Document: Delete a single document from a MongoDB collection
+- Delete Many Documents: Delete multiple documents from a MongoDB collection
+- Count Documents: Count documents in a MongoDB collection
+- Aggregate Documents: Perform aggregation operations on MongoDB collection
+- Create Collection: Create a new collection in MongoDB
+- Drop Collection: Drop a collection from MongoDB
+- List Collections: List all collections in a MongoDB database
+- Create Index: Create an index on a MongoDB collection
+- List Indexes: List all indexes on a MongoDB collection
+- Drop Index: Drop an index from a MongoDB collection
+- Get Database Stats: Get statistics about a MongoDB database
+- Get Collection Stats: Get statistics about a MongoDB collection
+- Create Database: Create a new MongoDB database
+- Drop Database: Drop a MongoDB database
+- List Databases: List all MongoDB databases
 
 ## Documentation & resources
 
-- Official MongoDB Documentation: `https://docs.mongodb.com/`
-- MongoDB Drivers: `https://docs.mongodb.com/drivers/`
-- MongoDB Atlas: `https://cloud.mongodb.com/`
+- Official documentation: `https://www.mongodb.com/docs/`
+- Phinite documentation: [MongoDB](https://docs.phinite.ai/docs/integrations-hub/mongodb)
 
 ## Notes
 
-- Connection strings contain sensitive information
-- Use strong passwords and IP whitelisting
-- Monitor connection limits and performance
-- Some operations require specific user permissions
-- Aggregation pipelines can be resource-intensive
+- Store API keys and tokens securely; many providers show secrets only once
+- Use separate connections for Dev, UAT, and Prod environments where possible
+- Test with a minimal subtool call after saving credentials

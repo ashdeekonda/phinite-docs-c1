@@ -20,6 +20,7 @@ Teams use Phinite to:
 - Build tools and connectors using DevStudio
 - Deploy across environments with version control and observability
 - Power assistants with knowledge bases, prompt engineering, and tools
+- Expose and discover agents via the [Agent Registry](/agent-registry/overview) (A2A protocol)
 - Track sessions, model usage, and decisions using detailed logs
 
 ---
@@ -35,6 +36,7 @@ Teams use Phinite to:
 | **Trigger** | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event) |
 | **Environment** | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps |
 | **Session** | A full execution of an agent graph, recorded in logs with inputs, decisions, outputs, and metrics |
+| **Agent Registry** | Workspace catalog of Agent Cards and hosted A2A endpoints for exposing and composing external agents |
 
 ---
 
@@ -56,6 +58,7 @@ Phinite supports a multi-role collaboration model so your entire team can work t
 
 - Visual-first AI workflow builder, with support for both no-code and code-based design
 - Multi-agent orchestration through linked agent graphs and manager agents
+- [Agent Registry (A2A)](/agent-registry/overview) for exposing, discovering, and composing external agents
 - Deep observability with session-level timelines, decision logs, and token tracking
 - Role-based access and environment isolation for enterprise-grade deployments
 - Reusable tools, prompts, and assistant templates to reduce repetitive work
