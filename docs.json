@@ -535,9 +535,9 @@
               "getting-started/what-you-can-build",
               "workspaces/workspace-overview",
               "getting-started/quickstart",
-              "user-management/user-roles",
               "user-management/inviting-users",
               "user-management/access-controls",
+              "user-management/user-roles",
               "user-management/workspace-ui",
               "user-management/user-management"
             ]
