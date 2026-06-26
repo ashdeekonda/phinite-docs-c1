@@ -9,8 +9,8 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "contextual": {
     "options": [
@@ -161,7 +161,7 @@
         "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "1. Getting Started",
             "pages": [
               "getting-started/about-phinite",
               "getting-started/what-you-can-build",
@@ -170,17 +170,7 @@
             ]
           },
           {
-            "group": "User Management",
-            "pages": [
-              "user-management/user-management",
-              "user-management/workspace-ui",
-              "user-management/inviting-users",
-              "user-management/access-controls",
-              "user-management/user-roles"
-            ]
-          },
-          {
-            "group": "Building Assistants",
+            "group": "2. Building Assistants",
             "pages": [
               "assistants/overview",
               "assistants/types",
@@ -197,24 +187,26 @@
                   "assistants/components/builds",
                   "assistants/components/channels"
                 ]
+              },
+              {
+                "group": "Channels (Communication)",
+                "pages": [
+                  "channels/overview",
+                  "channels/supported",
+                  "channels/webchat",
+                  "channels/whatsapp",
+                  "channels/slack",
+                  "channels/teams",
+                  "channels/slack-teams",
+                  "channels/twilio",
+                  "channels/email",
+                  "integrations-hub/chat-ai"
+                ]
               }
             ]
           },
           {
-            "group": "Agent Registry (A2A)",
-            "pages": [
-              "agent-registry/overview",
-              "agent-registry/invoke-a2a-from-claude",
-              "agent-registry/expose-your-flow",
-              "agent-registry/registry-agent-nodes",
-              "agent-registry/catalog",
-              "agent-registry/agent-cards",
-              "agent-registry/endpoints-and-lifecycle",
-              "agent-registry/glossary"
-            ]
-          },
-          {
-            "group": "Graph Studio (Workflow Builder)",
+            "group": "3. Graph Studio (Workflow Builder)",
             "pages": [
               "graph-studio/overview",
               "graph-studio/publishing",
@@ -285,7 +277,7 @@
             ]
           },
           {
-            "group": "5. DevStudio (Tool Builder)",
+            "group": "4. DevStudio (Tool Builder)",
             "pages": [
               "devstudio/overview",
               {
@@ -319,7 +311,7 @@
             ]
           },
           {
-            "group": "6. Triggers & Intents",
+            "group": "5. Triggers & Intents",
             "pages": [
               "triggers-intents/overview",
               {
@@ -354,7 +346,7 @@
             ]
           },
           {
-            "group": "7. Builds & Environments",
+            "group": "6. Builds & Environments",
             "pages": [
               "builds/overview",
               "builds/lifecycle",
@@ -364,7 +356,7 @@
             ]
           },
           {
-            "group": "9. Observability & Billing",
+            "group": "7. Observability & Billing",
             "pages": [
               "observability/overview",
               "observability/usage-metrics",
@@ -390,7 +382,17 @@
             ]
           },
           {
-            "group": "Reference",
+            "group": "8. User Management",
+            "pages": [
+              "user-management/user-management",
+              "user-management/workspace-ui",
+              "user-management/inviting-users",
+              "user-management/access-controls",
+              "user-management/user-roles"
+            ]
+          },
+          {
+            "group": "9. Reference",
             "pages": [
               "reference/ai-assistant",
               "reference/glossary",
@@ -401,12 +403,30 @@
             ]
           },
           {
-            "group": "11. Troubleshooting & Support",
+            "group": "10. Troubleshooting & Support",
             "pages": [
               "support/error-codes",
               "support/build-failures",
               "support/env-issues",
               "support/contact"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Agent Registry",
+        "groups": [
+          {
+            "group": "Agent Registry (A2A)",
+            "pages": [
+              "agent-registry/overview",
+              "agent-registry/invoke-a2a-from-claude",
+              "agent-registry/expose-your-flow",
+              "agent-registry/registry-agent-nodes",
+              "agent-registry/catalog",
+              "agent-registry/agent-cards",
+              "agent-registry/endpoints-and-lifecycle",
+              "agent-registry/glossary"
             ]
           }
         ]
@@ -432,148 +452,127 @@
             ]
           },
           {
-            "group": "Predefined Tools",
+            "group": "CRM & Sales",
             "pages": [
-              {
-                "group": "CRM & Sales",
-                "pages": [
-                  "integrations-hub/apollo-io",
-                  "integrations-hub/close-crm",
-                  "integrations-hub/copper-crm",
-                  "integrations-hub/freshsales",
-                  "integrations-hub/hubspot-crm",
-                  "integrations-hub/insightly",
-                  "integrations-hub/microsoft-dynamics-365",
-                  "integrations-hub/outreach",
-                  "integrations-hub/pipedrive",
-                  "integrations-hub/salesforce",
-                  "integrations-hub/salesloft"
-                ]
-              },
-              {
-                "group": "Marketing & Social",
-                "pages": [
-                  "integrations-hub/activecampaign",
-                  "integrations-hub/customer-io",
-                  "integrations-hub/instagram",
-                  "integrations-hub/sendgrid"
-                ]
-              },
-              {
-                "group": "Customer Support",
-                "pages": [
-                  "integrations-hub/front",
-                  "integrations-hub/gorgias",
-                  "integrations-hub/helpscout",
-                  "integrations-hub/intercom",
-                  "integrations-hub/kustomer",
-                  "integrations-hub/zoho-desk"
-                ]
-              },
-              {
-                "group": "Communication & Messaging",
-                "pages": [
-                  "integrations-hub/facebook-messenger",
-                  "integrations-hub/gmail",
-                  "integrations-hub/google-meet",
-                  "integrations-hub/microsoft-teams",
-                  "integrations-hub/slack",
-                  "integrations-hub/teams",
-                  "integrations-hub/telegram",
-                  "integrations-hub/twilio",
-                  "integrations-hub/vonage",
-                  "integrations-hub/whatsapp",
-                  "integrations-hub/zoom"
-                ]
-              },
-              {
-                "group": "Productivity & Collaboration",
-                "pages": [
-                  "integrations-hub/google-calendar",
-                  "integrations-hub/google-drive",
-                  "integrations-hub/google-sheets",
-                  "integrations-hub/notion",
-                  "integrations-hub/zoho-office-integrator"
-                ]
-              },
-              {
-                "group": "Analytics & Business Intelligence",
-                "pages": [
-                  "integrations-hub/amplitude",
-                  "integrations-hub/google-bigquery",
-                  "integrations-hub/looker",
-                  "integrations-hub/mixpanel",
-                  "integrations-hub/power-bi",
-                  "integrations-hub/tableau"
-                ]
-              },
-              {
-                "group": "Databases & Data Storage",
-                "pages": [
-                  "integrations-hub/azure-blob",
-                  "integrations-hub/azure-cosmos-db",
-                  "integrations-hub/mongodb",
-                  "integrations-hub/mysql",
-                  "integrations-hub/redis"
-                ]
-              },
-              {
-                "group": "Cloud & DevOps",
-                "pages": [
-                  "integrations-hub/azure",
-                  "integrations-hub/docker",
-                  "integrations-hub/github",
-                  "integrations-hub/google-cloud",
-                  "integrations-hub/jira",
-                  "integrations-hub/servicenow"
-                ]
-              },
-              {
-                "group": "Identity & Security",
-                "pages": [
-                  "integrations-hub/auth0",
-                  "integrations-hub/okta"
-                ]
-              },
-              {
-                "group": "Finance & Payments",
-                "pages": [
-                  "integrations-hub/braintree",
-                  "integrations-hub/chargebee",
-                  "integrations-hub/paypal",
-                  "integrations-hub/razorpay",
-                  "integrations-hub/recurly",
-                  "integrations-hub/square"
-                ]
-              },
-              {
-                "group": "E-Commerce & Shipping",
-                "pages": [
-                  "integrations-hub/shipstation",
-                  "integrations-hub/shopify"
-                ]
-              },
-              {
-                "group": "HR Management",
-                "pages": [
-                  "integrations-hub/workday-hcm"
-                ]
-              },
-              {
-                "group": "Forms & Surveys",
-                "pages": [
-                  "integrations-hub/tally"
-                ]
-              },
-              {
-                "group": "AI & Developer Tools",
-                "pages": [
-                  "integrations-hub/api",
-                  "integrations-hub/brave-search",
-                  "integrations-hub/firecrawl",
-                  "integrations-hub/mcp-client-tool"
-                ]
-              }
+              "integrations-hub/apollo-io",
+              "integrations-hub/close-crm",
+              "integrations-hub/copper-crm",
+              "integrations-hub/freshsales",
+              "integrations-hub/hubspot-crm",
+              "integrations-hub/insightly",
+              "integrations-hub/microsoft-dynamics-365",
+              "integrations-hub/outreach",
+              "integrations-hub/pipedrive",
+              "integrations-hub/salesforce",
+              "integrations-hub/salesloft"
+            ]
+          },
+          {
+            "group": "Marketing & Social",
+            "pages": [
+              "integrations-hub/activecampaign",
+              "integrations-hub/customer-io",
+              "integrations-hub/instagram",
+              "integrations-hub/sendgrid"
+            ]
+          },
+          {
+            "group": "Customer Support",
+            "pages": [
+              "integrations-hub/front",
+              "integrations-hub/gorgias",
+              "integrations-hub/helpscout",
+              "integrations-hub/intercom",
+              "integrations-hub/kustomer",
+              "integrations-hub/zoho-desk"
+            ]
+          },
+          {
+            "group": "Productivity & Collaboration",
+            "pages": [
+              "integrations-hub/google-calendar",
+              "integrations-hub/google-drive",
+              "integrations-hub/google-sheets",
+              "integrations-hub/notion",
+              "integrations-hub/zoho-office-integrator"
+            ]
+          },
+          {
+            "group": "Analytics & Business Intelligence",
+            "pages": [
+              "integrations-hub/amplitude",
+              "integrations-hub/google-bigquery",
+              "integrations-hub/looker",
+              "integrations-hub/mixpanel",
+              "integrations-hub/power-bi",
+              "integrations-hub/tableau"
+            ]
+          },
+          {
+            "group": "Databases & Data Storage",
+            "pages": [
+              "integrations-hub/azure-blob",
+              "integrations-hub/azure-cosmos-db",
+              "integrations-hub/mongodb",
+              "integrations-hub/mysql",
+              "integrations-hub/redis"
+            ]
+          },
+          {
+            "group": "Cloud & DevOps",
+            "pages": [
+              "integrations-hub/azure",
+              "integrations-hub/docker",
+              "integrations-hub/github",
+              "integrations-hub/google-cloud",
+              "integrations-hub/jira",
+              "integrations-hub/servicenow"
+            ]
+          },
+          {
+            "group": "Identity & Security",
+            "pages": [
+              "integrations-hub/auth0",
+              "integrations-hub/okta"
+            ]
+          },
+          {
+            "group": "Finance & Payments",
+            "pages": [
+              "integrations-hub/braintree",
+              "integrations-hub/chargebee",
+              "integrations-hub/paypal",
+              "integrations-hub/razorpay",
+              "integrations-hub/recurly",
+              "integrations-hub/square"
+            ]
+          },
+          {
+            "group": "E-Commerce & Shipping",
+            "pages": [
+              "integrations-hub/shipstation",
+              "integrations-hub/shopify"
+            ]
+          },
+          {
+            "group": "HR Management",
+            "pages": [
+              "integrations-hub/workday-hcm"
+            ]
+          },
+          {
+            "group": "Forms & Surveys",
+            "pages": [
+              "integrations-hub/tally"
+            ]
+          },
+          {
+            "group": "AI & Developer Tools",
+            "pages": [
+              "integrations-hub/api",
+              "integrations-hub/brave-search",
+              "integrations-hub/firecrawl",
+              "integrations-hub/mcp-client-tool"
             ]
           }
         ]
