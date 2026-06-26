@@ -9,10 +9,10 @@ Conversational assistants handle real-time chat and voice across channels. They 
 
 ## Channels
 
-- [Web Chat](/channels/webchat)
-- [WhatsApp](/channels/whatsapp)
-- [Slack / Teams](/channels/slack-teams)
-- [Twilio Voice](/channels/twilio)
+- [Web Chat](/integrations-hub/channels/webchat)
+- [WhatsApp](/integrations-hub/channels/whatsapp)
+- [Slack / Teams](/integrations-hub/channels/slack-teams)
+- [Twilio Voice](/integrations-hub/channels/twilio)
 
 ## Design steps
 <Frame>
@@ -27,7 +27,7 @@ Conversational assistants handle real-time chat and voice across channels. They 
     Map intents to flows in [Mapping](/triggers-intents/mapping).
   </Step>
   <Step title="Connect channels">
-    Configure channel authentication. See [Channels Overview](/channels/overview).
+    Configure channel authentication. See [Channels Overview](/integrations-hub/channels/overview).
   </Step>
 </Steps>
 

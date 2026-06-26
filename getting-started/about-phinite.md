@@ -1,16 +1,20 @@
 ---
-title: "Welcome"
+
+## title: "Welcome"
 description: "Learn what Phinite is, how it's structured, and how different users can build and manage intelligent agent workflows across environments"
 icon: "book-open"
----
 
 ## About Phinite
 
-Phinite is an AI automation platform to build, orchestrate, and deploy lifelike assistants and intelligent multi-agent workflows — across channels, tools, and business processes.
+Phinite is an **Agentic AI Platform** that enables teams to design, orchestrate, deploy, and manage AI agents across chat, voice, email, APIs, and business systems.
 
-Whether you're replacing a call center agent, automating report generation, or deploying assistants that act autonomously, Phinite gives your team the tools to build and run AI systems at scale — safely and visually.
+Whether you’re building a single AI assistant or an ecosystem of collaborating agents, Phinite provides everything required to move from prototype to production.
+
+
 
 ---
+
+
 
 ## What You Can Do with Phinite
 
@@ -20,53 +24,66 @@ Teams use Phinite to:
 - Build tools and connectors using DevStudio
 - Deploy across environments with version control and observability
 - Power assistants with knowledge bases, prompt engineering, and tools
-- Expose and discover agents via the [Agent Registry](/agent-registry/overview) (A2A protocol)
+- Expose and discover agents via [A2A](/agent-registry/overview) (Agent-to-Agent protocol)
 - Track sessions, model usage, and decisions using detailed logs
 
 ---
 
+
+
 ## Core Concepts
 
-| Concept | Description |
-| --- | --- |
-| **Assistant** | A conversational, email-based, or autonomous agent powered by one or more agent graphs |
-| **Agent Graph** | A visual decision graph with nodes that orchestrate logic, tools, and conversations |
-| **Node** | The building block of a agent graph — can prompt a model, call a tool, capture input, or make decisions |
-| **Tool** | A callable API, function, or system integration used by your assistant |
-| **Trigger** | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event) |
-| **Environment** | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps |
-| **Session** | A full execution of an agent graph, recorded in logs with inputs, decisions, outputs, and metrics |
-| **Agent Registry** | Workspace catalog of Agent Cards and hosted A2A endpoints for exposing and composing external agents |
+
+| Concept            | Description                                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------------- |
+| **Assistant**      | A conversational, email-based, or autonomous agent powered by one or more agent graphs                  |
+| **Agent Graph**    | A visual decision graph with nodes that orchestrate logic, tools, and conversations                     |
+| **Node**           | The building block of a agent graph — can prompt a model, call a tool, capture input, or make decisions |
+| **Tool**           | A callable API, function, or system integration used by your assistant                                  |
+| **Trigger**        | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event)                         |
+| **Environment**    | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps           |
+| **Session**        | A full execution of an agent graph, recorded in logs with inputs, decisions, outputs, and metrics       |
+| **A2A catalog** | Workspace catalog of Agent Cards and hosted A2A endpoints for exposing and composing external agents    |
+
 
 ---
+
+
 
 ## Who Uses Phinite
 
 Phinite supports a multi-role collaboration model so your entire team can work together:
 
-| Role | Responsibilities |
-| --- | --- |
-| **Developers** | Build tools, wire integrations, and design agent graphs |
+
+| Role           | Responsibilities                                                  |
+| -------------- | ----------------------------------------------------------------- |
+| **Developers** | Build tools, wire integrations, and design agent graphs           |
 | **Architects** | Plan agent logic, manage agent graphs, and configure environments |
-| **Admins** | Control access, invite users, and manage billing and environments |
-| **Testers** | Validate assistant behavior and run debug sessions |
-| **Analysts** | Observe sessions, track model usage, and monitor outcomes |
+| **Admins**     | Control access, invite users, and manage billing and environments |
+| **Testers**    | Validate assistant behavior and run debug sessions                |
+| **Analysts**   | Observe sessions, track model usage, and monitor outcomes         |
+
 
 ---
+
+
 
 ## What Makes Phinite Different
 
 - Visual-first AI workflow builder, with support for both no-code and code-based design
 - Multi-agent orchestration through linked agent graphs and manager agents
-- [Agent Registry (A2A)](/agent-registry/overview) for exposing, discovering, and composing external agents
+- [A2A](/agent-registry/overview) for exposing, discovering, and composing external agents
 - Deep observability with session-level timelines, decision logs, and token tracking
 - Role-based access and environment isolation for enterprise-grade deployments
 - Reusable tools, prompts, and assistant templates to reduce repetitive work
 
 ---
 
+
+
 ## Next Steps
 
+- [Build on Phinite](./what-you-can-build) — solution types and use cases
 - [Quick Start](./quickstart)
 - [Workspace Overview](/workspaces/workspace-overview)
 - [Inviting Users](/user-management/inviting-users)
@@ -74,3 +91,4 @@ Phinite supports a multi-role collaboration model so your entire team can work t
 ---
 
 > Phinite is built for teams that want to go beyond chatbots—enabling AI systems that reason, decide, and act intelligently.
+

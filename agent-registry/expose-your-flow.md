@@ -1,7 +1,11 @@
 ---
-title: "Expose your agent graph as an A2A agent"
-description: "Register a published agent graph in the Agent Registry using the Expose as External Agent wizard and attach an Agent Card."
+title: "Publish an agent graph (A2A)"
+description: "Register a published agent graph in the A2A catalog using the Expose as External Agent wizard."
 ---
+
+<Info>
+Part of the **[end-to-end publish journey](/agent-registry/publish-journey)**. Choose **Public** or **Organisation** in step 3 — see **[Deployment & visibility](/agent-registry/deployment-and-visibility)**. Every expose creates a **test** build; promote to **live** from [Agent Cards](/agent-registry/agent-cards).
+</Info>
 
 ## Prerequisites
 
@@ -71,7 +75,7 @@ When export is disabled, the step shows: *Enable "Export value to build" to conf
 | **Agent Description** | Editable summary for catalog and A2A clients |
 | **Skills** | Add skills with unique name, description, **Input Modes**, and **Output Modes** (MIME types) |
 | **Discoverability Tags** | Tags help agents appear in search and Discovery filters |
-| **Visibility & access** | **Public** — discoverable by any A2A-compatible agent or user with a valid API key. **Organisation** — visible only within your organisation |
+| **Visibility & access** | **Public** — callable by any client with a valid API key; required (with **live**) for cross-org catalog discovery. **Organisation** — same org only — see **[Deployment & visibility](/agent-registry/deployment-and-visibility)** |
 | **Auth Schemes** | Platform default: use your Phinite organisation **API key** |
 | **Refine Card** | Optional AI refinement (`refine_prompt_for: "a2a"`) to improve description and skills |
 
@@ -92,6 +96,9 @@ New registrations start with deployment status **`test`**. Promote to **`live`**
 ## Related pages
 
 <CardGroup cols={2}>
+<Card title="Publish journey" href="/agent-registry/publish-journey" icon="route">
+Full checklist including validate and promote steps.
+</Card>
 <Card title="Endpoints & lifecycle" href="/agent-registry/endpoints-and-lifecycle" icon="plug">
 Test vs live URL patterns and promotion.
 </Card>

@@ -9,8 +9,8 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/logo/light.png",
-    "dark": "/logo/dark.png"
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
   "contextual": {
     "options": [
@@ -161,6 +161,398 @@
     {
       "source": "/triggers-intents/webhooks",
       "destination": "/triggers-intents/triggers/api-guide"
+    },
+    {
+      "source": "/assistants/types",
+      "destination": "/getting-started/what-you-can-build"
+    },
+    {
+      "source": "/assistants/components/intents",
+      "destination": "/triggers-intents/intents"
+    },
+    {
+      "source": "/assistants/components/intents-email",
+      "destination": "/triggers-intents/intents-email"
+    },
+    {
+      "source": "/assistants/components/triggers",
+      "destination": "/triggers-intents/triggers"
+    },
+    {
+      "source": "/triggers-intents/creating-intents",
+      "destination": "/triggers-intents/intents"
+    },
+    {
+      "source": "/devstudio/prebuilt-tools",
+      "destination": "/integrations-hub/predefined-tools/workflow"
+    },
+    {
+      "source": "/devstudio/prebuilt/gmail",
+      "destination": "/integrations-hub/predefined-tools/gmail"
+    },
+    {
+      "source": "/devstudio/prebuilt/slacktool",
+      "destination": "/integrations-hub/predefined-tools/slack"
+    },
+    {
+      "source": "/devstudio/prebuilt/teamstool",
+      "destination": "/integrations-hub/predefined-tools/microsoft-teams"
+    },
+    {
+      "source": "/devstudio/prebuilt/jiratools",
+      "destination": "/integrations-hub/predefined-tools/jira"
+    },
+    {
+      "source": "/devstudio/prebuilt/customapi",
+      "destination": "/integrations-hub/predefined-tools/api"
+    },
+    {
+      "source": "/devstudio/prebuilt/mongodbtool",
+      "destination": "/integrations-hub/predefined-tools/mongodb"
+    },
+    {
+      "source": "/devstudio/prebuilt/sheets",
+      "destination": "/integrations-hub/predefined-tools/google-sheets"
+    },
+    {
+      "source": "/devstudio/prebuilt/jira-zendesk",
+      "destination": "/integrations-hub/predefined-tools/jira"
+    },
+    {
+      "source": "/integrations-hub/predefined-tools",
+      "destination": "/integrations-hub/predefined-tools/workflow"
+    },
+    {
+      "source": "/integrations-hub/chat-ai",
+      "destination": "/integrations-hub/channels/chat-ai"
+    },
+    {
+      "source": "/integrations-hub/microsoft-dynamics-365",
+      "destination": "/integrations-hub/predefined-tools/microsoft-dynamics-365"
+    },
+    {
+      "source": "/integrations-hub/zoho-office-integrator",
+      "destination": "/integrations-hub/predefined-tools/zoho-office-integrator"
+    },
+    {
+      "source": "/integrations-hub/facebook-messenger",
+      "destination": "/integrations-hub/predefined-tools/facebook-messenger"
+    },
+    {
+      "source": "/integrations-hub/google-calendar",
+      "destination": "/integrations-hub/predefined-tools/google-calendar"
+    },
+    {
+      "source": "/integrations-hub/mcp-client-tool",
+      "destination": "/integrations-hub/predefined-tools/mcp-client-tool"
+    },
+    {
+      "source": "/integrations-hub/azure-cosmos-db",
+      "destination": "/integrations-hub/predefined-tools/azure-cosmos-db"
+    },
+    {
+      "source": "/integrations-hub/google-bigquery",
+      "destination": "/integrations-hub/predefined-tools/google-bigquery"
+    },
+    {
+      "source": "/integrations-hub/microsoft-teams",
+      "destination": "/integrations-hub/predefined-tools/microsoft-teams"
+    },
+    {
+      "source": "/integrations-hub/activecampaign",
+      "destination": "/integrations-hub/predefined-tools/activecampaign"
+    },
+    {
+      "source": "/integrations-hub/google-sheets",
+      "destination": "/integrations-hub/predefined-tools/google-sheets"
+    },
+    {
+      "source": "/integrations-hub/google-cloud",
+      "destination": "/integrations-hub/predefined-tools/google-cloud"
+    },
+    {
+      "source": "/integrations-hub/brave-search",
+      "destination": "/integrations-hub/predefined-tools/brave-search"
+    },
+    {
+      "source": "/integrations-hub/google-drive",
+      "destination": "/integrations-hub/predefined-tools/google-drive"
+    },
+    {
+      "source": "/integrations-hub/hubspot-crm",
+      "destination": "/integrations-hub/predefined-tools/hubspot-crm"
+    },
+    {
+      "source": "/integrations-hub/google-meet",
+      "destination": "/integrations-hub/predefined-tools/google-meet"
+    },
+    {
+      "source": "/integrations-hub/workday-hcm",
+      "destination": "/integrations-hub/predefined-tools/workday-hcm"
+    },
+    {
+      "source": "/integrations-hub/customer-io",
+      "destination": "/integrations-hub/predefined-tools/customer-io"
+    },
+    {
+      "source": "/integrations-hub/shipstation",
+      "destination": "/integrations-hub/predefined-tools/shipstation"
+    },
+    {
+      "source": "/integrations-hub/freshsales",
+      "destination": "/integrations-hub/predefined-tools/freshsales"
+    },
+    {
+      "source": "/integrations-hub/copper-crm",
+      "destination": "/integrations-hub/predefined-tools/copper-crm"
+    },
+    {
+      "source": "/integrations-hub/azure-blob",
+      "destination": "/integrations-hub/predefined-tools/azure-blob"
+    },
+    {
+      "source": "/integrations-hub/servicenow",
+      "destination": "/integrations-hub/predefined-tools/servicenow"
+    },
+    {
+      "source": "/integrations-hub/salesforce",
+      "destination": "/integrations-hub/predefined-tools/salesforce"
+    },
+    {
+      "source": "/integrations-hub/instagram",
+      "destination": "/integrations-hub/predefined-tools/instagram"
+    },
+    {
+      "source": "/integrations-hub/zoho-desk",
+      "destination": "/integrations-hub/predefined-tools/zoho-desk"
+    },
+    {
+      "source": "/integrations-hub/pipedrive",
+      "destination": "/integrations-hub/predefined-tools/pipedrive"
+    },
+    {
+      "source": "/integrations-hub/firecrawl",
+      "destination": "/integrations-hub/predefined-tools/firecrawl"
+    },
+    {
+      "source": "/integrations-hub/apollo-io",
+      "destination": "/integrations-hub/predefined-tools/apollo-io"
+    },
+    {
+      "source": "/integrations-hub/salesloft",
+      "destination": "/integrations-hub/predefined-tools/salesloft"
+    },
+    {
+      "source": "/integrations-hub/helpscout",
+      "destination": "/integrations-hub/predefined-tools/helpscout"
+    },
+    {
+      "source": "/integrations-hub/close-crm",
+      "destination": "/integrations-hub/predefined-tools/close-crm"
+    },
+    {
+      "source": "/integrations-hub/braintree",
+      "destination": "/integrations-hub/predefined-tools/braintree"
+    },
+    {
+      "source": "/integrations-hub/amplitude",
+      "destination": "/integrations-hub/predefined-tools/amplitude"
+    },
+    {
+      "source": "/integrations-hub/chargebee",
+      "destination": "/integrations-hub/predefined-tools/chargebee"
+    },
+    {
+      "source": "/integrations-hub/insightly",
+      "destination": "/integrations-hub/predefined-tools/insightly"
+    },
+    {
+      "source": "/integrations-hub/sendgrid",
+      "destination": "/integrations-hub/predefined-tools/sendgrid"
+    },
+    {
+      "source": "/integrations-hub/intercom",
+      "destination": "/integrations-hub/predefined-tools/intercom"
+    },
+    {
+      "source": "/integrations-hub/kustomer",
+      "destination": "/integrations-hub/predefined-tools/kustomer"
+    },
+    {
+      "source": "/integrations-hub/whatsapp",
+      "destination": "/integrations-hub/predefined-tools/whatsapp"
+    },
+    {
+      "source": "/integrations-hub/power-bi",
+      "destination": "/integrations-hub/predefined-tools/power-bi"
+    },
+    {
+      "source": "/integrations-hub/razorpay",
+      "destination": "/integrations-hub/predefined-tools/razorpay"
+    },
+    {
+      "source": "/integrations-hub/outreach",
+      "destination": "/integrations-hub/predefined-tools/outreach"
+    },
+    {
+      "source": "/integrations-hub/telegram",
+      "destination": "/integrations-hub/predefined-tools/telegram"
+    },
+    {
+      "source": "/integrations-hub/mixpanel",
+      "destination": "/integrations-hub/predefined-tools/mixpanel"
+    },
+    {
+      "source": "/integrations-hub/recurly",
+      "destination": "/integrations-hub/predefined-tools/recurly"
+    },
+    {
+      "source": "/integrations-hub/gorgias",
+      "destination": "/integrations-hub/predefined-tools/gorgias"
+    },
+    {
+      "source": "/integrations-hub/shopify",
+      "destination": "/integrations-hub/predefined-tools/shopify"
+    },
+    {
+      "source": "/integrations-hub/tableau",
+      "destination": "/integrations-hub/predefined-tools/tableau"
+    },
+    {
+      "source": "/integrations-hub/mongodb",
+      "destination": "/integrations-hub/predefined-tools/mongodb"
+    },
+    {
+      "source": "/integrations-hub/looker",
+      "destination": "/integrations-hub/predefined-tools/looker"
+    },
+    {
+      "source": "/integrations-hub/twilio",
+      "destination": "/integrations-hub/predefined-tools/twilio"
+    },
+    {
+      "source": "/integrations-hub/github",
+      "destination": "/integrations-hub/predefined-tools/github"
+    },
+    {
+      "source": "/integrations-hub/square",
+      "destination": "/integrations-hub/predefined-tools/square"
+    },
+    {
+      "source": "/integrations-hub/notion",
+      "destination": "/integrations-hub/predefined-tools/notion"
+    },
+    {
+      "source": "/integrations-hub/paypal",
+      "destination": "/integrations-hub/predefined-tools/paypal"
+    },
+    {
+      "source": "/integrations-hub/vonage",
+      "destination": "/integrations-hub/predefined-tools/vonage"
+    },
+    {
+      "source": "/integrations-hub/docker",
+      "destination": "/integrations-hub/predefined-tools/docker"
+    },
+    {
+      "source": "/integrations-hub/email",
+      "destination": "/integrations-hub/predefined-tools/email"
+    },
+    {
+      "source": "/integrations-hub/voice",
+      "destination": "/integrations-hub/predefined-tools/voice"
+    },
+    {
+      "source": "/integrations-hub/redis",
+      "destination": "/integrations-hub/predefined-tools/redis"
+    },
+    {
+      "source": "/integrations-hub/gmail",
+      "destination": "/integrations-hub/predefined-tools/gmail"
+    },
+    {
+      "source": "/integrations-hub/slack",
+      "destination": "/integrations-hub/predefined-tools/slack"
+    },
+    {
+      "source": "/integrations-hub/auth0",
+      "destination": "/integrations-hub/predefined-tools/auth0"
+    },
+    {
+      "source": "/integrations-hub/mysql",
+      "destination": "/integrations-hub/predefined-tools/mysql"
+    },
+    {
+      "source": "/integrations-hub/front",
+      "destination": "/integrations-hub/predefined-tools/front"
+    },
+    {
+      "source": "/integrations-hub/tally",
+      "destination": "/integrations-hub/predefined-tools/tally"
+    },
+    {
+      "source": "/integrations-hub/teams",
+      "destination": "/integrations-hub/predefined-tools/teams"
+    },
+    {
+      "source": "/integrations-hub/azure",
+      "destination": "/integrations-hub/predefined-tools/azure"
+    },
+    {
+      "source": "/integrations-hub/jira",
+      "destination": "/integrations-hub/predefined-tools/jira"
+    },
+    {
+      "source": "/integrations-hub/okta",
+      "destination": "/integrations-hub/predefined-tools/okta"
+    },
+    {
+      "source": "/integrations-hub/zoom",
+      "destination": "/integrations-hub/predefined-tools/zoom"
+    },
+    {
+      "source": "/integrations-hub/api",
+      "destination": "/integrations-hub/predefined-tools/api"
+    },
+    {
+      "source": "/channels/email",
+      "destination": "/integrations-hub/channels/email"
+    },
+    {
+      "source": "/channels/overview",
+      "destination": "/integrations-hub/channels/overview"
+    },
+    {
+      "source": "/channels/supported",
+      "destination": "/integrations-hub/channels/supported"
+    },
+    {
+      "source": "/channels/slack",
+      "destination": "/integrations-hub/channels/slack"
+    },
+    {
+      "source": "/channels/twilio",
+      "destination": "/integrations-hub/channels/twilio"
+    },
+    {
+      "source": "/channels/webchat",
+      "destination": "/integrations-hub/channels/webchat"
+    },
+    {
+      "source": "/channels/chat-ai",
+      "destination": "/integrations-hub/channels/chat-ai"
+    },
+    {
+      "source": "/channels/whatsapp",
+      "destination": "/integrations-hub/channels/whatsapp"
+    },
+    {
+      "source": "/channels/slack-teams",
+      "destination": "/integrations-hub/channels/slack-teams"
+    },
+    {
+      "source": "/channels/teams",
+      "destination": "/integrations-hub/channels/teams"
     }
   ],
   "navigation": {
@@ -183,15 +575,19 @@
             "group": "2. Building Assistants",
             "pages": [
               "assistants/overview",
-              "assistants/types",
+              {
+                "group": "Solution guides",
+                "pages": [
+                  "assistants/conversational",
+                  "assistants/email",
+                  "assistants/autonomous"
+                ]
+              },
               {
                 "group": "Assistant Components",
                 "pages": [
                   "assistants/components",
                   "assistants/components/flows",
-                  "assistants/components/intents",
-                  "assistants/components/intents-email",
-                  "assistants/components/triggers",
                   "assistants/components/tools",
                   "assistants/components/environments",
                   "assistants/components/builds",
@@ -201,16 +597,16 @@
               {
                 "group": "Channels (Communication)",
                 "pages": [
-                  "channels/overview",
-                  "channels/supported",
-                  "channels/webchat",
-                  "channels/whatsapp",
-                  "channels/slack",
-                  "channels/teams",
-                  "channels/slack-teams",
-                  "channels/twilio",
-                  "channels/email",
-                  "integrations-hub/chat-ai"
+                  "integrations-hub/channels/overview",
+                  "integrations-hub/channels/supported",
+                  "integrations-hub/channels/webchat",
+                  "integrations-hub/channels/whatsapp",
+                  "integrations-hub/channels/slack",
+                  "integrations-hub/channels/teams",
+                  "integrations-hub/channels/slack-teams",
+                  "integrations-hub/channels/twilio",
+                  "integrations-hub/channels/email",
+                  "integrations-hub/channels/chat-ai"
                 ]
               }
             ]
@@ -302,18 +698,6 @@
               "devstudio/types",
               "devstudio/system-tool",
               "devstudio/custom-tools",
-              "devstudio/prebuilt-tools",
-              {
-                "group": "Predefined Tools",
-                "pages": [
-                  "devstudio/prebuilt/gmail",
-                  "devstudio/prebuilt/slacktool",
-                  "devstudio/prebuilt/teamstool",
-                  "devstudio/prebuilt/jiratools",
-                  "devstudio/prebuilt/customapi",
-                  "devstudio/prebuilt/mongodbtool"
-                ]
-              },
               "devstudio/structure",
               "devstudio/versioning",
               "devstudio/linking-tools",
@@ -328,9 +712,10 @@
                 "group": "Intents",
                 "pages": [
                   "triggers-intents/intents",
-                  "triggers-intents/creating-intents",
+                  "triggers-intents/intents-email",
                   "triggers-intents/prompt-training",
                   "triggers-intents/testing-intents",
+                  "triggers-intents/mapping",
                   "triggers-intents/intent-as-api"
                 ]
               },
@@ -349,8 +734,7 @@
                     ]
                   },
                   "triggers-intents/triggers",
-                  "triggers-intents/event-triggers",
-                  "triggers-intents/mapping"
+                  "triggers-intents/event-triggers"
                 ]
               }
             ]
@@ -424,19 +808,36 @@
         ]
       },
       {
-        "tab": "Agent Registry",
+        "tab": "A2A",
         "groups": [
           {
-            "group": "Agent Registry (A2A)",
+            "group": "Get started",
             "pages": [
               "agent-registry/overview",
-              "agent-registry/invoke-a2a-from-claude",
-              "agent-registry/expose-your-flow",
-              "agent-registry/registry-agent-nodes",
-              "agent-registry/catalog",
-              "agent-registry/agent-cards",
-              "agent-registry/endpoints-and-lifecycle",
+              "agent-registry/deployment-and-visibility",
               "agent-registry/glossary"
+            ]
+          },
+          {
+            "group": "Publish an agent",
+            "pages": [
+              "agent-registry/publish-journey",
+              "agent-registry/expose-your-flow",
+              "agent-registry/agent-cards",
+              "agent-registry/endpoints-and-lifecycle"
+            ]
+          },
+          {
+            "group": "Discover & compose",
+            "pages": [
+              "agent-registry/catalog",
+              "agent-registry/registry-agent-nodes"
+            ]
+          },
+          {
+            "group": "Call from outside",
+            "pages": [
+              "agent-registry/invoke-a2a-from-claude"
             ]
           }
         ]
@@ -453,136 +854,146 @@
           {
             "group": "Channels",
             "pages": [
-              "channels/email",
-              "integrations-hub/chat-ai",
-              "channels/slack",
-              "channels/teams",
-              "channels/twilio",
-              "channels/whatsapp"
+              "integrations-hub/channels/overview",
+              "integrations-hub/channels/supported",
+              "integrations-hub/channels/webchat",
+              "integrations-hub/channels/email",
+              "integrations-hub/channels/chat-ai",
+              "integrations-hub/channels/slack",
+              "integrations-hub/channels/teams",
+              "integrations-hub/channels/slack-teams",
+              "integrations-hub/channels/twilio",
+              "integrations-hub/channels/whatsapp"
             ]
           },
           {
-            "group": "CRM & Sales",
+            "group": "Predefined Tools",
             "pages": [
-              "integrations-hub/apollo-io",
-              "integrations-hub/close-crm",
-              "integrations-hub/copper-crm",
-              "integrations-hub/freshsales",
-              "integrations-hub/hubspot-crm",
-              "integrations-hub/insightly",
-              "integrations-hub/microsoft-dynamics-365",
-              "integrations-hub/outreach",
-              "integrations-hub/pipedrive",
-              "integrations-hub/salesforce",
-              "integrations-hub/salesloft"
+              "integrations-hub/predefined-tools/workflow",
+              {
+                "group": "CRM & Sales",
+                "pages": [
+              "integrations-hub/predefined-tools/apollo-io",
+              "integrations-hub/predefined-tools/close-crm",
+              "integrations-hub/predefined-tools/copper-crm",
+              "integrations-hub/predefined-tools/freshsales",
+              "integrations-hub/predefined-tools/hubspot-crm",
+              "integrations-hub/predefined-tools/insightly",
+              "integrations-hub/predefined-tools/microsoft-dynamics-365",
+              "integrations-hub/predefined-tools/outreach",
+              "integrations-hub/predefined-tools/pipedrive",
+              "integrations-hub/predefined-tools/salesforce",
+              "integrations-hub/predefined-tools/salesloft"
             ]
           },
           {
             "group": "Marketing & Social",
             "pages": [
-              "integrations-hub/activecampaign",
-              "integrations-hub/customer-io",
-              "integrations-hub/instagram",
-              "integrations-hub/sendgrid"
+              "integrations-hub/predefined-tools/activecampaign",
+              "integrations-hub/predefined-tools/customer-io",
+              "integrations-hub/predefined-tools/instagram",
+              "integrations-hub/predefined-tools/sendgrid"
             ]
           },
           {
             "group": "Customer Support",
             "pages": [
-              "integrations-hub/front",
-              "integrations-hub/gorgias",
-              "integrations-hub/helpscout",
-              "integrations-hub/intercom",
-              "integrations-hub/kustomer",
-              "integrations-hub/zoho-desk"
+              "integrations-hub/predefined-tools/front",
+              "integrations-hub/predefined-tools/gorgias",
+              "integrations-hub/predefined-tools/helpscout",
+              "integrations-hub/predefined-tools/intercom",
+              "integrations-hub/predefined-tools/kustomer",
+              "integrations-hub/predefined-tools/zoho-desk"
             ]
           },
           {
             "group": "Productivity & Collaboration",
             "pages": [
-              "integrations-hub/google-calendar",
-              "integrations-hub/google-drive",
-              "integrations-hub/google-sheets",
-              "integrations-hub/notion",
-              "integrations-hub/zoho-office-integrator"
+              "integrations-hub/predefined-tools/google-calendar",
+              "integrations-hub/predefined-tools/google-drive",
+              "integrations-hub/predefined-tools/google-sheets",
+              "integrations-hub/predefined-tools/notion",
+              "integrations-hub/predefined-tools/zoho-office-integrator"
             ]
           },
           {
             "group": "Analytics & Business Intelligence",
             "pages": [
-              "integrations-hub/amplitude",
-              "integrations-hub/google-bigquery",
-              "integrations-hub/looker",
-              "integrations-hub/mixpanel",
-              "integrations-hub/power-bi",
-              "integrations-hub/tableau"
+              "integrations-hub/predefined-tools/amplitude",
+              "integrations-hub/predefined-tools/google-bigquery",
+              "integrations-hub/predefined-tools/looker",
+              "integrations-hub/predefined-tools/mixpanel",
+              "integrations-hub/predefined-tools/power-bi",
+              "integrations-hub/predefined-tools/tableau"
             ]
           },
           {
             "group": "Databases & Data Storage",
             "pages": [
-              "integrations-hub/azure-blob",
-              "integrations-hub/azure-cosmos-db",
-              "integrations-hub/mongodb",
-              "integrations-hub/mysql",
-              "integrations-hub/redis"
+              "integrations-hub/predefined-tools/azure-blob",
+              "integrations-hub/predefined-tools/azure-cosmos-db",
+              "integrations-hub/predefined-tools/mongodb",
+              "integrations-hub/predefined-tools/mysql",
+              "integrations-hub/predefined-tools/redis"
             ]
           },
           {
             "group": "Cloud & DevOps",
             "pages": [
-              "integrations-hub/azure",
-              "integrations-hub/docker",
-              "integrations-hub/github",
-              "integrations-hub/google-cloud",
-              "integrations-hub/jira",
-              "integrations-hub/servicenow"
+              "integrations-hub/predefined-tools/azure",
+              "integrations-hub/predefined-tools/docker",
+              "integrations-hub/predefined-tools/github",
+              "integrations-hub/predefined-tools/google-cloud",
+              "integrations-hub/predefined-tools/jira",
+              "integrations-hub/predefined-tools/servicenow"
             ]
           },
           {
             "group": "Identity & Security",
             "pages": [
-              "integrations-hub/auth0",
-              "integrations-hub/okta"
+              "integrations-hub/predefined-tools/auth0",
+              "integrations-hub/predefined-tools/okta"
             ]
           },
           {
             "group": "Finance & Payments",
             "pages": [
-              "integrations-hub/braintree",
-              "integrations-hub/chargebee",
-              "integrations-hub/paypal",
-              "integrations-hub/razorpay",
-              "integrations-hub/recurly",
-              "integrations-hub/square"
+              "integrations-hub/predefined-tools/braintree",
+              "integrations-hub/predefined-tools/chargebee",
+              "integrations-hub/predefined-tools/paypal",
+              "integrations-hub/predefined-tools/razorpay",
+              "integrations-hub/predefined-tools/recurly",
+              "integrations-hub/predefined-tools/square"
             ]
           },
           {
             "group": "E-Commerce & Shipping",
             "pages": [
-              "integrations-hub/shipstation",
-              "integrations-hub/shopify"
+              "integrations-hub/predefined-tools/shipstation",
+              "integrations-hub/predefined-tools/shopify"
             ]
           },
           {
             "group": "HR Management",
             "pages": [
-              "integrations-hub/workday-hcm"
+              "integrations-hub/predefined-tools/workday-hcm"
             ]
           },
           {
             "group": "Forms & Surveys",
             "pages": [
-              "integrations-hub/tally"
+              "integrations-hub/predefined-tools/tally"
             ]
           },
           {
             "group": "AI & Developer Tools",
             "pages": [
-              "integrations-hub/api",
-              "integrations-hub/brave-search",
-              "integrations-hub/firecrawl",
-              "integrations-hub/mcp-client-tool"
+              "integrations-hub/predefined-tools/api",
+              "integrations-hub/predefined-tools/brave-search",
+              "integrations-hub/predefined-tools/firecrawl",
+              "integrations-hub/predefined-tools/mcp-client-tool"
+            ]
+          }
             ]
           }
         ]

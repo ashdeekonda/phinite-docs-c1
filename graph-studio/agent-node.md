@@ -188,7 +188,7 @@ const inputData = {
 
 ### Tool ecosystem
 - **[Custom Tools](/devstudio/custom-tools)**: Build specialized tools for specific use cases
-- **[Pre-built Integrations](/devstudio/prebuilt-tools)**: Leverage existing integrations with popular services
+- **[Predefined tools](/integrations-hub/predefined-tools/workflow)**: Connect third-party APIs via Integrations, then enable in agent nodes
 - **[Tool Versioning](/devstudio/versioning)**: Manage tool updates and compatibility
 
 ### Observability and monitoring

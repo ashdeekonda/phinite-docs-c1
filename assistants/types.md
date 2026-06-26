@@ -1,22 +1,20 @@
 ---
 title: "Types of Assistants"
-description: "Conversational, Email, and Autonomous assistants and when to use each."
+description: "This page has moved — see Build on Phinite for solution types and comparison."
 ---
 
-## Comparison
-
-| Type | Best for | Triggers | Channels |
-|------|----------|----------|----------|
-| Conversational | Real-time chat/voice | Intents, chat events | Web Chat, WhatsApp, Slack/Teams, Twilio |
-| Email | Asynchronous communication | Inbound email | Email |
-| Autonomous | Background automation | Schedules, webhooks | N/A |
-
-## Details
-
-- [Conversational Assistants](/assistants/conversational)
-- [Email Assistants](/assistants/email)
-- [Autonomous Assistants](/assistants/autonomous)
-
 <Note>
-All assistant types are orchestrated by [Agent Graphs](/assistants/components/flows) and can call [Tools](/assistants/components/tools).
+  **This page has moved.** Solution types, use-case patterns, and comparison tables now live on **[Build on Phinite](/getting-started/what-you-can-build)**.
 </Note>
+
+## Type-specific guides
+
+- [Conversational assistants](/assistants/conversational) — chat and voice
+- [Email assistants](/assistants/email) — inbox automation
+- [Autonomous assistants](/assistants/autonomous) — background jobs and APIs
+
+## Entry points
+
+- [Conversational intents](/triggers-intents/intents)
+- [Email intents](/triggers-intents/intents-email)
+- [Triggers](/triggers-intents/triggers)

@@ -10,11 +10,11 @@ description: "Where assistants interact: web, messaging, voice, and email."
 </Frame>
 
 
-- [Web Chat](/channels/webchat)
-- [WhatsApp](/channels/whatsapp)
-- [Slack / Teams](/channels/slack-teams)
-- [Twilio Voice](/channels/twilio)
-- [Email](/channels/email)
+- [Web Chat](/integrations-hub/channels/webchat)
+- [WhatsApp](/integrations-hub/channels/whatsapp)
+- [Slack / Teams](/integrations-hub/channels/slack-teams)
+- [Twilio Voice](/integrations-hub/channels/twilio)
+- [Email](/integrations-hub/channels/email)
 
 ## Configuration
 

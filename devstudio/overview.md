@@ -32,7 +32,10 @@ Open **Dev Studio** from an assistant's **Build → Tools**, or manage **Workspa
     Phinite Aura-generated or manual coding
   </Card>
    <Card title="Tool Types" href="/devstudio/types" icon="wrench">
-    Custom, system, and structure tools; predefined tools via Integrations
+    Custom, system, and structure tools
+  </Card>
+  <Card title="Predefined tools" href="/integrations-hub/predefined-tools/workflow" icon="plug">
+    Connect third-party APIs via Integrations
   </Card>
 </CardGroup>
 

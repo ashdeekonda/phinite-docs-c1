@@ -1,9 +1,11 @@
 ---
-title: "Agent Registry glossary"
-description: "Industry and A2A terminology mapped to Phinite UI labels, API fields, and MIME modes."
+title: "A2A glossary"
+description: "A2A and Agent Card terminology mapped to Phinite UI labels, API fields, and MIME modes."
 ---
 
-This glossary aligns **Agent-to-Agent (A2A)** vocabulary with what you see in Graph Studio, Agent Registry, and the gateway. For protocol details beyond Phinite, see the official **[A2A protocol specification](https://a2a-protocol.org/latest/specification/)**.
+This glossary aligns **Agent-to-Agent (A2A)** vocabulary with what you see in [Graph Studio](/graph-studio/overview), the workspace A2A catalog, and the gateway. Start with the **[A2A overview](/agent-registry/overview)** if you are new to publishing agents.
+
+Official protocol: **[A2A protocol specification](https://a2a-protocol.org/latest/specification/)**.
 
 ## Industry terminology map
 

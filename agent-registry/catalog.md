@@ -1,16 +1,18 @@
 ---
-title: "Browse the Agent Registry"
-description: "Search, filter, and inspect organisation and public-facing agent listings in the workspace Agent Registry."
+title: "Browse the A2A catalog"
+description: "Search, filter, and inspect registered A2A agents in your workspace catalog."
 ---
 
-## Open Agent Registry
+Use **Visibility** and **Deployed** filters together to confirm build state — see **[Deployment & visibility](/agent-registry/deployment-and-visibility#who-sees-what-in-the-catalog)**. Other organisations only see **`public` + `live`** agents.
 
-In the workspace sidebar, open **Agent Registry** when your organisation grants **`workspace.sidebar.agent_registry`**.
+## Open the A2A catalog
+
+In the workspace sidebar, open **Agent Registry** (the A2A catalog) when your organisation grants **`workspace.sidebar.agent_registry`**.
 
 **Route:** `/{organisation}/workspace/{workspaceId}/agent-registry`
 
 <Info>
-The same registry data powers **Browse** mode on agent nodes in Graph Studio. The workspace page is the full catalog experience with search, filters, and detail views.
+The same registry data powers **Browse** mode on [registry agent nodes](/agent-registry/registry-agent-nodes) in [Graph Studio](/graph-studio/overview). This page is the full catalog experience with search, filters, and detail views.
 </Info>
 
 ![Agent Registry search and filter sidebar](/images/agent-registry/registry-search.png)

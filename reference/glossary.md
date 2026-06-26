@@ -19,6 +19,6 @@ icon: book
 - **Environment**: Dev, UAT, or Production runtime context
 - **Session**: A single interaction run (chat, call, or execution); primary row in Observability → Sessions
 - **Token**: Unit of LLM usage for cost/usage tracking
-- **Agent Registry**: Workspace catalog of Agent Cards and hosted A2A endpoints — see [Agent Registry glossary](/agent-registry/glossary)
+- **A2A (Agent-to-Agent)**: Workspace catalog of Agent Cards and hosted endpoints — see [A2A glossary](/agent-registry/glossary)
 - **Agent Card**: Registered metadata (skills, tags, visibility) for an exposed agent graph build
 - **A2A (Agent-to-Agent)**: Protocol for agents to discover and call each other via hosted endpoints

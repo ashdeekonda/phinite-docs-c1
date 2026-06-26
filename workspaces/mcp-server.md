@@ -20,5 +20,5 @@ Requires the `workspace.sidebar.mcp_servers` permission. All roles that can open
 ## Related
 
 - [Workspace overview](/workspaces/workspace-overview)
-- [MCP client tool integration](/integrations-hub/mcp-client-tool)
+- [MCP client tool integration](/integrations-hub/predefined-tools/mcp-client-tool)
 - [Agent Registry — Expose an agent](/agent-registry/expose-your-flow)

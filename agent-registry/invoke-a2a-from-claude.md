@@ -1,12 +1,12 @@
 ---
-
-## title: "Invoke A2A agents from Claude"
+title: "Invoke A2A agents from Claude"
 description: "Install the Phinite Connector in Claude, discover registry agents, run tasks, and complete credential setup for integrated tools."
 icon: "plug"
+---
 
-The **Phinite Connector** is a Claude plugin that connects your chat session to your organisation's **Agent Registry** over the **[Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/specification/)**. After you connect, Claude can **discover** published agents in your workspace, **call** them on your behalf, and guide you through **credential setup** when an agent needs Gmail, Slack, GitHub, or other integrations.
+The **Phinite Connector** is a Claude plugin that connects your chat session to your organisation's **A2A catalog** over the **[Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/specification/)**. After you connect, Claude can **discover** published agents in your workspace, **call** them on your behalf, and guide you through **credential setup** when an agent needs Gmail, Slack, GitHub, or other integrations.
 
-This guide is for **end users** calling registry agents from Claude. To **publish** agents into the registry, see [Expose your agent graph](/agent-registry/expose-your-flow) and the [Agent Registry overview](/agent-registry/overview).
+This guide is for **end users** calling A2A agents from Claude. To **publish** agents, see [Expose your agent graph](/agent-registry/expose-your-flow) and the [A2A overview](/agent-registry/overview).
 
 This connector is separate from [Use Phinite Docs in AI Tools](/reference/ai-assistant), which searches Phinite documentation — not your workspace agents.
 
@@ -70,7 +70,7 @@ Use this when you want a broad view of what is registered. For targeted tasks, p
 | `limit`   | No       | Maximum results to return (default **5**)                                                               |
 
 
-Discovery behaviour mirrors the workspace [Agent Registry catalog](/agent-registry/catalog): builders control what you see through visibility, skills, tags, and test/live status.
+Discovery behaviour mirrors the workspace [Agent Registry catalog](/agent-registry/catalog): builders control what you see through visibility, skills, tags, and test/live status. For **public + live** cross-org discovery, see **[Deployment & visibility](/agent-registry/deployment-and-visibility)**.
 
 ### `call_agent`
 

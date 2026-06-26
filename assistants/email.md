@@ -11,7 +11,7 @@ Email assistants process inbound emails, classify them, and take actions using f
 
 <Steps>
 <Step title="Connect inbox">
-  Configure your email channel. See [Channels: Email](/channels/email).
+  Configure your email channel. See [Channels: Email](/integrations-hub/channels/email).
 </Step>
 <Step title="Design flows">
   Build flows to parse, classify, and respond. See [Graph Studio](/graph-studio/overview).

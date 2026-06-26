@@ -16,7 +16,7 @@ Graph Studio is Phinite's visual workflow builder that enables you to create sop
     Describe your goal in natural language and let Phinite Aura generate the initial agent graph, prompts, tools, and variables.
   </Card>
 
-  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">
+  <Card title="A2A" icon="share-nodes" href="/agent-registry/overview">
     Expose published graphs as external agents, browse the catalog, and attach registry agents on the canvas.
   </Card>
 </CardGroup>

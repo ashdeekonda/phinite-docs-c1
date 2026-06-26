@@ -3,6 +3,8 @@ title: "A2A endpoints & lifecycle"
 description: "Hosted URL patterns, test vs live builds, promotion, authentication, and registry API endpoints."
 ---
 
+For the **test/live × public/org** model and catalog rules, see **[Deployment & visibility](/agent-registry/deployment-and-visibility)**.
+
 ## Hosted A2A URLs
 
 External callers reach registered agents through the **API gateway** AI-core lane. The canonical invoke path uses the **registry ID**:
@@ -55,7 +57,7 @@ No request body is required. The response is the updated registry document with 
 
 ## Visibility and authentication
 
-Each Agent Card declares **visibility**:
+Each Agent Card declares **visibility** (set in the [expose wizard](/agent-registry/expose-your-flow), unchanged by promote). Cross-org catalog listing requires **`public` + `live`** — see **[Deployment & visibility](/agent-registry/deployment-and-visibility#the-2×2-matrix)**.
 
 | Visibility | UI label | Invoke behaviour (high level) |
 | ---------- | -------- | ------------------------------ |
@@ -89,7 +91,7 @@ Integrators and A2A-compatible clients should consume:
 - **Discoverability tags** — for search and Discovery matching
 - **Hosted URL** — test vs live pattern above
 
-See the **[Agent Registry glossary](/agent-registry/glossary)** for supported MIME types.
+See the **[A2A glossary](/agent-registry/glossary)** for supported MIME types.
 
 Official protocol details: **[A2A protocol specification](https://a2a-protocol.org/latest/specification/)**.
 

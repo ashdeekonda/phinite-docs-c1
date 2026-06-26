@@ -1,9 +1,13 @@
 ---
-title: "Agent Cards & builds"
-description: "Manage A2A registry builds per agent graph, compare test and live deployments, and promote builds to production."
+title: "Agent Cards & A2A builds"
+description: "Manage test and live A2A registry builds per agent graph and promote to production."
 ---
 
-**Agent Cards** is the project-scoped view of **A2A registry builds** for each exposed agent graph. Use it to inspect build history, compare **test** and **live** deployments, and **promote** a build to production.
+<Info>
+**Push To Prod** sets deployment status to **live** only — it does not change **Public** vs **Organisation**. See **[Deployment & visibility](/agent-registry/deployment-and-visibility)** and the **[publish journey](/agent-registry/publish-journey#phase-5--promote-to-live)**.
+</Info>
+
+**Agent Cards** is the project view of **A2A registry builds** for each exposed [agent graph](/graph-studio/overview). Use it to inspect build history, compare **test** and **live** deployments, and **promote** a build to production — after you [expose](/agent-registry/expose-your-flow) from Graph Studio.
 
 ![Agent Cards page with build table and Push To Prod](/images/agent-registry/agent-cards-builds.png)
 
@@ -41,6 +45,8 @@ Each row represents one **`POST /a2a-registry`** registration (one expose action
 Builds sort by **most recently updated** first.
 
 ## Test vs live
+
+Deployment status is separate from Agent Card visibility. Full matrix: **[Deployment & visibility](/agent-registry/deployment-and-visibility)**.
 
 | Status | Purpose | Hosted URL |
 | ------ | ------- | ---------- |

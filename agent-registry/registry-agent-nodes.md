@@ -1,9 +1,9 @@
 ---
-title: "Registry agent nodes (Browse & Discovery)"
-description: "Attach Agent Registry agents to a master agent node in Browse mode or let Discovery auto-select agents by filter criteria."
+title: "Compose with A2A (Browse & Discovery)"
+description: "Attach A2A registry agents to a master agent node — pick a specific agent or auto-discover by filter."
 ---
 
-Registry **agent nodes** connect a **master agent node** (task orchestrator) to agents published in the **[Agent Registry](/agent-registry/overview)**. In Graph Studio, open the **Browse / Discovery** panel on a registry agent node to pick a fixed agent (**Browse**) or define runtime filters (**Discovery**).
+Registry **agent nodes** connect a **[master agent node](/graph-studio/nodes/master-node)** (task orchestrator) to agents published in the **[A2A catalog](/agent-registry/catalog)**. In [Graph Studio](/graph-studio/overview), open the **Browse / Discovery** panel on a registry agent node to pick a fixed agent (**Browse**) or define runtime filters (**Discovery**).
 
 ![Browse and Discovery toggle on the agent node panel](/images/agent-registry/agent-node-browse-discovery-toggle.png)
 

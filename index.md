@@ -10,7 +10,7 @@ sidebarTitle: "Home"
   <Card title="Welcome" icon="sparkles" href="/getting-started/about-phinite">About Phinite and this manual</Card>
   <Card title="Quickstart" icon="rocket" href="/getting-started/quickstart">Your first assistant and agent graph</Card>
   <Card title="Workspace Overview" icon="grid" href="/workspaces/workspace-overview">Org → workspace → assistant</Card>
-  <Card title="What you can build" icon="layers" href="/getting-started/what-you-can-build">Product capabilities at a glance</Card>
+  <Card title="What you can build" icon="layer-group" href="/getting-started/what-you-can-build">Solution types and use-case patterns</Card>
   <Card title="User Management" icon="users" href="/user-management/user-management">Invite users and manage access</Card>
   <Card title="User Roles" icon="id-badge" href="/user-management/user-roles">Admin, Developer, QA capabilities</Card>
   <Card title="Invite Users" icon="envelope" href="/user-management/inviting-users">Add teammates and assign roles</Card>
@@ -21,9 +21,12 @@ sidebarTitle: "Home"
 ## Build assistants
 
 <CardGroup cols={3}>
-  <Card title="Assistant Overview" icon="bot" href="/assistants/overview">Types, Build / Deploy / Monitor</Card>
-  <Card title="Assistant Types" icon="layers" href="/assistants/types">Conversational, Email, Autonomous</Card>
-  <Card title="Components" icon="puzzle-piece" href="/assistants/components">Agent graphs, tools, triggers, channels</Card>
+  <Card title="Build on Phinite" icon="layer-group" href="/getting-started/what-you-can-build">Solution types, use cases, and patterns</Card>
+  <Card title="Assistant Overview" icon="bot" href="/assistants/overview">Architecture, sidebar, and creation steps</Card>
+  <Card title="Components" icon="puzzle-piece" href="/assistants/components">Agent graphs, tools, builds, channels</Card>
+  <Card title="Conversational" icon="comments" href="/assistants/conversational">Chat and voice assistants</Card>
+  <Card title="Email" icon="envelope" href="/assistants/email">Inbox automation</Card>
+  <Card title="Autonomous" icon="robot" href="/assistants/autonomous">Background jobs and APIs</Card>
   <Card title="Agent Graphs" icon="diagram-project" href="/assistants/components/flows">How graphs power assistants</Card>
   <Card title="Tools" icon="wrench" href="/assistants/components/tools">Extend assistants with actions</Card>
   <Card title="Channels" icon="comments" href="/assistants/components/channels">Where assistants run</Card>
@@ -40,15 +43,17 @@ sidebarTitle: "Home"
   <Card title="Publishing" icon="upload" href="/graph-studio/publishing">Save as Version and release builds</Card>
 </CardGroup>
 
-## Agent Registry (A2A)
+## A2A (Agent-to-Agent)
 
 <CardGroup cols={3}>
-  <Card title="Overview" icon="circle-info" href="/agent-registry/overview">Catalog, Agent Cards, A2A concepts</Card>
-  <Card title="Invoke from Claude" icon="plug" href="/agent-registry/invoke-a2a-from-claude">Phinite Connector</Card>
-  <Card title="Expose an agent" icon="rocket" href="/agent-registry/expose-your-flow">Register a published graph</Card>
+  <Card title="A2A overview" icon="share-nodes" href="/agent-registry/overview">Publish, discover, and compose agents</Card>
+  <Card title="Publish an agent" icon="rocket" href="/agent-registry/expose-your-flow">Expose wizard & Agent Card</Card>
+  <Card title="Agent Cards & builds" icon="layers" href="/agent-registry/agent-cards">Test and live deployments</Card>
   <Card title="Browse the catalog" icon="layout-grid" href="/agent-registry/catalog">Search workspace agents</Card>
-  <Card title="Registry agent nodes" icon="share-nodes" href="/agent-registry/registry-agent-nodes">Browse and Discovery on canvas</Card>
-  <Card title="Agent Cards" icon="layers" href="/agent-registry/agent-cards">Test and live builds</Card>
+  <Card title="Compose on canvas" icon="diagram-project" href="/agent-registry/registry-agent-nodes">Browse & Discovery nodes</Card>
+  <Card title="Invoke from Claude" icon="plug" href="/agent-registry/invoke-a2a-from-claude">Phinite Connector</Card>
+  <Card title="Endpoints & lifecycle" icon="link" href="/agent-registry/endpoints-and-lifecycle">URLs, auth, promote to live</Card>
+  <Card title="A2A glossary" icon="book-open" href="/agent-registry/glossary">Terms and MIME modes</Card>
 </CardGroup>
 
 ## DevStudio (Tool Builder)
@@ -56,8 +61,8 @@ sidebarTitle: "Home"
 <CardGroup cols={3}>
   <Card title="Overview" icon="screwdriver-wrench" href="/devstudio/overview">Build and test tools</Card>
   <Card title="Methods" icon="lightbulb" href="/devstudio/methods">Phinite Aura and manual coding</Card>
-  <Card title="Tool Types" icon="gears" href="/devstudio/types">Custom, system, structure</Card>
-  <Card title="Predefined tools" icon="plug" href="/devstudio/prebuilt-tools">Connect via Integrations</Card>
+  <Card title="Tool Types" icon="gears" href="/devstudio/types">Custom, system, and structure tools</Card>
+  <Card title="Predefined tools" icon="plug" href="/integrations-hub/predefined-tools/workflow">Connect via Integrations</Card>
   <Card title="Versioning" icon="code-branch" href="/devstudio/versioning">Save as Version</Card>
   <Card title="Testing Tools" icon="flask" href="/devstudio/testing-tools">Run and validate tools</Card>
 </CardGroup>
@@ -66,10 +71,10 @@ sidebarTitle: "Home"
 
 <CardGroup cols={3}>
   <Card title="Overview" icon="bullseye" href="/triggers-intents/overview">How interactions start</Card>
-  <Card title="Intents" icon="comment-dots" href="/triggers-intents/intents">Conversational and email assistants</Card>
-  <Card title="Triggers" icon="play" href="/triggers-intents/triggers">Autonomous assistants</Card>
+  <Card title="Intents" icon="comment-dots" href="/triggers-intents/intents">Conversational routing</Card>
+  <Card title="Email intents" icon="envelope" href="/triggers-intents/intents-email">Inbox classification</Card>
+  <Card title="Triggers" icon="play" href="/triggers-intents/triggers">Autonomous entry points</Card>
   <Card title="Trigger APIs" icon="code" href="/triggers-intents/triggers/api-guide">HTTP trigger endpoints</Card>
-  <Card title="Create Intents" icon="wand-magic-sparkles" href="/triggers-intents/creating-intents">Define and test intents</Card>
   <Card title="Testing Intents" icon="vial" href="/triggers-intents/testing-intents">Validate recognition</Card>
 </CardGroup>
 
@@ -86,12 +91,12 @@ sidebarTitle: "Home"
 ## Channels & Integrations
 
 <CardGroup cols={3}>
-  <Card title="Channels overview" icon="comments" href="/channels/overview">Messaging and voice channels</Card>
+  <Card title="Channels overview" icon="comments" href="/integrations-hub/channels/overview">Messaging and voice channels</Card>
   <Card title="Integrations" icon="plug" href="/integrations-hub/overview">Predefined tools catalog</Card>
-  <Card title="Webchat" icon="message" href="/channels/webchat">Embed chat on your site</Card>
-  <Card title="WhatsApp" icon="whatsapp" href="/channels/whatsapp">WhatsApp channel</Card>
-  <Card title="Slack/Teams" icon="hashtag" href="/channels/slack-teams">Slack or Teams</Card>
-  <Card title="Email" icon="envelope" href="/channels/email">Email channel</Card>
+  <Card title="Webchat" icon="message" href="/integrations-hub/channels/webchat">Embed chat on your site</Card>
+  <Card title="WhatsApp" icon="whatsapp" href="/integrations-hub/channels/whatsapp">WhatsApp channel</Card>
+  <Card title="Slack/Teams" icon="hashtag" href="/integrations-hub/channels/slack-teams">Slack or Teams</Card>
+  <Card title="Email" icon="envelope" href="/integrations-hub/channels/email">Email channel</Card>
 </CardGroup>
 
 ## Observability & Billing

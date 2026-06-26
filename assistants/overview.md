@@ -6,13 +6,17 @@ They are intelligent, multi-skilled entities that automate conversations, workfl
 An **Assistant** brings together **Agent Graphs, Intents, Triggers, Tools, Environments, Builds, and Phinite Aura** to function as a cohesive unit.
 Each component plays a distinct role in defining how the Assistant behaves, interacts, and executes tasks.
 
-### Types of Assistants
+### Solution types
 
-An assistant is an AI-powered capability that handles user interactions, api, background tasks and cron job using your workflows and tools.
+Phinite supports three assistant solution types — conversational, email, and autonomous. Each differs in how workflows start and which channels they use.
 
-- **Conversational Assistants**: Chat and voice experiences
-- **Email Assistants**: Inbox automation for triage and replies
-- **Autonomous Assistants**: Scheduled or event-driven background jobs or apis
+See **[Build on Phinite](/getting-started/what-you-can-build)** for a full comparison, use-case patterns, and links to type-specific guides. Quick reference:
+
+| Type | Entry point | Channels |
+| --- | --- | --- |
+| Conversational | [Intents](/triggers-intents/intents) | Web Chat, WhatsApp, Slack, Teams, Twilio |
+| Email | [Email intents](/triggers-intents/intents-email) | Email |
+| Autonomous | [Triggers](/triggers-intents/triggers) | API, cron, webhooks |
 
 <Frame>
   <img
@@ -32,14 +36,6 @@ An assistant is an AI-powered capability that handles user interactions, api, ba
     className="hidden dark:block"
   />
 </Frame>
-
-### Comparision
-
-| Type | Best for | Triggers | Channels |
-| :-- | :-- | :-- | :-- |
-| Conversational | Real-time chat/voice | Intents, chat events | Web Chat, WhatsApp, Slack, Teams, Twilio |
-| Email | Asynchronous communication | Inbound email | Email |
-| Autonomous | Background automation | Schedules, webhooks | Custom APIs(Background Task, Api, Cron Job), Jira |
 
 ## Assistant navigation (Build / Deploy / Monitor)
 
@@ -61,17 +57,8 @@ When you open an assistant, the sidebar is organised in three sections:
     AgentGraphs connect intents, triggers, and tools to define your automation logic.
   </Card>
 
-  <Card title="Intents(In Conversational & Email)" icon="ChatText">
-    Natural language or programmatic cues that tell the Assistant _what the user wants_.\
-    Each intent can be AI-generated and linked to a specific flow.
-  </Card>
-
-  <Card title="Triggers(In Autonomous)" icon="hand-pointing">
-    Event-driven or scheduled conditions that automatically initiate a workflow. These triggers can originate from APIs, system events, or predefined schedules. Supports channel selection (for example, Jira), allowing direct webhook integration to trigger the process automatically.
-  </Card>
-
-  <Card title="Intents as an API" icon="PlugZap">
-    Hybrid initiators combine intent detection with trigger-based logic, making them ideal for scenarios where both a user action and a system event determine how a flow is initiated. They trigger the Intent API to start the conversation flow in the selected channel.
+  <Card title="Intents & Triggers" icon="bullseye" href="/triggers-intents/overview">
+    Entry points that start agent graphs — intents for conversational and email assistants, triggers for autonomous. See the [Triggers & Intents](/triggers-intents/overview) guide.
   </Card>
 
   <Card title="Custom Tools" icon="Wrench">
@@ -93,8 +80,8 @@ When you open an assistant, the sidebar is organised in three sections:
     It understands context and build and edits agent nodes intelligently.
   </Card>
 
-  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">
-    Expose published agent graphs as discoverable **Agent Cards**, browse the workspace catalog, and compose multi-agent flows with **Browse** or **Discovery** registry nodes.
+  <Card title="A2A (Agent-to-Agent)" icon="share-nodes" href="/agent-registry/overview">
+    Expose published agent graphs as discoverable **Agent Cards**, browse the catalog, and compose multi-agent flows with **Browse** or **Discovery** registry nodes.
   </Card>
 </CardGroup>
 
@@ -169,7 +156,8 @@ They connect human intent with machine precision — through agent graph, tools,
 
 ## Next steps
 
-- Explore [Types of Assistants](/assistants/types)
+- Explore [Build on Phinite](/getting-started/what-you-can-build) — solution types and use cases
 - Review [Assistant Components](/assistants/components)
+- Configure [Triggers & Intents](/triggers-intents/overview)
 - Build your first agent graph in [Graph Studio](/graph-studio/overview)
-- Expose agents for external discovery in [Agent Registry](/agent-registry/overview)
+- Expose agents for external discovery in [A2A](/agent-registry/overview)
