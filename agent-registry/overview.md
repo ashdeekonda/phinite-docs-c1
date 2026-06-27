@@ -4,7 +4,22 @@ description: "Publish agent graphs as discoverable A2A agents, browse the regist
 ---
 
 <Frame>
-  ![A2A Registry](/images/A2A-Registry.png)
+  <img
+    src="/images/A2A-Registry-1.png"
+    alt="A2A Registry"
+    title="A2A Registry"
+    lightAlt="A2A Registry"
+    darkAlt="A2A Registry"
+    className="dark:hidden"
+  />
+  <img
+    src="/images/A2A-Registry-2.png"
+    alt="A2A Registry"
+    title="A2A Registry"
+    lightAlt="A2A Registry"
+    darkAlt="A2A Registry"
+    className="hidden dark:block"
+  />
 </Frame>
 
 ## What the Agent Registry is
