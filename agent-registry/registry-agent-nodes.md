@@ -3,22 +3,24 @@ title: "Registry agent nodes (Browse & Discovery)"
 description: "Attach Agent Registry agents to a master agent node in Browse mode or let Discovery auto-select agents by filter criteria."
 ---
 
-Registry **agent nodes** connect a **master agent node** (task orchestrator) to agents published in the **[Agent Registry](/agent-registry/overview)**. Unlike a standard agent node configured only with prompts and tools, a registry agent node references an **A2A registration**—either a **specific** agent (**Browse**) or a **dynamic set** matched at runtime (**Discovery**).
+Registry **agent nodes** connect a **master agent node** (task orchestrator) to agents published in the [**Agent Registry**](/agent-registry/overview). Unlike a standard agent node configured only with prompts and tools, a registry agent node references an **A2A registration**—either a **specific** agent (**Browse**) or a **dynamic set** matched at runtime (**Discovery**).
 
-![Browse and Discovery toggle on the agent node panel](/images/agent-registry/agent-node-browse-discovery-toggle.png)
+<Frame>
+  ![Browse Discovery Agents](/images/browse-discovery-agents.png)
+</Frame>
 
 <Info>
-The browse panel title in the product reads **Agent Block**; documentation uses **Agent Node** for consistency with **[Graph Studio agent nodes](/graph-studio/agent-node)**.
+  The browse panel title in the product reads **Agent Block**; documentation uses **Agent Node** for consistency with [**Graph Studio agent nodes**](/graph-studio/agent-node).
 </Info>
 
 ## When to use Browse vs Discovery
 
 | Mode | Use when | Runtime behaviour |
-| ---- | -------- | ----------------- |
+| --- | --- | --- |
 | **Browse** | You know which registry agent to call | Master agent invokes the selected registration (fixed `a2aregistryid`, tools/env from that build) |
 | **Discovery** | The right specialist agent depends on context | Master agent searches the registry using saved filters and attaches matching agents automatically |
 
-Both modes require agents to be **exposed** in the registry with appropriate **visibility**, **skills**, and **tags**. See **[Expose your agent graph](/agent-registry/expose-your-flow)**.
+Both modes require agents to be **exposed** in the registry with appropriate **visibility**, **skills**, and **tags**. See [**Expose your agent graph**](/agent-registry/expose-your-flow).
 
 ## Open the registry panel
 
@@ -32,7 +34,7 @@ The panel loads registry data via **`GET /a2a-registry?workspaceid=...&orgid=...
 
 In **Browse** mode:
 
-1. Search and filter agents (visibility, deployed status, MIME modes, tags)—same dimensions as **[Agent Registry catalog](/agent-registry/catalog)**.
+1. Search and filter agents (visibility, deployed status, MIME modes, tags)—same dimensions as [**Agent Registry catalog**](/agent-registry/catalog).
 2. Select an agent card from the list.
 3. Review the **Agent Card preview** (hosted URL, skills, build status).
 4. Click to **add** the agent to the canvas (or replace the current registry agent node).
@@ -55,7 +57,7 @@ In **Discovery** mode the master agent **does not** point at one fixed registrat
 Configure filters parallel to the catalog sidebar:
 
 | Filter | Purpose |
-| ------ | ------- |
+| --- | --- |
 | **Visibility** | Public and/or Organisation |
 | **Deployed** | Live and/or Test |
 | **Input Modes** | MIME types callers may send |
@@ -82,7 +84,7 @@ After saving filters, open the **Configuration** sub-tab to select the **API key
 ### One Discovery node per master agent
 
 <Warning>
-Only **one Discovery** registry agent node is allowed per **master (task) agent node**. If you try to add a second, the Studio shows **Discovery Already Connected** (or the Discovery tab is disabled with *Only one discovery allowed per master agent node*).
+  Only **one Discovery** registry agent node is allowed per **master (task) agent node**. If you try to add a second, the Studio shows **Discovery Already Connected** (or the Discovery tab is disabled with _Only one discovery allowed per master agent node_).
 </Warning>
 
 Discovery nodes **skip** the standard per-tool configuration validation used in Browse mode—the filter set defines what may be attached at runtime.
@@ -92,7 +94,7 @@ Discovery nodes **skip** the standard per-tool configuration validation used in 
 When you save or publish the agent graph, registry agent nodes include:
 
 | Field | Browse | Discovery |
-| ----- | ------ | --------- |
+| --- | --- | --- |
 | `agent_node_type` | `"browse"` | `"discovery"` |
 | `a2aregistryid` | Selected registration | — |
 | `config_id` | Build tool/env config | — |
@@ -109,13 +111,15 @@ When you save or publish the agent graph, registry agent nodes include:
 ## Related pages
 
 <CardGroup cols={2}>
-<Card title="Browse the catalog" href="/agent-registry/catalog" icon="layout-grid">
-Full workspace search and filters.
-</Card>
-<Card title="Endpoints & lifecycle" href="/agent-registry/endpoints-and-lifecycle" icon="plug">
-Hosted URLs and visibility at invoke time.
-</Card>
-<Card title="Agent node anatomy" href="/graph-studio/agent-node" icon="cube">
-Prompts, RAG, tools, and variables on standard agent nodes.
-</Card>
+  <Card title="Browse the catalog" icon="layout-grid" href="/agent-registry/catalog">
+    Full workspace search and filters.
+  </Card>
+
+  <Card title="Endpoints & lifecycle" icon="plug" href="/agent-registry/endpoints-and-lifecycle">
+    Hosted URLs and visibility at invoke time.
+  </Card>
+
+  <Card title="Agent node anatomy" icon="cube" href="/graph-studio/agent-node">
+    Prompts, RAG, tools, and variables on standard agent nodes.
+  </Card>
 </CardGroup>
