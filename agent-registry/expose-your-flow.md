@@ -78,7 +78,7 @@ When export is disabled, the step shows: _Enable "Export value to build" to conf
 | **Skills** | Add skills with unique name, description, **Input Modes**, and **Output Modes** (MIME types) |
 | **Discoverability Tags** | Tags help agents appear in search and Discovery filters |
 | **Visibility & access** | **Public** — discoverable by any A2A-compatible agent or user with a valid API key. **Organisation** — visible only within your organisation |
-| **Auth Schemes** | Platform default: use your Phinite organisation **API key** |
+| **Auth Schemes** | Platform default: use your Phinite organization **API key** |
 | **Refine Card** | Optional AI refinement (`refine_prompt_for: "a2a"`) to improve description and skills |
 
 Click **Attach Agent Card** to submit. The UI calls **`POST /a2a-registry?workspaceid={workspaceId}`** with the wizard payload (`agent_card`, `flowid`, `flow_version`, `assistantid`, tools, and optional export config).
