@@ -1,3 +1,7 @@
+---
+title: "overview"
+---
+
 # Assistants
 
 Assistants are the core of Phinite. Everything revolves around them.\
@@ -20,20 +24,11 @@ An assistant is an AI-powered capability that handles user interactions, api, ba
     title="Assistant Overview"
     lightAlt="Assistant Overview"
     darkAlt="Assistant Overview"
-    src="/images/Assistant-Overview.png"
-    className="dark:hidden"
-  />
-  <img
-    alt="Assistant Overview"
-    title="Assistant Overview"
-    lightAlt="Assistant Overview"
-    darkAlt="Assistant Overview"
-    src="images/Assistant-Overview.png"
-    className="hidden dark:block"
+    src="/images/assistant-overview-1.png"
   />
 </Frame>
 
-### Comparision
+### Comparison
 
 | Type | Best for | Triggers | Channels |
 | :-- | :-- | :-- | :-- |
