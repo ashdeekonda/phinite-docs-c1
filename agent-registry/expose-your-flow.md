@@ -65,7 +65,9 @@ When export is disabled, the step shows: _Enable "Export value to build" to conf
 
 ### Step 3 — Configure the Agent card
 
-![Expose Agent Step 3](/images/expose-agent-step-3.png)
+<Frame>
+  ![Expose Agent Step 3](/images/expose-agent-step-3.png)
+</Frame>
 
 **Agent Card is the identity of your agent on the Internet:**
 
@@ -83,7 +85,9 @@ Click **Attach Agent Card** to submit. The UI calls **`POST /a2a-registry?worksp
 
 ## After registration
 
-![Success state with registry ID and hosted test URL](/images/agent-registry/expose-success.png)
+<Frame>
+  ![After Agent Registration](/images/after-agent-registration.png)
+</Frame>
 
 On success:
 
