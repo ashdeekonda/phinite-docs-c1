@@ -65,7 +65,7 @@ When export is disabled, the step shows: _Enable "Export value to build" to conf
 
 ### Step 3 — Configure the Agent card
 
-![Wizard step 3: Agent Card with skills, tags, and visibility](/images/agent-registry/wizard-step3-agent-card.png)
+![Expose Agent Step 3](/images/expose-agent-step-3.png)
 
 **Agent Card is the identity of your agent on the Internet:**
 
