@@ -50,7 +50,9 @@ Validation requires a connected configuration (`config_id`) and satisfied tool/e
 
 In **Discovery** mode the master agent **does not** point at one fixed registration. Instead you define **Discovery filters**; at runtime the platform finds registry agents that match.
 
-![Discovery filter panel with visibility, deployed, MIME, and tags](/images/agent-registry/discovery-filters.png)
+<Frame>
+  ![Discovery Filters](/images/discovery-filters.png)
+</Frame>
 
 ### Set Discovery filters
 
@@ -79,7 +81,9 @@ Copy shown in the UI:
 
 After saving filters, open the **Configuration** sub-tab to select the **API key** the master agent uses when calling discovered agents (`apikeyid` on the node).
 
-![Discovery configuration with API key selection](/images/agent-registry/discovery-config.png)
+<Frame>
+  ![Discovery Configuration](/images/discovery-configuration.png)
+</Frame>
 
 ### One Discovery node per master agent
 
