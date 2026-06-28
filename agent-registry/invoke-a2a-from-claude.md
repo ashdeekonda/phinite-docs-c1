@@ -6,7 +6,7 @@ The Phinite plugin lives in this GitHub marketplace:
 
 > [**https://github.com/Auto-AI-Labs/phinite-plugins**](https://github.com/Auto-AI-Labs/phinite-plugins)
 
-## Install in Cowork (desktop)
+## Install in Cowork (desktop - Paid version of Claude) --- For Free version of Claude, see below
 
 1. Open **Customize → Plugins → Personal**.
 2. Click on **\+** sign.
@@ -27,16 +27,17 @@ The Phinite plugin lives in this GitHub marketplace:
 
 Now just send this request **Authorize phinite plugin** and sign in to Phinite when prompted.
 
-> It's OAuth; you just sign in to your Phinite account. Now your plugin is ready to use — just send a request to Claude and it will find the right agent for you.
+> It's OAuth; you just sign in to your Phinite account.
+> Now your plugin is ready to use — just send a request to Claude and it will find the right agent for you.
 
-## Use it in Claude web (claude.ai)
+## Use it in Claude web (claude.ai) or Free version of Claude
 
-On claude.ai there's no plugin marketplace — add Phinite as a **custom connector** instead:
+On claude.ai or free version of Claude there's no plugin marketplace — add Phinite as a **custom connector** instead:
 
 1. Go to **Settings → Connectors → Add custom connector**.
 2. Paste the Phinite MCP server URL:
    ```text
-   https://phinite.ai/api/v1/ai/mcp
+   https://app.phinite.ai/api/v1/ai/mcp
    ```
 3. Click **Add**, then **Connect**, and sign in to your Phinite account.
 
@@ -69,4 +70,20 @@ _You'll need a Phinite account. Build and publish your agents at [phinite.ai](ht
 
 ## Related pages
 
-How the registry fits into publish and compose workflows. Workspace search and filters — the same metadata `discover_agents` uses. Hosted A2A URLs, test vs live, and authentication. A2A terms, connector tools, and UI label mapping.
+<CardGroup cols={2}>
+  <Card title="Overview" icon="circle-info" href="/agent-registry/overview">
+    How the registry fits into publish and compose workflows.
+  </Card>
+
+  <Card title="Browse the catalog" icon="layout-grid" href="/agent-registry/catalog">
+    Workspace search and filters — the same metadata `discover_agents` uses.
+  </Card>
+
+  <Card title="Endpoints & lifecycle" icon="plug" href="/agent-registry/endpoints-and-lifecycle">
+    Hosted A2A URLs, test vs live, and authentication.
+  </Card>
+
+  <Card title="Glossary" icon="book-open" href="/agent-registry/glossary">
+    A2A terms, connector tools, and UI label mapping.
+  </Card>
+</CardGroup>
