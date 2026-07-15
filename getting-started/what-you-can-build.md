@@ -1,119 +1,123 @@
 ---
-title: "Build on Phinite"
+
+## title: "Build on Phinite"
 description: "Explore what you can build on Phinite — organized by agent type across Conversational, Email, and Automation use cases."
----
 
 # What You Can Build on Phinite
 
 Phinite enables teams to build and deploy intelligent agents securely across channels and workflows. This section outlines the three primary agent types and what can be accomplished with each.
 
-<Tabs>
-  <Tab title="Conversational Agents">
-    ## Conversational Agents
+## Conversational Agents
 
-    <Card>
-      **Purpose:**\
-      Conversational agents engage users through chat or voice channels, leveraging context, retrieval, and orchestration.
+```
+<Card>
+  **Purpose:**\
+  Conversational agents engage users through chat or voice channels, leveraging context, retrieval, and orchestration.
 
-      **Examples:**
+  **Examples:**
 
-      - Support or HR FAQ assistants
-      - Appointment schedulers
-      - Knowledge-grounded internal helpdesks
-    </Card>
-    ### Key Capabilities
+  - Support or HR FAQ assistants
+  - Appointment schedulers
+  - Knowledge-grounded internal helpdesks
+</Card>
+### Key Capabilities
 
-    - Contextual conversations with shared memory
-    - Integration with chat, voice, and retrieval tools
-    - RBAC-controlled environments for compliance
-    - Agent Graph testing and audit logging
+- Contextual conversations with shared memory
+- Integration with chat, voice, and retrieval tools
+- RBAC-controlled environments for compliance
+- Agent Graph testing and audit logging
 
-    ### Best Use Cases
+### Best Use Cases
 
-    <Accordion title="Customer Support & HR">
-      Enable intelligent responses to FAQs, escalate tickets, and sync outcomes to CRM or Slack.
-    </Accordion>
-    <Accordion title="Appointment & Scheduling">
-      Automate booking flows using integrated APIs like Google Calendar or HubSpot Meetings.
-    </Accordion>
-    <Accordion title="Knowledge Q&A Assistants">
-      Ground conversations on internal documents or RAG sources for accurate responses.
-    </Accordion>
-    ### Constraints
+<Accordion title="Customer Support & HR">
+  Enable intelligent responses to FAQs, escalate tickets, and sync outcomes to CRM or Slack.
+</Accordion>
+<Accordion title="Appointment & Scheduling">
+  Automate booking flows using integrated APIs like Google Calendar or HubSpot Meetings.
+</Accordion>
+<Accordion title="Knowledge Q&A Assistants">
+  Ground conversations on internal documents or RAG sources for accurate responses.
+</Accordion>
+### Constraints
 
-    - Requires pre-configured channels and knowledge stores
-    - Multi-turn reasoning relies on flow logic, not autonomy
-
-    ---
-  </Tab>
-  <Tab title="Email Agents">
-    ## Email Agents
-
-    <Card>
-      **Purpose:**\
-      Email agents automate inbound and outbound communication flows while maintaining auditability and compliance.
-    </Card>
-    ### Key Capabilities
-
-    - Triggered by inbound or outbound email events
-    - Classify, respond, route, and escalate using Agent Graph logic
-    - Secure environment variables and masked SMTP/API credentials
-    - Integration-ready for Gmail, Outlook, SendGrid, etc.
-
-    ### Best Use Cases
-
-    <Accordion title="Sales & Lead Triage">
-      Parse and qualify leads from inboxes, auto-assign owners, and send initial replies.
-    </Accordion>
-    <Accordion title="Support Automation">
-      Auto-acknowledge support tickets and escalate based on classification.
-    </Accordion>
-    <Accordion title="Internal Mailroom">
-      Handle operational mails like invoices, receipts, and confirmations.
-    </Accordion>
-    ### Constraints
-
-    - Requires authenticated email connectors
-    - Not a replacement for full email client or spam filter
-
-    ---
-  </Tab>
-  <Tab title="Automation Agents">
-    ## Automation Agents
-
-    <Card>
-      **Purpose:**\
-      Automation agents execute background and cross-system workflows that connect data, APIs, and logic.
-    </Card>
-    ### Key Capabilities
-
-    - Visual multi-agent orchestration in Graph Studio
-    - [Agent Registry (A2A)](/agent-registry/overview) for exposing and composing external agents
-    - Manager–Worker and Workflow modes
-    - Environment-specific variable and credential control
-    - End-to-end RBAC, audit logs, and observability
-
-    ### Best Use Cases
-
-    <Accordion title="Operations & Back Office">
-      Automate repetitive processes like data enrichment, validation, and reporting.
-    </Accordion>
-    <Accordion title="Compliance & Audit">
-      Collect evidence, run validations, and maintain compliance logs.
-    </Accordion>
-    <Accordion title="Data Pipelines">
-      Ingest, transform, and publish structured data using external APIs and schedulers.
-    </Accordion>
-    ### Constraints
-
-    - Business logic orchestration only; not infra-level automation
-    - Requires preconfigured API keys and retry-safe flow design
-
-    ---
-  </Tab>
-</Tabs>
+- Requires pre-configured channels and knowledge stores
+- Multi-turn reasoning relies on flow logic, not autonomy
 
 ---
+```
+
+## Email Agents
+
+```
+<Card>
+  **Purpose:**\
+  Email agents automate inbound and outbound communication flows while maintaining auditability and compliance.
+</Card>
+### Key Capabilities
+
+- Triggered by inbound or outbound email events
+- Classify, respond, route, and escalate using Agent Graph logic
+- Secure environment variables and masked SMTP/API credentials
+- Integration-ready for Gmail, Outlook, SendGrid, etc.
+
+### Best Use Cases
+
+<Accordion title="Sales & Lead Triage">
+  Parse and qualify leads from inboxes, auto-assign owners, and send initial replies.
+</Accordion>
+<Accordion title="Support Automation">
+  Auto-acknowledge support tickets and escalate based on classification.
+</Accordion>
+<Accordion title="Internal Mailroom">
+  Handle operational mails like invoices, receipts, and confirmations.
+</Accordion>
+### Constraints
+
+- Requires authenticated email connectors
+- Not a replacement for full email client or spam filter
+
+---
+```
+
+## Automation Agents
+
+```
+<Card>
+  **Purpose:**\
+  Automation agents execute background and cross-system workflows that connect data, APIs, and logic.
+</Card>
+### Key Capabilities
+
+- Visual multi-agent orchestration in Graph Studio
+- [Agent Registry (A2A)](/agent-registry/overview) for exposing and composing external agents
+- Manager–Worker and Workflow modes
+- Environment-specific variable and credential control
+- End-to-end RBAC, audit logs, and observability
+
+### Best Use Cases
+
+<Accordion title="Operations & Back Office">
+  Automate repetitive processes like data enrichment, validation, and reporting.
+</Accordion>
+<Accordion title="Compliance & Audit">
+  Collect evidence, run validations, and maintain compliance logs.
+</Accordion>
+<Accordion title="Data Pipelines">
+  Ingest, transform, and publish structured data using external APIs and schedulers.
+</Accordion>
+### Constraints
+
+- Business logic orchestration only; not infra-level automation
+- Requires preconfigured API keys and retry-safe flow design
+
+---
+```
+
+
+
+---
+
+
 
 ## Getting Started
 
@@ -125,6 +129,8 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
 
 ---
 
+
+
 ## Related Topics
 
 - [Workspaces Overview](/workspaces/workspace-overview)
@@ -132,3 +138,4 @@ Phinite enables teams to build and deploy intelligent agents securely across cha
 - [Agent Registry (A2A)](/agent-registry/overview)
 - [RBAC and Roles](/user-management/user-roles)
 - [Integrations and Environments](/channels/overview)
+
