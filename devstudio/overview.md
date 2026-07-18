@@ -69,7 +69,7 @@ flowchart LR
 | --- | --- | --- |
 | **Custom tools** | Python handlers you author | [Custom tools](/devstudio/custom-tools) |
 | **System tools** | Built-in orchestration helpers | [System tools](/devstudio/system-tool) |
-| **Prebuilt tools** | Gmail, Slack, Jira, MongoDB, and more | [Prebuilt tools](/devstudio/prebuilt-tools) |
+| **Predefined tools** | SaaS connectors — connect once, enable subtools per graph | [Predefined tools](/devstudio/prebuilt-tools) · [Integrations Hub](/integrations-hub/overview) |
 
 Connect third-party APIs once under [Integrations](/configure/integrations) or the [Integrations Hub](/integrations-hub/overview), then enable subtools per Agent Graph in Studio.
 

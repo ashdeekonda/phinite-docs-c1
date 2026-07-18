@@ -321,6 +321,38 @@
     {
       "source": "/graph-studio/methods",
       "destination": "/graph-studio/manual-method"
+    },
+    {
+      "source": "/devstudio/prebuilt/gmail",
+      "destination": "/integrations-hub/gmail"
+    },
+    {
+      "source": "/devstudio/prebuilt/slacktool",
+      "destination": "/integrations-hub/slack"
+    },
+    {
+      "source": "/devstudio/prebuilt/teamstool",
+      "destination": "/integrations-hub/microsoft-teams"
+    },
+    {
+      "source": "/devstudio/prebuilt/jiratools",
+      "destination": "/integrations-hub/jira"
+    },
+    {
+      "source": "/devstudio/prebuilt/customapi",
+      "destination": "/integrations-hub/api"
+    },
+    {
+      "source": "/devstudio/prebuilt/mongodbtool",
+      "destination": "/integrations-hub/mongodb"
+    },
+    {
+      "source": "/devstudio/prebuilt/jira-zendesk",
+      "destination": "/integrations-hub/jira"
+    },
+    {
+      "source": "/devstudio/prebuilt/sheets",
+      "destination": "/integrations-hub/google-sheets"
     }
   ],
   "navigation": {
@@ -432,17 +464,6 @@
               "devstudio/system-tool",
               "devstudio/custom-tools",
               "devstudio/prebuilt-tools",
-              {
-                "group": "Predefined Tools",
-                "pages": [
-                  "devstudio/prebuilt/gmail",
-                  "devstudio/prebuilt/slacktool",
-                  "devstudio/prebuilt/teamstool",
-                  "devstudio/prebuilt/jiratools",
-                  "devstudio/prebuilt/customapi",
-                  "devstudio/prebuilt/mongodbtool"
-                ]
-              },
               "devstudio/structure",
               "devstudio/versioning",
               "devstudio/linking-tools",

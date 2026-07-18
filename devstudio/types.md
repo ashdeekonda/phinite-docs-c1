@@ -12,8 +12,8 @@ Tools fall into three categories. All must be **published** (except system tools
   <Card title="System tools" icon="gears" href="/devstudio/system-tool">
     Built-in orchestration helpers available to every agent node (RAG, Finish, End Graph, Insight).
   </Card>
-  <Card title="Prebuilt integrations" icon="plug" href="/devstudio/prebuilt-tools">
-    Gmail, Slack, Teams, Jira, Custom API, MongoDB, and more.
+  <Card title="Predefined tools" icon="plug" href="/devstudio/prebuilt-tools">
+    Connect SaaS APIs once; full vendor catalog in Integrations Hub.
   </Card>
   <Card title="Link to nodes" icon="diagram-project" type="note" href="/devstudio/linking-tools">
     Attach published tools on agent nodes in Graph Studio.
