@@ -23,6 +23,21 @@ Quiet refs only — one image per key page in Pass 1 docs.
 | a2a.registry | `a2a/02-agent-registry.png` | Agent Registry | Workspace catalog |
 | tools.all | `devstudio/01-all-tools.png` | Tools (`/all-tools`) | Workspace Tools list; **Open Dev Studio** / **New Tool** |
 
+## Pass 3 captures
+
+| Step ID | File | Surface | Notes |
+| --- | --- | --- | --- |
+| rag.data-sources | `rag/01-data-sources.png` | RAG Data | Workspace collections list |
+| rag.node-drawer | `rag/02-node-rag-drawer.png` | Studio node drawer | RAG tab on agent node |
+| studio.variables | `studio/03-variables.png` | Studio variables | Flow/session variables panel |
+| studio.nodes | `studio/04-nodes-canvas.png` | Graph Studio canvas | Node graph layout |
+| workspace.models | `workspace/01-model-keys.png` | Model Keys | BYOK / provider keys |
+| configure.integrations | `configure/01-integrations-hub.png` | Integrations hub | Triggers tab |
+| configure.build-export | `configure/02-build-export.png` | Build Agent dialog | Graph + tools pinning (export in Expose step 2) |
+| a2a.identity | `a2a/03-agent-card-identity.png` | Agent Cards sidebar | Card versions for graph |
+| a2a.registry | `a2a/04-registry-catalog.png` | Agent Registry | Search + filters |
+| a2a.discovery | `a2a/05-browse-discovery.png` | Agent Registry | Filter UI (Browse/Discovery uses same catalog data) |
+
 ## Live UI truths (reconcile)
 
 - Top object on Workspace Home is **Agent Graph**, not Assistant.

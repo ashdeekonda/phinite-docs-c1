@@ -252,7 +252,7 @@
     },
     {
       "source": "/builds/environments",
-      "destination": "/agents/environments"
+      "destination": "/configure/env-variables"
     },
     {
       "source": "/channels/overview",
@@ -304,11 +304,11 @@
     },
     {
       "source": "/graph-studio/nodes",
-      "destination": "/agents/build-graph"
+      "destination": "/studio/nodes"
     },
     {
       "source": "/graph-studio/agent-node",
-      "destination": "/agents/build-graph"
+      "destination": "/studio/nodes"
     },
     {
       "source": "/graph-studio/agent-node/tools",
@@ -316,11 +316,11 @@
     },
     {
       "source": "/graph-studio/agent-node/rag",
-      "destination": "/agents/build-graph"
+      "destination": "/rag/attach-to-nodes"
     },
     {
       "source": "/graph-studio/agent-node/variables",
-      "destination": "/agents/build-graph"
+      "destination": "/studio/variables"
     },
     {
       "source": "/graph-studio/agent-node/prompt",
@@ -332,7 +332,7 @@
     },
     {
       "source": "/graph-studio/rag-management",
-      "destination": "/agents/build-graph"
+      "destination": "/rag/overview"
     },
     {
       "source": "/graph-studio/interface",
@@ -352,11 +352,11 @@
     },
     {
       "source": "/agent-registry/catalog",
-      "destination": "/agents/expose-a2a"
+      "destination": "/a2a/registry"
     },
     {
       "source": "/agent-registry/endpoints-and-lifecycle",
-      "destination": "/agents/expose-a2a"
+      "destination": "/a2a/endpoints"
     },
     {
       "source": "/agent-registry/glossary",
@@ -364,11 +364,11 @@
     },
     {
       "source": "/agent-registry/invoke-a2a-from-claude",
-      "destination": "/agents/expose-a2a"
+      "destination": "/a2a/registry"
     },
     {
       "source": "/agent-registry/registry-agent-nodes",
-      "destination": "/agents/build-graph"
+      "destination": "/a2a/discovery"
     },
     {
       "source": "/channels/whatsapp",
@@ -429,6 +429,58 @@
     {
       "source": "/devstudio/versioning",
       "destination": "/tools/overview"
+    },
+    {
+      "source": "/graph-studio/nodes/start",
+      "destination": "/studio/nodes"
+    },
+    {
+      "source": "/graph-studio/nodes/master-node",
+      "destination": "/studio/nodes"
+    },
+    {
+      "source": "/graph-studio/nodes/child-node",
+      "destination": "/studio/nodes"
+    },
+    {
+      "source": "/graph-studio/nodes/tool-node",
+      "destination": "/studio/nodes"
+    },
+    {
+      "source": "/graph-studio/nodes/end-node",
+      "destination": "/studio/nodes"
+    },
+    {
+      "source": "/graph-studio/rag-management/data-sources",
+      "destination": "/rag/data-sources"
+    },
+    {
+      "source": "/graph-studio/rag-management/collections",
+      "destination": "/rag/data-sources"
+    },
+    {
+      "source": "/graph-studio/rag-management/referencing",
+      "destination": "/rag/attach-to-nodes"
+    },
+    {
+      "source": "/graph-studio/interface/variables-panel",
+      "destination": "/studio/variables"
+    },
+    {
+      "source": "/graph-studio/capture-variables-in-agent-node",
+      "destination": "/studio/variables"
+    },
+    {
+      "source": "/graph-studio/types-of-session-variables",
+      "destination": "/studio/variables"
+    },
+    {
+      "source": "/builds/configuration",
+      "destination": "/configure/build-export"
+    },
+    {
+      "source": "/builds/lifecycle",
+      "destination": "/agents/builds"
     }
   ],
   "navigation": {
@@ -445,17 +497,46 @@
             ]
           },
           {
-            "group": "Agents",
+            "group": "Design in Studio",
+            "pages": [
+              "agents/build-graph",
+              "studio/nodes",
+              "rag/overview",
+              "rag/data-sources",
+              "rag/attach-to-nodes",
+              "studio/variables",
+              "workspace/models",
+              "tools/overview"
+            ]
+          },
+          {
+            "group": "Configure",
+            "pages": [
+              "configure/overview",
+              "configure/env-variables",
+              "configure/integrations",
+              "configure/build-export"
+            ]
+          },
+          {
+            "group": "Ship",
             "pages": [
               "agents/overview",
-              "agents/build-graph",
-              "tools/overview",
               "agents/builds",
               "agents/environments",
               "agents/deploy",
               "agents/deploy-channel",
-              "agents/deploy-trigger",
-              "agents/expose-a2a"
+              "agents/deploy-trigger"
+            ]
+          },
+          {
+            "group": "A2A",
+            "pages": [
+              "agents/expose-a2a",
+              "a2a/agent-card-identity",
+              "a2a/registry",
+              "a2a/discovery",
+              "a2a/endpoints"
             ]
           },
           {
