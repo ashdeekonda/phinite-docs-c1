@@ -1,36 +1,30 @@
 ---
-title: "RAG (Knowledge Base)"
-description: "Attach data sources and collection items to ground agent responses."
+title: Agent node RAG
+description: Attach RAG Data sources and items in the node drawer RAG tab.
 ---
 
-## Attaching RAG
+Use the drawer **RAG** tab to ground a specific **Master Agent** or **Child Agent** step with workspace knowledge.
 
-Use the RAG tab to select data sources and specific items (documents, tables, etc.). The selected list is saved with the agent and used at runtime.
+<Frame caption="RAG tab — select data source and items">
+  <img src="/images/v2/rag/02-node-rag-drawer.png" alt="RAG tab in node drawer" />
+</Frame>
 
-<Steps>
-  <Step title="Open RAG tab">
-    <Frame>
-      ![Open Rag Tab](/images/open-rag-tab.png)
-    </Frame>
+## Attach RAG
 
-    Select the agent block and open RAG.
-  </Step>
-  <Step title="Choose a data source">
-    <Frame>
-      ![Choose A Data Source](/images/choose-a-data-source.png)
-    </Frame>
-
-    Pick a source, then fetch and select items relevant to the agent’s task.
-  </Step>
-  <Step title="Save">
-    <Frame>
-      ![Save Rag](/images/save-rag.png)
-    </Frame>
-
-    Confirm to persist selections.
-  </Step>
-</Steps>
+1. Create and index collections in [RAG Data](/graph-studio/rag-management/data-sources).
+2. In Graph Studio, select an agent node.
+3. Open **RAG** → choose **data source** and **items**.
+4. **Save** the graph.
 
 <Note>
-  UI is implemented in `studio/components/drawer/RAG.tsx` and uses Redux slices for data sources and items.
+  Attach only collections relevant to this step — narrower retrieval improves answer quality.
 </Note>
+
+## Full guide
+
+See [Referencing RAG in agents](/graph-studio/rag-management/referencing) for workspace paths, runtime behavior, and build pinning.
+
+## Related
+
+- [RAG Management](/graph-studio/rag-management)
+- [Agent node anatomy](/graph-studio/agent-node)

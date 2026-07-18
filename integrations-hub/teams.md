@@ -6,12 +6,12 @@ icon: "https://storage.googleapis.com/phinite-public/teams.svg"
 
 ## Overview
 
-Phinite's **Microsoft Teams** predefined tool lets workspace assistants call Microsoft Teams APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
+Phinite's **Microsoft Teams** predefined tool lets workspace agent graphs call Microsoft Teams APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Send messages and approvals in Microsoft Teams, integrate Graph permissions,
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/configure/integrations).
 </Note>
 <Note>
 This legacy Teams tool variant is superseded by the **Microsoft Teams** predefined tool. See [Microsoft Teams](/integrations-hub/microsoft-teams) for the recommended integration.
@@ -20,7 +20,7 @@ This legacy Teams tool variant is superseded by the **Microsoft Teams** predefin
 ## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
-- Connect once under Integrations and reuse across assistants
+- Connect once under Integrations and reuse across agent graphs
 - Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
@@ -36,7 +36,7 @@ This legacy Teams tool variant is superseded by the **Microsoft Teams** predefin
 5. Select **Microsoft Teams**
 6. Click **+ Add Configuration**
 7. Enter the credential fields listed above
-8. Select assistants that should use this connection
+8. Select agent graphs that should use this connection
 9. Click **Save Configuration**
 
 ## Configure in Graph Studio

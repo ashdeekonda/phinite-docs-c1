@@ -1,47 +1,37 @@
 # Old IA coverage map (keep when skipping)
 
-**Standing rule:** When we skip, collapse, or redirect a page, check it against the **old** Mintlify tree. Every skip must be **REDIR**, **DEFER**, **DROP**, or **DONE** (Pass 3 page exists).
+**Enrichment standard (Pass 4):** `<Frame caption>` on images; `<CardGroup>`/typed `<Card>`; `<Note>`/`<Tip>`/`<Info>`/`<Warning>`; markdown **numbered lists** for procedures (no `<Steps>`); Agent Graph terminology; dialog depth per screen where applicable.
 
-## Pass 3 status (DONE pages)
+**Standing rule:** When we skip, collapse, or redirect a page, check it against the **old** Mintlify tree. Every skip must be **REDIR**, **DEFER**, **DROP**, or **DONE**.
 
-| Old bucket | Pass 3 page(s) | Status |
-| --- | --- | --- |
-| graph-studio/nodes*, connections (collapsed) | `studio/nodes` | **DONE** |
-| graph-studio/rag-management* | `rag/overview`, `rag/data-sources`, `rag/attach-to-nodes` | **DONE** |
-| graph-studio/agent-node/variables, variables-panel | `studio/variables` | **DONE** |
-| graph-studio/agent-node/tools | `tools/overview` + node drawer | **PARTIAL** (no separate prompt page) |
-| devstudio/overview, methods | `tools/overview` | **DONE** (Open Dev Studio) |
-| builds/environments | `configure/env-variables` | **DONE** |
-| builds/configuration | `configure/build-export` | **DONE** |
-| channels/overview, assistants/.../channels | `configure/integrations`, `agents/deploy-channel` | **DONE** (not per-vendor) |
-| triggers-intents/overview | `configure/integrations`, `agents/deploy-trigger` | **DONE** |
-| agent-registry/overview, catalog | `a2a/registry` | **DONE** |
-| agent-registry/agent-cards, expose step 3 | `a2a/agent-card-identity` | **DONE** |
-| agent-registry/registry-agent-nodes | `a2a/discovery` | **DONE** |
-| agent-registry/endpoints-and-lifecycle | `a2a/endpoints` | **DONE** |
-| BYOK / model keys | `workspace/models` | **DONE** |
-| assistants/components (config map) | `configure/overview` | **DONE** |
+## Pass 4 status (2026-07-19)
 
-## Still DEFER (not Pass 3)
+| Area | Nav pages | Content status | Nav wired |
+| --- | --- | --- | --- |
+| Getting Started | 4 | **DONE** | **DONE** |
+| Agent Graphs | 3 | **DONE** | **DONE** |
+| Graph Studio | 31 | **DONE** | **DONE** |
+| Tools & Dev Studio | 17 | **DONE** | **DONE** |
+| Configure | 5 | **DONE** | **DONE** |
+| Ship | 27 | **DONE** | **DONE** |
+| Observability | 11 | **DONE** | **DONE** |
+| User Management | 5 | **DONE** | **DONE** |
+| Reference | 5 | **DONE** | **DONE** |
+| Support | 4 | **DONE** | **DONE** |
+| Agent Registry tab | 8 | **DONE** | **DONE** |
+| Integrations Hub tab | ~61 | **DONE** (terminology + Note) | **DONE** |
 
-| Old bucket | Count | Notes |
-| --- | --- | --- |
-| setup-account / workspaces | 5 | Sign-up, create workspace |
-| graph-studio deep (copilot, connections, publishing) | ~15 | REDIR → nearest Design/Ship page |
-| assistants/intents* | ~5 | REDIR → deploy-trigger; product TBD |
-| integrations-hub per-vendor | 74 | REDIR → configure/integrations |
-| observability | 11 | REDIR → what-is-phinite |
-| user-management | 9 | Out of scope (not Agent Card identity) |
-| reference/faqs, api, shortcuts | 4 | DEFER Pass 4 |
-| support | 5 | DEFER Pass 4 |
-| agent-registry/invoke-a2a-from-claude | 1 | REDIR → a2a/registry; full page DEFER |
+**DROP (redirect only, not in nav):** `assistants/*` (11), `triggers-intents/intents*` (5), `reference/glossary`, `reference/ai-assistant`, spine stubs (`what-is-phinite`, `quickstart`, `studio/*`, `rag/*`, `a2a/*`, `agents/build-graph`, etc.)
 
-## New spine (live nav)
-
-See [`docs.json`](../../docs.json): Start → Design in Studio → Configure → Ship → A2A → Reference (~34 pages).
+**DEFER (on disk, unreferenced):** `setup-account/*`, `assistants/*` legacy files, `workspaces/creating-workspace.md`
 
 ## Product DROPs (intentional)
 
 - **Assistant** as top object → **Agent Graph**
 - Email as create-type (filter chip may linger)
-- Nav label **DevStudio** → **Tools** + Open Dev Studio
+- Nav label **DevStudio** → **Tools & Dev Studio**
+- **Intents** section removed from nav
+
+## New nav (live)
+
+See [`docs.json`](../../docs.json): 10 Documentation groups + Agent Registry + Integrations Hub tabs (~210 pages).

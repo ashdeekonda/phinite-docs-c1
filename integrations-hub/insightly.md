@@ -6,17 +6,17 @@ icon: "https://storage.googleapis.com/phinite-public/integrations/insightly.svg"
 
 ## Overview
 
-Phinite's **Insightly** predefined tool lets workspace assistants call Insightly APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
+Phinite's **Insightly** predefined tool lets workspace agent graphs call Insightly APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Manage Insightly CRM records — contacts, organisations, leads, opportunities, projects, tasks, and events — via the Insightly REST API v3.1.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/configure/integrations).
 </Note>
 ## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
-- Connect once under Integrations and reuse across assistants
+- Connect once under Integrations and reuse across agent graphs
 - Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
@@ -34,7 +34,7 @@ Predefined tools require a saved connection before they appear in Graph Studio's
 5. Select **Insightly**
 6. Click **+ Add Configuration**
 7. Enter the credential fields listed above
-8. Select assistants that should use this connection
+8. Select agent graphs that should use this connection
 9. Click **Save Configuration**
 
 ## Configure in Graph Studio

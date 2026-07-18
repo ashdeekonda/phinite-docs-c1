@@ -6,17 +6,17 @@ icon: "https://storage.googleapis.com/phinite-public/integrations/auth0.svg"
 
 ## Overview
 
-Phinite's **Auth0** predefined tool lets workspace assistants call Auth0 APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
+Phinite's **Auth0** predefined tool lets workspace agent graphs call Auth0 APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Manage an Auth0 tenant via the Management API v2 — users, roles, user blocks, applications, connections, organizations, logs, and verification tickets.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/configure/integrations).
 </Note>
 ## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
-- Connect once under Integrations and reuse across assistants
+- Connect once under Integrations and reuse across agent graphs
 - Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
@@ -34,7 +34,7 @@ Predefined tools require a saved connection before they appear in Graph Studio's
 6. Select **Auth0**
 7. Click **+ Add Configuration**
 8. Enter the credential fields listed above
-9. Select assistants that should use this connection
+9. Select agent graphs that should use this connection
 10. Click **Save Configuration**
 
 ## Configure in Graph Studio

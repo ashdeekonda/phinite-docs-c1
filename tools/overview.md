@@ -1,39 +1,20 @@
 ---
 title: Tools
-description: Build and manage tools used by agent graphs.
+description: Build and manage tools used by Agent Graphs — canonical page is Tools & Dev Studio.
 ---
 
-Tools are callable integrations or custom functions. Attach them to nodes in Graph Studio; manage the library from workspace **Tools**.
+This page has moved. **Tools & Dev Studio** is the canonical hub for creating, versioning, and publishing tools.
 
-## Where
+<Card title="Tools & Dev Studio overview" icon="wrench" href="/devstudio/overview">
+  Build custom and prebuilt tools, test across environments, and attach published versions to Agent Graph nodes.
+</Card>
 
-| Place | Use |
-| --- | --- |
-| Workspace **Tools** | Tool list — create, version, archive |
-| **Open Dev Studio** | Code editor for a tool |
-| Studio → **Tools** | Tools scoped to the open agent graph |
-| Studio → **Integrations** → Integration Tools | Connect app integrations |
-| Build / Expose wizards | Pin tool versions; [export to build](/configure/build-export) |
+<Note>
+  Mintlify redirects `/tools/overview` → `/devstudio/overview`. Update bookmarks to the canonical URL.
+</Note>
 
-![Workspace Tools](/images/v2/devstudio/01-all-tools.png)
+## Quick links
 
-## Steps
-
-1. Open **Tools** in the workspace sidebar.
-2. Click **New Tool**, or select a row and **Open Dev Studio**.
-3. Implement and **Publish** a version.
-4. In Graph Studio, attach the published tool to a [Tool node](/studio/nodes) or agent **Tools** tab.
-5. **Save** the graph.
-6. On **Build**, confirm tool versions (unpublished tools show **Publish**).
-
-## Integration tools vs custom tools
-
-- **Custom tools** — authored in Dev Studio from workspace **Tools**.
-- **Integration Tools** — prebuilt app connectors configured under [Integrations](/configure/integrations).
-
-## Related
-
-- [Build an agent graph](/agents/build-graph)
-- [Node types](/studio/nodes)
-- [Builds](/agents/builds)
-- [Build export](/configure/build-export)
+- [Link tools to agent nodes](/devstudio/linking-tools)
+- [Graph Studio agent node tools](/graph-studio/agent-node/tools)
+- [Configure integrations](/configure/integrations)

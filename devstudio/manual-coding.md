@@ -3,7 +3,7 @@ title: "Manual Coding (Python)"
 description: "Implement custom tool handlers using Python when you need complete control over business logic, integrations, data processing, or external API interactions."
 ---
 
-`Manual Coding provides maximum flexibility and is ideal when built-in tools are insufficient or custom logic is required.`
+**Manual coding** in Dev Studio gives maximum flexibility when [prebuilt integrations](/devstudio/prebuilt-tools) or [Copilot scaffolds](/devstudio/copilot-tools) are not enough. Handlers run when an **Agent Graph** node invokes the published tool at runtime.
 
 ## Tool Structure
 
@@ -60,8 +60,8 @@ The `output` object is returned directly to the agent and can be:
 
 - Displayed to users
 - Used in prompts
-- Passed to downstream workflow steps
-- Consumed by other agents
+- Passed to downstream graph nodes
+- Consumed by other agent nodes
 
 Example:
 
@@ -87,7 +87,7 @@ Example:
 }
 ```
 
-These variables can be referenced by subsequent agents, tools, and workflow steps during the active session.
+These variables can be referenced by subsequent agent nodes and tools during the active session.
 
 ---
 

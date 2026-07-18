@@ -1,27 +1,24 @@
 ---
 title: "Testing Tools"
-description: "Run tools with sample inputs across environments and debug failures."
+description: "Run tools with sample inputs across environments and debug failures in Dev Studio."
 ---
 
-## Steps
+Use the Dev Studio **Test** panel to validate handlers before you **Publish** and pin versions on **Build**.
 
-<Frame>
-  <img src="/images/test.png" alt="testing-tools" />
+<Frame caption="Dev Studio Test panel — sample inputs and environment selector">
+  <img src="/images/test.png" alt="Dev Studio tool test panel with JSON input" />
 </Frame>
 
-<Steps>
-  <Step title="Open Test panel">
-    Open the tool and select the Test tab.
-  </Step>
-  <Step title="Provide input">
-    Enter realistic sample input JSON.
-  </Step>
-  <Step title="Run in environment">
-    Choose Dev/UAT/Prod and run. Review logs for errors.
-  </Step>
-</Steps>
+## Run a tool test
 
-## Debugging
+1. Open the tool in **Dev Studio** from workspace **Tools**.
+2. Select the **Test** tab.
+3. Enter realistic sample input JSON (session variables the tool expects in `inputs`).
+4. Choose **Dev**, **UAT**, or **Prod** so `env_variables` resolve from the matching [environment](/configure/env-variables).
+5. Run the test and review stdout, errors, and returned `output` / `captured_variables`.
+6. Fix handler logic, re-test, then **Publish** when results match expectations.
+
+## Example input
 
 ```json Example Input
 {
@@ -32,5 +29,16 @@ description: "Run tools with sample inputs across environments and debug failure
 ```
 
 <Warning>
-  Never include real secrets in sample inputs.
+  Never include real secrets in sample inputs. Use placeholder values; secrets belong in environment variables.
 </Warning>
+
+## Debugging failures
+
+1. Confirm parameter names match your handler (`inputs.get("field")`).
+2. Verify integration **connections** and env variable keys for the selected environment.
+3. Cross-check runtime errors in [Session logs](/observability/logs) after attaching the tool to a graph test run.
+
+## Related
+
+- [Tool versioning](/devstudio/versioning)
+- [Common build failures](/support/build-failures)

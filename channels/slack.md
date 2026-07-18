@@ -1,54 +1,39 @@
 ---
-title: "Slack"
-description: "Connect Slack as a conversational channel."
+title: Slack
+description: Connect Slack as a channel for Conversational Agent Graphs.
 icon: "slack"
 ---
 
-## Setup
+<Note>
+  Slack configurations generate **DEV**, **UAT**, and **PROD** webhook URLs. Assign an **Agent Build** via **Deploy to Channel** after credentials are saved in **Integrations**.
+</Note>
 
-<Frame>
-  <img
-    src="/images/slack.png"
-    alt="slack"
-    style={{ width:"100%" }}
-  />
+Once connected, your Agent Graph can reply in Slack channels and DMs, send proactive updates, and handle support conversations from the workspace.
+
+<Frame caption="Slack integration configuration form">
+  <img src="/images/slack.png" alt="Slack channel configuration in Integrations" />
 </Frame>
 
-## Connecting Your Agentic Bot to Slack
+## Connect Slack
 
-Once connected, your bot can:
-- Reply to Slack users in real time
-- Send automated updates or alerts
-- Handle customer support directly from Slack
+### 1. Create a Slack configuration in Phinite
 
----
+1. Open **Integrations** → **Slack**.
+2. Click **Add Configuration**.
+3. Fill in **Signing Secret** and **Bot User OAuth Token** (`xoxb-...`).
+4. Optionally set a configuration name.
+5. Click **Save Configuration** — webhook URLs appear for **DEV**, **UAT**, and **PROD**.
 
-### Step 1: Create a New Slack Configuration
+### 2. Create a Slack app
 
-1. Integrations → Slack
-2. Click ➕ Add Configuration
-3. Fill:
-   - Signing Secret
-   - Bot User OAuth Token (SignIn Bot Token)
-   - (Optional) Configuration name
-4. Select the agent, then Save Configuration
+1. Go to [Slack API Apps](https://api.slack.com/apps) → **Create New App** → **From scratch**.
+2. Name the app and select the workspace.
+3. Click **Create App**.
 
-On save, Webhook URLs are generated for: DEV, UAT, PROD.
+### 3. Generate the bot token
 
----
+1. **OAuth & Permissions** → **Bot Token Scopes** — add:
 
-### Step 2: Create a Slack App
-
-1. Go to Slack API Apps → Create New App → From scratch
-2. Name the app and select the workspace
-3. Create App
-
----
-
-### Step 3: Generate the Bot Token
-
-1. OAuth & Permissions → Scopes → Bot Token Scopes
-2. Add recommended scopes:
 ```bash
 chat:write
 channels:read
@@ -59,40 +44,49 @@ users:read
 files:read
 files:write
 ```
-3. Install to Workspace → Allow
-4. Copy the Bot User OAuth Token (`xoxb-...`) → paste in your config
 
----
+2. **Install to Workspace** → **Allow**.
+3. Copy the **Bot User OAuth Token** → paste into Phinite **SignIn Bot Token**.
 
-### Step 4: Get the Signing Secret
+### 4. Add the signing secret
 
-Basic Information → App Credentials → copy Signing Secret → add to your config.
+1. **Basic Information** → **App Credentials**.
+2. Copy **Signing Secret** → paste into Phinite.
 
----
+### 5. Link the webhook URL
 
-### Step 5: Link Webhook URL in Slack
+1. **Event Subscriptions** → enable events.
+2. Paste the **DEV** Request URL from Phinite (use DEV first; switch to PROD when ready).
+3. Save — Slack verifies the endpoint.
+4. Under **Subscribe to bot events**, add `message.channels`, `message.im`, `app_mention` as needed.
 
-1. Event Subscriptions → Enable Events
-2. Paste your DEV/UAT/PROD Request URL (from your saved configuration)
-3. Save changes
-4. Optionally add bot events (e.g., `message.channels`, `message.im`, `app_mention`)
+### 6. Deploy your Agent Graph
 
----
-
-### Summary
+1. **Save** the Conversational Agent Graph and create an **Agent Build**.
+2. **Deploy** → **Deploy to Channel** — select Slack, assign build to **DEV**.
+3. Message the bot to test; promote to **UAT** / **PROD** when validated.
 
 | Step | Action | Output |
-|------|--------|--------|
+| --- | --- | --- |
 | 1 | Create configuration | Saved creds + generated webhooks |
-| 2 | Create Slack app | App in your workspace |
-| 3 | Token + scopes | Bot token with permissions |
+| 2 | Create Slack app | App in workspace |
+| 3 | Token + scopes | Authenticated bot |
 | 4 | Signing secret | Verified requests |
-| 5 | Link webhook | Slack events flow to your bot |
+| 5 | Link webhook | Events flow to Phinite |
+| 6 | Deploy build | Agent Graph runs on messages |
 
-### Common Issues
+<Tip>
+  Slack allows one Request URL per app. Use **DEV** during development; update to **PROD** before go-live.
+</Tip>
 
-- Invalid Request URL: endpoint must be HTTPS/publicly reachable
-- Token expired: ensure tokens aren’t rotating unexpectedly
-- Missing permissions: verify scopes under Bot Token Scopes
+### Common issues
 
+- **Invalid Request URL** — endpoint must be HTTPS and publicly reachable.
+- **Token expired** — disable token rotation for production or refresh tokens.
+- **Missing permissions** — verify scopes under **Bot Token Scopes**.
 
+## Related
+
+- [Deploy to channel](/agents/deploy-channel)
+- [Slack / Teams combined guide](/channels/slack-teams)
+- [Supported channels](/channels/supported)

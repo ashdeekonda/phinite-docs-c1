@@ -1,13 +1,38 @@
 ---
 title: "Tool Types"
-description: "Custom tools and pre-built integrations."
+description: "Custom tools, system tools, and prebuilt integrations for Agent Graphs."
 ---
 
-## Types
+Tools fall into three categories. All must be **published** (except system tools) before an Agent Build pins them at **Build** time.
 
-- **Custom Tools**: Purpose-built logic for your business
-- **Pre-built Integrations**: Gmail, Sheets, Jira/Zendesk, and more
+<CardGroup cols={2}>
+  <Card title="Custom tools" icon="screwdriver-wrench" href="/devstudio/custom-tools">
+    Python handlers you author in Dev Studio for domain-specific logic.
+  </Card>
+  <Card title="System tools" icon="gears" href="/devstudio/system-tool">
+    Built-in orchestration helpers available to every agent node (RAG, Finish, End Graph, Insight).
+  </Card>
+  <Card title="Prebuilt integrations" icon="plug" href="/devstudio/prebuilt-tools">
+    Gmail, Slack, Teams, Jira, Custom API, MongoDB, and more.
+  </Card>
+  <Card title="Link to nodes" icon="diagram-project" type="note" href="/devstudio/linking-tools">
+    Attach published tools on agent nodes in Graph Studio.
+  </Card>
+</CardGroup>
 
-See:
-- [Custom Tools](/devstudio/custom-tools)
-- [Pre-built Integrations](/devstudio/prebuilt-tools)
+## Quick comparison
+
+| Type | Authored in | Versioned | Typical use |
+| --- | --- | --- | --- |
+| **Custom** | Dev Studio | Yes | Business APIs, data transforms, approvals |
+| **System** | Platform | N/A | Flow control, RAG retrieval, user status updates |
+| **Prebuilt** | Integration connection + subtool enablement | Per connection | SaaS connectors with OAuth or API tokens |
+
+<Note>
+  **Integration Tools** configured under workspace [Integrations](/configure/integrations) appear alongside Dev Studio tools when linking to agent nodes.
+</Note>
+
+## Related
+
+- [Ways to build tools](/devstudio/methods)
+- [Tool structure & parameters](/devstudio/structure)

@@ -1,47 +1,80 @@
 ---
 title: Deploy
-description: Deploy a build to a channel, API, cron, or A2A.
+description: Deploy an Agent Build to a channel, Chat API, HTTP trigger, cron, or A2A.
 ---
 
-After you have a **Build**, use **Deploy** in Graph Studio.
+After you create an **Agent Build**, use **Deploy** in Graph Studio to route that frozen snapshot to a runtime target. **Deploy** stays disabled until at least one build exists for the Agent Graph.
 
-Deploy stays disabled until at least one build exists for the graph.
+<Note>
+  Golden path: design the graph → **Save** → **Build** → assign an **environment** → **Deploy** to a channel, trigger, or A2A endpoint.
+</Note>
 
-## Conversational targets
+<CardGroup cols={2}>
+  <Card title="Deploy to channel" icon="comments" href="/agents/deploy-channel">
+    WhatsApp, Slack, Teams, web chat, voice, email.
+  </Card>
+  <Card title="Deploy a trigger" icon="bolt" href="/agents/deploy-trigger">
+    API webhook, Cron, or background task for Autonomous graphs.
+  </Card>
+  <Card title="Expose as A2A" icon="share-nodes" type="note" href="/agent-registry/expose-your-flow">
+    Publish an Agent Card and hosted A2A URL.
+  </Card>
+  <Card title="Builds overview" icon="box" href="/builds/overview">
+    Create and manage Agent Builds first.
+  </Card>
+</CardGroup>
+
+## Deploy targets by graph type
+
+### Conversational Agent Graphs
 
 | Tab | Outcome |
 | --- | --- |
-| **Deploy as A2A** | Agent Card + hosted A2A URL |
+| **Deploy as A2A** | Agent Card + hosted A2A URL ([Expose your flow](/agent-registry/expose-your-flow)) |
 | **Deploy to Channel** | Assign build to a connected channel environment |
-| **Deploy as Chat API** | HTTP chat endpoint for backends/apps |
+| **Deploy as Chat API** | HTTP chat endpoint for backends and apps |
 
-## Autonomous targets
+### Autonomous Agent Graphs
 
 | Tab | Outcome |
 | --- | --- |
-| **Deploy as API** | HTTP trigger webhook |
-| **Cron job** | Scheduled runs |
+| **Deploy as API** | On-demand HTTP webhook trigger |
+| **Cron job** | Scheduled runs on the platform |
 | **Deploy as A2A** | Coming soon |
 
-## Steps
+<Tip>
+  Conversational graphs support **Deploy as A2A** today. Autonomous **Deploy as A2A** may show as coming soon in the Deploy modal — use **Deploy as API** or **Cron job** for autonomous automation.
+</Tip>
 
-1. Create a build ([Builds](/agents/builds)).
-2. Click **Deploy**.
-3. Choose a tab and follow the in-modal steps.
-4. Finish channel/trigger config in **Integrations** if prompted.
+## Deploy an Agent Build
 
-## Where config lives
+1. Create an **Agent Build** ([Builds overview](/builds/overview)) — the graph must be **Saved** first.
+2. In Graph Studio, click **Deploy** on the toolbar.
+3. Choose a tab matching your graph type (channel, Chat API, API, Cron, or A2A).
+4. Select the **Agent Build** and target **environment** (start with **DEV**).
+5. Complete any in-modal fields (webhook confirmation, schedule, Agent Card identity).
+6. If prompted, finish channel or trigger setup in **Integrations** ([Configure integrations](/configure/integrations)).
+
+## Where configuration lives
 
 | Need | Go to |
 | --- | --- |
 | Channels / triggers hub | Workspace **Integrations** (Tools / Channels / Triggers) |
 | Graph-scoped channels | Studio → **Integrations** → Channels |
 | Graph-scoped triggers | Studio → **Triggers** |
+| Env. variables | Workspace **Env. variables** ([Build environments](/builds/environments)) |
 
-![Integrations](/images/v2/deploy/03-integrations-menu.png)
+<Frame caption="Studio Integrations submenu — Channels and Integration Tools">
+  <img src="/images/v2/deploy/03-integrations-menu.png" alt="Integrations submenu in Graph Studio sidebar" />
+</Frame>
+
+<Frame caption="Integrations hub — Channels, Tools, and Triggers tabs">
+  <img src="/images/v2/deploy/04-integrations-hub.png" alt="Workspace Integrations hub with channel and trigger tabs" />
+</Frame>
 
 ## Related
 
 - [Deploy to channel](/agents/deploy-channel)
-- [Deploy trigger](/agents/deploy-trigger)
-- [Expose as A2A](/agents/expose-a2a)
+- [Deploy a trigger](/agents/deploy-trigger)
+- [Expose your Agent Graph as A2A](/agent-registry/expose-your-flow)
+- [Configuration overview](/configure/overview)

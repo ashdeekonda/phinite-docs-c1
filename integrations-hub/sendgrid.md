@@ -6,18 +6,18 @@ icon: "https://storage.googleapis.com/phinite-public/integrations/sendgrid.svg"
 
 ## Overview
 
-Phinite's **SendGrid** predefined tool lets workspace assistants call SendGrid APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
+Phinite's **SendGrid** predefined tool lets workspace agent graphs call SendGrid APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Send emails, manage contacts and lists, create single sends, retrieve templates, handle suppressions, and view stats via the SendGrid API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/configure/integrations).
 </Note>
 
 ## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
-- Connect once under Integrations and reuse across assistants
+- Connect once under Integrations and reuse across agent graphs
 - Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
@@ -32,7 +32,7 @@ Predefined tools require a saved connection before they appear in Graph Studio's
 4. Select **SendGrid**
 5. Click **+ Add Configuration**
 6. Enter the credential fields listed above
-7. Select assistants that should use this connection
+7. Select agent graphs that should use this connection
 8. Click **Save Configuration**
 
 ## Configure in Graph Studio

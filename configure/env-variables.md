@@ -3,9 +3,11 @@ title: Env. variables
 description: DEV, UAT, and PROD environment variables for builds and integrations.
 ---
 
-## What this is
+**Env. variables** store secrets and config per **environment** (DEV, UAT, PROD). **Agent Builds** and integrations read these at runtime — values are not stored on the **Agent Graph** canvas.
 
-**Env. variables** store secrets and config values per **environment** (DEV, UAT, PROD). Builds and integrations read these values at runtime — they are not embedded in the graph canvas.
+<Note>
+  Sensitive values display masked in the table. Tools and channels reference env keys by name — keep naming consistent across DEV → PROD promotion. Permission: `workspace.sidebar.environment`.
+</Note>
 
 ## Where in the product
 
@@ -13,27 +15,37 @@ description: DEV, UAT, and PROD environment variables for builds and integration
 | --- | --- |
 | Workspace sidebar | **Env. variables** |
 | URL | `/{org}/workspace/{workspaceId}/environment` |
-| Build assign | Studio → **Deploy** / Agent Builds → assign build to environment |
+| Build assign | Graph Studio → **Deploy** / **Agent Builds** → assign build to environment |
 
-![Env. variables](/images/v2/builds/04-env-variables.png)
+<Frame caption="Env. variables — DEV, UAT, PROD columns">
+  <img src="/images/v2/builds/04-env-variables.png" alt="Environment variables table" />
+</Frame>
 
-## Steps
+## Configure variables
 
 1. Open **Env. variables** from the workspace sidebar.
 2. Click **New Environment** or edit an existing variable row.
-3. Enter the **Variable Name** and values for **DEV**, **UAT**, and **PROD** columns as needed.
+3. Enter **Variable Name** and values for **DEV**, **UAT**, and **PROD** as needed.
 4. Save each row.
-5. When deploying a build, assign it to the environment whose values you configured ([Environments](/agents/environments)).
+5. When deploying, assign the **Agent Build** to the environment whose values you configured ([Builds & environments](/builds/environments)).
 
-## Notes
-
-- Sensitive values display masked in the table.
-- Tools and channels reference env keys by name; keep naming consistent across DEV → PROD promotion.
-- Permissions: `workspace.sidebar.environment`.
+<Tip>
+  Keep variable **names** consistent across DEV → PROD. Only the **values** should change (API keys, base URLs, feature flags).
+</Tip>
 
 ## Related
 
-- [Configuration overview](/configure/overview)
-- [Integrations](/configure/integrations)
-- [Build export](/configure/build-export)
-- [Builds](/agents/builds)
+<CardGroup cols={2}>
+  <Card title="Configuration overview" icon="sliders" href="/configure/overview">
+    All configuration layers in one place.
+  </Card>
+  <Card title="Build export" icon="file-export" href="/configure/build-export">
+    Pin tools, MCP, and env into immutable builds.
+  </Card>
+  <Card title="Build environments" icon="layer-group" href="/builds/environments">
+    Assign builds to DEV, UAT, and PROD.
+  </Card>
+  <Card title="Integrations" icon="plug" href="/configure/integrations">
+    Channels, triggers, and predefined tools.
+  </Card>
+</CardGroup>

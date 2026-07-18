@@ -5,7 +5,11 @@ description: "Built-in tools available to all agents for flow orchestration and 
 
 ## Overview
 
-System tools are automatically available to every agent and don't require custom configuration. These tools help agents orchestrate workflows, retrieve information, and provide better user experiences.
+System tools are automatically available to every agent node and don't require custom configuration. These tools help Agent Graphs orchestrate runs, retrieve information, and provide better user experiences.
+
+<Note>
+  System tools are distinct from **Dev Studio** custom/prebuilt tools. They ship with the platform and do not go through publish/version pinning.
+</Note>
 
 ## Available System Tools
 
@@ -28,7 +32,7 @@ System tools are automatically available to every agent and don't require custom
 
 ### Purpose
 
-Retrieves relevant information from datasources attached to the agent block.
+Retrieves relevant information from RAG collections attached to the agent node.
 
 ### Usage
 
@@ -39,17 +43,17 @@ When the user asks about product specifications or documentation,
 use the RAGTool to search the knowledge base for relevant information.
 ```
 
-The agent will automatically access the datasources you've attached to the agent block and retrieve the most relevant information.
+The agent will automatically access the RAG collections you've attached to the agent node and retrieve the most relevant information.
 
 <Note>
-  Make sure to attach your datasources to the agent block before referencing the RAG Tool.
+  Make sure to attach your RAG collections to the agent node before referencing the RAG Tool.
 </Note>
 
 ## Finish Tool
 
 ### Purpose
 
-Signals that the current agent has completed its task and no further action is needed from this agent block.
+Signals that the current agent node has completed its task and no further action is needed from this node.
 
 ### Usage
 
@@ -74,15 +78,15 @@ call the FinishTool to complete this step.
 
 ### Purpose
 
-Terminates the entire workflow immediately, regardless of remaining steps.
+Terminates the entire Agent Graph immediately, regardless of remaining nodes.
 
 ### Usage
 
-Use this tool when the entire flow should stop:
+Use this tool when the entire graph should stop:
 
 ```text Agent Prompt Example
-If the user explicitly says "bye" or "stop", call the EndFlowTool 
-to immediately terminate the entire workflow.
+If the user explicitly says "bye" or "stop", call the End Agent Graph Tool 
+to immediately terminate the entire Agent Graph.
 ```
 
 ### When to Use
@@ -93,7 +97,7 @@ to immediately terminate the entire workflow.
 - User wants to exit the conversation
 
 <Warning>
-  This tool stops the **entire workflow**, not just the current agent. Use FinishTool if you only want to complete the current agent's task.
+  This tool stops the **entire Agent Graph**, not just the current agent node. Use Finish Tool if you only want to complete the current node's task.
 </Warning>
 
 ## Agent Graph Insight Tool
@@ -107,7 +111,7 @@ Provides real-time status updates to users during tool execution, making convers
 The agent automatically uses this tool to inform users when processing is happening:
 
 ```text Agent Prompt Example
-When calling any external tool or API, use the FlowInsightTool to let 
+When calling any external tool or API, use the Agent Graph Insight Tool to let 
 the user know you're working on their request.
 ```
 
@@ -169,7 +173,7 @@ the user know you're working on their request.
   <Accordion title="Preventing Premature Exits">
     If agents are ending flows too early:
 
-    - Explicitly list all required steps before calling FinishTool/EndFlowTool
+    - Explicitly list all required steps before calling Finish Tool or End Agent Graph Tool
     - Add validation checkpoints in your prompt
     - Use conditional statements for tool calling
 
@@ -181,7 +185,7 @@ the user know you're working on their request.
     ```
   </Accordion>
   <Accordion title="RAG Tool Optimization">
-    - Attach only relevant datasources to each agent
+    - Attach only relevant RAG collections to each agent node
     - Provide clear instructions on when to search
     - Test retrieval quality with sample queries
     - Update datasources regularly for accuracy
@@ -201,17 +205,17 @@ the user know you're working on their request.
 ## Troubleshooting
 
 <ResponseField name="Agent ends flow prematurely">
-  Add explicit conditions in your prompt for when to call FinishTool or EndFlowTool. List all required steps that must be completed first.
+  Add explicit conditions in your prompt for when to call Finish Tool or End Agent Graph Tool. List all required steps that must be completed first.
 </ResponseField>
 
 <ResponseField name="RAG Tool not finding information">
-  - Verify datasources are properly attached to the agent block
+  - Verify RAG collections are properly attached to the agent node
   - Check that datasources contain the relevant information
   - Review the quality and format of your datasource content
 </ResponseField>
 
 <ResponseField name="Agent Graph Insight messages not appearing">
-  - Ensure the agent prompt mentions using FlowInsightTool
+  - Ensure the agent prompt mentions using Agent Graph Insight Tool
   - Verify the conversational flow is configured correctly
   - Check that the tool is being called before long-running operations
 </ResponseField>

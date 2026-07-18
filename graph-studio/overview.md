@@ -1,124 +1,85 @@
 ---
-title: "Graph Studio Overview"
-description: "Build intelligent workflows with visual automation, multi-agent orchestration, and enterprise-grade debugging capabilities."
+title: Graph Studio overview
+description: Design Agent Graphs on the canvas — nodes, tools, RAG, variables — then Save before Build.
 ---
 
-## What is Graph Studio?
-
-Graph Studio is Phinite's visual workflow builder that enables you to create sophisticated AI-powered automations without coding. Design complex multi-agent systems using an intuitive canvas interface, connect them with conditional logic, and deploy with full observability and access controls.
+**Graph Studio** is where you design an **Agent Graph**: connect [nodes](/graph-studio/nodes), configure each step in the **node drawer**, and use the toolbar to **Save**, **Build**, **Deploy**, and **Test**.
 
 <CardGroup cols={2}>
-  <Card title="Manual canvas editing (Recommended for beginners and for gaining a better understanding.)" icon="pencil" href="/graph-studio/manual-method">
-    Design precise workflows by dragging and connecting nodes with full control over execution order.
+  <Card title="Manual canvas" icon="pencil" href="/graph-studio/manual-method">
+    Drag nodes, connect edges, and configure the drawer tab by tab.
   </Card>
-
-  <Card title="Prompt-based creation (Aura)" icon="sparkles" href="/graph-studio/copilot-method">
-    Describe your workflow goal in natural language and let AI generate the initial workflow structure, prompt, tools and variables.
+  <Card title="Phinite Aura" icon="sparkles" href="/graph-studio/copilot-method">
+    Describe the graph in natural language; refine the draft on the canvas.
   </Card>
-
-  <Card title="Agent Registry (A2A)" icon="share-nodes" href="/agent-registry/overview">
-    Expose published graphs as external agents, browse the catalog, and attach registry agents on the canvas.
+  <Card title="Node types" icon="diagram-project" href="/graph-studio/nodes">
+    Start, Master Agent, Child Agent, Tool, End, and registry agents.
+  </Card>
+  <Card title="RAG Management" icon="book" type="note" href="/graph-studio/rag-management">
+    Ground agents with workspace RAG Data collections.
   </Card>
 </CardGroup>
 
-## Key capabilities
+## Studio layout
 
-### Visual workflow design
+| Area | What it does |
+| --- | --- |
+| **Left sidebar** | **Agent Graphs**, **Evaluations**, **Governance**; **Graph assets** — Versions, Builds, Cards, Triggers, Integrations, Tools |
+| **Canvas** | React Flow graph — add and connect [nodes](/graph-studio/nodes) |
+| **Node drawer** | Opens when you select a node — **Details**, **RAG**, **Variables**, **Tools**, **Decision** (see [Inspector](/graph-studio/interface/inspector-panel)) |
+| **Toolbar** | **Save** → **Build** → **Deploy** → **Test** (Build/Deploy stay disabled until prerequisites are met) |
+| **Phinite Aura** | Optional chat panel for assisted graph edits |
 
-- **Drag-and-drop canvas**: Intuitive interface powered by React Flow for complex workflow visualization
-- **Real-time collaboration**: Multiple team members can work on flows simultaneously with live updates
-- **Version control**: Track changes, compare versions, and rollback to previous iterations
+<Frame caption="Graph Studio — canvas, Aura, and Save / Build / Deploy / Test toolbar">
+  <img src="/images/v2/studio/01-studio-aura-shell.png" alt="Graph Studio shell with toolbar and canvas" />
+</Frame>
 
-### Multi-agent orchestration
+## Open Graph Studio
 
-- **Master Agents**: Primary reasoning units with full access to tools, RAG, and conditional logic
-- **Child Agents**: A helper agent for the master agent, designed to handle specific LLM-based tasks.
-- **Registry agents (A2A)**: Attach agents from the [Agent Registry](/agent-registry/overview) in Browse or Discovery mode on a master agent node
-- **Agent communication**: Seamless data passing and coordination between agents
+1. From **Workspace Home**, open an existing **Agent Graph** or click **New Agent Graph**.
+2. In the **New Agent Graph** dialog, enter name and description and choose **Conversational** or **Autonomous** ([Agents overview](/agents/overview)).
+3. Click **Create** — Studio opens on the canvas for that graph.
 
-### Enterprise features
+<Note>
+  Workspace filters may still show an **Email** chip. New graphs only offer **Conversational** and **Autonomous**.
+</Note>
 
-- **Role-based access**: Control who can view, edit, or publish flows based on [user roles](/user-management/user-roles)
-- **Environment management**: Deploy flows across Development, UAT, and Production environments
-- **Audit trails**: Complete logging of all changes, executions, and user actions
+## Design workflow
 
-### Advanced logic & data
+1. Add and connect [nodes](/graph-studio/nodes) on the canvas ([Manual method](/graph-studio/manual-method) or [Aura](/graph-studio/copilot-method)).
+2. Select each **Master Agent** or **Child Agent** node and configure the drawer:
+   - **[Prompt](/graph-studio/agent-node/prompt)** — mission and instructions
+   - **[Tools](/graph-studio/agent-node/tools)** — attach published tools
+   - **[RAG](/graph-studio/agent-node/rag)** — attach collections from [RAG Data](/graph-studio/rag-management/data-sources)
+   - **[Variables](/graph-studio/agent-node/variables)** — input and capture
+3. Define graph-level variables in the [Variables panel](/graph-studio/interface/variables-panel) when your layout includes it.
+4. Click **Save** on the toolbar — required before **Build**.
+5. Continue to [Builds](/builds/overview) and [Deploy](/agents/deploy) when the graph is ready.
 
-- **Conditional routing**: Use LLM-evaluated decision variables to create dynamic workflow paths
-- **Variable management**: Capture, transform, and pass data between workflow steps
-- **RAG integration**: Ground agents with enterprise knowledge from connected data sources
+<Tip>
+  **Save** persists the draft graph. **Build** freezes graph + tool versions into an immutable **Agent Build** used for environment assignment and deploy.
+</Tip>
 
-### Debugging & observability
+## Graph assets (sidebar)
 
-- **Execution logs**: Real-time monitoring of workflow runs with detailed step-by-step traces
-- **Error handling**: Comprehensive error boundaries and debugging tools for troubleshooting
-- **Performance metrics**: Track execution times, success rates, and resource usage
+| Asset | Purpose |
+| --- | --- |
+| **Graph Versions** | Saved snapshots of the graph |
+| **Agent Builds** | Pinned builds created from the **Build** dialog |
+| **Agent Cards** | A2A exposure for this graph |
+| **Triggers** | Graph-scoped triggers (hub links to [Integrations](/configure/integrations)) |
+| **Integrations** | Graph-scoped channels and tools |
+| **Tools** | Graph-scoped tool list |
 
-## Prerequisites
+<Frame caption="Studio Tools panel — graph-scoped tools">
+  <img src="/images/v2/studio/02-tools-sidebar.png" alt="Graph Studio Tools sidebar panel" />
+</Frame>
 
-### Access requirements
+## Related
 
-- **Workspace membership**: You must be added to a workspace with appropriate [permissions](/user-management/access-controls)
-- **Role assignment**: Minimum "Developer" role required for creating flows, "Admin" for publishing
-- **Project access**: Agent Graphs are created within projects - ensure you have project-level access
-
-### Technical setup
-
-- **Data sources**: Configure [RAG collections](/graph-studio/rag-management) if agents need enterprise knowledge
-- **Tool integrations**: Set up [external APIs](/devstudio/overview) and custom logics.
-- **Environment variables**: Configure any required secrets or configuration values
-
-## User roles and permissions
-
-<Warning>
-  Graph Studio access is controlled by workspace-level permissions. Users without appropriate roles will see limited functionality or be blocked from accessing certain features.
-</Warning>
-
-| Role | Can Create Agent Graphs | Can Edit Agent Graphs | Can Publish Agent Graphs | Can View Logs |
-| --- | --- | --- | --- | --- |
-| **SuperAdmin** | ✅ | ✅ | ✅ | ✅ |
-| **Admin** | ✅ | ✅ | ✅ | ✅ |
-| **Developer** | ✅ | ✅ | ❌ | ✅ |
-| **Tester** | ❌ | ❌ | ❌ | ✅ |
-| **Viewer** | ❌ | ❌ | ❌ | ❌ |
-
-## Getting started workflow
-
-<Steps>
-  <Step title="Access Graph Studio">
-    Navigate to your workspace → Assistants → \[Agent graph\] → Studio tab
-
-    <Check>
-      You should see the Graph Studio interface with canvas, nodes, and inspector panels.
-    </Check>
-  </Step>
-  <Step title="Choose creation method">
-    Decide either "Create with Aura" for AI-assisted generation or "Create manually"(recommended) for full control.
-
-    <Tip>
-      Start with Aura for Fast creation, then refine manually for precise control.
-    </Tip>
-  </Step>
-  <Step title="Design your workflow">
-    Add nodes, configure agents, connect logic, and test your Agent Graph with sample inputs.
-
-    <Note>
-      Use the debugging logs in the bottom panel to monitor execution and troubleshoot issues.
-    </Note>
-  </Step>
-  <Step title="Publish and deploy">
-    Save your flow, add version notes, and publish to your target environment.
-
-    <Warning>
-      Only users with "Admin" or "SuperAdmin" roles can publish flows to production environments.
-    </Warning>
-  </Step>
-</Steps>
-
-## Related concepts
-
-- [**Building Assistants**](/assistants/overview): Learn how flows integrate with conversational and autonomous assistants
-- [**Agent Registry (A2A)**](/agent-registry/overview): Expose, discover, and compose external agents
-- [**DevStudio**](/devstudio/overview): Create custom tools that flows can utilize
-- [**Observability**](/observability/overview): Monitor flow performance and debug issues
-- [**User Management**](/user-management/user-management): Understand workspace permissions and access controls
+- [Interface layout](/graph-studio/interface)
+- [Agent node anatomy](/graph-studio/agent-node)
+- [Connections & logic](/graph-studio/connections)
+- [Publishing & versions](/graph-studio/publishing)
+- [Configuration overview](/configure/overview)
+- [Agent Registry (A2A)](/agent-registry/overview)

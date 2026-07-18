@@ -6,17 +6,17 @@ icon: "https://storage.googleapis.com/phinite-public/google-drive.svg"
 
 ## Overview
 
-Phinite's **Google Drive** predefined tool lets workspace assistants call Google Drive APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
+Phinite's **Google Drive** predefined tool lets workspace agent graphs call Google Drive APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Upload, download, search, and share files, manage folders and permissions,
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/configure/integrations).
 </Note>
 ## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
-- Connect once under Integrations and reuse across assistants
+- Connect once under Integrations and reuse across agent graphs
 - Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
@@ -32,7 +32,7 @@ Predefined tools require a saved connection before they appear in Graph Studio's
 5. Select **Google Drive**
 6. Click **+ Add Configuration**
 7. Enter the credential fields listed above
-8. Select assistants that should use this connection
+8. Select agent graphs that should use this connection
 9. Click **Save Configuration**
 
 ## Configure in Graph Studio

@@ -1,49 +1,44 @@
 ---
 title: "Predefined Tools"
-description: "Add and configure pre-packaged tools; reference for each tool and its subtools."
+description: "Add and configure pre-packaged integrations; connect once, enable subtools on agent nodes."
 ---
 
-## Available integrations
+Prebuilt tools wrap popular SaaS APIs. Create a reusable **connection**, enable **subtools**, then attach the tool on an Agent Graph node in [Graph Studio](/graph-studio/overview).
 
-<Frame>
+<CardGroup cols={2}>
+  <Card title="Gmail" icon="envelope" href="/devstudio/prebuilt/gmail">Read, search, draft, send email.</Card>
+  <Card title="Slack" icon="hashtag" href="/devstudio/prebuilt/slacktool">Channels, threads, approvals.</Card>
+  <Card title="Microsoft Teams" icon="microsoft" href="/devstudio/prebuilt/teamstool">Messaging and approval flows.</Card>
+  <Card title="Jira" icon="ticket" href="/devstudio/prebuilt/jiratools">Issues, search, transitions.</Card>
+  <Card title="Custom API" icon="code" href="/devstudio/prebuilt/customapi">Generic HTTP client.</Card>
+  <Card title="MongoDB" icon="database" href="/devstudio/prebuilt/mongodbtool">CRUD, aggregation, indexes.</Card>
+</CardGroup>
+
+<Frame caption="Available prebuilt integrations in workspace Tools">
   <img
     src="/images/available-integrations.png"
-    alt="Descriptive alt text"
-    lightAlt="available integrations"
-    darkAlt="Descriptive alt text"
+    alt="Predefined tool integrations list"
     className="dark:hidden"
   />
   <img
     src="/images/workspace-tools.png"
-    alt="Descriptive alt text"
-    lightAlt="available integrations"
-    darkAlt="Descriptive alt text"
+    alt="Predefined tool integrations list dark mode"
     className="hidden dark:block"
   />
 </Frame>
 
-- [Gmail](/devstudio/prebuilt/gmail)
-- [Google Sheets](/devstudio/prebuilt/sheets)
-- [Jira & Zendesk](/devstudio/prebuilt/jira-zendesk)
+## Quick start: add a prebuilt tool
 
-## Overview
+1. Open the Agent Graph in [Graph Studio](/graph-studio/overview).
+2. Select an agent node and open the **Tools** tab ([linking tools](/devstudio/linking-tools)).
+3. Click **Add tool** and pick a prebuilt tool (for example `GmailTool`, `SlackTool`).
+4. Choose an **existing connection** or **Add a new connection** (see per-tool credentials below).
+5. Enable the **subtools** your graph needs (for example `get_unread_emails`, `send_message`).
+6. **Save** the graph, [test](/devstudio/testing-tools) a subtool call, then **Build** to pin versions.
 
-This page explains how to add and configure the pre-packaged tools ("Predefined Tools") for your agentic system, and describes each tool and its available subtools. Read this start-to-finish to configure tools reliably, or jump to the per-tool section for details.
-
----
-
-## Quick start: How to add a tool
-
-1. Open the agent you want to configure in the editor.
-2. Click the **Tools** tab inside the agent block.
-3. Click **Add a new tool**.
-4. From the list of available tools pick the tool you want to add (for example: `GmailTool`, `SlackTool`).
-5. After selecting a tool you will see a dropdown to choose an **existing connection** or **\+ Add a new connection**.
-6. If you choose **Add a new connection**, fill the required configuration fields (see the tool's configuration below). Save the connection.
-7. Once the connection is created/selected, add or enable the subtools you need. Subtools are individual capabilities (for example: `get_latest_emails`, `send_message`).
-8. Test the connection using a simple subtool call (for example, list channels or get a small set of emails). If the test works, save the agent.
-
-> Tip: Add only the minimal set of permissions/credentials necessary for the agent’s task. For example, a tool used only to _read_ emails should not be granted send/delete permissions.
+<Tip>
+  Grant only the scopes each graph needs—a read-only email agent should not enable send/delete subtools.
+</Tip>
 
 ---
 

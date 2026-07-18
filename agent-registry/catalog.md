@@ -1,7 +1,11 @@
 ---
-title: "Browse the Agent Registry"
-description: "Search, filter, and inspect organisation and public-facing agent listings in the workspace Agent Registry."
+title: Browse the Agent Registry
+description: Search, filter, and inspect organisation and public A2A agents in the workspace catalog.
 ---
+
+<Note>
+  The **Agent Registry** catalogs agents exposed over A2A. Each entry links an **Agent Build** to an **Agent Card**, hosted URL, and **TEST** / **LIVE** status.
+</Note>
 
 ## Open Agent Registry
 
@@ -10,28 +14,24 @@ In the workspace sidebar, open **Agent Registry** when your organisation grants 
 **Route:** `/{organisation}/workspace/{workspaceId}/agent-registry`
 
 <Info>
-  The same registry data powers **Browse** mode on agent nodes in Graph Studio. The workspace page is the full catalog experience with search, filters, and detail views.
+  The same registry data powers **Browse** mode on agent nodes in Graph Studio. The workspace page is the full catalog with search, filters, and detail views.
 </Info>
 
-<Frame>
-  ![Agent Registry Search Filters](/images/agent-registry-search-filters.png)
+<Frame caption="Agent Registry — search, filters, and agent cards">
+  <img src="/images/v2/a2a/04-registry-catalog.png" alt="Agent Registry catalog with search and filters" />
 </Frame>
 
 ## Page layout
 
 | Area | Description |
 | --- | --- |
-| **Hero** | Heading _Find the Perfect AI Agent_ with subtitle and agent count |
-| **Search** | _Search for agents..._ — filters by name, summary, tags, and related metadata |
-| **Filter sidebar** | Visibility, deployed status, input/output MIME modes, and tags |
+| **Hero** | *Find the Perfect AI Agent* — subtitle and agent count |
+| **Search** | *Search for agents...* — filters by name, summary, tags, metadata |
+| **Filter sidebar** | Visibility, deployed status, input/output MIME modes, tags |
 | **View toggle** | Grid or list layout |
-| **Detail** | Selecting an agent opens a detail view (skills, status, visibility, copyable endpoint) |
+| **Detail** | Skills, status, visibility, copyable endpoint |
 
-<Frame>
-  ![Agent Registry Search Filters](/images/agent-registry-search-filters.png)
-</Frame>
-
-### Filter dimensions
+## Filter dimensions
 
 | Filter | Options | Purpose |
 | --- | --- | --- |
@@ -41,19 +41,17 @@ In the workspace sidebar, open **Agent Registry** when your organisation grants 
 | **Output Mode** | MIME types | Skill output compatibility |
 | **Tags** | Discoverability tags from Agent Cards | Narrow by topic or capability |
 
-Filters apply **client-side** on the loaded registry list in addition to API query parameters described below.
+Filters apply **client-side** on the loaded registry list in addition to API query parameters.
 
 ## Organisation vs public listings
 
-The UI distinguishes **Organisation** and **Public** catalog views internally (filter logic and API params). There is no separate **Sample** demo tab in the current product.
-
 | View | API behaviour | What you see |
 | --- | --- | --- |
-| **Organisation** | `GET /a2a-registry?workspaceid=...&orgid=...&pagination=false` | Test and live builds registered under your organisation |
-| **Public-oriented** | Same request with **`status=live`** | Live builds only—intended for catalogue-style discovery |
+| **Organisation** | `GET /a2a-registry?workspaceid=...&orgid=...&pagination=false` | TEST and LIVE builds under your organisation |
+| **Public-oriented** | Same with **`status=live`** | LIVE builds only — catalogue-style discovery |
 
 <Warning>
-  Public-oriented filtering currently emphasises **`status=live`** at the API. **Visibility** (`public` vs `organization`) is stored on each registration and enforced at **invoke time** by the gateway; the catalog may show mixed visibility until you apply the **Public** visibility filter in the sidebar.
+  Public-oriented filtering emphasises **`status=live`** at the API. **Visibility** (`public` vs `organization`) is enforced at **invoke time** by the gateway; apply the **Public** visibility filter in the sidebar to narrow results.
 </Warning>
 
 ## Agent cards in the list
@@ -64,26 +62,29 @@ Each card typically shows:
 - Deployment badge (**Test** or **Live**)
 - Visibility (**Public** or **Organisation**)
 - Skills summary and discoverability tags
-- Hosted **A2A URL** (live builds omit the registry ID in the path—see [**Endpoints & lifecycle**](/agent-registry/endpoints-and-lifecycle))
+- Hosted **A2A URL** (LIVE builds omit registry ID in path — [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle))
 
-![Agent detail with skills, endpoint, and build information](/images/agent-registry/registry-detail.png)
+Selecting a card opens a detail panel where you can copy the endpoint and review build metadata.
 
-Selecting a card opens a detail panel or modal where you can copy the endpoint and review build metadata.
+## Browse the catalog
+
+1. Open **Agent Registry** from the workspace sidebar.
+2. Search or apply filters to narrow agents.
+3. Select an agent to view **Agent Card** details and hosted URL.
+4. Use **TEST** URLs for validation; **LIVE** URL after [Push To Prod](/agent-registry/agent-cards).
 
 ## API reference (listing)
-
-The catalog loads registry rows via the gateway:
 
 ```text
 GET /api/v1/a2a-registry?workspaceid={id}&orgid={id}&pagination=false
 GET /api/v1/a2a-registry?workspaceid={id}&orgid={id}&status=live&pagination=false
 ```
 
-Optional query params supported by the API include `flowid`, `visibility`, `tag`, `input_mode`, `output_mode`, and paginated `page`/`limit`. The workspace page currently loads the full list with `pagination=false` for client-side search and filters.
+Optional query params: `flowid`, `visibility`, `tag`, `input_mode`, `output_mode`, `page`, `limit`.
 
 ## Permissions
 
-- **View registry:** `assistants.flows:read` (via gateway auth)
+- **View registry:** `assistants.flows:read`
 - **Sidebar entry:** `workspace.sidebar.agent_registry`
 
 ## Related pages
@@ -92,7 +93,6 @@ Optional query params supported by the API include `flowid`, `visibility`, `tag`
   <Card title="Expose an agent" icon="rocket" href="/agent-registry/expose-your-flow">
     Create a new registry entry from Graph Studio.
   </Card>
-
   <Card title="Registry agent nodes" icon="share-nodes" href="/agent-registry/registry-agent-nodes">
     Attach catalog agents on the canvas (Browse mode).
   </Card>

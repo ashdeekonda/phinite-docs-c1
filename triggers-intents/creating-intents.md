@@ -3,7 +3,7 @@ title: "Creating Intents"
 description: "Create, train, and map intents to flows."
 ---
 
-## Steps
+## Procedure
 
 <Frame>
   ![Intents](/images/intents.png)

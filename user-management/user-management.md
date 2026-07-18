@@ -7,6 +7,10 @@ description: "Invite users, assign workspace roles, and manage access from the w
 
 Workspace **Users** is where **Super Admin** and **Admin** (in most setups) invite teammates, set **workspace roles** (Admin, QA, Developer), update access, and resend invitations when accounts are still pending. Other roles usually don’t see **Users** unless your organization customizes permissions.
 
+<Note>
+  This section covers **workspace membership and RBAC**. [Agent Card](/agent-registry/overview) identity and A2A exposure are configured separately under Agent Registry and Graph Studio **Expose as A2A**.
+</Note>
+
 <CardGroup cols={2}>
   <Card title="Workspace Users page" icon="monitor" href="/user-management/workspace-ui">Where to find Users, what you see, invites, and actions</Card>
   <Card title="Inviting & managing users" icon="user-plus" href="/user-management/inviting-users">Invites and ongoing membership</Card>

@@ -3,6 +3,8 @@ title: "Inviting & Managing Users"
 description: "Invite collaborators from the workspace Users page, assign roles, and manage access over time."
 ---
 
+Invite teammates to a workspace and assign **Admin**, **QA**, or **Developer** roles. Permissions are workspace-scoped [RBAC](/user-management/user-roles)—separate from [Agent Card](/agent-registry/overview) identity.
+
 ## Open Users
 
 In the workspace sidebar, choose **Users**. If it isn’t listed, ask your organization administrator for access.
@@ -11,19 +13,13 @@ Details on buttons and permissions: [Workspace Users page](/user-management/work
 
 ## Invite or add someone
 
-<Steps>
-  <Step title="Open Add User to Workspace">
-    Click **+ New User**. The drawer title is **Add User to Workspace**.
-  </Step>
-  <Step title="Fill in details">
-    Enter **Email address** and **Full name** (usually required for someone new). Choose **User role**: Admin, QA, or Developer.
-  </Step>
-  <Step title="Confirm">
-    The button depends on the case: **Add User** for new invitations or bringing someone in from another org context, **Update User** when they already belong to your organization but not yet to **this** workspace. Phinite sends email invitations when applicable.
-  </Step>
-</Steps>
+1. Click **+ New User** — the drawer title is **Add User to Workspace**.
+2. Enter **Email address** and **Full name** (usually required for someone new). Choose **User role**: Admin, QA, or Developer.
+3. Confirm:
+   - **Add User** — new invitation or cross-org add per your organization rules
+   - **Update User** — person already in your org but not yet on **this** workspace
 
-You can’t use **your own** email. If they already have access here, you’ll see **User already exists in the workspace.**
+Phinite sends email invitations when applicable. You can’t use **your own** email. If they already have access here, you’ll see **User already exists in the workspace.**
 
 ## After invite
 
@@ -33,9 +29,9 @@ You can’t use **your own** email. If they already have access here, you’ll s
 
 ## Manage users over time
 
-- Use **Edit Access** when responsibilities change.
-- Use **Remove User** when they shouldn’t access **this workspace** anymore.
-- Review membership periodically.
+1. Use **Edit Access** when responsibilities change.
+2. Use **Remove User** when they shouldn’t access **this workspace** anymore.
+3. Review membership periodically—especially after role changes or offboarding.
 
 ## Related
 

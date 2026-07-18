@@ -4,6 +4,8 @@ description: "Open the Users screen, see who can do what, and use invites, roles
 icon: "users"
 ---
 
+The **Users** page manages **workspace RBAC**—who can access this workspace and in which role. It does not configure [Agent Card](/agent-registry/overview) exposure.
+
 ## What it is
 
 The **Users** page is where you manage **who can access this workspace**: see members, invite people or add existing accounts, choose **workspace roles** (Admin, QA, Developer), edit display names where allowed, remove someone’s access to this workspace, and resend invitations when an account is not active yet.

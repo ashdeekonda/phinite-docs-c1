@@ -19,7 +19,7 @@ This glossary aligns **Agent-to-Agent (A2A)** vocabulary with what you see in Gr
 | **Promote to Live** | Agent Cards / promote action | `PUT .../promote-live` — demotes other live builds for the same flow |
 | **Browse mode** | Browse tab on agent node | Master agent calls a **specific** registry agent |
 | **Discovery mode** | Discovery tab on agent node | Master agent **auto-selects** agents matching saved filters at runtime |
-| **Agent Graph** | Flow | The workflow backing the registered agent |
+| **Agent Graph** | Agent Graph (Studio) | The workflow backing the registered agent — replaces legacy "Assistant" / "Flow" in UI copy |
 
 ## Phinite Connector (Claude)
 
@@ -77,7 +77,7 @@ Hosted URL patterns, test vs live, and promotion.
 <Card title="Registry agent nodes" href="/agent-registry/registry-agent-nodes" icon="share-nodes">
 Browse vs Discovery on the canvas.
 </Card>
-<Card title="Platform glossary" href="/reference/glossary" icon="book">
-Broader Phinite terminology (assistants, builds, tools).
+<Card title="Platform glossary" href="/reference/glossary-v2" icon="book">
+Broader Phinite terminology (Agent Graphs, builds, tools).
 </Card>
 </CardGroup>

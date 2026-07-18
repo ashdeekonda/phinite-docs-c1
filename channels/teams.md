@@ -1,71 +1,61 @@
 ---
-title: "Microsoft Teams"
-description: "Connect your agentic chatbot to Microsoft Teams."
+title: Microsoft Teams
+description: Connect Microsoft Teams for Conversational Agent Graphs.
 icon: "microsoft"
 ---
 
-## Connecting Your Agentic Bot to Microsoft Teams
+<Note>
+  Teams uses Azure Bot registration and Bot Framework messaging endpoints. Save Phinite webhook URLs for **DEV / UAT / PROD**, then assign an **Agent Build** with **Deploy to Channel**.
+</Note>
 
-Your chatbot can:
-- Respond to Teams users
-- Send proactive updates
-- Provide support in Teams
+Your Agent Graph can respond in Teams channels and chats, send proactive updates, and provide in-Teams support once the bot is registered and deployed.
 
----
+## Connect Microsoft Teams
 
-### Step 1: Create a New Configuration
+### 1. Create a Teams configuration in Phinite
 
-Integrations → Teams → ➕ Add Configuration → fields:
-- Microsoft App ID
-- Microsoft App Password
-- Microsoft Tenant ID
-- (Optional) Channel ID, Conversation ID
-- Configuration Name
+1. Open **Integrations** → **Teams** → **Add Configuration**.
+2. Enter **Microsoft App ID**, **Microsoft App Password**, and **Microsoft Tenant ID**.
+3. Optionally add **Channel ID**, **Conversation ID**, and a configuration name.
+4. Click **Save** — webhook URLs generate for **DEV**, **UAT**, and **PROD**.
 
----
+Example webhook shape:
 
-### Step 2: Register the bot in Microsoft Azure
-
-1. Azure Portal → App registrations → + New registration
-2. Fill:
-   - Name: Agentic Bot for Teams
-   - Supported accounts: Any org + personal
-   - Redirect URI: if applicable
-3. Register, then copy:
-   - Application (Client) ID → Microsoft App ID
-   - Directory (Tenant) ID → Microsoft Tenant ID
-
----
-
-### Step 3: Create a Client Secret (App Password)
-
-Certificates & secrets → + New client secret → copy Value immediately → store securely → paste into config.
-
----
-
-### Step 4: Save and get Webhook URLs
-
-On Save, Webhook URLs are generated for DEV/UAT/PROD.
-
-Example:
 ```bash
 https://api-server-dev.yourdomain.ai/teams/xxxxxxxx/development
 ```
 
----
+### 2. Register the bot in Azure
 
-### Step 5: Connect Webhook to your Bot
+1. Azure Portal → **App registrations** → **New registration**.
+2. Name: e.g. *Agent Graph Bot for Teams*.
+3. Supported accounts: any org directory + personal Microsoft accounts.
+4. Register and copy **Application (client) ID** → **Microsoft App ID**.
+5. Copy **Directory (tenant) ID** → **Microsoft Tenant ID**.
 
-Paste the environment-specific Webhook URL into your Bot Framework → Messaging Endpoint → Save.
+### 3. Create a client secret
 
----
+1. **Certificates & secrets** → **New client secret**.
+2. Copy the **Value** immediately → paste as **Microsoft App Password** in Phinite.
+
+### 4. Connect the messaging endpoint
+
+1. In Azure Bot / Bot Framework settings, set **Messaging endpoint** to the environment-specific webhook URL from Phinite (**DEV** first).
+2. Save.
+
+### 5. Deploy your Agent Graph
+
+1. **Save** the Conversational Agent Graph and create an **Agent Build**.
+2. **Deploy** → **Deploy to Channel** — select Teams, assign build to **DEV**.
+3. Message the bot in Teams; verify logs.
+4. Promote to **UAT** / **PROD** and update the messaging endpoint URL.
 
 ### Proactive messages (optional)
 
-Add either `channelId` (for channels) or `conversationId` (for personal 1:1) into the configuration.
+Add **channelId** (channels) or **conversationId** (1:1) to the Phinite configuration. Message the bot `getchannelid` or `getconversationId` to retrieve IDs from bot replies.
 
-To get IDs:
-- Message bot `getchannelid` → bot replies with `channelId`
-- Message bot `getconversationId` → bot replies with `conversationId`
+## Related
 
-
+- [Deploy to channel](/agents/deploy-channel)
+- [Slack / Teams combined guide](/channels/slack-teams)
+- [Supported channels](/channels/supported)

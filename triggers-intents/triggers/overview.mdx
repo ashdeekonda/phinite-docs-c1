@@ -1,31 +1,45 @@
 ---
-title: "Overview"
+title: Trigger APIs overview
+description: Expose Autonomous Agent Graphs as HTTP APIs — sync, background task, and Cron modes.
 ---
 
-The **Trigger** feature allows you to expose autonomous flows as **API endpoints**. When enabled, triggers can be invoked externally via HTTP API calls to execute configured flows. This is useful when you want external systems (monitoring tools, backend services, webhooks, etc.) to programmatically initiate autonomous workflows.
+<Note>
+  Triggers run **Autonomous Agent Graphs** assigned via an **Agent Build** per environment. Configure triggers in **Integrations** → **Triggers** or **Deploy** → **Deploy as API** / **Cron job** in Graph Studio.
+</Note>
 
-Unlike conversational intents, autonomous flow triggers support three distinct execution modes:
+The **Trigger** feature exposes **Autonomous Agent Graphs** as callable **API endpoints**. External systems (monitoring, backends, webhooks) invoke triggers over HTTP to start configured graph runs.
 
-1. **API (Single Endpoint)** - Synchronous execution for simple flows that complete within 30 seconds. Not recommended for complex or long-running flows.
-2. **Background Task** - Asynchronous execution with two endpoints (/start and /status) for long-running tasks. Maximum execution time: 2700 seconds (45 minutes). **Recommended for most use cases.**
-3. **Cron Job** - Schedule flows to execute automatically at specified intervals directly on the platform.
+Unlike conversational channels, autonomous triggers support three **execution modes**:
 
-## Enabling a Trigger as API
+1. **API (Single Endpoint)** — synchronous execution for simple flows (≤ ~120–150 seconds). Not recommended for complex graphs.
+2. **Background Task** — asynchronous `/start` + `/status` endpoints (≤ 45 minutes). **Recommended for most use cases.**
+3. **Cron Job** — schedule runs on the platform; no external caller after setup.
 
-To enable a trigger as an API:
+<CardGroup cols={2}>
+  <Card title="API mode" icon="bolt" href="/triggers-intents/triggers/api">
+    Single-endpoint synchronous calls.
+  </Card>
+  <Card title="Background task" icon="layer-group" href="/triggers-intents/triggers/bg_task">
+    Start + poll status for long runs.
+  </Card>
+  <Card title="Cron job" icon="clock" href="/triggers-intents/triggers/cron">
+    Scheduled platform execution.
+  </Card>
+  <Card title="API examples" icon="code" href="/triggers-intents/triggers/api-guide">
+    cURL, Python, JavaScript samples.
+  </Card>
+</CardGroup>
 
-1. Open the **Edit Trigger** modal.
-3. Select an **workflow type** (API, Background Task, or Cron Job).
-4. Select an **Integration** from the **Integration Funnel** (if applicable).
-5. Select the flow to trigger.
+## Enable a trigger as an API
+
+1. Open the **Edit Trigger** modal in **Integrations** → **Triggers**.
+2. Select **workflow type** — API, Background Task, or Cron Job.
+3. Select an **Integration** from the **Integration Funnel** when applicable ([Jira funnel](/triggers-intents/triggers/integration-funnel)).
+4. Select the **Agent Graph** / flow to run and assign an **Agent Build**.
 5. Save the trigger configuration.
-6. Update the build with the new trigger version.
+6. Create or update the **Agent Build** if the graph changed ([Builds overview](/builds/overview)).
 
-Once enabled, the platform generates **API URLs** for different environments:
-
-- DEV
-- UAT
-- PROD
+Once enabled, the platform generates **API URLs** for **DEV**, **UAT**, and **PROD**.
 
 ## Authentication
 
@@ -35,6 +49,14 @@ All API requests must include a valid **Bearer Token** in the `Authorization` he
 Authorization: Bearer <YOUR_WORKSPACE_API_KEY>
 ```
 
-Requests without a valid token will be rejected.
+Requests without a valid token are rejected.
 
----
+<Tip>
+  Test authentication in **DEV** before promoting trigger build assignments to **PROD**.
+</Tip>
+
+## Related
+
+- [Deploy a trigger](/agents/deploy-trigger)
+- [Mapping triggers](/triggers-intents/mapping)
+- [Integration funnel](/triggers-intents/triggers/integration-funnel)

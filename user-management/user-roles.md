@@ -1,8 +1,15 @@
 ---
 title: "User Roles & Permissions"
-description: "Understand capabilities by role across Phinite."
+description: "Understand workspace RBAC capabilities by role across Phinite."
 ---
-Workspace roles control what someone can do **in that workspace**. The **Summary** is the fast view; the sections below spell out the same rules in more detail. Defaults can differ if your organization changes access.
+
+Workspace roles control what someone can do **in that workspace**. This is **workspace RBAC**—who can edit graphs, publish tools, or manage members—not [Agent Card](/agent-registry/overview) identity used for A2A exposure.
+
+<Note>
+  **Agent Card** describes how external agents discover your graph on the registry. **Users & roles** here govern Phinite workspace access only. See [Agent Registry overview](/agent-registry/overview) for card permissions.
+</Note>
+
+The **Summary** is the fast view; the sections below spell out the same rules in more detail. Defaults can differ if your organization changes access.
 
 **Roles:** **Super Admin**, **Admin**, **Developer**, and **QA** are assigned per workspace. **Viewer** is described at the end—it is often used for read-only stakeholders.
 
@@ -16,10 +23,10 @@ Workspace roles control what someone can do **in that workspace**. The **Summary
 | Open **Users** and manage workspace members                                              | Yes         | Yes   | No        | No  |
 | Create, rename, or **delete the workspace**                                              | Yes         | No    | No        | No  |
 | **Change** subscription or payment methods                                               | Yes         | No    | No        | No  |
-| Create assistants and workspace-level tools, integrations, data sources, and API keys    | Yes         | Yes   | Yes       | No  |
-| Edit flows in **Graph Studio**, tools in **Dev Studio**, intents, triggers, environments | Yes         | Yes   | Yes       | No  |
-| **Publish** flows and tools                                                              | Yes         | Yes   | Yes       | No  |
-| **Run tests** (flows, intents, builds, Dev Studio tools)                                 | Yes         | Yes   | Yes       | Yes |
+| Create Agent Graphs and workspace-level tools, integrations, data sources, and API keys    | Yes         | Yes   | Yes       | No  |
+| Edit graphs in **Graph Studio**, tools in **Dev Studio**, triggers, environments | Yes         | Yes   | Yes       | No  |
+| **Publish** Agent Graphs and tools                                                              | Yes         | Yes   | Yes       | No  |
+| **Run tests** (graphs, triggers, builds, Dev Studio tools)                                 | Yes         | Yes   | Yes       | Yes |
 | View **reports**, **usage**, and billing information                                     | Yes         | Yes   | Yes       | Yes |
 
 
@@ -29,7 +36,7 @@ Workspace roles control what someone can do **in that workspace**. The **Summary
 
 ## Workspace (create / view / change / delete)
 
-Actions on the **workspace itself** (not assistants inside it).
+Actions on the **workspace itself** (not Agent Graphs inside it).
 
 
 | Action           | Super Admin | Admin | Developer | QA  |
@@ -49,7 +56,7 @@ Which items appear in the **workspace** left sidebar.
 
 | Section       | Super Admin | Admin | Developer | QA  |
 | ------------- | ----------- | ----- | --------- | --- |
-| Assistants    | Yes         | Yes   | Yes       | Yes |
+| Agent Graphs    | Yes         | Yes   | Yes       | Yes |
 | Tools         | Yes         | Yes   | Yes       | Yes |
 | Integrations  | Yes         | Yes   | Yes       | Yes |
 | MCP servers   | Yes         | Yes   | Yes       | Yes |
@@ -67,20 +74,20 @@ Which items appear in the **workspace** left sidebar.
 
 ---
 
-## Workspace — Assistants list
+## Workspace — Agent Graphs list
 
-Creating and managing assistants from the workspace home (not inside a project).
+Creating and managing Agent Graphs from workspace home (not inside Graph Studio).
 
 
 | Action                          | Super Admin | Admin | Developer | QA  |
 | ------------------------------- | ----------- | ----- | --------- | --- |
-| View assistants                 | Yes         | Yes   | Yes       | Yes |
-| Create assistant                | Yes         | Yes   | Yes       | —   |
-| Update assistant                | Yes         | Yes   | —         | —   |
-| Delete assistant                | Yes         | Yes   | —         | —   |
-| Edit assistant (workspace list) | Yes         | Yes   | —         | —   |
+| View Agent Graphs                 | Yes         | Yes   | Yes       | Yes |
+| Create Agent Graph                | Yes         | Yes   | Yes       | —   |
+| Update Agent Graph                | Yes         | Yes   | —         | —   |
+| Delete Agent Graph                | Yes         | Yes   | —         | —   |
+| Edit Agent Graph (workspace list) | Yes         | Yes   | —         | —   |
 | Open Studio / Assets            | Yes         | Yes   | Yes       | Yes |
-| Create new assistant            | Yes         | Yes   | Yes       | —   |
+| Create new Agent Graph            | Yes         | Yes   | Yes       | —   |
 
 
 ---
@@ -246,17 +253,16 @@ Creating and managing assistants from the workspace home (not inside a project).
 
 ---
 
-## Inside an assistant — navigation
+## Inside an Agent Graph — navigation
 
-Sidebar sections when you open an assistant (project).
+Sidebar sections when you open an Agent Graph in Graph Studio.
 
 
 | Section       | Super Admin | Admin | Developer | QA  |
 | ------------- | ----------- | ----- | --------- | --- |
 | Overview      | Yes         | Yes   | Yes       | Yes |
-| Flows         | Yes         | Yes   | Yes       | Yes |
-| Intents       | Yes         | Yes   | Yes       | Yes |
-| Tools         | Yes         | Yes   | Yes       | Yes |
+| Graph Studio  | Yes         | Yes   | Yes       | Yes |
+| Triggers       | Yes         | Yes   | Yes       | Yes |
 | Environment   | Yes         | Yes   | Yes       | —   |
 | Builds        | Yes         | Yes   | Yes       | Yes |
 | Support       | Yes         | Yes   | Yes       | Yes |
@@ -266,7 +272,7 @@ Sidebar sections when you open an assistant (project).
 
 ---
 
-## Flows (assistant)
+## Graph versions (legacy flows UI)
 
 
 | Action          | Super Admin | Admin | Developer | QA  |
@@ -283,7 +289,11 @@ Sidebar sections when you open an assistant (project).
 
 ---
 
-## Intents
+<Note>
+  Legacy **Intents** UI may still appear in older workspaces. New IA uses [Triggers](/triggers-intents/triggers/overview) only—intent-specific rows below reflect historical permissions if your org has not migrated.
+</Note>
+
+## Intents (legacy)
 
 
 | Action            | Super Admin | Admin | Developer | QA  |
@@ -311,7 +321,7 @@ Sidebar sections when you open an assistant (project).
 | Update trigger              | Yes         | Yes   | Yes       | —   |
 | Delete trigger              | Yes         | Yes   | Yes       | —   |
 | Create new trigger          | Yes         | Yes   | Yes       | —   |
-| Test intent (from triggers) | Yes         | Yes   | Yes       | Yes |
+| Test trigger (from triggers) | Yes         | Yes   | Yes       | Yes |
 | Open trigger                | Yes         | Yes   | Yes       | Yes |
 | Edit trigger                | Yes         | Yes   | Yes       | —   |
 | Archive trigger             | Yes         | Yes   | Yes       | —   |
@@ -319,7 +329,7 @@ Sidebar sections when you open an assistant (project).
 
 ---
 
-## Assistant tools (configured tools)
+## Agent Graph tools (configured tools)
 
 
 | Action          | Super Admin | Admin | Developer | QA  |
@@ -400,8 +410,8 @@ Sidebar sections when you open an assistant (project).
 | Save flow              | Yes         | Yes   | Yes       | —   |
 | Publish flow           | Yes         | Yes   | Yes       | —   |
 | Test flow              | Yes         | Yes   | Yes       | Yes |
-| Agent blocks — read    | Yes         | Yes   | Yes       | —   |
-| Agent blocks — actions | Yes         | Yes   | Yes       | —   |
+| Agent nodes — read    | Yes         | Yes   | Yes       | —   |
+| Agent nodes — actions | Yes         | Yes   | Yes       | —   |
 | Copy flow              | Yes         | Yes   | Yes       | —   |
 | Sidebar: Auto Copilot  | Yes         | Yes   | Yes       | —   |
 | Sidebar: Flow view     | Yes         | Yes   | Yes       | Yes |
@@ -477,7 +487,7 @@ Sidebar sections when you open an assistant (project).
 ## QA vs Developer
 
 - **Developer** can edit and publish in Graph Studio and Dev Studio per the tables above.
-- **QA** can run tests and open many views but not edit or publish flows and tools.
+- **QA** can run tests and open many views but not edit or publish Agent Graphs and tools.
 
 ## Viewer role
 

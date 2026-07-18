@@ -1,28 +1,47 @@
 ---
-title: "Interface Layout"
-description: "Learn the main areas of Graph Studio: Canvas, Node Library, Inspector, and Variables."
+title: Interface layout
+description: Canvas, node library, node drawer (Inspector), and variables panel in Graph Studio.
 ---
 
-## Main areas
-
-- **Canvas**: where you arrange and connect nodes
-- **Node Library**: where you find available node types
-- **Inspector Panel**: where you configure the selected node
-- **Variables Panel**: where you manage inputs and captured values
+Graph Studio splits design work across four main areas. Together they cover layout, node palette, per-node configuration, and graph-level variables.
 
 <CardGroup cols={2}>
-<Card title="Canvas" href="/graph-studio/interface/canvas" icon="layout">
-Place and connect nodes to form your Agent Graph.
-</Card>
-<Card title="Node Library" href="/graph-studio/interface/node-library" icon="grid">
-Browse and drag nodes into the canvas.
-</Card>
-<Card title="Inspector Panel" href="/graph-studio/interface/inspector-panel" icon="sliders">
-Configure prompts, RAG, tools, and variables for the selected node.
-</Card>
-<Card title="Variables Panel" href="/graph-studio/interface/variables-panel" icon="database">
-Create, edit, and reference variables across the graph.
-</Card>
+  <Card title="Canvas" icon="layout" href="/graph-studio/interface/canvas">
+    Arrange and connect nodes; pan and zoom the graph.
+  </Card>
+  <Card title="Node Library" icon="grid" href="/graph-studio/interface/node-library">
+    Add Start, Master Agent, Child Agent, Tool, and End nodes.
+  </Card>
+  <Card title="Inspector (node drawer)" icon="sliders" href="/graph-studio/interface/inspector-panel">
+    Configure prompt, RAG, tools, and variables for the selected node.
+  </Card>
+  <Card title="Variables panel" icon="database" href="/graph-studio/interface/variables-panel">
+    Define flow and session variables for the whole graph.
+  </Card>
 </CardGroup>
 
+## Toolbar (top of canvas)
 
+| Control | Action |
+| --- | --- |
+| **Save** | Persist the current graph draft |
+| **Build** | Open the build dialog — pins graph + tool versions (requires Save) |
+| **Deploy** | Open deploy dialog — requires at least one build |
+| **Test** | Open test drawer (chat / voice / autonomous depending on graph type) |
+
+<Frame caption="Graph Studio toolbar — Save, Build, Deploy, Test">
+  <img src="/images/v2/studio/01-studio-aura-shell.png" alt="Graph Studio toolbar" />
+</Frame>
+
+## Left sidebar
+
+Under **Graph assets** for the open graph:
+
+- **Graph Versions**, **Agent Builds**, **Agent Cards**, **Triggers**, **Integrations**, **Tools**
+
+See [Graph Studio overview](/graph-studio/overview#graph-assets-sidebar).
+
+## Related
+
+- [Graph Studio overview](/graph-studio/overview)
+- [Node types](/graph-studio/nodes)

@@ -1,60 +1,64 @@
 ---
-title: "Agent Cards & builds"
-description: "Manage A2A registry builds per agent graph, compare test and live deployments, and promote builds to production."
+title: Agent Cards & builds
+description: Manage A2A registry builds per Agent Graph, compare TEST and LIVE deployments, and promote to production.
 ---
 
-**Agent Cards** is the project-scoped view of **A2A registry builds** for each exposed agent graph. Use it to inspect build history, compare **test** and **live** deployments, and **promote** a build to production.
+<Note>
+  **Agent Cards** is the graph-scoped view of **A2A registry builds**. Each expose action creates a TEST row; **Push To Prod** promotes one build to LIVE per Agent Graph per workspace.
+</Note>
 
-<Frame>
-  ![Agent Cards](/images/agent-cards.png)
-</Frame>
+**Agent Cards** lists **A2A registry builds** for each exposed **Agent Graph**. Inspect build history, compare **TEST** and **LIVE** deployments, and **promote** a build to production.
 
 ## Open Agent Cards
 
 **Route:** `/{organisation}/workspace/{workspaceId}/projects/{projectId}/agent-cards`
 
-The page appears in the **project sidebar** for conversational and voice assistants when **`workspace.sidebar.agent_registry`** is granted (same permission as workspace **Agent Registry**). Like other registry features, it is typically visible in **local/dev** environments.
+The page appears in the **project sidebar** when **`workspace.sidebar.agent_registry`** is granted. Reach it from Graph Studio via **Deploy** → **Deploy as A2A** → **See Agent builds**, or Studio → **Agent Cards** in graph assets.
 
-You can also reach Agent Cards from Graph Studio via **Configure Agent** → **Expose as Agent** → **See Agent builds**.
+<Frame caption="Agent Cards sidebar — TEST and LIVE builds per graph">
+  <img src="/images/v2/a2a/01-agent-cards-sidebar.png" alt="Agent Cards panel in Graph Studio" />
+</Frame>
+
+<Frame caption="Agent Card identity — version details for an exposed graph">
+  <img src="/images/v2/a2a/03-agent-card-identity.png" alt="Agent Card identity sidebar view" />
+</Frame>
 
 ## Page layout
 
 | Element | Description |
 | --- | --- |
 | **Title** | **Agent Cards** with total build count |
-| **Agentic graph** dropdown | Filter builds by agent graph (`flowid`); options from **`GET /a2a-registry?flow_list=true`** |
+| **Agent Graph** dropdown | Filter builds by graph (`flowid`); options from **`GET /a2a-registry?flow_list=true`** |
 | **Build table** | Rows per registry build: build number, status, name, description, tools/env counts, updated date, author |
-| **Push To Prod** | Opens promote modal to move a **test** build to **live** |
-
-While data loads, the page shows _Loading builds..._.
+| **Push To Prod** | Promote a **TEST** build to **LIVE** |
 
 ## Build rows
 
-Each row represents one **`POST /a2a-registry`** registration (one expose action). Key fields:
+Each row represents one **`POST /a2a-registry`** registration:
 
 | Column / field | Source | Notes |
 | --- | --- | --- |
-| **Build number** | `build_no` | Auto-incremented per workspace \+ agent graph |
+| **Build number** | `build_no` | Auto-incremented per workspace + Agent Graph |
 | **Status** | `test` or `live` | Badge: **TEST** or **LIVE** |
 | **Name / description** | `agent_card` | Agent Card from expose wizard |
 | **Tools / env** | `tool_config`, `env_variable` | Exported configuration counts |
-| **Registry ID** | `a2aregistryid` | Used in test hosted URLs |
+| **Registry ID** | `a2aregistryid` | Used in TEST hosted URLs |
 
 Builds sort by **most recently updated** first.
 
-## Test vs live
+## TEST vs LIVE
 
 | Status | Purpose | Hosted URL |
 | --- | --- | --- |
-| **Test** | Validate Agent Card, skills, and integrations before broad use | `{gateway}/api/v1/ai/a2a/{flowId}/{registryId}` |
-| **Live** | Production endpoint for the agent graph (only one live row per graph per workspace) | `{gateway}/api/v1/ai/a2a/{flowId}` |
+| **Test** | Validate Agent Card, skills, and integrations | `{gateway}/api/v1/ai/a2a/{flowId}/{registryId}` |
+| **Live** | Production endpoint (one LIVE per graph per workspace) | `{gateway}/api/v1/ai/a2a/{flowId}` |
 
-See [**Endpoints & lifecycle**](/agent-registry/endpoints-and-lifecycle) for URL and auth details.
+See [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle) for URL and auth details.
 
 ## Promote to production
 
-1. Click **Push To Prod** (tooltip: _Push the selected build to production_).
-2. In the modal, select the **test** build to promote.
+1. Click **Push To Prod**.
+2. In the modal, select the **TEST** build to promote.
 3. Confirm promotion.
 
 The app calls:
@@ -66,18 +70,16 @@ PUT /api/v1/a2a-registry/{a2aregistryid}/promote-live
 **Promotion rules:**
 
 - The chosen build becomes **`live`**.
-- Any previous **live** build for the same agent graph in the workspace is demoted to **`test`**.
-- Visibility on the Agent Card is unchanged by promotion—only deployment status updates.
-
-After promotion, refresh the table and verify the **live** hosted URL on the build row or in [**Agent Registry**](/agent-registry/catalog).
+- Any previous **LIVE** build for the same Agent Graph in the workspace is demoted to **`test`**.
+- Agent Card visibility is unchanged by promotion — only deployment status updates.
 
 ## Create a new build
 
-New builds are created from Graph Studio—not from the Agent Cards page directly:
+New builds are created from Graph Studio:
 
-1. [**Publish**](/graph-studio/publishing) the agent graph.
-2. [**Expose as External Agent**](/agent-registry/expose-your-flow) via **Configure Agent** → **Create New Build**.
-3. Return to Agent Cards to compare the new **test** row with existing builds.
+1. Create an **Agent Build** ([Builds overview](/builds/overview)).
+2. [Expose your Agent Graph](/agent-registry/expose-your-flow) via **Deploy** → **Deploy as A2A**.
+3. Return to Agent Cards to compare the new **TEST** row.
 
 ## Permissions
 
@@ -91,9 +93,8 @@ New builds are created from Graph Studio—not from the Agent Cards page directl
 
 <CardGroup cols={2}>
   <Card title="Expose an agent" icon="rocket" href="/agent-registry/expose-your-flow">
-    Create a new test build and Agent Card.
+    Create a new TEST build and Agent Card.
   </Card>
-
   <Card title="Endpoints & lifecycle" icon="plug" href="/agent-registry/endpoints-and-lifecycle">
     URL patterns and API reference.
   </Card>

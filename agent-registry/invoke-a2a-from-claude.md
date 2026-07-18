@@ -1,21 +1,26 @@
 ---
-title: "invoke-a2a-from-claude"
+title: Invoke A2A agents from Claude
+description: Install the Phinite Connector plugin and call Agent Registry agents from Claude.
 ---
+
+<Note>
+  The Phinite Connector lets Claude **discover** and **call** agents from your workspace **Agent Registry** using OAuth — no manual A2A URL construction required.
+</Note>
 
 The Phinite plugin lives in this GitHub marketplace:
 
 > [**https://github.com/Auto-AI-Labs/phinite-plugins**](https://github.com/Auto-AI-Labs/phinite-plugins)
 
-## Install in Cowork (desktop - Paid version of Claude) --- For Free version of Claude, see below
+## Install in Cowork (desktop — paid Claude)
 
 1. Open **Customize → Plugins → Personal**.
-2. Click on **\+** sign.
-3. Click on **Add marketplace → Add from a repository**.
+2. Click **+**.
+3. Click **Add marketplace → Add from a repository**.
 4. Add a marketplace using the GitHub link above.
 5. Install the **Phinite Agents** plugin.
-6. Click on **Manage**
-7. Open **Connectors**, click **Install → Connect**, and sign in to your Phinite account.
-8. Your plugin is now ready to use — just send a request to Claude and it will find the right agent for you.
+6. Click **Manage**.
+7. Open **Connectors** → **Install → Connect**, and sign in to your Phinite account.
+8. Send a request to Claude — it will discover and invoke registry agents for you.
 
 ## Install in Claude Code (CLI / terminal)
 
@@ -25,27 +30,24 @@ The Phinite plugin lives in this GitHub marketplace:
 /reload-plugins
 ```
 
-Now just send this request **Authorize phinite plugin** and sign in to Phinite when prompted.
+Send **Authorize phinite plugin** and sign in to Phinite when prompted (OAuth).
 
-> It's OAuth; you just sign in to your Phinite account.
-> Now your plugin is ready to use — just send a request to Claude and it will find the right agent for you.
+## Install in Claude web (claude.ai) or free Claude
 
-## Use it in Claude web (claude.ai) or Free version of Claude
-
-On claude.ai or free version of Claude there's no plugin marketplace — add Phinite as a **custom connector** instead:
+On claude.ai there is no plugin marketplace — add Phinite as a **custom connector**:
 
 1. Go to **Settings → Connectors → Add custom connector**.
 2. Paste the Phinite MCP server URL:
-   ```text
-   https://app.phinite.ai/api/v1/ai/mcp
-   ```
-3. Click **Add**, then **Connect**, and sign in to your Phinite account.
 
----
+```text
+https://app.phinite.ai/api/v1/ai/mcp
+```
+
+3. Click **Add**, then **Connect**, and sign in to your Phinite account.
 
 ## How to use it
 
-Once connected, just talk to Claude — it finds the right agent, runs it, and brings back the reply:
+Once connected, talk to Claude naturally:
 
 ```text
 "What agents do I have?"
@@ -54,35 +56,36 @@ Once connected, just talk to Claude — it finds the right agent, runs it, and b
 "Now make that shorter"
 ```
 
-**Behind the scenes**, the plugin gives Claude three tools (it picks them for you):
+**Behind the scenes**, the plugin exposes three tools:
 
-- **`discover_agents`** — find the right agent from what you describe.
-- **`list_agents`** — see every agent in your workspace.
-- **`call_agent`** — Invoke an agent to perform tasks.
+| Tool | Purpose |
+| --- | --- |
+| **`discover_agents`** | Find the right agent from natural language |
+| **`list_agents`** | List agents in your workspace (up to 50) |
+| **`call_agent`** | Invoke an agent by `registry_id` |
 
-**Follow-ups stay in the same thread.** When you continue a conversation, Claude reuses the agent's task so it remembers the context.
+**Follow-ups stay in the same thread** — Claude reuses the agent's `task_id` for multi-turn context.
 
-**If an agent needs a tool of its own** (Gmail, Slack, a calendar, etc.), it replies with a quick **setup link**. Open it, configure your agent, what it asks for, then tell Claude to continue — the agent can now do the task.
+**If an agent needs integration credentials** (Gmail, Slack, etc.), the response includes a **setup link** to `/public/agent-config`. Complete setup, then ask Claude to continue.
 
----
+<Tip>
+  Agent **visibility** (`public` vs `organisation`) and API key rules apply at invoke time — see [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle).
+</Tip>
 
-_You'll need a Phinite account. Build and publish your agents at [phinite.ai](https://app.phinite.ai/sign-up)._ For builders: visibility (`public` vs `organisation`) and API key rules are documented in [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle).
+You'll need a Phinite account. Build and expose Agent Graphs at [phinite.ai](https://app.phinite.ai/sign-up).
 
 ## Related pages
 
 <CardGroup cols={2}>
   <Card title="Overview" icon="circle-info" href="/agent-registry/overview">
-    How the registry fits into publish and compose workflows.
+    How the registry fits into build and compose workflows.
   </Card>
-
   <Card title="Browse the catalog" icon="layout-grid" href="/agent-registry/catalog">
-    Workspace search and filters — the same metadata `discover_agents` uses.
+    Workspace search — same metadata `discover_agents` uses.
   </Card>
-
   <Card title="Endpoints & lifecycle" icon="plug" href="/agent-registry/endpoints-and-lifecycle">
-    Hosted A2A URLs, test vs live, and authentication.
+    Hosted A2A URLs, TEST vs LIVE, and authentication.
   </Card>
-
   <Card title="Glossary" icon="book-open" href="/agent-registry/glossary">
     A2A terms, connector tools, and UI label mapping.
   </Card>

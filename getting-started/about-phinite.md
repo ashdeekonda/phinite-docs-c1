@@ -1,76 +1,98 @@
 ---
-title: "Welcome"
-description: "Learn what Phinite is, how it's structured, and how different users can build and manage intelligent agent workflows across environments"
-icon: "book-open"
+title: About Phinite
+description: Agent-first platform to design, build, and deploy Conversational and Autonomous Agent Graphs.
+icon: book-open
 ---
 
-## About Phinite
+Phinite is where you design **Agent Graphs**, freeze them into **Builds**, assign them to **Environments**, then **Deploy** to a channel or trigger — or **Expose as A2A** via an Agent Card.
 
-Phinite is an AI automation platform to build, orchestrate, and deploy lifelike assistants and intelligent multi-agent workflows — across channels, tools, and business processes.
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/getting-started/quickstart">
+    Empty workspace to a deployable build in one pass.
+  </Card>
+  <Card title="What you can build" icon="lightbulb" href="/getting-started/what-you-can-build">
+    Conversational and Autonomous use cases by industry.
+  </Card>
+  <Card title="Agent Graphs" icon="diagram-project" href="/agents/overview">
+    Choose Conversational or Autonomous when you create a graph.
+  </Card>
+  <Card title="Glossary" icon="book" type="note" href="/reference/glossary-v2">
+    Current product terms — Agent Graph, Build, Channel, Trigger, Agent Card.
+  </Card>
+</CardGroup>
 
-Whether you're replacing a call center agent, automating report generation, or deploying assistants that act autonomously, Phinite gives your team the tools to build and run AI systems at scale — safely and visually.
+## Agent types
 
----
+| Type | Meaning | Typical deploy targets |
+| --- | --- | --- |
+| **Conversational** | Real-time voice or chat with users | Channel, Chat API, A2A |
+| **Autonomous** | Background runs without a live user | API trigger, Cron, A2A (coming soon) |
 
-## What You Can Do with Phinite
+## Golden path
 
-Teams use Phinite to:
+```mermaid
+flowchart LR
+  design[Design in Graph Studio]
+  save[Save]
+  build[Build]
+  env[Assign Environment]
+  ship[Deploy or Expose A2A]
 
-- Design agent workflows visually in the Graph Studio
-- Build tools and connectors using DevStudio
-- Deploy across environments with version control and observability
-- Power assistants with knowledge bases, prompt engineering, and tools
-- Expose and discover agents via the [Agent Registry](/agent-registry/overview) (A2A protocol)
-- Track sessions, model usage, and decisions using detailed logs
+  design --> save --> build --> env --> ship
+```
 
----
+1. Create an **Agent Graph** (Conversational or Autonomous).
+2. Design it in [Graph Studio](/graph-studio/overview) — nodes, tools, RAG, variables.
+3. **Save**, then **Build** (pins graph + tool versions).
+4. Assign the build to **DEV** / **UAT** / **PROD**.
+5. **Deploy** to a Channel, Chat API, or Trigger — **or** **Expose as A2A** (Agent Card TEST → LIVE).
 
-## Core Concepts
+<Frame caption="Workspace Home — create and open Agent Graphs">
+  <img src="/images/v2/agents/00-workspace-home.png" alt="Workspace Home with Agent Graph list" />
+</Frame>
+
+## Surfaces you will use
+
+| Surface | Job |
+| --- | --- |
+| **Workspace Home** | Create and open Agent Graphs |
+| **Graph Studio** | Design, Save, Build, Deploy, Test |
+| **Tools & Dev Studio** | Create and publish tools |
+| **Integrations** | Channels, Integration Tools, Triggers |
+| **Env. variables** | DEV / UAT / PROD secrets |
+| **Agent Registry** | Browse exposed A2A agents |
+
+## Core concepts
 
 | Concept | Description |
 | --- | --- |
-| **Assistant** | A conversational, email-based, or autonomous agent powered by one or more agent graphs |
-| **Agent Graph** | A visual decision graph with nodes that orchestrate logic, tools, and conversations |
-| **Node** | The building block of a agent graph — can prompt a model, call a tool, capture input, or make decisions |
-| **Tool** | A callable API, function, or system integration used by your assistant |
-| **Trigger** | Defines how an assistant is invoked (e.g., voice call, webhook, calendar event) |
-| **Environment** | Isolated stages like Dev, UAT, or Production — with separate assistants, logs, and usage caps |
-| **Session** | A full execution of an agent graph, recorded in logs with inputs, decisions, outputs, and metrics |
-| **Agent Registry** | Workspace catalog of Agent Cards and hosted A2A endpoints for exposing and composing external agents |
+| **Agent Graph** | Visual decision graph with nodes that orchestrate logic, tools, and conversations |
+| **Node** | Canvas building block — prompts a model, calls a tool, captures input, or routes decisions |
+| **Tool** | Callable API, function, or integration used by agent nodes |
+| **Build** | Immutable snapshot of graph + pinned tool versions |
+| **Environment** | DEV, UAT, or PROD — where a build runs and which env variables apply |
+| **Channel** | Messaging ingress (web chat, WhatsApp, Slack, voice, email) wired to a build |
+| **Trigger** | Webhook or schedule that starts an Autonomous graph run |
+| **Session** | One execution of an agent graph, recorded in logs with inputs, decisions, and metrics |
+| **Agent Registry** | Workspace catalog of Agent Cards and hosted A2A endpoints |
 
----
-
-## Who Uses Phinite
-
-Phinite supports a multi-role collaboration model so your entire team can work together:
+## Who uses Phinite
 
 | Role | Responsibilities |
 | --- | --- |
 | **Developers** | Build tools, wire integrations, and design agent graphs |
-| **Architects** | Plan agent logic, manage agent graphs, and configure environments |
-| **Admins** | Control access, invite users, and manage billing and environments |
-| **Testers** | Validate assistant behavior and run debug sessions |
+| **Architects** | Plan graph logic, manage builds, and configure environments |
+| **Admins** | Control access, invite users, and manage billing |
+| **Testers** | Validate graph behavior and run debug sessions |
 | **Analysts** | Observe sessions, track model usage, and monitor outcomes |
 
----
+<Tip>
+  Phinite is built for teams that want AI systems that reason, decide, and act — not just chatbots. Start with one graph in DEV, then promote builds through UAT to PROD.
+</Tip>
 
-## What Makes Phinite Different
+## Next steps
 
-- Visual-first AI workflow builder, with support for both no-code and code-based design
-- Multi-agent orchestration through linked agent graphs and manager agents
-- [Agent Registry (A2A)](/agent-registry/overview) for exposing, discovering, and composing external agents
-- Deep observability with session-level timelines, decision logs, and token tracking
-- Role-based access and environment isolation for enterprise-grade deployments
-- Reusable tools, prompts, and assistant templates to reduce repetitive work
-
----
-
-## Next Steps
-
-- [Quick Start](./quickstart)
-- [Workspace Overview](./workspaces/workspace-overview)
-- [Inviting Users](./user-management/inviting-users)
-
----
-
-> Phinite is built for teams that want to go beyond chatbots—enabling AI systems that reason, decide, and act intelligently.
+- [Quickstart](/getting-started/quickstart)
+- [Workspace overview](/workspaces/workspace-overview)
+- [Graph Studio overview](/graph-studio/overview)
+- [Agent Registry](/agent-registry/overview)

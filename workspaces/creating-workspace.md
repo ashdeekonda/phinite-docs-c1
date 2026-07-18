@@ -3,7 +3,7 @@ title: "Creating Your First Workspace"
 description: "Set up a workspace and initial project."
 ---
 
-## Steps
+## Procedure
 ![Create Workspace Gi](/images/create_workspace.gif)
 
 

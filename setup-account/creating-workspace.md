@@ -3,7 +3,7 @@ title: "Creating Your First Workspace"
 description: "Set up a workspace and initial project."
 ---
 
-## Steps
+## Procedure
 
 <Steps>
   <Step title="Create workspace">

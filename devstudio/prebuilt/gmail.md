@@ -1,55 +1,42 @@
 ---
 title: "GmailTool"
-description: "Read/search/draft/send/reply Gmail-like accounts."
+description: "Read, search, draft, send, and reply to Gmail-like accounts from Agent Graph nodes."
 icon: "envelope"
 ---
 
-## GmailTool
+**GmailTool** automates inbox operations for Agent Graphs that handle email triage, notifications, or outbound messages.
 
-Required configuration:
-- `email` (string)
-- `app_password` (string)
+<Card title="Predefined tools hub" icon="plug" href="/devstudio/prebuilt-tools">
+  How connections, subtools, and Graph Studio linking work across integrations.
+</Card>
 
-Typical validations:
-- List labels; fetch one message metadata
+## Required configuration
 
-### Subtools
-- `get_latest_emails`, `get_emails_from_user`, `get_unread_emails`, `get_starred_emails`,
-  `get_emails_by_context`, `get_emails_by_date`, `get_emails_by_thread`,
-  `search_emails`, `create_draft_email`, `send_email`, `send_email_reply`
+| Field | Type | Notes |
+| --- | --- | --- |
+| `email` | string | Mailbox address for this connection |
+| `app_password` | string | App password or IMAP/SMTP credential (store via secure connection UI) |
 
-### Troubleshooting
-- Auth errors, quota limits, large attachments
----
-title: "Gmail Integration"
-description: "Send and read emails via Gmail."
-icon: "envelope"
----
+## Setup
 
-## Parameters
+1. In Graph Studio, open an agent node **Tools** tab → **Add tool** → **GmailTool**.
+2. **Add a new connection** with `email` and `app_password`.
+3. Validate by listing labels or fetching one message metadata (no body).
+4. Enable subtools your graph needs (read-only vs send-capable).
+5. **Save** the graph and test with a small `get_latest_emails` call.
 
-<ParamField body="to" type="string" required>
-  Recipient email address
-</ParamField>
+## Subtools
 
- <ParamField body="subject" type="string" required>
-  Email subject
-</ParamField>
+`get_latest_emails`, `get_emails_from_user`, `get_unread_emails`, `get_starred_emails`, `get_emails_by_context`, `get_emails_by_date`, `get_emails_by_thread`, `search_emails`, `create_draft_email`, `send_email`, `send_email_reply`
 
- <ParamField body="body" type="string" required>
-  Email body
-</ParamField>
-
-
-## Example
+## Example input
 
 <RequestExample>
 
 ```json Tool Input
 {
-  "to": "user@example.com",
-  "subject": "Hello",
-  "body": "Hi there!"
+  "count": 5,
+  "include_body": false
 }
 ```
 
@@ -58,7 +45,17 @@ icon: "envelope"
 <ResponseExample>
 
 ```json Success
-{ "status": "sent", "id": "msg_123" }
+{ "messages": [{ "id": "msg_123", "subject": "Hello" }] }
 ```
 
 </ResponseExample>
+
+## Troubleshooting
+
+- **Auth errors** — verify `email` matches the app password account and IMAP/API access is enabled.
+- **Quota / rate limits** — split high-volume graphs across connections.
+- **Large attachments** — prefer links from object storage instead of inline sends.
+
+<Note>
+  For OAuth-based Gmail via workspace [Integrations](/configure/integrations), follow your org's connector setup; this tool documents app-password style connections.
+</Note>

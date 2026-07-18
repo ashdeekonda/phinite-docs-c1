@@ -1,15 +1,22 @@
 ---
-title: "Edges & Transitions"
-description: "Create, select, label, and remove edges between nodes."
+title: Edges
+description: Links between nodes that define execution order on the canvas.
 ---
 
-## Edge operations
+An **edge** connects a source handle on one node to a target handle on another. Edges define the default execution path through the Agent Graph.
 
-- **Create**: drag from a node’s source handle to a target handle
-- **Select**: click an edge to select; use keyboard shortcuts where available
-- **Label**: set display labels and, optionally, conditions via the Inspector flow or edge label UI
-- **Delete**: select and press Backspace/Delete
+## Create an edge
 
-<Info>
-Custom edge and label rendering is implemented in the studio components (e.g., `CustomEdge.tsx`, `CustomEdgeLabel.tsx`).
-</Info>
+1. Drag from a **source** handle ([Handles](/graph-studio/connections/handles)).
+2. Drop on a **target** handle of the next node.
+3. Repeat until every path flows **Start** → … → **End**.
+4. **Save** the graph.
+
+## Multiple outbound edges
+
+When a **Master Agent** has multiple outbound edges, execution may branch based on [decision variables](/graph-studio/connections/conditional-edges) or graph semantics defined in your design.
+
+## Related
+
+- [Connections overview](/graph-studio/connections)
+- [Conditional edges](/graph-studio/connections/conditional-edges)

@@ -1,73 +1,41 @@
 ---
-title: "Referencing Collections in Agents"
-description: "Attach collections to agent nodes via the RAG tab."
+title: Referencing RAG in agents
+description: Attach RAG collections and items in the agent node drawer.
 ---
 
-## Steps
+After you create **RAG Data** collections, attach them to specific **Master Agent** or **Child Agent** nodes so only that step retrieves those sources during a run.
 
-<Steps>
-  <Step title="Open the agent node">
-    <Frame>
-      <img
-        src="/images/open-the-agent-block-1.png"
-        alt="Step 1 Pn"
-        lightAlt="open the agent block"
-        darkAlt="Step 1 Pn"
-        className="dark:hidden"
-      />
-      <img
-        src="/images/step-1.png"
-        alt="Step 1 Pn"
-        lightAlt="open the agent block"
-        darkAlt="Step 1 Pn"
-        className="hidden dark:block"
-      />
-    </Frame>
+## Where in the product
 
-    Select the agent and open the RAG tab.
-  </Step>
-  <Step title="Select data source and items">
-    <Frame>
-      <img
-        src="/images/select-a-collection.png"
-        alt="Step 2 Pn"
-        lightAlt="select a collection"
-        darkAlt="Step 2 Pn"
-        className="dark:hidden"
-      />
-      <img
-        src="/images/step-2.png"
-        alt="Step 2 Pn"
-        lightAlt="select a collection"
-        darkAlt="Step 2 Pn"
-        className="hidden dark:block"
-      />
-    </Frame>
+| Surface | Path |
+| --- | --- |
+| Graph Studio | Open Agent Graph → select agent node |
+| Node drawer | **RAG** tab |
+| Manage collections | Links from drawer open `.../data-sources/{id}` |
 
-    Choose a source and add the most relevant items (or collection) for this task.
-  </Step>
-  <Step title="Save and test">
-    <Frame>
-      <img
-        src="/images/choose-a-data-source-2.png"
-        alt="Step 3 Pn"
-        lightAlt="data source items"
-        darkAlt="Step 3 Pn"
-        className="dark:hidden"
-      />
-      <img
-        src="/images/step-3.png"
-        alt="Step 3 Pn"
-        lightAlt="data source items"
-        darkAlt="Step 3 Pn"
-        className="hidden dark:block"
-      />
-    </Frame>
+<Frame caption="Node drawer — RAG tab with data source and item selection">
+  <img src="/images/v2/rag/02-node-rag-drawer.png" alt="RAG tab on agent node" />
+</Frame>
 
-    Save the configuration and test the agent on sample inputs.
-  </Step>
-</Steps>
+## Attach RAG to a node
 
-<Check>
-  The agent should now cite or leverage attached knowledge where appropriate.
-</Check>
+1. Open **Graph Studio** and select the target Agent Graph.
+2. Click a **Master Agent** or **Child Agent** node.
+3. Open the **RAG** tab in the node drawer.
+4. Select a **data source** and the **items** (documents / rows) to include.
+5. Optionally open **RAG Data** from the drawer to manage collections.
+6. Click **Save** on the canvas toolbar.
+
+## Runtime and builds
+
+Attached RAG lists are saved with the graph version. When you **Build**, the pinned graph version includes those attachments for deploy.
+
+<Info>
+  See [RAG Management overview](/graph-studio/rag-management) for the two-layer model (workspace data vs node attachment).
+</Info>
+
+## Related
+
+- [RAG Data sources](/graph-studio/rag-management/data-sources)
+- [Agent node RAG](/graph-studio/agent-node/rag)
+- [Builds](/builds/overview)

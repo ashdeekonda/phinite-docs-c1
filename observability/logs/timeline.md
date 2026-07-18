@@ -1,10 +1,21 @@
 ---
 title: "Timeline View"
-description: "Step-by-step execution trace of flows with timestamps and outcomes."
+description: "Step-by-step execution trace of Agent Graph runs with timestamps and outcomes."
 ---
+
+The timeline lists nodes, tools, and waits in execution order for a single session.
 
 ## Use cases
 
-- Identify slow steps and bottlenecks
-- Locate failures and exceptions
-- Verify conditional routing paths
+- Identify slow nodes or external API latency
+- Locate failures and exception stacks
+- Verify [conditional edges](/graph-studio/connections/conditional-edges) routed as expected
+
+<Tip>
+  Open timeline entries alongside [decision joints](/observability/logs/decision-joints) when branching looks wrong but no hard error fired.
+</Tip>
+
+## Related
+
+- [Session logs overview](/observability/logs)
+- [Filtering](/observability/filtering)

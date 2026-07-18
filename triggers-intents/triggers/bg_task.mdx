@@ -1,15 +1,20 @@
 ---
 title: "Execution Mode 2: Background Task (Recommended)"
+description: Asynchronous trigger API with start and status endpoints for Autonomous Agent Graphs.
 ---
+
+<Note>
+  **Background task** mode is the recommended way to run multi-step **Autonomous Agent Graphs** (up to **45 minutes**). Assign the correct **Agent Build** per environment before calling `/start`.
+</Note>
 
 ### Overview
 
-Background task mode provides **asynchronous execution** with two separate endpoints: one to start the flow and another to check its status. This is the **recommended approach** for most autonomous flows.
+Background task mode provides **asynchronous execution** with two endpoints: one to start the graph run and another to check status.
 
 **Benefits:**
 
 - Maximum execution time: **2700 seconds (45 minutes)**
-- Suitable for complex, multi-step workflows
+- Suitable for complex, multi-step Agent Graphs
 - Real-time progress tracking through logs
 - Non-blocking API calls
 
@@ -21,7 +26,7 @@ Background task mode provides **asynchronous execution** with two separate endpo
 POST https://app.phinite.ai/api/v1/ai/trigger/start/{workspace_id}/{trigger_id}/{environment}
 ```
 
-#### Request Payload
+#### Request payload
 
 ```json
 {
@@ -33,7 +38,7 @@ POST https://app.phinite.ai/api/v1/ai/trigger/start/{workspace_id}/{trigger_id}/
 }
 ```
 
-#### Initial Response
+#### Initial response
 
 ```json
 {
@@ -46,9 +51,9 @@ POST https://app.phinite.ai/api/v1/ai/trigger/start/{workspace_id}/{trigger_id}/
 }
 ```
 
-The `workflow_id` returned in this response is used to track the status of the flow execution.
+The `workflow_id` returned in this response tracks execution status.
 
-### Step 2: Check Status
+### Step 2: Check status
 
 #### Endpoint
 
@@ -56,15 +61,15 @@ The `workflow_id` returned in this response is used to track the status of the f
 GET https://ai-core.phinite.ai/trigger/status/{workspace_id}/{workflow_id}
 ```
 
-The status endpoint can return one of three statuses with HTTP 200:
+The status endpoint returns one of three statuses with HTTP 200:
 
-- `pending` - Agent Graph is still executing
-- `completed` - Agent Graph finished successfully
-- `failed` - Agent Graph encountered an error
+- `pending` — Agent Graph is still executing
+- `completed` — Agent Graph finished successfully
+- `failed` — Agent Graph encountered an error
 
-#### Status Response: Pending
+#### Status response: Pending
 
-While the flow is executing, the status endpoint returns real-time logs:
+While the graph runs, the status endpoint returns recent logs:
 
 ```json
 {
@@ -87,12 +92,12 @@ While the flow is executing, the status endpoint returns real-time logs:
 ```
 
 <Note>
-  The `logs`array provides real-time insights into the flow execution progress. The array size is not fixed and it does not return all execution logs, only the most recent entries, typically the last 4–5 logs.
+  The `logs` array provides recent execution progress — typically the last 4–5 entries, not the full log history.
 </Note>
 
-#### Status Response: Completed
+#### Status response: Completed
 
-When the flow finishes successfully:
+When the graph finishes successfully:
 
 ```json
 {
@@ -101,30 +106,17 @@ When the flow finishes successfully:
     "workflow_id": "workflowid-uuid",
     "key1": "value1",
     "key2": "value2"
-    // ... all session variables
   },
   "status": "completed",
-  "logs": [
-    ...,
-    {
-      "time": "2026-02-09 23:25:01",
-      "level": "info",
-      "node_id": "flow",
-      "message": "Graph execution completed successfully",
-      "status": "success",
-      "user_logs_type": ""
-    }
-  ],
+  "logs": [...],
   "requires_input": false,
   "error": null
 }
 ```
 
-The `response` object contains the workflow\_id and all session variables that were set during flow execution.
+The `response` object contains the workflow ID and session variables set during execution.
 
-#### Status Response: Failed
-
-If the flow encounters an error:
+#### Status response: Failed
 
 ```json
 {
@@ -136,3 +128,9 @@ If the flow encounters an error:
   "error": "Detailed error message"
 }
 ```
+
+## Related
+
+- [Trigger APIs overview](/triggers-intents/triggers/overview)
+- [API usage examples](/triggers-intents/triggers/api-guide)
+- [Observability logs](/observability/logs)

@@ -1,11 +1,11 @@
 ---
 title: "Custom Tools"
-description: "Build domain-specific functionality as reusable tools for your agents."
+description: "Build domain-specific functionality as reusable tools for Agent Graph nodes."
 ---
 
 ## Overview
 
-Custom tools allow you to extend your agent's capabilities by writing Python functions that can interact with external APIs, process data, or perform specialized tasks.
+Custom tools extend an **Agent Graph** by letting nodes call Python functions that hit external APIs, transform data, or run specialized business logic. Author them in **Dev Studio**, [test](/devstudio/testing-tools) across environments, and **Publish** before **Build** pins versions.
 
 ## Tool Signature
 
@@ -152,20 +152,12 @@ and saves stock details.
 
 ---
 
-## Publishing Tool
+## Publish a custom tool
 
-<Steps>
-  <Step title="Develop">
-    Write and test your tool in the **Dev** environment. Will use env_variables values from dev.
-  </Step>
-  <Step title="Test">
-    Track errors in console (catch error in output)
-  </Step>
-  <Step title="Publish">
-    After thorough testing publish the version with version note.
-  </Step>
-</Steps>
+1. **Develop** — write and test your tool in the **Dev** environment (uses Dev `env_variables`).
+2. **Test** — run edge cases in the Test panel; surface errors in `output` for debugging.
+3. **Publish** — create a version with release notes after tests pass in Dev/UAT as required by your process.
 
 <Tip>
-  Use the monitoring dashboard to identify issues early and optimize tool performance.
+  Use [observability logs](/observability/logs) after linking the tool to a graph to catch runtime issues early.
 </Tip>

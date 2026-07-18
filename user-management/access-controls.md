@@ -1,11 +1,15 @@
 ---
 title: "Access Controls & Security"
-description: "How workspace permissions and sign-in protect your organization’s work."
+description: "How workspace RBAC and sign-in protect your organization's Agent Graph work."
 ---
 
 ## Role-based access
 
-Permissions apply **per workspace** (and can combine with rules elsewhere in Phinite). For what each **role** can do, see [User Roles](/user-management/user-roles).
+Permissions apply **per workspace** through [user roles](/user-management/user-roles). This is workspace **RBAC**—not [Agent Card](/agent-registry/overview) registry identity or external agent authentication.
+
+<Note>
+  Granting someone **Developer** on a workspace lets them edit Agent Graphs and tools. It does **not** create or expose an Agent Card on the public registry.
+</Note>
 
 ## Sign-in and sessions
 

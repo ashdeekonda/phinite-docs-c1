@@ -3,7 +3,7 @@ title: "Intents (Conversational Assistants)"
 description: "Define and train intents to route conversations to flows."
 ---
 
-## Steps
+## Procedure
 
 <Frame>
   ![Intents](/images/intents.png)

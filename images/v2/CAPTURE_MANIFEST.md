@@ -38,6 +38,21 @@ Quiet refs only — one image per key page in Pass 1 docs.
 | a2a.registry | `a2a/04-registry-catalog.png` | Agent Registry | Search + filters |
 | a2a.discovery | `a2a/05-browse-discovery.png` | Agent Registry | Filter UI (Browse/Discovery uses same catalog data) |
 
+## Pass 4 — Dialog depth map (FE source)
+
+| Flow | FE entry | Screens to document / capture |
+| --- | --- | --- |
+| Create Agent Graph | `CreateFlowModal.tsx` | type → name → Create |
+| Build | `createBuild.tsx` | validation → Build Agent form → Create |
+| Deploy | `DeployAgentBuildModal` in `BottomHeader.tsx` | tab per target → sub-form |
+| Expose A2A | `ExposeAsExternalAgentWizard.tsx` | build config → export → Agent Card |
+| Push to Prod | `pushToProdModal.tsx` | TEST → LIVE confirm |
+| Assign environment | `AgentBuildAssignDrawer.tsx` | DEV / UAT / PROD |
+| Browse agents | `BrowseAgentsModal.tsx` | search → select → attach |
+| Node drawer | `ConnectToolModal`, `CreateVariableModal`, `SessionVariablesModal`, `AddMCPConnectionModal`, `ConnectApiKeyModal` | one frame per dialog |
+
+Naming: `images/v2/{area}/{nn}-{flow}-{screen}.png`. Append rows here when captured.
+
 ## Live UI truths (reconcile)
 
 - Top object on Workspace Home is **Agent Graph**, not Assistant.

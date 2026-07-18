@@ -1,16 +1,33 @@
 ---
 title: "Session Logs & Analysis"
-description: "Analyze execution traces, decisions, and variables to debug flows."
+description: "Analyze execution traces, decisions, and variables to debug Agent Graph runs."
 ---
 
-## Views
+Session logs capture how an **Agent Graph** executed—node order, branching, tool calls, and captured variables.
 
-- [Timeline View](/observability/logs/timeline)
-- [Decision Joints & Exceptions](/observability/logs/decision-joints)
-- [Variable Capture Logs](/observability/logs/variables)
+<CardGroup cols={3}>
+  <Card title="Timeline" icon="timeline" href="/observability/logs/timeline">
+    Step-by-step trace with timestamps.
+  </Card>
+  <Card title="Decision joints" icon="code-branch" href="/observability/logs/decision-joints">
+    Branching paths and exceptions.
+  </Card>
+  <Card title="Variables" icon="database" href="/observability/logs/variables">
+    Captured session variables per step.
+  </Card>
+</CardGroup>
 
 ## Best practices
 
-- Filter by flow version and environment
-- Trace failures to specific tool calls
-- Export logs for audits
+1. Filter by Agent Graph **build version** and environment before comparing runs.
+2. Trace failures to specific tool calls and integration connections.
+3. Export logs when you need audit trails outside the UI.
+
+<Note>
+  Logs describe runtime graph execution—not workspace [user roles](/user-management/user-roles) or Agent Card registry metadata.
+</Note>
+
+## Related
+
+- [Filtering & Search](/observability/filtering)
+- [Error codes & logs](/support/error-codes)

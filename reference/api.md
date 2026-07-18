@@ -1,14 +1,20 @@
 ---
 title: "API Reference"
-description: "Authenticate and call Phinite APIs."
+description: "Authenticate and call Phinite APIs to trigger Agent Graph runs and automations."
 icon: terminal
 ---
+
+Phinite APIs let external systems start **Agent Graph** runs—typically via [triggers](/triggers-intents/triggers/overview)—using workspace API keys or OAuth tokens your admin provisions.
 
 ## Authentication
 
 <ParamField header="Authorization" type="string" required>
 Bearer token for API authentication. Format: `Bearer YOUR_API_KEY`
 </ParamField>
+
+<Warning>
+Never expose API keys in client-side code or public repos. Store keys in [env variables](/configure/env-variables) or your secret manager.
+</Warning>
 
 ## Example: Trigger a webhook
 
@@ -27,6 +33,17 @@ curl -X POST 'https://api.example.com/api/triggers/webhook/flow_123' \
 ```
 </ResponseExample>
 
-<Warning>
-Never expose API keys in client-side code.
-</Warning>
+## Related flows
+
+1. Create and deploy an Agent Graph with a [trigger](/triggers-intents/triggers/api).
+2. Issue an API key under workspace **API keys** (role permitting).
+3. Call the trigger endpoint from your system; monitor runs in [observability](/observability/overview).
+
+<Note>
+  Trigger APIs execute **deployed graph builds**—not draft Studio saves. **Build** and assign an environment before testing production traffic.
+</Note>
+
+## Related
+
+- [Trigger API guide](/triggers-intents/triggers/api-guide)
+- [Deploy trigger](/agents/deploy-trigger)

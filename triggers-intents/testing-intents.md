@@ -3,7 +3,7 @@ title: "Testing Intents"
 description: "Validate intent detection and refine training data."
 ---
 
-## Steps
+## Procedure
 
 <Frame>
   <img src="/images/intent-test.png" alt="Descriptive alt text" />

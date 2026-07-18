@@ -1,40 +1,50 @@
 ---
-title: "Input Variables in Agent Node"
+title: Input variables in agent nodes
+description: Restrict which session variables an agent node can read during a run.
 ---
 
-<img
-  src="/images/Screenshot2026-02-11at6.44.29PM.png"
-  alt="Agent Node Input Variables Configuration"
-  title="Agent Node Input Variables"
-  style={{ width: "51%" }}
-/>
+**Input variables** control which session variables are visible to a specific agent node. Scope inputs to only what the step needs.
 
-## Overview
+<Frame caption="Input variables — select session variables for the agent node">
+  <img src="/images/Screenshot2026-02-11at6.44.29PM.png" alt="Agent node input variables configuration" />
+</Frame>
 
-Input variables control which session variables are accessible to a specific agent node. By defining input variables, you restrict the agent's scope to only the variables it needs to complete its task.
+## Supported sources
 
-## Supported Variable Sources
-
-Input variables can be sourced from multiple locations:
+| Source | Description |
+| --- | --- |
+| **Tool capture variables** | Values returned by tools during execution — use the exact variable name |
+| **Other agent capture variables** | Captures from other agent nodes in the same graph |
+| **Self capture variables** | Values the same node captured in earlier turns |
+| **User variables (API)** | Keys from the `user_variable` payload when invoking via Agent Graph API |
 
 <AccordionGroup>
-  <Accordion title="Tool Capture Variables">
-    Variables captured by tools during execution. Simply enter the exact variable name to include it.
+  <Accordion title="Tool capture variables">
+    Enter the exact variable name returned by a tool's `capture_variables` or predefined tool output.
   </Accordion>
-  
-  <Accordion title="Other Agent Capture Variables">
-    Variables captured by other agent nodes in the same workflow.
+  <Accordion title="Other agent capture variables">
+    Reference captures from upstream Master or Child Agent nodes in the graph.
   </Accordion>
-  
-  <Accordion title="Self Capture Variables">
-    Variables previously captured by the same agent node in earlier executions.
+  <Accordion title="Self capture variables">
+    Use values this node captured earlier in the same session when multi-turn behavior applies.
   </Accordion>
-  
-  <Accordion title="User Variables (Agent Graph API)">
-    When using the Agent Graph API, you can reference variables from the `user_variable` keys in the API payload.
+  <Accordion title="User variables (Agent Graph API)">
+    Map keys from the API request `user_variable` object into this node's inputs.
   </Accordion>
 </AccordionGroup>
 
+## Configure input variables
+
+1. Select an agent node → drawer **Variables** tab.
+2. Under **Input Variables**, add each required session variable by name.
+3. **Save** the graph.
+
 <Tip>
-Only add the variables your agent actually needs. This improves performance and prevents the agent from being overwhelmed with unnecessary context.
+  Only add variables the agent needs — smaller input scope improves performance and focus.
 </Tip>
+
+## Related
+
+- [Capture variables](/graph-studio/capture-variables-in-agent-node)
+- [Agent node variables](/graph-studio/agent-node/variables)
+- [Types of session variables](/graph-studio/types-of-session-variables)

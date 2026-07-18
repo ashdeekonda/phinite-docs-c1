@@ -1,23 +1,44 @@
 ---
-title: "Integrations Hub"
-description: "Set up channels for conversational assistants and connect predefined tools in Graph Studio."
-icon: "plug"
+title: Integrations Hub
+description: Connect channels and predefined tools for Conversational and Autonomous Agent Graphs.
+icon: plug
 ---
 
-## Overview
+The **Integrations Hub** catalogs every connector your **Agent Graphs** can use — channel ingress for Conversational graphs and predefined tool actions for both graph types.
 
-Phinite integrations fall into two surfaces:
+<CardGroup cols={2}>
+  <Card title="Channels overview" icon="bolt" href="/channels/overview">
+    Deploy Conversational graphs to WhatsApp, Slack, Teams, voice, and email.
+  </Card>
+  <Card title="Configure integrations" icon="sliders" href="/configure/integrations">
+    Authenticate connectors once per workspace.
+  </Card>
+  <Card title="Graph Studio tools" icon="link" href="/graph-studio/agent-node/tools">
+    Enable subtools on agent nodes after connecting.
+  </Card>
+  <Card title="Dev Studio prebuilt" icon="wrench" type="note" href="/devstudio/prebuilt-tools">
+    Workspace-level prebuilt tool setup.
+  </Card>
+</CardGroup>
 
-- **Channels** — deploy assistants on WhatsApp, Slack, Teams, Email, Twilio Voice, and AI Chat.
-- **Predefined Tools** — connect third-party APIs once under Integrations, then enable subtools per agent in Graph Studio.
+## Two integration surfaces
 
-<Frame>
-  ![Integrations Overview-img](/images/Integrations-Overview.png)
+| Surface | Purpose | Graph type |
+| --- | --- | --- |
+| **Channels** | Inbound/outbound messaging ingress | Conversational |
+| **Predefined Tools** | Third-party API actions inside tool nodes | Conversational and Autonomous |
+
+<Frame caption="Integrations Hub — channels, triggers, and predefined tools">
+  <img src="/images/Integrations-Overview.png" alt="Integrations Hub overview" />
 </Frame>
+
+<Tip>
+  Connect an integration once under workspace **Integrations**, then attach it to Agent Graph nodes in Graph Studio or enable subtools during **Build**.
+</Tip>
 
 ## Channels
 
-Channel docs cover assistant deployment and inbound/outbound messaging on each surface. Predefined tools with the same name (e.g. WhatsApp) have separate API documentation under Predefined Tools.
+Channel docs cover **Deploy to Channel** for Conversational Agent Graphs. Predefined tools with the same vendor name (for example WhatsApp) have separate API documentation under Predefined Tools below.
 
 <CardGroup cols={3}>
   <Card title="Email" icon="envelope" href="/channels/email">

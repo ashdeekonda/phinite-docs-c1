@@ -6,17 +6,17 @@ icon: "https://storage.googleapis.com/phinite-public/integrations/helpscout.svg"
 
 ## Overview
 
-Phinite's **Help Scout** predefined tool lets workspace assistants call Help Scout APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
+Phinite's **Help Scout** predefined tool lets workspace agent graphs call Help Scout APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Manage Help Scout Mailbox support resources — conversations, threads, customers, mailboxes, users, and tags — via the Help Scout Mailbox API v2. Authenticate with an access token, or client_id + client_secret.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/configure/integrations).
 </Note>
 ## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
-- Connect once under Integrations and reuse across assistants
+- Connect once under Integrations and reuse across agent graphs
 - Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
@@ -36,7 +36,7 @@ Predefined tools require a saved connection before they appear in Graph Studio's
 7. Select **Help Scout**
 8. Click **+ Add Configuration**
 9. Enter the credential fields listed above
-10. Select assistants that should use this connection
+10. Select agent graphs that should use this connection
 11. Click **Save Configuration**
 
 ## Configure in Graph Studio

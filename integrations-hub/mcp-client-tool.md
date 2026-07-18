@@ -6,12 +6,12 @@ icon: "https://storage.googleapis.com/phinite-public/api.svg"
 
 ## Overview
 
-Phinite's **MCP Client** predefined tool lets workspace assistants call MCP Client APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
+Phinite's **MCP Client** predefined tool lets workspace agent graphs call MCP Client APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Dynamically proxy any tool exposed by a remote MCP server over SSE or Streamable HTTP transport with optional authentication.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/configure/integrations).
 </Note>
 <Note>
 MCP Client connects agents to external MCP servers dynamically. Ensure the endpoint is reachable from Phinite and uses a supported transport.
@@ -20,7 +20,7 @@ MCP Client connects agents to external MCP servers dynamically. Ensure the endpo
 ## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
-- Connect once under Integrations and reuse across assistants
+- Connect once under Integrations and reuse across agent graphs
 - Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
@@ -41,7 +41,7 @@ MCP Client connects agents to external MCP servers dynamically. Ensure the endpo
 6. Select **MCP Client**
 7. Click **+ Add Configuration**
 8. Enter the credential fields listed above
-9. Select assistants that should use this connection
+9. Select agent graphs that should use this connection
 10. Click **Save Configuration**
 
 ## Configure in Graph Studio

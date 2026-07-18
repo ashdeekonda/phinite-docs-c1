@@ -1,141 +1,126 @@
 ---
-
-## title: "Build on Phinite"
-description: "Explore what you can build on Phinite — organized by agent type across Conversational, Email, and Automation use cases."
-
-# What You Can Build on Phinite
-
-Phinite enables teams to build and deploy intelligent agents securely across channels and workflows. This section outlines the three primary agent types and what can be accomplished with each.
-
-## Conversational Agents
-
-```
-<Card>
-  **Purpose:**\
-  Conversational agents engage users through chat or voice channels, leveraging context, retrieval, and orchestration.
-
-  **Examples:**
-
-  - Support or HR FAQ assistants
-  - Appointment schedulers
-  - Knowledge-grounded internal helpdesks
-</Card>
-### Key Capabilities
-
-- Contextual conversations with shared memory
-- Integration with chat, voice, and retrieval tools
-- RBAC-controlled environments for compliance
-- Agent Graph testing and audit logging
-
-### Best Use Cases
-
-<Accordion title="Customer Support & HR">
-  Enable intelligent responses to FAQs, escalate tickets, and sync outcomes to CRM or Slack.
-</Accordion>
-<Accordion title="Appointment & Scheduling">
-  Automate booking flows using integrated APIs like Google Calendar or HubSpot Meetings.
-</Accordion>
-<Accordion title="Knowledge Q&A Assistants">
-  Ground conversations on internal documents or RAG sources for accurate responses.
-</Accordion>
-### Constraints
-
-- Requires pre-configured channels and knowledge stores
-- Multi-turn reasoning relies on flow logic, not autonomy
-
+title: What you can build
+description: Explore what you can build on Phinite — Conversational and Autonomous Agent Graphs across channels and automation.
+icon: lightbulb
 ---
-```
 
-## Email Agents
+Phinite enables teams to build and deploy **Agent Graphs** securely across channels, triggers, and the [Agent Registry](/agent-registry/overview). Every graph follows the same spine: **Design → Save → Build → Environment → Deploy** (or **Expose as A2A**).
 
-```
-<Card>
-  **Purpose:**\
-  Email agents automate inbound and outbound communication flows while maintaining auditability and compliance.
-</Card>
-### Key Capabilities
+<CardGroup cols={2}>
+  <Card title="Conversational" icon="comments" href="/agents/conversational">
+    Voice and chat agents for real-time user conversations.
+  </Card>
+  <Card title="Autonomous" icon="robot" href="/agents/autonomous">
+    Background automation via API triggers and cron schedules.
+  </Card>
+  <Card title="Graph Studio" icon="diagram-project" href="/graph-studio/overview">
+    Visual workflow builder for both graph types.
+  </Card>
+  <Card title="Integrations Hub" icon="plug" type="note" href="/integrations-hub/overview">
+    Prebuilt tools and channel connectors.
+  </Card>
+</CardGroup>
 
-- Triggered by inbound or outbound email events
-- Classify, respond, route, and escalate using Agent Graph logic
-- Secure environment variables and masked SMTP/API credentials
-- Integration-ready for Gmail, Outlook, SendGrid, etc.
+## Conversational Agent Graphs
 
-### Best Use Cases
+**Purpose:** Engage users through chat or voice channels with context, retrieval, and multi-step orchestration.
 
-<Accordion title="Sales & Lead Triage">
-  Parse and qualify leads from inboxes, auto-assign owners, and send initial replies.
-</Accordion>
-<Accordion title="Support Automation">
-  Auto-acknowledge support tickets and escalate based on classification.
-</Accordion>
-<Accordion title="Internal Mailroom">
-  Handle operational mails like invoices, receipts, and confirmations.
-</Accordion>
-### Constraints
+| Capability | Detail |
+| --- | --- |
+| Context | Multi-turn conversations with session memory and captured variables |
+| Channels | Web chat, WhatsApp, Slack, Teams, Twilio Voice, email |
+| Knowledge | RAG collections grounded in workspace data sources |
+| Governance | RBAC-controlled environments, audit logs, and observability |
 
-- Requires authenticated email connectors
-- Not a replacement for full email client or spam filter
+**Examples:**
 
----
-```
+- Support or HR FAQ agents
+- Appointment schedulers
+- Knowledge-grounded internal helpdesks
+- Order status and ticket-creation flows
 
-## Automation Agents
+<AccordionGroup>
+  <Accordion title="Customer support and HR">
+    Answer FAQs, escalate tickets, and sync outcomes to CRM or Slack using predefined tools.
+  </Accordion>
+  <Accordion title="Appointment and scheduling">
+    Automate booking flows with Google Calendar, HubSpot Meetings, or custom APIs.
+  </Accordion>
+  <Accordion title="Knowledge Q&A">
+    Ground conversations on internal documents or RAG collections for accurate responses.
+  </Accordion>
+</AccordionGroup>
 
-```
-<Card>
-  **Purpose:**\
-  Automation agents execute background and cross-system workflows that connect data, APIs, and logic.
-</Card>
-### Key Capabilities
+**Deploy targets:** [Deploy to Channel](/agents/deploy-channel), [Deploy as Chat API](/agents/deploy), [Expose as A2A](/agent-registry/expose-your-flow).
 
-- Visual multi-agent orchestration in Graph Studio
-- [Agent Registry (A2A)](/agent-registry/overview) for exposing and composing external agents
-- Manager–Worker and Workflow modes
-- Environment-specific variable and credential control
-- End-to-end RBAC, audit logs, and observability
-
-### Best Use Cases
-
-<Accordion title="Operations & Back Office">
-  Automate repetitive processes like data enrichment, validation, and reporting.
-</Accordion>
-<Accordion title="Compliance & Audit">
-  Collect evidence, run validations, and maintain compliance logs.
-</Accordion>
-<Accordion title="Data Pipelines">
-  Ingest, transform, and publish structured data using external APIs and schedulers.
-</Accordion>
-### Constraints
-
-- Business logic orchestration only; not infra-level automation
-- Requires preconfigured API keys and retry-safe flow design
-
----
-```
-
-
+<Note>
+  Workspace filters may still show an **Email** chip. New graphs only offer **Conversational** and **Autonomous**.
+</Note>
 
 ---
 
+## Autonomous Agent Graphs
 
+**Purpose:** Execute background and cross-system workflows without a live user — triggered by webhooks, schedules, or events.
 
-## Getting Started
+| Capability | Detail |
+| --- | --- |
+| Orchestration | Visual multi-agent graphs in Graph Studio |
+| Triggers | API webhooks, cron jobs, background tasks |
+| Composition | [Agent Registry](/agent-registry/overview) for Browse and Discovery agent nodes |
+| Governance | Environment-specific credentials, RBAC, and full observability |
 
-1. **Create a Workspace** – Name it after your department or project.
-2. **Add Users** – Assign roles and permissions.
-3. **Build Assistants** – Start from templates or from scratch.
-4. **Design Agent Graphs** – Orchestrate logic using Graph Studio.
-5. **Deploy Securely** – Use DEV/UAT/PROD environments with audit trails.
+**Examples:**
+
+- Data enrichment and validation pipelines
+- Compliance evidence collection
+- Scheduled report generation
+- Monitoring and alerting workflows
+
+<AccordionGroup>
+  <Accordion title="Operations and back office">
+    Automate repetitive processes like data enrichment, validation, and reporting.
+  </Accordion>
+  <Accordion title="Compliance and audit">
+    Collect evidence, run validations, and maintain compliance logs.
+  </Accordion>
+  <Accordion title="Data pipelines">
+    Ingest, transform, and publish structured data using external APIs and schedulers.
+  </Accordion>
+</AccordionGroup>
+
+**Deploy targets:** [Deploy as API](/agents/deploy-trigger), [Cron job](/triggers-intents/triggers/cron), [Expose as A2A](/agent-registry/expose-your-flow) (coming soon for Autonomous).
+
+<Tip>
+  Design Autonomous graphs for **idempotent** actions and clear error handling — there is no user in the loop to recover from failures.
+</Tip>
 
 ---
 
+## Compare graph types
 
+| Dimension | Conversational | Autonomous |
+| --- | --- | --- |
+| **User present** | Yes — live chat or voice | No — background execution |
+| **Primary ingress** | Channel or Chat API | API trigger or Cron |
+| **Typical latency** | Real-time (seconds) | Batch or scheduled |
+| **Best for** | Support, sales, HR, Q&A | ETL, monitoring, ops automation |
+| **Test in Studio** | **Test** chat panel | Trigger test payloads |
 
-## Related Topics
+---
 
-- [Workspaces Overview](/workspaces/workspace-overview)
+## Getting started
+
+1. **Create a workspace** — name it after your department or project.
+2. **Add users** — assign roles and permissions ([User roles](/user-management/user-roles)).
+3. **Create an Agent Graph** — choose Conversational or Autonomous.
+4. **Design in Graph Studio** — nodes, tools, RAG, variables.
+5. **Ship securely** — Save, Build, assign DEV/UAT/PROD, then Deploy.
+
+## Related topics
+
+- [Workspaces overview](/workspaces/workspace-overview)
 - [Graph Studio](/graph-studio/overview)
-- [Agent Registry (A2A)](/agent-registry/overview)
-- [RBAC and Roles](/user-management/user-roles)
-- [Integrations and Environments](/channels/overview)
-
+- [Builds overview](/builds/overview)
+- [Channels overview](/channels/overview)
+- [Triggers overview](/triggers-intents/triggers/overview)

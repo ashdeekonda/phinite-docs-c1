@@ -3,7 +3,7 @@ title: "Signing Up for Phinite"
 description: "Create your account and secure access to your workspace."
 ---
 
-## Steps
+## Procedure
 <Frame>
   <img src="/images/Signup-new.png" alt="sign up" />
 </Frame>

@@ -6,17 +6,17 @@ icon: "https://storage.googleapis.com/phinite-public/integrations/okta.svg"
 
 ## Overview
 
-Phinite's **Okta** predefined tool lets workspace assistants call Okta APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
+Phinite's **Okta** predefined tool lets workspace agent graphs call Okta APIs through DevStudio after you save a connection under **Integrations → Predefined tools**.
 
 Manage Okta users, groups, applications, user lifecycle, and system log events via the Okta Management API.
 
 <Note>
-Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/Graphstudio/Tools/Integrations).
+Predefined tools require a saved connection before they appear in Graph Studio's tool picker. See [Predefined Tools in GraphStudio](/configure/integrations).
 </Note>
 ## What this integration enables
 
 - Automate workflows using this predefined tool from agent graphs
-- Connect once under Integrations and reuse across assistants
+- Connect once under Integrations and reuse across agent graphs
 - Enable individual subtools per agent in Graph Studio
 
 ## Required credentials
@@ -35,7 +35,7 @@ Predefined tools require a saved connection before they appear in Graph Studio's
 5. Select **Okta**
 6. Click **+ Add Configuration**
 7. Enter the credential fields listed above
-8. Select assistants that should use this connection
+8. Select agent graphs that should use this connection
 9. Click **Save Configuration**
 
 ## Configure in Graph Studio

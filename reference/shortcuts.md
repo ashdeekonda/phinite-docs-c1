@@ -1,17 +1,32 @@
 ---
 title: "Keyboard Shortcuts"
-description: "Productivity shortcuts for Graph Studio and DevStudio."
+description: "Productivity shortcuts for Graph Studio and Dev Studio."
 icon: keyboard
 ---
 
+Keyboard shortcuts speed up canvas editing and tool testing while designing **Agent Graphs** and publishing tools.
+
 ## Graph Studio
 
-- ⌘/Ctrl + Click: Multi-select
-- Delete/Backspace: Delete selected edge/node
-- Space + Drag: Pan canvas
-- ⌘/Ctrl + + / -: Zoom in/out
+| Shortcut | Action |
+| --- | --- |
+| ⌘/Ctrl + Click | Multi-select nodes or edges |
+| Delete / Backspace | Delete selected edge or node |
+| Space + Drag | Pan canvas |
+| ⌘/Ctrl + + / − | Zoom in / out |
 
-## DevStudio
+<Tip>
+  **Save** the graph from the toolbar before relying on canvas edits in a shared workspace—shortcuts do not auto-save.
+</Tip>
 
-- ⌘/Ctrl + Enter: Run tool test
-- ⌘/Ctrl + S: Save
+## Dev Studio
+
+| Shortcut | Action |
+| --- | --- |
+| ⌘/Ctrl + Enter | Run tool test |
+| ⌘/Ctrl + S | Save draft |
+
+## Related
+
+- [Graph Studio interface](/graph-studio/interface)
+- [Testing tools](/devstudio/testing-tools)

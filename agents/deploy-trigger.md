@@ -1,30 +1,53 @@
 ---
 title: Deploy a trigger
-description: Run autonomous builds via API or Cron.
+description: Run Autonomous Agent Graphs via API webhook, Cron, or background task.
 ---
 
-Triggers start Autonomous (and some Conversational) runs without a live chat UI.
+**Triggers** start **Autonomous** Agent Graph runs without a live chat UI. Some **Conversational** graphs also support trigger-style entry points through the **Integrations** hub.
 
-## Types
+<Note>
+  Triggers replace the legacy **Intents** model. Configure trigger type, assign an **Agent Build** per environment, and call the generated webhook or wait for the Cron schedule.
+</Note>
 
-| Type | Use |
-| --- | --- |
-| **API** | On-demand HTTP webhook |
-| **Cron job** | Recurring schedule |
-| **Background task** | Long-running / queued work (where available) |
+## Trigger types
 
-## Steps
+| Type | Use | Execution |
+| --- | --- | --- |
+| **API** | On-demand HTTP webhook | Synchronous (≤ ~150 s) — simple flows only |
+| **Background task** | Long-running work | Async start + status polling (≤ 45 min) — **recommended** |
+| **Cron job** | Recurring schedule | Platform-scheduled; no external caller needed |
 
-1. Create a **Build**.
-2. In Studio, click **Deploy** → **Deploy as API** or **Cron job**.
-3. Or open Studio → **Triggers** → **Add trigger in Integrations**.
-4. Create the trigger connection; set workflow type.
-5. Assign the build to DEV / UAT / PROD on the trigger.
-6. Call the webhook or wait for the schedule.
+See [Trigger APIs overview](/triggers-intents/triggers/overview) for endpoint shapes, auth, and payload fields.
 
-![Triggers](/images/v2/deploy/02-triggers-sidebar.png)
+## Deploy a trigger from Studio
+
+1. Create an **Agent Build** for the Autonomous Agent Graph ([Builds overview](/builds/overview)).
+2. In Graph Studio, click **Deploy** → **Deploy as API** or **Cron job**.
+3. Or open Studio → **Triggers** → **Add trigger in Integrations** when the panel is empty.
+4. In **Integrations** → **Triggers**, create the trigger connection and select **workflow type** (API, Background Task, or Cron).
+5. Assign the **Agent Build** to **DEV** first; copy the generated webhook URL or Cron config.
+6. Test with a Bearer token ([API usage examples](/triggers-intents/triggers/api-guide)) or wait for the first scheduled run.
+7. Promote build assignment to **UAT** / **PROD** when validated.
+
+<Frame caption="Studio Triggers panel — graph-scoped trigger links">
+  <img src="/images/v2/deploy/02-triggers-sidebar.png" alt="Graph Studio Triggers sidebar" />
+</Frame>
+
+<Frame caption="Integrations hub — Triggers tab for workspace-wide trigger config">
+  <img src="/images/v2/configure/01-integrations-hub.png" alt="Integrations hub Triggers tab" />
+</Frame>
+
+## Map triggers to Agent Graphs
+
+When a trigger fires, the platform runs the **Agent Build** assigned to that trigger for the matching **environment**. See [Mapping triggers to workflows](/triggers-intents/mapping) for assignment and validation steps.
+
+<Tip>
+  Use **Background task** mode for multi-step Autonomous graphs. Reserve single-endpoint **API** mode for fast operations under ~120 seconds.
+</Tip>
 
 ## Related
 
 - [Deploy](/agents/deploy)
-- [Environments](/agents/environments)
+- [Build environments](/builds/environments)
+- [Event-based triggers](/triggers-intents/event-triggers)
+- [Integrations configuration](/configure/integrations)

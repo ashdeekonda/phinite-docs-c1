@@ -1,15 +1,20 @@
 ---
 title: "Execution Mode 1: API (Single Endpoint)"
+description: Synchronous trigger API for short Autonomous Agent Graph runs.
 ---
+
+<Note>
+  Use single-endpoint **API** mode only for **Autonomous Agent Graphs** that complete in under ~120–150 seconds. For longer work, use [Background task](/triggers-intents/triggers/bg_task) mode.
+</Note>
 
 ### Overview
 
-The single endpoint API mode provides **synchronous execution** of autonomous flows. The API call waits for the flow to complete and returns the final result in the response.
+The single endpoint API mode provides **synchronous execution** of **Autonomous Agent Graphs**. The API call waits for the graph run to complete and returns the final result in the response.
 
 **Limitations:**
 
-- Maximum execution time: **120-150 seconds**
-- Not recommended for complex or multi-step flows
+- Maximum execution time: **120–150 seconds**
+- Not recommended for complex or multi-step graphs
 - Best suited for simple, fast operations
 
 ### Endpoint
@@ -18,9 +23,7 @@ The single endpoint API mode provides **synchronous execution** of autonomous fl
 POST https://app.phinite.ai/api/v1/ai/trigger/{workspace_id}/{trigger_id}/{environment}
 ```
 
-### Request Payload
-
-The API accepts the following JSON payload:
+### Request payload
 
 ```json
 {
@@ -29,16 +32,16 @@ The API accepts the following JSON payload:
 }
 ```
 
-#### Field Descriptions
+#### Field descriptions
 
 | Field | Type | Description |
 | :-- | :-- | :-- |
-| `message` | String | The first message sent to the flow when the session starts. Can be empty if not required. |
-| `user_variables` | Object | Session variables to initialize the conversation with. These variables will be available throughout the flow. |
+| `message` | String | The first message sent when the session starts. Can be empty if not required. |
+| `user_variables` | Object | Session variables to initialize the run. Available throughout the Agent Graph. |
 
-### Response Format
+### Response format
 
-The API directly returns the completed or failed status:
+The API directly returns completed or failed status:
 
 **Success Response (200 OK):**
 
@@ -68,3 +71,9 @@ The API directly returns the completed or failed status:
   "error": "Error details here"
 }
 ```
+
+## Related
+
+- [Trigger APIs overview](/triggers-intents/triggers/overview)
+- [API usage examples](/triggers-intents/triggers/api-guide)
+- [Background task mode](/triggers-intents/triggers/bg_task)

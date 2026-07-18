@@ -1,21 +1,33 @@
 ---
-title: "Canvas"
-description: "Use the canvas to place nodes, connect edges, and control layout."
+title: Canvas
+description: The Graph Studio canvas — pan, zoom, select nodes, and connect edges.
 ---
 
-## Canvas basics
+The **canvas** is the main React Flow surface where you place [nodes](/graph-studio/nodes) and [connections](/graph-studio/connections).
 
-The canvas is powered by React Flow (`src/components/flow/FlowCanvas.tsx`). It registers node types like `start`, `task`, `api`, `flow`, and `end`, and renders background, controls, and a minimap.
+## What you can do
 
-### Common actions
+| Action | How |
+| --- | --- |
+| **Pan** | Drag the canvas background |
+| **Zoom** | Scroll or use zoom controls |
+| **Select a node** | Click a node — opens the [Inspector](/graph-studio/interface/inspector-panel) drawer |
+| **Connect nodes** | Drag from a source handle to a target handle |
+| **Multi-select** | Shift-click or marquee select (when enabled) |
 
-- **Pan/zoom**: mouse wheel or trackpad; controls are available in the bottom-right
-- **Add nodes**: drag from the Node Library onto the canvas
-- **Connect edges**: drag from a node’s source handle to a target handle
-- **Select/multi-select**: click nodes/edges; hold ⌘/Ctrl for multi-select
-- **Delete**: select and press Backspace/Delete
-- **Minimap**: toggle via settings to navigate large graphs
+## Workflow on the canvas
+
+1. Add nodes from the toolbar or [Node Library](/graph-studio/interface/node-library).
+2. Connect **Start** → agents → **Tool** nodes (as needed) → **End**.
+3. Click each agent node and complete drawer tabs before **Save**.
+4. Use **Test** from the toolbar to validate runs without deploying.
 
 <Note>
-Start/End nodes are non-deletable by default as defined in `src/utils/nodeUtils.ts`.
+  When the node drawer opens, the canvas may pan to keep the selected node visible. Closing the drawer restores the prior viewport.
 </Note>
+
+## Related
+
+- [Interface layout](/graph-studio/interface)
+- [Handles & edges](/graph-studio/connections/handles)
+- [Manual canvas method](/graph-studio/manual-method)

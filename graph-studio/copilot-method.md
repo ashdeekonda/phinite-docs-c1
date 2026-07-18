@@ -1,45 +1,54 @@
 ---
-title: "Aura Method (Prompt-Based)"
-description: "Bootstrap a new workflow by describing your goal in natural language."
+title: Phinite Aura (prompt-based)
+description: Bootstrap an Agent Graph draft from a natural-language description, then refine on the canvas.
 ---
 
-## How it works
+**Phinite Aura** (prompt-based creation) turns a plain-language goal into a draft canvas — nodes, edges, tool hints, and variable suggestions — that you accept, edit, or extend manually.
 
-Aura translates a plain-language prompt into a draft canvas with nodes, edges, tools and variable suggestions. You can accept, refine, or extend the proposal on the canvas.
+<Card title="After Aura generates a draft" type="note" href="/graph-studio/manual-method">
+  Always review prompts, RAG, tools, and variables in the node drawer before Save and Build.
+</Card>
 
-<Steps>
-  <Step title="Open Graph Studio">
-    Go to the Graph Studio page in your project.
-  </Step>
-  <Step title="Start a new Agent Graph with Aura">
-    Choose "Create with Aura" and describe your objective, inputs, data sources, tools, and expected outputs.
+## Create with Aura
 
-    <Tip>
-      Specify relevant collections and tools to improve grounding and structure.
-    </Tip>
-  </Step>
-  <Step title="Review the draft">
-    Copilot generates Start, Agent, Tool, and End nodes, connects edges, and proposes variables.
+1. Open **Graph Studio** or start **New Agent Graph** from Workspace Home.
+2. Choose **Create with Aura** (or open the Aura panel on an existing graph).
+3. Describe your objective: goal, inputs, knowledge sources, tools, and expected outputs.
+4. Submit — Aura proposes **Start**, agent, **Tool**, and **End** nodes with connecting edges.
+5. Review the draft on the canvas; open each node drawer and validate **Details**, **RAG**, **Tools**, and **Variables**.
+6. Click **Save**.
 
-    Validate assumptions and refine prompts, RAG settings, tools, and variables.
-  </Step>
-  <Step title="Refine and save">
-    Edit agent prompts, attach collections, wire variables, and save the graph.
+<Frame caption="Graph Studio with Phinite Aura panel">
+  <img src="/images/v2/studio/01-studio-aura-shell.png" alt="Graph Studio with Aura chat" />
+</Frame>
 
-    <Check>
-      You should see a coherent path from Start to End with any branches clearly labeled.
-    </Check>
-  </Step>
-</Steps>
+## Prompt tips
 
-## Prompt Tips
-
-- **Goal**: what the Agent Graph should achieve and for whom
-- **Inputs**: list input variables and formats
-- **Knowledge**: name relevant collections or domains
-- **Tools**: APIs or actions to call
-- **Success criteria**: expected outputs or acceptance checks
+| Include | Why |
+| --- | --- |
+| **Goal** | What the graph should achieve and for whom |
+| **Inputs** | Variables and formats the run receives |
+| **Knowledge** | RAG collections or domains to ground answers |
+| **Tools** | APIs or integrations the graph should call |
+| **Success criteria** | Expected outputs or acceptance checks |
 
 <Tip>
-  Use variables to avoid re-computing values and to pass context across agents and tools.
+  Name relevant [RAG Data](/graph-studio/rag-management/data-sources) collections and [Tools](/devstudio/overview) in your Aura prompt for better first drafts.
 </Tip>
+
+## Refine the draft
+
+1. Replace generic prompts with domain-specific [agent prompts](/graph-studio/agent-node/prompt).
+2. Attach real [RAG collections](/graph-studio/rag-management/referencing) per agent node.
+3. Wire [input and capture variables](/graph-studio/agent-node/variables).
+4. Remove or add nodes using the [manual canvas](/graph-studio/manual-method) workflow.
+5. **Save**, then proceed to [Build](/builds/overview).
+
+<Check>
+  Before Save, confirm a clear path from **Start** to **End** and that branch labels match your [decision variables](/graph-studio/connections/conditional-edges).
+</Check>
+
+## Related
+
+- [Manual canvas method](/graph-studio/manual-method)
+- [Graph Studio overview](/graph-studio/overview)
