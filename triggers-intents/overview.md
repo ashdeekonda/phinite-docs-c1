@@ -79,7 +79,7 @@ flowchart LR
 </Frame>
 
 <Tip>
-  Design Autonomous graphs to be **idempotent** — webhooks may retry. Map payload fields to [variables](/graph-studio/variables) for auditability in logs.
+  Design Autonomous graphs to be **idempotent** — webhooks may retry. Map payload fields to [variables](/graph-studio/interface#variables) for auditability in logs.
 </Tip>
 
 ## Related

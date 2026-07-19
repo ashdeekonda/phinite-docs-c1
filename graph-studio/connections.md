@@ -33,6 +33,6 @@ Branch by creating **multiple outbound edges** from a Master or Child Agent and 
 
 ## Related
 
-- [Node types](/graph-studio/nodes)
-- [Variables](/graph-studio/variables)
-- [Agent configuration](/graph-studio/agent-node)
+- [Node types](/graph-studio/interface/node-library)
+- [Variables](/graph-studio/interface#variables)
+- [Agent configuration](/graph-studio/interface/node-library)

@@ -13,7 +13,7 @@ The **Integrations Hub** catalogs every connector your **Agent Graphs** can use 
   <Card title="Configure integrations" icon="sliders" href="/configure/integrations">
     Authenticate connectors once per workspace.
   </Card>
-  <Card title="Graph Studio tools" icon="link" href="/graph-studio/agent-node">
+  <Card title="Graph Studio tools" icon="link" href="/graph-studio/interface/node-library">
     Enable subtools on agent nodes after connecting.
   </Card>
   <Card title="Tools & Dev Studio" icon="wrench" type="note" href="/devstudio/overview">

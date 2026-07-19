@@ -11,22 +11,13 @@ icon: diagram-project
     Phinite Aura or manual canvas.
   </Card>
   <Card title="Interface" icon="layout" href="/graph-studio/interface">
-    Canvas, toolbar, drawer, graph assets.
+    Sidebar Graph assets, drawer, variables, RAG.
   </Card>
-  <Card title="Nodes" icon="diagram-project" href="/graph-studio/nodes">
-    Start, Master, Child, Tool, End, registry agents.
-  </Card>
-  <Card title="Variables" icon="database" href="/graph-studio/variables">
-    Graph, input, capture, and session variables.
+  <Card title="Node library" icon="shapes" href="/graph-studio/interface/node-library">
+    Palette, types, anatomy, agent configuration.
   </Card>
   <Card title="Connections" icon="arrow-right" href="/graph-studio/connections">
     Handles, edges, conditional branches.
-  </Card>
-  <Card title="Agent configuration" icon="robot" href="/graph-studio/agent-node">
-    Prompt, tools, RAG, variables.
-  </Card>
-  <Card title="RAG" icon="book" href="/graph-studio/rag-management">
-    Workspace collections and node attachment.
   </Card>
   <Card title="Publishing" icon="hammer" type="note" href="/graph-studio/publishing">
     Save → Build → Deploy.
@@ -52,23 +43,22 @@ icon: diagram-project
 | Area | What it does |
 | --- | --- |
 | **Left sidebar** | **Phinite Aura**, plus **Graph assets** — Versions, Builds, Cards, Triggers, Integrations, Tools |
-| **Canvas** | Add and connect nodes; floating node palette and zoom controls |
-| **Node drawer** | Per-node **Details**, **RAG**, **Tools**, **Variables** — **Add a new tool** opens Tools / Integrations / MCP |
-| **Toolbar** | **Save** → **Build** → **Deploy** → **Test** (**Deploy** opens Deploy as A2A / Channel / Chat API when builds exist) |
+| **Canvas** | Add and connect nodes; floating [node library](/graph-studio/interface/node-library) |
+| **Node drawer** | Per-node **Details**, **RAG**, **Tools**, **Variables** |
+| **Toolbar** | **Save** → **Build** → **Deploy** → **Test** |
 
 <Frame caption="Graph Studio — canvas, graph assets, and toolbar">
   <img src="/images/v2/studio/14-github-studio-shell.png" alt="Graph Studio shell with GitHub Repository Search graph" />
 </Frame>
 
-See [Interface](/graph-studio/interface) for canvas, toolbar, and drawer detail.
+See [Interface](/graph-studio/interface) for sidebar assets, variables, and RAG.
 
 ## Golden path
 
 1. Create or open a graph ([Methods](/graph-studio/methods)).
-2. Add [nodes](/graph-studio/nodes) and [connections](/graph-studio/connections).
-3. Configure [agent nodes](/graph-studio/agent-node) and [variables](/graph-studio/variables).
-4. Attach [RAG](/graph-studio/rag-management) where needed.
-5. **Save**, then [Build and deploy](/graph-studio/publishing).
+2. Add nodes from the [node library](/graph-studio/interface/node-library) and [connections](/graph-studio/connections).
+3. Configure agents in the drawer; set [variables](/graph-studio/interface#variables) and [RAG](/graph-studio/interface#rag) as needed.
+4. **Save**, then [Build and deploy](/graph-studio/publishing).
 
 ```mermaid
 flowchart LR
@@ -79,17 +69,6 @@ flowchart LR
 
   design --> save --> build --> deploy
 ```
-
-## Graph assets (sidebar)
-
-| Asset | Purpose |
-| --- | --- |
-| **Graph Versions** | Saved design snapshots |
-| **Agent Builds** | Pinned builds from **Build** |
-| **Agent Cards** | A2A exposure |
-| **Triggers** | Graph-scoped triggers |
-| **Integrations** | Graph-scoped channels and tools |
-| **Tools** | Graph-scoped tool list |
 
 ## Related
 

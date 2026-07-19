@@ -27,8 +27,244 @@
   },
   "redirects": [
     {
+      "source": "/a2a/agent-card-identity",
+      "destination": "/agent-registry/agent-cards"
+    },
+    {
+      "source": "/a2a/discovery",
+      "destination": "/agent-registry/registry-agent-nodes"
+    },
+    {
+      "source": "/a2a/endpoints",
+      "destination": "/agent-registry/endpoints-and-lifecycle"
+    },
+    {
+      "source": "/a2a/registry",
+      "destination": "/agent-registry/catalog"
+    },
+    {
+      "source": "/agents/build-graph",
+      "destination": "/graph-studio/overview"
+    },
+    {
+      "source": "/agents/builds",
+      "destination": "/builds/overview"
+    },
+    {
+      "source": "/agents/environments",
+      "destination": "/builds/environments"
+    },
+    {
+      "source": "/agents/expose-a2a",
+      "destination": "/agent-registry/expose-your-flow"
+    },
+    {
+      "source": "/assistants/autonomous",
+      "destination": "/agents/autonomous"
+    },
+    {
+      "source": "/assistants/components",
+      "destination": "/configure/overview"
+    },
+    {
+      "source": "/assistants/components/builds",
+      "destination": "/builds/overview"
+    },
+    {
+      "source": "/assistants/components/channels",
+      "destination": "/channels/overview"
+    },
+    {
+      "source": "/assistants/components/environments",
+      "destination": "/configure/env-variables"
+    },
+    {
+      "source": "/assistants/components/flows",
+      "destination": "/graph-studio/overview"
+    },
+    {
+      "source": "/assistants/components/intents",
+      "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/assistants/components/intents-email",
+      "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/assistants/components/tools",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/assistants/components/triggers",
+      "destination": "/agents/deploy-trigger"
+    },
+    {
+      "source": "/assistants/conversational",
+      "destination": "/agents/conversational"
+    },
+    {
+      "source": "/assistants/overview",
+      "destination": "/agents/overview"
+    },
+    {
+      "source": "/assistants/types",
+      "destination": "/agents/overview"
+    },
+    {
+      "source": "/devstudio/copilot-tools",
+      "destination": "/devstudio/methods"
+    },
+    {
+      "source": "/devstudio/linking-tools",
+      "destination": "/devstudio/custom-tools"
+    },
+    {
+      "source": "/devstudio/manual-coding",
+      "destination": "/devstudio/methods"
+    },
+    {
+      "source": "/devstudio/prebuilt/customapi",
+      "destination": "/integrations-hub/api"
+    },
+    {
+      "source": "/devstudio/prebuilt/gmail",
+      "destination": "/integrations-hub/gmail"
+    },
+    {
+      "source": "/devstudio/prebuilt/jira-zendesk",
+      "destination": "/integrations-hub/jira"
+    },
+    {
+      "source": "/devstudio/prebuilt/jiratools",
+      "destination": "/integrations-hub/jira"
+    },
+    {
+      "source": "/devstudio/prebuilt/mongodbtool",
+      "destination": "/integrations-hub/mongodb"
+    },
+    {
+      "source": "/devstudio/prebuilt/sheets",
+      "destination": "/integrations-hub/google-sheets"
+    },
+    {
+      "source": "/devstudio/prebuilt/slacktool",
+      "destination": "/integrations-hub/slack"
+    },
+    {
+      "source": "/devstudio/prebuilt/teamstool",
+      "destination": "/integrations-hub/microsoft-teams"
+    },
+    {
+      "source": "/devstudio/structure",
+      "destination": "/devstudio/custom-tools"
+    },
+    {
+      "source": "/devstudio/system-tool",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/testing-tools",
+      "destination": "/devstudio/custom-tools"
+    },
+    {
+      "source": "/devstudio/types",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/versioning",
+      "destination": "/devstudio/custom-tools"
+    },
+    {
+      "source": "/flowgen/agent-block",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/agent-block/prompt",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/agent-block/rag",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/flowgen/agent-block/tools",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/agent-block/variables",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/flowgen/blocks",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/blocks/child-agent",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/blocks/end-block",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/blocks/master-agent",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/blocks/start",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/blocks/tool-block",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/capture-variables-in-agent-block",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/flowgen/connections",
+      "destination": "/graph-studio/connections"
+    },
+    {
+      "source": "/flowgen/connections/conditional-edges",
+      "destination": "/graph-studio/connections"
+    },
+    {
+      "source": "/flowgen/connections/edges",
+      "destination": "/graph-studio/connections"
+    },
+    {
+      "source": "/flowgen/connections/handles",
+      "destination": "/graph-studio/connections"
+    },
+    {
       "source": "/flowgen/copilot-method",
       "destination": "/graph-studio/methods"
+    },
+    {
+      "source": "/flowgen/input-variables-in-agent-block",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/flowgen/interface",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/flowgen/interface/block-library",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/flowgen/interface/canvas",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/flowgen/interface/inspector-panel",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/flowgen/interface/variables-panel",
+      "destination": "/graph-studio/interface"
     },
     {
       "source": "/flowgen/manual-method",
@@ -47,343 +283,67 @@
       "destination": "/graph-studio/publishing"
     },
     {
-      "source": "/flowgen/interface",
-      "destination": "/graph-studio/interface"
-    },
-    {
-      "source": "/flowgen/interface/canvas",
-      "destination": "/graph-studio/interface"
-    },
-    {
-      "source": "/flowgen/interface/inspector-panel",
-      "destination": "/graph-studio/interface"
-    },
-    {
-      "source": "/flowgen/interface/variables-panel",
-      "destination": "/graph-studio/interface"
-    },
-    {
-      "source": "/flowgen/interface/block-library",
-      "destination": "/graph-studio/interface"
-    },
-    {
-      "source": "/flowgen/connections",
-      "destination": "/graph-studio/connections"
-    },
-    {
-      "source": "/flowgen/connections/handles",
-      "destination": "/graph-studio/connections"
-    },
-    {
-      "source": "/flowgen/connections/edges",
-      "destination": "/graph-studio/connections"
-    },
-    {
-      "source": "/flowgen/connections/conditional-edges",
-      "destination": "/graph-studio/connections"
-    },
-    {
       "source": "/flowgen/rag-management",
-      "destination": "/graph-studio/rag-management"
-    },
-    {
-      "source": "/flowgen/rag-management/data-sources",
-      "destination": "/graph-studio/rag-management"
+      "destination": "/graph-studio/interface"
     },
     {
       "source": "/flowgen/rag-management/collections",
-      "destination": "/graph-studio/rag-management"
-    },
-    {
-      "source": "/flowgen/rag-management/referencing",
-      "destination": "/graph-studio/rag-management"
-    },
-    {
-      "source": "/flowgen/types-of-session-variables",
-      "destination": "/graph-studio/variables"
-    },
-    {
-      "source": "/flowgen/input-variables-in-agent-block",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/capture-variables-in-agent-block",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/blocks",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/blocks/start",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/blocks/master-agent",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/blocks/child-agent",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/blocks/tool-block",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/blocks/end-block",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/agent-block",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/agent-block/prompt",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/agent-block/rag",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/agent-block/tools",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/flowgen/agent-block/variables",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/what-is-phinite",
-      "destination": "/getting-started/about-phinite"
-    },
-    {
-      "source": "/quickstart",
-      "destination": "/getting-started/quickstart"
-    },
-    {
-      "source": "/index",
-      "destination": "/getting-started/about-phinite"
-    },
-    {
-      "source": "/agents/build-graph",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/studio/nodes",
-      "destination": "/graph-studio/nodes"
-    },
-    {
-      "source": "/studio/variables",
-      "destination": "/graph-studio/variables"
-    },
-    {
-      "source": "/rag/overview",
-      "destination": "/graph-studio/rag-management"
-    },
-    {
-      "source": "/rag/data-sources",
-      "destination": "/graph-studio/rag-management"
-    },
-    {
-      "source": "/rag/attach-to-nodes",
-      "destination": "/graph-studio/rag-management"
-    },
-    {
-      "source": "/tools/overview",
-      "destination": "/devstudio/overview"
-    },
-    {
-      "source": "/agents/environments",
-      "destination": "/builds/environments"
-    },
-    {
-      "source": "/agents/builds",
-      "destination": "/builds/overview"
-    },
-    {
-      "source": "/agents/expose-a2a",
-      "destination": "/agent-registry/expose-your-flow"
-    },
-    {
-      "source": "/a2a/agent-card-identity",
-      "destination": "/agent-registry/agent-cards"
-    },
-    {
-      "source": "/a2a/registry",
-      "destination": "/agent-registry/catalog"
-    },
-    {
-      "source": "/a2a/discovery",
-      "destination": "/agent-registry/registry-agent-nodes"
-    },
-    {
-      "source": "/a2a/endpoints",
-      "destination": "/agent-registry/endpoints-and-lifecycle"
-    },
-    {
-      "source": "/assistants/overview",
-      "destination": "/agents/overview"
-    },
-    {
-      "source": "/assistants/types",
-      "destination": "/agents/overview"
-    },
-    {
-      "source": "/assistants/conversational",
-      "destination": "/agents/conversational"
-    },
-    {
-      "source": "/assistants/autonomous",
-      "destination": "/agents/autonomous"
-    },
-    {
-      "source": "/assistants/components",
-      "destination": "/configure/overview"
-    },
-    {
-      "source": "/assistants/components/flows",
-      "destination": "/graph-studio/overview"
-    },
-    {
-      "source": "/assistants/components/tools",
-      "destination": "/devstudio/overview"
-    },
-    {
-      "source": "/assistants/components/builds",
-      "destination": "/builds/overview"
-    },
-    {
-      "source": "/assistants/components/environments",
-      "destination": "/configure/env-variables"
-    },
-    {
-      "source": "/assistants/components/channels",
-      "destination": "/channels/overview"
-    },
-    {
-      "source": "/assistants/components/triggers",
-      "destination": "/agents/deploy-trigger"
-    },
-    {
-      "source": "/assistants/components/intents",
-      "destination": "/triggers-intents/trigger-apis"
-    },
-    {
-      "source": "/assistants/components/intents-email",
-      "destination": "/triggers-intents/trigger-apis"
-    },
-    {
-      "source": "/triggers-intents/intents",
-      "destination": "/triggers-intents/trigger-apis"
-    },
-    {
-      "source": "/triggers-intents/creating-intents",
-      "destination": "/triggers-intents/trigger-apis"
-    },
-    {
-      "source": "/triggers-intents/prompt-training",
-      "destination": "/triggers-intents/trigger-apis"
-    },
-    {
-      "source": "/triggers-intents/testing-intents",
-      "destination": "/triggers-intents/trigger-apis"
-    },
-    {
-      "source": "/triggers-intents/intent-as-api",
-      "destination": "/triggers-intents/trigger-apis"
-    },
-    {
-      "source": "/reference/glossary",
-      "destination": "/reference/glossary-v2"
-    },
-    {
-      "source": "/reference/ai-assistant",
-      "destination": "/reference/glossary-v2"
-    },
-    {
-      "source": "/setup-account/signing-up",
-      "destination": "/getting-started/about-phinite"
-    },
-    {
-      "source": "/setup-account/creating-workspace",
-      "destination": "/getting-started/about-phinite"
-    },
-    {
-      "source": "/setup-account/workspace-overview",
-      "destination": "/workspaces/workspace-overview"
-    },
-    {
-      "source": "/workspaces/creating-workspace",
-      "destination": "/workspaces/workspace-overview"
-    },
-    {
-      "source": "/graph-studio/methods",
-      "destination": "/graph-studio/methods"
-    },
-    {
-      "source": "/devstudio/prebuilt/gmail",
-      "destination": "/integrations-hub/gmail"
-    },
-    {
-      "source": "/devstudio/prebuilt/slacktool",
-      "destination": "/integrations-hub/slack"
-    },
-    {
-      "source": "/devstudio/prebuilt/teamstool",
-      "destination": "/integrations-hub/microsoft-teams"
-    },
-    {
-      "source": "/devstudio/prebuilt/jiratools",
-      "destination": "/integrations-hub/jira"
-    },
-    {
-      "source": "/devstudio/prebuilt/customapi",
-      "destination": "/integrations-hub/api"
-    },
-    {
-      "source": "/devstudio/prebuilt/mongodbtool",
-      "destination": "/integrations-hub/mongodb"
-    },
-    {
-      "source": "/devstudio/prebuilt/jira-zendesk",
-      "destination": "/integrations-hub/jira"
-    },
-    {
-      "source": "/devstudio/prebuilt/sheets",
-      "destination": "/integrations-hub/google-sheets"
-    },
-    {
-      "source": "/graph-studio/interface/node-library",
       "destination": "/graph-studio/interface"
     },
     {
-      "source": "/graph-studio/nodes/master-node",
-      "destination": "/graph-studio/nodes"
+      "source": "/flowgen/rag-management/data-sources",
+      "destination": "/graph-studio/interface"
     },
     {
-      "source": "/graph-studio/nodes/child-node",
-      "destination": "/graph-studio/nodes"
+      "source": "/flowgen/rag-management/referencing",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/flowgen/types-of-session-variables",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/graph-studio/agent-node",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/graph-studio/agent-node/prompt",
+      "destination": "/graph-studio/interface/node-library"
     },
     {
       "source": "/graph-studio/agent-node/rag",
-      "destination": "/graph-studio/agent-node"
+      "destination": "/graph-studio/interface/node-library"
     },
     {
-      "source": "/graph-studio/publishing",
-      "destination": "/graph-studio/publishing"
+      "source": "/graph-studio/agent-node/tools",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/graph-studio/agent-node/variables",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/graph-studio/capture-variables-in-agent-node",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/graph-studio/connections/conditional-edges",
+      "destination": "/graph-studio/connections"
+    },
+    {
+      "source": "/graph-studio/connections/edges",
+      "destination": "/graph-studio/connections"
+    },
+    {
+      "source": "/graph-studio/connections/handles",
+      "destination": "/graph-studio/connections"
     },
     {
       "source": "/graph-studio/copilot-method",
       "destination": "/graph-studio/methods"
     },
     {
-      "source": "/graph-studio/manual-method",
-      "destination": "/graph-studio/methods"
-    },
-    {
-      "source": "/graph-studio/interface",
+      "source": "/graph-studio/input-variables-in-agent-node",
       "destination": "/graph-studio/interface"
     },
     {
@@ -399,132 +359,140 @@
       "destination": "/graph-studio/interface"
     },
     {
+      "source": "/graph-studio/manual-method",
+      "destination": "/graph-studio/methods"
+    },
+    {
       "source": "/graph-studio/nodes",
-      "destination": "/graph-studio/nodes"
+      "destination": "/graph-studio/interface/node-library"
     },
     {
-      "source": "/graph-studio/nodes/start",
-      "destination": "/graph-studio/nodes"
-    },
-    {
-      "source": "/graph-studio/nodes/tool-node",
-      "destination": "/graph-studio/nodes"
+      "source": "/graph-studio/nodes/child-node",
+      "destination": "/graph-studio/interface/node-library"
     },
     {
       "source": "/graph-studio/nodes/end-node",
-      "destination": "/graph-studio/nodes"
+      "destination": "/graph-studio/interface/node-library"
     },
     {
-      "source": "/graph-studio/connections",
-      "destination": "/graph-studio/connections"
+      "source": "/graph-studio/nodes/master-node",
+      "destination": "/graph-studio/interface/node-library"
     },
     {
-      "source": "/graph-studio/connections/handles",
-      "destination": "/graph-studio/connections"
+      "source": "/graph-studio/nodes/start",
+      "destination": "/graph-studio/interface/node-library"
     },
     {
-      "source": "/graph-studio/connections/edges",
-      "destination": "/graph-studio/connections"
-    },
-    {
-      "source": "/graph-studio/connections/conditional-edges",
-      "destination": "/graph-studio/connections"
-    },
-    {
-      "source": "/graph-studio/agent-node",
-      "destination": "/graph-studio/agent-node"
-    },
-    {
-      "source": "/graph-studio/agent-node/prompt",
-      "destination": "/graph-studio/agent-node"
-    },
-    {
-      "source": "/graph-studio/agent-node/tools",
-      "destination": "/graph-studio/agent-node"
-    },
-    {
-      "source": "/graph-studio/agent-node/variables",
-      "destination": "/graph-studio/agent-node"
+      "source": "/graph-studio/nodes/tool-node",
+      "destination": "/graph-studio/interface/node-library"
     },
     {
       "source": "/graph-studio/rag-management",
-      "destination": "/graph-studio/rag-management"
-    },
-    {
-      "source": "/graph-studio/rag-management/data-sources",
-      "destination": "/graph-studio/rag-management"
+      "destination": "/graph-studio/interface"
     },
     {
       "source": "/graph-studio/rag-management/collections",
-      "destination": "/graph-studio/rag-management"
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/graph-studio/rag-management/data-sources",
+      "destination": "/graph-studio/interface"
     },
     {
       "source": "/graph-studio/rag-management/referencing",
-      "destination": "/graph-studio/rag-management"
+      "destination": "/graph-studio/interface"
     },
     {
       "source": "/graph-studio/types-of-session-variables",
-      "destination": "/graph-studio/variables"
+      "destination": "/graph-studio/interface"
     },
     {
-      "source": "/graph-studio/input-variables-in-agent-node",
-      "destination": "/graph-studio/variables"
+      "source": "/graph-studio/variables",
+      "destination": "/graph-studio/interface"
     },
     {
-      "source": "/graph-studio/capture-variables-in-agent-node",
-      "destination": "/graph-studio/variables"
+      "source": "/index",
+      "destination": "/getting-started/about-phinite"
     },
     {
-      "source": "/devstudio/methods",
-      "destination": "/devstudio/methods"
+      "source": "/quickstart",
+      "destination": "/getting-started/quickstart"
     },
     {
-      "source": "/devstudio/copilot-tools",
-      "destination": "/devstudio/methods"
+      "source": "/rag/attach-to-nodes",
+      "destination": "/graph-studio/interface"
     },
     {
-      "source": "/devstudio/manual-coding",
-      "destination": "/devstudio/methods"
+      "source": "/rag/data-sources",
+      "destination": "/graph-studio/interface"
     },
     {
-      "source": "/devstudio/types",
+      "source": "/rag/overview",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/reference/ai-assistant",
+      "destination": "/reference/glossary-v2"
+    },
+    {
+      "source": "/reference/glossary",
+      "destination": "/reference/glossary-v2"
+    },
+    {
+      "source": "/setup-account/creating-workspace",
+      "destination": "/getting-started/about-phinite"
+    },
+    {
+      "source": "/setup-account/signing-up",
+      "destination": "/getting-started/about-phinite"
+    },
+    {
+      "source": "/setup-account/workspace-overview",
+      "destination": "/workspaces/workspace-overview"
+    },
+    {
+      "source": "/studio/nodes",
+      "destination": "/graph-studio/interface/node-library"
+    },
+    {
+      "source": "/studio/variables",
+      "destination": "/graph-studio/interface"
+    },
+    {
+      "source": "/tools/overview",
       "destination": "/devstudio/overview"
     },
     {
-      "source": "/devstudio/system-tool",
-      "destination": "/devstudio/overview"
-    },
-    {
-      "source": "/devstudio/custom-tools",
-      "destination": "/devstudio/custom-tools"
-    },
-    {
-      "source": "/devstudio/prebuilt-tools",
-      "destination": "/devstudio/prebuilt-tools"
-    },
-    {
-      "source": "/devstudio/structure",
-      "destination": "/devstudio/custom-tools"
-    },
-    {
-      "source": "/devstudio/versioning",
-      "destination": "/devstudio/custom-tools"
-    },
-    {
-      "source": "/devstudio/linking-tools",
-      "destination": "/devstudio/custom-tools"
-    },
-    {
-      "source": "/devstudio/testing-tools",
-      "destination": "/devstudio/custom-tools"
-    },
-    {
-      "source": "/triggers-intents/triggers/overview",
+      "source": "/triggers-intents/creating-intents",
       "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/triggers-intents/intent-as-api",
+      "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/triggers-intents/intents",
+      "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/triggers-intents/prompt-training",
+      "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/triggers-intents/testing-intents",
+      "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/triggers-intents/triggers",
+      "destination": "/triggers-intents/overview"
     },
     {
       "source": "/triggers-intents/triggers/api",
       "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/triggers-intents/triggers/api-guide",
+      "destination": "/triggers-intents/api-usage-examples"
     },
     {
       "source": "/triggers-intents/triggers/bg_task",
@@ -535,16 +503,20 @@
       "destination": "/triggers-intents/trigger-apis"
     },
     {
-      "source": "/triggers-intents/triggers/api-guide",
-      "destination": "/triggers-intents/api-usage-examples"
-    },
-    {
       "source": "/triggers-intents/triggers/integration-funnel",
       "destination": "/integrations-hub/overview"
     },
     {
-      "source": "/triggers-intents/triggers",
-      "destination": "/triggers-intents/overview"
+      "source": "/triggers-intents/triggers/overview",
+      "destination": "/triggers-intents/trigger-apis"
+    },
+    {
+      "source": "/what-is-phinite",
+      "destination": "/getting-started/about-phinite"
+    },
+    {
+      "source": "/workspaces/creating-workspace",
+      "destination": "/workspaces/workspace-overview"
     }
   ],
   "navigation": {
@@ -574,12 +546,14 @@
             "pages": [
               "graph-studio/overview",
               "graph-studio/methods",
-              "graph-studio/interface",
-              "graph-studio/nodes",
-              "graph-studio/variables",
+              {
+                "group": "Interface",
+                "pages": [
+                  "graph-studio/interface",
+                  "graph-studio/interface/node-library"
+                ]
+              },
               "graph-studio/connections",
-              "graph-studio/agent-node",
-              "graph-studio/rag-management",
               "graph-studio/publishing"
             ]
           },

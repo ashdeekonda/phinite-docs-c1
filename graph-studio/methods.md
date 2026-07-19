@@ -38,9 +38,9 @@ Before **Save**, confirm a clear path from **Start** to **End** and that branch 
 Use the manual canvas for full control over placement, edge order, and drawer configuration.
 
 1. **New Agent Graph** → choose **Conversational** or **Autonomous** → **Create**.
-2. **Add nodes** from the floating canvas palette ([Node types](/graph-studio/nodes)).
+2. **Add nodes** from the floating canvas palette ([Node types](/graph-studio/interface/node-library)).
 3. **Connect edges** ([Connections](/graph-studio/connections)).
-4. **Configure the drawer** ([Agent configuration](/graph-studio/agent-node)).
+4. **Configure the drawer** ([Agent configuration](/graph-studio/interface/node-library)).
 5. **Test** from the toolbar, then **Save**.
 
 <Frame caption="Configure a node in the drawer">
@@ -50,7 +50,7 @@ Use the manual canvas for full control over placement, edge order, and drawer co
 ### Iterate
 
 1. Run sample inputs from **Test**.
-2. Refine prompts, RAG, and [variables](/graph-studio/variables).
+2. Refine prompts, RAG, and [variables](/graph-studio/interface#variables).
 3. Adjust [conditional edges](/graph-studio/connections) for branching graphs.
 4. **Save** after each meaningful change.
 

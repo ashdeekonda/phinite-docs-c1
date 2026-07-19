@@ -17,5 +17,5 @@ Variable capture logs show what each tool and agent node wrote to the session—
 
 ## Related
 
-- [Graph Studio variables](/graph-studio/variables)
+- [Graph Studio variables](/graph-studio/interface#variables)
 - [Timeline view](/observability/logs/timeline)

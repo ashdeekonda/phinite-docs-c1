@@ -45,7 +45,7 @@ Use these workspace and Graph Studio surfaces at each stage of the tool lifecycl
 1. Create a tool → implement in Dev Studio ([Methods](/devstudio/methods)).
 2. Define structure and test ([Custom tools](/devstudio/custom-tools)).
 3. **Publish** a version.
-4. Attach in [Graph Studio](/graph-studio/agent-node) → **Save** → **Build**.
+4. Attach in [Graph Studio](/graph-studio/interface/node-library) → **Save** → **Build**.
 
 ```mermaid
 flowchart LR
@@ -105,6 +105,6 @@ After linking a tool to a graph:
 
 ## Related
 
-- [Graph Studio — Tools tab](/graph-studio/agent-node)
+- [Graph Studio — Tools tab](/graph-studio/interface/node-library)
 - [Builds overview](/builds/overview)
 - [Configure integrations](/configure/integrations)

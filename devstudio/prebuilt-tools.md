@@ -26,7 +26,7 @@ description: Connect third-party APIs once, enable subtools on Agent Graph nodes
 
 1. **Integrations** → **Predefined tools** ([configure integrations](/configure/integrations)).
 2. Select vendor → **Add Configuration** → **Save**.
-3. [Graph Studio](/graph-studio/agent-node) → **Tools** tab → pick integration → enable subtools.
+3. [Graph Studio](/graph-studio/interface/node-library) → **Tools** tab → pick integration → enable subtools.
 4. **Save** → **Build**.
 
 ## Examples

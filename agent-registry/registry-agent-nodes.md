@@ -101,7 +101,7 @@ Discovery nodes skip per-tool configuration validation used in Browse mode — t
   <Card title="Endpoints & lifecycle" icon="plug" href="/agent-registry/endpoints-and-lifecycle">
     Hosted URLs and visibility at invoke time.
   </Card>
-  <Card title="Agent node anatomy" icon="cube" href="/graph-studio/agent-node">
+  <Card title="Agent node anatomy" icon="cube" href="/graph-studio/interface/node-library">
     Prompts, RAG, tools, and variables on standard agent nodes.
   </Card>
 </CardGroup>

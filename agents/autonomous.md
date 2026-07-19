@@ -50,8 +50,8 @@ See [Triggers overview](/triggers-intents/overview) for the full automation hub.
 
 1. Create an **Autonomous** Agent Graph from Workspace Home.
 2. In Graph Studio, model the automation as nodes — typically **Start** → agent/tool chain → **End**.
-3. Attach [tools](/graph-studio/agent-node) for each external action (CRM update, email send, data fetch).
-4. Use [variables](/graph-studio/variables) to pass trigger payload fields into tool inputs.
+3. Attach [tools](/graph-studio/interface/node-library) for each external action (CRM update, email send, data fetch).
+4. Use [variables](/graph-studio/interface#variables) to pass trigger payload fields into tool inputs.
 5. Click **Save**, then **Build** ([Builds overview](/builds/overview)).
 6. Assign the build to **DEV** / **UAT** / **PROD**.
 7. Click **Deploy** and choose a target:

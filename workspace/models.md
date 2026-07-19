@@ -42,7 +42,7 @@ description: BYOK provider keys and model selection for agent nodes.
 ## Related
 
 <CardGroup cols={2}>
-  <Card title="Agent node" icon="robot" href="/graph-studio/agent-node">
+  <Card title="Agent node" icon="robot" href="/graph-studio/interface/node-library">
     Drawer fields for prompts, tools, and model.
   </Card>
   <Card title="Graph Studio overview" icon="diagram-project" href="/graph-studio/overview">

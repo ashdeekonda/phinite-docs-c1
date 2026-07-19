@@ -67,7 +67,7 @@ icon: sliders
 | **Variables** | Input and capture variables for the node |
 | **Decision** | Conditional routing edges |
 
-See [Graph Studio — Agent configuration](/graph-studio/agent-node) for drawer documentation.
+See [Graph Studio — Agent configuration](/graph-studio/interface/node-library) for drawer documentation.
 
 ### Environment variables
 

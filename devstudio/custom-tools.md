@@ -84,7 +84,7 @@ Published tools attach on **Master Agent**, **Child Agent**, and **Tool** nodes.
   <img src="/images/enable-tools.png" alt="Tools tab with tool picker" />
 </Frame>
 
-See [Graph Studio — Agent configuration](/graph-studio/agent-node).
+See [Graph Studio — Agent configuration](/graph-studio/interface/node-library).
 
 ## Related
 
