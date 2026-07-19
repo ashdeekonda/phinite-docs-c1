@@ -15,7 +15,7 @@ The **Start** node marks where execution begins when a graph runs. Every Agent G
 ## Add a Start node
 
 1. Open [Graph Studio](/graph-studio/overview).
-2. Add a **Start** node from the [Node Library](/graph-studio/interface/node-library).
+2. Add a **Start** node from the [canvas toolbar](/graph-studio/nodes#add-nodes-from-the-canvas-toolbar).
 3. Connect Start → **Master Agent** (or first step).
 4. **Save** the graph.
 

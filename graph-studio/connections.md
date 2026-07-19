@@ -31,4 +31,4 @@ description: Connect nodes with handles and edges; branch with decision variable
 ## Related
 
 - [Canvas](/graph-studio/interface/canvas)
-- [Master Agent — Decision tab](/graph-studio/nodes/master-node)
+- [Agent configuration](/graph-studio/agent-node)

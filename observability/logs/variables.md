@@ -9,7 +9,7 @@ Variable capture logs show what each tool and agent node wrote to the session—
 
 1. Verify extraction prompts populate expected fields.
 2. Debug missing or malformed values before downstream nodes run.
-3. Confirm tool `captured_variables` match [Dev Studio structure](/devstudio/structure).
+3. Confirm tool `captured_variables` match the [Dev Studio tool contract](/devstudio/overview#tool-contract).
 
 <Note>
   Captured variables are **runtime session state**, not workspace [env variables](/configure/env-variables) or Agent Card metadata.

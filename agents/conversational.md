@@ -51,7 +51,7 @@ Configure channel credentials once under workspace **Integrations**, then assign
 
 1. Create a **Conversational** Agent Graph from Workspace Home.
 2. In Graph Studio, add **Start**, **Master Agent**, and **End** nodes ([Node types](/graph-studio/nodes)).
-3. Configure each agent node's [prompt](/graph-studio/agent-node/prompt), [tools](/graph-studio/agent-node/tools), and [RAG](/graph-studio/agent-node/rag).
+3. Configure each agent node's [prompt](/graph-studio/agent-node/prompt), [tools](/graph-studio/agent-node/tools), and [RAG](/graph-studio/rag-management/referencing).
 4. Define [variables](/graph-studio/agent-node/variables) for inputs the graph should capture across turns.
 5. Click **Save**, then **Build** to pin tool versions ([Builds](/builds/overview)).
 6. Assign the build to **DEV** / **UAT** / **PROD**.

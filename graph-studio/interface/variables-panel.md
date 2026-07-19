@@ -39,6 +39,17 @@ The **Variables panel** manages graph-wide variable definitions — names, types
 
 ## Related
 
-- [Agent node variables](/graph-studio/agent-node/variables)
-- [Types of session variables](/graph-studio/types-of-session-variables)
-- [Configuration overview](/configure/overview)
+<CardGroup cols={2}>
+  <Card title="Agent node variables" icon="database" href="/graph-studio/agent-node/variables">
+    Input and capture on Master and Child Agent nodes.
+  </Card>
+  <Card title="Input variables" icon="arrow-right-to-bracket" href="/graph-studio/input-variables-in-agent-node">
+    Map flow and session values into an agent step.
+  </Card>
+  <Card title="Capture variables" icon="filter" href="/graph-studio/capture-variables-in-agent-node">
+    Fields the model extracts for downstream steps.
+  </Card>
+  <Card title="Session variable types" icon="clock" href="/graph-studio/types-of-session-variables">
+    System, user, tool-returned, and capture runtime state.
+  </Card>
+</CardGroup>

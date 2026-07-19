@@ -15,6 +15,6 @@ This page has moved. **Tools & Dev Studio** is the canonical hub for creating, v
 
 ## Quick links
 
-- [Link tools to agent nodes](/devstudio/linking-tools)
+- [Tools & Dev Studio](/devstudio/overview) — full workflow including linking tools to agent nodes
 - [Graph Studio agent node tools](/graph-studio/agent-node/tools)
 - [Configure integrations](/configure/integrations)

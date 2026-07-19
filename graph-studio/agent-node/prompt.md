@@ -41,4 +41,4 @@ The **task prompt** in the **Details** tab defines what a **Master Agent** or **
 
 - [Agent node anatomy](/graph-studio/agent-node)
 - [Variables](/graph-studio/agent-node/variables)
-- [RAG tab](/graph-studio/agent-node/rag)
+- [Attach RAG to agents](/graph-studio/rag-management/referencing)

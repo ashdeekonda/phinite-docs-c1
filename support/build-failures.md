@@ -17,8 +17,8 @@ description: "Diagnose and fix common Agent Graph build failures."
 ## Resolution checklist
 
 1. **Save** the graph in Graph Studio; resolve canvas validation errors.
-2. **Publish** all tools referenced on agent nodes ([versioning](/devstudio/versioning)).
-3. Run [tool tests](/devstudio/testing-tools) with realistic inputs in Dev/UAT.
+2. **Publish** all tools referenced on agent nodes ([Tools & Dev Studio](/devstudio/overview)).
+3. Run tool tests with realistic inputs in Dev/UAT ([test and publish](/devstudio/overview#test-and-publish)).
 4. Add version notes for each changed tool.
 5. Verify credentials per environment before rebuilding for Prod.
 

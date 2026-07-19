@@ -40,7 +40,7 @@ You should already have:
 3. Enter **Agent Graph Name** and **Description**.
 4. Choose **Conversational** or **Autonomous**.
 5. Click **Create Agent Graph** — Graph Studio opens on the canvas.
-6. Add and connect [nodes](/graph-studio/nodes); attach [tools](/graph-studio/agent-node/tools) and [RAG](/graph-studio/agent-node/rag) as needed.
+6. Add and connect [nodes](/graph-studio/nodes); attach [tools](/graph-studio/agent-node/tools) and [RAG](/graph-studio/rag-management/referencing) as needed.
 7. Click **Save** on the toolbar.
 
 <Frame caption="New Agent Graph — choose Conversational or Autonomous">

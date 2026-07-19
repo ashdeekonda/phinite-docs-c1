@@ -37,5 +37,5 @@ Attached RAG lists are saved with the graph version. When you **Build**, the pin
 ## Related
 
 - [RAG Data sources](/graph-studio/rag-management/data-sources)
-- [Agent node RAG](/graph-studio/agent-node/rag)
+- [Agent configuration](/graph-studio/agent-node)
 - [Builds](/builds/overview)

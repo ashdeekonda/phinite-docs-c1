@@ -9,8 +9,8 @@ Graph Studio splits design work across four main areas. Together they cover layo
   <Card title="Canvas" icon="layout" href="/graph-studio/interface/canvas">
     Arrange and connect nodes; pan and zoom the graph.
   </Card>
-  <Card title="Node Library" icon="grid" href="/graph-studio/interface/node-library">
-    Add Start, Master Agent, Child Agent, Tool, and End nodes.
+  <Card title="Node types" icon="grid" href="/graph-studio/nodes">
+    Add Start, Master Agent, Child Agent, Tool, and End from the canvas toolbar.
   </Card>
   <Card title="Inspector (node drawer)" icon="sliders" href="/graph-studio/interface/inspector-panel">
     Configure prompt, RAG, tools, and variables for the selected node.

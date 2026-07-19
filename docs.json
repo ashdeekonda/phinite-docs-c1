@@ -353,6 +353,66 @@
     {
       "source": "/devstudio/prebuilt/sheets",
       "destination": "/integrations-hub/google-sheets"
+    },
+    {
+      "source": "/graph-studio/interface/node-library",
+      "destination": "/graph-studio/nodes"
+    },
+    {
+      "source": "/graph-studio/nodes/master-node",
+      "destination": "/graph-studio/agent-node"
+    },
+    {
+      "source": "/graph-studio/nodes/child-node",
+      "destination": "/graph-studio/agent-node"
+    },
+    {
+      "source": "/graph-studio/agent-node/rag",
+      "destination": "/graph-studio/rag-management/referencing"
+    },
+    {
+      "source": "/devstudio/methods",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/copilot-tools",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/manual-coding",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/types",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/system-tool",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/custom-tools",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/prebuilt-tools",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/structure",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/versioning",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/linking-tools",
+      "destination": "/devstudio/overview"
+    },
+    {
+      "source": "/devstudio/testing-tools",
+      "destination": "/devstudio/overview"
     }
   ],
   "navigation": {
@@ -394,7 +454,6 @@
                 "pages": [
                   "graph-studio/interface",
                   "graph-studio/interface/canvas",
-                  "graph-studio/interface/node-library",
                   "graph-studio/interface/inspector-panel",
                   "graph-studio/interface/variables-panel"
                 ]
@@ -404,18 +463,8 @@
                 "pages": [
                   "graph-studio/nodes",
                   "graph-studio/nodes/start",
-                  "graph-studio/nodes/master-node",
-                  "graph-studio/nodes/child-node",
                   "graph-studio/nodes/tool-node",
                   "graph-studio/nodes/end-node"
-                ]
-              },
-              {
-                "group": "Variables",
-                "pages": [
-                  "graph-studio/types-of-session-variables",
-                  "graph-studio/input-variables-in-agent-node",
-                  "graph-studio/capture-variables-in-agent-node"
                 ]
               },
               {
@@ -428,17 +477,16 @@
                 ]
               },
               {
-                "group": "Agent Node",
+                "group": "Agent configuration",
                 "pages": [
                   "graph-studio/agent-node",
                   "graph-studio/agent-node/prompt",
-                  "graph-studio/agent-node/rag",
                   "graph-studio/agent-node/tools",
                   "graph-studio/agent-node/variables"
                 ]
               },
               {
-                "group": "RAG Management",
+                "group": "RAG",
                 "pages": [
                   "graph-studio/rag-management",
                   "graph-studio/rag-management/data-sources",
@@ -451,23 +499,7 @@
           {
             "group": "4. Tools & Dev Studio",
             "pages": [
-              "devstudio/overview",
-              {
-                "group": "Methods",
-                "pages": [
-                  "devstudio/methods",
-                  "devstudio/copilot-tools",
-                  "devstudio/manual-coding"
-                ]
-              },
-              "devstudio/types",
-              "devstudio/system-tool",
-              "devstudio/custom-tools",
-              "devstudio/prebuilt-tools",
-              "devstudio/structure",
-              "devstudio/versioning",
-              "devstudio/linking-tools",
-              "devstudio/testing-tools"
+              "devstudio/overview"
             ]
           },
           {

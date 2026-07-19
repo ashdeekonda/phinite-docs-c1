@@ -16,8 +16,8 @@ The **Integrations Hub** catalogs every connector your **Agent Graphs** can use 
   <Card title="Graph Studio tools" icon="link" href="/graph-studio/agent-node/tools">
     Enable subtools on agent nodes after connecting.
   </Card>
-  <Card title="Predefined tools workflow" icon="wrench" type="note" href="/devstudio/prebuilt-tools">
-    How connections and subtools work in Dev Studio and Graph Studio.
+  <Card title="Tools & Dev Studio" icon="wrench" type="note" href="/devstudio/overview">
+    Custom Python tools — Copilot, test, publish, and attach to agent nodes.
   </Card>
 </CardGroup>
 

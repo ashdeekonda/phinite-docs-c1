@@ -33,5 +33,5 @@ description: Workspace RAG Data collections and attaching knowledge to agent nod
 
 ## Related
 
-- [Agent node RAG tab](/graph-studio/agent-node/rag)
-- [Graph Studio overview](/graph-studio/overview)
+- [Agent node anatomy](/graph-studio/agent-node)
+- [RAG Management overview](/graph-studio/rag-management)

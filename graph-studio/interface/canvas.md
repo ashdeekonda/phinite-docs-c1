@@ -17,7 +17,7 @@ The **canvas** is the main React Flow surface where you place [nodes](/graph-stu
 
 ## Workflow on the canvas
 
-1. Add nodes from the toolbar or [Node Library](/graph-studio/interface/node-library).
+1. Add nodes from the toolbar ([Node types](/graph-studio/nodes)).
 2. Connect **Start** → agents → **Tool** nodes (as needed) → **End**.
 3. Click each agent node and complete drawer tabs before **Save**.
 4. Use **Test** from the toolbar to validate runs without deploying.

@@ -29,4 +29,4 @@ Keyboard shortcuts speed up canvas editing and tool testing while designing **Ag
 ## Related
 
 - [Graph Studio interface](/graph-studio/interface)
-- [Testing tools](/devstudio/testing-tools)
+- [Tools & Dev Studio](/devstudio/overview)

@@ -14,7 +14,7 @@ The **End** node marks successful completion of a graph path. Connect the last a
 
 ## Add an End node
 
-1. Add an **End** node from the [Node Library](/graph-studio/interface/node-library).
+1. Add an **End** node from the [canvas toolbar](/graph-studio/nodes#add-nodes-from-the-canvas-toolbar).
 2. Connect the final step(s) → **End**.
 3. For graphs with branches, each terminal branch should reach an **End** (or explicit stop) as designed.
 4. **Save** the graph.

@@ -50,7 +50,7 @@ description: Design Agent Graphs on the canvas — nodes, tools, RAG, variables 
 2. Select each **Master Agent** or **Child Agent** node and configure the drawer:
    - **[Prompt](/graph-studio/agent-node/prompt)** — mission and instructions
    - **[Tools](/graph-studio/agent-node/tools)** — attach published tools
-   - **[RAG](/graph-studio/agent-node/rag)** — attach collections from [RAG Data](/graph-studio/rag-management/data-sources)
+   - **[RAG](/graph-studio/rag-management/referencing)** — attach collections from [RAG Data](/graph-studio/rag-management/data-sources)
    - **[Variables](/graph-studio/agent-node/variables)** — input and capture
 3. Define graph-level variables in the [Variables panel](/graph-studio/interface/variables-panel) when your layout includes it.
 4. Click **Save** on the toolbar — required before **Build**.

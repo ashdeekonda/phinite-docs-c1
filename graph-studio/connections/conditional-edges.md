@@ -20,6 +20,6 @@ description: Branch Agent Graph paths using decision variables from the node dra
 
 ## Related
 
-- [Master Agent node](/graph-studio/nodes/master-node)
+- [Agent configuration — Decision tab](/graph-studio/agent-node)
 - [Agent node variables](/graph-studio/agent-node/variables)
 - [Connections overview](/graph-studio/connections)

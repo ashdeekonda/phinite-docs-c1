@@ -15,7 +15,7 @@ When you select a node on the canvas, the **node drawer** (Inspector) opens on t
 | --- | --- |
 | **Details** | Name, description, main **task prompt** ([Agent prompt](/graph-studio/agent-node/prompt)) |
 | **Tools** | Published tools attached to this agent ([Tools tab](/graph-studio/agent-node/tools)) |
-| **RAG** | Data sources and items from [RAG Data](/graph-studio/rag-management/data-sources) ([RAG tab](/graph-studio/agent-node/rag)) |
+| **RAG** | Data sources and items from [RAG Data](/graph-studio/rag-management/data-sources) ([Attach RAG](/graph-studio/rag-management/referencing)) |
 | **Variables** | Input and capture variables ([Variables tab](/graph-studio/agent-node/variables)) |
 | **Decision** | Variables used for [conditional edges](/graph-studio/connections/conditional-edges) |
 | **Child Variables** | On **Child Agent** nodes — variables scoped to the child |

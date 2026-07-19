@@ -33,4 +33,4 @@ description: Create and manage RAG collections in the workspace before attaching
 
 - [RAG Management](/graph-studio/rag-management)
 - [Collections](/graph-studio/rag-management/collections)
-- [Agent node RAG](/graph-studio/agent-node/rag)
+- [Referencing RAG in agents](/graph-studio/rag-management/referencing)

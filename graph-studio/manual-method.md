@@ -21,7 +21,7 @@ Use the **manual canvas** when you want full control over node placement, edge o
 
 ## Build on the canvas
 
-1. **Add nodes** — From the toolbar or [Node Library](/graph-studio/interface/node-library), add **Start**, **Master Agent**, **Child Agent**, **Tool**, and **End** nodes ([Node types](/graph-studio/nodes)).
+1. **Add nodes** — From the canvas toolbar, add **Start**, **Master Agent**, **Child Agent**, **Tool**, and **End** nodes ([Node types](/graph-studio/nodes)).
 2. **Connect edges** — Drag from a source handle to a target handle ([Handles & edges](/graph-studio/connections/handles)).
 3. **Configure the drawer** — Select a node; set **Details** (prompt), **Tools**, **RAG**, and **Variables** in the [Inspector](/graph-studio/interface/inspector-panel).
 4. **Graph variables** — Open the [Variables panel](/graph-studio/interface/variables-panel) when available for flow-wide schemas.

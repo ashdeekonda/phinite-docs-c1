@@ -7,7 +7,7 @@ A **Tool** node executes a published tool without an LLM orchestration step. Use
 
 ## Configure
 
-1. Add a **Tool** node from the [Node Library](/graph-studio/interface/node-library).
+1. Add a **Tool** node from the [canvas toolbar](/graph-studio/nodes#add-nodes-from-the-canvas-toolbar).
 2. Connect upstream from an agent or **Start** as your design requires.
 3. Select the tool and map inputs (in the node drawer or tool configuration UI).
 4. Connect downstream to the next agent, tool, or **End**.
