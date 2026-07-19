@@ -7,7 +7,7 @@ icon: robot
 **Autonomous Agent Graphs** run without a live user. External systems, schedules, or events start a session; the graph executes tools, routing, and optional registry agent calls in the background.
 
 <CardGroup cols={2}>
-  <Card title="Triggers overview" icon="bolt" href="/triggers-intents/triggers/overview">
+  <Card title="Triggers overview" icon="bolt" href="/triggers-intents/overview">
     API, cron, and background-task trigger types.
   </Card>
   <Card title="Deploy a trigger" icon="paper-plane" href="/agents/deploy-trigger">
@@ -39,19 +39,19 @@ icon: robot
 
 | Trigger | Use when | Doc |
 | --- | --- | --- |
-| **API (webhook)** | External system POSTs a payload to start a run | [Trigger API](/triggers-intents/triggers/api) |
-| **Cron** | Runs on a fixed schedule | [Cron triggers](/triggers-intents/triggers/cron) |
-| **Background task** | Queued or async execution | [Background task](/triggers-intents/triggers/bg_task) |
+| **API (webhook)** | External system POSTs a payload to start a run | [Trigger APIs](/triggers-intents/trigger-apis) |
+| **Cron** | Runs on a fixed schedule | [Trigger APIs — Cron](/triggers-intents/trigger-apis#cron-job-mode) |
+| **Background task** | Queued or async execution | [Trigger APIs — Background task](/triggers-intents/trigger-apis#background-task-mode-recommended) |
 | **Event-based** | React to integration events | [Event triggers](/triggers-intents/event-triggers) |
 
-See [Triggers overview](/triggers-intents/triggers/overview) for the full trigger hub.
+See [Triggers overview](/triggers-intents/overview) for the full automation hub.
 
 ## Design workflow
 
 1. Create an **Autonomous** Agent Graph from Workspace Home.
 2. In Graph Studio, model the automation as nodes — typically **Start** → agent/tool chain → **End**.
-3. Attach [tools](/graph-studio/agent-node/tools) for each external action (CRM update, email send, data fetch).
-4. Use [variables](/graph-studio/agent-node/variables) to pass trigger payload fields into tool inputs.
+3. Attach [tools](/graph-studio/agent-node) for each external action (CRM update, email send, data fetch).
+4. Use [variables](/graph-studio/variables) to pass trigger payload fields into tool inputs.
 5. Click **Save**, then **Build** ([Builds overview](/builds/overview)).
 6. Assign the build to **DEV** / **UAT** / **PROD**.
 7. Click **Deploy** and choose a target:
@@ -70,7 +70,7 @@ See [Triggers overview](/triggers-intents/triggers/overview) for the full trigge
 4. Copy the webhook URL and authenticate with your workspace API key.
 5. POST a JSON payload from your upstream system to start a run.
 
-See [Deploy a trigger](/agents/deploy-trigger) and [Trigger API guide](/triggers-intents/triggers/api-guide).
+See [Deploy a trigger](/agents/deploy-trigger) and [Trigger APIs](/triggers-intents/trigger-apis).
 
 ## Deploy a cron schedule
 
@@ -80,7 +80,7 @@ See [Deploy a trigger](/agents/deploy-trigger) and [Trigger API guide](/triggers
 4. Select environment and build version.
 5. Confirm — Phinite runs the graph on schedule.
 
-See [Cron triggers](/triggers-intents/triggers/cron).
+See [Trigger APIs — Cron](/triggers-intents/trigger-apis#cron-job-mode).
 
 ## Best practices
 

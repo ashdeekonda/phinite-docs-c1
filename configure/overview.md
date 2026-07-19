@@ -45,7 +45,7 @@ icon: sliders
 
 ## Typical order
 
-1. Configure nodes in Studio — [Nodes](/graph-studio/nodes), [Variables](/graph-studio/types-of-session-variables), [RAG](/graph-studio/rag-management).
+1. Configure nodes in Studio — see [Graph Studio](/graph-studio/overview) (nodes, variables, RAG).
 2. Set **Env. variables** for DEV / UAT / PROD.
 3. Connect **Integrations** (channels, triggers, predefined tools).
 4. **Save** the graph, then **Build** — pin versions; optionally [export config to build](/configure/build-export).
@@ -67,7 +67,7 @@ icon: sliders
 | **Variables** | Input and capture variables for the node |
 | **Decision** | Conditional routing edges |
 
-See [Agent node](/graph-studio/agent-node) for drawer documentation.
+See [Graph Studio — Agent configuration](/graph-studio/agent-node) for drawer documentation.
 
 ### Environment variables
 

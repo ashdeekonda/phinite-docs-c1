@@ -290,7 +290,7 @@ Sidebar sections when you open an Agent Graph in Graph Studio.
 ---
 
 <Note>
-  Legacy **Intents** UI may still appear in older workspaces. New IA uses [Triggers](/triggers-intents/triggers/overview) only—intent-specific rows below reflect historical permissions if your org has not migrated.
+  Legacy **Intents** UI may still appear in older workspaces. New IA uses [Triggers](/triggers-intents/overview) only—intent-specific rows below reflect historical permissions if your org has not migrated.
 </Note>
 
 ## Intents (legacy)

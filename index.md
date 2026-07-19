@@ -12,12 +12,9 @@ sidebarTitle: "Home"
 
 ## Design in Studio
 
-- [Build an agent graph](/agents/build-graph)
-- [Node types](/studio/nodes)
-- [RAG overview](/rag/overview)
-- [Variables](/studio/variables)
+- [Graph Studio](/graph-studio/overview)
+- [Tools & Dev Studio](/devstudio/overview)
 - [Model Keys](/workspace/models)
-- [Tools](/tools/overview)
 
 ## Configure
 

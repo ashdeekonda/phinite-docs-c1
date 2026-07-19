@@ -28,5 +28,5 @@ Keyboard shortcuts speed up canvas editing and tool testing while designing **Ag
 
 ## Related
 
-- [Graph Studio interface](/graph-studio/interface)
+- [Graph Studio](/graph-studio/overview)
 - [Tools & Dev Studio](/devstudio/overview)

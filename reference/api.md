@@ -4,7 +4,7 @@ description: "Authenticate and call Phinite APIs to trigger Agent Graph runs and
 icon: terminal
 ---
 
-Phinite APIs let external systems start **Agent Graph** runs—typically via [triggers](/triggers-intents/triggers/overview)—using workspace API keys or OAuth tokens your admin provisions.
+Phinite APIs let external systems start **Agent Graph** runs—typically via [triggers](/triggers-intents/trigger-apis)—using workspace API keys or OAuth tokens your admin provisions.
 
 ## Authentication
 
@@ -35,7 +35,7 @@ curl -X POST 'https://api.example.com/api/triggers/webhook/flow_123' \
 
 ## Related flows
 
-1. Create and deploy an Agent Graph with a [trigger](/triggers-intents/triggers/api).
+1. Create and deploy an Agent Graph with a [trigger](/triggers-intents/trigger-apis).
 2. Issue an API key under workspace **API keys** (role permitting).
 3. Call the trigger endpoint from your system; monitor runs in [observability](/observability/overview).
 
@@ -45,5 +45,6 @@ curl -X POST 'https://api.example.com/api/triggers/webhook/flow_123' \
 
 ## Related
 
-- [Trigger API guide](/triggers-intents/triggers/api-guide)
+- [Trigger APIs](/triggers-intents/trigger-apis)
+- [API usage examples](/triggers-intents/api-usage-examples)
 - [Deploy trigger](/agents/deploy-trigger)

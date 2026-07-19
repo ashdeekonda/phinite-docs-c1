@@ -11,10 +11,10 @@ icon: circle-question
     Graphs, tools, and integrations are workspace-scoped. Export/import patterns depend on your org process—clone graphs inside a workspace or rebuild with the same tool versions pinned on **Build**.
   </Accordion>
   <Accordion title="Do I need coding to build Agent Graphs?">
-    No for canvas design—[Graph Studio](/graph-studio/overview) and [Aura](/graph-studio/copilot-method) support visual authoring. **Tools & Dev Studio** often requires Python for custom integrations.
+    No for canvas design—[Graph Studio](/graph-studio/overview) and Phinite Aura support visual authoring. **Tools & Dev Studio** often requires Python for custom integrations.
   </Accordion>
   <Accordion title="What happened to Assistants and Intents?">
-    **Agent Graphs** replace Assistants; [Triggers](/triggers-intents/triggers/overview) replace the legacy Intents nav. See [Agents overview](/agents/overview).
+    **Agent Graphs** replace Assistants; [Triggers](/triggers-intents/overview) replace the legacy Intents nav. See [Agents overview](/agents/overview).
   </Accordion>
 </AccordionGroup>
 

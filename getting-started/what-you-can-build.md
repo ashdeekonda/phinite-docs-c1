@@ -89,7 +89,7 @@ Phinite enables teams to build and deploy **Agent Graphs** securely across chann
   </Accordion>
 </AccordionGroup>
 
-**Deploy targets:** [Deploy as API](/agents/deploy-trigger), [Cron job](/triggers-intents/triggers/cron), [Expose as A2A](/agent-registry/expose-your-flow) (coming soon for Autonomous).
+**Deploy targets:** [Deploy as API](/agents/deploy-trigger), [Cron job](/triggers-intents/trigger-apis#cron-job-mode), [Expose as A2A](/agent-registry/expose-your-flow) (coming soon for Autonomous).
 
 <Tip>
   Design Autonomous graphs for **idempotent** actions and clear error handling — there is no user in the loop to recover from failures.
@@ -123,4 +123,4 @@ Phinite enables teams to build and deploy **Agent Graphs** securely across chann
 - [Graph Studio](/graph-studio/overview)
 - [Builds overview](/builds/overview)
 - [Channels overview](/channels/overview)
-- [Triggers overview](/triggers-intents/triggers/overview)
+- [Triggers overview](/triggers-intents/overview)

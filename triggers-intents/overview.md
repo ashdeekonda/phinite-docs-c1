@@ -1,86 +1,89 @@
 ---
 title: Triggers & automation overview
-description: Start Autonomous Agent Graph runs via API webhooks, cron schedules, and event-driven triggers.
+description: Conversational vs Autonomous ingress — channels, Chat API, webhooks, and cron.
 icon: bolt
 ---
 
-**Triggers** start **Autonomous Agent Graph** runs — webhooks, cron schedules, background tasks, and integration events invoke a pinned build without a live user session.
+**Triggers and ingress** start Agent Graph runs from outside the canvas. What you configure depends on graph type: **Conversational** graphs use channels and Chat API; **Autonomous** graphs use API webhooks, background tasks, and cron.
 
 <CardGroup cols={2}>
-  <Card title="Triggers hub" icon="bolt" href="/triggers-intents/triggers/overview">
-    API, cron, and background-task trigger types.
+  <Card title="Trigger APIs" icon="code" href="/triggers-intents/trigger-apis">
+    Autonomous — API, background task, and cron modes.
   </Card>
-  <Card title="Deploy a trigger" icon="paper-plane" href="/agents/deploy-trigger">
-    Wire a build to API or Cron ingress from Graph Studio.
+  <Card title="API usage examples" icon="terminal" href="/triggers-intents/api-usage-examples">
+    cURL, Python, JavaScript, and more.
   </Card>
-  <Card title="Autonomous graphs" icon="robot" href="/agents/autonomous">
-    Design background automation on the canvas.
+  <Card title="Event triggers" icon="calendar" href="/triggers-intents/event-triggers">
+    Schedules and email-driven runs.
   </Card>
-  <Card title="Event triggers" icon="calendar" type="note" href="/triggers-intents/event-triggers">
-    React to integration and platform events.
+  <Card title="Mapping" icon="diagram-project" href="/triggers-intents/mapping">
+    Assign triggers to Agent Builds per environment.
   </Card>
 </CardGroup>
 
-<Info>
-  **Conversational** Agent Graphs use **channels** and **Chat API** for ingress — not triggers. See [Channels overview](/channels/overview) and [Conversational graphs](/agents/conversational).
-</Info>
+## Trigger types
 
-## How automation starts
+| | **Conversational** | **Autonomous** |
+| --- | --- | --- |
+| **Graph type** | Real-time chat or voice with a user | Background automation — no live chat UI |
+| **Typical ingress** | Messaging **channels**, **Chat API** POST | **API webhook**, **background task**, **cron** |
+| **Deploy in Studio** | **Deploy to Channel**, **Deploy as Chat API** | **Deploy as API**, **Cron job** |
+| **Configure in workspace** | **Integrations** → **Channels** | **Integrations** → **Triggers** |
+| **Docs** | [Conversational graphs](/agents/conversational), [Channels](/channels/overview) | [Autonomous graphs](/agents/autonomous), [Trigger APIs](/triggers-intents/trigger-apis) |
+
+### Conversational ingress
+
+Use when a user talks to the agent through a connected surface:
+
+| Ingress | Description |
+| --- | --- |
+| **Channel message** | Inbound WhatsApp, Slack, Teams, email, voice, web chat |
+| **Chat API** | Your app POSTs user messages to a deployed Chat API endpoint |
+
+These paths do **not** use Autonomous trigger execution modes (single endpoint / background task / cron).
+
+### Autonomous triggers
+
+Use when an external system or schedule starts a graph without a user in chat:
+
+| Trigger | Description |
+| --- | --- |
+| **API (single endpoint)** | Synchronous webhook — short runs (~120–150 s) |
+| **Background task** | Async start + status polling — **recommended** for multi-step graphs |
+| **Cron job** | Platform runs the graph on a schedule |
+| **Event-based** | Cron, email routing, or webhook patterns — see [Event triggers](/triggers-intents/event-triggers) |
+
+## How a run starts
 
 ```mermaid
 flowchart LR
-  ingress[Trigger ingress]
-  build[Pinned build]
+  ingress[Ingress or trigger]
+  build[Pinned Agent Build]
   graph[Agent Graph run]
   logs[Observability logs]
 
   ingress --> build --> graph --> logs
 ```
 
-| Ingress | Graph type | Deploy path |
-| --- | --- | --- |
-| **API webhook** | Autonomous | Deploy → **Deploy as API** |
-| **Cron schedule** | Autonomous | Deploy → **Cron job** |
-| **Background task** | Autonomous | Triggers hub configuration |
-| **Channel message** | Conversational | Deploy → **Deploy to Channel** |
-| **Chat API POST** | Conversational | Deploy → **Deploy as Chat API** |
-
-## Trigger types
-
-| Type | Use when | Doc |
-| --- | --- | --- |
-| **API (webhook)** | External system POSTs a payload | [Trigger API](/triggers-intents/triggers/api) |
-| **Cron** | Fixed schedule execution | [Cron triggers](/triggers-intents/triggers/cron) |
-| **Background task** | Queued or async runs | [Background task](/triggers-intents/triggers/bg_task) |
-| **Event-based** | Integration or platform events | [Event triggers](/triggers-intents/event-triggers) |
-
-See [Triggers overview](/triggers-intents/triggers/overview) for configuration details and [Trigger API guide](/triggers-intents/triggers/api-guide) for request formats.
-
-## Configure and deploy
+## Configure and deploy (Autonomous)
 
 1. Design an **Autonomous** Agent Graph in [Graph Studio](/graph-studio/overview).
-2. **Save** and **Build** — pin tool versions ([Builds](/builds/overview)).
+2. **Save** and **Build** ([Builds](/builds/overview)).
 3. Assign the build to **DEV** / **UAT** / **PROD**.
-4. Connect trigger credentials under workspace **Integrations** if needed ([Configure integrations](/configure/integrations)).
-5. Click **Deploy** in Graph Studio → **Deploy as API** or **Cron job**.
-6. Copy the webhook URL or confirm the cron expression.
-7. Monitor runs in [Observability](/observability/overview).
+4. Create the trigger under **Integrations** → **Triggers** ([Configure integrations](/configure/integrations)).
+5. **Deploy** in Graph Studio → **Deploy as API** or **Cron job** ([Deploy a trigger](/agents/deploy-trigger)).
+6. Test with [API usage examples](/triggers-intents/api-usage-examples); monitor in [Observability](/observability/overview).
 
-<Frame caption="Integrations hub — Triggers tab for Autonomous deploy">
-  <img src="/images/Integrations-Overview.png" alt="Workspace Integrations with Triggers tab" />
+<Frame caption="Integrations — Triggers tab">
+  <img src="/images/Integrations-Overview.png" alt="Workspace Integrations Triggers tab" />
 </Frame>
 
-## Mapping triggers to graphs
-
-Use [Trigger mapping](/triggers-intents/mapping) to associate trigger definitions with specific Agent Graph builds per environment.
-
 <Tip>
-  Design Autonomous graphs for **idempotent** actions — webhooks may retry. Capture trigger payload fields as variables for auditability in logs.
+  Design Autonomous graphs to be **idempotent** — webhooks may retry. Map payload fields to [variables](/graph-studio/variables) for auditability in logs.
 </Tip>
 
 ## Related
 
+- [Deploy a trigger](/agents/deploy-trigger)
 - [Autonomous Agent Graphs](/agents/autonomous)
-- [Deploy](/agents/deploy)
-- [Integration funnel](/triggers-intents/triggers/integration-funnel)
-- [Configure overview](/configure/overview)
+- [Conversational Agent Graphs](/agents/conversational)

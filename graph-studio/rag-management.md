@@ -3,35 +3,47 @@ title: RAG Management
 description: Workspace RAG Data collections and attaching knowledge to agent nodes.
 ---
 
-**RAG** (retrieval-augmented generation) grounds agent answers in your documents and structured data. Phinite splits this into two layers:
+**RAG** grounds agent answers in your documents and structured data.
 
-1. **RAG Data** — workspace collections you create once under **RAG Data** in the sidebar.
-2. **Node attachment** — each **Master Agent** or **Child Agent** selects which collections/items to use at runtime.
+## Two layers
 
-<CardGroup cols={2}>
-  <Card title="RAG Data sources" icon="folder" href="/graph-studio/rag-management/data-sources">
-    Create and index collections in the workspace.
-  </Card>
-  <Card title="Collections" icon="layers" href="/graph-studio/rag-management/collections">
-    Organize documents and items inside a data source.
-  </Card>
-  <Card title="Attach to agents" icon="link" href="/graph-studio/rag-management/referencing">
-    Select sources in the node drawer **RAG** tab.
-  </Card>
-</CardGroup>
+| Layer | Where | Purpose |
+| --- | --- | --- |
+| **RAG Data** | Workspace sidebar **RAG Data** | Create and index collections once |
+| **Node attachment** | Graph Studio → agent **RAG** tab | Select sources per Master/Child Agent step |
 
-## High-level flow
-
-1. Open workspace **RAG Data** and create or index a collection ([Data sources](/graph-studio/rag-management/data-sources)).
-2. In **Graph Studio**, select an agent node → **RAG** tab ([Referencing](/graph-studio/rag-management/referencing)).
-3. Choose data sources and items for that step only.
-4. **Save** the graph; attachments pin with the graph version on **Build**.
-
-<Frame caption="Workspace RAG Data — collections list">
+<Frame caption="Workspace RAG Data — collections">
   <img src="/images/v2/rag/01-data-sources.png" alt="RAG Data workspace page" />
 </Frame>
 
+## Create collections
+
+1. Open workspace **RAG Data**.
+2. Create a **data source** and add documents or structured items.
+3. Index collections before attaching to graphs.
+
+Supported sources include PDF, CSV, text, datasets, and API-connected endpoints.
+
+## Attach to an agent node
+
+1. Open **Graph Studio** and select an agent node.
+2. Open the **RAG** tab in the drawer.
+3. Select **data source** and **items** for this step only.
+4. **Save** the graph.
+
+<Frame caption="Node drawer — RAG tab">
+  <img src="/images/v2/rag/02-node-rag-drawer.png" alt="RAG tab on agent node" />
+</Frame>
+
+<Tip>
+  Attach only collections relevant to each step — narrower retrieval improves answer quality.
+</Tip>
+
+## Builds and runtime
+
+Attached RAG lists save with the graph version and pin on **Build**. See [Publishing](/graph-studio/publishing).
+
 ## Related
 
-- [Agent node anatomy](/graph-studio/agent-node)
-- [RAG Management overview](/graph-studio/rag-management)
+- [Agent configuration](/graph-studio/agent-node)
+- [Graph Studio overview](/graph-studio/overview)

@@ -14,7 +14,7 @@ Registry **agent nodes** connect a **Master Agent** node to agents published in 
 </Frame>
 
 <Info>
-  The browse panel title in the product may read **Agent Block**; documentation uses **Agent Node** for consistency with [Graph Studio agent nodes](/graph-studio/agent-node).
+  The browse panel title in the product may read **Agent Block**; documentation uses **Agent Node** for consistency with [Graph Studio](/graph-studio/overview).
 </Info>
 
 ## When to use Browse vs Discovery

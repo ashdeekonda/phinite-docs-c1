@@ -1,85 +1,98 @@
 ---
 title: Graph Studio overview
-description: Design Agent Graphs on the canvas — nodes, tools, RAG, variables — then Save before Build.
+description: Open Graph Studio, studio layout, graph assets, and the design golden path.
+icon: diagram-project
 ---
 
-**Graph Studio** is where you design an **Agent Graph**: connect [nodes](/graph-studio/nodes), configure each step in the **node drawer**, and use the toolbar to **Save**, **Build**, **Deploy**, and **Test**.
+**Graph Studio** is where you design an **Agent Graph** — connect nodes, configure the **node drawer**, and use the toolbar to **Save**, **Build**, **Deploy**, and **Test**.
 
 <CardGroup cols={2}>
-  <Card title="Manual canvas" icon="pencil" href="/graph-studio/manual-method">
-    Drag nodes, connect edges, and configure the drawer tab by tab.
+  <Card title="Methods" icon="sparkles" href="/graph-studio/methods">
+    Phinite Aura or manual canvas.
   </Card>
-  <Card title="Phinite Aura" icon="sparkles" href="/graph-studio/copilot-method">
-    Describe the graph in natural language; refine the draft on the canvas.
+  <Card title="Interface" icon="layout" href="/graph-studio/interface">
+    Canvas, toolbar, drawer, variables panel.
   </Card>
-  <Card title="Node types" icon="diagram-project" href="/graph-studio/nodes">
-    Start, Master Agent, Child Agent, Tool, End, and registry agents.
+  <Card title="Nodes" icon="diagram-project" href="/graph-studio/nodes">
+    Start, Master, Child, Tool, End, registry agents.
   </Card>
-  <Card title="RAG Management" icon="book" type="note" href="/graph-studio/rag-management">
-    Ground agents with workspace RAG Data collections.
+  <Card title="Variables" icon="database" href="/graph-studio/variables">
+    Graph, input, capture, and session variables.
+  </Card>
+  <Card title="Connections" icon="arrow-right" href="/graph-studio/connections">
+    Handles, edges, conditional branches.
+  </Card>
+  <Card title="Agent configuration" icon="robot" href="/graph-studio/agent-node">
+    Prompt, tools, RAG tab, variables, registry.
+  </Card>
+  <Card title="RAG" icon="book" href="/graph-studio/rag-management">
+    Workspace collections and node attachment.
+  </Card>
+  <Card title="Publishing" icon="hammer" type="note" href="/graph-studio/publishing">
+    Save → Build → Deploy.
   </Card>
 </CardGroup>
-
-## Studio layout
-
-| Area | What it does |
-| --- | --- |
-| **Left sidebar** | **Agent Graphs**, **Evaluations**, **Governance**; **Graph assets** — Versions, Builds, Cards, Triggers, Integrations, Tools |
-| **Canvas** | React Flow graph — add and connect [nodes](/graph-studio/nodes) |
-| **Node drawer** | Opens when you select a node — **Details**, **RAG**, **Variables**, **Tools**, **Decision** (see [Inspector](/graph-studio/interface/inspector-panel)) |
-| **Toolbar** | **Save** → **Build** → **Deploy** → **Test** (Build/Deploy stay disabled until prerequisites are met) |
-| **Phinite Aura** | Optional chat panel for assisted graph edits |
-
-<Frame caption="Graph Studio — canvas, Aura, and Save / Build / Deploy / Test toolbar">
-  <img src="/images/v2/studio/01-studio-aura-shell.png" alt="Graph Studio shell with toolbar and canvas" />
-</Frame>
 
 ## Open Graph Studio
 
 1. From **Workspace Home**, open an existing **Agent Graph** or click **New Agent Graph**.
-2. In the **New Agent Graph** dialog, enter name and description and choose **Conversational** or **Autonomous** ([Agents overview](/agents/overview)).
-3. Click **Create** — Studio opens on the canvas for that graph.
+2. Enter name and description; choose **Conversational** or **Autonomous** ([Agents overview](/agents/overview)).
+3. Click **Create** — Studio opens on the canvas.
+
+<Frame caption="New Agent Graph dialog">
+  <img src="/images/v2/agents/01-new-agent-graph-modal.png" alt="New Agent Graph modal" />
+</Frame>
 
 <Note>
   Workspace filters may still show an **Email** chip. New graphs only offer **Conversational** and **Autonomous**.
 </Note>
 
-## Design workflow
+## Studio layout (summary)
 
-1. Add and connect [nodes](/graph-studio/nodes) on the canvas ([Manual method](/graph-studio/manual-method) or [Aura](/graph-studio/copilot-method)).
-2. Select each **Master Agent** or **Child Agent** node and configure the drawer:
-   - **[Prompt](/graph-studio/agent-node/prompt)** — mission and instructions
-   - **[Tools](/graph-studio/agent-node/tools)** — attach published tools
-   - **[RAG](/graph-studio/rag-management/referencing)** — attach collections from [RAG Data](/graph-studio/rag-management/data-sources)
-   - **[Variables](/graph-studio/agent-node/variables)** — input and capture
-3. Define graph-level variables in the [Variables panel](/graph-studio/interface/variables-panel) when your layout includes it.
-4. Click **Save** on the toolbar — required before **Build**.
-5. Continue to [Builds](/builds/overview) and [Deploy](/agents/deploy) when the graph is ready.
+| Area | What it does |
+| --- | --- |
+| **Left sidebar** | **Graph assets** — Versions, Builds, Cards, Triggers, Integrations, Tools |
+| **Canvas** | Add and connect nodes |
+| **Node drawer** | Per-node **Details**, **Tools**, **RAG**, **Variables**, **Decision** |
+| **Toolbar** | **Save** → **Build** → **Deploy** → **Test** |
 
-<Tip>
-  **Save** persists the draft graph. **Build** freezes graph + tool versions into an immutable **Agent Build** used for environment assignment and deploy.
-</Tip>
+See [Interface](/graph-studio/interface) for canvas, toolbar, and drawer detail.
+
+## Golden path
+
+1. Create or open a graph ([Methods](/graph-studio/methods)).
+2. Add [nodes](/graph-studio/nodes) and [connections](/graph-studio/connections).
+3. Configure [agent nodes](/graph-studio/agent-node) and [variables](/graph-studio/variables).
+4. Attach [RAG](/graph-studio/rag-management) where needed.
+5. **Save**, then [Build and deploy](/graph-studio/publishing).
+
+```mermaid
+flowchart LR
+  design[Design on canvas]
+  save[Save]
+  build[Build]
+  deploy[Deploy]
+
+  design --> save --> build --> deploy
+```
 
 ## Graph assets (sidebar)
 
 | Asset | Purpose |
 | --- | --- |
-| **Graph Versions** | Saved snapshots of the graph |
-| **Agent Builds** | Pinned builds created from the **Build** dialog |
-| **Agent Cards** | A2A exposure for this graph |
-| **Triggers** | Graph-scoped triggers (hub links to [Integrations](/configure/integrations)) |
+| **Graph Versions** | Saved design snapshots |
+| **Agent Builds** | Pinned builds from **Build** |
+| **Agent Cards** | A2A exposure |
+| **Triggers** | Graph-scoped triggers |
 | **Integrations** | Graph-scoped channels and tools |
 | **Tools** | Graph-scoped tool list |
 
-<Frame caption="Studio Tools panel — graph-scoped tools">
-  <img src="/images/v2/studio/02-tools-sidebar.png" alt="Graph Studio Tools sidebar panel" />
+<Frame caption="Studio Tools panel">
+  <img src="/images/v2/studio/02-tools-sidebar.png" alt="Graph Studio Tools sidebar" />
 </Frame>
 
 ## Related
 
-- [Interface layout](/graph-studio/interface)
-- [Agent node anatomy](/graph-studio/agent-node)
-- [Connections & logic](/graph-studio/connections)
-- [Publishing & versions](/graph-studio/publishing)
-- [Configuration overview](/configure/overview)
-- [Agent Registry (A2A)](/agent-registry/overview)
+- [Tools & Dev Studio](/devstudio/overview)
+- [Configure integrations](/configure/integrations)
+- [Builds overview](/builds/overview)

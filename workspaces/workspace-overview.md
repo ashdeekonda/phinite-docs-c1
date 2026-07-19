@@ -119,7 +119,7 @@ See [Agent Registry overview](/agent-registry/overview).
 
 **RAG Data** manages workspace knowledge collections used by agent nodes for retrieval.
 
-Supported sources include PDF, CSV, text documents, structured datasets, and API-connected endpoints. Organize content into collections referenced in [Graph Studio RAG settings](/graph-studio/rag-management).
+Supported sources include PDF, CSV, text documents, structured datasets, and API-connected endpoints. Organize content into collections referenced in [Graph Studio RAG](/graph-studio/rag-management).
 
 ### Env. variables
 

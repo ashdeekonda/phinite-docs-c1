@@ -42,7 +42,7 @@ Terms used when calling registry agents from Claude via the [Phinite Connector](
 | **Flow** | **Agent Graph** | Project and Studio navigation (same underlying workflow) |
 | **Organisation** | Organisation | Registry filters and Agent Card visibility (British spelling in UI) |
 
-When writing integrations or internal runbooks, prefer **Agent Node** and **Agent Graph** for consistency with **[Graph Studio agent nodes](/graph-studio/agent-node)** documentation.
+When writing integrations or internal runbooks, prefer **Agent Node** and **Agent Graph** for consistency with **[Graph Studio](/graph-studio/overview)** documentation.
 
 ## MIME input and output modes
 

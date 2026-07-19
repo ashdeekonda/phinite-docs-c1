@@ -17,7 +17,7 @@ description: Run Autonomous Agent Graphs via API webhook, Cron, or background ta
 | **Background task** | Long-running work | Async start + status polling (≤ 45 min) — **recommended** |
 | **Cron job** | Recurring schedule | Platform-scheduled; no external caller needed |
 
-See [Trigger APIs overview](/triggers-intents/triggers/overview) for endpoint shapes, auth, and payload fields.
+See [Trigger APIs](/triggers-intents/trigger-apis) for endpoint shapes, auth, and payload fields.
 
 ## Deploy a trigger from Studio
 
@@ -26,7 +26,7 @@ See [Trigger APIs overview](/triggers-intents/triggers/overview) for endpoint sh
 3. Or open Studio → **Triggers** → **Add trigger in Integrations** when the panel is empty.
 4. In **Integrations** → **Triggers**, create the trigger connection and select **workflow type** (API, Background Task, or Cron).
 5. Assign the **Agent Build** to **DEV** first; copy the generated webhook URL or Cron config.
-6. Test with a Bearer token ([API usage examples](/triggers-intents/triggers/api-guide)) or wait for the first scheduled run.
+6. Test with a Bearer token ([API usage examples](/triggers-intents/api-usage-examples)) or wait for the first scheduled run.
 7. Promote build assignment to **UAT** / **PROD** when validated.
 
 <Frame caption="Studio Triggers panel — graph-scoped trigger links">

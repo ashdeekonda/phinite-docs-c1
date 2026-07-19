@@ -1,5 +1,5 @@
 ---
-title: "API Usage Examples"
+title: API usage examples
 description: Sample requests to invoke Autonomous Agent Graph triggers with Bearer auth.
 ---
 
@@ -448,7 +448,7 @@ puts response.read_body
 
 - Automated incident response from monitoring systems
 - Scheduled data processing and reporting
-- Webhook-triggered workflows from external platforms (Jira, etc.)
+- Webhook-triggered workflows from external platforms
 - Background batch processing with real-time progress tracking
 - Long-running data transformation and enrichment tasks
 - Periodic system health checks and maintenance routines
@@ -467,4 +467,10 @@ puts response.read_body
 - **Monitor execution time:** Be aware of the 2700-second maximum for background tasks. Design flows to complete within this limit.
 - **Test thoroughly:** Always test in DEV environment before promoting to UAT and PROD.
 - **Keep triggers descriptive:** Use clear, meaningful names for triggers to facilitate internal reference and debugging.
-- **Handle webhooks appropriately:** For Jira and other webhook integrations, ensure the integration is properly configured with the correct secret before testing.
+- **Handle webhooks appropriately:** Validate payload shape and auth before promoting webhook callers to PROD.
+
+## Related
+
+- [Trigger APIs](/triggers-intents/trigger-apis)
+- [Mapping triggers](/triggers-intents/mapping)
+- [Deploy a trigger](/agents/deploy-trigger)

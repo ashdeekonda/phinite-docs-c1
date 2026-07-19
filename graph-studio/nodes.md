@@ -1,9 +1,9 @@
 ---
 title: Node types
-description: Start, Master Agent, Child Agent, Tool, End, and registry agent nodes on the Agent Graph canvas.
+description: Start, Master Agent, Child Agent, Tool, End, and registry agent nodes.
 ---
 
-**Nodes** are the building blocks of an Agent Graph. Connect them with edges to define how a **Conversational** or **Autonomous** run flows through your logic.
+**Nodes** are the building blocks of an Agent Graph.
 
 <Note>
   Legacy docs used **Block**; the product UI now uses **Node**.
@@ -11,57 +11,58 @@ description: Start, Master Agent, Child Agent, Tool, End, and registry agent nod
 
 ## Node types
 
-| Node | Role | Deep dive |
-| --- | --- | --- |
-| **[Start](/graph-studio/nodes/start)** | Entry point when a run begins | Minimal drawer — one outbound handle |
-| **Master Agent** | Orchestrator — prompt, tools, RAG, variables; registry agents | [Agent configuration](/graph-studio/agent-node) |
-| **Child Agent** | Specialized sub-agent with its own prompt, tools, and variables | [Agent configuration](/graph-studio/agent-node) |
-| **[Tool](/graph-studio/nodes/tool-node)** | Calls a published tool (API / integration) | Deterministic integration step |
-| **[End](/graph-studio/nodes/end-node)** | Terminal node when the graph completes | Minimal drawer — inbound handle(s) |
-| **Registry agent** | Calls an exposed A2A agent — **Browse** or **Discovery** | [Registry agent nodes](/agent-registry/registry-agent-nodes) |
+| Node | Role |
+| --- | --- |
+| **Start** | Entry point — one outbound handle; minimal drawer |
+| **Master Agent** | Orchestrator — full drawer; **Browse** / **Discovery** registry agents |
+| **Child Agent** | Delegated sub-task — own prompt, tools, RAG; **Child Variables** tab |
+| **Tool** | Deterministic published tool call without LLM orchestration |
+| **End** | Terminal node — run completes |
+| **Registry agent** | Attached from Master Agent drawer — not a library tile |
 
 <Frame caption="Agent Graph canvas with connected nodes">
-  <img src="/images/v2/studio/04-nodes-canvas.png" alt="Nodes on the Graph Studio canvas" />
+  <img src="/images/v2/studio/04-nodes-canvas.png" alt="Nodes on the canvas" />
 </Frame>
 
-## Add nodes from the canvas toolbar
+## Start node
 
-The **Node Library** is the add-node control on the canvas toolbar (not a separate sidebar). Use it to place nodes, then wire handles between them.
+Every graph needs exactly one **Start** node connected downstream. Minimal configuration — one outbound handle.
 
-| Node | Use when |
-| --- | --- |
-| **Start** | Every graph needs one entry node |
-| **Master Agent** | Primary reasoning step with full drawer tabs |
-| **Child Agent** | Delegated sub-task with its own prompt and tools |
-| **Tool** | Direct integration call without LLM orchestration |
-| **End** | Run completes |
+## Tool node
 
-1. Open an Agent Graph in **Graph Studio**.
-2. Click the add-node control on the canvas toolbar and choose a node type.
-3. Click on the canvas to place it (or drag from the palette if your layout supports drag).
-4. Drag from a source **handle** to a target **handle** to connect nodes ([Connections](/graph-studio/connections)).
-5. Click **Master Agent** or **Child Agent** nodes to configure the [node drawer](/graph-studio/interface/inspector-panel).
-6. Add an **[End](/graph-studio/nodes/end-node)** node where the run should finish.
-7. Click **Save** before **Build**.
+Executes a **published** tool without an LLM step. Select the tool and map inputs in the drawer. Tools must be published from [Tools & Dev Studio](/devstudio/overview) before **Build**.
+
+## End node
+
+Marks successful completion. Connect the final step(s) → **End**. Each branch should reach **End** (or an explicit stop).
+
+## Master Agent vs Child Agent
+
+| | **Master Agent** | **Child Agent** |
+| --- | --- | --- |
+| **Role** | Orchestrates the graph | Handles a delegated sub-task |
+| **Registry agents** | **Browse** / **Discovery** | Not available |
+| **Configuration** | [Agent configuration](/graph-studio/agent-node) | Same drawer tabs + **Child Variables** |
+
+## Add nodes
+
+1. Click the add-node control on the canvas toolbar.
+2. Choose **Start**, **Master Agent**, **Child Agent**, **Tool**, or **End**.
+3. Place on the canvas and connect [handles](/graph-studio/connections).
+4. Configure Master/Child agents in the [drawer](/graph-studio/interface).
+5. **Save** before **Build**.
 
 <Tip>
-  Start with **Start** → **Master Agent** → **End** for a minimal graph, then add **Tool** and **Child Agent** nodes as needed.
+  Start with **Start** → **Master Agent** → **End**, then add **Tool** and **Child Agent** as needed.
 </Tip>
 
 ## Registry agents (A2A)
 
-Registry agents are attached from a **Master Agent** drawer (**Browse** / **Discovery**), not as a separate library tile.
-
-1. Select the Master Agent node.
-2. In the drawer, open the agent attachment flow (**Browse** or **Discovery**).
-3. Pick a catalog agent or set discovery filters ([Registry agent nodes](/agent-registry/registry-agent-nodes)).
-
-<Info>
-  Only **one Discovery** node is allowed per Master Agent node.
-</Info>
+1. Select a **Master Agent** node.
+2. In the drawer, attach **Browse** (fixed agent) or **Discovery** (filter-matched agents).
+3. See [Registry agent nodes](/agent-registry/registry-agent-nodes). Only **one Discovery** per Master Agent.
 
 ## Related
 
 - [Graph Studio overview](/graph-studio/overview)
 - [Agent configuration](/graph-studio/agent-node)
-- [Interface layout](/graph-studio/interface)

@@ -21,5 +21,5 @@ Decision joints explain **why** a graph took a particular edge; exception entrie
 
 ## Related
 
-- [Conditional edges](/graph-studio/connections/conditional-edges)
+- [Conditional edges](/graph-studio/connections)
 - [Error codes](/support/error-codes)

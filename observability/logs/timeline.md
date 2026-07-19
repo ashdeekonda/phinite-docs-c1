@@ -9,7 +9,7 @@ The timeline lists nodes, tools, and waits in execution order for a single sessi
 
 - Identify slow nodes or external API latency
 - Locate failures and exception stacks
-- Verify [conditional edges](/graph-studio/connections/conditional-edges) routed as expected
+- Verify [conditional edges](/graph-studio/connections) routed as expected
 
 <Tip>
   Open timeline entries alongside [decision joints](/observability/logs/decision-joints) when branching looks wrong but no hard error fired.
