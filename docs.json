@@ -554,7 +554,72 @@
                 ]
               },
               "graph-studio/connections",
-              "graph-studio/publishing"
+              "graph-studio/publishing",
+              {
+                "group": "Methods of Workflow Creation",
+                "pages": [
+                  "graph-studio/copilot-method",
+                  "graph-studio/manual-method"
+                ]
+              },
+              {
+                "group": "Interface",
+                "pages": [
+                  "graph-studio/interface",
+                  "graph-studio/interface/canvas",
+                  "graph-studio/interface/node-library",
+                  "graph-studio/interface/inspector-panel",
+                  "graph-studio/interface/variables-panel",
+                  "graph-studio/nodes"
+                ]
+              },
+              {
+                "group": "Nodes",
+                "hidden": true,
+                "pages": [
+                  "graph-studio/nodes/start",
+                  "graph-studio/nodes/master-node",
+                  "graph-studio/nodes/child-node",
+                  "graph-studio/nodes/tool-node",
+                  "graph-studio/nodes/end-node"
+                ]
+              },
+              {
+                "group": "Variables",
+                "pages": [
+                  "graph-studio/types-of-session-variables",
+                  "graph-studio/input-variables-in-agent-node",
+                  "graph-studio/capture-variables-in-agent-node"
+                ]
+              },
+              {
+                "group": "Connections",
+                "pages": [
+                  "graph-studio/connections",
+                  "graph-studio/connections/handles",
+                  "graph-studio/connections/edges",
+                  "graph-studio/connections/conditional-edges"
+                ]
+              },
+              {
+                "group": "Agent Node",
+                "pages": [
+                  "graph-studio/agent-node",
+                  "graph-studio/agent-node/prompt",
+                  "graph-studio/agent-node/rag",
+                  "graph-studio/agent-node/tools",
+                  "graph-studio/agent-node/variables"
+                ]
+              },
+              {
+                "group": "RAG Management",
+                "pages": [
+                  "graph-studio/rag-management",
+                  "graph-studio/rag-management/data-sources",
+                  "graph-studio/rag-management/collections",
+                  "graph-studio/rag-management/referencing"
+                ]
+              }
             ]
           },
           {
