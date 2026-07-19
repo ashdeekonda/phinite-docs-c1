@@ -1,18 +1,19 @@
 ---
 title: Interface layout
-description: Canvas, toolbar, node drawer, and variables panel in Graph Studio.
+description: Canvas, toolbar, node drawer, and graph assets in Graph Studio.
 ---
 
-Graph Studio splits design work across the **canvas**, **toolbar**, **node drawer**, and **variables panel**.
+Graph Studio splits design work across the **canvas**, **toolbar**, **node drawer**, and **graph assets** sidebar. **Phinite Aura** sits in the left nav for chat-driven edits.
 
 ## Canvas
 
 - React Flow graph — pan, zoom, and arrange [nodes](/graph-studio/nodes).
-- Add nodes from the **toolbar add-node control** (Node Library).
+- Add nodes from the **floating node palette** on the canvas.
 - Drag **handles** to create [connections](/graph-studio/connections).
+- Bottom controls: **With Prompt** / view mode, lock, fit, organize, zoom, undo/redo.
 
-<Frame caption="Graph Studio — canvas and toolbar">
-  <img src="/images/v2/studio/01-studio-aura-shell.png" alt="Graph Studio shell" />
+<Frame caption="Graph Studio — GitHub Repository Search graph">
+  <img src="/images/v2/studio/14-github-studio-shell.png" alt="GitHub graph canvas with Master and Child agents" />
 </Frame>
 
 ## Toolbar
@@ -20,44 +21,75 @@ Graph Studio splits design work across the **canvas**, **toolbar**, **node drawe
 | Control | Action |
 | --- | --- |
 | **Save** | Persist the current graph draft (required before Build) |
-| **Build** | Open build dialog — pins graph + tool versions |
-| **Deploy** | Open deploy dialog — requires at least one build |
+| **Build** | Opens **Build Agent** — pins graph + tool versions |
+| **Deploy** | Opens **Deploy Agent Build** — enabled when at least one build exists |
 | **Test** | Chat, voice, or autonomous test drawer |
+| **More actions** | Edit, Rename, Duplicate, Delete / Archive |
 
-## Node drawer (Inspector)
+**Deploy** opens a modal with three tabs: **Deploy as A2A**, **Deploy to Channel**, and **Deploy as Chat API**. See [Expose as A2A](/agent-registry/expose-your-flow).
 
-When you select a node, the drawer opens with tabs:
+## Node drawer
+
+Double-click a node (or select and open the panel) to configure it. Tabs on Master / Child agents:
 
 | Tab | Configures |
 | --- | --- |
-| **Details** | Task prompt ([Agent configuration](/graph-studio/agent-node)) |
-| **Tools** | Published tools on this step |
-| **RAG** | Data sources from [RAG Management](/graph-studio/rag-management) |
-| **Variables** | Input and capture ([Variables](/graph-studio/variables)) |
-| **Decision** | Branch variables for conditional edges |
+| **Details** | **Orchestration Model**, **Agent Task Prompt** (Markdown / Formatted), **Refine Prompt**. Child agents also have **Purpose of this child agent**. |
+| **RAG** | Attach workspace files / data sources (**Attach Files**) |
+| **Tools** | Attached tools — **Add a new tool** |
+| **Variables** | **Input Variables** and **Capture Variables** |
 
-<Frame caption="Node drawer — RAG tab">
-  <img src="/images/v2/rag/02-node-rag-drawer.png" alt="Node drawer" />
+<Frame caption="Node drawer — Details tab (Master Agent)">
+  <img src="/images/v2/studio/06-node-drawer-details.png" alt="Master Agent Details tab with orchestration model and task prompt" />
 </Frame>
 
-### Modals from the drawer
+<Frame caption="Node drawer — Variables tab (Capture)">
+  <img src="/images/v2/studio/07-node-drawer-variables.png" alt="Capture Variables on Master Agent" />
+</Frame>
 
-| Action | Dialog |
+<Frame caption="Node drawer — RAG tab">
+  <img src="/images/v2/studio/11-node-drawer-rag.png" alt="RAG tab with Attach Files" />
+</Frame>
+
+### Add a new tool
+
+**Tools** → **Add a new tool** opens a side panel with three sources:
+
+| Tab | Contents |
 | --- | --- |
-| Connect a tool | **Connect Tool** |
-| Add MCP | **Add MCP Connection** |
-| API key / model | **Connect API Key** / **Change API** |
-| Create variable | **Create Variable** |
+| **Tools** | Workspace tools (search **Search Workspace Tools**) |
+| **Integrations** | Connected Integrations Hub apps |
+| **MCP Servers** | Installed MCP servers (**+ Add** when empty) |
 
-## Variables panel
+<Frame caption="Add a new tool — workspace Tools tab">
+  <img src="/images/v2/studio/15-add-tool-github.png" alt="Add tool panel listing workspace tools" />
+</Frame>
 
-Graph-wide variable schemas — separate from per-node Input/Capture. See [Variables](/graph-studio/variables).
+## Left sidebar — Graph assets
 
-## Left sidebar
+Under **GRAPH ASSETS** (graph-scoped):
 
-**Graph assets:** Graph Versions, Agent Builds, Agent Cards, Triggers, Integrations, Tools. See [Graph Studio overview](/graph-studio/overview).
+| Asset | What you see |
+| --- | --- |
+| **Graph Versions** | Saved design snapshots |
+| **Agent Builds** | Immutable builds + **DEV / UAT / PROD** environment assignments |
+| **Agent Cards** | A2A registry versions — **Active deployments** (LIVE / Latest) |
+| **Triggers** | API and other triggers bound to this graph |
+| **Integrations** | Integrations used by the graph |
+| **Tools** | Tools referenced on the canvas |
+
+Also in the sidebar: **Phinite Aura**, workspace links (**Agent Graphs**, **Evaluations**, **Governance**).
+
+<Frame caption="Agent Builds — environment assignments and build list">
+  <img src="/images/v2/studio/19-github-agent-builds.png" alt="Agent Builds sidebar with DEV UAT PROD" />
+</Frame>
+
+<Frame caption="Triggers — graph-scoped API triggers">
+  <img src="/images/v2/studio/18-github-triggers.png" alt="Triggers asset panel" />
+</Frame>
 
 ## Related
 
 - [Graph Studio overview](/graph-studio/overview)
+- [Agent configuration](/graph-studio/agent-node)
 - [Node types](/graph-studio/nodes)

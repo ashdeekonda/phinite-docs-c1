@@ -1,23 +1,22 @@
 ---
 title: Variables
-description: Graph variables, node input/capture, session types, and decision variables.
+description: Graph variables, node input/capture, and session variable types.
 ---
 
 Variables carry state through an Agent Graph at three layers: **graph schemas**, **per-node input/capture**, and **runtime session** values.
 
-<Frame caption="Graph Studio variables panel">
-  <img src="/images/v2/studio/03-variables.png" alt="Variables panel" />
+<Frame caption="Node drawer — Capture Variables">
+  <img src="/images/v2/studio/07-node-drawer-variables.png" alt="Capture Variables on an agent node" />
 </Frame>
 
 ## Variable layers
 
 | Layer | Where | Purpose |
 | --- | --- | --- |
-| **Graph / flow variables** | [Variables panel](/graph-studio/interface) | Schemas and defaults for the whole graph |
-| **Node input** | Drawer → **Variables** → Input | Map flow or session into an agent step |
-| **Node capture** | Drawer → **Variables** → Capture | Fields the model extracts for downstream steps |
+| **Graph / flow variables** | Workspace / graph schemas | Defaults for the whole graph |
+| **Node input** | Drawer → **Variables** → **Input Variables** | Map flow or session into an agent step |
+| **Node capture** | Drawer → **Variables** → **Capture Variables** | Fields the model extracts for downstream steps |
 | **Session variables** | Runtime | User, system, tool-returned, and capture state |
-| **Decision variables** | Drawer → **Decision** | Drive [conditional edges](/graph-studio/connections) |
 
 ## Graph variables
 
@@ -28,13 +27,13 @@ Variables carry state through an Agent Graph at three layers: **graph schemas**,
 
 ## Input variables
 
-1. Select a **Master Agent** or **Child Agent** node → **Variables** tab.
-2. Under **Input Variables**, map values from the flow or session.
+1. Double-click a **Master Agent** or **Child Agent** → **Variables** tab.
+2. Under **Input Variables**, use **Pick from Session variables** (or search) to map values.
 3. **Save** the graph.
 
 ## Capture variables
 
-1. Under **Capture Variables**, define fields the model should extract (name + description).
+1. Under **Capture Variables**, click **Create a variable** for each field the model should extract.
 2. Downstream nodes and tools reference captured names.
 3. **Save** the graph.
 

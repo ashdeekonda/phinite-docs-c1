@@ -4,7 +4,7 @@ description: Register a published Agent Build in the Agent Registry using Deploy
 ---
 
 <Note>
-  **Deploy as A2A** exposes an **Agent Build** with an **Agent Card** — the agent's public identity. Conversational Agent Graphs support this today; create a **Build** before opening the expose wizard.
+  **Deploy as A2A** exposes an **Agent Build** with an **Agent Card** — the agent's public identity. Create a **Build** before opening the deploy wizard (**Deploy** stays disabled until one exists).
 </Note>
 
 ## Prerequisites
@@ -19,17 +19,33 @@ Before you expose an Agent Graph:
 ## Open the expose flow
 
 1. Open **Graph Studio** for the Agent Graph.
-2. Click **Deploy** → **Deploy as A2A** (or expose from Studio → **Agent Builds**).
-3. Review existing TEST/LIVE builds and hosted URLs in the modal if any exist.
-4. Click **Create New Build** to open the **Expose as External Agent** wizard when starting fresh.
+2. Click **Deploy** — the **Deploy Agent Build** modal opens.
+3. **Select a Build** (immutable snapshot of graph + tools).
+4. Choose **Deploy as A2A** (other tabs: **Deploy to Channel**, **Deploy as Chat API**).
+5. Review the three-step A2A path shown in the modal, then **Continue to A2A with Build N**.
+6. Existing LIVE / TEST endpoints for this agent appear at the bottom of the modal when already registered.
 
-<Frame caption="Agent Cards sidebar — exposed builds for this graph">
+<Frame caption="Deploy Agent Build — Deploy as A2A">
+  <img src="/images/v2/a2a/06-deploy-as-a2a.png" alt="Deploy Agent Build modal with Deploy as A2A tab" />
+</Frame>
+
+### What Deploy as A2A does
+
+| Step | UI copy |
+| --- | --- |
+| 01 | **Publish the agent card** — package this build's dependencies and agent card |
+| 02 | **Share the hosted URL** — callers reach it at a URL like `…/a2a/{flow}/build-{n}` |
+| 03 | **Callers invoke it** — other agents and clients send requests over the A2A protocol |
+
+You can also open graph-scoped cards from Studio → **Agent Cards** under Graph assets.
+
+<Frame caption="Agent Cards — Active deployments and versions">
   <img src="/images/v2/a2a/01-agent-cards-sidebar.png" alt="Agent Cards sidebar in Graph Studio" />
 </Frame>
 
-The wizard publishes an **Agent Card** so the graph is callable via the **A2A protocol**. Use **See Agent builds** to jump to [Agent Cards](/agent-registry/agent-cards).
+Use **Create New Build** in the deploy modal when you need a fresh snapshot before exposing.
 
-## Wizard steps
+## Wizard steps (after Continue to A2A)
 
 | Step | Label | Purpose |
 | --- | --- | --- |
@@ -82,9 +98,9 @@ Wizard copy: *Agent Card is the identity of your agent on the Internet.*
 
 On success:
 
-1. Note the **Agent Registry ID** and **hosted A2A URL** (TEST builds include registry ID in path — [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle)).
+1. Note the **Agent Registry ID** and **hosted A2A URL** (LIVE builds use the short `{flowId}` path — [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle)).
 2. The build is available to **Test**.
-3. Open workspace [Agent Registry](/agent-registry/catalog) to inspect the catalog entry.
+3. Open Studio → **Agent Cards** or the workspace [Agent Registry](/agent-registry/catalog) to inspect the entry.
 4. Promote to **`live`** from [Agent Cards](/agent-registry/agent-cards) when ready for production routing.
 
 <Tip>

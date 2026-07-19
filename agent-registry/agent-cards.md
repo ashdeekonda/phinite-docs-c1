@@ -11,54 +11,48 @@ description: Manage A2A registry builds per Agent Graph, compare TEST and LIVE d
 
 ## Open Agent Cards
 
-**Route:** `/{organisation}/workspace/{workspaceId}/projects/{projectId}/agent-cards`
+In **Graph Studio**, open **Graph assets** → **Agent Cards** (URL includes `&tab=agent-cards`).
 
-The page appears in the **project sidebar** when **`workspace.sidebar.agent_registry`** is granted. Reach it from Graph Studio via **Deploy** → **Deploy as A2A** → **See Agent builds**, or Studio → **Agent Cards** in graph assets.
+You can also reach cards from **Deploy** → **Deploy as A2A** (existing endpoints appear in the modal), or from the workspace Agent Registry catalog when granted.
 
-<Frame caption="Agent Cards sidebar — TEST and LIVE builds per graph">
+<Frame caption="Agent Cards — Active deployments and version list">
   <img src="/images/v2/a2a/01-agent-cards-sidebar.png" alt="Agent Cards panel in Graph Studio" />
 </Frame>
 
-<Frame caption="Agent Card identity — version details for an exposed graph">
-  <img src="/images/v2/a2a/03-agent-card-identity.png" alt="Agent Card identity sidebar view" />
-</Frame>
-
-## Page layout
+## Panel layout
 
 | Element | Description |
 | --- | --- |
-| **Title** | **Agent Cards** with total build count |
-| **Agent Graph** dropdown | Filter builds by graph (`flowid`); options from **`GET /a2a-registry?flow_list=true`** |
-| **Build table** | Rows per registry build: build number, status, name, description, tools/env counts, updated date, author |
-| **Push To Prod** | Promote a **TEST** build to **LIVE** |
+| **Title** | **Agent Cards** with total version count |
+| **Active deployments** | **Live** (Prod) and **Latest** build chips when assigned |
+| **Version list** | Rows per registry version: description, timestamp, **TEAM** / **LIVE** / **TEST** badges |
 
-## Build rows
+Empty state: **No deployed agent cards for this graph** — use **Deploy** → **Deploy as A2A** after creating a build.
 
-Each row represents one **`POST /a2a-registry`** registration:
+## Version rows
 
-| Column / field | Source | Notes |
-| --- | --- | --- |
-| **Build number** | `build_no` | Auto-incremented per workspace + Agent Graph |
-| **Status** | `test` or `live` | Badge: **TEST** or **LIVE** |
-| **Name / description** | `agent_card` | Agent Card from expose wizard |
-| **Tools / env** | `tool_config`, `env_variable` | Exported configuration counts |
-| **Registry ID** | `a2aregistryid` | Used in TEST hosted URLs |
+Each row represents one A2A registration for the graph:
 
-Builds sort by **most recently updated** first.
+| Field | Notes |
+| --- | --- |
+| **Version N** | Registry version number for this graph |
+| **Description** | Agent Card summary from the expose wizard |
+| **Status** | **LIVE**, **TEST**, or team-scoped badges |
+| **Updated** | Last update timestamp |
 
 ## TEST vs LIVE
 
 | Status | Purpose | Hosted URL |
 | --- | --- | --- |
-| **Test** | Validate Agent Card, skills, and integrations | `{gateway}/api/v1/ai/a2a/{flowId}/{registryId}` |
-| **Live** | Production endpoint (one LIVE per graph per workspace) | `{gateway}/api/v1/ai/a2a/{flowId}` |
+| **Test** | Validate Agent Card, skills, and integrations | Longer path — often includes registry / build id |
+| **Live** | Production endpoint (one LIVE per graph per workspace) | Short path: `{gateway}/api/v1/ai/a2a/{flowId}` |
 
-See [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle) for URL and auth details.
+See [Endpoints & lifecycle](/agent-registry/endpoints-and-lifecycle) for URL and auth details. Copy the LIVE URL from **Deploy** → existing endpoints, or from the catalog.
 
 ## Promote to production
 
-1. Click **Push To Prod**.
-2. In the modal, select the **TEST** build to promote.
+1. From Agent Cards (or workspace catalog), use **Push To Prod** when available.
+2. Select the **TEST** build to promote.
 3. Confirm promotion.
 
 The app calls:
@@ -75,11 +69,11 @@ PUT /api/v1/a2a-registry/{a2aregistryid}/promote-live
 
 ## Create a new build
 
-New builds are created from Graph Studio:
+New A2A registrations start from Graph Studio:
 
-1. Create an **Agent Build** ([Builds overview](/builds/overview)).
+1. Create an **Agent Build** ([Builds overview](/builds/overview)) — see Studio → **Agent Builds**.
 2. [Expose your Agent Graph](/agent-registry/expose-your-flow) via **Deploy** → **Deploy as A2A**.
-3. Return to Agent Cards to compare the new **TEST** row.
+3. Return to Agent Cards to compare the new version row.
 
 ## Permissions
 

@@ -17,14 +17,16 @@ External callers reach registered agents through the **API gateway** AI-core lan
 | **Test** | `{gateway}/api/v1/ai/a2a/{flowId}/{registryId}` | Validation build tied to a specific registry row |
 
 ```text
-# Live
-https://app-dev.phinite.ai/api/v1/ai/a2a/{flowId}
+# Live (example from Deploy modal)
+https://webhook.dev.phinite.ai/api/v1/ai/a2a/{flowId}
 
-# Test
-https://app-dev.phinite.ai/api/v1/ai/a2a/{flowId}/{a2aregistryid}
+# Test / build-scoped (shape shown in Deploy as A2A copy)
+…/a2a/{flowId}/build-{n}
+# or registry-id path
+…/a2a/{flowId}/{a2aregistryid}
 ```
 
-Replace the host with your environment's gateway base. For local development, paths may appear under `http://localhost:3000/api/v1/ai/a2a/...`.
+Replace the host with your environment's gateway base (for example `webhook.dev.phinite.ai`). Always **Copy URL** from **Deploy** → existing endpoints or Agent Cards rather than hand-building paths.
 
 ## Registry lifecycle
 

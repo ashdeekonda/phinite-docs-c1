@@ -1,6 +1,6 @@
 ---
 title: Agent Graph publishing and versions
-description: Save graph drafts, create builds, and manage graph versions before deploy.
+description: Save graph drafts, create builds in Build Agent, and manage versions before deploy.
 ---
 
 Publishing an **Agent Graph** means moving from an editable **draft** to pinned **builds** — not a single "Publish" button on the canvas.
@@ -8,19 +8,20 @@ Publishing an **Agent Graph** means moving from an editable **draft** to pinned 
 ## Workflow
 
 1. **Design** in [Graph Studio](/graph-studio/overview) — **Save** the draft.
-2. **Build** from the toolbar — pins graph + tool versions ([Builds overview](/builds/overview)).
-3. **Assign** the build to DEV / UAT / PROD ([Environments](/builds/environments)).
-4. **Deploy** or **Expose as A2A** ([Deploy](/agents/deploy), [Agent Registry](/agent-registry/overview)).
+2. Click **Build** — the **Build Agent** dialog validates the graph and lists associated tools (and RAG).
+3. Add an optional description, confirm tools (use **Publish** on unpublished tools), then **Create Build**.
+4. **Assign** the build to DEV / UAT / PROD ([Environments](/builds/environments)).
+5. **Deploy** or **Expose as A2A** ([Deploy](/agents/deploy), [Agent Registry](/agent-registry/overview)).
 
-<Frame caption="Build dialog — pin Agent Graph and tool versions">
-  <img src="/images/v2/builds/02-build-wizard.png" alt="Build preparation dialog" />
+<Frame caption="Build Agent — pin graph and tool versions">
+  <img src="/images/v2/builds/03-build-agent-modal.png" alt="Build Agent dialog with graph and tools associated" />
 </Frame>
 
 ```mermaid
 flowchart LR
   draft[DraftGraph]
   save[Save]
-  build[Build]
+  build[BuildAgent]
   env[AssignEnvironment]
   deploy[DeployOrA2A]
 
@@ -28,12 +29,29 @@ flowchart LR
 ```
 
 <Note>
-  **Save** updates the working draft. **Build** creates an immutable **Agent Build** for deploy and A2A.
+  **Save** updates the working draft. **Build** creates an immutable **Agent Build**. **Deploy** stays disabled until a build exists.
 </Note>
 
-## Graph versions
+## Build Agent dialog
 
-**Graph Versions** in the Studio sidebar stores saved snapshots. Compare changes or roll back design work before creating a new build.
+| Section | What you do |
+| --- | --- |
+| **Description** | Optional note stored with the build (0/500) |
+| **Agent Graph** | Confirms graph name, type (Conversational / Autonomous), last saved |
+| **Tools Associated** | Select tools to pin; **Publish** unfinished tools before create |
+| **RAG Associated** | Expand to include attached RAG data |
+
+While preparing, the UI shows progress: validating graph → packaging tools → creating snapshot → finalizing.
+
+## Graph versions and Agent Builds
+
+**Graph Versions** in the Studio sidebar stores saved design snapshots. Compare changes or roll back before creating a new build.
+
+**Agent Builds** lists immutable builds for the open graph, including **Environment assignments** (**DEV**, **UAT**, **PROD**). Each row shows tool / RAG counts and status. Use **Assign** to map a build to an environment, then **Deploy**.
+
+<Frame caption="Agent Builds — DEV / UAT / PROD assignments">
+  <img src="/images/v2/studio/19-github-agent-builds.png" alt="Agent Builds sidebar with environment assignments" />
+</Frame>
 
 ## Permissions
 

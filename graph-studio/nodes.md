@@ -11,17 +11,19 @@ description: Start, Master Agent, Child Agent, Tool, End, and registry agent nod
 
 ## Node types
 
-| Node | Role |
-| --- | --- |
-| **Start** | Entry point — one outbound handle; minimal drawer |
-| **Master Agent** | Orchestrator — full drawer; **Browse** / **Discovery** registry agents |
-| **Child Agent** | Delegated sub-task — own prompt, tools, RAG; **Child Variables** tab |
-| **Tool** | Deterministic published tool call without LLM orchestration |
-| **End** | Terminal node — run completes |
-| **Registry agent** | Attached from Master Agent drawer — not a library tile |
+| Node | Canvas type | Role |
+| --- | --- | --- |
+| **Start** | `start` | Entry point — one outbound handle; minimal drawer |
+| **Master Agent** | `task` (labeled **Master Agent**) | Orchestrator — full drawer; registry **Browse** / **Discovery** |
+| **Child Agent** | `child` | Delegated sub-task — **Purpose**, prompt, tools, RAG, Variables |
+| **Tool** | `tool` | Deterministic published tool call without LLM orchestration |
+| **End** | `end` | Terminal node — run completes |
+| **Registry agent** | Attached from Master | Browse / Discovery — not a library tile |
 
-<Frame caption="Agent Graph canvas with connected nodes">
-  <img src="/images/v2/studio/04-nodes-canvas.png" alt="Nodes on the canvas" />
+Example graph (GitHub Repository Search): **Start** → Keyword Extraction (`task`) → Master Coordinator (`task`) → Child Markdown (`child`) → **End**.
+
+<Frame caption="Agent Graph canvas — Master, Child, Start, End">
+  <img src="/images/v2/studio/14-github-studio-shell.png" alt="Nodes on the Graph Studio canvas" />
 </Frame>
 
 ## Start node
@@ -31,6 +33,8 @@ Every graph needs exactly one **Start** node connected downstream. Minimal confi
 ## Tool node
 
 Executes a **published** tool without an LLM step. Select the tool and map inputs in the drawer. Tools must be published from [Tools & Dev Studio](/devstudio/overview) before **Build**.
+
+Many graphs attach tools on **Master / Child Agent** drawers instead of placing a standalone Tool node — both patterns are valid.
 
 ## End node
 
@@ -42,11 +46,11 @@ Marks successful completion. Connect the final step(s) → **End**. Each branch 
 | --- | --- | --- |
 | **Role** | Orchestrates the graph | Handles a delegated sub-task |
 | **Registry agents** | **Browse** / **Discovery** | Not available |
-| **Configuration** | [Agent configuration](/graph-studio/agent-node) | Same drawer tabs + **Child Variables** |
+| **Configuration** | [Agent configuration](/graph-studio/agent-node) | Same tabs + **Purpose of this child agent** on Details |
 
 ## Add nodes
 
-1. Click the add-node control on the canvas toolbar.
+1. Use the floating node palette on the canvas.
 2. Choose **Start**, **Master Agent**, **Child Agent**, **Tool**, or **End**.
 3. Place on the canvas and connect [handles](/graph-studio/connections).
 4. Configure Master/Child agents in the [drawer](/graph-studio/interface).

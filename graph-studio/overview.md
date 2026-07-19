@@ -4,14 +4,14 @@ description: Open Graph Studio, studio layout, graph assets, and the design gold
 icon: diagram-project
 ---
 
-**Graph Studio** is where you design an **Agent Graph** — connect nodes, configure the **node drawer**, and use the toolbar to **Save**, **Build**, **Deploy**, and **Test**.
+**Graph Studio** is where you design an **Agent Graph** — connect nodes, configure the **node drawer**, and use the toolbar to **Save**, **Build**, **Deploy**, and **Test**. **Phinite Aura** (left sidebar) can generate or edit the graph from chat.
 
 <CardGroup cols={2}>
   <Card title="Methods" icon="sparkles" href="/graph-studio/methods">
     Phinite Aura or manual canvas.
   </Card>
   <Card title="Interface" icon="layout" href="/graph-studio/interface">
-    Canvas, toolbar, drawer, variables panel.
+    Canvas, toolbar, drawer, graph assets.
   </Card>
   <Card title="Nodes" icon="diagram-project" href="/graph-studio/nodes">
     Start, Master, Child, Tool, End, registry agents.
@@ -23,7 +23,7 @@ icon: diagram-project
     Handles, edges, conditional branches.
   </Card>
   <Card title="Agent configuration" icon="robot" href="/graph-studio/agent-node">
-    Prompt, tools, RAG tab, variables, registry.
+    Prompt, tools, RAG, variables.
   </Card>
   <Card title="RAG" icon="book" href="/graph-studio/rag-management">
     Workspace collections and node attachment.
@@ -37,7 +37,7 @@ icon: diagram-project
 
 1. From **Workspace Home**, open an existing **Agent Graph** or click **New Agent Graph**.
 2. Enter name and description; choose **Conversational** or **Autonomous** ([Agents overview](/agents/overview)).
-3. Click **Create** — Studio opens on the canvas.
+3. Click **Create** — Studio opens on the canvas (often with **Phinite Aura** chat open).
 
 <Frame caption="New Agent Graph dialog">
   <img src="/images/v2/agents/01-new-agent-graph-modal.png" alt="New Agent Graph modal" />
@@ -51,10 +51,14 @@ icon: diagram-project
 
 | Area | What it does |
 | --- | --- |
-| **Left sidebar** | **Graph assets** — Versions, Builds, Cards, Triggers, Integrations, Tools |
-| **Canvas** | Add and connect nodes |
-| **Node drawer** | Per-node **Details**, **Tools**, **RAG**, **Variables**, **Decision** |
-| **Toolbar** | **Save** → **Build** → **Deploy** → **Test** |
+| **Left sidebar** | **Phinite Aura**, plus **Graph assets** — Versions, Builds, Cards, Triggers, Integrations, Tools |
+| **Canvas** | Add and connect nodes; floating node palette and zoom controls |
+| **Node drawer** | Per-node **Details**, **RAG**, **Tools**, **Variables** — **Add a new tool** opens Tools / Integrations / MCP |
+| **Toolbar** | **Save** → **Build** → **Deploy** → **Test** (**Deploy** opens Deploy as A2A / Channel / Chat API when builds exist) |
+
+<Frame caption="Graph Studio — canvas, graph assets, and toolbar">
+  <img src="/images/v2/studio/14-github-studio-shell.png" alt="Graph Studio shell with GitHub Repository Search graph" />
+</Frame>
 
 See [Interface](/graph-studio/interface) for canvas, toolbar, and drawer detail.
 
@@ -86,10 +90,6 @@ flowchart LR
 | **Triggers** | Graph-scoped triggers |
 | **Integrations** | Graph-scoped channels and tools |
 | **Tools** | Graph-scoped tool list |
-
-<Frame caption="Studio Tools panel">
-  <img src="/images/v2/studio/02-tools-sidebar.png" alt="Graph Studio Tools sidebar" />
-</Frame>
 
 ## Related
 

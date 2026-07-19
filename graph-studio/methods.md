@@ -10,13 +10,13 @@ Choose how you bootstrap and refine an Agent Graph. Both methods use the same ca
 **Aura** turns a plain-language goal into a draft canvas — nodes, edges, tool hints, and variable suggestions.
 
 1. Open **Graph Studio** or start **New Agent Graph**.
-2. Choose **Create with Aura** (or open the Aura panel).
+2. Open **Phinite Aura** in the left sidebar (often open by default with **Agent Graph Context Active**).
 3. Describe goal, inputs, knowledge sources, tools, and expected outputs.
-4. Review the draft; validate each node drawer (**Details**, **Tools**, **RAG**, **Variables**).
+4. Review proposed builds/edits; apply when ready; validate each node drawer (**Details**, **RAG**, **Tools**, **Variables**).
 5. Refine on the canvas, then **Save**.
 
-<Frame caption="Graph Studio with Phinite Aura panel">
-  <img src="/images/v2/studio/01-studio-aura-shell.png" alt="Graph Studio with Aura chat" />
+<Frame caption="Graph Studio with Phinite Aura and canvas">
+  <img src="/images/v2/studio/05-studio-shell-travel.png" alt="Graph Studio with Aura and Travel Booking graph" />
 </Frame>
 
 | Include in your prompt | Why |
@@ -31,20 +31,20 @@ Choose how you bootstrap and refine an Agent Graph. Both methods use the same ca
   Name relevant RAG collections and [Tools](/devstudio/overview) in your Aura prompt for better first drafts.
 </Tip>
 
-Before **Save**, confirm a clear path from **Start** to **End** and that branch labels match [decision variables](/graph-studio/connections).
+Before **Save**, confirm a clear path from **Start** to **End** and that branch edge labels match your design ([Connections](/graph-studio/connections)).
 
 ## Manual canvas
 
 Use the manual canvas for full control over placement, edge order, and drawer configuration.
 
 1. **New Agent Graph** → choose **Conversational** or **Autonomous** → **Create**.
-2. **Add nodes** from the toolbar ([Node types](/graph-studio/nodes)).
+2. **Add nodes** from the floating canvas palette ([Node types](/graph-studio/nodes)).
 3. **Connect edges** ([Connections](/graph-studio/connections)).
 4. **Configure the drawer** ([Agent configuration](/graph-studio/agent-node)).
 5. **Test** from the toolbar, then **Save**.
 
 <Frame caption="Configure a node in the drawer">
-  <img src="/images/v2/rag/02-node-rag-drawer.png" alt="Node drawer tabs" />
+  <img src="/images/v2/studio/06-node-drawer-details.png" alt="Node drawer Details tab" />
 </Frame>
 
 ### Iterate

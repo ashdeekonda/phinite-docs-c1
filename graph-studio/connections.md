@@ -21,10 +21,10 @@ Each node exposes **source** (outbound) and **target** (inbound) handles. Hover 
 
 ## Conditional edges
 
-Branch paths using **decision variables** on a **Master Agent**:
+Branch by creating **multiple outbound edges** from a Master or Child Agent and labeling each path (for example `delegate_flight_search`, `complete_itinerary_delivered`):
 
-1. Open drawer → **Decision** tab → define decision variables.
-2. Create multiple outbound edges from the node; label each edge per your design.
+1. Drag additional edges from the source handle to each target node.
+2. Name or label edges so the orchestrator can choose a path from capture/session state.
 3. **Save** and **Test** every branch path to **End**.
 
 <Warning>
@@ -34,5 +34,5 @@ Branch paths using **decision variables** on a **Master Agent**:
 ## Related
 
 - [Node types](/graph-studio/nodes)
-- [Variables — decision](/graph-studio/variables)
+- [Variables](/graph-studio/variables)
 - [Agent configuration](/graph-studio/agent-node)
