@@ -184,7 +184,7 @@
     },
     {
       "source": "/flowgen/agent-block/rag",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/attach-to-nodes"
     },
     {
       "source": "/flowgen/agent-block/tools",
@@ -284,19 +284,19 @@
     },
     {
       "source": "/flowgen/rag-management",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/overview"
     },
     {
       "source": "/flowgen/rag-management/collections",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/overview"
     },
     {
       "source": "/flowgen/rag-management/data-sources",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/connectors"
     },
     {
       "source": "/flowgen/rag-management/referencing",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/attach-to-nodes"
     },
     {
       "source": "/flowgen/types-of-session-variables",
@@ -312,7 +312,7 @@
     },
     {
       "source": "/graph-studio/agent-node/rag",
-      "destination": "/graph-studio/interface/node-library"
+      "destination": "/rag/attach-to-nodes"
     },
     {
       "source": "/graph-studio/agent-node/tools",
@@ -388,19 +388,19 @@
     },
     {
       "source": "/graph-studio/rag-management",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/overview"
     },
     {
       "source": "/graph-studio/rag-management/collections",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/overview"
     },
     {
       "source": "/graph-studio/rag-management/data-sources",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/connectors"
     },
     {
       "source": "/graph-studio/rag-management/referencing",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/attach-to-nodes"
     },
     {
       "source": "/graph-studio/types-of-session-variables",
@@ -419,16 +419,8 @@
       "destination": "/getting-started/quickstart"
     },
     {
-      "source": "/rag/attach-to-nodes",
-      "destination": "/graph-studio/interface"
-    },
-    {
       "source": "/rag/data-sources",
-      "destination": "/graph-studio/interface"
-    },
-    {
-      "source": "/rag/overview",
-      "destination": "/graph-studio/interface"
+      "destination": "/rag/connectors"
     },
     {
       "source": "/reference/ai-assistant",
@@ -612,12 +604,11 @@
                 ]
               },
               {
-                "group": "RAG Management",
+                "group": "RAG Collections",
                 "pages": [
-                  "graph-studio/rag-management",
-                  "graph-studio/rag-management/data-sources",
-                  "graph-studio/rag-management/collections",
-                  "graph-studio/rag-management/referencing"
+                  "rag/overview",
+                  "rag/connectors",
+                  "rag/attach-to-nodes"
                 ]
               }
             ]
@@ -639,7 +630,8 @@
               "configure/env-variables",
               "configure/integrations",
               "configure/build-export",
-              "workspace/models"
+              "workspace/models",
+              "workspace/custom-models"
             ]
           },
           {
@@ -690,29 +682,51 @@
             ]
           },
           {
-            "group": "7. Observability & Billing",
+            "group": "7. Operate",
             "pages": [
-              "observability/overview",
-              "observability/usage-metrics",
               {
-                "group": "Metrics",
+                "group": "Observability",
                 "pages": [
-                  "observability/metrics/session-count",
-                  "observability/metrics/token-usage",
-                  "observability/metrics/telephony"
+                  "observability/overview",
+                  "observability/insights",
+                  "observability/usage-metrics",
+                  {
+                    "group": "Metrics",
+                    "pages": [
+                      "observability/metrics/session-count",
+                      "observability/metrics/token-usage",
+                      "observability/metrics/telephony"
+                    ]
+                  },
+                  {
+                    "group": "Logs",
+                    "pages": [
+                      "observability/logs",
+                      "observability/logs/timeline",
+                      "observability/logs/decision-joints",
+                      "observability/logs/variables"
+                    ]
+                  },
+                  "observability/filtering",
+                  "observability/billing"
                 ]
               },
               {
-                "group": "Logs",
+                "group": "Governance",
                 "pages": [
-                  "observability/logs",
-                  "observability/logs/timeline",
-                  "observability/logs/decision-joints",
-                  "observability/logs/variables"
+                  "governance/overview",
+                  "governance/tool-policies",
+                  "governance/llm-guardrails",
+                  "governance/approvals"
                 ]
               },
-              "observability/filtering",
-              "observability/billing"
+              {
+                "group": "Evaluations",
+                "pages": [
+                  "evaluations/overview",
+                  "evaluations/studio"
+                ]
+              }
             ]
           },
           {

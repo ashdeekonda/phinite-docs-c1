@@ -21,7 +21,20 @@
 | Agent Registry tab | 8 | **DONE** | **DONE** |
 | Integrations Hub tab | ~61 | **DONE** (terminology + Note) | **DONE** |
 
-**DROP (redirect only, not in nav):** `assistants/*` (11), `triggers-intents/intents*` (5), `reference/glossary`, `reference/ai-assistant`, spine stubs (`what-is-phinite`, `quickstart`, `studio/*`, `rag/*`, `a2a/*`, `agents/build-graph`, etc.)
+## Pass 5 status (2026-09-08) — ash/sep
+
+| Area | Nav pages | Content status | Nav wired |
+| --- | --- | --- | --- |
+| RAG Collections | 3 (`rag/*`) | **DONE** | **DONE** (replaces broken `graph-studio/rag-management/*`) |
+| Governance | 4 | **DONE** | **DONE** (under Operate) |
+| Evaluations | 2 | **DONE** | **DONE** (under Operate) |
+| Observability Insights | +1 | **DONE** | **DONE** (Insights first under Operate → Observability) |
+| Custom Models / Models hub | +1 + models.md update | **DONE** | **DONE** (Configure) |
+
+**REDIR:** `/graph-studio/rag-management*` and `/flowgen/rag-management*` → `/rag/*`.  
+**DEFER:** Budget Limits (Soon); HIL Slack/Teams as production delivery; sidebar Settings hub Phase 2.
+
+**DROP (redirect only, not in nav):** `assistants/*` (11), `triggers-intents/intents*` (5), `reference/glossary`, `reference/ai-assistant`, spine stubs (`what-is-phinite`, `quickstart`, `studio/*`, legacy `a2a/*`, `agents/build-graph`, etc.). Note: live `rag/*` pages are **DONE** in Pass 5 (not DROP).
 
 **DEFER (on disk, unreferenced):** `setup-account/*`, `assistants/*` legacy files, `workspaces/creating-workspace.md`
 
@@ -34,4 +47,4 @@
 
 ## New nav (live)
 
-See [`docs.json`](../../docs.json): 10 Documentation groups + Agent Registry + Integrations Hub tabs (~210 pages).
+See [`docs.json`](../../docs.json): Documentation groups include **7. Operate** (Observability + Insights, Governance, Evaluations), **RAG Collections** under Graph Studio, and **Custom Models** under Configure (~Pass 5 ash/sep).

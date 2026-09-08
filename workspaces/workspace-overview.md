@@ -64,82 +64,49 @@ From the global header, switch between workspaces or create new ones if you have
 
 ## Sidebar navigation
 
-Each workspace sidebar is your main navigation panel.
+Each workspace sidebar is grouped into **Agents**, **BUILD**, **OPERATE**, and **ACCOUNT**.
 
-### Agent Graphs
+### Agents
 
-**Agent Graphs** are the core objects in a workspace. Create **Conversational** or **Autonomous** graphs from Workspace Home, then open each graph in:
-
-| Surface | Purpose |
+| Item | Purpose |
 | --- | --- |
-| **Graph Studio** | Visual workflow design — Save, Build, Deploy, Test |
-| **Tools & Dev Studio** | Custom and prebuilt tool development |
-| **Phinite Aura** | Natural-language graph edits in Studio |
+| **Agents** (Workspace Home) | Agent Graph list; create Conversational or Autonomous graphs |
+| **Agent Registry** | Catalog of agents exposed over A2A |
 
-Agent Graphs in a workspace share tools, integrations, and RAG Data collections.
+Open a graph in **Graph Studio** (Save → Build → Deploy → Test). Use **Phinite Aura** for natural-language drafts. See [Agents overview](/agents/overview) and [Agent Registry](/agent-registry/overview).
 
 <Tip>
   Use consistent naming conventions (for example `support-faq-conv`, `nightly-etl-auto`) to group related graphs.
 </Tip>
 
-### Tools
+### BUILD
 
-Workspace **Tools** are reusable components any Agent Graph can call at runtime:
-
-- Custom Python handlers
-- Prebuilt integration subtools
-- System tools and utility functions
-
-Open **Dev Studio** from any tool to edit code, test, and publish versions. See [Tools & Dev Studio overview](/devstudio/overview).
-
-### Integrations
-
-Integrations connect your workspace to external systems and communication channels.
-
-| Type | Examples |
+| Item | Purpose |
 | --- | --- |
-| **Predefined integrations** | Jira, Gmail, Salesforce, HubSpot |
-| **Channel integrations** | WhatsApp, Slack, Teams, Twilio, email |
+| **Tools** | Custom and prebuilt tools; open Dev Studio to edit and publish |
+| **MCP Servers** | MCP connections for tools and agents |
+| **RAG Collections** | Knowledge collections for retrieval ([RAG overview](/rag/overview)) |
+| **Integrations** | Channels, Integration Tools, Triggers hub |
+| **Models** | [Custom Models](/workspace/custom-models) (BYOM) and [Model Keys](/workspace/models) (BYOK) |
+| **Env. variables** | DEV / UAT / PROD secrets and config |
 
-Authenticate once under **Integrations**, then wire channels and triggers to deployed builds. See [Configure integrations](/configure/integrations) and [Channels overview](/channels/overview).
+Authenticate integrations once, then wire channels and triggers to deployed builds. See [Configure integrations](/configure/integrations).
 
-### Agent Registry
+### OPERATE
 
-**Agent Registry** is the workspace catalog of agents exposed over the **Agent-to-Agent (A2A) protocol**. Open it from the sidebar when your organisation grants `workspace.sidebar.agent_registry`.
+| Item | Purpose |
+| --- | --- |
+| **Observability** | Default [Insights](/observability/insights), Sessions, metrics, logs |
+| **Governance** | Policies, Guardrails library, Approvals ([overview](/governance/overview)) |
+| **Evaluations** | Analytics and History ([overview](/evaluations/overview)) — Pro+ |
 
-Use it to:
+### ACCOUNT
 
-- **Expose** published agent graphs as hosted A2A endpoints
-- **Browse** organisation and public Agent Cards
-- **Compose** multi-agent flows with registry agent nodes in Graph Studio
-
-See [Agent Registry overview](/agent-registry/overview).
-
-### RAG Data
-
-**RAG Data** manages workspace knowledge collections used by agent nodes for retrieval.
-
-Supported sources include PDF, CSV, text documents, structured datasets, and API-connected endpoints. Organize content into collections referenced in [Graph Studio RAG](/graph-studio/interface#rag).
-
-### Env. variables
-
-**Env. variables** store DEV / UAT / PROD secrets and configuration. Tools and builds read these at runtime — never hard-code credentials in tool code. See [Env. variables](/configure/env-variables).
-
-### API Keys
-
-Generate workspace-level API keys for programmatic access:
-
-- Trigger Agent Graph runs from external applications
-- Authenticate Chat API and trigger webhooks
-- Regenerate or revoke keys as needed
-
-<Warning>
-  Treat API keys as confidential credentials. Revoking a key immediately disables all external requests using that key.
-</Warning>
-
-### Users
-
-Admins and Organization Owners manage workspace members — invite users, assign roles, or remove access.
+| Item | Purpose |
+| --- | --- |
+| **Users** | Invite members and assign roles |
+| **Keys** | Workspace API keys for Chat API, triggers, and programmatic access |
+| **Billing & Usage** | Plan, invoices, and usage (Organization Owners) |
 
 | Role | Scope |
 | --- | --- |
@@ -150,11 +117,9 @@ Admins and Organization Owners manage workspace members — invite users, assign
 
 See [Access controls](/user-management/access-controls) and [User roles](/user-management/user-roles).
 
-### Billing and reports
-
-**Billing** (Organization Owners) shows plan details, usage metrics (tokens, compute, voice minutes), and invoices.
-
-**Reports** provide session activity, token consumption, and graph-level execution summaries filterable by environment (DEV, UAT, PROD). Data integrates with [Observability](/observability/overview).
+<Warning>
+  Treat API keys as confidential credentials. Revoking a key immediately disables all external requests using that key.
+</Warning>
 
 ## Bottom navigation
 

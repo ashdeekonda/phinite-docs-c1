@@ -25,7 +25,12 @@ Primary reference for the **Agent Graph** mental model. Avoid legacy terms liste
 | **Agent Card version** | One expose registration; status **TEST** or **LIVE**. |
 | **Agent Registry** | Workspace catalog of exposed A2A agents. |
 | **Tool** | Callable integration or custom function used by nodes in an agent graph. |
-| **RAG Data** | Workspace knowledge collections attached to agent nodes for retrieval. |
+| **RAG Collections** | Workspace knowledge collections attached to agent nodes for retrieval (sidebar: **BUILD → RAG Collections**). Legacy label: RAG Data. |
+| **Custom Models / BYOM** | Bring your own model — workspace-defined endpoints outside the Phinite catalog. |
+| **Model Keys / BYOK** | Provider API keys for catalog models, plus the platform **Phinite Key**. |
+| **Insights** | Default Observability landing — session health, policy blocks, **Cost (Phinite)**. |
+| **HITL** | Human in the loop — tool calls that require **human_approval** before continuing. |
+| **LLM Governance** | Studio module for attaching guardrail profiles (Guardrails are not a separate Studio rail). |
 | **Workspace** | Top-level collaboration container for Agent Graphs, tools, integrations, and users. |
 
 ## A2A terms
@@ -50,11 +55,15 @@ Primary reference for the **Agent Graph** mental model. Avoid legacy terms liste
 | **Tools & Dev Studio** | Canonical nav label for tool authoring (legacy: DevStudio) |
 | **Integrations** | Channels, Integration Tools, Triggers hub |
 | **Env. variables** | DEV / UAT / PROD secrets and config |
-| **RAG Data** | Workspace data sources and collections |
+| **RAG Collections** | Workspace collections under BUILD (URL still `/data-sources`) |
+| **Models** | Accordion: Custom Models (BYOM) + Model Keys (BYOK) |
 | **Model Keys** | BYOK provider keys (`workspace.sidebar.byok`) |
+| **Custom Models** | BYOM endpoints (`/custom-models`) |
 | **Agent Registry** | Browse exposed A2A agents |
 | **Phinite Aura** | Natural-language copilot in Graph Studio for assisted graph edits |
-| **Observability** | Session logs, metrics, filtering, and billing dashboards |
+| **Observability** | Insights (default), Sessions, metrics, logs, billing |
+| **Governance** | OPERATE policies, Guardrails library, Approvals; Studio Tool / HITL / LLM |
+| **Evaluations** | OPERATE Analytics / History; Studio Agent Evaluations panel (Pro+) |
 
 ## Configuration
 

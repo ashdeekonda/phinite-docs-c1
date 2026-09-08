@@ -1,7 +1,20 @@
 ---
-title: Model Keys
-description: BYOK provider keys and model selection for agent nodes.
+title: Models
+description: Models hub — Custom Models (BYOM) and Model Keys (BYOK) for agent nodes.
 ---
+
+**Models** in the workspace sidebar groups two related surfaces:
+
+| Child | Purpose |
+| --- | --- |
+| **Custom Models** | BYOM — your own model endpoints ([Custom Models](/workspace/custom-models)) |
+| **Model Keys** | BYOK — provider keys for catalog models, plus **Phinite Key** |
+
+<Frame caption="BUILD → Models accordion — Custom Models and Model Keys">
+  <img src="/images/v2/workspace/02-models-hub.png" alt="Models accordion with Custom Models and Model Keys" />
+</Frame>
+
+## Model Keys (BYOK)
 
 **Model Keys** let you bring your own provider credentials (BYOK) or use the platform **Phinite Key**. **Master Agent** and **Child Agent** nodes select which model and key to use for LLM calls on the **Agent Graph**.
 
@@ -9,39 +22,46 @@ description: BYOK provider keys and model selection for agent nodes.
   **Save** the Agent Graph before **Build** after changing model or key on a node. Permission: `workspace.sidebar.byok`.
 </Note>
 
-## Where in the product
+### Where in the product
 
 | Surface | Path |
 | --- | --- |
-| Workspace **Keys** pocket | **Model Keys** |
+| Workspace **Models** accordion | **Model Keys** |
 | URL | `/{org}/workspace/{workspaceId}/model-key` |
-| Per-node model | Graph Studio → agent node drawer → model / provider fields |
+| Per-node model | Graph Studio → agent node drawer → **Change model** |
 
 <Frame caption="Model Keys — BYOK providers and Phinite Key">
   <img src="/images/v2/workspace/01-model-keys.png" alt="Model Keys workspace page" />
 </Frame>
 
-## Workspace keys
+### Workspace keys
 
-1. Open **Keys** in the workspace sidebar (bottom section).
-2. Click **Model Keys**.
-3. Add a provider key or use the default **Phinite Key** card.
-4. Set which key is default for the workspace if prompted.
+1. Open **BUILD → Models → Model Keys** (or **Keys** if your nav still lists Model Keys there).
+2. Add a provider key or use the default **Phinite Key** card.
+3. Set which key is default for the workspace if prompted.
 
-## Use on an agent node
+### Use on an agent node
 
 1. Open **Graph Studio** and select a **Master Agent** or **Child Agent** node.
-2. In the node drawer, choose **model** and provider settings.
-3. Pick a key that matches your BYOK setup.
-4. **Save** the **Agent Graph** before **Build**.
+2. On **Details**, open **Change model**.
+3. Leave **Bring your Own(Custom)** off to use Phinite credentials, or turn it on and choose **Bring your own Key** for BYOK.
+4. Pick model and key, then **Done**.
+5. **Save** the **Agent Graph** before **Build**.
 
 <Info>
-  The **Phinite Key** uses platform-managed credentials. BYOK keys are stored per workspace and never embedded in the graph JSON.
+  The **Phinite Key** uses platform-managed credentials. BYOK keys are stored per workspace and never embedded in the graph JSON. For endpoints outside the catalog, use [Custom Models](/workspace/custom-models) (**Bring your own Model**).
 </Info>
+
+## Custom Models (BYOM)
+
+See [Custom Models](/workspace/custom-models) for adding endpoints and the public Agent Card restriction on BYOM graphs.
 
 ## Related
 
 <CardGroup cols={2}>
+  <Card title="Custom Models" icon="microchip" href="/workspace/custom-models">
+    BYOM endpoints for Graph Studio.
+  </Card>
   <Card title="Agent node" icon="robot" href="/graph-studio/interface/node-library">
     Drawer fields for prompts, tools, and model.
   </Card>
@@ -50,8 +70,5 @@ description: BYOK provider keys and model selection for agent nodes.
   </Card>
   <Card title="Builds overview" icon="box" href="/builds/overview">
     Freeze graph and tool versions into Agent Builds.
-  </Card>
-  <Card title="Configuration overview" icon="sliders" href="/configure/overview">
-    All configuration layers in one place.
   </Card>
 </CardGroup>

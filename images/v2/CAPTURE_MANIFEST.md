@@ -65,3 +65,34 @@ Naming: `images/v2/{area}/{nn}-{flow}-{screen}.png`. Append rows here when captu
 - Studio Graph assets: Graph Versions, Agent Builds, Agent Cards, Triggers, Integrations, Tools.
 - Workspace nav: Workspace Home, Tools, Env. variables, Agent Registry, Integrations, MCP Server, RAG Data, Observability, Keys.
 - Tools live at `/all-tools` (not labeled “DevStudio” in nav); separate from Studio Tools panel.
+
+## Pass 5 — ash/sep Operate + RAG + BYOM (2026-09-08)
+
+Source: live `flow-gen-frontend` @ `http://localhost:3000`  
+Org/workspace: `S5M4N3M` / `aTIVxzm` (Development1)  
+Studio graph: `flowId=tyIQM8BwX` (RAG Testing multi agentic)  
+IA: governance sidebar (RAG Collections, OPERATE = Observability / Governance / Evaluations; Models = Custom Models + Model Keys)
+
+| Step ID | File | Surface | Notes |
+| --- | --- | --- | --- |
+| rag.list | `rag/03-collections-list.png` | BUILD → RAG Collections | Collections (23); replaces stale list framing |
+| rag.detail | `rag/04-collection-detail.png` | Collection detail | My-new-test / `rbTSXVAng` |
+| rag.add | `rag/05-add-sources.png` | Add sources wizard | File Upload / Website / Wikis / Synced folders |
+| rag.drawer | `rag/06-node-rag-collections.png` | Studio node RAG tab | Attach collection; asif-test attached |
+| gov.workspace | `governance/01-workspace-policies.png` | OPERATE → Governance Policies | Policy decisions, rule mix |
+| gov.guardrails | `governance/02-workspace-guardrails.png` | Governance → Guardrails | Workspace guardrail library |
+| gov.approvals | `governance/03-workspace-approvals.png` | Governance → Approvals | Inbox triage |
+| gov.studio | `governance/04-studio-summary.png` | Studio Governance Summary | Tool / HITL / HIL New / LLM cards |
+| gov.tool | `governance/05-studio-tool.png` | Studio Tool Governance | In Use + Library |
+| gov.llm | `governance/06-studio-llm.png` | Studio LLM Governance | Guardrail profiles (ex-Guardrails rail) |
+| gov.hitl | `governance/07-studio-hitl.png` | Studio Human in the Loop | Linked policies + Open Tool Governance |
+| eval.analytics | `evals/01-analytics.png` | OPERATE → Evaluations Analytics | KPIs + volume heatmap |
+| eval.history | `evals/02-history.png` | Evaluations → History | Session / run history |
+| eval.studio | `evals/03-studio-panel.png` | Studio Evaluations panel | Connect to Build / Run on draft / Experiment / Signal |
+| obs.insights | `observability/01-insights.png` | Observability default Insights | Cost (Phinite), drill to Sessions |
+| obs.sessions | `observability/02-sessions.png` | Observability → Sessions | Session list |
+| byom.list | `byom/01-custom-models.png` | BUILD → Models → Custom Models | Workspace BYOM endpoints |
+| byom.studio | `byom/02-studio-byom.png` | Change model → BYOM | Bring your Own(Custom) + Bring your own Model |
+| models.hub | `workspace/02-models-hub.png` | Models accordion | Custom Models + Model Keys |
+
+Old `rag/01-data-sources.png`, `rag/02-node-rag-drawer.png`, and `workspace/01-model-keys.png` remain for history; Pass 5 shots are additive.
