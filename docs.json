@@ -423,6 +423,10 @@
       "destination": "/rag/connectors"
     },
     {
+      "source": "/governance/llm-guardrails",
+      "destination": "/guardrails/overview"
+    },
+    {
       "source": "/reference/ai-assistant",
       "destination": "/reference/glossary-v2"
     },
@@ -682,55 +686,61 @@
             ]
           },
           {
-            "group": "7. Operate",
+            "group": "7. Observability",
             "pages": [
+              "observability/overview",
+              "observability/insights",
+              "observability/investigate",
+              "observability/usage-metrics",
               {
-                "group": "Observability",
+                "group": "Metrics",
                 "pages": [
-                  "observability/overview",
-                  "observability/insights",
-                  "observability/usage-metrics",
-                  {
-                    "group": "Metrics",
-                    "pages": [
-                      "observability/metrics/session-count",
-                      "observability/metrics/token-usage",
-                      "observability/metrics/telephony"
-                    ]
-                  },
-                  {
-                    "group": "Logs",
-                    "pages": [
-                      "observability/logs",
-                      "observability/logs/timeline",
-                      "observability/logs/decision-joints",
-                      "observability/logs/variables"
-                    ]
-                  },
-                  "observability/filtering",
-                  "observability/billing"
+                  "observability/metrics/session-count",
+                  "observability/metrics/token-usage",
+                  "observability/metrics/telephony"
                 ]
               },
               {
-                "group": "Governance",
+                "group": "Logs",
                 "pages": [
-                  "governance/overview",
-                  "governance/tool-policies",
-                  "governance/llm-guardrails",
-                  "governance/approvals"
+                  "observability/logs",
+                  "observability/logs/timeline",
+                  "observability/logs/decision-joints",
+                  "observability/logs/variables"
                 ]
               },
-              {
-                "group": "Evaluations",
-                "pages": [
-                  "evaluations/overview",
-                  "evaluations/studio"
-                ]
-              }
+              "observability/filtering",
+              "observability/billing"
             ]
           },
           {
-            "group": "8. User Management",
+            "group": "8. Governance",
+            "pages": [
+              "governance/overview",
+              "governance/tool-policies",
+              "governance/hitl",
+              "governance/approvals"
+            ]
+          },
+          {
+            "group": "9. Guardrails",
+            "pages": [
+              "guardrails/overview",
+              "guardrails/profiles",
+              "guardrails/attach"
+            ]
+          },
+          {
+            "group": "10. Evaluations",
+            "pages": [
+              "evaluations/overview",
+              "evaluations/studio",
+              "evaluations/connect-to-build",
+              "evaluations/run-on-draft"
+            ]
+          },
+          {
+            "group": "11. User Management",
             "pages": [
               "user-management/user-management",
               "user-management/workspace-ui",
@@ -740,7 +750,7 @@
             ]
           },
           {
-            "group": "9. Reference",
+            "group": "12. Reference",
             "pages": [
               "reference/glossary-v2",
               "reference/shortcuts",
@@ -750,7 +760,7 @@
             ]
           },
           {
-            "group": "10. Troubleshooting & Support",
+            "group": "13. Troubleshooting & Support",
             "pages": [
               "support/error-codes",
               "support/build-failures",

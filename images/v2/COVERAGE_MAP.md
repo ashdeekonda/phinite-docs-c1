@@ -25,14 +25,15 @@
 
 | Area | Nav pages | Content status | Nav wired |
 | --- | --- | --- | --- |
-| RAG Collections | 3 (`rag/*`) | **DONE** | **DONE** (replaces broken `graph-studio/rag-management/*`) |
-| Governance | 4 | **DONE** | **DONE** (under Operate) |
-| Evaluations | 2 | **DONE** | **DONE** (under Operate) |
-| Observability Insights | +1 | **DONE** | **DONE** (Insights first under Operate → Observability) |
-| Custom Models / Models hub | +1 + models.md update | **DONE** | **DONE** (Configure) |
+| RAG Collections | 3 (`rag/*`) | **DONE** | **DONE** |
+| Observability | Insights + Investigate + existing | **DONE** (deepened) | **7. Observability** (top-level) |
+| Governance | overview, tool-policies, hitl, approvals | **DONE** (deepened) | **8. Governance** (top-level) |
+| Guardrails | overview, profiles, attach | **DONE** | **9. Guardrails** (separate chapter) |
+| Evaluations | overview, studio, connect-to-build, run-on-draft | **DONE** (deepened) | **10. Evaluations** (top-level) |
+| Custom Models / Models hub | +1 + models.md | **DONE** | Configure |
 
-**REDIR:** `/graph-studio/rag-management*` and `/flowgen/rag-management*` → `/rag/*`.  
-**DEFER:** Budget Limits (Soon); HIL Slack/Teams as production delivery; sidebar Settings hub Phase 2.
+**REDIR:** `/governance/llm-guardrails` → `/guardrails/overview`; `/graph-studio/rag-management*` → `/rag/*`.  
+**DEFER:** Budget Limits (Soon); HIL Slack/Teams as production delivery; Experiment wizard stub; sidebar Settings hub Phase 2.
 
 **DROP (redirect only, not in nav):** `assistants/*` (11), `triggers-intents/intents*` (5), `reference/glossary`, `reference/ai-assistant`, spine stubs (`what-is-phinite`, `quickstart`, `studio/*`, legacy `a2a/*`, `agents/build-graph`, etc.). Note: live `rag/*` pages are **DONE** in Pass 5 (not DROP).
 
@@ -47,4 +48,4 @@
 
 ## New nav (live)
 
-See [`docs.json`](../../docs.json): Documentation groups include **7. Operate** (Observability + Insights, Governance, Evaluations), **RAG Collections** under Graph Studio, and **Custom Models** under Configure (~Pass 5 ash/sep).
+See [`docs.json`](../../docs.json): groups **7–10** are Observability, Governance, Guardrails, Evaluations as separate top-level chapters (product UI still pockets Observability / Governance / Evaluations under OPERATE).

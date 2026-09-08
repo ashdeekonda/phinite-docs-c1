@@ -94,11 +94,15 @@ Authenticate integrations once, then wire channels and triggers to deployed buil
 
 ### OPERATE
 
-| Item | Purpose |
+Product sidebar groups these under **OPERATE**. In docs they are separate chapters:
+
+| Item | Docs |
 | --- | --- |
-| **Observability** | Default [Insights](/observability/insights), Sessions, metrics, logs |
-| **Governance** | Policies, Guardrails library, Approvals ([overview](/governance/overview)) |
-| **Evaluations** | Analytics and History ([overview](/evaluations/overview)) — Pro+ |
+| **Observability** | [Insights](/observability/insights), Sessions, [Investigate](/observability/investigate) |
+| **Governance** | [Overview](/governance/overview), tool policies, HITL, approvals |
+| **Evaluations** | [Overview](/evaluations/overview), Studio wizards — Pro+ |
+
+LLM safety profiles: [Guardrails](/guardrails/overview) (Studio **LLM Governance**; workspace Guardrails tab under Governance).
 
 ### ACCOUNT
 

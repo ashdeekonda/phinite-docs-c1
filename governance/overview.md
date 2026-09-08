@@ -1,76 +1,101 @@
 ---
 title: Governance overview
-description: Workspace policies and Studio Tool / HITL / LLM Governance for Agent Graphs.
+description: Workspace policies and Studio Tool / HITL controls for Agent Graphs (Pro+).
 icon: shield
 ---
 
-**Governance** controls which tools agents may call, when a person must approve, and how LLM inputs/outputs are inspected. Use the workspace **OPERATE → Governance** dashboards for fleet health, and the Studio **Governance** panel to attach policies and profiles to a specific Agent Graph.
+**Governance** controls which tools agents may call and when a person must approve. LLM prompt/output safety lives under **[Guardrails](/guardrails/overview)** (Studio **LLM Governance**). Use the workspace page for fleet analytics and the approvals inbox; use Graph Studio to attach policies to a specific Agent Graph.
 
 <Note>
-  Governance (and Evaluations) require a **Pro+** plan (Professional or Enterprise). Lower tiers may show locked chrome in the Studio sidebar. The workspace **OPERATE → Governance** page is **Admin / Superadmin** only; Studio Governance read is available to roles with `workspace.governance.read`.
+  Requires **Professional** or **Enterprise** (Pro+). Workspace **OPERATE → Governance** is **Admin / Superadmin** only. Studio read uses `workspace.governance.read`; create/attach need write permissions.
 </Note>
 
 <CardGroup cols={2}>
   <Card title="Tool policies" icon="screwdriver-wrench" href="/governance/tool-policies">
-    Allow, deny, and human_approval rules on tools.
+    Allow, Human approval, Deny — full create and attach wizards.
   </Card>
-  <Card title="LLM guardrails" icon="shield-halved" href="/governance/llm-guardrails">
-    Guardrail profiles under Studio LLM Governance.
+  <Card title="HITL & HIL New" icon="user-check" href="/governance/hitl">
+    Human-in-the-loop policies and destination profiles.
   </Card>
   <Card title="Approvals" icon="inbox" href="/governance/approvals">
-    Human approval inbox — dashboard and email delivery.
+    Accept or Reject pending tool calls.
   </Card>
-  <Card title="Observability" icon="chart-line" href="/observability/overview">
-    Insights include policy blocks and session drill-down.
+  <Card title="Guardrails" icon="shield-halved" href="/guardrails/overview">
+    LLM safety profiles (separate chapter).
   </Card>
 </CardGroup>
 
-## Workspace vs Studio
+## Where in the product
 
-| Surface | Role |
+| Surface | Path / entry |
 | --- | --- |
-| **OPERATE → Governance** | Workspace analytics: Policies, Guardrails, Approvals (Budget is **Soon**) |
-| **Graph Studio → Governance** | Per-flow Summary, Tool Governance, Human in the Loop, HIL New, **LLM Governance** |
+| Workspace | **OPERATE → Governance** → `/{org}/workspace/{workspaceId}/governance` |
+| Studio panel | Graph Studio rail **Governance** → `?tab=governance` |
+| Studio queue | Rail **HIL Approvals** (dialog) |
+
+## Workspace tabs
+
+| Tab | `?tab=` | Purpose |
+| --- | --- | --- |
+| **Policies** | `policies` (default) | Policy activity, decisions blocked/logged, approvals resolved, rule mix |
+| **Guardrails** | `guardrails` | Guardrail activity analytics (library attach is in Studio — see [Guardrails](/guardrails/overview)) |
+| **Budget** | `budget` | Badge **Soon** — not enabled yet |
+| **Approvals** | `approvals` | Human approval inbox |
+
+Toolbar on Policies / Guardrails: **Last 7 days** / **Last 30 days** / **Last 90 days** · **Refresh**. Optional `?view=sessions` drills into session history for policy or guardrail purpose.
 
 <Frame caption="Workspace Governance — Policies tab">
-  <img src="/images/v2/governance/01-workspace-policies.png" alt="Governance Policies dashboard with decisions and rule mix" />
+  <img src="/images/v2/governance/01-workspace-policies.png" alt="Governance Policies dashboard" />
 </Frame>
 
-Workspace tabs:
+### Policies analytics labels
 
-- **Policies** — decisions, approvals resolved, rule mix (ALLOW / HITL / DENY), code-execution profiles
-- **Guardrails** — workspace library of LLM guardrail profiles (attach in Studio under **LLM Governance**)
-- **Approvals** — triage pending human approvals
-- **Budget** — marked **Soon** (out of scope for this release)
-
-## Studio Summary
-
-Open an Agent Graph, then **Governance** in the Studio sidebar (or `?tab=governance`). **Summary** shows attachment status for:
-
-| Module | Purpose |
+| Card / metric | Meaning |
 | --- | --- |
-| **Tool Governance** | Tool access policies (allow / deny / human approval) |
-| **Human in the Loop** | Tool policies that require a person before an action runs |
-| **HIL New** | Profiles for where Accept/Reject lands (users / channels) |
-| **LLM Governance** | Guardrail profiles (toxicity, data leaks, provider armor) |
+| **Policy decisions** | Blocked vs logged share for the range |
+| **Approvals resolved** | Pending / Approved / Rejected |
+| **Policy sessions** | Sessions with policy events |
+| **Policies configured** | Counts with human approval / deny rules / total rules |
+| **Rule mix** | DENY · HITL · ALLOW |
+| **Code execution** | Sandbox profiles Enabled / Kill switch / Total |
+| **Policy activity** | Heatmap of daily volume |
 
-<Info>
-  **HIL New** channel profiles (Slack / Teams) are Studio UX ahead of API delivery. Shipped approval notification channels remain **Dashboard** and **Email** — see [Approvals](/governance/approvals).
-</Info>
+Quick links: **Human approvals** · **Observability** · **Billing & usage**.
 
-<Frame caption="Studio Governance Summary — attached Tool and HITL cards">
-  <img src="/images/v2/governance/04-studio-summary.png" alt="Governance Summary with Tool Governance, HITL, HIL New, LLM Governance" />
+## Studio Governance modules
+
+Open an Agent Graph → **Governance**. Chrome title **Governance**. Tabs:
+
+| Tab | Module | Prominence |
+| --- | --- | --- |
+| **Summary** | Home | Cards for Tool / HITL / HIL New / LLM with **Attached** badges |
+| **Tool Governance** | `tool` | Allow, deny, or send writes to a person |
+| **Human in the Loop** | `hitl` | Policies that require a person before an action runs |
+| **HIL New** | `hil_new` | Profiles for where Accept/Reject lands |
+| **LLM Governance** | `llm` | Prompt/output inspection — documented under [Guardrails](/guardrails/overview) |
+
+<Frame caption="Studio Governance Summary">
+  <img src="/images/v2/governance/04-studio-summary.png" alt="Governance Summary cards" />
 </Frame>
-
-Click **Open** on a card to jump to that submodule.
 
 <Tip>
-  Guardrails are **not** a separate Studio rail in this IA. Configure them under **LLM Governance** inside the Governance panel.
+  There is no separate Studio **Guardrails** rail in this IA. Use **LLM Governance** inside Governance, or the docs chapter [Guardrails](/guardrails/overview).
 </Tip>
+
+## Permissions and APIs (summary)
+
+| Concern | Value |
+| --- | --- |
+| Plan | `MinPlan.Governance` = Pro+ |
+| RBAC | `workspace.governance.{read,create,update,delete,attach,detach}` |
+| Approvals decide | Admin/Superadmin + `workspace.governance.update` |
+| HTTP prefix | `/governance` (analytics, policies, bindings, human-approvals, guardrails, …) |
 
 ## Related
 
 - [Tool policies](/governance/tool-policies)
-- [LLM guardrails](/governance/llm-guardrails)
+- [HITL](/governance/hitl)
 - [Approvals](/governance/approvals)
-- [Evaluations overview](/evaluations/overview)
+- [Guardrails overview](/guardrails/overview)
+- [Evaluations](/evaluations/overview)
+- [Observability Insights](/observability/insights)

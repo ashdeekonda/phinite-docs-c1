@@ -29,8 +29,12 @@ Primary reference for the **Agent Graph** mental model. Avoid legacy terms liste
 | **Custom Models / BYOM** | Bring your own model — workspace-defined endpoints outside the Phinite catalog. |
 | **Model Keys / BYOK** | Provider API keys for catalog models, plus the platform **Phinite Key**. |
 | **Insights** | Default Observability landing — session health, policy blocks, **Cost (Phinite)**. |
-| **HITL** | Human in the loop — tool calls that require **human_approval** before continuing. |
-| **LLM Governance** | Studio module for attaching guardrail profiles (Guardrails are not a separate Studio rail). |
+| **Investigate** | Per-session Span / Timeline / Conversation studio. |
+| **HITL** | Human in the loop — tool calls that require **Human approval** before continuing. |
+| **HIL New** | Studio profiles for Accept/Reject destinations (Dashboard / Slack / Teams; Slack/Teams preview). |
+| **HIL Approvals** | Studio dialog + workspace Approvals inbox (**Accept** / **Reject**). |
+| **LLM Governance** | Studio module for guardrail profiles (docs chapter: Guardrails). |
+| **Guardrails** | LLM safety profiles (Phinite, AWS Bedrock, Azure Content Safety, GCP Model Armor). |
 | **Workspace** | Top-level collaboration container for Agent Graphs, tools, integrations, and users. |
 
 ## A2A terms

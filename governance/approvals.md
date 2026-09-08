@@ -1,46 +1,75 @@
 ---
 title: Approvals
-description: Triage human-in-the-loop approvals from the workspace inbox with dashboard and email delivery.
+description: Accept or Reject human-approval tool calls from workspace Approvals or Studio HIL Approvals.
 ---
 
-When a tool policy uses **human_approval**, runs pause until a person accepts or rejects. Approvers work from the workspace **Approvals** inbox and optional email; Studio configures **Approval delivery** on the policy binding.
+When a tool policy uses **Human approval**, runs pause until a person **Accept**s or **Reject**s. Approvers use the workspace inbox and optional email; Studio can open the same queue from **HIL Approvals**.
 
-<Frame caption="Workspace Governance — Approvals inbox">
-  <img src="/images/v2/governance/03-workspace-approvals.png" alt="Governance Approvals tab" />
+<Frame caption="Workspace Governance — Approvals">
+  <img src="/images/v2/governance/03-workspace-approvals.png" alt="Approvals inbox" />
 </Frame>
 
-## Where to work approvals
+## Surfaces
 
-| Surface | Use |
+| Surface | Entry |
 | --- | --- |
-| **OPERATE → Governance → Approvals** | Primary inbox / triage |
-| Studio **HIL Approvals** (sidebar) | Jump into approval work from Graph Studio |
-| Email | When **Approval delivery** includes Email |
-
-## Approval delivery
-
-On **Tool Governance**, when attaching a policy that needs a person:
-
-1. Open **Approval delivery** (or the attach wizard’s delivery step).
-2. Enable **Dashboard** and/or **Email**.
-3. Add email recipients when Email is on.
-4. Save delivery, then finish attach.
+| Workspace | **OPERATE → Governance → Approvals** (`?tab=approvals`) |
+| Studio | Left rail **HIL Approvals** → dialog title **HIL Approvals** |
+| Email | When binding **Approval delivery** includes **Email** |
 
 <Note>
-  Backend **Approval delivery** supports **Dashboard** and **Email** only. Studio **HIL New** may let you pick Slack/Teams destinations in the UI; treat those as preview until a profile delivery API ships.
+  Approvals list and decide require **Admin / Superadmin** (API also checks admin). Plan: Pro+.
 </Note>
 
-## Typical triage flow
+## Filters and layout
 
-1. Open **Governance → Approvals** (or follow a “Triage approvals” link from the Policies dashboard).
-2. Review the pending tool call and context.
-3. **Approve** or **Reject**.
-4. Confirm the session continues or stops in [Observability](/observability/overview).
+| Control | Options |
+| --- | --- |
+| Status filters | **Pending** · **Approved** · **Rejected** · **All** |
+| Layout | Table / Grid · **Refresh** |
 
-The Policies dashboard shows **Approvals resolved** (pending / approved / rejected) for the selected time range.
+### Table columns
+
+**Action** · **Status** · **Ver** · **Env** · **Agent** · **Created** · **Decision**
+
+Card meta may also show **Version**, **Env**, **Agent**, **Session**, **Workflow**.
+
+Statuses: `pending` · `approved` · `rejected` · `expired` (expired/stale pending are hidden from actionable lists).
+
+## Decide a pending approval
+
+1. Open **Approvals** (or Studio **HIL Approvals**).
+2. Filter to **Pending**.
+3. Open the row/card and review the tool call context.
+4. Click **Accept** or **Reject**.
+5. Confirm the toast (**Approved** / **Rejected**) and that the session continues or stops in [Observability](/observability/overview).
+
+### API
+
+```http
+POST /governance/human-approvals/:approvalId/decide
+```
+
+Body: `{ "decision": "approved" | "rejected", "workspaceid": "…" }`
+
+Permission: `workspace.governance.update` + Admin/Superadmin.
+
+## Configure delivery (before calls pause)
+
+On **Tool Governance** when attaching a HITL policy:
+
+1. Open **Approval delivery** (attach wizard step or **Edit** on the binding).
+2. Enable **Dashboard** and/or **Email**.
+3. Add email recipients when Email is on.
+4. Save delivery.
+
+<Note>
+  Documented production channels are **Dashboard** and **Email**. Studio **HIL New** Slack/Teams destinations are preview-only — see [HITL](/governance/hitl).
+</Note>
 
 ## Related
 
+- [HITL](/governance/hitl)
 - [Tool policies](/governance/tool-policies)
 - [Governance overview](/governance/overview)
 - [Observability Insights](/observability/insights)

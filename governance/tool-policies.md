@@ -1,53 +1,64 @@
 ---
 title: Tool policies
-description: Allow, deny, and human_approval rules for tools on an Agent Graph.
+description: Create and attach Tool Governance policies — Details, Tools, Actions, Sandbox, Review.
 ---
 
-**Tool Governance** attaches reusable tool-access policies to a flow version. Each policy is a set of rules that **allow**, **deny**, or require **human approval** for tool calls.
+**Tool Governance** attaches reusable tool-access policies to a flow version. Each policy is a set of rules that **Allow**, require **Human approval**, or **Deny** tool calls.
 
 <Frame caption="Studio Tool Governance — In Use and Library">
-  <img src="/images/v2/governance/05-studio-tool.png" alt="Tool Governance panel with attached ash-test policy and library" />
+  <img src="/images/v2/governance/05-studio-tool.png" alt="Tool Governance In Use and Library" />
 </Frame>
 
 ## Rule effects
 
-| Effect | Behavior |
+| UI label | Behavior |
 | --- | --- |
-| **allow** | Tool call proceeds |
-| **deny** | Tool call is blocked |
-| **human_approval** | Tool call waits for a person (HITL) before continuing |
+| **Allow** | Tool call proceeds (optional argument rules) |
+| **Human approval** | Tool call waits for a person ([Approvals](/governance/approvals)) |
+| **Deny** | Tool call is blocked (default for unlisted actions) |
 
 Policy cards summarize rule counts (for example `3 rules, 1 approval, 2 deny`).
 
-## Attach a policy in Studio
+## Create a policy (Studio wizard)
 
-1. Open the Agent Graph → **Governance** → **Tool Governance**.
-2. Under **Library**, find a policy (or create one from workspace Governance).
-3. Click **Attach**.
-4. If the policy includes human-approval rules, set **Approval delivery** to **Dashboard** and/or **Email**.
-5. Optionally **Attach HIL** profiles so approvers and channels are defined.
-6. **Save** the graph when Studio prompts you.
+In Graph Studio → **Governance** → **Tool Governance** → create / **New policy**. Steps are dynamic:
 
-**In Use** lists policies on the current flow version with **Edit** and **Detach**.
+| Step | Title | What you configure |
+| --- | --- | --- |
+| 1 | **Details** | **Name** (placeholder `Policy name`), **Description** (`Describe what this policy controls`) |
+| 2 | **Tools** | Pick tools from the catalog: Integration Hub, MCP, or code runner |
+| 3 | **Actions & arguments** | Shown for non–code-runner tools. Per action: **Allow** / **Human approval** / **Deny**. Argument constraints when Allow or HITL. All actions default to deny unless you change them |
+| 4 | **Sandbox config** | Shown if a code runner tool is selected. **Kill switch** / **Disable all code execution**, **Reason**, **Limits** (`Timeout (seconds)`, `Max output bytes`, `Max code size bytes`, `Max input size bytes`), **Env variable filtering** (`allowlist` / `denylist`) |
+| 5 | **Review** | **Policy document**, optional **Test policy (simulate)** with env **Development** / **UAT** / **Production**, action, **channel id**, **Simulate** |
 
-## Human in the Loop
+Navigation: **Continue** to the next step · **Back** · final save.
 
-The **Human in the Loop** tab shows policies that need a person and whether HIL profiles are linked. Empty states send you back to **Tool Governance** to attach channel/user profiles.
+## Attach a policy
 
-<Frame caption="Studio Human in the Loop — linked policies">
-  <img src="/images/v2/governance/07-studio-hitl.png" alt="Human in the Loop tab with linked tool policy" />
-</Frame>
+1. Open **Tool Governance**.
+2. Under **Library**, choose a policy → **Attach** (or **Attach governance**).
+3. **Apply to**: **Entire flow** or **One agent**.
+4. If the policy has **Human approval** rules, complete **Approval delivery**:
+   - Channels: **Dashboard** and/or **Email**
+   - **Users** (email recipients) when Email is on
+5. Confirm attach. Binding stores `binding_type: "policy"`, `policy_ids`, `flow_version`, optional `agent_node_id`, and `approval_notification`.
 
-<Warning>
-  Slack/Teams as HIL delivery channels are not documented as production delivery here. Use **Dashboard** and **Email** approval delivery shipped with the product.
-</Warning>
+**In Use** lists policies on this flow version with **Edit**, **Detach**, **Attach HIL**, and **Approval delivery**.
+
+## Library vs In Use
+
+| Section | Copy |
+| --- | --- |
+| **In Use** | Policies attached to this flow version |
+| **Library** | Reusable workspace policies you can search and attach |
 
 ## Workspace Policies tab
 
-**OPERATE → Governance → Policies** shows fleet metrics: policy decisions (blocked vs logged), approvals resolved, sessions with policy events, and rule mix across configured policies. Use it to spot hotspots, then fix bindings in Studio.
+**OPERATE → Governance → Policies** shows fleet metrics (blocked vs logged, approvals resolved, rule mix). Use it to spot hotspots, then fix bindings in Studio.
 
 ## Related
 
-- [Governance overview](/governance/overview)
+- [HITL](/governance/hitl)
 - [Approvals](/governance/approvals)
-- [LLM guardrails](/governance/llm-guardrails)
+- [Governance overview](/governance/overview)
+- [Guardrails](/guardrails/overview)
