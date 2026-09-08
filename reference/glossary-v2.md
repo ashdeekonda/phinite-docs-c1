@@ -29,7 +29,6 @@ Primary reference for the **Agent Graph** mental model. Avoid legacy terms liste
 | **Custom Models / BYOM** | Bring your own model — workspace-defined endpoints outside the Phinite catalog. |
 | **Model Keys / BYOK** | Provider API keys for catalog models, plus the platform **Phinite Key**. |
 | **Insights** | Default Observability landing — session health, policy blocks, **Cost (Phinite)**. |
-| **Investigate** | Per-session Span / Timeline / Conversation studio. |
 | **HITL** | Human in the loop — tool calls that require **Human approval** before continuing. |
 | **HIL New** | Studio profiles for Accept/Reject destinations (Dashboard / Slack / Teams; Slack/Teams preview). |
 | **HIL Approvals** | Studio dialog + workspace Approvals inbox (**Accept** / **Reject**). |

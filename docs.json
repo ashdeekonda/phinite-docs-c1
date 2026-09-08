@@ -427,6 +427,26 @@
       "destination": "/guardrails/overview"
     },
     {
+      "source": "/observability/investigate",
+      "destination": "/observability/insights"
+    },
+    {
+      "source": "/observability/usage-metrics",
+      "destination": "/observability/insights"
+    },
+    {
+      "source": "/observability/logs",
+      "destination": "/observability/insights"
+    },
+    {
+      "source": "/observability/filtering",
+      "destination": "/observability/insights"
+    },
+    {
+      "source": "/observability/billing",
+      "destination": "/observability/overview"
+    },
+    {
       "source": "/reference/ai-assistant",
       "destination": "/reference/glossary-v2"
     },
@@ -689,28 +709,7 @@
             "group": "7. Observability",
             "pages": [
               "observability/overview",
-              "observability/insights",
-              "observability/investigate",
-              "observability/usage-metrics",
-              {
-                "group": "Metrics",
-                "pages": [
-                  "observability/metrics/session-count",
-                  "observability/metrics/token-usage",
-                  "observability/metrics/telephony"
-                ]
-              },
-              {
-                "group": "Logs",
-                "pages": [
-                  "observability/logs",
-                  "observability/logs/timeline",
-                  "observability/logs/decision-joints",
-                  "observability/logs/variables"
-                ]
-              },
-              "observability/filtering",
-              "observability/billing"
+              "observability/insights"
             ]
           },
           {
@@ -719,15 +718,18 @@
               "governance/overview",
               "governance/tool-policies",
               "governance/hitl",
-              "governance/approvals"
+              "governance/approvals",
+              "governance/setup"
             ]
           },
           {
             "group": "9. Guardrails",
             "pages": [
               "guardrails/overview",
+              "guardrails/phinite",
               "guardrails/profiles",
-              "guardrails/attach"
+              "guardrails/attach",
+              "guardrails/setup"
             ]
           },
           {
@@ -736,7 +738,8 @@
               "evaluations/overview",
               "evaluations/studio",
               "evaluations/connect-to-build",
-              "evaluations/run-on-draft"
+              "evaluations/run-on-draft",
+              "evaluations/setup"
             ]
           },
           {

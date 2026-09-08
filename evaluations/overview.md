@@ -10,6 +10,9 @@ description: Workspace Analytics and History / Sessions for agent evaluation run
 </Note>
 
 <CardGroup cols={2}>
+  <Card title="Setup guide" href="/evaluations/setup">
+    Run on draft or Connect to Build end-to-end.
+  </Card>
   <Card title="Studio panel" href="/evaluations/studio">
     Connect to Build, Run on draft, Experiment, Signal.
   </Card>
@@ -18,9 +21,6 @@ description: Workspace Analytics and History / Sessions for agent evaluation run
   </Card>
   <Card title="Run on draft" href="/evaluations/run-on-draft">
     Simulation, Autonomous, and Production datasets.
-  </Card>
-  <Card title="Observability" href="/observability/insights">
-    Production sessions that can feed eval datasets.
   </Card>
 </CardGroup>
 

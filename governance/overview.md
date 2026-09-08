@@ -10,8 +10,11 @@ description: Workspace policies and Studio Tool / HITL controls for Agent Graphs
 </Note>
 
 <CardGroup cols={2}>
+  <Card title="Setup guide" href="/governance/setup">
+    Create policy → attach → approval delivery → triage.
+  </Card>
   <Card title="Tool policies" href="/governance/tool-policies">
-    Allow, Human approval, Deny — full create and attach wizards.
+    Allow, Human approval, Deny — wizard steps.
   </Card>
   <Card title="HITL & HIL New" href="/governance/hitl">
     Human-in-the-loop policies and destination profiles.
@@ -20,7 +23,7 @@ description: Workspace policies and Studio Tool / HITL controls for Agent Graphs
     Accept or Reject pending tool calls.
   </Card>
   <Card title="Guardrails" href="/guardrails/overview">
-    LLM safety profiles (separate chapter).
+    LLM safety (separate chapter).
   </Card>
 </CardGroup>
 

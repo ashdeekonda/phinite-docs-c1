@@ -98,11 +98,11 @@ Product sidebar groups these under **OPERATE**. In docs they are separate chapte
 
 | Item | Docs |
 | --- | --- |
-| **Observability** | [Insights](/observability/insights), Sessions, [Investigate](/observability/investigate) |
-| **Governance** | [Overview](/governance/overview), tool policies, HITL, approvals |
-| **Evaluations** | [Overview](/evaluations/overview), Studio wizards — Pro+ |
+| **Observability** | [Insights & Sessions](/observability/insights) only |
+| **Governance** | [Setup](/governance/setup), tool policies, HITL, approvals |
+| **Evaluations** | [Setup](/evaluations/setup), Studio wizards — Pro+ |
 
-LLM safety profiles: [Guardrails](/guardrails/overview) (Studio **LLM Governance**; workspace Guardrails tab under Governance).
+LLM safety: [Guardrails](/guardrails/overview) · [Phinite Control library](/guardrails/phinite) · [Guardrails setup](/guardrails/setup).
 
 ### ACCOUNT
 

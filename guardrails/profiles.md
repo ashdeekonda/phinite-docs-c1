@@ -1,54 +1,104 @@
 ---
 title: Guardrail profiles
-description: Create LLM guardrail profiles — Provider, Configure, credentials, Phinite control library.
+description: Create profiles for Phinite, AWS Bedrock, Azure Content Safety, and GCP Model Armor.
 ---
 
-Create profiles from Studio **Governance → LLM Governance → New profile** (or the workspace Guardrails library entry points that open the same panel).
+Create profiles from Studio **Governance → LLM Governance → New profile**. Wizard steps: **Provider** → **Configure**.
 
-## Create profile wizard
+## Step 1 — Provider
 
-### 1. Provider
+Pick one card, then **Continue**:
 
-Choose a provider, then **Continue**:
+| Provider | Description (UI) | Credentials |
+| --- | --- | --- |
+| **Phinite** | Phinite’s built-in guard library (prompt injection, toxicity, PII, and more) | None — see [Phinite Guardrails](/guardrails/phinite) |
+| **AWS Bedrock** | Topic denial, PII redaction, word filters, content policies | Access key ID, Secret access key, Region |
+| **Azure Content Safety** | Hate, self-harm, sexual content, violence in text | Endpoint URL, API key |
+| **GCP Model Armor** | Sanitizes prompts/responses with a Model Armor template | Service account JSON, Project ID, Location |
 
-| id | Label | Credentials | Resource |
-| --- | --- | --- | --- |
-| `phinite` | **Phinite** | None — uses **Control library** | — |
-| `aws` | **AWS Bedrock** | **Access key ID**, **Secret access key**, **Region** | **Guardrail ID**, **Guardrail version** |
-| `azure` | **Azure Content Safety** | **Endpoint URL**, **API key** | — |
-| `gcp` | **GCP Model Armor** | **Service account JSON**, **Project ID**, **Location** | **Template / policy ID** |
+## Step 2 — Configure (all providers)
 
-### 2. Configure
+1. Enter **Profile name** (placeholder `e.g. Production guards`).
+2. Follow the provider-specific path below.
+3. Click **Save profile** (optional **Test connection** for non-Phinite when supported).
 
-**Profile name** (placeholder `e.g. Production guards`).
+Profile field `on_violation` defaults to **block_turn**.
 
-#### Non-Phinite providers
+---
 
-1. Open **Credentials**.
-2. **How do you want to provide secrets?** → **Enter credentials** or **Use Environment secret**.
-3. Fill **Secret \*** and **Resource** fields for the provider.
-4. Optional **Test connection**.
-5. Use **Documentation** / **\{Provider\} setup guide** if shown.
-6. Click **Save profile**.
+## Path — Phinite
 
-Default violation handling field: `on_violation` (product default **block_turn**).
+See the full Control library walkthrough: [Phinite Guardrails](/guardrails/phinite).
 
-#### Phinite provider — Control library
+Summary: open **Control library** → filter by **Compliance framework** → enable controls under **Before the model** / **After the model** / **Session data** → set **Block** / **Log only** / **Redact** per control → **Save profile**.
 
-1. Open **Control library**.
-2. **Turn on the guards this profile should enforce**.
-3. Tracks appear under **Before the model**, **After the model**, and **Session data**.
-4. Per guard actions: **Block** · **Log only** · **Redact**.
-5. **Save profile**.
+---
 
-## After save
+## Path — AWS Bedrock / Azure / GCP
 
-- Profile appears in **Library (N)** on **LLM Governance**.
-- [Attach](/guardrails/attach) it to the current flow or a single agent.
-- Workspace **Guardrails** analytics reflects activity after traffic runs.
+### Credentials
+
+1. Section **Credentials**.
+2. **How do you want to provide secrets?**
+   - **Enter credentials** — fill fields inline
+   - **Use Environment secret** — pick a workspace env secret (`envencryptid`)
+3. Fill required fields:
+
+#### AWS Bedrock
+
+| Field | Label |
+| --- | --- |
+| `access_key_id` | **Access key ID** |
+| `secret_access_key` | **Secret access key** |
+| `region` | **Region** (e.g. `us-east-1`) |
+
+**Resource**
+
+| Field | Label |
+| --- | --- |
+| `guardrail_identifier` | **Guardrail ID** |
+| `guardrail_version` | **Guardrail version** |
+
+Needs IAM permission `bedrock:ApplyGuardrail`. Topic/PII filters stay in the AWS console.
+
+#### Azure Content Safety
+
+| Field | Label |
+| --- | --- |
+| `endpoint` | **Endpoint URL** |
+| `api_key` | **API key** |
+
+From Azure Portal → Content Safety (or Cognitive Services) → Keys and Endpoint.
+
+#### GCP Model Armor
+
+| Field | Label |
+| --- | --- |
+| Service account JSON | **Service account JSON** |
+| `project_id` | **Project ID** |
+| Location | **Location** |
+
+**Resource:** **Template / policy ID**.
+
+### Test and docs
+
+- **Test connection** when the provider supports it and credentials are ready.
+- **Documentation** / **{Provider} setup guide** opens the in-product credentials guide.
+
+### Save
+
+**Save profile** → profile appears in **Library** with the provider badge.
+
+---
+
+## After create
+
+1. [Attach](/guardrails/attach) to the flow or an agent.
+2. Confirm **In Use** on **LLM Governance**.
+3. **Save** + **Build** the Agent Graph.
 
 ## Related
 
-- [Guardrails overview](/guardrails/overview)
-- [Attach guardrails](/guardrails/attach)
-- [Governance](/governance/overview)
+- [Phinite Guardrails](/guardrails/phinite)
+- [Guardrails setup](/guardrails/setup)
+- [Attach](/guardrails/attach)

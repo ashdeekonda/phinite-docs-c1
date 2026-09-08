@@ -1,80 +1,52 @@
 ---
 title: Guardrails overview
-description: LLM safety profiles — workspace Guardrails analytics and Studio LLM Governance.
+description: LLM safety — Studio LLM Governance and workspace Guardrails analytics.
 ---
 
-**Guardrails** inspect prompts and model output for injection, toxicity, and data leaks before a turn completes. In the product IA:
+**Guardrails** inspect prompts and model output for injection, toxicity, PII, and related risks before a turn completes.
 
-- Workspace: **OPERATE → Governance → Guardrails** (analytics + library context)
-- Studio: **Governance → LLM Governance** (create, attach, In Use / Library) — not a separate Studio rail
+| Surface | Role |
+| --- | --- |
+| Studio **Governance → LLM Governance** | Create profiles, Control library, attach to flow/agent |
+| Workspace **Governance → Guardrails** | Analytics (Blocked / Logged, Decisions / Triggers) |
 
-<Note>
-  Guardrails share the **Pro+** Governance entitlement (`MinPlan.Governance` / `MinPlan.Guardrails`). Attach and profile CRUD use `workspace.governance.*`.
-</Note>
+Pro+ · `workspace.governance.*`. There is no separate Studio Guardrails rail in this IA.
 
 <CardGroup cols={2}>
-  <Card title="Create profiles" href="/guardrails/profiles">
-    Providers, credentials, Phinite control library, Save profile.
+  <Card title="Phinite Guardrails" href="/guardrails/phinite">
+    Built-in Control library — Before / After the model, Session data.
   </Card>
-  <Card title="Attach to flows" href="/guardrails/attach">
-    Attach guardrails to entire flow or one agent.
+  <Card title="All providers" href="/guardrails/profiles">
+    Phinite, AWS Bedrock, Azure Content Safety, GCP Model Armor.
   </Card>
-  <Card title="Governance" href="/governance/overview">
-    Tool policies and HITL (sibling Operate surface).
+  <Card title="Attach" href="/guardrails/attach">
+    Entire flow or one agent.
   </Card>
-  <Card title="Observability" href="/observability/insights">
-    Policy blocks and session drill-down.
+  <Card title="Setup guide" href="/guardrails/setup">
+    End-to-end create → attach → verify.
   </Card>
 </CardGroup>
 
-## Where in the product
-
-| Surface | Entry |
-| --- | --- |
-| Workspace analytics | `…/governance?tab=guardrails` |
-| Studio module | Graph Studio → **Governance** → **LLM Governance** (`?tab=governance`) |
-| Legacy Studio tab | `?tab=guardrails` canonicalizes to Governance → LLM module |
-
-<Frame caption="Studio LLM Governance — library of profiles">
+<Frame caption="Studio LLM Governance">
   <img src="/images/v2/governance/06-studio-llm.png" alt="LLM Governance library" />
 </Frame>
 
-Workspace Guardrails tab:
+## Providers
 
-<Frame caption="Workspace Governance — Guardrails">
-  <img src="/images/v2/governance/02-workspace-guardrails.png" alt="Workspace Guardrails analytics" />
-</Frame>
-
-### Workspace analytics labels
-
-**Guardrail activity** · Blocked / Logged · Decisions / Triggers · range **Last 7 / 30 / 90 days** · **Refresh**. Optional sessions drill-down with guardrail purpose.
-
-## Studio LLM Governance
-
-| UI | Meaning |
+| Provider | What it is |
 | --- | --- |
-| **In Use (N)** | Profiles attached to this flow version |
-| **Library (N)** | Workspace profiles — **Attach**, edit, delete |
-| **New profile** / create | [Create profile wizard](/guardrails/profiles) |
-| **Attach** | [Attach guardrails](/guardrails/attach) |
+| **Phinite** | Built-in guard library (prompt injection, toxicity, PII, and more) |
+| **AWS Bedrock** | Bedrock Guardrails — topics, PII, word filters, content policies |
+| **Azure Content Safety** | Hate, self-harm, sexual, violence detection |
+| **GCP Model Armor** | Prompt/response sanitization via Model Armor template |
 
-Prominence: *Inspects prompts and model output for injection, toxicity, and data leaks before a turn completes.*
+## Quick start
 
-## Providers at a glance
-
-| Provider | UI label |
-| --- | --- |
-| `phinite` | **Phinite** |
-| `aws` | **AWS Bedrock** |
-| `azure` | **Azure Content Safety** |
-| `gcp` | **GCP Model Armor** |
-
-## APIs (summary)
-
-Prefix under `/governance/guardrails/`: `providers`, `catalog`, `credentials`, `profiles`, `active`, remote-config, test connection. Bindings use `binding_type: "guardrail"`.
+1. [Create a Phinite profile](/guardrails/phinite) (fastest path).
+2. [Attach](/guardrails/attach) to the flow.
+3. Follow [Guardrails setup](/guardrails/setup) to verify.
 
 ## Related
 
-- [Profiles](/guardrails/profiles)
-- [Attach](/guardrails/attach)
-- [Governance overview](/governance/overview)
+- [Governance](/governance/overview) — tool policies (separate binding type)
+- [Observability Insights](/observability/insights)

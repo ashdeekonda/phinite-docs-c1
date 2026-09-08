@@ -26,10 +26,10 @@
 | Area | Nav pages | Content status | Nav wired |
 | --- | --- | --- | --- |
 | RAG Collections | 3 (`rag/*`) | **DONE** | **DONE** |
-| Observability | Insights + Investigate + existing | **DONE** (deepened) | **7. Observability** (top-level) |
-| Governance | overview, tool-policies, hitl, approvals | **DONE** (deepened) | **8. Governance** (top-level) |
-| Guardrails | overview, profiles, attach | **DONE** | **9. Guardrails** (separate chapter) |
-| Evaluations | overview, studio, connect-to-build, run-on-draft | **DONE** (deepened) | **10. Evaluations** (top-level) |
+| Observability | overview + Insights/Sessions | **DONE** (trimmed; Investigate removed from docs) | **7. Observability** |
+| Governance | overview, tool-policies, hitl, approvals, **setup** | **DONE** (expanded) | **8. Governance** |
+| Guardrails | overview, **phinite**, profiles, attach, **setup** | **DONE** (Phinite Control library) | **9. Guardrails** |
+| Evaluations | overview, studio, connect-to-build, run-on-draft, **setup** | **DONE** (expanded) | **10. Evaluations** |
 | Custom Models / Models hub | +1 + models.md | **DONE** | Configure |
 
 **REDIR:** `/governance/llm-guardrails` → `/guardrails/overview`; `/graph-studio/rag-management*` → `/rag/*`.  
