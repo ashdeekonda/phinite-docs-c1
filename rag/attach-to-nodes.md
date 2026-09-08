@@ -44,10 +44,10 @@ Raise **top k** when answers need broader context; raise **threshold** when you 
 ## Related
 
 <CardGroup cols={2}>
-  <Card title="RAG overview" icon="books" href="/rag/overview">
+  <Card title="RAG overview" href="/rag/overview">
     Workspace collections and chunking.
   </Card>
-  <Card title="Node library" icon="robot" href="/graph-studio/interface/node-library">
+  <Card title="Node library" href="/graph-studio/interface/node-library">
     Agent node drawers: Details, RAG, Tools, Variables.
   </Card>
 </CardGroup>

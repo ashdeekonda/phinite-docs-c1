@@ -1,7 +1,6 @@
 ---
 title: Governance overview
 description: Workspace policies and Studio Tool / HITL controls for Agent Graphs (Pro+).
-icon: shield
 ---
 
 **Governance** controls which tools agents may call and when a person must approve. LLM prompt/output safety lives under **[Guardrails](/guardrails/overview)** (Studio **LLM Governance**). Use the workspace page for fleet analytics and the approvals inbox; use Graph Studio to attach policies to a specific Agent Graph.
@@ -11,16 +10,16 @@ icon: shield
 </Note>
 
 <CardGroup cols={2}>
-  <Card title="Tool policies" icon="screwdriver-wrench" href="/governance/tool-policies">
+  <Card title="Tool policies" href="/governance/tool-policies">
     Allow, Human approval, Deny — full create and attach wizards.
   </Card>
-  <Card title="HITL & HIL New" icon="user-check" href="/governance/hitl">
+  <Card title="HITL & HIL New" href="/governance/hitl">
     Human-in-the-loop policies and destination profiles.
   </Card>
-  <Card title="Approvals" icon="inbox" href="/governance/approvals">
+  <Card title="Approvals" href="/governance/approvals">
     Accept or Reject pending tool calls.
   </Card>
-  <Card title="Guardrails" icon="shield-halved" href="/guardrails/overview">
+  <Card title="Guardrails" href="/guardrails/overview">
     LLM safety profiles (separate chapter).
   </Card>
 </CardGroup>

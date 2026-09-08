@@ -59,16 +59,16 @@ See [Custom Models](/workspace/custom-models) for adding endpoints and the publi
 ## Related
 
 <CardGroup cols={2}>
-  <Card title="Custom Models" icon="microchip" href="/workspace/custom-models">
+  <Card title="Custom Models" href="/workspace/custom-models">
     BYOM endpoints for Graph Studio.
   </Card>
-  <Card title="Agent node" icon="robot" href="/graph-studio/interface/node-library">
+  <Card title="Agent node" href="/graph-studio/interface/node-library">
     Drawer fields for prompts, tools, and model.
   </Card>
-  <Card title="Graph Studio overview" icon="diagram-project" href="/graph-studio/overview">
+  <Card title="Graph Studio overview" href="/graph-studio/overview">
     Design Agent Graphs on the canvas.
   </Card>
-  <Card title="Builds overview" icon="box" href="/builds/overview">
+  <Card title="Builds overview" href="/builds/overview">
     Freeze graph and tool versions into Agent Builds.
   </Card>
 </CardGroup>

@@ -42,10 +42,10 @@ Exact connector availability follows your workspace integrations and account lin
 ## Related
 
 <CardGroup cols={2}>
-  <Card title="RAG overview" icon="books" href="/rag/overview">
+  <Card title="RAG overview" href="/rag/overview">
     Collections, chunking, and where RAG lives in the product.
   </Card>
-  <Card title="Attach to nodes" icon="link" href="/rag/attach-to-nodes">
+  <Card title="Attach to nodes" href="/rag/attach-to-nodes">
     Ground agent answers in attached collections.
   </Card>
 </CardGroup>

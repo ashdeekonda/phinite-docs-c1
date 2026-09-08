@@ -1,28 +1,27 @@
 ---
 title: Observability overview
 description: Insights, Sessions, Investigate, metrics, and logs for Agent Graph runs.
-icon: chart-line
 ---
 
 Observability shows how **Agent Graphs** behave in each environment. Open **OPERATE → Observability**. Default landing is **[Insights](/observability/insights)**; dig into **Sessions**, **[Investigate](/observability/investigate)**, classic logs, and billing allocation.
 
 <CardGroup cols={2}>
-  <Card title="Insights" icon="chart-area" href="/observability/insights">
+  <Card title="Insights" href="/observability/insights">
     KPIs, Cost (Phinite), agent health, drill to Sessions.
   </Card>
-  <Card title="Investigate" icon="magnifying-glass" href="/observability/investigate">
+  <Card title="Investigate" href="/observability/investigate">
     Span / Timeline / Conversation studio per session.
   </Card>
-  <Card title="Usage metrics" icon="chart-line" href="/observability/usage-metrics">
+  <Card title="Usage metrics" href="/observability/usage-metrics">
     Sessions, tokens, and telephony KPIs.
   </Card>
-  <Card title="Session logs" icon="list" href="/observability/logs">
+  <Card title="Session logs" href="/observability/logs">
     Timeline, decisions, and captured variables.
   </Card>
-  <Card title="Filtering" icon="filter" href="/observability/filtering">
+  <Card title="Filtering" href="/observability/filtering">
     Slice by graph, environment, channel, and time.
   </Card>
-  <Card title="Billing" icon="credit-card" type="note" href="/observability/billing">
+  <Card title="Billing" type="note" href="/observability/billing">
     Cost breakdowns tied to runtime usage.
   </Card>
 </CardGroup>

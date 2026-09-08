@@ -1,22 +1,21 @@
 ---
 title: RAG Collections overview
 description: Workspace knowledge collections for retrieval — create, chunk, and attach to agent nodes.
-icon: books
 ---
 
 **RAG Collections** are workspace knowledge sources that agent nodes retrieve from at runtime. You manage collections under **BUILD → RAG Collections**, then attach them on each agent node’s **RAG** tab in Graph Studio.
 
 <CardGroup cols={2}>
-  <Card title="Connectors" icon="plug" href="/rag/connectors">
+  <Card title="Connectors" href="/rag/connectors">
     Files, URLs, Notion, Confluence, Drive, and SharePoint.
   </Card>
-  <Card title="Attach to nodes" icon="link" href="/rag/attach-to-nodes">
+  <Card title="Attach to nodes" href="/rag/attach-to-nodes">
     Attach collections (not individual files); set threshold and top k.
   </Card>
-  <Card title="Graph Studio" icon="diagram-project" href="/graph-studio/overview">
+  <Card title="Graph Studio" href="/graph-studio/overview">
     Design Agent Graphs that ground answers in collections.
   </Card>
-  <Card title="Workspace overview" icon="building" href="/workspaces/workspace-overview">
+  <Card title="Workspace overview" href="/workspaces/workspace-overview">
     Sidebar IA: Agents, BUILD, OPERATE, ACCOUNT.
   </Card>
 </CardGroup>

@@ -1,7 +1,6 @@
 ---
 title: Guardrails overview
 description: LLM safety profiles — workspace Guardrails analytics and Studio LLM Governance.
-icon: shield-halved
 ---
 
 **Guardrails** inspect prompts and model output for injection, toxicity, and data leaks before a turn completes. In the product IA:
@@ -14,16 +13,16 @@ icon: shield-halved
 </Note>
 
 <CardGroup cols={2}>
-  <Card title="Create profiles" icon="sliders" href="/guardrails/profiles">
+  <Card title="Create profiles" href="/guardrails/profiles">
     Providers, credentials, Phinite control library, Save profile.
   </Card>
-  <Card title="Attach to flows" icon="link" href="/guardrails/attach">
+  <Card title="Attach to flows" href="/guardrails/attach">
     Attach guardrails to entire flow or one agent.
   </Card>
-  <Card title="Governance" icon="shield" href="/governance/overview">
+  <Card title="Governance" href="/governance/overview">
     Tool policies and HITL (sibling Operate surface).
   </Card>
-  <Card title="Observability" icon="chart-line" href="/observability/insights">
+  <Card title="Observability" href="/observability/insights">
     Policy blocks and session drill-down.
   </Card>
 </CardGroup>

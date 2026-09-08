@@ -1,7 +1,6 @@
 ---
 title: Evaluations overview
 description: Workspace Analytics and History / Sessions for agent evaluation runs (Pro+).
-icon: chart-mixed
 ---
 
 **Evaluations** score Agent Graphs against metrics across builds and drafts. Workspace **OPERATE → Evaluations** shows fleet **Analytics** and **History / Sessions**. Configure runs from Graph Studio **Agent Evaluations**.
@@ -11,16 +10,16 @@ icon: chart-mixed
 </Note>
 
 <CardGroup cols={2}>
-  <Card title="Studio panel" icon="flask" href="/evaluations/studio">
+  <Card title="Studio panel" href="/evaluations/studio">
     Connect to Build, Run on draft, Experiment, Signal.
   </Card>
-  <Card title="Connect to Build" icon="link" href="/evaluations/connect-to-build">
+  <Card title="Connect to Build" href="/evaluations/connect-to-build">
     Live or scheduled scoring on a build.
   </Card>
-  <Card title="Run on draft" icon="play" href="/evaluations/run-on-draft">
+  <Card title="Run on draft" href="/evaluations/run-on-draft">
     Simulation, Autonomous, and Production datasets.
   </Card>
-  <Card title="Observability" icon="chart-line" href="/observability/insights">
+  <Card title="Observability" href="/observability/insights">
     Production sessions that can feed eval datasets.
   </Card>
 </CardGroup>

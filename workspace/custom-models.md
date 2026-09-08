@@ -45,10 +45,10 @@ Agent Graphs that use a **BYOM** model **cannot** be published as a **public** A
 ## Related
 
 <CardGroup cols={2}>
-  <Card title="Models hub" icon="key" href="/workspace/models">
+  <Card title="Models hub" href="/workspace/models">
     Custom Models and Model Keys together.
   </Card>
-  <Card title="Expose as A2A" icon="share-nodes" href="/agent-registry/expose-your-flow">
+  <Card title="Expose as A2A" href="/agent-registry/expose-your-flow">
     Agent Card publish path and visibility.
   </Card>
 </CardGroup>
